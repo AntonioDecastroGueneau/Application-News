@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Veille Environnementale GSF — Pipeline quotidien
+Veille Environnementale — Pipeline quotidien
 Exécuté chaque matin à 7h30 via cron macOS
 
 Dépendances :
