@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Veille Environnementale GSF — Pipeline quotidien
+Veille Environnementale — Pipeline quotidien
 Exécuté chaque matin à 7h30 via cron macOS
 
 Dépendances :
@@ -34,13 +34,13 @@ import feedparser
 
 TODAY        = datetime.now().strftime('%Y-%m-%d')
 SCRIPT_DIR   = Path(__file__).parent.resolve()
-GHPAGES_WORKTREE = Path('/tmp/gsf-veille-ghpages')
+GHPAGES_WORKTREE = Path('/tmp/-veille-ghpages')
 LOG_PATH     = SCRIPT_DIR / 'pipeline.log'
 
 JORF_BASE_URL = 'https://echanges.dila.gouv.fr/OPENDATA/JORF/'
 HUBEAU_URL    = 'https://hubeau.eaufrance.fr/api/v1/propluvia/restrictions'
 
-# Mots-clés de pertinence GSF
+# Mots-clés de pertinence 
 KEYWORDS = [
     'ICPE', 'installation classée', 'eau', 'rejet aqueux', 'émissions',
     'biodiversité', 'espèce protégée', 'énergie', 'déchet', 'déchets',
@@ -170,16 +170,16 @@ def extract_json(text: str) -> dict:
     return {}
 
 
-def ollama_impact_gsf(titre: str, contenu: str) -> dict:
-    """Évalue la pertinence et l'impact d'un texte JO pour GSF."""
+def ollama_impact_(titre: str, contenu: str) -> dict:
+    """Évalue la pertinence et l'impact d'un texte JO pour ."""
     prompt = (
-        "Tu es expert en réglementation environnementale pour GSF, entreprise de propreté "
+        "Tu es expert en réglementation environnementale pour , entreprise de propreté "
         "et services (nettoyage industriel, entretien de bâtiments, gestion de déchets, produits chimiques).\n\n"
         f"TITRE : {titre}\n"
         f"EXTRAIT : {contenu[:600]}\n\n"
         "Réponds UNIQUEMENT en JSON valide, sans aucun texte avant ou après :\n"
         '{"pertinent": true/false, "score": 1, "resume": "2-3 lignes max"}\n'
-        "score : 1=information, 2=vigilance, 3=impact direct activités GSF\n"
+        "score : 1=information, 2=vigilance, 3=impact direct activités \n"
         "pertinent : true si concerne nettoyage/propreté/déchets/ICPE/eau/produits chimiques/bâtiments"
     )
     raw = call_ollama(prompt)
@@ -188,14 +188,14 @@ def ollama_impact_gsf(titre: str, contenu: str) -> dict:
 
 
 def ollama_summarise(titre: str, contenu: str) -> dict:
-    """Résume un article de presse et évalue son score pour GSF."""
+    """Résume un article de presse et évalue son score pour ."""
     prompt = (
-        "Tu travailles pour GSF, entreprise de propreté et services.\n\n"
+        "Tu travailles pour , entreprise de propreté et services.\n\n"
         f"TITRE : {titre}\n"
         f"CONTENU : {contenu[:800]}\n\n"
         "Réponds UNIQUEMENT en JSON valide :\n"
         '{"resume": "2 phrases max", "score": 1}\n'
-        "score : 1=intéressant, 2=important, 3=impact direct GSF"
+        "score : 1=intéressant, 2=important, 3=impact direct "
     )
     raw = call_ollama(prompt)
     result = extract_json(raw)
@@ -224,7 +224,7 @@ def crawl_article(url: str) -> str:
     # Fallback BeautifulSoup
     try:
         from bs4 import BeautifulSoup
-        resp = requests.get(url, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/1.0'})
+        resp = requests.get(url, timeout=TIMEOUT, headers={'User-Agent': '-Veille/1.0'})
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'html.parser')
         for tag in soup(['script', 'style', 'nav', 'header', 'footer', 'aside']):
@@ -339,7 +339,7 @@ def fetch_jorf() -> tuple[list, int]:
                         if full:
                             contenu = full
 
-                    analysis = ollama_impact_gsf(art['titre'], contenu)
+                    analysis = ollama_impact_(art['titre'], contenu)
 
                     if analysis.get('pertinent'):
                         items.append({
@@ -349,7 +349,7 @@ def fetch_jorf() -> tuple[list, int]:
                             'titre': art['titre'],
                             'resume': analysis.get('resume') or art['titre'],
                             'criticite': int(analysis.get('score', 1)),
-                            'impact_gsf': True,
+                            'impact_': True,
                             'url': art.get('url', ''),
                             'date': TODAY,
                         })
@@ -408,7 +408,7 @@ def fetch_rss_source(source: dict) -> list[dict]:
                 'titre': titre,
                 'resume': analysis.get('resume') or titre,
                 'criticite': int(analysis.get('score', 1)),
-                'impact_gsf': int(analysis.get('score', 1)) >= 2,
+                'impact_': int(analysis.get('score', 1)) >= 2,
                 'url': url,
                 'date': TODAY,
             })
@@ -430,7 +430,7 @@ def fetch_rss_source(source: dict) -> list[dict]:
                         'titre': f'Actualités {name}',
                         'resume': analysis.get('resume') or 'Source consultée via fallback.',
                         'criticite': 1,
-                        'impact_gsf': False,
+                        'impact_': False,
                         'url': source['fallback_crawl'],
                         'date': TODAY,
                     })
@@ -601,7 +601,7 @@ def push_to_ghpages(json_data: dict, date_str: str) -> bool:
 
 def main() -> int:
     log.info('=' * 60)
-    log.info(f'Pipeline GSF Veille Environnementale — {TODAY}')
+    log.info(f'Pipeline  Veille Environnementale — {TODAY}')
     log.info('=' * 60)
 
     start   = datetime.now()
