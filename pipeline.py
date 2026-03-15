@@ -78,7 +78,7 @@ JORF_KEYWORDS_STRICT = [
 ]
 
 OLLAMA_URL   = 'http://localhost:11434/api/generate'
-OLLAMA_MODEL = 'phi3:mini'
+OLLAMA_MODEL = 'mistral'
 OLLAMA_OK    = None  # None = pas encore testé, True/False après check
 
 RSS_SOURCES = [
