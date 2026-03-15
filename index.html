@@ -809,22 +809,18 @@ function renderMap() {
     style: {
       version: 8,
       sources: {
-        'carto-light': {
+        'osm-fr': {
           type: 'raster',
-          tiles: ['https://a.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
-                  'https://b.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png'],
+          tiles: ['https://a.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
+                  'https://b.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
+                  'https://c.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'],
           tileSize: 256,
-        },
-        'carto-labels': {
-          type: 'raster',
-          tiles: ['https://a.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png',
-                  'https://b.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png'],
-          tileSize: 256,
+          attribution: '© OpenStreetMap contributors',
         },
       },
       layers: [
-        { id: 'bg', type: 'background', paint: { 'background-color': '#f5f5f0' } },
-        { id: 'tiles', type: 'raster', source: 'carto-light' },
+        { id: 'bg', type: 'background', paint: { 'background-color': '#f2efe9' } },
+        { id: 'tiles', type: 'raster', source: 'osm-fr' },
       ],
     },
     center: [2.3, 46.6],
@@ -835,9 +831,6 @@ function renderMap() {
   mapgl.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
 
   mapgl.on('load', () => {
-    // Labels par-dessus tout
-    mapgl.addLayer({ id: 'labels', type: 'raster', source: 'carto-labels' });
-
     mapgl.addSource('vigieau', {
       type: 'vector',
       url: `pmtiles://${PMTILES_URL}`,
@@ -861,7 +854,7 @@ function renderMap() {
         ],
         'fill-opacity': 0.55,
       },
-    }, 'labels');
+    });
 
     // Contours
     mapgl.addLayer({
@@ -874,7 +867,7 @@ function renderMap() {
         'line-width': 0.8,
         'line-opacity': 0.8,
       },
-    }, 'labels');
+    });
 
     // Hover highlight
     mapgl.addLayer({
@@ -883,7 +876,7 @@ function renderMap() {
       source: 'vigieau',
       'source-layer': SOURCE_LAYER,
       paint: { 'fill-color': '#ffffff', 'fill-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 0.15, 0] },
-    }, 'labels');
+    });
 
     let hoveredId = null;
     mapgl.on('mousemove', 'zones-fill', e => {
