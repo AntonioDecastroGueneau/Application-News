@@ -245,6 +245,48 @@ html, body {
 .jo-empty-title { font-size: 14px; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
 .jo-empty-sub { font-size: 11px; color: var(--muted2); }
 
+/* Section "autres textes" */
+.jo-autres-toggle {
+  display: flex; align-items: center; gap: 8px; margin-top: 18px;
+  cursor: pointer; user-select: none; border: none; background: none;
+  color: var(--muted); font-size: 11px; font-family: var(--mono); padding: 0;
+}
+.jo-autres-toggle:hover { color: var(--text); }
+.jo-autres-arrow { transition: transform .2s; display: inline-block; }
+.jo-autres-toggle.open .jo-autres-arrow { transform: rotate(90deg); }
+.jo-autres-count {
+  background: var(--surface2); border-radius: 20px;
+  padding: 1px 7px; font-size: 10px; color: var(--muted2);
+}
+.jo-autres-body { display: none; margin-top: 10px; }
+.jo-autres-body.open { display: block; }
+.jo-autres-table {
+  width: 100%; border-collapse: collapse; font-size: 11px;
+}
+.jo-autres-table th {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .08em;
+  color: var(--muted2); text-align: left; padding: 4px 10px 6px;
+  border-bottom: 1px solid var(--border2); text-transform: uppercase;
+}
+.jo-autres-table td {
+  padding: 6px 10px; border-bottom: 1px solid var(--border);
+  color: var(--muted); vertical-align: top; line-height: 1.4;
+}
+.jo-autres-table tr:last-child td { border-bottom: none; }
+.jo-autres-table tr:hover td { background: var(--surface2); color: var(--text); }
+.jo-autres-nor {
+  font-family: var(--mono); font-size: 9px; color: var(--muted2);
+  white-space: nowrap;
+}
+.jo-autres-nature {
+  font-family: var(--mono); font-size: 9px; white-space: nowrap;
+  padding: 1px 5px; border-radius: 3px; background: var(--surface2); color: var(--muted);
+}
+.jo-autres-lien {
+  color: var(--accent); text-decoration: none; font-family: var(--mono); font-size: 10px; opacity: .6;
+}
+.jo-autres-lien:hover { opacity: 1; }
+
 /* ── CARTE ── */
 #carte-view { height: calc(100vh - var(--header-h) - 40px); display: none; }
 #carte-view.active { display: flex; flex-direction: column; }
@@ -610,40 +652,75 @@ function toggleFilter(key, val) {
 // JOURNAL OFFICIEL
 // ─────────────────────────────────────────
 function renderJO() {
-  const joItems = (D?.items || []).filter(i => sourceType(i.source) === 'jorf');
-  document.getElementById('nav-count-jo').textContent = joItems.length;
+  const joItems  = (D?.items || []).filter(i => sourceType(i.source) === 'jorf');
+  const joAutres = D?.jo_autres || [];
+
+  document.getElementById('nav-count-jo').textContent = joItems.length || (joAutres.length ? '·' : '0');
   document.getElementById('jo-titre').textContent = 'Journal Officiel — ' + formatDate(D.date);
   document.getElementById('jo-subtitle').textContent =
-    joItems.length
-      ? `${D.stats?.jo_analyses ?? '?'} textes analysés · ${joItems.length} pertinents pour GSF`
-      : `${D.stats?.jo_analyses ?? '?'} textes analysés · JORF/DILA`;
+    `${D.stats?.jo_analyses ?? '?'} textes analysés · ${joItems.length} retenus GSF · ${joAutres.length} autres`;
 
   const list = document.getElementById('jo-list');
+
+  // ── Cartes pertinentes GSF ──────────────────────────────────────
+  let html = '';
   if (!joItems.length) {
-    list.innerHTML = `
+    html += `
       <div class="jo-empty">
         <div class="jo-empty-title">Aucun texte réglementaire retenu aujourd'hui</div>
-        <div class="jo-empty-sub">${D.stats?.jo_analyses ?? 0} textes JORF analysés — aucun ne concerne les activités GSF</div>
+        <div class="jo-empty-sub">${D.stats?.jo_analyses ?? 0} textes analysés — aucun ne concerne directement les activités GSF</div>
       </div>`;
-    return;
+  } else {
+    html += joItems.map(item => {
+      const catCls = `jo-cat-${item.categorie}`.replace(/\//g,'').replace(/ /g,'');
+      return `
+      <div class="jo-card" data-crit="${item.criticite}">
+        <div class="jo-card-head">
+          <span class="jo-cat ${catCls}">${escHtml(item.categorie)}</span>
+          <div class="jo-titre">${escHtml(item.titre)}</div>
+        </div>
+        <div class="jo-resume">${escHtml(item.resume)}</div>
+        <div class="jo-foot">
+          <span class="jo-date">${escHtml(item.source)} · ${formatDate(item.date)}</span>
+          ${item.impact_gsf ? `<span class="jo-impact">⚠ Impact GSF</span>` : ''}
+          ${item.url ? `<a class="jo-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>` : ''}
+        </div>
+      </div>`;
+    }).join('');
   }
 
-  list.innerHTML = joItems.map(item => {
-    const catCls = `jo-cat-${item.categorie}`.replace(/\//g,'').replace(/ /g,'');
-    return `
-    <div class="jo-card" data-crit="${item.criticite}">
-      <div class="jo-card-head">
-        <span class="jo-cat ${catCls}">${escHtml(item.categorie)}</span>
-        <div class="jo-titre">${escHtml(item.titre)}</div>
-      </div>
-      <div class="jo-resume">${escHtml(item.resume)}</div>
-      <div class="jo-foot">
-        <span class="jo-date">${escHtml(item.source)} · ${formatDate(item.date)}</span>
-        ${item.impact_gsf ? `<span class="jo-impact">⚠ Impact GSF</span>` : ''}
-        ${item.url ? `<a class="jo-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>` : ''}
-      </div>
-    </div>`;
-  }).join('');
+  // ── Autres textes du jour (repliable) ──────────────────────────
+  if (joAutres.length) {
+    const rows = joAutres.map(a => `
+      <tr>
+        <td><span class="jo-autres-nor">${escHtml(a.nor)}</span></td>
+        <td><span class="jo-autres-nature">${escHtml(a.nature)}</span></td>
+        <td>${escHtml(a.titre)}</td>
+        <td>${a.url ? `<a class="jo-autres-lien" href="${escHtml(a.url)}" target="_blank" rel="noopener">↗</a>` : ''}</td>
+      </tr>`).join('');
+
+    html += `
+      <button class="jo-autres-toggle" onclick="toggleAutres(this)">
+        <span class="jo-autres-arrow">▶</span>
+        Autres textes du jour
+        <span class="jo-autres-count">${joAutres.length}</span>
+      </button>
+      <div class="jo-autres-body">
+        <table class="jo-autres-table">
+          <thead><tr>
+            <th>NOR</th><th>Nature</th><th>Titre</th><th></th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`;
+  }
+
+  list.innerHTML = html;
+}
+
+function toggleAutres(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
 }
 
 // ─────────────────────────────────────────
