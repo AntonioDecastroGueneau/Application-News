@@ -542,6 +542,11 @@ def fetch_rss_source(source: dict):
             else:
                 article_date = TODAY
 
+            # Exclure les articles de plus de 2 jours
+            cutoff_rss = (datetime.now() - timedelta(days=2)).strftime('%Y-%m-%d')
+            if article_date < cutoff_rss:
+                continue
+
             # Enrichissement si contenu insuffisant
             if len(contenu) < 100 and url:
                 contenu = crawl_article(url) or contenu
