@@ -118,8 +118,62 @@ RSS_SOURCES = [
         'categorie': 'Presse',
         'fallback_crawl': 'https://reporterre.net/',
     },
+    # ── Nouvelles sources ajoutées ──────────────────────────────────
+    {
+        'name': 'INERIS',
+        'url': 'https://www.ineris.fr/rss.xml',
+        'categorie': 'Réglementation',
+        # Tout le contenu INERIS est pertinent (risques industriels, ICPE,
+        # substances dangereuses, PFAS) — pas de filtre supplémentaire
+    },
+    {
+        'name': 'ANSES',
+        'url': 'https://www.anses.fr/fr/rss.xml',
+        'categorie': 'Réglementation',
+        # Flux très actif mais mélange biocides/REACH/eau et vétérinaire —
+        # require_keywords exclut les AMM vétérinaires hors scope GSF
+        'require_keywords': [
+            'biocide', 'reach', 'clp', 'substance chimique', 'produit chimique',
+            'pfas', 'perturbateur endocrinien', 'pesticide', 'phytosanitaire',
+            'eau potable', 'eau souterraine', 'déchet', 'icpe', 'air intérieur',
+            'nanomatériau', 'amiante', 'plomb', 'solvant',
+        ],
+    },
+    {
+        'name': 'BRGM Eaux souterraines',
+        'url': 'https://www.brgm.fr/fr/rss/term/eau-souterraine-preservation-ressource',
+        'categorie': 'Eau',
+        # Flux thématique ciblé : état des nappes phréatiques,
+        # risque contamination sites industriels
+    },
+    {
+        'name': 'Euractiv France',
+        'url': 'https://www.euractiv.fr/feed/',
+        'categorie': 'Réglementation',
+        # Très généraliste (toute la politique UE) — filtre strict
+        # pour ne garder que les textes réglementaires environnement/énergie
+        'require_keywords': [
+            'règlement', 'directive', 'reach', 'taxonomie', 'csrd',
+            'déchet', 'émission', 'pollution', 'icpe', 'climat',
+            'énergie', 'renouvelable', 'carbone', 'neutralité',
+            'biocide', 'substance', 'chimique', 'eau',
+        ],
+    },
+    {
+        'name': 'FNE',
+        'url': 'https://fne.asso.fr/flux.rss',
+        'categorie': 'Presse',
+        # Source militante — utile pour anticiper contentieux ICPE
+        # et pressions réglementaires issues de la société civile
+        'require_keywords': [
+            'icpe', 'installation classée', 'déchet', 'pesticide',
+            'chimique', 'nucléaire', 'polluti', 'eau', 'amiante',
+            'seveso', 'industriel', 'recours', 'tribunal', 'arrêté',
+        ],
+    },
     # Légifrance RSS supprimé (403) — couvert par le JORF DILA
-    # Contexte.com : pas de RSS public (abonnement)
+    # ECHA (REACH UE) — 403 sur le flux RSS public
+    # AIDA INERIS — authentification requise
 ]
 
 TIMEOUT = 30  # secondes
@@ -553,6 +607,13 @@ def fetch_rss_source(source: dict):
 
             if not keyword_match(titre + ' ' + contenu):
                 continue
+
+            # Filtre strict par source si défini (ex: ANSES, Euractiv)
+            require_kw = source.get('require_keywords')
+            if require_kw:
+                text_lower = (titre + ' ' + contenu).lower()
+                if not any(kw.lower() in text_lower for kw in require_kw):
+                    continue
 
             analysis = ollama_summarise(titre, contenu)
             items.append({
