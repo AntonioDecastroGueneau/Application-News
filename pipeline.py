@@ -206,14 +206,19 @@ def call_ollama(prompt: str) -> str:
         resp = requests.post(
             OLLAMA_URL,
             json={'model': OLLAMA_MODEL, 'prompt': prompt, 'stream': False},
-            timeout=90,
+            timeout=180,
         )
         resp.raise_for_status()
         return resp.json().get('response', '').strip()
+    except requests.exceptions.Timeout:
+        # Timeout sur un article isolé : on log mais on ne désactive pas Ollama
+        log.warning(f"Ollama timeout (180s) sur cet article — ignoré, Ollama reste actif")
+        return ''
     except Exception as e:
+        # Erreur réseau/connexion : Ollama probablement down, on passe en mode dégradé
         global OLLAMA_OK
-        OLLAMA_OK = False  # évite de réessayer sur les articles suivants
-        log.warning(f"Ollama erreur : {e}")
+        OLLAMA_OK = False
+        log.warning(f"Ollama indisponible : {e} — mode dégradé pour la suite")
         return ''
 
 
