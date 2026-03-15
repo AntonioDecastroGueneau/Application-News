@@ -677,11 +677,13 @@ def push_to_ghpages(json_data: dict, date_str: str) -> bool:
 
         # Mettre à jour archive.json
         archive_file = worktree / 'archive.json'
-        archive: dict = json.loads(archive_file.read_text()) if archive_file.exists() else {'dates': []}
+        archive: dict = json.loads(archive_file.read_text()) if archive_file.exists() else {'dates': [], 'counts': {}}
         archive.setdefault('dates', [])
+        archive.setdefault('counts', {})
         if date_str not in archive['dates']:
             archive['dates'].append(date_str)
         archive['dates'] = sorted(set(archive['dates']), reverse=True)
+        archive['counts'][date_str] = len(json_data.get('items', []))
         archive['updated_at'] = datetime.now().isoformat()
 
         # Nettoyer les JSON > 90 jours
