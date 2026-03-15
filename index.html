@@ -328,7 +328,44 @@ html, body {
 /* ── CARTE ── */
 #carte-view { height: calc(100vh - var(--header-h) - 40px); display: none; }
 #carte-view.active { display: flex; flex-direction: column; }
-#map-container { flex: 1; border-radius: 10px; border: 1px solid var(--border); overflow: hidden; min-height: 400px; }
+#map-wrap { flex: 1; position: relative; min-height: 400px; }
+#map-container { width: 100%; height: 100%; border-radius: 10px; border: 1px solid var(--border); overflow: hidden; }
+
+/* Encart stats carte */
+#map-stats {
+  position: absolute;
+  bottom: 32px; right: 12px;
+  background: rgba(255,255,255,0.93);
+  border: 1px solid #d0d8e4;
+  border-radius: 10px;
+  padding: 12px 16px;
+  min-width: 210px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.12);
+  z-index: 10;
+  pointer-events: none;
+  font-size: 12px;
+  color: #1a2433;
+}
+.ms-title {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .1em;
+  text-transform: uppercase; color: #778; margin-bottom: 10px;
+}
+.ms-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 3px 0; border-bottom: 1px solid #edf0f4;
+  gap: 12px;
+}
+.ms-row:last-child { border-bottom: none; }
+.ms-label { color: #445; font-size: 11px; }
+.ms-val { font-weight: 700; font-size: 13px; color: #1a2433; font-family: var(--mono); }
+.ms-sep {
+  margin: 8px 0 6px;
+  font-family: var(--mono); font-size: 9px; color: #aab; letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.ms-niveau { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #445; padding: 2px 0; }
+.ms-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.ms-loading { color: #aab; font-size: 11px; text-align: center; padding: 8px 0; }
 
 #map-legend {
   display: flex; gap: 6px; flex-wrap: wrap;
@@ -494,7 +531,13 @@ html, body {
         <span class="legend-chip"><span class="legend-dot" style="background:#f44336"></span>Crise</span>
         <span class="map-note">Source : VigiEau · maille zone</span>
       </div>
-      <div id="map-container"></div>
+      <div id="map-wrap">
+        <div id="map-container"></div>
+        <div id="map-stats">
+          <div class="ms-title">Restrictions en cours</div>
+          <div id="ms-body">—</div>
+        </div>
+      </div>
     </div>
 
     <!-- ARCHIVES -->
@@ -798,6 +841,89 @@ function toggleAutres(btn) {
 const PMTILES_URL  = 'https://regleau.s3.gra.perf.cloud.ovh.net/pmtiles/zones_arretes_en_vigueur.pmtiles';
 const SOURCE_LAYER = 'zones_arretes_en_vigueur';
 
+const NIV_COLOR = { vigilance:'#c6d848', alerte:'#ffd740', alerte_renforcee:'#ff9800', alerte_renforcée:'#ff9800', 'alerte renforcée':'#ff9800', crise:'#f44336' };
+const NIV_LABEL = { vigilance:'Vigilance', alerte:'Alerte', alerte_renforcee:'Alerte renforcée', alerte_renforcée:'Alerte renforcée', 'alerte renforcée':'Alerte renforcée', crise:'Crise' };
+
+function initMapStats() {
+  const el = document.getElementById('ms-body');
+  const rests = D?.restrictions_eau || [];
+  if (!rests.length) { el.innerHTML = '<div class="ms-loading">Aucune restriction active</div>'; return; }
+
+  // Compter par niveau
+  const counts = {};
+  rests.forEach(r => {
+    const n = (r.niveau || '').toLowerCase();
+    counts[n] = (counts[n] || 0) + 1;
+  });
+
+  // Niveaux dans l'ordre décroissant
+  const ordre = ['crise', 'alerte_renforcee', 'alerte renforcée', 'alerte_renforcée', 'alerte', 'vigilance'];
+
+  let html = `<div class="ms-row"><span class="ms-label">Départements touchés</span><span class="ms-val">${rests.length}</span></div>`;
+  html += '<div class="ms-sep">Répartition par niveau</div>';
+
+  const niveaux = Object.entries(counts).sort((a,b) => {
+    const ia = ordre.findIndex(o => o === a[0] || o.replace('_renforcee','_renforcée') === a[0]);
+    const ib = ordre.findIndex(o => o === b[0] || o.replace('_renforcee','_renforcée') === b[0]);
+    return ia - ib;
+  });
+
+  niveaux.forEach(([niv, cnt]) => {
+    const col = NIV_COLOR[niv] || '#aaa';
+    const lbl = NIV_LABEL[niv] || niv;
+    html += `<div class="ms-niveau"><span class="ms-dot" style="background:${col}"></span><span style="flex:1">${lbl}</span><span style="font-weight:600;font-family:var(--mono)">${cnt}</span></div>`;
+  });
+
+  // Dates depuis PMTiles — sera mis à jour après chargement de la carte
+  html += '<div class="ms-sep" id="ms-dates-label" style="display:none">Par période</div>';
+  html += '<div id="ms-dates"></div>';
+
+  el.innerHTML = html;
+}
+
+function updateMapStatsFromFeatures() {
+  const features = mapgl.querySourceFeatures('vigieau', { sourceLayer: SOURCE_LAYER });
+  if (!features.length) return;
+
+  const now = new Date();
+  const startOfDay   = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const startOfWeek  = new Date(startOfDay); startOfWeek.setDate(startOfDay.getDate() - startOfDay.getDay() || 7);
+  const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+
+  let today = 0, week = 0, month = 0, total = 0;
+  const seenIds = new Set();
+
+  features.forEach(f => {
+    const id = f.id || f.properties?.id;
+    if (id && seenIds.has(id)) return;
+    if (id) seenIds.add(id);
+    total++;
+
+    let arrete = null;
+    try { arrete = JSON.parse(f.properties?.arreteRestriction); } catch {}
+    const debut = arrete?.dateDebut || f.properties?.dateDebut;
+    if (!debut) return;
+
+    const d = new Date(debut);
+    if (d >= startOfDay)   today++;
+    if (d >= startOfWeek)  week++;
+    if (d >= startOfMonth) month++;
+  });
+
+  if (!total) return;
+
+  const labelEl = document.getElementById('ms-dates-label');
+  const datesEl = document.getElementById('ms-dates');
+  if (!labelEl || !datesEl) return;
+
+  labelEl.style.display = '';
+  datesEl.innerHTML = `
+    <div class="ms-row"><span class="ms-label">Zones actives (total)</span><span class="ms-val">${total}</span></div>
+    <div class="ms-row"><span class="ms-label">Ajoutées aujourd'hui</span><span class="ms-val">${today || '—'}</span></div>
+    <div class="ms-row"><span class="ms-label">Cette semaine</span><span class="ms-val">${week || '—'}</span></div>
+    <div class="ms-row"><span class="ms-label">Ce mois-ci</span><span class="ms-val">${month || '—'}</span></div>`;
+}
+
 function renderMap() {
   if (mapgl) { setTimeout(() => mapgl.resize(), 30); return; }
 
@@ -813,6 +939,9 @@ function renderMap() {
   });
 
   mapgl.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
+
+  // Encart stats — initialisation depuis restrictions_eau (pas besoin d'attendre la carte)
+  initMapStats();
 
   mapgl.on('load', () => {
     mapgl.addSource('vigieau', {
@@ -907,6 +1036,9 @@ function renderMap() {
         `)
         .addTo(mapgl);
     });
+
+    // Stats zones — déclenché une fois que les tiles sont chargées
+    mapgl.once('idle', updateMapStatsFromFeatures);
   });
 }
 
