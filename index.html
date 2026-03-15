@@ -154,6 +154,44 @@ html, body {
 .badge-filter:hover, .badge-filter.on { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
 #feed-list { display: flex; flex-direction: column; gap: 8px; }
 
+/* ── TOP 5 Signaux forts ── */
+#top5-section { margin-bottom: 20px; }
+.top5-label {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .12em;
+  color: var(--crit3); text-transform: uppercase; margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.top5-label::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--crit3); }
+.top5-grid { display: flex; flex-direction: column; gap: 5px; }
+.top5-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-left: 3px solid var(--crit2); border-radius: 6px;
+  padding: 10px 14px; display: flex; align-items: flex-start; gap: 10px;
+}
+.top5-card[data-crit="3"] { border-left-color: var(--crit3); }
+.top5-rank {
+  font-family: var(--mono); font-size: 11px; font-weight: 700;
+  color: var(--muted2); min-width: 18px; padding-top: 1px;
+}
+.top5-body { flex: 1; min-width: 0; }
+.top5-titre { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 3px; }
+.top5-meta { font-size: 10px; color: var(--muted2); font-family: var(--mono); display: flex; gap: 8px; flex-wrap: wrap; }
+.top5-src { color: var(--muted); }
+.top5-crit { }
+.top5-crit-1 { color: var(--muted2); }
+.top5-crit-2 { color: var(--crit2); }
+.top5-crit-3 { color: var(--crit3); font-weight: 600; }
+.top5-link {
+  font-size: 10px; font-family: var(--mono); color: var(--accent);
+  text-decoration: none; opacity: .7; flex-shrink: 0; padding-top: 2px;
+}
+.top5-link:hover { opacity: 1; }
+#top5-section + .feed-section-label { display: block; }
+.feed-section-label {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .1em;
+  color: var(--muted2); text-transform: uppercase; margin-bottom: 8px;
+}
+
 /* Card */
 .card {
   background: var(--surface); border: 1px solid var(--border);
@@ -431,6 +469,8 @@ html, body {
         <button class="badge-filter" data-cat="Déchets"         onclick="filterCat('Déchets')">Déchets</button>
         <button class="badge-filter" data-cat="Émissions"       onclick="filterCat('Émissions')">Émissions</button>
       </div>
+      <div id="top5-section"></div>
+      <div class="feed-section-label" id="feed-section-label" style="display:none">Tous les articles</div>
       <div id="feed-list"></div>
     </div>
 
@@ -592,15 +632,44 @@ function renderSidebar() {
 // FEED PRESSE
 // ─────────────────────────────────────────
 function renderFeed() {
-  const presseItems = (D?.items || []).filter(i => sourceType(i.source) === 'presse');
+  const allItems   = D?.items || [];
+  const presseItems = allItems.filter(i => sourceType(i.source) === 'presse');
   const items = getFilteredItems(presseItems);
 
-  // Update nav count
   document.getElementById('nav-count-feed').textContent = presseItems.length;
-
   document.getElementById('feed-titre').textContent =
     'Presse du ' + formatDate(D.date) + '  ·  ' + items.length + ' articles';
 
+  // ── TOP 5 Signaux forts (toutes sources, trié criticité) ────────
+  const top5 = allItems.filter(i => i.top5);
+  const top5El = document.getElementById('top5-section');
+  const labelEl = document.getElementById('feed-section-label');
+
+  if (top5.length) {
+    const CRIT_LABEL = ['', 'Veille', 'Vigilance', '⚠ Impact direct'];
+    top5El.innerHTML = `
+      <div class="top5-label">Signaux forts du jour</div>
+      <div class="top5-grid">${top5.map((item, i) => `
+        <div class="top5-card" data-crit="${item.criticite}">
+          <span class="top5-rank">#${i+1}</span>
+          <div class="top5-body">
+            <div class="top5-titre">${escHtml(item.titre)}</div>
+            <div class="top5-meta">
+              <span class="top5-src">${escHtml(item.source)}</span>
+              <span class="top5-crit top5-crit-${item.criticite}">${CRIT_LABEL[item.criticite] || ''}</span>
+            </div>
+          </div>
+          ${item.url ? `<a class="top5-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">→</a>` : ''}
+        </div>`).join('')}
+      </div>`;
+    labelEl.style.display = 'block';
+    labelEl.textContent = 'Presse — tous les articles';
+  } else {
+    top5El.innerHTML = '';
+    labelEl.style.display = 'none';
+  }
+
+  // ── Liste presse normale ─────────────────────────────────────────
   const list = document.getElementById('feed-list');
   if (!items.length) {
     list.innerHTML = `<div class="empty-state">Aucun résultat avec ces filtres</div>`;
@@ -740,22 +809,22 @@ function renderMap() {
     style: {
       version: 8,
       sources: {
-        'carto-dark': {
+        'carto-light': {
           type: 'raster',
-          tiles: ['https://a.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png',
-                  'https://b.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png'],
+          tiles: ['https://a.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',
+                  'https://b.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png'],
           tileSize: 256,
         },
         'carto-labels': {
           type: 'raster',
-          tiles: ['https://a.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}.png',
-                  'https://b.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}.png'],
+          tiles: ['https://a.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png',
+                  'https://b.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png'],
           tileSize: 256,
         },
       },
       layers: [
-        { id: 'bg', type: 'background', paint: { 'background-color': '#07090d' } },
-        { id: 'tiles', type: 'raster', source: 'carto-dark' },
+        { id: 'bg', type: 'background', paint: { 'background-color': '#f5f5f0' } },
+        { id: 'tiles', type: 'raster', source: 'carto-light' },
       ],
     },
     center: [2.3, 46.6],
@@ -845,16 +914,16 @@ function renderMap() {
       new maplibregl.Popup({ maxWidth: '280px' })
         .setLngLat(e.lngLat)
         .setHTML(`
-          <div style="font-weight:600;font-size:13px;margin-bottom:5px;color:#d4e0ed">${p.nom || p.code}</div>
-          <div style="color:${col};font-size:12px;font-weight:500;margin-bottom:6px">${label}</div>
-          <div style="font-size:10px;color:#5a7491;margin-bottom:${arrete?.fichier ? '8px' : '0'}">
+          <div style="font-weight:600;font-size:13px;margin-bottom:5px;color:#1a2433">${p.nom || p.code}</div>
+          <div style="color:${col};font-size:12px;font-weight:600;margin-bottom:6px">${label}</div>
+          <div style="font-size:10px;color:#556;margin-bottom:${arrete?.fichier ? '8px' : '0'}">
             ${typeLabel} · Dept ${p.departement}
             ${arrete?.numero ? `<br>Arrêté n° ${arrete.numero}` : ''}
             ${arrete?.dateDebut ? ` · en vigueur depuis ${arrete.dateDebut}` : ''}
           </div>
           ${arrete?.fichier
             ? `<a href="${arrete.fichier}" target="_blank" rel="noopener"
-                  style="font-size:10px;font-family:monospace;color:#3bff8a;text-decoration:none">
+                  style="font-size:10px;font-family:monospace;color:#1a6fb5;text-decoration:none">
                  Voir l'arrêté préfectoral →
                </a>`
             : ''}
