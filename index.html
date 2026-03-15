@@ -155,38 +155,50 @@ html, body {
 #feed-list { display: flex; flex-direction: column; gap: 8px; }
 
 /* ── TOP 5 Signaux forts ── */
-#top5-section { margin-bottom: 20px; }
+#top5-section {
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #0d1a0f 0%, #0d1118 100%);
+  border: 1px solid rgba(59,255,138,.12);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
 .top5-label {
-  font-family: var(--mono); font-size: 9px; letter-spacing: .12em;
-  color: var(--crit3); text-transform: uppercase; margin-bottom: 8px;
-  display: flex; align-items: center; gap: 6px;
+  font-family: var(--mono); font-size: 9px; letter-spacing: .14em;
+  color: var(--accent); text-transform: uppercase; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
 }
-.top5-label::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--crit3); }
-.top5-grid { display: flex; flex-direction: column; gap: 5px; }
+.top5-label::before {
+  content: ''; display: inline-block; width: 6px; height: 6px;
+  border-radius: 50%; background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+.top5-grid { display: flex; flex-direction: column; gap: 6px; }
 .top5-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-left: 3px solid var(--crit2); border-radius: 6px;
-  padding: 10px 14px; display: flex; align-items: flex-start; gap: 10px;
+  background: rgba(255,255,255,.03); border: 1px solid rgba(59,255,138,.08);
+  border-radius: 6px; padding: 10px 14px;
+  display: flex; align-items: flex-start; gap: 12px;
+  transition: background .15s;
 }
-.top5-card[data-crit="3"] { border-left-color: var(--crit3); }
+.top5-card:hover { background: rgba(255,255,255,.06); }
+.top5-card[data-crit="3"] { border-color: rgba(255,69,69,.2); background: rgba(255,69,69,.04); }
 .top5-rank {
-  font-family: var(--mono); font-size: 11px; font-weight: 700;
-  color: var(--muted2); min-width: 18px; padding-top: 1px;
+  font-family: var(--mono); font-size: 18px; font-weight: 700;
+  color: rgba(59,255,138,.25); min-width: 28px; padding-top: 0px; line-height: 1;
 }
+.top5-card[data-crit="3"] .top5-rank { color: rgba(255,69,69,.4); }
 .top5-body { flex: 1; min-width: 0; }
-.top5-titre { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 3px; }
-.top5-meta { font-size: 10px; color: var(--muted2); font-family: var(--mono); display: flex; gap: 8px; flex-wrap: wrap; }
+.top5-titre { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 4px; }
+.top5-meta { font-size: 10px; color: var(--muted2); font-family: var(--mono); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 .top5-src { color: var(--muted); }
-.top5-crit { }
 .top5-crit-1 { color: var(--muted2); }
 .top5-crit-2 { color: var(--crit2); }
 .top5-crit-3 { color: var(--crit3); font-weight: 600; }
 .top5-link {
-  font-size: 10px; font-family: var(--mono); color: var(--accent);
-  text-decoration: none; opacity: .7; flex-shrink: 0; padding-top: 2px;
+  font-size: 11px; font-family: var(--mono); color: var(--accent);
+  text-decoration: none; opacity: .6; flex-shrink: 0;
 }
 .top5-link:hover { opacity: 1; }
-#top5-section + .feed-section-label { display: block; }
 .feed-section-label {
   font-family: var(--mono); font-size: 9px; letter-spacing: .1em;
   color: var(--muted2); text-transform: uppercase; margin-bottom: 8px;
@@ -217,10 +229,14 @@ html, body {
 .badge-JO\/DILA       { background:#0d1a2a; color:#64b5f6; }
 .badge-Environnement  { background:#131313; color:#78909c; }
 .card-titre { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; flex: 1; }
-.card-resume { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 8px; }
+.card-resume { font-size: 12px; color: #8faabb; line-height: 1.6; margin-bottom: 8px; }
 .card-footer { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .card-source { font-family: var(--mono); font-size: 10px; color: var(--muted2); letter-spacing: .05em; }
 .card-date   { font-family: var(--mono); font-size: 10px; color: var(--muted2); letter-spacing: .03em; }
+.card-src-type {
+  font-family: var(--mono); font-size: 9px; padding: 1px 5px; border-radius: 3px;
+  background: var(--surface3); color: var(--muted2); letter-spacing: .05em;
+}
 .card-crit   { font-family: var(--mono); font-size: 9px; padding: 1px 6px; border-radius: 20px; }
 .crit1 { background:#0d1a2a; color:var(--crit1); }
 .crit2 { background:#2a1a00; color:var(--crit2); }
@@ -407,6 +423,11 @@ html, body {
 .arc-day.has-data:hover { border-color: var(--accent); color: var(--accent); }
 .arc-day.selected { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
 .arc-day.today { border-color: var(--crit1); color: var(--crit1); }
+.arc-day-count {
+  display: block; font-size: 8px; color: var(--muted2); margin-top: 1px; letter-spacing: 0;
+}
+.arc-day.has-data .arc-day-count { color: var(--accent); opacity: .6; }
+.arc-day.selected .arc-day-count { color: var(--accent); opacity: 1; }
 
 /* ── LOADING / TOAST ── */
 #loading {
@@ -505,6 +526,7 @@ html, body {
         <button class="badge-filter" data-cat="Biodiversité"    onclick="filterCat('Biodiversité')">Biodiversité</button>
         <button class="badge-filter" data-cat="Déchets"         onclick="filterCat('Déchets')">Déchets</button>
         <button class="badge-filter" data-cat="Émissions"       onclick="filterCat('Émissions')">Émissions</button>
+        <button class="badge-filter" data-cat="Réglementation"  onclick="filterCat('Réglementation')">Réglementation</button>
       </div>
       <div id="top5-section"></div>
       <div class="feed-section-label" id="feed-section-label" style="display:none">Tous les articles</div>
@@ -564,12 +586,18 @@ let srcFilters  = { presse: true, impact: false };
 let mapgl       = null;
 
 const JORF_SOURCES   = ['JORF'];
-const PRESSE_SOURCES = ['ADEME', 'Actu-Environnement', 'Min. Transition Écologique'];
+const OFFICIEL_SOURCES = ['ADEME', 'Min. Transition Écologique'];
+const PRESSE_SOURCES = ['Actu-Environnement', 'Contexte Environnement', 'Novethic', 'Reporterre'];
 
 function sourceType(src) {
-  if (JORF_SOURCES.includes(src))   return 'jorf';
-  if (PRESSE_SOURCES.includes(src)) return 'presse';
+  if (JORF_SOURCES.includes(src))    return 'jorf';
+  if (OFFICIEL_SOURCES.includes(src)) return 'officiel';
   return 'presse';
+}
+function sourceTypeLabel(src) {
+  if (JORF_SOURCES.includes(src))    return 'JO';
+  if (OFFICIEL_SOURCES.includes(src)) return 'Officiel';
+  return 'Presse';
 }
 
 const NIVEAU_COLOR = {
@@ -594,7 +622,9 @@ async function init() {
   try {
     archive = await loadArchive();
     if (archive?.dates?.length) {
-      currentDate = archive.dates[0];
+      // Support URL partageable : ?date=2026-03-12
+      const urlDate = new URLSearchParams(location.search).get('date');
+      currentDate = (urlDate && archive.dates.includes(urlDate)) ? urlDate : archive.dates[0];
       D = await loadData(currentDate);
     }
     renderAll();
@@ -727,9 +757,10 @@ function renderFeed() {
       </div>
       <div class="card-resume">${escHtml(item.resume)}</div>
       <div class="card-footer">
+        <span class="card-src-type">${sourceTypeLabel(item.source)}</span>
         <span class="card-source">${escHtml(item.source)}</span>
         <span class="card-date">${formatDate(item.date)}</span>
-        <span class="card-crit crit${item.criticite}">${['','Info','Vigilance','⚠ Impact direct'][item.criticite] || 'Info'}</span>
+        <span class="card-crit crit${item.criticite}" title="${['','Info : veille générale, sans impact immédiat','Vigilance : évolution réglementaire à surveiller','Impact direct : action ou adaptation requise pour GSF'][item.criticite] || ''}">${['','Info','Vigilance','⚠ Impact direct'][item.criticite] || 'Info'}</span>
         ${item.url ? `<a class="card-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Lire →</a>` : ''}
       </div>
     </div>`).join('');
@@ -1071,9 +1102,11 @@ function renderArchives() {
       const hasData = availSet.has(iso);
       const isToday = iso === today.toISOString().slice(0,10);
       const isSel   = iso === currentDate;
+      const count   = archive.counts?.[iso];
       const cls     = ['arc-day', hasData?'has-data':'', isToday?'today':'', isSel?'selected':''].filter(Boolean).join(' ');
       const onclick = hasData ? `onclick="loadDate('${iso}')"` : '';
-      return `<div class="${cls}" ${onclick} title="${iso}">${dd}</div>`;
+      const countHtml = hasData && count ? `<span class="arc-day-count">${count}</span>` : '';
+      return `<div class="${cls}" ${onclick} title="${iso}">${dd}${countHtml}</div>`;
     }).join('');
     return `<div class="arc-month">
       <div class="arc-month-title">${label}</div>
@@ -1088,6 +1121,8 @@ async function loadDate(date) {
   try {
     D = await loadData(date);
     currentDate = date;
+    // Mettre à jour l'URL pour permettre le partage
+    history.replaceState(null, '', `?date=${date}`);
     renderAll();
     if (currentView === 'archives') renderArchives();
   } catch(e) {
