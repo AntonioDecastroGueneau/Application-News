@@ -806,23 +806,7 @@ function renderMap() {
 
   mapgl = new maplibregl.Map({
     container: 'map-container',
-    style: {
-      version: 8,
-      sources: {
-        'osm-fr': {
-          type: 'raster',
-          tiles: ['https://a.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
-                  'https://b.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
-                  'https://c.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'],
-          tileSize: 256,
-          attribution: '© OpenStreetMap contributors',
-        },
-      },
-      layers: [
-        { id: 'bg', type: 'background', paint: { 'background-color': '#f2efe9' } },
-        { id: 'tiles', type: 'raster', source: 'osm-fr' },
-      ],
-    },
+    style: 'https://openmaptiles.data.gouv.fr/styles/osm-bright/style.json',
     center: [2.3, 46.6],
     zoom: 4.8,
     attributionControl: false,
