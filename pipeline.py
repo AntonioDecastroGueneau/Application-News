@@ -37,8 +37,8 @@ SCRIPT_DIR   = Path(__file__).parent.resolve()
 GHPAGES_WORKTREE = Path('/tmp/gsf-veille-ghpages')
 LOG_PATH     = SCRIPT_DIR / 'pipeline.log'
 
-JORF_BASE_URL = 'https://echanges.dila.gouv.fr/OPENDATA/JORF/'
-HUBEAU_URL    = 'https://hubeau.eaufrance.fr/api/v1/propluvia/restrictions'
+JORF_BASE_URL     = 'https://echanges.dila.gouv.fr/OPENDATA/JORF/'
+VIGIEAU_DEPTS_URL = 'https://api.vigieau.gouv.fr/api/departements'
 
 # Mots-clés de pertinence GSF
 KEYWORDS = [
@@ -52,8 +52,34 @@ KEYWORDS = [
     'responsabilité élargie', 'VHU', 'bâtiment tertiaire',
 ]
 
+# Mots-clés stricts pour le pré-filtre JORF (Option B)
+# Seuls les textes dont le titre contient l'une de ces expressions passent à Ollama
+JORF_KEYWORDS_STRICT = [
+    # Activités cœur GSF — nettoyage / propreté
+    'nettoyage industriel', 'nettoyage tertiaire', 'nettoyage des locaux',
+    'propreté industrielle', 'agent de propreté', 'entreprise de propreté',
+    'branche propreté', 'convention collective', 'propreté et services',
+    'désinfection', 'décontamination', 'hygiène des locaux',
+    # Déchets
+    'déchet dangereux', 'déchets dangereux', 'déchet industriel', 'déchets industriels',
+    'DASRI', 'déchet infectieux', 'déchet de soins',
+    'collecte de déchets', 'traitement de déchets', 'élimination de déchets',
+    'responsabilité élargie du producteur', 'filière REP',
+    # Produits chimiques
+    'biocide', 'détergent', 'substance dangereuse', 'produit chimique',
+    'CMR', 'composé organique volatil', 'COV', 'solvant',
+    'REACH', 'CLP', 'fiche de données de sécurité', 'FDS',
+    # ICPE / risques industriels
+    'installation classée', 'ICPE', 'SEVESO', 'rubrique ICPE',
+    # Nucléaire / milieux contrôlés
+    'radioprotection', 'zone contrôlée', 'zone surveillée',
+    # Amiante / plomb
+    'amiante', 'désamiantage', 'plomb', 'saturnisme',
+]
+
 OLLAMA_URL   = 'http://localhost:11434/api/generate'
-OLLAMA_MODEL = 'mistral'
+OLLAMA_MODEL = 'phi3:mini'
+OLLAMA_OK    = None  # None = pas encore testé, True/False après check
 
 RSS_SOURCES = [
     {
@@ -64,22 +90,36 @@ RSS_SOURCES = [
     },
     {
         'name': 'Actu-Environnement',
-        'url': 'https://www.actu-environnement.com/ae/news/flux_rss.php4',
+        'url': 'https://www.actu-environnement.com/flux/rss/environnement/',
         'categorie': 'Presse',
         'fallback_crawl': 'https://www.actu-environnement.com/ae/news/',
     },
     {
         'name': 'Min. Transition Écologique',
-        'url': 'https://www.ecologie.gouv.fr/actualites/rss',
+        'url': 'https://www.ecologie.gouv.fr/rss-actualites.xml',
         'categorie': 'Réglementation',
-        'fallback_crawl': None,
+        'fallback_crawl': 'https://www.ecologie.gouv.fr/actualites',
     },
     {
-        'name': 'Légifrance RSS',
-        'url': 'https://www.legifrance.gouv.fr/rss/jorf.xml',
-        'categorie': 'JO/DILA',
-        'fallback_crawl': None,
+        'name': 'Contexte Environnement',
+        'url': 'https://www.contexte.com/articles/rss/edition/environnement',
+        'categorie': 'Réglementation',
+        'fallback_crawl': 'https://www.contexte.com/environnement/',
     },
+    {
+        'name': 'Novethic',
+        'url': 'https://www.novethic.fr/feed',
+        'categorie': 'Presse',
+        'fallback_crawl': 'https://www.novethic.fr/',
+    },
+    {
+        'name': 'Reporterre',
+        'url': 'https://reporterre.net/spip.php?page=backend',
+        'categorie': 'Presse',
+        'fallback_crawl': 'https://reporterre.net/',
+    },
+    # Légifrance RSS supprimé (403) — couvert par le JORF DILA
+    # Contexte.com : pas de RSS public (abonnement)
 ]
 
 TIMEOUT = 30  # secondes
@@ -127,7 +167,7 @@ def categorise(text: str) -> str:
     t = text.lower()
     if any(k in t for k in ['icpe', 'installation classée', 'seveso', 'autorisation', 'enregistrement']):
         return 'ICPE'
-    if any(k in t for k in ['eau', 'rejet', 'assainissement', 'captage', 'hubeau', 'nappe']):
+    if any(k in t for k in ['eau', 'rejet', 'assainissement', 'captage', 'nappe']):
         return 'Eau'
     if any(k in t for k in ['énergie', 'dpe', 'thermique', 'renouvelable', 'carbone', 'ges']):
         return 'Énergie'
@@ -144,8 +184,24 @@ def categorise(text: str) -> str:
 # OLLAMA
 # ─────────────────────────────────────────────
 
+def check_ollama() -> bool:
+    """Vérifie si Ollama est disponible (timeout court)."""
+    global OLLAMA_OK
+    if OLLAMA_OK is not None:
+        return OLLAMA_OK
+    try:
+        resp = requests.get('http://localhost:11434/', timeout=5)
+        OLLAMA_OK = resp.status_code == 200
+    except Exception:
+        OLLAMA_OK = False
+    log.info(f"Ollama {'disponible' if OLLAMA_OK else 'indisponible — mode dégradé (résumés automatiques)'}")
+    return OLLAMA_OK
+
+
 def call_ollama(prompt: str) -> str:
     """Appelle Ollama (Mistral local) et retourne la réponse texte."""
+    if not check_ollama():
+        return ''
     try:
         resp = requests.post(
             OLLAMA_URL,
@@ -155,7 +211,9 @@ def call_ollama(prompt: str) -> str:
         resp.raise_for_status()
         return resp.json().get('response', '').strip()
     except Exception as e:
-        log.warning(f"Ollama indisponible : {e}")
+        global OLLAMA_OK
+        OLLAMA_OK = False  # évite de réessayer sur les articles suivants
+        log.warning(f"Ollama erreur : {e}")
         return ''
 
 
@@ -173,14 +231,40 @@ def extract_json(text: str) -> dict:
 def ollama_impact_gsf(titre: str, contenu: str) -> dict:
     """Évalue la pertinence et l'impact d'un texte JO pour GSF."""
     prompt = (
-        "Tu es expert en réglementation environnementale pour GSF, entreprise de propreté "
-        "et services (nettoyage industriel, entretien de bâtiments, gestion de déchets, produits chimiques).\n\n"
+        "CONTEXTE : GSF est le 2e groupe français de nettoyage et propreté (42 000 salariés, 1,6 Md€ CA). "
+        "GSF intervient dans : usines agroalimentaires, industrie, nucléaire, pharmaceutique, hôpitaux, "
+        "bureaux, surfaces de vente, transports. "
+        "GSF gère aussi des déchets industriels, utilise des produits chimiques "
+        "(détergents, désinfectants, biocides) et exploite des installations ICPE.\n\n"
+
+        "RÈGLE 1 — EXCLUSIONS ABSOLUES (répondre pertinent=false sans exception) :\n"
+        "- Textes sur des professions réglementées (médecins, avocats, notaires, vétérinaires, pharmaciens...)\n"
+        "- Nominations, mutations, retraites, concours de la fonction publique\n"
+        "- Régies de recettes ou d'avances, finances publiques, fiscalité\n"
+        "- Défense nationale, armées, police, justice\n"
+        "- Sécurité sociale, assurance maladie, prestations sociales\n"
+        "- Urbanisme, permis de construire, cadastre\n"
+        "- Agriculture, sylviculture, pêche (sauf si lien explicite avec nettoyage ou déchets)\n\n"
+
+        "RÈGLE 2 — PERTINENT pour GSF UNIQUEMENT si le texte modifie directement :\n"
+        "- Les règles sur les produits biocides, détergents, CMR, solvants, REACH\n"
+        "- La réglementation ICPE (nouvelles rubriques, seuils, obligations déclaratives)\n"
+        "- La gestion, collecte ou traitement des déchets industriels ou dangereux\n"
+        "- Les normes d'hygiène dans les secteurs où GSF travaille (agroalimentaire, pharma, santé, nucléaire)\n"
+        "- Les obligations employeur en santé-sécurité des agents de nettoyage (TMS, produits chimiques, EPI)\n"
+        "- La réglementation sur les rejets aqueux, les eaux usées industrielles\n"
+        "- Les conventions collectives ou accords de branche propreté\n\n"
+
+        "RÈGLE 3 — EN CAS DE DOUTE : pertinent=false. Ne jamais inventer de lien indirect.\n\n"
+
         f"TITRE : {titre}\n"
         f"EXTRAIT : {contenu[:600]}\n\n"
-        "Réponds UNIQUEMENT en JSON valide, sans aucun texte avant ou après :\n"
-        '{"pertinent": true/false, "score": 1, "resume": "2-3 lignes max"}\n'
-        "score : 1=information, 2=vigilance, 3=impact direct activités GSF\n"
-        "pertinent : true si concerne nettoyage/propreté/déchets/ICPE/eau/produits chimiques/bâtiments"
+
+        "Applique d'abord la RÈGLE 1. Si exclusion → pertinent=false immédiatement.\n"
+        "Sinon applique la RÈGLE 2. Si aucun point ne correspond exactement → pertinent=false.\n\n"
+        "Réponds UNIQUEMENT en JSON valide, sans texte avant ou après :\n"
+        '{"pertinent": true/false, "score": 1, "resume": "2 phrases max si pertinent, sinon vide"}\n'
+        "score : 1=veille, 2=à surveiller, 3=obligation directe sur opérations GSF"
     )
     raw = call_ollama(prompt)
     result = extract_json(raw)
@@ -251,7 +335,7 @@ def list_jorf_files() -> list[str]:
         return []
 
 
-def get_today_jorf_url() -> str | None:
+def get_today_jorf_url():
     """Retourne l'URL du fichier JORF le plus récent pour aujourd'hui."""
     files = list_jorf_files()
     today_compact = datetime.now().strftime('%Y%m%d')
@@ -263,8 +347,19 @@ def get_today_jorf_url() -> str | None:
     return None
 
 
-def parse_jorf_xml(content: bytes) -> list[dict]:
-    """Parse un fichier XML JORF et extrait les articles filtrés par mots-clés."""
+def parse_jorf_xml(content: bytes):
+    """Parse un fichier XML JORF (format DILA) et extrait les articles filtrés par mots-clés.
+
+    Structure DILA :
+      <SECTION_TA>
+        <TITRE_TA>...</TITRE_TA>
+        <CONTEXTE>
+          <TEXTE nor="TECK..." nature="ARRETE" ministere="..." date_publi="YYYY-MM-DD">
+            <TITRE_TXT>Arrêté du …</TITRE_TXT>
+          </TEXTE>
+        </CONTEXTE>
+      </SECTION_TA>
+    """
     import xml.etree.ElementTree as ET
     articles = []
     try:
@@ -273,36 +368,48 @@ def parse_jorf_xml(content: bytes) -> list[dict]:
         log.debug(f"XML parse error : {e}")
         return articles
 
-    # Parcourir toute l'arborescence — DILA peut changer le format
-    for elem in root.iter():
-        tag = elem.tag.split('}')[-1].upper()
-        if tag not in ('ARTICLE', 'TEXTE', 'ITEM', 'ENTRY'):
-            continue
+    seen_nor = set()
 
-        titre, contenu, url = '', '', ''
+    # Chercher tous les éléments TEXTE portant un attribut nor (NOR du texte)
+    for texte in root.iter('TEXTE'):
+        nor = texte.get('nor', '').strip()
 
-        for child in elem:
-            ctag = child.tag.split('}')[-1].upper()
-            text = (child.text or '').strip()
-            if ctag in ('TITRE', 'TITLE', 'INTITULE', 'NOR'):
-                titre = titre or text
-            elif ctag in ('CONTENU', 'CONTENT', 'DESCRIPTION', 'SUMMARY'):
-                contenu = html.unescape(re.sub(r'<[^>]+>', ' ', text))
-            elif ctag in ('URL', 'LINK', 'LIEN'):
-                url = text or child.get('href', '')
+        # Titre dans <TITRE_TXT>
+        titre_el = texte.find('TITRE_TXT')
+        titre = (titre_el.text or '').strip() if titre_el is not None else ''
 
         if not titre:
             continue
+        if nor and nor in seen_nor:
+            continue
+        if nor:
+            seen_nor.add(nor)
+
+        nature    = texte.get('nature', '')
+        ministere = texte.get('ministere', '')
+        date_pub  = texte.get('date_publi', TODAY)
+        cid       = texte.get('cid', '')  # JORFTEXT000... — vrai ID Légifrance
+
+        url = f'https://www.legifrance.gouv.fr/jorf/id/{cid}' if cid else (
+              f'https://www.legifrance.gouv.fr/jorf/id/{nor}' if nor else '')
+        contenu = ' — '.join(filter(None, [nature, ministere]))
+
         if keyword_match(titre + ' ' + contenu):
-            articles.append({'titre': titre, 'contenu': contenu[:500], 'url': url})
+            articles.append({
+                'titre'   : titre,
+                'contenu' : contenu[:500],
+                'url'     : url,
+                'nor'     : nor,
+                'date'    : date_pub,
+            })
 
     return articles
 
 
-def fetch_jorf() -> tuple[list, int]:
-    """Télécharge le JORF, filtre et analyse via Ollama. Retourne (items, nb_analysés)."""
+def fetch_jorf():
+    """Télécharge le JORF, filtre et analyse via Ollama. Retourne (pertinents, autres, nb_analysés)."""
     log.info("=== JORF ===")
-    items, total_analysed = [], 0
+    items, autres, total_analysed = [], [], 0
 
     try:
         url = get_today_jorf_url()
@@ -319,55 +426,81 @@ def fetch_jorf() -> tuple[list, int]:
             log.info(f"JORF : {len(xml_members)} fichiers XML")
 
             all_articles = []
+            seen_nor_global = set()
             for member in xml_members:
                 try:
                     f = tar.extractfile(member)
                     if f:
-                        all_articles.extend(parse_jorf_xml(f.read()))
+                        for art in parse_jorf_xml(f.read()):
+                            nor = art.get('nor', '')
+                            if nor and nor in seen_nor_global:
+                                continue
+                            if nor:
+                                seen_nor_global.add(nor)
+                            all_articles.append(art)
                 except Exception as e:
                     log.debug(f"Erreur XML {member.name} : {e}")
 
             total_analysed = len(all_articles)
-            log.info(f"JORF : {total_analysed} articles filtrés par mots-clés")
+            log.info(f"JORF : {total_analysed} textes keywords généraux")
 
-            for art in all_articles:
+            # ── Option B : pré-filtre strict avant Ollama ──────────────
+            def jorf_strict_match(titre: str) -> bool:
+                t = titre.lower()
+                return any(k.lower() in t for k in JORF_KEYWORDS_STRICT)
+
+            gsf_candidates = [a for a in all_articles if jorf_strict_match(a['titre'])]
+            rest = [a for a in all_articles if not jorf_strict_match(a['titre'])]
+            log.info(f"JORF : {len(gsf_candidates)} candidats GSF après pré-filtre strict, {len(rest)} autres")
+
+            # Les textes hors-filtre vont directement dans "autres"
+            for art in rest:
+                autres.append({
+                    'nor'      : art.get('nor', ''),
+                    'titre'    : art['titre'],
+                    'nature'   : art.get('contenu', '').split(' — ')[0],
+                    'ministere': art.get('contenu', '').split(' — ')[1] if ' — ' in art.get('contenu', '') else '',
+                    'url'      : art.get('url', ''),
+                    'date'     : art.get('date', TODAY),
+                })
+
+            # Les candidats GSF → Ollama pour résumé uniquement (pas de filtre)
+            for art in gsf_candidates:
                 try:
                     contenu = art['contenu']
-                    # Enrichissement via Légifrance si URL dispo
                     if art.get('url') and 'legifrance' in art.get('url', ''):
                         full = crawl_article(art['url'])
                         if full:
                             contenu = full
 
-                    analysis = ollama_impact_gsf(art['titre'], contenu)
+                    analysis = ollama_summarise(art['titre'], contenu)
 
-                    if analysis.get('pertinent'):
-                        items.append({
-                            'id': make_id('JORF', art['titre']),
-                            'source': 'JORF',
-                            'categorie': categorise(art['titre'] + ' ' + contenu),
-                            'titre': art['titre'],
-                            'resume': analysis.get('resume') or art['titre'],
-                            'criticite': int(analysis.get('score', 1)),
-                            'impact_gsf': True,
-                            'url': art.get('url', ''),
-                            'date': TODAY,
-                        })
+                    items.append({
+                        'id': make_id('JORF', art['titre']),
+                        'source': 'JORF',
+                        'categorie': categorise(art['titre'] + ' ' + contenu),
+                        'titre': art['titre'],
+                        'resume': analysis.get('resume') or art['titre'],
+                        'criticite': int(analysis.get('score', 2)),
+                        'impact_gsf': True,
+                        'url': art.get('url', ''),
+                        'date': TODAY,
+                    })
                 except Exception as e:
-                    log.debug(f"Erreur analyse JORF : {e}")
+                    log.debug(f"Erreur résumé JORF : {e}")
 
     except Exception as e:
         log.error(f"JORF fatal : {e}", exc_info=True)
 
-    log.info(f"JORF : {len(items)} retenus / {total_analysed} analysés")
-    return items, total_analysed
+    log.info(f"JORF : {len(items)} retenus / {total_analysed} analysés ({len(autres)} autres)")
+    return items, autres, total_analysed
 
 
 # ─────────────────────────────────────────────
 # RSS / PRESSE
 # ─────────────────────────────────────────────
 
-def fetch_rss_source(source: dict) -> list[dict]:
+def fetch_rss_source(source: dict):
     """Récupère et analyse les articles d'une source RSS."""
     items = []
     name = source['name']
@@ -393,6 +526,17 @@ def fetch_rss_source(source: dict) -> list[dict]:
 
             url = entry.get('link', '')
 
+            # Date de publication réelle de l'article
+            pub = entry.get('published_parsed') or entry.get('updated_parsed')
+            if pub:
+                import time as _time
+                try:
+                    article_date = datetime.fromtimestamp(_time.mktime(pub)).strftime('%Y-%m-%d')
+                except Exception:
+                    article_date = TODAY
+            else:
+                article_date = TODAY
+
             # Enrichissement si contenu insuffisant
             if len(contenu) < 100 and url:
                 contenu = crawl_article(url) or contenu
@@ -410,7 +554,7 @@ def fetch_rss_source(source: dict) -> list[dict]:
                 'criticite': int(analysis.get('score', 1)),
                 'impact_gsf': int(analysis.get('score', 1)) >= 2,
                 'url': url,
-                'date': TODAY,
+                'date': article_date,
             })
 
     except Exception as e:
@@ -440,7 +584,7 @@ def fetch_rss_source(source: dict) -> list[dict]:
     return items
 
 
-def fetch_rss() -> list[dict]:
+def fetch_rss():
     """Collecte et agrège tous les flux RSS."""
     log.info("=== RSS ===")
     all_items = []
@@ -452,51 +596,42 @@ def fetch_rss() -> list[dict]:
 
 
 # ─────────────────────────────────────────────
-# HUB'EAU — RESTRICTIONS EAU
+# VIGIEAU — RESTRICTIONS EAU
 # ─────────────────────────────────────────────
 
-def fetch_hubeau() -> list[dict]:
-    """Récupère les restrictions eau en vigueur via l'API Hub'Eau Propluvia."""
-    log.info("=== Hub'Eau ===")
+def fetch_vigieau():
+    """Récupère les restrictions eau par département via l'API VigiEau."""
+    log.info("=== VigiEau ===")
     restrictions = []
 
     try:
-        resp = requests.get(HUBEAU_URL, params={'format': 'json', 'size': 5000}, timeout=TIMEOUT)
+        resp = requests.get(VIGIEAU_DEPTS_URL, timeout=TIMEOUT)
         resp.raise_for_status()
-        data = resp.json()
 
-        # Un département peut avoir plusieurs arrêtés — garder le niveau le plus élevé
-        dept_map: dict[str, dict] = {}
+        for dept in resp.json():
+            niv = dept.get('niveauGraviteMax')
+            if not niv:
+                continue  # null = aucune restriction active
 
-        for item in data.get('data', []):
-            code = str(item.get('num_departement') or '').zfill(2)
-            nom  = item.get('nom_departement', '')
-            niv  = (item.get('nom_niveau') or '').lower().strip()
-            url  = item.get('url_arrete', '') or ''
+            restrictions.append({
+                'dept_code': dept.get('code', ''),
+                'dept_nom': dept.get('nom', ''),
+                'niveau': niv,
+                'niveauSup': dept.get('niveauGraviteSupMax'),  # eaux de surface
+                'niveauSou': dept.get('niveauGraviteSouMax'),  # eaux souterraines
+                'niveauAep': dept.get('niveauGraviteAepMax'),  # eau potable
+            })
 
-            if not code or not niv:
-                continue
-
-            existing = dept_map.get(code, {})
-            if NIVEAUX_ORDRE.get(niv, 0) > NIVEAUX_ORDRE.get(existing.get('niveau', ''), 0):
-                dept_map[code] = {
-                    'dept_code': code,
-                    'dept_nom': nom,
-                    'niveau': niv,
-                    'arrete_url': url,
-                }
-
-        restrictions = sorted(
-            dept_map.values(),
+        restrictions.sort(
             key=lambda x: NIVEAUX_ORDRE.get(x['niveau'], 0),
             reverse=True,
         )
-        log.info(f"Hub'Eau : {len(restrictions)} départements concernés")
+        log.info(f"VigiEau : {len(restrictions)} départements en restriction")
 
     except Exception as e:
-        log.error(f"Hub'Eau fatal : {e}", exc_info=True)
+        log.error(f"VigiEau fatal : {e}", exc_info=True)
 
-    return list(restrictions)
+    return restrictions
 
 
 # ─────────────────────────────────────────────
@@ -612,13 +747,14 @@ def main() -> int:
 
     # 1. JORF
     try:
-        jorf_items, jorf_total = fetch_jorf()
+        jorf_items, jorf_autres, jorf_total = fetch_jorf()
         items.extend(jorf_items)
         stats['jo_analyses'] = jorf_total
         stats['jo_retenus']  = len(jorf_items)
     except Exception as e:
         log.error(f"JORF fatal : {e}")
         errors.append('JORF')
+        jorf_autres = []
         stats.update({'jo_analyses': 0, 'jo_retenus': 0})
 
     # 2. RSS / Presse
@@ -631,22 +767,26 @@ def main() -> int:
         errors.append('RSS')
         stats['articles_presse'] = 0
 
-    # 3. Hub'Eau
+    # 3. VigiEau
     try:
-        restrictions = fetch_hubeau()
+        restrictions = fetch_vigieau()
         stats['depts_restriction'] = len(restrictions)
     except Exception as e:
-        log.error(f"Hub'Eau fatal : {e}")
-        errors.append('HubEau')
+        log.error(f"VigiEau fatal : {e}")
+        errors.append('VigiEau')
         stats['depts_restriction'] = 0
 
     # Déduplication + tri par criticité décroissante
-    seen: set[str] = set()
-    unique: list[dict] = []
+    seen = set()
+    unique = []
     for item in sorted(items, key=lambda x: -x.get('criticite', 1)):
         if item['id'] not in seen:
             seen.add(item['id'])
             unique.append(item)
+
+    # Marquer le top 5 par criticité (signaux forts du jour)
+    for i, item in enumerate(unique):
+        item['top5'] = i < 5
 
     # 4. Générer le JSON
     elapsed = round((datetime.now() - start).total_seconds())
@@ -658,6 +798,7 @@ def main() -> int:
         'stats': stats,
         'items': unique,
         'restrictions_eau': restrictions,
+        'jo_autres': jorf_autres,
     }
 
     log.info(f"JSON : {len(unique)} items, {len(restrictions)} départements eau")
