@@ -278,10 +278,12 @@ def get_groq_client() -> Groq:
 def call_groq(prompt: str, system: str = '', max_tokens: int = 300) -> str:
     """Appelle l'API Groq avec retry sur erreur 429 (rate limit)."""
     client = get_groq_client()
-    messages = []
-    if system:
-        messages.append({'role': 'system', 'content': system})
-    messages.append({'role': 'user', 'content': prompt})
+    # llama-3.3-70b exige le mot "json" dans les messages quand response_format=json_object
+    sys_content = system if 'json' in system.lower() else (system + ' Reponds en JSON.').strip()
+    messages = [
+        {'role': 'system', 'content': sys_content},
+        {'role': 'user',   'content': prompt},
+    ]
 
     for attempt in range(1, GROQ_MAX_RETRY + 1):
         try:
@@ -555,7 +557,7 @@ def fetch_jorf():
 
             # Briefing exécutif — sur l'ensemble des textes du jour
             briefing = groq_briefing_jorf(all_articles)
-            log.info(f"JORF briefing : {len(briefing)} textes retenus")
+            log.info(f"JORF briefing : {'OK' if briefing else 'vide'} ({len(briefing)} cars)")
 
             def jorf_strict_match(titre: str) -> bool:
                 t = titre.lower()
