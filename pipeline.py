@@ -106,6 +106,18 @@ RSS_SOURCES = [
         'categorie': 'Presse',
         'fallback_crawl': 'https://reporterre.net/',
     },
+    {
+        'name': 'Contexte Env.',
+        'url': '',  # Pas de RSS public — fallback scraping uniquement
+        'categorie': 'Réglementation',
+        'fallback_crawl': 'https://www.contexte.com/fr/verticale/environnement/',
+    },
+    {
+        'name': 'Politico Energy EU',
+        'url': 'https://www.politico.eu/section/energy-fr/feed/',
+        'categorie': 'Réglementation',
+        'fallback_crawl': 'https://www.politico.eu/section/energy-fr/',
+    },
 ]
 
 TIMEOUT = 30
