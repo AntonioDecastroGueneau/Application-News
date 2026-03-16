@@ -240,33 +240,59 @@ def extract_json(text: str) -> dict:
 
 
 def groq_summarise(titre: str, contenu: str) -> dict:
-    """Résume un article et évalue son score pour GSF."""
+    """
+    Filtre et résume un article pour le responsable Environnement & Décarbo de GSF.
+    Retourne pertinent=False si l'article ne mérite pas d'être dans le feed.
+    """
     system = (
-        "Tu es un analyste veille réglementaire senior pour GSF Propreté & Services. "
-        "Tu connais parfaitement les activités de GSF et tu appliques des critères STRICTS. "
-        "Réponds UNIQUEMENT en JSON valide, sans texte avant ou après."
+        "Tu es assistant veille pour le responsable Environnement & Décarbonation de GSF "
+        "(2e groupe français de propreté industrielle, 42 000 salariés). "
+        "Réponds UNIQUEMENT en JSON valide, sans aucun texte avant ou après."
     )
     prompt = (
-        "CONTEXTE GSF (2e groupe français de propreté, 42 000 salariés, 1,6 Md€) :\n"
-        "Activités : nettoyage industriel, tertiaire, agroalimentaire, pharma, "
-        "nucléaire, hôpitaux, transports, surfaces de vente.\n"
-        "Opérations : détergents/désinfectants/biocides, déchets industriels, ICPE, EPI.\n\n"
-        "RÈGLE DE SCORING (sois très strict) :\n"
-        "score=1 (Veille) : info environnementale générale sans impact direct GSF\n"
-        "  -> actualité politique, élections, guerres, sécheresse générale\n"
-        "score=2 (Important) : réglementation SUSCEPTIBLE d'affecter GSF dans les 6 mois\n"
-        "  -> norme produits ménagers, réforme ICPE, accord branche propreté\n"
-        "score=3 (Impact direct) : obligation légale IMMÉDIATE sur opérations GSF\n"
-        "  -> interdiction biocide utilisé, obligation EPI nettoyage, arrêté ICPE site GSF\n\n"
-        "INTERDIT score=3 : politique, élections, géopolitique, sécheresse générale, "
-        "sujets sans lien direct avec le nettoyage/propreté industriel.\n\n"
+        "MISSION : décider si cet article mérite d'être lu par le responsable Env/Décarbo de GSF, "
+        "et si oui, lui donner un score de priorité.\n\n"
+
+        "GSF EN UNE PHRASE : GSF nettoie des usines, hôpitaux, bureaux, sites nucléaires, "
+        "surfaces de vente — en utilisant des produits chimiques (biocides, détergents) "
+        "et en gérant des déchets industriels.\n\n"
+
+        "INCLURE (pertinent=true) si l'article parle de :\n"
+        "- Réglementation environnementale française ou européenne (ICPE, REACH, biocides, "
+        "  déchets industriels, REP, eau industrielle, air, sols)\n"
+        "- Décarbonation et transition énergétique des entreprises (Scope 1/2/3, bilan carbone, "
+        "  taxonomie verte, CSRD, reporting ESG obligatoire)\n"
+        "- Devoir de vigilance, RSE réglementaire, responsabilité environnementale des entreprises\n"
+        "- Santé-sécurité au travail pour les métiers du nettoyage (EPI, CMR, TMS)\n"
+        "- Convention collective ou accord branche propreté\n"
+        "- Grandes évolutions réglementaires sectorielles (circularité, économie circulaire, "
+        "  emballages industriels, filières de recyclage)\n"
+        "- Innovations ou normes dans les produits de nettoyage professionnel\n\n"
+
+        "EXCLURE ABSOLUMENT (pertinent=false) :\n"
+        "- Politique, élections, sondages électoraux, partis politiques\n"
+        "- Géopolitique, guerres, conflits internationaux\n"
+        "- Immobilier, logement, construction (sauf réglementation environnementale bâtiments)\n"
+        "- Agriculture, élevage, pêche (sauf lien direct avec déchets ou nettoyage)\n"
+        "- Finance, marchés financiers, cours du pétrole/gaz comme sujets principaux\n"
+        "- Faits divers, société, culture, sport\n"
+        "- Articles trop spécialisés sans lien avec les opérations de propreté industrielle\n\n"
+
+        "SI pertinent=true, score de priorité :\n"
+        "  score=1 : veille utile, grande tendance à connaître (ex: rapport circularité EU)\n"
+        "  score=2 : réglementation en cours qui POURRAIT affecter GSF prochainement\n"
+        "  score=3 : obligation légale en vigueur OU risque direct opérationnel pour GSF\n\n"
+
         f"TITRE : {titre}\n"
-        f"CONTENU : {contenu[:800]}\n\n"
-        'Génère exactement : {"resume": "2 phrases factuelles utiles pour GSF", "score": 1}'
+        f"CONTENU : {contenu[:700]}\n\n"
+        'Réponds avec exactement ce JSON (pertinent=false si hors périmètre) :\n'
+        '{"pertinent": true, "resume": "1-2 phrases utiles pour le responsable Env GSF", "score": 1}'
     )
     raw = call_groq(prompt, system)
     result = extract_json(raw)
-    return result if result else {'resume': titre[:200], 'score': 1}
+    if not result:
+        return {'pertinent': True, 'resume': titre[:200], 'score': 1}
+    return result
 
 
 def groq_impact_gsf(titre: str, contenu: str) -> dict:
@@ -523,11 +549,28 @@ def fetch_rss_source(source: dict):
             if pub:
                 import time as _time
                 try:
-                    article_date = datetime.fromtimestamp(_time.mktime(pub)).strftime('%Y-%m-%d')
+                    article_dt   = datetime.fromtimestamp(_time.mktime(pub))
+                    article_date = article_dt.strftime('%Y-%m-%d')
                 except Exception:
+                    article_dt   = None
                     article_date = TODAY
             else:
+                article_dt   = None
                 article_date = TODAY
+
+            # Filtre temporel : 24h glissantes, lundi → depuis vendredi 18h
+            now = datetime.now()
+            if now.weekday() == 0:  # lundi
+                import calendar as _cal
+                last_friday_18h = now - timedelta(days=3)
+                last_friday_18h = last_friday_18h.replace(hour=18, minute=0, second=0, microsecond=0)
+                cutoff_dt = last_friday_18h
+            else:
+                cutoff_dt = now - timedelta(hours=24)
+
+            if article_dt and article_dt < cutoff_dt:
+                log.debug(f"Article trop ancien ({article_date}), exclu : {titre[:60]}")
+                continue
 
             if len(contenu) < 100 and url:
                 contenu = crawl_article(url) or contenu
@@ -536,6 +579,10 @@ def fetch_rss_source(source: dict):
                 continue
 
             analysis = groq_summarise(titre, contenu)
+            # Pré-filtre pertinence : exclure si le LLM juge non pertinent
+            if analysis.get('pertinent') is False:
+                log.debug(f"Non pertinent GSF, exclu : {titre[:60]}")
+                continue
             items.append({
                 'id'        : make_id(name, titre),
                 'source'    : name,
