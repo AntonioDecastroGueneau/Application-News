@@ -6,8 +6,9 @@
 <title>Veille Environnementale — GSF</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/pmtiles@3.2.1/dist/pmtiles.js"></script>
 <style>
 :root {
   --bg:        #f5f6f8;
@@ -149,6 +150,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
 .feed-consulter-items .card:hover{background:var(--surface3)}
 .empty-state{padding:48px 20px;text-align:center;font-size:13px;color:var(--muted)}
 #carte-view{position:relative}
+#map-container{width:100%;height:100%}
 #map-legend{position:absolute;top:12px;left:12px;z-index:1000;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;box-shadow:0 1px 4px rgba(0,0,0,.08);font-size:11px}
 .legend-title{font-weight:600;color:var(--muted);font-size:10px;letter-spacing:.06em}
 .legend-chip{display:flex;align-items:center;gap:4px;color:var(--text2)}
@@ -305,7 +307,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
 <script>
 let D=null,archive=null,currentDate=null,currentView='feed',catFilter='all';
 let srcFilters={jorf:true,presse:true};
-let map=null,geojsonLayer=null,geojsonData=null,histData=null,histYear='all';
+let mapgl=null,histData=null,histYear='all';
 const JORF_SOURCES=['JORF','Légifrance RSS'];
 function sourceType(src){return JORF_SOURCES.includes(src)?'jorf':'presse'}
 const NIVEAU_COLOR={'vigilance':'#84cc16','alerte':'#eab308','alerte_renforcee':'#f97316','alerte renforcée':'#f97316','alerte renforce':'#f97316','crise':'#dc2626'};
@@ -405,43 +407,55 @@ function getFilteredItems(){
 function filterCat(cat){catFilter=cat;document.querySelectorAll('.badge-filter').forEach(b=>b.classList.toggle('on',b.dataset.cat===cat));renderFeed();}
 function toggleFilter(key,val){srcFilters[key]=val;const row=document.getElementById(`f-${key}`);row?.classList.toggle('on',val);if(row?.querySelector('.fcheck'))row.querySelector('.fcheck').textContent=val?'✓':'';renderFeed();}
 
+const PMTILES_URL  = 'https://regleau.s3.gra.perf.cloud.ovh.net/pmtiles/zones_arretes_en_vigueur.pmtiles';
+const SOURCE_LAYER = 'zones_arretes_en_vigueur';
 function renderMap(){
-  if(!map){
-    map=L.map('map-container',{center:[46.4,2.3],zoom:5,zoomControl:true,attributionControl:false});
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',{maxZoom:18}).addTo(map);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png',{maxZoom:18,zIndex:10}).addTo(map);
-  }
-  const GJ='https://regleau.s3.gra.perf.cloud.ovh.net/geojson/zones_arretes_en_vigueur.geojson';
-  function getZoneColor(p){const n=normalizeNiveau(p.niveauGravite||p.niveauGraviteMax||p.niveau||p.statut||'');return NIVEAU_COLOR[n]||'#94a3b8';}
-  function styleZone(f){return{fillColor:getZoneColor(f.properties),fillOpacity:.6,color:'#fff',weight:.5,opacity:.8};}
-  function onEachZone(feature,layer){
-    const p=feature.properties;
-    const niv=normalizeNiveau(p.niveauGravite||p.niveauGraviteMax||p.niveau||p.statut||'');
-    const nom=p.nom||p.nomZone||p.libelle||'Zone';
-    let dep='';
-    if(p.departement)dep=typeof p.departement==='object'?(p.departement.nom||p.departement.code||''):String(p.departement);
-    else if(p.nomDepartement)dep=String(p.nomDepartement);
-    const type=p.type||'';
-    const tl={SUP:'Eau superficielle',SOU:'Eau souterraine',AEP:'Eau potable'}[type]||type;
-    // Cherche le lien arrêté dans toutes les clés possibles (structure VigiEau v2)
-    const arr=(p.arrete&&(p.arrete.cheminFichier||p.arrete.cheminFichierArreteCadre))
-      ||p.cheminFichier||p.chemin_fichier||p.cheminFichierArrete
-      ||p.urlArrete||p.lienArrete||p.pdf||'';
-    const col=NIVEAU_COLOR[niv]||'#94a3b8';
-    const lbl=NIVEAU_LABEL[niv]||(niv?niv.charAt(0).toUpperCase()+niv.slice(1):'Sans restriction');
-    layer.bindTooltip(`<b>${escHtml(nom)}</b>${dep?' — '+escHtml(dep):''}${tl?'<br><small>'+tl+'</small>':''}<br><span style="color:${col};font-weight:600">${lbl}</span>`,{sticky:true,opacity:1});
-    layer.on('click',()=>{
+  if(mapgl){setTimeout(()=>mapgl.resize(),30);return;}
+  const protocol=new pmtiles.Protocol();
+  maplibregl.addProtocol('pmtiles',protocol.tile.bind(protocol));
+  mapgl=new maplibregl.Map({
+    container:'map-container',
+    style:'https://openmaptiles.data.gouv.fr/styles/osm-bright/style.json',
+    center:[2.3,46.6],zoom:4.8,attributionControl:false,
+  });
+  mapgl.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
+  mapgl.on('load',()=>{
+    mapgl.addSource('vigieau',{type:'vector',url:`pmtiles://${PMTILES_URL}`});
+    mapgl.addLayer({id:'zones-fill',type:'fill',source:'vigieau','source-layer':SOURCE_LAYER,
+      paint:{'fill-color':['match',['downcase',['get','niveauGravite']],
+        'vigilance','#84cc16','alerte','#eab308','alerte renforcée','#f97316','alerte_renforcée','#f97316','crise','#dc2626','#94a3b8'],
+        'fill-opacity':0.55}});
+    mapgl.addLayer({id:'zones-outline',type:'line',source:'vigieau','source-layer':SOURCE_LAYER,
+      paint:{'line-color':'#ffffff','line-width':0.5,'line-opacity':0.8}});
+    mapgl.addLayer({id:'zones-hover',type:'fill',source:'vigieau','source-layer':SOURCE_LAYER,
+      paint:{'fill-color':'#000000','fill-opacity':['case',['boolean',['feature-state','hover'],false],0.1,0]}});
+    let hoveredId=null;
+    mapgl.on('mousemove','zones-fill',e=>{
+      if(e.features.length){
+        if(hoveredId!==null)mapgl.setFeatureState({source:'vigieau',sourceLayer:SOURCE_LAYER,id:hoveredId},{hover:false});
+        hoveredId=e.features[0].id;
+        mapgl.setFeatureState({source:'vigieau',sourceLayer:SOURCE_LAYER,id:hoveredId},{hover:true});
+        mapgl.getCanvas().style.cursor='pointer';
+      }
+    });
+    mapgl.on('mouseleave','zones-fill',()=>{
+      if(hoveredId!==null)mapgl.setFeatureState({source:'vigieau',sourceLayer:SOURCE_LAYER,id:hoveredId},{hover:false});
+      hoveredId=null;mapgl.getCanvas().style.cursor='';
+    });
+    mapgl.on('click','zones-fill',e=>{
+      const p=e.features[0].properties;
+      const niv=(p.niveauGravite||'').toLowerCase();
+      const col=NIVEAU_COLOR[niv]||'#94a3b8';
+      const lbl=NIVEAU_LABEL[niv]||(niv?niv.charAt(0).toUpperCase()+niv.slice(1):'Sans restriction');
+      let arrete=null;try{arrete=JSON.parse(p.arreteRestriction);}catch{}
+      const tl={SUP:'Eaux de surface',SOU:'Eaux souterraines',AEP:'Eau potable'}[p.type]||p.type||'';
+      const arr=arrete?.fichier||arrete?.cheminFichier||'';
       const el=document.getElementById('dept-detail');
-      el.innerHTML=`<div class="dept-detail-title"><span style="width:10px;height:10px;border-radius:50%;background:${col};display:inline-block;flex-shrink:0"></span><strong>${escHtml(nom)}</strong>${dep?' — '+escHtml(dep):''}<span style="color:${col};margin-left:6px">${lbl}</span>${tl?`<span style="font-size:10px;color:var(--muted);margin-left:8px">${tl}</span>`:''}</div>${arr?`<a href="${escHtml(arr)}" target="_blank" rel="noopener" style="font-size:11px;font-family:var(--mono);color:var(--blue);text-decoration:none;margin-top:4px;display:inline-block">📄 Arrêté préfectoral →</a>`:`<span style="font-size:11px;color:var(--muted)">Arrêté PDF non référencé pour cette zone</span>`}`;
+      el.innerHTML=`<div class="dept-detail-title"><span style="width:10px;height:10px;border-radius:50%;background:${col};display:inline-block;flex-shrink:0"></span><strong>${escHtml(p.nom||p.code)}</strong>${p.departement?' — dept '+p.departement:''}<span style="color:${col};margin-left:6px">${lbl}</span>${tl?`<span style="font-size:10px;color:var(--muted);margin-left:8px">${tl}</span>`:''}</div>${arr?`<a href="${escHtml(arr)}" target="_blank" rel="noopener" style="font-size:11px;font-family:var(--mono);color:var(--blue);text-decoration:none;margin-top:4px;display:inline-block">📄 Arrêté préfectoral →</a>`:`<span style="font-size:11px;color:var(--muted)">Arrêté PDF non référencé pour cette zone</span>`}`;
       el.classList.add('open');
     });
-    layer.on('mouseover',e=>e.target.setStyle({fillOpacity:.85,weight:1.5}));
-    layer.on('mouseout',e=>geojsonLayer&&geojsonLayer.resetStyle(e.target));
-  }
-  if(geojsonData){if(geojsonLayer)map.removeLayer(geojsonLayer);geojsonLayer=L.geoJSON(geojsonData,{style:styleZone,onEachFeature:onEachZone}).addTo(map);return;}
-  showToast('Chargement des zones VigiEau…');
-  fetch(GJ).then(r=>r.json()).then(gj=>{geojsonData=gj;if(geojsonLayer)map.removeLayer(geojsonLayer);geojsonLayer=L.geoJSON(gj,{style:styleZone,onEachFeature:onEachZone}).addTo(map);}).catch(()=>showToast('Erreur chargement carte VigiEau'));
-  setTimeout(()=>map.invalidateSize(),50);
+  });
+  setTimeout(()=>mapgl.resize(),50);
 }
 
 const JO_NATURES={ARRETE:'Arrêté',DECRET:'Décret',ORDONNANCE:'Ordonnance',LOI:'Loi',CIRCULAIRE:'Circulaire',AVIS:'Avis',DECISION:'Décision'};
@@ -515,7 +529,7 @@ function switchView(view){
   document.querySelectorAll('.view').forEach(el=>el.classList.remove('active'));
   document.getElementById(`${view}-view`).classList.add('active');
   document.querySelectorAll('.nav-item').forEach(el=>el.classList.toggle('active',el.dataset.view===view));
-  if(view==='carte'){setTimeout(()=>{renderMap();if(map)map.invalidateSize();},30);}
+  if(view==='carte'){setTimeout(()=>{renderMap();if(mapgl)mapgl.resize();},30);}
   if(view==='archives')renderArchives();
   if(view==='jo')renderJO();
   if(view==='historique')loadHistorique();
