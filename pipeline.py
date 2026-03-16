@@ -770,12 +770,12 @@ def _normalize_niveau(niveau: str) -> str:
     return n
 
 
-def _parse_vigieau_csv(content: str, year: int) -> dict:
+def _parse_vigieau_csv(content: str, year: int, compute_daily: bool = False) -> dict:
     """
     Parse un CSV arrêtés VigiEau (format data.gouv.fr).
     Colonnes : id, numero, date_debut, date_fin, statut, departement,
                zones_alerte.niveau_gravite (JSON array), ...
-    Retourne {'par_mois': {...}, 'par_dept': {...}}
+    Retourne {'par_mois': {...}, 'par_dept': {...}, 'par_jour': {...}}
     """
     import csv as _csv
     import io
@@ -784,6 +784,7 @@ def _parse_vigieau_csv(content: str, year: int) -> dict:
 
     par_mois = defaultdict(lambda: {n: 0 for n in NIVEAUX_GRAVITE})
     par_dept = defaultdict(lambda: {'nom': '', 'jours': {n: 0 for n in NIVEAUX_GRAVITE}})
+    par_jour = defaultdict(lambda: {n: 0 for n in NIVEAUX_GRAVITE}) if compute_daily else None
 
     reader = _csv.DictReader(io.StringIO(content), delimiter=',')
     headers = reader.fieldnames or []
@@ -865,7 +866,7 @@ def _parse_vigieau_csv(content: str, year: int) -> dict:
 
             nb_jours = (d_end - d_start).days + 1
 
-            # Agréger par mois
+            # Agréger par mois (et par jour si compute_daily)
             cur = d_start
             while cur <= d_end:
                 mois_key = cur.strftime('%Y-%m')
@@ -874,6 +875,13 @@ def _parse_vigieau_csv(content: str, year: int) -> dict:
                     cur = cur.replace(year=cur.year + 1, month=1, day=1)
                 else:
                     cur = cur.replace(month=cur.month + 1, day=1)
+
+            if compute_daily:
+                jour_cur = d_start
+                while jour_cur <= d_end:
+                    jour_key = jour_cur.strftime('%Y-%m-%d')
+                    par_jour[jour_key][niveau] += 1
+                    jour_cur += timedelta(days=1)
 
             # Agréger par département
             if dept_code:
@@ -904,7 +912,9 @@ def _parse_vigieau_csv(content: str, year: int) -> dict:
             'total_graves' : graves,
         }
 
-    return {'par_mois': mois_out, 'par_dept': dept_out}
+    jour_out = {k: dict(v) for k, v in sorted(par_jour.items())} if compute_daily else {}
+
+    return {'par_mois': mois_out, 'par_dept': dept_out, 'par_jour': jour_out}
 
 
 def fetch_vigieau_history() -> dict:
@@ -934,6 +944,7 @@ def fetch_vigieau_history() -> dict:
 
     # ── Étape 1 : Lister les ressources via l'API data.gouv.fr ──────────────
     csv_par_annee = {}
+    comprehensive_url = None
     try:
         resp = requests.get(
             f"{DATAGOUV_API}{DATAGOUV_DATASET_ID}/",
@@ -969,6 +980,12 @@ def fetch_vigieau_history() -> dict:
             if 'cadre' in title_lower:
                 continue
             if 'arret' not in title_lower and 'arrêt' not in title_lower:
+                continue
+
+            # Détecter le fichier compréhensif "Arrêtés" (sans année) — contient 2010→2026
+            if title.strip() == 'Arrêtés':
+                comprehensive_url = url
+                log.info(f"  Fichier compréhensif 'Arrêtés' identifié → {url[-50:]}")
                 continue
 
             # Identifier l'année
@@ -1035,7 +1052,8 @@ def fetch_vigieau_history() -> dict:
                 log.warning(f"CSV {year} : colonnes inattendues ({first_line[:80]})")
                 continue
 
-            stats = _parse_vigieau_csv(content, year)
+            use_daily = (year >= 2024)
+            stats = _parse_vigieau_csv(content, year, compute_daily=use_daily)
 
             if stats['par_mois'] or stats['par_dept']:
                 annees_cache[year_str] = stats
@@ -1044,6 +1062,44 @@ def fetch_vigieau_history() -> dict:
 
         except Exception as e:
             log.warning(f"CSV {year} erreur : {e}")
+
+    # ── Étape 3b : Fichier compréhensif pour les années récentes manquantes ──
+    if comprehensive_url:
+        missing_years = [
+            y for y in range(current_year - 1, current_year + 1)
+            if str(y) not in annees_cache
+            or not annees_cache[str(y)].get('par_mois')
+        ]
+        if missing_years:
+            log.info(f"Années manquantes {missing_years} → téléchargement fichier compréhensif")
+            try:
+                r = requests.get(
+                    comprehensive_url, timeout=180,
+                    headers={'User-Agent': 'GSF-Veille/2.0'},
+                    allow_redirects=True
+                )
+                r.raise_for_status()
+                log.info(f"  → fichier compréhensif : {len(r.content)} octets")
+                try:
+                    comp_content = r.content.decode('utf-8')
+                except UnicodeDecodeError:
+                    comp_content = r.content.decode('latin-1')
+
+                first_line = comp_content.split('\n')[0].lower()
+                if 'date_debut' not in first_line and 'date' not in first_line:
+                    log.warning(f"Fichier compréhensif : colonnes inattendues ({first_line[:80]})")
+                else:
+                    for y in missing_years:
+                        log.info(f"  Parsing année {y} depuis fichier compréhensif")
+                        stats = _parse_vigieau_csv(comp_content, y, compute_daily=True)
+                        if stats['par_mois'] or stats['par_dept']:
+                            annees_cache[str(y)] = stats
+                            log.info(f"  Année {y} ajoutée : {len(stats['par_mois'])} mois, "
+                                     f"{len(stats.get('par_jour', {}))} jours")
+                        else:
+                            log.warning(f"  Année {y} : aucune donnée parsée depuis le fichier compréhensif")
+            except Exception as e:
+                log.warning(f"Fichier compréhensif erreur : {e}")
 
     return _save_and_return_history(history_file, annees_cache)
 
@@ -1074,6 +1130,10 @@ def _save_and_return_history(history_file, annees_cache: dict) -> dict:
         'updated_at' : datetime.now().isoformat(),
         'annees'     : annees_cache,
         'top10_depts': top10_out,
+        'comparaison': {
+            str(y): annees_cache.get(str(y), {}).get('par_jour', {})
+            for y in [datetime.now().year - 1, datetime.now().year]
+        },
     }
 
     history_file.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')

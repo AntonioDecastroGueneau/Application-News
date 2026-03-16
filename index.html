@@ -290,6 +290,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
         <span class="legend-chip"><span class="legend-dot" style="background:#f97316"></span>Alerte renforcée</span>
         <span class="legend-chip"><span class="legend-dot" style="background:#dc2626"></span>Crise</span>
       </div>
+      <div id="map-encart" style="position:absolute;top:12px;right:12px;z-index:1000;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;box-shadow:0 1px 4px rgba(0,0,0,.08);min-width:160px"></div>
       <div id="map-container" style="flex:1"></div>
       <div id="dept-detail"></div>
     </div>
@@ -354,7 +355,7 @@ function renderAll(){
     return `<div class="eau-alert-item" style="background:${col}18;border:1px solid ${col}30"><span style="width:6px;height:6px;border-radius:50%;background:${col};flex-shrink:0;display:inline-block"></span><span style="color:#e8ecf2;font-size:11px">${r.dept_nom} (${r.dept_code})</span></div>`;}
   ).join(''):`<div style="font-size:11px;color:var(--sb-muted);padding:4px 0">Aucune alerte majeure</div>`;
   renderFeed();
-  if(currentView==='carte')renderMap();
+  if(currentView==='carte'){renderMap();renderMapEncart();}
   if(currentView==='archives')renderArchives();
   if(currentView==='jo')renderJO();
 }
@@ -459,7 +460,7 @@ function renderMap(){
       const tl={SUP:'Eaux de surface',SOU:'Eaux souterraines',AEP:'Eau potable'}[p.type]||p.type||'';
       const arr=arrete?.fichier||arrete?.cheminFichier||'';
       const el=document.getElementById('dept-detail');
-      el.innerHTML=`<div class="dept-detail-title"><span style="width:10px;height:10px;border-radius:50%;background:${col};display:inline-block;flex-shrink:0"></span><strong>${escHtml(p.nom||p.code)}</strong>${p.departement?' — dept '+p.departement:''}<span style="color:${col};margin-left:6px">${lbl}</span>${tl?`<span style="font-size:10px;color:var(--muted);margin-left:8px">${tl}</span>`:''}</div>${arr?`<a href="${escHtml(arr)}" target="_blank" rel="noopener" style="font-size:11px;font-family:var(--mono);color:var(--blue);text-decoration:none;margin-top:4px;display:inline-block">📄 Arrêté préfectoral →</a>`:`<span style="font-size:11px;color:var(--muted)">Arrêté PDF non référencé pour cette zone</span>`}`;
+      el.innerHTML=`<div class="dept-detail-title"><span style="width:10px;height:10px;border-radius:50%;background:${col};display:inline-block;flex-shrink:0"></span><strong>${escHtml(p.nom||p.code)}</strong>${p.departement?' — dept '+p.departement:''}<span style="color:${col};margin-left:6px">${lbl}</span>${tl?`<span style="font-size:10px;color:var(--muted);margin-left:8px">${tl}</span>`:''}</div>${arrete?.dateDebut?`<div style="font-size:11px;color:var(--muted);margin-top:2px">En vigueur depuis : ${escHtml(arrete.dateDebut)}</div>`:''} ${arr?`<a href="${escHtml(arr)}" target="_blank" rel="noopener" style="font-size:11px;font-family:var(--mono);color:var(--blue);text-decoration:none;margin-top:4px;display:inline-block">📄 Arrêté préfectoral →</a>`:`<span style="font-size:11px;color:var(--muted)">Arrêté PDF non référencé pour cette zone</span>`}`;
       el.classList.add('open');
     });
   });
@@ -503,7 +504,12 @@ async function loadDate(date){
 async function loadHistorique(){
   const el=document.getElementById('hist-content');if(!el)return;
   if(histData){renderHistorique();return;}
-  try{histData=await(await fetch('vigieau_history.json')).json();renderHistorique();}
+  try{
+    const raw=await(await fetch('vigieau_history.json')).json();
+    histData=raw;
+    if(raw.comparaison)histData.comparaison=raw.comparaison;
+    renderHistorique();
+  }
   catch(e){el.innerHTML=`<div class="hist-loading">Données historiques non disponibles (${e.message})</div>`;}
 }
 const NV=['vigilance','alerte','alerte renforcée','crise'];
@@ -534,6 +540,11 @@ function renderHistorique(){
         <div class="top10-list" style="margin-top:12px">${buildTop10(top10)}</div>
       </div>
     </div>
+    <div class="hist-section">
+      <div class="hist-section-title">Comparaison journalière — restrictions actives 2025 vs 2026</div>
+      <div class="hist-chart-subtitle">Nombre total de zones sous arrêté chaque jour (tous niveaux confondus).</div>
+      ${buildDailyChart()}
+    </div>
     <div class="hist-source">Source : <a href="https://www.data.gouv.fr/fr/datasets/donnee-secheresse-vigieau/" target="_blank" rel="noopener">VigiEau — data.gouv.fr</a> · Arrêtés préfectoraux de restriction d'eau 2020–${lastYear} · Mis à jour quotidiennement par le pipeline GSF Veille.</div>`;
 }
 function setHistYear(y){histYear=y;renderHistorique();}
@@ -550,13 +561,57 @@ function buildTop10(top10){
   const mx=Math.max(...top10.map(d=>d.total_graves),1);
   return top10.map((d,i)=>`<div class="top10-row"><div class="top10-rank">${i+1}</div><div class="top10-name" title="${d.nom}">${d.nom}</div><div class="top10-bar-wrap">${['alerte','alerte renforcée','crise'].map(n=>`<div class="top10-seg" style="width:${((d.jours[n]||0)/mx*100).toFixed(1)}%;background:${CV[n]}"></div>`).join('')}</div><div class="top10-val">${d.total_graves}j</div></div>`).join('');
 }
+function buildDailyChart(){
+  if(!histData?.comparaison)return'<div class="hist-loading">Données de comparaison non disponibles</div>';
+  const C2025=histData.comparaison['2025']||{};
+  const C2026=histData.comparaison['2026']||{};
+  if(!Object.keys(C2025).length&&!Object.keys(C2026).length)return'<div class="hist-loading">Données de comparaison non disponibles</div>';
+  const COL2025='#60a5fa',COL2026='#f97316';
+  // Agréger par mois pour les deux années
+  const agg={};
+  function addToAgg(parJour,yearStr){
+    Object.entries(parJour).forEach(([date,niveaux])=>{
+      const mois=date.slice(0,7);
+      if(!agg[mois])agg[mois]={2025:0,2026:0};
+      const total=Object.values(niveaux).reduce((s,v)=>s+(v||0),0);
+      agg[mois][parseInt(yearStr)]=(agg[mois][parseInt(yearStr)]||0)+total;
+    });
+  }
+  addToAgg(C2025,'2025');
+  addToAgg(C2026,'2026');
+  const mois=Object.keys(agg).sort();
+  if(!mois.length)return'<div class="hist-loading">Données de comparaison non disponibles</div>';
+  const mx=Math.max(...mois.map(m=>Math.max(agg[m][2025]||0,agg[m][2026]||0)),1);
+  const legend=`<div style="display:flex;gap:14px;margin-bottom:10px"><span style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2)"><span style="width:10px;height:10px;border-radius:2px;background:${COL2025};flex-shrink:0;display:inline-block"></span>2025</span><span style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2)"><span style="width:10px;height:10px;border-radius:2px;background:${COL2026};flex-shrink:0;display:inline-block"></span>2026</span></div>`;
+  const bars=mois.map(m=>{
+    const v2025=agg[m][2025]||0,v2026=agg[m][2026]||0;
+    const h2025=((v2025/mx)*160).toFixed(1),h2026=((v2026/mx)*160).toFixed(1);
+    const label=m.slice(5)+'/'+m.slice(2,4);
+    return `<div class="bar-group" style="min-width:28px"><div style="display:flex;align-items:flex-end;gap:2px;height:160px"><div style="width:10px;height:${h2025}px;background:${COL2025};border-radius:2px 2px 0 0" title="2025: ${v2025}"></div><div style="width:10px;height:${h2026}px;background:${COL2026};border-radius:2px 2px 0 0" title="2026: ${v2026}"></div></div><div class="bar-label">${label}</div></div>`;
+  }).join('');
+  return `${legend}<div class="chart-wrap" style="height:220px;align-items:flex-end">${bars}</div>`;
+}
+
+function renderMapEncart(){
+  const el=document.getElementById('map-encart');
+  if(!el||!D)return;
+  const restr=D.restrictions_eau||[];
+  if(!restr.length){el.innerHTML='<span style="font-size:11px;color:var(--muted)">Aucune restriction active</span>';return;}
+  const counts={};
+  restr.forEach(r=>{const n=normalizeNiveau(r.niveau);counts[n]=(counts[n]||0)+1;});
+  const ordre=['crise','alerte renforcée','alerte','vigilance'];
+  let html=`<div style="font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--muted);margin-bottom:6px">RESTRICTIONS ACTIVES</div>`;
+  html+=`<div style="font-size:20px;font-weight:600;font-family:var(--mono);color:var(--text);margin-bottom:8px">${restr.length} <span style="font-size:11px;font-weight:400;color:var(--muted)">départements</span></div>`;
+  ordre.forEach(n=>{if(counts[n]){const col=NIVEAU_COLOR[n]||'#94a3b8';html+=`<div style="display:flex;align-items:center;gap:6px;font-size:11px;margin-bottom:3px"><span style="width:8px;height:8px;border-radius:50%;background:${col};flex-shrink:0"></span><span style="flex:1;color:var(--text2)">${NIVEAU_LABEL[n]||n}</span><span style="font-weight:600;font-family:var(--mono);color:var(--text)">${counts[n]}</span></div>`;}});
+  el.innerHTML=html;
+}
 
 function switchView(view){
   currentView=view;
   document.querySelectorAll('.view').forEach(el=>el.classList.remove('active'));
   document.getElementById(`${view}-view`).classList.add('active');
   document.querySelectorAll('.nav-item').forEach(el=>el.classList.toggle('active',el.dataset.view===view));
-  if(view==='carte'){setTimeout(()=>{renderMap();if(mapgl)mapgl.resize();},30);}
+  if(view==='carte'){setTimeout(()=>{renderMap();if(mapgl)mapgl.resize();renderMapEncart();},30);}
   if(view==='archives')renderArchives();
   if(view==='jo')renderJO();
   if(view==='historique')loadHistorique();
