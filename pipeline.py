@@ -239,60 +239,54 @@ def extract_json(text: str) -> dict:
     return {}
 
 
-def groq_summarise(titre: str, contenu: str) -> dict:
-    """
-    Filtre et résume un article pour le responsable Environnement & Décarbo de GSF.
-    Retourne pertinent=False si l'article ne mérite pas d'être dans le feed.
-    """
-    system = (
-        "Tu es assistant veille pour le responsable Environnement & Décarbonation de GSF "
-        "(2e groupe français de propreté industrielle, 42 000 salariés). "
-        "Réponds UNIQUEMENT en JSON valide, sans aucun texte avant ou après."
-    )
+
+def _gsf_est_pertinent(titre: str, contenu: str) -> bool:
+    """Filtre binaire strict : pertinent pour le responsable Env/Decarbo de GSF ?"""
+    system = 'Tu es un filtre binaire. JSON uniquement, rien dautre.'
     prompt = (
-        "MISSION : décider si cet article mérite d'être lu par le responsable Env/Décarbo de GSF, "
-        "et si oui, lui donner un score de priorité.\n\n"
-
-        "GSF EN UNE PHRASE : GSF nettoie des usines, hôpitaux, bureaux, sites nucléaires, "
-        "surfaces de vente — en utilisant des produits chimiques (biocides, détergents) "
-        "et en gérant des déchets industriels.\n\n"
-
-        "INCLURE (pertinent=true) si l'article parle de :\n"
-        "- Réglementation environnementale française ou européenne (ICPE, REACH, biocides, "
-        "  déchets industriels, REP, eau industrielle, air, sols)\n"
-        "- Décarbonation et transition énergétique des entreprises (Scope 1/2/3, bilan carbone, "
-        "  taxonomie verte, CSRD, reporting ESG obligatoire)\n"
-        "- Devoir de vigilance, RSE réglementaire, responsabilité environnementale des entreprises\n"
-        "- Santé-sécurité au travail pour les métiers du nettoyage (EPI, CMR, TMS)\n"
-        "- Convention collective ou accord branche propreté\n"
-        "- Grandes évolutions réglementaires sectorielles (circularité, économie circulaire, "
-        "  emballages industriels, filières de recyclage)\n"
-        "- Innovations ou normes dans les produits de nettoyage professionnel\n\n"
-
-        "EXCLURE ABSOLUMENT (pertinent=false) :\n"
-        "- Politique, élections, sondages électoraux, partis politiques\n"
-        "- Géopolitique, guerres, conflits internationaux\n"
-        "- Immobilier, logement, construction (sauf réglementation environnementale bâtiments)\n"
-        "- Agriculture, élevage, pêche (sauf lien direct avec déchets ou nettoyage)\n"
-        "- Finance, marchés financiers, cours du pétrole/gaz comme sujets principaux\n"
-        "- Faits divers, société, culture, sport\n"
-        "- Articles trop spécialisés sans lien avec les opérations de propreté industrielle\n\n"
-
-        "SI pertinent=true, score de priorité :\n"
-        "  score=1 : veille utile, grande tendance à connaître (ex: rapport circularité EU)\n"
-        "  score=2 : réglementation en cours qui POURRAIT affecter GSF prochainement\n"
-        "  score=3 : obligation légale en vigueur OU risque direct opérationnel pour GSF\n\n"
-
-        f"TITRE : {titre}\n"
-        f"CONTENU : {contenu[:700]}\n\n"
-        'Réponds avec exactement ce JSON (pertinent=false si hors périmètre) :\n'
-        '{"pertinent": true, "resume": "1-2 phrases utiles pour le responsable Env GSF", "score": 1}'
+        'GSF = groupe de nettoyage industriel. '
+        'Responsable Environnement veut lire : ICPE, REACH, biocides, dechets industriels, '
+        'eau industrielle, decarbonation entreprises, RSE reglementaire, sante-securite '
+        'agents nettoyage, convention collective proprete, circularite/REP.\n'
+        'Exclure : politique, elections, sondages, guerres, geopolitique, immobilier, '
+        'logement, agriculture, finance, faits divers, polemiques societales.\n\n'
+        f'TITRE: {titre}\n'
+        f'DEBUT: {contenu[:300]}\n\n'
+        'Reponds uniquement: {"ok": true} si dans le perimetre, {"ok": false} sinon.'
     )
     raw = call_groq(prompt, system)
     result = extract_json(raw)
-    if not result:
-        return {'pertinent': True, 'resume': titre[:200], 'score': 1}
-    return result
+    return bool(result.get('ok', False))
+
+
+def _gsf_resumer(titre: str, contenu: str) -> dict:
+    """Resume et donne un score de priorite a un article pertinent pour GSF."""
+    system = 'Analyste reglementaire GSF. JSON valide uniquement.'
+    prompt = (
+        'GSF nettoie usines, hopitaux, sites nucleaires. '
+        'Produits chimiques, dechets industriels, ICPE.\n\n'
+        'Score:\n'
+        '  1 = tendance sectorielle a connaitre\n'
+        '  2 = reglementation en evolution pouvant affecter GSF\n'
+        '  3 = obligation legale en vigueur OU risque direct GSF\n\n'
+        f'TITRE: {titre}\n'
+        f'CONTENU: {contenu[:600]}\n\n'
+        'JSON: {"resume": "1-2 phrases utiles", "score": 1}'
+    )
+    raw = call_groq(prompt, system)
+    result = extract_json(raw)
+    return result if result else {'resume': titre[:200], 'score': 1}
+
+
+def groq_summarise(titre: str, contenu: str) -> dict:
+    """2 appels Groq : filtre d'abord, resume si pertinent."""
+    if not _gsf_est_pertinent(titre, contenu):
+        log.debug(f'Exclu (non pertinent GSF) : {titre[:60]}')
+        return {'pertinent': False, 'resume': '', 'score': 1}
+    analysis = _gsf_resumer(titre, contenu)
+    analysis['pertinent'] = True
+    return analysis
+
 
 
 def groq_impact_gsf(titre: str, contenu: str) -> dict:
