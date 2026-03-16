@@ -721,15 +721,29 @@ function sourceType(src) {
 const NIVEAU_COLOR = {
   'vigilance':          '#c6d848',
   'alerte':             '#ffd740',
+  'alerte_renforcee':   '#ff9800',
   'alerte renforcée':   '#ff9800',
+  'alerte renforce':    '#ff9800',
   'crise':              '#f44336',
 };
 const NIVEAU_LABEL = {
   'vigilance':          'Vigilance',
   'alerte':             'Alerte',
+  'alerte_renforcee':   'Alerte renforcée',
   'alerte renforcée':   'Alerte renforcée',
+  'alerte renforce':    'Alerte renforcée',
   'crise':              '🔴 Crise',
 };
+
+// Normalise un niveau VigiEau (gère underscores, accents manquants)
+function normalizeNiveau(raw) {
+  if (!raw) return '';
+  const s = raw.toLowerCase().trim()
+    .replace(/_/g, ' ')
+    .replace('renforcee', 'renforcée')
+    .replace('renforcé', 'renforcée');
+  return s;
+}
 
 // ─────────────────────────────────────────
 // INIT
@@ -877,19 +891,30 @@ function renderFeed() {
 }
 
 function scrollToItem(id) {
-  if (currentView !== 'feed') {
-    switchView('feed');
-    renderFeed();
-  }
-  requestAnimationFrame(() => requestAnimationFrame(() => {
+  // S'assurer qu'on est sur le feed et que les items sont rendus
+  if (currentView !== 'feed') switchView('feed');
+  // Désactiver le filtre 24h si l'article est potentiellement filtré
+  filter24h = false;
+  const toggle = document.getElementById('toggle-24h');
+  if (toggle) toggle.classList.remove('on');
+  renderFeed();
+  // Attendre que le DOM soit mis à jour
+  setTimeout(() => {
     const el = document.getElementById('item-' + id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      el.style.transition = 'box-shadow .4s';
-      el.style.boxShadow = '0 0 0 2px var(--accent)';
-      setTimeout(() => { el.style.boxShadow = ''; el.style.transition = ''; }, 1800);
+      el.style.transition = 'outline .1s, box-shadow .3s';
+      el.style.outline = '2px solid var(--accent)';
+      el.style.boxShadow = '0 0 16px rgba(59,255,138,.3)';
+      setTimeout(() => {
+        el.style.outline = '';
+        el.style.boxShadow = '';
+      }, 2000);
+    } else {
+      // Fallback : scroller en haut du feed
+      document.getElementById('feed-list')?.scrollTo({top: 0, behavior: 'smooth'});
     }
-  }));
+  }, 150);
 }
 
 function getFilteredItems() {
@@ -956,12 +981,13 @@ function renderMap() {
       attributionControl: false,
     });
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+    // Fond clair CartoDB Positron — meilleure lisibilité des zones colorées
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
       maxZoom: 18,
     }).addTo(map);
 
-    // Labels séparés (noms de villes) par-dessus
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
+    // Labels par-dessus
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png', {
       maxZoom: 18,
       zIndex: 10,
     }).addTo(map);
@@ -971,7 +997,7 @@ function renderMap() {
   const VIGIEAU_GJ = 'https://regleau.s3.gra.perf.cloud.ovh.net/geojson/zones_arretes_en_vigueur.geojson';
 
   function getZoneColor(props) {
-    const niv = (props.niveauGravite || props.niveau_gravite || props.statut || '').toLowerCase();
+    const niv = normalizeNiveau(props.niveauGravite || props.niveauGraviteMax || props.niveau || props.statut || '');
     return NIVEAU_COLOR[niv] || '#2e4a2e';
   }
   function styleZone(feature) {
@@ -979,36 +1005,42 @@ function renderMap() {
              color: '#07090d', weight: 0.5, opacity: 0.8 };
   }
   function onEachZone(feature, layer) {
-    const p   = feature.properties;
-    // Le GeoJSON VigiEau utilise différentes clés selon les versions
-    const niv = (p.niveauGravite || p.niveauGraviteMax || p.niveau || p.statut || '').toLowerCase();
-    // Nom de zone en français — éviter les noms anglais du fond de carte
-    const nom = p.nomZone || p.nom || p.libelle || p.name || 'Zone';
-    const dep = p.nomDepartement || p.departement || p.numeroDepartement || '';
+    const p = feature.properties;
+    // Propriétés exactes du GeoJSON VigiEau (source: github.com/MTES-MCT/vigieau-api)
+    // niveauGravite utilise des underscores: "alerte_renforcee", "crise", "alerte", "vigilance"
+    const nivRaw = p.niveauGravite || p.niveauGraviteMax || p.niveau || p.statut || '';
+    const niv = normalizeNiveau(nivRaw);
+    const nom = p.nom || p.nomZone || p.libelle || 'Zone';
+    const dep = p.departement || p.nomDepartement || '';
+    const type = p.type || '';  // SUP, SOU, AEP
+    const typeLabel = { SUP: 'Eau superficielle', SOU: 'Eau souterraine', AEP: 'Eau potable' }[type] || type;
+    // Lien arrêté : peut être direct ou imbriqué dans p.arrete.cheminFichier
+    const arrete = (p.arrete && p.arrete.cheminFichier)
+      || p.cheminFichier || p.chemin_fichier || p.urlArrete || '';
     const col = NIVEAU_COLOR[niv] || '#2e7d32';
     const lbl = NIVEAU_LABEL[niv] || (niv ? niv.charAt(0).toUpperCase() + niv.slice(1) : 'Sans restriction');
-    // URL arrêté — plusieurs clés possibles
-    const arrete = p.cheminFichier || p.chemin_fichier || p.urlArrete || p.url_arrete || p.lienArreteRestriction || '';
 
     layer.bindTooltip(`
-      <strong>${escHtml(nom)}</strong>${dep ? '<br><span style="color:var(--muted2)">'+escHtml(dep)+'</span>' : ''}<br>
-      <span style="color:${col};font-weight:500">${lbl}</span>
-    `, { sticky: true, opacity: 1, className: 'leaflet-tooltip-dark' });
+      <b>${escHtml(nom)}</b>${dep ? ' ('+escHtml(dep)+')' : ''}
+      ${typeLabel ? '<br><span style="opacity:.7">'+typeLabel+'</span>' : ''}
+      <br><span style="color:${col};font-weight:600">${lbl}</span>
+    `, { sticky: true, opacity: 1 });
 
     layer.on('click', () => {
       const el = document.getElementById('dept-detail');
       el.innerHTML = `
         <div class="dept-detail-title">
           <span style="background:${col};width:10px;height:10px;display:inline-block;border-radius:50%;margin-right:6px;flex-shrink:0"></span>
-          <strong>${escHtml(nom)}</strong>${dep ? ' — ' + escHtml(dep) : ''}
+          <strong>${escHtml(nom)}</strong>${dep ? ' — Dép. ' + escHtml(dep) : ''}
           &nbsp;<span style="color:${col}">${lbl}</span>
+          ${typeLabel ? `<span style="font-size:10px;color:var(--muted2);margin-left:8px">${typeLabel}</span>` : ''}
         </div>
         ${arrete
           ? `<a href="${escHtml(arrete)}" target="_blank" rel="noopener"
-                style="font-size:11px;font-family:var(--mono);color:var(--accent);text-decoration:none;display:inline-block;margin-top:4px">
-               📄 Voir l'arrêté préfectoral →
+                style="font-size:11px;font-family:var(--mono);color:var(--accent);text-decoration:none;display:inline-block;margin-top:6px">
+               📄 Arrêté préfectoral →
              </a>`
-          : '<span style="font-size:11px;color:var(--muted)">Arrêté non disponible pour cette zone</span>'}`;
+          : '<span style="font-size:11px;color:var(--muted);margin-top:6px;display:block">Arrêté non disponible</span>'}`;
       el.classList.add('open');
     });
     layer.on('mouseover', e => e.target.setStyle({ fillOpacity: 0.9, weight: 2 }));
