@@ -223,6 +223,12 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
 .top10-seg{height:100%}
 .top10-val{font-family:var(--mono);font-size:10px;color:var(--muted);width:40px;text-align:right;flex-shrink:0}
 .hist-loading{padding:32px;text-align:center;font-size:12px;color:var(--muted)}
+.hist-legend{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.hist-legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2)}
+.hist-legend-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.hist-chart-subtitle{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hist-source{font-size:11px;color:var(--muted);margin-top:16px;padding-top:12px;border-top:1px solid var(--border)}
+.hist-source a{color:var(--blue);text-decoration:none}.hist-source a:hover{text-decoration:underline}
 #toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);background:var(--text);color:#fff;padding:8px 18px;border-radius:20px;font-size:12px;opacity:0;transition:all .25s;z-index:9999;pointer-events:none;white-space:nowrap}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 </style>
@@ -509,7 +515,26 @@ function renderHistorique(){
   tabs+=`<button class="year-tab ${histYear==='all'?'active':''}" onclick="setHistYear('all')">Toutes</button>`;
   annees.forEach(y=>{tabs+=`<button class="year-tab ${histYear===y?'active':''}" onclick="setHistYear('${y}')">${y}</button>`;});
   tabs+='</div>';
-  el.innerHTML=`<div class="hist-section"><div class="hist-section-title">Départements en restriction par mois</div>${tabs}<div class="chart-wrap" id="month-chart">${buildMonthChart(annees)}</div></div><div class="hist-section"><div class="hist-section-title">Top 10 — jours cumulés en restriction grave (2020–2026)</div><div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px"><div class="top10-list">${buildTop10(top10)}</div></div></div>`;
+  const NV_LABELS={vigilance:'Vigilance',alerte:'Alerte',['alerte renforcée']:'Alerte renforcée',crise:'Crise'};
+  const legend=`<div class="hist-legend">${NV.map(n=>`<span class="hist-legend-item"><span class="hist-legend-dot" style="background:${CV[n]}"></span>${NV_LABELS[n]}</span>`).join('')}</div>`;
+  const lastYear=annees[annees.length-1]||'2024';
+  el.innerHTML=`
+    <div class="hist-section">
+      <div class="hist-section-title">Nombre de départements sous arrêté de restriction — par mois</div>
+      ${tabs}
+      ${legend}
+      <div class="hist-chart-subtitle">Chaque barre représente le nombre cumulé d'arrêtés préfectoraux actifs dans le mois, par niveau de gravité.</div>
+      <div class="chart-wrap" id="month-chart">${buildMonthChart(annees)}</div>
+    </div>
+    <div class="hist-section">
+      <div class="hist-section-title">Top 10 départements — jours cumulés en restriction grave (alerte + alerte renforcée + crise), 2020–${lastYear}</div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px">
+        <div class="hist-legend" style="margin-bottom:14px">${['alerte','alerte renforcée','crise'].map(n=>`<span class="hist-legend-item"><span class="hist-legend-dot" style="background:${CV[n]}"></span>${NV_LABELS[n]}</span>`).join('')}</div>
+        <div class="hist-chart-subtitle">Les barres représentent la durée cumulée (en jours) passée sous arrêté pour chaque niveau. Codes département (ex: 79 = Deux-Sèvres, 81 = Tarn, 83 = Var).</div>
+        <div class="top10-list" style="margin-top:12px">${buildTop10(top10)}</div>
+      </div>
+    </div>
+    <div class="hist-source">Source : <a href="https://www.data.gouv.fr/fr/datasets/donnee-secheresse-vigieau/" target="_blank" rel="noopener">VigiEau — data.gouv.fr</a> · Arrêtés préfectoraux de restriction d'eau 2020–${lastYear} · Mis à jour quotidiennement par le pipeline GSF Veille.</div>`;
 }
 function setHistYear(y){histYear=y;renderHistorique();}
 function buildMonthChart(annees){
