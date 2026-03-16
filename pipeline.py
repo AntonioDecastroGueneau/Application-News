@@ -37,7 +37,7 @@ JORF_BASE_URL     = 'https://echanges.dila.gouv.fr/OPENDATA/JORF/'
 VIGIEAU_DEPTS_URL = 'https://api.vigieau.gouv.fr/api/departements'
 
 # Groq
-GROQ_MODEL      = 'llama-3.1-8b-instant'   # Free tier, rapide
+GROQ_MODEL      = 'llama-3.3-70b-versatile'  # Free tier, meilleure qualité
 GROQ_MAX_RETRY  = 4                          # Tentatives sur 429
 GROQ_RETRY_WAIT = 20                         # Secondes d'attente entre retries
 
