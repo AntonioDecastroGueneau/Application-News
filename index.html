@@ -485,8 +485,9 @@ function renderJO(){
   const nbT=D?.stats?.jo_analyses||0,nbG=D?.stats?.jo_retenus||0;
   if(statsEl)statsEl.innerHTML=[[nbT,'Textes analysés',false],[nbG,'Pertinents GSF',true],[items.length,'Dans ce JO',false]].map(([v,l,a])=>`<div class="jo-stat ${a&&v>0?'accent':''}"><div class="jo-stat-val">${v}</div><div class="jo-stat-lbl">${l}</div></div>`).join('');
 
-  // Briefing exécutif (texte rédigé libre)
-  const briefing=D?.briefing_jorf||'';
+  // Briefing exécutif (texte rédigé libre) — compatibilité ancien format array
+  const _br=D?.briefing_jorf;
+  const briefing=typeof _br==='string'?_br:(Array.isArray(_br)?_br.map(it=>it.essentiel||'').filter(Boolean).join(' '):'' );
   const briefingHtml=briefing?`<div class="briefing-card" style="margin-bottom:16px">
     <div class="briefing-header">Résumé exécutif du jour</div>
     <div style="font-size:13px;color:var(--text2);line-height:1.6">${escHtml(briefing)}</div>
