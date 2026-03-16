@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
 """
 Veille Environnementale GSF — Pipeline quotidien
-Exécuté chaque matin à 7h30 via cron macOS
+Exécuté chaque matin à 07:20 UTC via GitHub Actions
 
 Dépendances :
-    pip install requests feedparser crawl4ai beautifulsoup4
-
-Ajout crontab (crontab -e) :
-    30 7 * * * /usr/bin/python3 /path/to/pipeline.py >> /path/to/pipeline.log 2>&1
+    pip install requests feedparser groq beautifulsoup4
 """
 
 import os
@@ -18,29 +15,32 @@ import io
 import re
 import html
 import hashlib
-import shutil
-import subprocess
 import logging
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import urljoin
 
 import requests
 import feedparser
+from groq import Groq
 
 # ─────────────────────────────────────────────
 # CONFIG
 # ─────────────────────────────────────────────
 
-TODAY        = datetime.now().strftime('%Y-%m-%d')
-SCRIPT_DIR   = Path(__file__).parent.resolve()
-GHPAGES_WORKTREE = Path('/tmp/gsf-veille-ghpages')
-LOG_PATH     = SCRIPT_DIR / 'pipeline.log'
+TODAY      = datetime.now().strftime('%Y-%m-%d')
+SCRIPT_DIR = Path(__file__).parent.resolve()
+LOG_PATH   = SCRIPT_DIR / 'pipeline.log'
 
 JORF_BASE_URL     = 'https://echanges.dila.gouv.fr/OPENDATA/JORF/'
 VIGIEAU_DEPTS_URL = 'https://api.vigieau.gouv.fr/api/departements'
 
-# Mots-clés de pertinence GSF
+# Groq
+GROQ_MODEL      = 'llama-3.1-8b-instant'   # Free tier, rapide
+GROQ_MAX_RETRY  = 4                          # Tentatives sur 429
+GROQ_RETRY_WAIT = 20                         # Secondes d'attente entre retries
+
 KEYWORDS = [
     'ICPE', 'installation classée', 'eau', 'rejet aqueux', 'émissions',
     'biodiversité', 'espèce protégée', 'énergie', 'déchet', 'déchets',
@@ -52,34 +52,22 @@ KEYWORDS = [
     'responsabilité élargie', 'VHU', 'bâtiment tertiaire',
 ]
 
-# Mots-clés stricts pour le pré-filtre JORF (Option B)
-# Seuls les textes dont le titre contient l'une de ces expressions passent à Ollama
 JORF_KEYWORDS_STRICT = [
-    # Activités cœur GSF — nettoyage / propreté
     'nettoyage industriel', 'nettoyage tertiaire', 'nettoyage des locaux',
     'propreté industrielle', 'agent de propreté', 'entreprise de propreté',
     'branche propreté', 'convention collective', 'propreté et services',
     'désinfection', 'décontamination', 'hygiène des locaux',
-    # Déchets
     'déchet dangereux', 'déchets dangereux', 'déchet industriel', 'déchets industriels',
     'DASRI', 'déchet infectieux', 'déchet de soins',
     'collecte de déchets', 'traitement de déchets', 'élimination de déchets',
     'responsabilité élargie du producteur', 'filière REP',
-    # Produits chimiques
     'biocide', 'détergent', 'substance dangereuse', 'produit chimique',
     'CMR', 'composé organique volatil', 'COV', 'solvant',
     'REACH', 'CLP', 'fiche de données de sécurité', 'FDS',
-    # ICPE / risques industriels
     'installation classée', 'ICPE', 'SEVESO', 'rubrique ICPE',
-    # Nucléaire / milieux contrôlés
     'radioprotection', 'zone contrôlée', 'zone surveillée',
-    # Amiante / plomb
     'amiante', 'désamiantage', 'plomb', 'saturnisme',
 ]
-
-OLLAMA_URL   = 'http://localhost:11434/api/generate'
-OLLAMA_MODEL = 'phi3:mini'
-OLLAMA_OK    = None  # None = pas encore testé, True/False après check
 
 RSS_SOURCES = [
     {
@@ -118,13 +106,10 @@ RSS_SOURCES = [
         'categorie': 'Presse',
         'fallback_crawl': 'https://reporterre.net/',
     },
-    # Légifrance RSS supprimé (403) — couvert par le JORF DILA
-    # Contexte.com : pas de RSS public (abonnement)
 ]
 
-TIMEOUT = 30  # secondes
+TIMEOUT = 30
 
-# Ordre des niveaux de restriction eau
 NIVEAUX_ORDRE = {
     'vigilance': 1,
     'alerte': 2,
@@ -152,18 +137,15 @@ log = logging.getLogger(__name__)
 # ─────────────────────────────────────────────
 
 def make_id(source: str, titre: str) -> str:
-    """ID unique reproductible à partir de la source et du titre."""
     return hashlib.md5(f"{source}:{titre}".encode()).hexdigest()[:12]
 
 
 def keyword_match(text: str) -> bool:
-    """Vérifie si un texte contient un mot-clé environnemental."""
     t = text.lower()
     return any(kw.lower() in t for kw in KEYWORDS)
 
 
 def categorise(text: str) -> str:
-    """Détermine la catégorie principale d'un article."""
     t = text.lower()
     if any(k in t for k in ['icpe', 'installation classée', 'seveso', 'autorisation', 'enregistrement']):
         return 'ICPE'
@@ -181,44 +163,61 @@ def categorise(text: str) -> str:
 
 
 # ─────────────────────────────────────────────
-# OLLAMA
+# GROQ — remplace Ollama
 # ─────────────────────────────────────────────
 
-def check_ollama() -> bool:
-    """Vérifie si Ollama est disponible (timeout court)."""
-    global OLLAMA_OK
-    if OLLAMA_OK is not None:
-        return OLLAMA_OK
-    try:
-        resp = requests.get('http://localhost:11434/', timeout=5)
-        OLLAMA_OK = resp.status_code == 200
-    except Exception:
-        OLLAMA_OK = False
-    log.info(f"Ollama {'disponible' if OLLAMA_OK else 'indisponible — mode dégradé (résumés automatiques)'}")
-    return OLLAMA_OK
+_groq_client = None
 
 
-def call_ollama(prompt: str) -> str:
-    """Appelle Ollama (Mistral local) et retourne la réponse texte."""
-    if not check_ollama():
-        return ''
-    try:
-        resp = requests.post(
-            OLLAMA_URL,
-            json={'model': OLLAMA_MODEL, 'prompt': prompt, 'stream': False},
-            timeout=90,
-        )
-        resp.raise_for_status()
-        return resp.json().get('response', '').strip()
-    except Exception as e:
-        global OLLAMA_OK
-        OLLAMA_OK = False  # évite de réessayer sur les articles suivants
-        log.warning(f"Ollama erreur : {e}")
-        return ''
+def get_groq_client() -> Groq:
+    global _groq_client
+    if _groq_client is None:
+        api_key = os.environ.get('GROQ_API_KEY', '')
+        if not api_key:
+            raise RuntimeError("GROQ_API_KEY manquant dans les variables d'environnement")
+        _groq_client = Groq(api_key=api_key)
+    return _groq_client
+
+
+def call_groq(prompt: str, system: str = '') -> str:
+    """Appelle l'API Groq avec retry sur erreur 429 (rate limit)."""
+    client = get_groq_client()
+    messages = []
+    if system:
+        messages.append({'role': 'system', 'content': system})
+    messages.append({'role': 'user', 'content': prompt})
+
+    for attempt in range(1, GROQ_MAX_RETRY + 1):
+        try:
+            resp = client.chat.completions.create(
+                model=GROQ_MODEL,
+                messages=messages,
+                max_tokens=300,
+                temperature=0.2,
+                response_format={"type": "json_object"},
+            )
+            return resp.choices[0].message.content.strip()
+
+        except Exception as e:
+            err_str = str(e)
+            if '429' in err_str or 'rate_limit' in err_str.lower():
+                wait = GROQ_RETRY_WAIT * attempt
+                log.warning(f"Groq rate limit (tentative {attempt}/{GROQ_MAX_RETRY}) — attente {wait}s")
+                time.sleep(wait)
+            else:
+                log.warning(f"Groq erreur : {e}")
+                return ''
+
+    log.error("Groq : toutes les tentatives épuisées")
+    return ''
 
 
 def extract_json(text: str) -> dict:
     """Extrait le premier bloc JSON valide d'une chaîne."""
+    try:
+        return json.loads(text)
+    except Exception:
+        pass
     match = re.search(r'\{.*?\}', text, re.DOTALL)
     if match:
         try:
@@ -228,95 +227,76 @@ def extract_json(text: str) -> dict:
     return {}
 
 
-def ollama_impact_gsf(titre: str, contenu: str) -> dict:
-    """Évalue la pertinence et l'impact d'un texte JO pour GSF."""
-    prompt = (
-        "CONTEXTE : GSF est le 2e groupe français de nettoyage et propreté (42 000 salariés, 1,6 Md€ CA). "
-        "GSF intervient dans : usines agroalimentaires, industrie, nucléaire, pharmaceutique, hôpitaux, "
-        "bureaux, surfaces de vente, transports. "
-        "GSF gère aussi des déchets industriels, utilise des produits chimiques "
-        "(détergents, désinfectants, biocides) et exploite des installations ICPE.\n\n"
-
-        "RÈGLE 1 — EXCLUSIONS ABSOLUES (répondre pertinent=false sans exception) :\n"
-        "- Textes sur des professions réglementées (médecins, avocats, notaires, vétérinaires, pharmaciens...)\n"
-        "- Nominations, mutations, retraites, concours de la fonction publique\n"
-        "- Régies de recettes ou d'avances, finances publiques, fiscalité\n"
-        "- Défense nationale, armées, police, justice\n"
-        "- Sécurité sociale, assurance maladie, prestations sociales\n"
-        "- Urbanisme, permis de construire, cadastre\n"
-        "- Agriculture, sylviculture, pêche (sauf si lien explicite avec nettoyage ou déchets)\n\n"
-
-        "RÈGLE 2 — PERTINENT pour GSF UNIQUEMENT si le texte modifie directement :\n"
-        "- Les règles sur les produits biocides, détergents, CMR, solvants, REACH\n"
-        "- La réglementation ICPE (nouvelles rubriques, seuils, obligations déclaratives)\n"
-        "- La gestion, collecte ou traitement des déchets industriels ou dangereux\n"
-        "- Les normes d'hygiène dans les secteurs où GSF travaille (agroalimentaire, pharma, santé, nucléaire)\n"
-        "- Les obligations employeur en santé-sécurité des agents de nettoyage (TMS, produits chimiques, EPI)\n"
-        "- La réglementation sur les rejets aqueux, les eaux usées industrielles\n"
-        "- Les conventions collectives ou accords de branche propreté\n\n"
-
-        "RÈGLE 3 — EN CAS DE DOUTE : pertinent=false. Ne jamais inventer de lien indirect.\n\n"
-
-        f"TITRE : {titre}\n"
-        f"EXTRAIT : {contenu[:600]}\n\n"
-
-        "Applique d'abord la RÈGLE 1. Si exclusion → pertinent=false immédiatement.\n"
-        "Sinon applique la RÈGLE 2. Si aucun point ne correspond exactement → pertinent=false.\n\n"
-        "Réponds UNIQUEMENT en JSON valide, sans texte avant ou après :\n"
-        '{"pertinent": true/false, "score": 1, "resume": "2 phrases max si pertinent, sinon vide"}\n'
-        "score : 1=veille, 2=à surveiller, 3=obligation directe sur opérations GSF"
+def groq_summarise(titre: str, contenu: str) -> dict:
+    """Résume un article et évalue son score pour GSF."""
+    system = (
+        "Tu es un analyste veille réglementaire pour GSF, entreprise de propreté et services. "
+        "Réponds UNIQUEMENT en JSON valide, sans texte avant ou après."
     )
-    raw = call_ollama(prompt)
-    result = extract_json(raw)
-    return result if result else {'pertinent': False, 'score': 1, 'resume': ''}
-
-
-def ollama_summarise(titre: str, contenu: str) -> dict:
-    """Résume un article de presse et évalue son score pour GSF."""
     prompt = (
-        "Tu travailles pour GSF, entreprise de propreté et services.\n\n"
         f"TITRE : {titre}\n"
         f"CONTENU : {contenu[:800]}\n\n"
-        "Réponds UNIQUEMENT en JSON valide :\n"
-        '{"resume": "2 phrases max", "score": 1}\n'
-        "score : 1=intéressant, 2=important, 3=impact direct GSF"
+        "Génère un JSON avec ces champs exactement :\n"
+        '{"resume": "2 phrases max résumant l\'article", "score": 1}\n'
+        "score : 1=intéressant, 2=important, 3=impact direct opérations GSF"
     )
-    raw = call_ollama(prompt)
+    raw = call_groq(prompt, system)
     result = extract_json(raw)
     return result if result else {'resume': titre[:200], 'score': 1}
 
 
+def groq_impact_gsf(titre: str, contenu: str) -> dict:
+    """Évalue la pertinence et l'impact d'un texte JO pour GSF."""
+    system = (
+        "Tu es un analyste réglementaire pour GSF (nettoyage industriel, 42 000 salariés). "
+        "Réponds UNIQUEMENT en JSON valide, sans texte avant ou après."
+    )
+    prompt = (
+        "GSF intervient dans : usines agroalimentaires, industrie, nucléaire, pharmaceutique, "
+        "hôpitaux, bureaux, transports. GSF gère des déchets industriels, utilise des produits "
+        "chimiques (détergents, désinfectants, biocides) et exploite des installations ICPE.\n\n"
+        "EXCLUSIONS ABSOLUES (pertinent=false) :\n"
+        "- Professions réglementées (médecins, avocats, notaires...)\n"
+        "- Nominations, mutations, concours fonction publique\n"
+        "- Finances publiques, fiscalité, défense, justice\n"
+        "- Urbanisme, agriculture, sylviculture (sauf lien direct nettoyage/déchets)\n\n"
+        "PERTINENT uniquement si le texte modifie directement :\n"
+        "- Règles biocides, détergents, CMR, solvants, REACH\n"
+        "- Réglementation ICPE (rubriques, seuils, obligations)\n"
+        "- Gestion/collecte/traitement déchets industriels ou dangereux\n"
+        "- Normes hygiène agroalimentaire, pharma, santé, nucléaire\n"
+        "- Santé-sécurité agents de nettoyage (TMS, chimiques, EPI)\n"
+        "- Rejets aqueux, eaux usées industrielles\n"
+        "- Conventions collectives ou accords branche propreté\n\n"
+        "EN CAS DE DOUTE : pertinent=false.\n\n"
+        f"TITRE : {titre}\n"
+        f"EXTRAIT : {contenu[:600]}\n\n"
+        "Réponds avec ce JSON exactement :\n"
+        '{"pertinent": true, "score": 2, "resume": "2 phrases max si pertinent, sinon vide"}\n'
+        "score : 1=veille, 2=à surveiller, 3=obligation directe sur opérations GSF"
+    )
+    raw = call_groq(prompt, system)
+    result = extract_json(raw)
+    return result if result else {'pertinent': False, 'score': 1, 'resume': ''}
+
+
 # ─────────────────────────────────────────────
-# CRAWL4AI / FALLBACK
+# CRAWL FALLBACK
+# crawl4ai retiré — incompatible GitHub Actions
 # ─────────────────────────────────────────────
 
 def crawl_article(url: str) -> str:
-    """Récupère le contenu textuel d'une URL (Crawl4AI ou BeautifulSoup)."""
-    # Tentative Crawl4AI
-    try:
-        from crawl4ai import WebCrawler
-        crawler = WebCrawler()
-        crawler.warmup()
-        result = crawler.run(url=url)
-        if result.success and result.markdown:
-            return result.markdown[:2500]
-    except ImportError:
-        pass
-    except Exception as e:
-        log.debug(f"Crawl4AI error {url}: {e}")
-
-    # Fallback BeautifulSoup
+    """Récupère le contenu textuel d'une URL via BeautifulSoup."""
     try:
         from bs4 import BeautifulSoup
-        resp = requests.get(url, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/1.0'})
+        resp = requests.get(url, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'html.parser')
         for tag in soup(['script', 'style', 'nav', 'header', 'footer', 'aside']):
             tag.decompose()
         return soup.get_text(separator=' ', strip=True)[:2500]
     except Exception as e:
-        log.debug(f"Crawl fallback error {url}: {e}")
-
+        log.debug(f"Crawl error {url}: {e}")
     return ''
 
 
@@ -324,8 +304,7 @@ def crawl_article(url: str) -> str:
 # JORF — Journal Officiel
 # ─────────────────────────────────────────────
 
-def list_jorf_files() -> list[str]:
-    """Liste les fichiers tar.gz disponibles sur le serveur DILA."""
+def list_jorf_files() -> list:
     try:
         resp = requests.get(JORF_BASE_URL, timeout=TIMEOUT)
         resp.raise_for_status()
@@ -336,7 +315,6 @@ def list_jorf_files() -> list[str]:
 
 
 def get_today_jorf_url():
-    """Retourne l'URL du fichier JORF le plus récent pour aujourd'hui."""
     files = list_jorf_files()
     today_compact = datetime.now().strftime('%Y%m%d')
     today_files = [f for f in files if today_compact in f]
@@ -348,18 +326,6 @@ def get_today_jorf_url():
 
 
 def parse_jorf_xml(content: bytes):
-    """Parse un fichier XML JORF (format DILA) et extrait les articles filtrés par mots-clés.
-
-    Structure DILA :
-      <SECTION_TA>
-        <TITRE_TA>...</TITRE_TA>
-        <CONTEXTE>
-          <TEXTE nor="TECK..." nature="ARRETE" ministere="..." date_publi="YYYY-MM-DD">
-            <TITRE_TXT>Arrêté du …</TITRE_TXT>
-          </TEXTE>
-        </CONTEXTE>
-      </SECTION_TA>
-    """
     import xml.etree.ElementTree as ET
     articles = []
     try:
@@ -370,11 +336,8 @@ def parse_jorf_xml(content: bytes):
 
     seen_nor = set()
 
-    # Chercher tous les éléments TEXTE portant un attribut nor (NOR du texte)
     for texte in root.iter('TEXTE'):
         nor = texte.get('nor', '').strip()
-
-        # Titre dans <TITRE_TXT>
         titre_el = texte.find('TITRE_TXT')
         titre = (titre_el.text or '').strip() if titre_el is not None else ''
 
@@ -388,7 +351,7 @@ def parse_jorf_xml(content: bytes):
         nature    = texte.get('nature', '')
         ministere = texte.get('ministere', '')
         date_pub  = texte.get('date_publi', TODAY)
-        cid       = texte.get('cid', '')  # JORFTEXT000... — vrai ID Légifrance
+        cid       = texte.get('cid', '')
 
         url = f'https://www.legifrance.gouv.fr/jorf/id/{cid}' if cid else (
               f'https://www.legifrance.gouv.fr/jorf/id/{nor}' if nor else '')
@@ -407,7 +370,6 @@ def parse_jorf_xml(content: bytes):
 
 
 def fetch_jorf():
-    """Télécharge le JORF, filtre et analyse via Ollama. Retourne (pertinents, autres, nb_analysés)."""
     log.info("=== JORF ===")
     items, autres, total_analysed = [], [], 0
 
@@ -415,7 +377,7 @@ def fetch_jorf():
         url = get_today_jorf_url()
         if not url:
             log.warning("Aucun fichier JORF disponible")
-            return items, 0
+            return items, autres, 0
 
         log.info(f"Téléchargement : {url}")
         resp = requests.get(url, timeout=180)
@@ -444,16 +406,14 @@ def fetch_jorf():
             total_analysed = len(all_articles)
             log.info(f"JORF : {total_analysed} textes keywords généraux")
 
-            # ── Option B : pré-filtre strict avant Ollama ──────────────
             def jorf_strict_match(titre: str) -> bool:
                 t = titre.lower()
                 return any(k.lower() in t for k in JORF_KEYWORDS_STRICT)
 
             gsf_candidates = [a for a in all_articles if jorf_strict_match(a['titre'])]
             rest = [a for a in all_articles if not jorf_strict_match(a['titre'])]
-            log.info(f"JORF : {len(gsf_candidates)} candidats GSF après pré-filtre strict, {len(rest)} autres")
+            log.info(f"JORF : {len(gsf_candidates)} candidats GSF, {len(rest)} autres")
 
-            # Les textes hors-filtre vont directement dans "autres"
             for art in rest:
                 autres.append({
                     'nor'      : art.get('nor', ''),
@@ -464,7 +424,6 @@ def fetch_jorf():
                     'date'     : art.get('date', TODAY),
                 })
 
-            # Les candidats GSF → Ollama pour résumé uniquement (pas de filtre)
             for art in gsf_candidates:
                 try:
                     contenu = art['contenu']
@@ -473,18 +432,18 @@ def fetch_jorf():
                         if full:
                             contenu = full
 
-                    analysis = ollama_summarise(art['titre'], contenu)
+                    analysis = groq_summarise(art['titre'], contenu)
 
                     items.append({
-                        'id': make_id('JORF', art['titre']),
-                        'source': 'JORF',
+                        'id'       : make_id('JORF', art['titre']),
+                        'source'   : 'JORF',
                         'categorie': categorise(art['titre'] + ' ' + contenu),
-                        'titre': art['titre'],
-                        'resume': analysis.get('resume') or art['titre'],
+                        'titre'    : art['titre'],
+                        'resume'   : analysis.get('resume') or art['titre'],
                         'criticite': int(analysis.get('score', 2)),
                         'impact_gsf': True,
-                        'url': art.get('url', ''),
-                        'date': TODAY,
+                        'url'      : art.get('url', ''),
+                        'date'     : TODAY,
                     })
                 except Exception as e:
                     log.debug(f"Erreur résumé JORF : {e}")
@@ -501,9 +460,8 @@ def fetch_jorf():
 # ─────────────────────────────────────────────
 
 def fetch_rss_source(source: dict):
-    """Récupère et analyse les articles d'une source RSS."""
     items = []
-    name = source['name']
+    name  = source['name']
 
     try:
         feed = feedparser.parse(source['url'])
@@ -526,7 +484,6 @@ def fetch_rss_source(source: dict):
 
             url = entry.get('link', '')
 
-            # Date de publication réelle de l'article
             pub = entry.get('published_parsed') or entry.get('updated_parsed')
             if pub:
                 import time as _time
@@ -537,46 +494,44 @@ def fetch_rss_source(source: dict):
             else:
                 article_date = TODAY
 
-            # Enrichissement si contenu insuffisant
             if len(contenu) < 100 and url:
                 contenu = crawl_article(url) or contenu
 
             if not keyword_match(titre + ' ' + contenu):
                 continue
 
-            analysis = ollama_summarise(titre, contenu)
+            analysis = groq_summarise(titre, contenu)
             items.append({
-                'id': make_id(name, titre),
-                'source': name,
-                'categorie': categorise(titre + ' ' + contenu),
-                'titre': titre,
-                'resume': analysis.get('resume') or titre,
-                'criticite': int(analysis.get('score', 1)),
+                'id'        : make_id(name, titre),
+                'source'    : name,
+                'categorie' : categorise(titre + ' ' + contenu),
+                'titre'     : titre,
+                'resume'    : analysis.get('resume') or titre,
+                'criticite' : int(analysis.get('score', 1)),
                 'impact_gsf': int(analysis.get('score', 1)) >= 2,
-                'url': url,
-                'date': article_date,
+                'url'       : url,
+                'date'      : article_date,
             })
 
     except Exception as e:
         log.warning(f"RSS {name} error : {e}")
 
-        # Fallback page principale via Crawl4AI
         if source.get('fallback_crawl'):
             try:
-                log.info(f"Fallback Crawl4AI → {source['fallback_crawl']}")
+                log.info(f"Fallback → {source['fallback_crawl']}")
                 contenu = crawl_article(source['fallback_crawl'])
                 if contenu:
-                    analysis = ollama_summarise(f"Actualités {name}", contenu)
+                    analysis = groq_summarise(f"Actualités {name}", contenu)
                     items.append({
-                        'id': make_id(name, 'fallback'),
-                        'source': name,
-                        'categorie': 'Presse',
-                        'titre': f'Actualités {name}',
-                        'resume': analysis.get('resume') or 'Source consultée via fallback.',
-                        'criticite': 1,
+                        'id'        : make_id(name, 'fallback'),
+                        'source'    : name,
+                        'categorie' : 'Presse',
+                        'titre'     : f'Actualités {name}',
+                        'resume'    : analysis.get('resume') or 'Source consultée via fallback.',
+                        'criticite' : 1,
                         'impact_gsf': False,
-                        'url': source['fallback_crawl'],
-                        'date': TODAY,
+                        'url'       : source['fallback_crawl'],
+                        'date'      : TODAY,
                     })
             except Exception as e2:
                 log.warning(f"Fallback {name} error : {e2}")
@@ -585,7 +540,6 @@ def fetch_rss_source(source: dict):
 
 
 def fetch_rss():
-    """Collecte et agrège tous les flux RSS."""
     log.info("=== RSS ===")
     all_items = []
     for source in RSS_SOURCES:
@@ -596,11 +550,10 @@ def fetch_rss():
 
 
 # ─────────────────────────────────────────────
-# VIGIEAU — RESTRICTIONS EAU
+# VIGIEAU
 # ─────────────────────────────────────────────
 
 def fetch_vigieau():
-    """Récupère les restrictions eau par département via l'API VigiEau."""
     log.info("=== VigiEau ===")
     restrictions = []
 
@@ -611,21 +564,18 @@ def fetch_vigieau():
         for dept in resp.json():
             niv = dept.get('niveauGraviteMax')
             if not niv:
-                continue  # null = aucune restriction active
+                continue
 
             restrictions.append({
                 'dept_code': dept.get('code', ''),
-                'dept_nom': dept.get('nom', ''),
-                'niveau': niv,
-                'niveauSup': dept.get('niveauGraviteSupMax'),  # eaux de surface
-                'niveauSou': dept.get('niveauGraviteSouMax'),  # eaux souterraines
-                'niveauAep': dept.get('niveauGraviteAepMax'),  # eau potable
+                'dept_nom' : dept.get('nom', ''),
+                'niveau'   : niv,
+                'niveauSup': dept.get('niveauGraviteSupMax'),
+                'niveauSou': dept.get('niveauGraviteSouMax'),
+                'niveauAep': dept.get('niveauGraviteAepMax'),
             })
 
-        restrictions.sort(
-            key=lambda x: NIVEAUX_ORDRE.get(x['niveau'], 0),
-            reverse=True,
-        )
+        restrictions.sort(key=lambda x: NIVEAUX_ORDRE.get(x['niveau'], 0), reverse=True)
         log.info(f"VigiEau : {len(restrictions)} départements en restriction")
 
     except Exception as e:
@@ -635,99 +585,43 @@ def fetch_vigieau():
 
 
 # ─────────────────────────────────────────────
-# GIT / GH-PAGES
+# ÉCRITURE JSON
+# Le commit/push est géré par le workflow GitHub Actions
 # ─────────────────────────────────────────────
 
-def push_to_ghpages(json_data: dict, date_str: str) -> bool:
-    """
-    Pousse le JSON quotidien vers gh-pages via git worktree.
-    Ne touche JAMAIS la branche main.
-    """
-    log.info("=== Push gh-pages ===")
-    worktree = GHPAGES_WORKTREE
+def write_output(json_data: dict, date_str: str):
+    """Écrit les fichiers de sortie dans le workspace GitHub Actions."""
+    data_dir = SCRIPT_DIR / 'data'
+    data_dir.mkdir(exist_ok=True)
 
-    try:
-        # Supprimer l'ancien worktree si présent
-        if worktree.exists():
-            subprocess.run(
-                ['git', '-C', str(SCRIPT_DIR), 'worktree', 'remove', str(worktree), '--force'],
-                capture_output=True,
-            )
+    day_file = data_dir / f'{date_str}.json'
+    day_file.write_text(json.dumps(json_data, ensure_ascii=False, indent=2), encoding='utf-8')
+    log.info(f"Écrit : {day_file}")
 
-        # Créer le worktree sur gh-pages
-        r = subprocess.run(
-            ['git', '-C', str(SCRIPT_DIR), 'worktree', 'add', str(worktree), 'gh-pages'],
-            capture_output=True, text=True,
-        )
-        if r.returncode != 0:
-            log.error(f"worktree add échoué : {r.stderr}")
-            return False
+    archive_file = SCRIPT_DIR / 'archive.json'
+    archive: dict = json.loads(archive_file.read_text()) if archive_file.exists() else {'dates': []}
+    archive.setdefault('dates', [])
+    if date_str not in archive['dates']:
+        archive['dates'].append(date_str)
+    archive['dates'] = sorted(set(archive['dates']), reverse=True)
+    archive['updated_at'] = datetime.now().isoformat()
 
-        # Écrire le JSON du jour
-        data_dir = worktree / 'data'
-        data_dir.mkdir(exist_ok=True)
-        (data_dir / f'{date_str}.json').write_text(
-            json.dumps(json_data, ensure_ascii=False, indent=2), encoding='utf-8'
-        )
+    # Nettoyage JSON > 90 jours
+    cutoff = datetime.now() - timedelta(days=90)
+    removed = []
+    for f in data_dir.glob('*.json'):
+        try:
+            if datetime.strptime(f.stem, '%Y-%m-%d') < cutoff:
+                f.unlink()
+                removed.append(f.stem)
+                log.info(f"Supprimé : {f.name}")
+        except ValueError:
+            pass
+    if removed:
+        archive['dates'] = [d for d in archive['dates'] if d not in removed]
 
-        # Mettre à jour archive.json
-        archive_file = worktree / 'archive.json'
-        archive: dict = json.loads(archive_file.read_text()) if archive_file.exists() else {'dates': []}
-        archive.setdefault('dates', [])
-        if date_str not in archive['dates']:
-            archive['dates'].append(date_str)
-        archive['dates'] = sorted(set(archive['dates']), reverse=True)
-        archive['updated_at'] = datetime.now().isoformat()
-
-        # Nettoyer les JSON > 90 jours
-        cutoff = datetime.now() - timedelta(days=90)
-        removed = []
-        for f in data_dir.glob('*.json'):
-            try:
-                if datetime.strptime(f.stem, '%Y-%m-%d') < cutoff:
-                    f.unlink()
-                    removed.append(f.stem)
-                    log.info(f"Supprimé : {f.name}")
-            except ValueError:
-                pass
-        if removed:
-            archive['dates'] = [d for d in archive['dates'] if d not in removed]
-
-        archive_file.write_text(
-            json.dumps(archive, ensure_ascii=False, indent=2), encoding='utf-8'
-        )
-
-        # git add + commit + push
-        subprocess.run(['git', '-C', str(worktree), 'add', '-A'], check=True, capture_output=True)
-
-        r_commit = subprocess.run(
-            ['git', '-C', str(worktree), 'commit', '-m', f'data: veille {date_str}'],
-            capture_output=True, text=True,
-        )
-        if 'nothing to commit' in r_commit.stdout + r_commit.stderr:
-            log.info("Données déjà à jour — pas de commit")
-            return True
-
-        r_push = subprocess.run(
-            ['git', '-C', str(worktree), 'push', 'origin', 'gh-pages'],
-            capture_output=True, text=True,
-        )
-        if r_push.returncode != 0:
-            log.error(f"Push échoué : {r_push.stderr}")
-            return False
-
-        log.info(f"gh-pages mis à jour pour {date_str}")
-        return True
-
-    except Exception as e:
-        log.error(f"Push gh-pages fatal : {e}", exc_info=True)
-        return False
-
-    finally:
-        subprocess.run(
-            ['git', '-C', str(SCRIPT_DIR), 'worktree', 'remove', str(worktree), '--force'],
-            capture_output=True,
-        )
+    archive_file.write_text(json.dumps(archive, ensure_ascii=False, indent=2), encoding='utf-8')
+    log.info(f"archive.json mis à jour ({len(archive['dates'])} dates)")
 
 
 # ─────────────────────────────────────────────
@@ -737,13 +631,15 @@ def push_to_ghpages(json_data: dict, date_str: str) -> bool:
 def main() -> int:
     log.info('=' * 60)
     log.info(f'Pipeline GSF Veille Environnementale — {TODAY}')
+    log.info(f'Modèle LLM : {GROQ_MODEL} via Groq API')
     log.info('=' * 60)
 
-    start   = datetime.now()
-    errors  = []
-    items   = []
-    stats   = {}
+    start  = datetime.now()
+    errors = []
+    items  = []
+    stats  = {}
     restrictions = []
+    jorf_autres  = []
 
     # 1. JORF
     try:
@@ -754,7 +650,6 @@ def main() -> int:
     except Exception as e:
         log.error(f"JORF fatal : {e}")
         errors.append('JORF')
-        jorf_autres = []
         stats.update({'jo_analyses': 0, 'jo_retenus': 0})
 
     # 2. RSS / Presse
@@ -776,41 +671,40 @@ def main() -> int:
         errors.append('VigiEau')
         stats['depts_restriction'] = 0
 
-    # Déduplication + tri par criticité décroissante
-    seen = set()
+    # Déduplication + tri criticité décroissante
+    seen   = set()
     unique = []
     for item in sorted(items, key=lambda x: -x.get('criticite', 1)):
         if item['id'] not in seen:
             seen.add(item['id'])
             unique.append(item)
 
-    # Marquer le top 5 par criticité (signaux forts du jour)
     for i, item in enumerate(unique):
         item['top5'] = i < 5
 
-    # 4. Générer le JSON
+    # Générer le JSON
     elapsed = round((datetime.now() - start).total_seconds())
     json_data = {
-        'date': TODAY,
-        'generated_at': datetime.now().strftime('%H:%M'),
-        'elapsed_seconds': elapsed,
-        'errors': errors,
-        'stats': stats,
-        'items': unique,
+        'date'            : TODAY,
+        'generated_at'    : datetime.now().strftime('%H:%M'),
+        'elapsed_seconds' : elapsed,
+        'errors'          : errors,
+        'stats'           : stats,
+        'items'           : unique,
         'restrictions_eau': restrictions,
-        'jo_autres': jorf_autres,
+        'jo_autres'       : jorf_autres,
     }
 
     log.info(f"JSON : {len(unique)} items, {len(restrictions)} départements eau")
 
-    # 5. Push gh-pages
-    ok = push_to_ghpages(json_data, TODAY)
+    # Écriture fichiers (commit géré par le workflow)
+    write_output(json_data, TODAY)
 
     duration = (datetime.now() - start).total_seconds()
-    status   = 'OK' if ok and not errors else ('PARTIEL' if ok else 'ERREUR')
+    status   = 'OK' if not errors else 'PARTIEL'
     log.info(f"Pipeline terminé en {duration:.1f}s — {status}")
 
-    return 0 if ok else 1
+    return 0 if not errors else 1
 
 
 if __name__ == '__main__':
