@@ -1,0 +1,71 @@
+name: Veille Environnementale GSF
+
+on:
+  schedule:
+    - cron: '20 7 * * *'   # 07:20 UTC = 09:20 heure Paris (été)
+  workflow_dispatch:         # déclenchement manuel depuis l'onglet Actions
+
+permissions:
+  contents: write            # nécessaire pour le push gh-pages
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      # ── 1. Checkout branche main ──────────────────────────────────
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0     # historique complet pour le push gh-pages
+
+      # ── 2. Python ────────────────────────────────────────────────
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      # ── 3. Dépendances ───────────────────────────────────────────
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ── 4. Exécution du pipeline ─────────────────────────────────
+      - name: Run pipeline
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python pipeline.py
+
+      # ── 5. Récupération de la branche gh-pages ───────────────────
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages-branch
+
+      # ── 6. Copie des fichiers générés vers gh-pages ──────────────
+      - name: Copy generated files to gh-pages
+        run: |
+          # Créer le dossier data s'il n'existe pas
+          mkdir -p gh-pages-branch/data
+
+          # Copier le JSON du jour
+          cp data/*.json gh-pages-branch/data/ 2>/dev/null || true
+
+          # Copier archive.json à la racine de gh-pages
+          cp archive.json gh-pages-branch/archive.json
+
+          # Copier index.html si modifié (déploiement initial ou mise à jour)
+          cp index.html gh-pages-branch/index.html
+
+      # ── 7. Commit et push vers gh-pages ──────────────────────────
+      - name: Commit and push to gh-pages
+        run: |
+          cd gh-pages-branch
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          # Commit seulement s'il y a des changements
+          git diff --staged --quiet || git commit -m "data: veille $(date -u +%Y-%m-%d)"
+          git push origin gh-pages
