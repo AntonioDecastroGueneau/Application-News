@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veille Environnementale GSF</title>
+<title>Veille Environnementale — GSF</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500;600&family=Epilogue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
-<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-<script src="https://unpkg.com/pmtiles@3.2.1/dist/pmtiles.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <style>
 :root {
@@ -26,6 +25,11 @@
   --crit1:     #4a90d9;
   --crit2:     #ffaa2e;
   --crit3:     #ff4545;
+  --eau0:      #2e4a2e;
+  --eau1:      #8bc34a;
+  --eau2:      #ffd740;
+  --eau3:      #ff9800;
+  --eau4:      #f44336;
   --sidebar-w: 260px;
   --header-h:  56px;
   --radius:    6px;
@@ -45,6 +49,7 @@ html, body {
   overflow: hidden;
 }
 
+/* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
@@ -59,405 +64,440 @@ html, body {
   border-bottom: 1px solid var(--border);
 }
 .hdr-logo {
-  font-family: var(--mono); font-size: 11px; font-weight: 600;
-  letter-spacing: .12em; text-transform: uppercase; color: var(--accent);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
   display: flex; align-items: center; gap: 8px;
 }
 .hdr-logo::before {
-  content:''; width: 8px; height: 8px; border-radius: 50%;
-  background: var(--accent); box-shadow: 0 0 10px var(--accent);
+  content:'';
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
   animation: pulse 2.5s ease-in-out infinite;
 }
-@keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.4; transform:scale(.8); } }
-.hdr-title { font-weight: 500; font-size: 14px; color: var(--text); flex: 1; }
-.hdr-date { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: .05em; }
+@keyframes pulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50%      { opacity:.4; transform:scale(.8); }
+}
+.hdr-title {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text);
+  flex: 1;
+}
+.hdr-date {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: .05em;
+}
 #hdr-status {
-  font-family: var(--mono); font-size: 10px; font-weight: 500; letter-spacing: .1em;
-  padding: 3px 10px; border-radius: 20px;
-  background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(59,255,138,.2);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid rgba(59,255,138,.2);
   transition: all .3s;
 }
-#hdr-status.err     { background:#2a0a0a; color:#ff4545; border-color:rgba(255,69,69,.2); }
+#hdr-status.err { background:#2a0a0a; color:#ff4545; border-color:rgba(255,69,69,.2); }
 #hdr-status.loading { color: var(--muted); background: var(--surface2); border-color: var(--border); }
 
 /* ── LAYOUT ── */
-#layout { display: flex; height: 100vh; padding-top: var(--header-h); }
+#layout {
+  display: flex;
+  height: 100vh;
+  padding-top: var(--header-h);
+}
 
 /* ── SIDEBAR ── */
 #sidebar {
-  width: var(--sidebar-w); flex-shrink: 0; height: 100%; overflow-y: auto;
-  background: var(--surface); border-right: 1px solid var(--border);
-  display: flex; flex-direction: column; padding: 16px 0;
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  height: 100%;
+  overflow-y: auto;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
 }
 .s-section { padding: 0 16px 12px; }
 .s-label {
-  font-family: var(--mono); font-size: 9px; font-weight: 600;
-  letter-spacing: .15em; text-transform: uppercase; color: var(--muted2);
-  margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
 }
+
+/* Nav */
 .nav-item {
   display: flex; align-items: center; gap: 10px;
-  padding: 8px 10px; border-radius: var(--radius); cursor: pointer;
-  font-size: 13px; font-weight: 500; color: var(--muted);
-  transition: all .15s; margin-bottom: 2px;
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  transition: all .15s;
+  margin-bottom: 2px;
 }
 .nav-item:hover { background: var(--surface2); color: var(--text); }
-.nav-item.active { background: var(--accent-dim); color: var(--accent); border: 1px solid rgba(59,255,138,.15); }
-.nav-icon { font-size: 14px; width: 18px; text-align: center; }
-.nav-count {
-  margin-left: auto; font-family: var(--mono); font-size: 10px;
-  background: var(--surface3); color: var(--muted); padding: 1px 6px; border-radius: 10px;
+.nav-item.active {
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid rgba(59,255,138,.15);
 }
-.nav-item.active .nav-count { background: rgba(59,255,138,.15); color: var(--accent); }
+.nav-icon { font-size: 14px; width: 18px; text-align: center; }
 
-.filter-row { display: flex; align-items: center; gap: 8px; padding: 5px 0; cursor: pointer; user-select: none; }
+/* Filters */
+.filter-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 5px 0;
+  cursor: pointer;
+  user-select: none;
+}
 .filter-row input[type=checkbox] { display:none; }
 .fcheck {
-  width: 14px; height: 14px; border-radius: 3px; border: 1px solid var(--border2);
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-  font-size: 9px; transition: all .15s;
+  width: 14px; height: 14px;
+  border-radius: 3px;
+  border: 1px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 9px;
+  transition: all .15s;
 }
 .filter-row.on .fcheck { background: var(--accent); border-color: var(--accent); color: #000; }
 .filter-row:hover .fcheck { border-color: var(--accent); }
 .filter-lbl { font-size: 12px; color: var(--text); }
 
+/* Stats résumé */
 .stat-row {
   display: flex; justify-content: space-between; align-items: center;
-  padding: 5px 0; border-bottom: 1px solid var(--border);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
 }
 .stat-lbl { font-size: 11px; color: var(--muted); }
-.stat-val { font-family: var(--mono); font-size: 12px; font-weight: 500; color: var(--text); }
+.stat-val {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+}
 
+/* Eau alert résumé */
 .eau-chip {
   display: flex; align-items: center; gap: 6px;
-  padding: 4px 8px; border-radius: var(--radius); font-size: 11px; margin-bottom: 4px;
+  padding: 4px 8px;
+  border-radius: var(--radius);
+  font-size: 11px;
+  margin-bottom: 4px;
 }
-.eau-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.eau-dot { width: 7px; height: 7px; border-radius: 50%; }
 
-/* ── MAIN ── */
-#main { flex: 1; height: 100%; overflow-y: auto; overflow-x: hidden; padding: 20px; background: var(--bg); }
+/* ── MAIN CONTENT ── */
+#main {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  background: var(--bg);
+}
 
-/* ── VIEWS ── */
+/* ── VIEW SWITCHER ── */
 .view { display: none; }
 .view.active { display: block; }
 
 /* ── FEED ── */
 #feed-toolbar {
-  display: flex; align-items: center; gap: 8px; margin-bottom: 16px; flex-wrap: wrap;
-}
-.feed-title { font-size: 20px; font-weight: 700; color: var(--text); flex: 1; }
-.badge-filter {
-  font-family: var(--mono); font-size: 10px; padding: 4px 10px;
-  border-radius: 20px; border: 1px solid var(--border2); color: var(--muted);
-  cursor: pointer; transition: all .15s; background: transparent;
-}
-.badge-filter:hover, .badge-filter.on { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
-#feed-list { display: flex; flex-direction: column; gap: 8px; }
-
-/* ── TOP 5 Signaux forts ── */
-#top5-section {
-  margin-bottom: 24px;
-  background: linear-gradient(135deg, #0d1a0f 0%, #0d1118 100%);
-  border: 1px solid rgba(59,255,138,.12);
-  border-radius: 10px;
-  padding: 14px 16px;
-}
-.top5-label {
-  font-family: var(--mono); font-size: 9px; letter-spacing: .14em;
-  color: var(--accent); text-transform: uppercase; margin-bottom: 12px;
   display: flex; align-items: center; gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
 }
-.top5-label::before {
-  content: ''; display: inline-block; width: 6px; height: 6px;
-  border-radius: 50%; background: var(--accent);
-  box-shadow: 0 0 8px var(--accent);
-  animation: pulse 2.5s ease-in-out infinite;
+.feed-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  flex: 1;
 }
-.top5-grid { display: flex; flex-direction: column; gap: 6px; }
-.top5-card {
-  background: rgba(255,255,255,.03); border: 1px solid rgba(59,255,138,.08);
-  border-radius: 6px; padding: 10px 14px;
-  display: flex; align-items: flex-start; gap: 12px;
-  transition: background .15s;
+.badge-filter {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .15s;
+  background: transparent;
 }
-.top5-card:hover { background: rgba(255,255,255,.06); }
-.top5-card[data-crit="3"] { border-color: rgba(255,69,69,.2); background: rgba(255,69,69,.04); }
-.top5-rank {
-  font-family: var(--mono); font-size: 18px; font-weight: 700;
-  color: rgba(59,255,138,.25); min-width: 28px; padding-top: 0px; line-height: 1;
-}
-.top5-card[data-crit="3"] .top5-rank { color: rgba(255,69,69,.4); }
-.top5-body { flex: 1; min-width: 0; }
-.top5-titre { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 4px; }
-.top5-meta { font-size: 10px; color: var(--muted2); font-family: var(--mono); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-.top5-src { color: var(--muted); }
-.top5-crit-1 { color: var(--muted2); }
-.top5-crit-2 { color: var(--crit2); }
-.top5-crit-3 { color: var(--crit3); font-weight: 600; }
-.top5-link {
-  font-size: 11px; font-family: var(--mono); color: var(--accent);
-  text-decoration: none; opacity: .6; flex-shrink: 0;
-}
-.top5-link:hover { opacity: 1; }
-.feed-section-label {
-  font-family: var(--mono); font-size: 9px; letter-spacing: .1em;
-  color: var(--muted2); text-transform: uppercase; margin-bottom: 8px;
-}
+.badge-filter:hover,
+.badge-filter.on { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+
+#feed-list { display: flex; flex-direction: column; gap: 8px; }
 
 /* Card */
 .card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: 8px; border-left: 3px solid var(--crit1);
-  padding: 14px 16px; transition: transform .1s, border-color .1s;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  border-left: 3px solid var(--crit1);
+  padding: 14px 16px;
+  transition: transform .1s, border-color .1s;
+  cursor: default;
 }
 .card:hover { transform: translateX(2px); border-color: var(--border2); }
 .card[data-crit="2"] { border-left-color: var(--crit2); }
 .card[data-crit="3"] { border-left-color: var(--crit3); }
-.card-top { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 6px; }
+
+.card-top {
+  display: flex; align-items: flex-start; gap: 8px;
+  margin-bottom: 6px;
+}
 .card-badge {
-  font-family: var(--mono); font-size: 9px; font-weight: 600; letter-spacing: .1em;
-  padding: 2px 7px; border-radius: 20px; flex-shrink: 0; margin-top: 2px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  padding: 2px 7px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
-.badge-ICPE           { background:#1a2a3a; color:#4aa0ff; }
-.badge-Eau            { background:#0a2030; color:#40c4ff; }
-.badge-Énergie        { background:#2a1a00; color:#ffb74d; }
-.badge-Biodiversité   { background:#0a2010; color:#69f0ae; }
-.badge-Déchets        { background:#1a1a0a; color:#e6ee9c; }
-.badge-Émissions      { background:#1a0a2a; color:#ce93d8; }
-.badge-Presse         { background:#1a1a1a; color:#90a4ae; }
-.badge-Réglementation { background:#1a2a1a; color:#a5d6a7; }
-.badge-JO\/DILA       { background:#0d1a2a; color:#64b5f6; }
-.badge-Environnement  { background:#131313; color:#78909c; }
-.card-titre { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; flex: 1; }
-.card-resume { font-size: 12px; color: #8faabb; line-height: 1.6; margin-bottom: 8px; }
-.card-footer { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.card-source { font-family: var(--mono); font-size: 10px; color: var(--muted2); letter-spacing: .05em; }
-.card-date   { font-family: var(--mono); font-size: 10px; color: var(--muted2); letter-spacing: .03em; }
-.card-src-type {
-  font-family: var(--mono); font-size: 9px; padding: 1px 5px; border-radius: 3px;
-  background: var(--surface3); color: var(--muted2); letter-spacing: .05em;
+.badge-ICPE        { background:#1a2a3a; color:#4aa0ff; }
+.badge-Eau         { background:#0a2030; color:#40c4ff; }
+.badge-Énergie     { background:#2a1a00; color:#ffb74d; }
+.badge-Biodiversité{ background:#0a2010; color:#69f0ae; }
+.badge-Déchets     { background:#1a1a0a; color:#e6ee9c; }
+.badge-Émissions   { background:#1a0a2a; color:#ce93d8; }
+.badge-Presse      { background:#1a1a1a; color:#90a4ae; }
+.badge-Réglementation{ background:#1a2a1a; color:#a5d6a7; }
+.badge-JO\/DILA    { background:#0d1a2a; color:#64b5f6; }
+.badge-Environnement{ background:#131313; color:#78909c; }
+
+.card-titre {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  flex: 1;
 }
-.card-crit   { font-family: var(--mono); font-size: 9px; padding: 1px 6px; border-radius: 20px; }
+.card-resume {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.card-footer {
+  display: flex; align-items: center; gap: 12px;
+  flex-wrap: wrap;
+}
+.card-source {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted2);
+  letter-spacing: .05em;
+}
+.card-crit {
+  font-family: var(--mono);
+  font-size: 9px;
+  padding: 1px 6px;
+  border-radius: 20px;
+}
 .crit1 { background:#0d1a2a; color:var(--crit1); }
 .crit2 { background:#2a1a00; color:var(--crit2); }
 .crit3 { background:#2a0a0a; color:var(--crit3); }
 .card-link {
-  margin-left: auto; font-family: var(--mono); font-size: 10px; color: var(--accent);
-  text-decoration: none; opacity: .7; transition: opacity .15s;
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--accent);
+  text-decoration: none;
+  opacity: .7;
+  transition: opacity .15s;
 }
 .card-link:hover { opacity: 1; }
-.empty-state { text-align: center; padding: 60px 20px; color: var(--muted); font-size: 13px; }
-.empty-state::before { content: '◎'; display: block; font-size: 32px; margin-bottom: 12px; opacity: .3; }
 
-/* ── JO VIEW ── */
-#jo-view .jo-header {
-  display: flex; align-items: baseline; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--muted);
+  font-size: 13px;
 }
-#jo-view .jo-title { font-size: 20px; font-weight: 700; color: var(--text); flex: 1; }
-#jo-view .jo-subtitle { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: .08em; }
-#jo-list { display: flex; flex-direction: column; gap: 6px; }
-
-.jo-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-left: 3px solid var(--border2); border-radius: 6px;
-  padding: 12px 16px; transition: border-color .15s;
+.empty-state::before {
+  content: '◎';
+  display: block;
+  font-size: 32px;
+  margin-bottom: 12px;
+  opacity: .3;
 }
-.jo-card:hover { border-color: var(--border2); }
-.jo-card[data-crit="2"] { border-left-color: var(--crit2); }
-.jo-card[data-crit="3"] { border-left-color: var(--crit3); }
-.jo-card-head { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 5px; }
-.jo-cat {
-  font-family: var(--mono); font-size: 9px; font-weight: 600;
-  letter-spacing: .1em; padding: 2px 7px; border-radius: 20px; flex-shrink: 0; margin-top: 2px;
-}
-.jo-cat-ICPE        { background:#1a2a3a; color:#4aa0ff; }
-.jo-cat-Eau         { background:#0a2030; color:#40c4ff; }
-.jo-cat-Énergie     { background:#2a1a00; color:#ffb74d; }
-.jo-cat-Biodiversité{ background:#0a2010; color:#69f0ae; }
-.jo-cat-Déchets     { background:#1a1a0a; color:#e6ee9c; }
-.jo-cat-Émissions   { background:#1a0a2a; color:#ce93d8; }
-.jo-cat-Environnement{ background:#131313; color:#78909c; }
-.jo-titre { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.4; flex: 1; }
-.jo-resume { font-size: 11px; color: var(--muted); line-height: 1.55; margin-bottom: 7px; }
-.jo-foot { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-.jo-date { font-family: var(--mono); font-size: 10px; color: var(--muted2); }
-.jo-impact {
-  font-family: var(--mono); font-size: 9px; padding: 1px 6px; border-radius: 20px;
-  background:#2a0a0a; color:var(--crit3);
-}
-.jo-link {
-  margin-left: auto; font-family: var(--mono); font-size: 10px;
-  color: var(--accent); text-decoration: none; opacity: .7; transition: opacity .15s;
-}
-.jo-link:hover { opacity: 1; }
-
-.jo-empty {
-  text-align: center; padding: 80px 20px; color: var(--muted);
-  border: 1px dashed var(--border2); border-radius: 10px; margin-top: 8px;
-}
-.jo-empty::before { content: '§'; display: block; font-size: 40px; margin-bottom: 12px; opacity: .2; font-family: var(--mono); }
-.jo-empty-title { font-size: 14px; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
-.jo-empty-sub { font-size: 11px; color: var(--muted2); }
-
-/* Section "autres textes" */
-.jo-autres-toggle {
-  display: flex; align-items: center; gap: 8px; margin-top: 18px;
-  cursor: pointer; user-select: none; border: none; background: none;
-  color: var(--muted); font-size: 11px; font-family: var(--mono); padding: 0;
-}
-.jo-autres-toggle:hover { color: var(--text); }
-.jo-autres-arrow { transition: transform .2s; display: inline-block; }
-.jo-autres-toggle.open .jo-autres-arrow { transform: rotate(90deg); }
-.jo-autres-count {
-  background: var(--surface2); border-radius: 20px;
-  padding: 1px 7px; font-size: 10px; color: var(--muted2);
-}
-.jo-autres-body { display: none; margin-top: 10px; }
-.jo-autres-body.open { display: block; }
-.jo-autres-table {
-  width: 100%; border-collapse: collapse; font-size: 11px;
-}
-.jo-autres-table th {
-  font-family: var(--mono); font-size: 9px; letter-spacing: .08em;
-  color: var(--muted2); text-align: left; padding: 4px 10px 6px;
-  border-bottom: 1px solid var(--border2); text-transform: uppercase;
-}
-.jo-autres-table td {
-  padding: 6px 10px; border-bottom: 1px solid var(--border);
-  color: var(--muted); vertical-align: top; line-height: 1.4;
-}
-.jo-autres-table tr:last-child td { border-bottom: none; }
-.jo-autres-table tr:hover td { background: var(--surface2); color: var(--text); }
-.jo-autres-nor {
-  font-family: var(--mono); font-size: 9px; color: var(--muted2);
-  white-space: nowrap;
-}
-.jo-autres-nature {
-  font-family: var(--mono); font-size: 9px; white-space: nowrap;
-  padding: 1px 5px; border-radius: 3px; background: var(--surface2); color: var(--muted);
-}
-.jo-autres-lien {
-  color: var(--accent); text-decoration: none; font-family: var(--mono); font-size: 10px; opacity: .6;
-}
-.jo-autres-lien:hover { opacity: 1; }
 
 /* ── CARTE ── */
 #carte-view { height: calc(100vh - var(--header-h) - 40px); display: none; }
 #carte-view.active { display: flex; flex-direction: column; }
-#map-wrap { flex: 1; position: relative; min-height: 400px; }
-#map-container { width: 100%; height: 100%; border-radius: 10px; border: 1px solid var(--border); overflow: hidden; }
-
-/* Encart stats carte */
-#map-stats {
-  position: absolute;
-  bottom: 32px; right: 12px;
-  background: rgba(255,255,255,0.93);
-  border: 1px solid #d0d8e4;
+#map-container {
+  flex: 1;
   border-radius: 10px;
-  padding: 12px 16px;
-  min-width: 210px;
-  box-shadow: 0 2px 12px rgba(0,0,0,.12);
-  z-index: 10;
-  pointer-events: none;
-  font-size: 12px;
-  color: #1a2433;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  min-height: 400px;
 }
-.ms-title {
-  font-family: var(--mono); font-size: 9px; letter-spacing: .1em;
-  text-transform: uppercase; color: #778; margin-bottom: 10px;
-}
-.ms-row {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 3px 0; border-bottom: 1px solid #edf0f4;
-  gap: 12px;
-}
-.ms-row:last-child { border-bottom: none; }
-.ms-label { color: #445; font-size: 11px; }
-.ms-val { font-weight: 700; font-size: 13px; color: #1a2433; font-family: var(--mono); }
-.ms-sep {
-  margin: 8px 0 6px;
-  font-family: var(--mono); font-size: 9px; color: #aab; letter-spacing: .08em;
-  text-transform: uppercase;
-}
-.ms-niveau { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #445; padding: 2px 0; }
-.ms-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.ms-loading { color: #aab; font-size: 11px; text-align: center; padding: 8px 0; }
+/* Dark tiles */
+.leaflet-layer, .leaflet-control-zoom, .leaflet-bar { filter: none; }
 
 #map-legend {
   display: flex; gap: 6px; flex-wrap: wrap;
-  padding: 10px 0 8px; align-items: center;
+  padding: 10px 0 8px;
+  align-items: center;
 }
-.legend-title { font-family: var(--mono); font-size: 10px; color: var(--muted); letter-spacing: .1em; margin-right: 4px; }
+.legend-title {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: .1em;
+  margin-right: 4px;
+}
 .legend-chip {
-  display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text);
-  padding: 3px 8px; border-radius: 20px; background: var(--surface2); border: 1px solid var(--border);
+  display: flex; align-items: center; gap: 5px;
+  font-size: 11px;
+  color: var(--text);
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
 }
 .legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-.map-note { font-family: var(--mono); font-size: 9px; color: var(--muted2); letter-spacing: .05em; margin-left: auto; }
 
-/* MapLibre popup dark */
-.maplibregl-popup-content {
-  background: var(--surface2) !important; color: var(--text) !important;
-  border: 1px solid var(--border2) !important; border-radius: var(--radius) !important;
-  box-shadow: 0 4px 20px rgba(0,0,0,.6) !important; padding: 10px 14px !important;
-  font-family: var(--sans) !important; font-size: 12px !important;
+#dept-detail {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin-top: 8px;
+  display: none;
 }
-.maplibregl-popup-close-button { color: var(--muted) !important; font-size: 16px !important; }
-.maplibregl-popup-tip { border-top-color: var(--surface2) !important; }
+#dept-detail.open { display: block; }
+.dept-detail-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: flex; align-items: center; gap: 8px;
+}
 
 /* ── ARCHIVES ── */
-.arc-title { font-size: 20px; font-weight: 700; margin-bottom: 20px; }
+#archives-view { }
+.arc-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 .arc-month { margin-bottom: 24px; }
 .arc-month-title {
-  font-family: var(--mono); font-size: 11px; font-weight: 600;
-  letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
-  margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
 }
 .arc-days { display: flex; flex-wrap: wrap; gap: 6px; }
 .arc-day {
-  font-family: var(--mono); font-size: 11px; padding: 6px 12px;
-  border-radius: var(--radius); border: 1px solid var(--border);
-  color: var(--muted2); cursor: default; transition: all .15s; min-width: 44px; text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  color: var(--muted2);
+  cursor: default;
+  transition: all .15s;
+  min-width: 44px;
+  text-align: center;
 }
-.arc-day.has-data { border-color: var(--border2); color: var(--text); cursor: pointer; background: var(--surface2); }
+.arc-day.has-data {
+  border-color: var(--border2);
+  color: var(--text);
+  cursor: pointer;
+  background: var(--surface2);
+}
 .arc-day.has-data:hover { border-color: var(--accent); color: var(--accent); }
 .arc-day.selected { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
 .arc-day.today { border-color: var(--crit1); color: var(--crit1); }
-.arc-day-count {
-  display: block; font-size: 8px; color: var(--muted2); margin-top: 1px; letter-spacing: 0;
-}
-.arc-day.has-data .arc-day-count { color: var(--accent); opacity: .6; }
-.arc-day.selected .arc-day-count { color: var(--accent); opacity: 1; }
 
 /* ── LOADING / TOAST ── */
 #loading {
   position: fixed; inset: 0; z-index: 999;
   display: flex; align-items: center; justify-content: center;
-  background: var(--bg); flex-direction: column; gap: 16px;
+  background: var(--bg);
+  flex-direction: column; gap: 16px;
 }
 .loading-spinner {
-  width: 32px; height: 32px; border: 2px solid var(--border2);
-  border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite;
+  width: 32px; height: 32px;
+  border: 2px solid var(--border2);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
-.loading-text { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: .1em; }
+.loading-text {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: .1em;
+}
 
 #toast {
   position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(8px);
-  background: var(--surface2); border: 1px solid var(--border2); border-radius: var(--radius);
-  padding: 8px 16px; font-size: 12px; font-family: var(--mono);
-  opacity: 0; transition: all .2s; pointer-events: none; white-space: nowrap; z-index: 200;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  padding: 8px 16px;
+  font-size: 12px;
+  font-family: var(--mono);
+  opacity: 0;
+  transition: all .2s;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 200;
 }
 #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* Leaflet popup dark */
+.leaflet-popup-content-wrapper {
+  background: var(--surface2) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border2) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,.5) !important;
+}
+.leaflet-popup-tip { background: var(--surface2) !important; }
 </style>
 </head>
 <body>
 
+<!-- LOADING -->
 <div id="loading">
   <div class="loading-spinner"></div>
   <div class="loading-text">Chargement des données…</div>
 </div>
 
+<!-- HEADER -->
 <div id="header">
   <div class="hdr-logo">GSF</div>
   <div class="hdr-title">Veille Environnementale</div>
@@ -465,101 +505,90 @@ html, body {
   <div id="hdr-status" class="loading">CHARGEMENT</div>
 </div>
 
+<!-- LAYOUT -->
 <div id="layout">
 
+  <!-- SIDEBAR -->
   <div id="sidebar">
 
+    <!-- Navigation -->
     <div class="s-section">
       <div class="s-label">Navigation</div>
       <div class="nav-item active" data-view="feed" onclick="switchView('feed')">
-        <span class="nav-icon">◈</span> Presse &amp; Actus
-        <span class="nav-count" id="nav-count-feed">—</span>
-      </div>
-      <div class="nav-item" data-view="jo" onclick="switchView('jo')">
-        <span class="nav-icon">§</span> Journal Officiel
-        <span class="nav-count" id="nav-count-jo">—</span>
+        <span class="nav-icon">◈</span> Feed
       </div>
       <div class="nav-item" data-view="carte" onclick="switchView('carte')">
-        <span class="nav-icon">◉</span> Carte Restrictions
+        <span class="nav-icon">◉</span> Carte Eau
       </div>
       <div class="nav-item" data-view="archives" onclick="switchView('archives')">
         <span class="nav-icon">◷</span> Archives
       </div>
     </div>
 
+    <!-- Filtres -->
     <div class="s-section">
-      <div class="s-label">Filtres</div>
+      <div class="s-label">Filtres sources</div>
+      <label class="filter-row on" id="f-jorf">
+        <input type="checkbox" checked onchange="toggleFilter('jorf',this.checked)">
+        <div class="fcheck">✓</div>
+        <span class="filter-lbl">JO / DILA</span>
+      </label>
       <label class="filter-row on" id="f-presse">
         <input type="checkbox" checked onchange="toggleFilter('presse',this.checked)">
         <div class="fcheck">✓</div>
         <span class="filter-lbl">Presse spécialisée</span>
       </label>
-      <label class="filter-row on" id="f-impact">
-        <input type="checkbox" checked onchange="toggleFilter('impact',this.checked)">
+      <label class="filter-row on" id="f-eau">
+        <input type="checkbox" checked onchange="toggleFilter('eau',this.checked)">
         <div class="fcheck">✓</div>
-        <span class="filter-lbl">Impact GSF seulement</span>
+        <span class="filter-lbl">Restrictions eau</span>
       </label>
     </div>
 
+    <!-- Stats -->
     <div class="s-section">
       <div class="s-label">Résumé du jour</div>
       <div id="sidebar-stats"></div>
     </div>
 
+    <!-- Alertes eau -->
     <div class="s-section">
       <div class="s-label">Alertes eau</div>
       <div id="sidebar-eau"></div>
     </div>
 
-  </div>
+  </div><!-- /sidebar -->
 
+  <!-- MAIN -->
   <div id="main">
 
-    <!-- FEED PRESSE -->
+    <!-- FEED -->
     <div class="view active" id="feed-view">
       <div id="feed-toolbar">
         <div class="feed-title" id="feed-titre">—</div>
-        <button class="badge-filter on" data-cat="all"           onclick="filterCat('all')">Tout</button>
-        <button class="badge-filter" data-cat="ICPE"            onclick="filterCat('ICPE')">ICPE</button>
-        <button class="badge-filter" data-cat="Eau"             onclick="filterCat('Eau')">Eau</button>
-        <button class="badge-filter" data-cat="Énergie"         onclick="filterCat('Énergie')">Énergie</button>
-        <button class="badge-filter" data-cat="Biodiversité"    onclick="filterCat('Biodiversité')">Biodiversité</button>
-        <button class="badge-filter" data-cat="Déchets"         onclick="filterCat('Déchets')">Déchets</button>
-        <button class="badge-filter" data-cat="Émissions"       onclick="filterCat('Émissions')">Émissions</button>
-        <button class="badge-filter" data-cat="Réglementation"  onclick="filterCat('Réglementation')">Réglementation</button>
+        <button class="badge-filter on" data-cat="all" onclick="filterCat('all')">Tout</button>
+        <button class="badge-filter" data-cat="ICPE" onclick="filterCat('ICPE')">ICPE</button>
+        <button class="badge-filter" data-cat="Eau" onclick="filterCat('Eau')">Eau</button>
+        <button class="badge-filter" data-cat="Énergie" onclick="filterCat('Énergie')">Énergie</button>
+        <button class="badge-filter" data-cat="Biodiversité" onclick="filterCat('Biodiversité')">Biodiversité</button>
+        <button class="badge-filter" data-cat="Déchets" onclick="filterCat('Déchets')">Déchets</button>
+        <button class="badge-filter" data-cat="Presse" onclick="filterCat('Presse')">Presse</button>
       </div>
-      <div id="top5-section"></div>
-      <div class="feed-section-label" id="feed-section-label" style="display:none">Tous les articles</div>
       <div id="feed-list"></div>
-    </div>
-
-    <!-- JOURNAL OFFICIEL -->
-    <div class="view" id="jo-view">
-      <div class="jo-header">
-        <div class="jo-title" id="jo-titre">Journal Officiel</div>
-        <div class="jo-subtitle" id="jo-subtitle">JORF — textes réglementaires</div>
-      </div>
-      <div id="jo-list"></div>
     </div>
 
     <!-- CARTE -->
     <div class="view" id="carte-view">
       <div id="map-legend">
-        <span class="legend-title">ZONES DE RESTRICTION —</span>
+        <span class="legend-title">RESTRICTIONS EAU —</span>
         <span class="legend-chip"><span class="legend-dot" style="background:#4caf50"></span>Aucune</span>
         <span class="legend-chip"><span class="legend-dot" style="background:#c6d848"></span>Vigilance</span>
         <span class="legend-chip"><span class="legend-dot" style="background:#ffd740"></span>Alerte</span>
         <span class="legend-chip"><span class="legend-dot" style="background:#ff9800"></span>Alerte renforcée</span>
         <span class="legend-chip"><span class="legend-dot" style="background:#f44336"></span>Crise</span>
-        <span class="map-note">Source : VigiEau · maille zone</span>
       </div>
-      <div id="map-wrap">
-        <div id="map-container"></div>
-        <div id="map-stats">
-          <div class="ms-title">Restrictions en cours</div>
-          <div id="ms-body">—</div>
-        </div>
-      </div>
+      <div id="map-container"></div>
+      <div id="dept-detail"></div>
     </div>
 
     <!-- ARCHIVES -->
@@ -568,8 +597,8 @@ html, body {
       <div id="arc-calendar"></div>
     </div>
 
-  </div>
-</div>
+  </div><!-- /main -->
+</div><!-- /layout -->
 
 <div id="toast"></div>
 
@@ -577,41 +606,35 @@ html, body {
 // ─────────────────────────────────────────
 // STATE
 // ─────────────────────────────────────────
-let D           = null;
-let archive     = null;
+let D          = null;   // JSON du jour actif
+let archive    = null;   // {dates: [...], updated_at}
 let currentDate = null;
 let currentView = 'feed';
 let catFilter   = 'all';
-let srcFilters  = { presse: true, impact: false };
-let mapgl       = null;
+let srcFilters  = { jorf: true, presse: true, eau: true };
+let map         = null;
+let geojsonLayer = null;
+let geojsonData  = null;
 
-const JORF_SOURCES   = ['JORF'];
-const OFFICIEL_SOURCES = ['ADEME', 'Min. Transition Écologique'];
-const PRESSE_SOURCES = ['Actu-Environnement', 'Contexte Environnement', 'Novethic', 'Reporterre'];
+const JORF_SOURCES   = ['JORF', 'Légifrance RSS'];
+const PRESSE_SOURCES = ['ADEME', 'Actu-Environnement', 'Min. Transition Écologique'];
 
 function sourceType(src) {
-  if (JORF_SOURCES.includes(src))    return 'jorf';
-  if (OFFICIEL_SOURCES.includes(src)) return 'officiel';
+  if (JORF_SOURCES.includes(src))   return 'jorf';
+  if (PRESSE_SOURCES.includes(src)) return 'presse';
   return 'presse';
-}
-function sourceTypeLabel(src) {
-  if (JORF_SOURCES.includes(src))    return 'JO';
-  if (OFFICIEL_SOURCES.includes(src)) return 'Officiel';
-  return 'Presse';
 }
 
 const NIVEAU_COLOR = {
   'vigilance':          '#c6d848',
   'alerte':             '#ffd740',
   'alerte renforcée':   '#ff9800',
-  'alerte_renforcée':   '#ff9800',
   'crise':              '#f44336',
 };
 const NIVEAU_LABEL = {
   'vigilance':          'Vigilance',
   'alerte':             'Alerte',
   'alerte renforcée':   'Alerte renforcée',
-  'alerte_renforcée':   'Alerte renforcée',
   'crise':              '🔴 Crise',
 };
 
@@ -622,9 +645,7 @@ async function init() {
   try {
     archive = await loadArchive();
     if (archive?.dates?.length) {
-      // Support URL partageable : ?date=2026-03-12
-      const urlDate = new URLSearchParams(location.search).get('date');
-      currentDate = (urlDate && archive.dates.includes(urlDate)) ? urlDate : archive.dates[0];
+      currentDate = archive.dates[0];
       D = await loadData(currentDate);
     }
     renderAll();
@@ -656,6 +677,7 @@ async function loadData(date) {
 function renderAll() {
   if (!D) return;
 
+  // Header
   document.getElementById('hdr-date').textContent = formatDate(D.date) + ' — ' + D.generated_at;
   const hasErr = D.errors?.length > 0;
   const statusEl = document.getElementById('hdr-status');
@@ -664,7 +686,6 @@ function renderAll() {
 
   renderSidebar();
   renderFeed();
-  renderJO();
   if (currentView === 'carte')    renderMap();
   if (currentView === 'archives') renderArchives();
 }
@@ -674,10 +695,11 @@ function renderAll() {
 // ─────────────────────────────────────────
 function renderSidebar() {
   const s = D.stats || {};
-  document.getElementById('sidebar-stats').innerHTML = [
-    ['JO analysés',    s.jo_analyses      ?? '—'],
-    ['JO retenus',     s.jo_retenus       ?? '—'],
-    ['Articles presse',s.articles_presse  ?? '—'],
+  const statsEl = document.getElementById('sidebar-stats');
+  statsEl.innerHTML = [
+    ['JO analysés',    s.jo_analyses     ?? '—'],
+    ['JO retenus',     s.jo_retenus      ?? '—'],
+    ['Articles presse',s.articles_presse ?? '—'],
     ['Depts alertés',  s.depts_restriction ?? '—'],
   ].map(([l,v]) => `
     <div class="stat-row">
@@ -685,65 +707,31 @@ function renderSidebar() {
       <span class="stat-val">${v}</span>
     </div>`).join('');
 
+  // Alertes eau résumé
   const eauEl = document.getElementById('sidebar-eau');
-  const crises  = (D.restrictions_eau || []).filter(r => r.niveau === 'crise');
-  const alertes = (D.restrictions_eau || []).filter(r => r.niveau === 'alerte renforcée' || r.niveau === 'alerte_renforcée');
+  const crises = (D.restrictions_eau || []).filter(r => r.niveau === 'crise');
+  const alertes = (D.restrictions_eau || []).filter(r => r.niveau === 'alerte renforcée');
   if (!crises.length && !alertes.length) {
     eauEl.innerHTML = `<div style="font-size:11px;color:var(--muted)">Aucune alerte majeure</div>`;
   } else {
-    eauEl.innerHTML = [...crises, ...alertes].slice(0, 6).map(r => {
-      const col = NIVEAU_COLOR[r.niveau] || '#aaa';
-      return `<div class="eau-chip" style="background:${col}18;border:1px solid ${col}40">
-        <span class="eau-dot" style="background:${col}"></span>
-        <span style="font-size:11px">${r.dept_nom} (${r.dept_code})</span>
-      </div>`;
-    }).join('');
+    eauEl.innerHTML = [...crises, ...alertes].slice(0, 5).map(r => `
+      <div class="eau-chip" style="background:${NIVEAU_COLOR[r.niveau]}18;border:1px solid ${NIVEAU_COLOR[r.niveau]}40">
+        <span class="eau-dot" style="background:${NIVEAU_COLOR[r.niveau]}"></span>
+        <span style="color:var(--text);font-size:11px">${r.dept_nom} (${r.dept_code})</span>
+      </div>`).join('');
   }
 }
 
 // ─────────────────────────────────────────
-// FEED PRESSE
+// FEED
 // ─────────────────────────────────────────
 function renderFeed() {
-  const allItems   = D?.items || [];
-  const presseItems = allItems.filter(i => sourceType(i.source) === 'presse');
-  const items = getFilteredItems(presseItems);
-
-  document.getElementById('nav-count-feed').textContent = presseItems.length;
   document.getElementById('feed-titre').textContent =
-    'Presse du ' + formatDate(D.date) + '  ·  ' + items.length + ' articles';
+    'Veille du ' + formatDate(D.date) + '  ·  ' + (D.items?.length || 0) + ' signaux';
 
-  // ── TOP 5 Signaux forts (toutes sources, trié criticité) ────────
-  const top5 = allItems.filter(i => i.top5);
-  const top5El = document.getElementById('top5-section');
-  const labelEl = document.getElementById('feed-section-label');
+  const items = getFilteredItems();
+  const list  = document.getElementById('feed-list');
 
-  if (top5.length) {
-    const CRIT_LABEL = ['', 'Veille', 'Vigilance', '⚠ Impact direct'];
-    top5El.innerHTML = `
-      <div class="top5-label">Signaux forts du jour</div>
-      <div class="top5-grid">${top5.map((item, i) => `
-        <div class="top5-card" data-crit="${item.criticite}">
-          <span class="top5-rank">#${i+1}</span>
-          <div class="top5-body">
-            <div class="top5-titre">${escHtml(item.titre)}</div>
-            <div class="top5-meta">
-              <span class="top5-src">${escHtml(item.source)}</span>
-              <span class="top5-crit top5-crit-${item.criticite}">${CRIT_LABEL[item.criticite] || ''}</span>
-            </div>
-          </div>
-          ${item.url ? `<a class="top5-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">→</a>` : ''}
-        </div>`).join('')}
-      </div>`;
-    labelEl.style.display = 'block';
-    labelEl.textContent = 'Presse — tous les articles';
-  } else {
-    top5El.innerHTML = '';
-    labelEl.style.display = 'none';
-  }
-
-  // ── Liste presse normale ─────────────────────────────────────────
-  const list = document.getElementById('feed-list');
   if (!items.length) {
     list.innerHTML = `<div class="empty-state">Aucun résultat avec ces filtres</div>`;
     return;
@@ -757,19 +745,20 @@ function renderFeed() {
       </div>
       <div class="card-resume">${escHtml(item.resume)}</div>
       <div class="card-footer">
-        <span class="card-src-type">${sourceTypeLabel(item.source)}</span>
         <span class="card-source">${escHtml(item.source)}</span>
-        <span class="card-date">${formatDate(item.date)}</span>
-        <span class="card-crit crit${item.criticite}" title="${['','Info : veille générale, sans impact immédiat','Vigilance : évolution réglementaire à surveiller','Impact direct : action ou adaptation requise pour GSF'][item.criticite] || ''}">${['','Info','Vigilance','⚠ Impact direct'][item.criticite] || 'Info'}</span>
+        <span class="card-crit crit${item.criticite}">${['','Info','Vigilance','⚠ Impact direct'][item.criticite] || 'Info'}</span>
         ${item.url ? `<a class="card-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Lire →</a>` : ''}
       </div>
     </div>`).join('');
 }
 
-function getFilteredItems(items) {
-  return items.filter(item => {
+function getFilteredItems() {
+  if (!D?.items) return [];
+  return D.items.filter(item => {
     if (catFilter !== 'all' && item.categorie !== catFilter) return false;
-    if (srcFilters.impact && !item.impact_gsf) return false;
+    const stype = sourceType(item.source);
+    if (stype === 'jorf'   && !srcFilters.jorf)   return false;
+    if (stype === 'presse' && !srcFilters.presse)  return false;
     return true;
   });
 }
@@ -786,291 +775,111 @@ function toggleFilter(key, val) {
   srcFilters[key] = val;
   const row = document.getElementById(`f-${key}`);
   row?.classList.toggle('on', val);
-  const chk = row?.querySelector('.fcheck');
-  if (chk) chk.textContent = val ? '✓' : '';
+  row?.querySelector('.fcheck') && (row.querySelector('.fcheck').textContent = val ? '✓' : '');
   renderFeed();
 }
 
 // ─────────────────────────────────────────
-// JOURNAL OFFICIEL
+// CARTE
 // ─────────────────────────────────────────
-function renderJO() {
-  const joItems  = (D?.items || []).filter(i => sourceType(i.source) === 'jorf');
-  const joAutres = D?.jo_autres || [];
-
-  document.getElementById('nav-count-jo').textContent = joItems.length || (joAutres.length ? '·' : '0');
-  document.getElementById('jo-titre').textContent = 'Journal Officiel — ' + formatDate(D.date);
-  document.getElementById('jo-subtitle').textContent =
-    `${D.stats?.jo_analyses ?? '?'} textes analysés · ${joItems.length} retenus GSF · ${joAutres.length} autres`;
-
-  const list = document.getElementById('jo-list');
-
-  // ── Cartes pertinentes GSF ──────────────────────────────────────
-  let html = '';
-  if (!joItems.length) {
-    html += `
-      <div class="jo-empty">
-        <div class="jo-empty-title">Aucun texte réglementaire retenu aujourd'hui</div>
-        <div class="jo-empty-sub">${D.stats?.jo_analyses ?? 0} textes analysés — aucun ne concerne directement les activités GSF</div>
-      </div>`;
-  } else {
-    html += joItems.map(item => {
-      const catCls = `jo-cat-${item.categorie}`.replace(/\//g,'').replace(/ /g,'');
-      return `
-      <div class="jo-card" data-crit="${item.criticite}">
-        <div class="jo-card-head">
-          <span class="jo-cat ${catCls}">${escHtml(item.categorie)}</span>
-          <div class="jo-titre">${escHtml(item.titre)}</div>
-        </div>
-        <div class="jo-resume">${escHtml(item.resume)}</div>
-        <div class="jo-foot">
-          <span class="jo-date">${escHtml(item.source)} · ${formatDate(item.date)}</span>
-          ${item.impact_gsf ? `<span class="jo-impact">⚠ Impact GSF</span>` : ''}
-          ${item.url ? `<a class="jo-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>` : ''}
-        </div>
-      </div>`;
-    }).join('');
-  }
-
-  // ── Autres textes du jour (repliable) ──────────────────────────
-  if (joAutres.length) {
-    const rows = joAutres.map(a => `
-      <tr>
-        <td><span class="jo-autres-nor">${escHtml(a.nor)}</span></td>
-        <td><span class="jo-autres-nature">${escHtml(a.nature)}</span></td>
-        <td>${escHtml(a.titre)}</td>
-        <td>${a.url ? `<a class="jo-autres-lien" href="${escHtml(a.url)}" target="_blank" rel="noopener">↗</a>` : ''}</td>
-      </tr>`).join('');
-
-    html += `
-      <button class="jo-autres-toggle" onclick="toggleAutres(this)">
-        <span class="jo-autres-arrow">▶</span>
-        Autres textes du jour
-        <span class="jo-autres-count">${joAutres.length}</span>
-      </button>
-      <div class="jo-autres-body">
-        <table class="jo-autres-table">
-          <thead><tr>
-            <th>NOR</th><th>Nature</th><th>Titre</th><th></th>
-          </tr></thead>
-          <tbody>${rows}</tbody>
-        </table>
-      </div>`;
-  }
-
-  list.innerHTML = html;
-}
-
-function toggleAutres(btn) {
-  btn.classList.toggle('open');
-  btn.nextElementSibling.classList.toggle('open');
-}
-
-// ─────────────────────────────────────────
-// CARTE — MapLibre GL + PMTiles VigiEau
-// ─────────────────────────────────────────
-const PMTILES_URL  = 'https://regleau.s3.gra.perf.cloud.ovh.net/pmtiles/zones_arretes_en_vigueur.pmtiles';
-const SOURCE_LAYER = 'zones_arretes_en_vigueur';
-
-const NIV_COLOR = { vigilance:'#c6d848', alerte:'#ffd740', alerte_renforcee:'#ff9800', alerte_renforcée:'#ff9800', 'alerte renforcée':'#ff9800', crise:'#f44336' };
-const NIV_LABEL = { vigilance:'Vigilance', alerte:'Alerte', alerte_renforcee:'Alerte renforcée', alerte_renforcée:'Alerte renforcée', 'alerte renforcée':'Alerte renforcée', crise:'Crise' };
-
-function initMapStats() {
-  const el = document.getElementById('ms-body');
-  const rests = D?.restrictions_eau || [];
-  if (!rests.length) { el.innerHTML = '<div class="ms-loading">Aucune restriction active</div>'; return; }
-
-  // Compter par niveau
-  const counts = {};
-  rests.forEach(r => {
-    const n = (r.niveau || '').toLowerCase();
-    counts[n] = (counts[n] || 0) + 1;
-  });
-
-  // Niveaux dans l'ordre décroissant
-  const ordre = ['crise', 'alerte_renforcee', 'alerte renforcée', 'alerte_renforcée', 'alerte', 'vigilance'];
-
-  let html = `<div class="ms-row"><span class="ms-label">Départements touchés</span><span class="ms-val">${rests.length}</span></div>`;
-  html += '<div class="ms-sep">Répartition par niveau</div>';
-
-  const niveaux = Object.entries(counts).sort((a,b) => {
-    const ia = ordre.findIndex(o => o === a[0] || o.replace('_renforcee','_renforcée') === a[0]);
-    const ib = ordre.findIndex(o => o === b[0] || o.replace('_renforcee','_renforcée') === b[0]);
-    return ia - ib;
-  });
-
-  niveaux.forEach(([niv, cnt]) => {
-    const col = NIV_COLOR[niv] || '#aaa';
-    const lbl = NIV_LABEL[niv] || niv;
-    html += `<div class="ms-niveau"><span class="ms-dot" style="background:${col}"></span><span style="flex:1">${lbl}</span><span style="font-weight:600;font-family:var(--mono)">${cnt}</span></div>`;
-  });
-
-  // Dates depuis PMTiles — sera mis à jour après chargement de la carte
-  html += '<div class="ms-sep" id="ms-dates-label" style="display:none">Par période</div>';
-  html += '<div id="ms-dates"></div>';
-
-  el.innerHTML = html;
-}
-
-function updateMapStatsFromFeatures() {
-  const features = mapgl.querySourceFeatures('vigieau', { sourceLayer: SOURCE_LAYER });
-  if (!features.length) return;
-
-  const now = new Date();
-  const startOfDay   = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const startOfWeek  = new Date(startOfDay); startOfWeek.setDate(startOfDay.getDate() - startOfDay.getDay() || 7);
-  const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-
-  let today = 0, week = 0, month = 0, total = 0;
-  const seenIds = new Set();
-
-  features.forEach(f => {
-    const id = f.id || f.properties?.id;
-    if (id && seenIds.has(id)) return;
-    if (id) seenIds.add(id);
-    total++;
-
-    let arrete = null;
-    try { arrete = JSON.parse(f.properties?.arreteRestriction); } catch {}
-    const debut = arrete?.dateDebut || f.properties?.dateDebut;
-    if (!debut) return;
-
-    const d = new Date(debut);
-    if (d >= startOfDay)   today++;
-    if (d >= startOfWeek)  week++;
-    if (d >= startOfMonth) month++;
-  });
-
-  if (!total) return;
-
-  const labelEl = document.getElementById('ms-dates-label');
-  const datesEl = document.getElementById('ms-dates');
-  if (!labelEl || !datesEl) return;
-
-  labelEl.style.display = '';
-  datesEl.innerHTML = `
-    <div class="ms-row"><span class="ms-label">Zones actives (total)</span><span class="ms-val">${total}</span></div>
-    <div class="ms-row"><span class="ms-label">Ajoutées aujourd'hui</span><span class="ms-val">${today || '—'}</span></div>
-    <div class="ms-row"><span class="ms-label">Cette semaine</span><span class="ms-val">${week || '—'}</span></div>
-    <div class="ms-row"><span class="ms-label">Ce mois-ci</span><span class="ms-val">${month || '—'}</span></div>`;
-}
-
 function renderMap() {
-  if (mapgl) { setTimeout(() => mapgl.resize(), 30); return; }
-
-  const protocol = new pmtiles.Protocol();
-  maplibregl.addProtocol('pmtiles', protocol.tile.bind(protocol));
-
-  mapgl = new maplibregl.Map({
-    container: 'map-container',
-    style: 'https://openmaptiles.data.gouv.fr/styles/osm-bright/style.json',
-    center: [2.3, 46.6],
-    zoom: 4.8,
-    attributionControl: false,
-  });
-
-  mapgl.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
-
-  // Encart stats — initialisation depuis restrictions_eau (pas besoin d'attendre la carte)
-  initMapStats();
-
-  mapgl.on('load', () => {
-    mapgl.addSource('vigieau', {
-      type: 'vector',
-      url: `pmtiles://${PMTILES_URL}`,
+  if (!map) {
+    map = L.map('map-container', {
+      center: [46.4, 2.3],
+      zoom: 5,
+      zoomControl: true,
+      attributionControl: false,
     });
 
-    // Zones colorées
-    mapgl.addLayer({
-      id: 'zones-fill',
-      type: 'fill',
-      source: 'vigieau',
-      'source-layer': SOURCE_LAYER,
-      paint: {
-        'fill-color': [
-          'match', ['downcase', ['get', 'niveauGravite']],
-          'vigilance',        '#c6d848',
-          'alerte',           '#ffd740',
-          'alerte renforcée', '#ff9800',
-          'alerte_renforcée', '#ff9800',
-          'crise',            '#f44336',
-          '#3bff8a',
-        ],
-        'fill-opacity': 0.55,
-      },
-    });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+      maxZoom: 18,
+    }).addTo(map);
 
-    // Contours
-    mapgl.addLayer({
-      id: 'zones-outline',
-      type: 'line',
-      source: 'vigieau',
-      'source-layer': SOURCE_LAYER,
-      paint: {
-        'line-color': '#07090d',
-        'line-width': 0.8,
-        'line-opacity': 0.8,
-      },
-    });
+    // Labels séparés (noms de villes) par-dessus
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
+      maxZoom: 18,
+      zIndex: 10,
+    }).addTo(map);
+  }
 
-    // Hover highlight
-    mapgl.addLayer({
-      id: 'zones-hover',
-      type: 'fill',
-      source: 'vigieau',
-      'source-layer': SOURCE_LAYER,
-      paint: { 'fill-color': '#ffffff', 'fill-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 0.15, 0] },
-    });
+  if (!D?.restrictions_eau) return;
 
-    let hoveredId = null;
-    mapgl.on('mousemove', 'zones-fill', e => {
-      if (e.features.length) {
-        if (hoveredId !== null) mapgl.setFeatureState({ source: 'vigieau', sourceLayer: SOURCE_LAYER, id: hoveredId }, { hover: false });
-        hoveredId = e.features[0].id;
-        mapgl.setFeatureState({ source: 'vigieau', sourceLayer: SOURCE_LAYER, id: hoveredId }, { hover: true });
-        mapgl.getCanvas().style.cursor = 'pointer';
-      }
-    });
-    mapgl.on('mouseleave', 'zones-fill', () => {
-      if (hoveredId !== null) mapgl.setFeatureState({ source: 'vigieau', sourceLayer: SOURCE_LAYER, id: hoveredId }, { hover: false });
-      hoveredId = null;
-      mapgl.getCanvas().style.cursor = '';
-    });
+  const restrictionMap = {};
+  for (const r of D.restrictions_eau) {
+    restrictionMap[r.dept_code] = r;
+  }
 
-    // Popup au clic
-    mapgl.on('click', 'zones-fill', e => {
-      const p = e.features[0].properties;
-      const niv = (p.niveauGravite || '').toLowerCase();
-      const col = NIVEAU_COLOR[niv] || '#aaa';
-      const label = NIVEAU_LABEL[niv] || niv;
-      let arrete = null;
-      try { arrete = JSON.parse(p.arreteRestriction); } catch {}
+  function getColor(deptCode) {
+    const r = restrictionMap[deptCode];
+    return r ? (NIVEAU_COLOR[r.niveau] || '#4caf50') : '#2e4a2e';
+  }
 
-      const typeLabel = { 'SUP': 'Eaux de surface', 'SOU': 'Eaux souterraines', 'AEP': 'Eau potable' }[p.type] || p.type || '—';
+  function styleFeature(feature) {
+    return {
+      fillColor:   getColor(feature.properties.code),
+      fillOpacity: 0.65,
+      color:       '#07090d',
+      weight:      1,
+      opacity:     0.8,
+    };
+  }
 
-      new maplibregl.Popup({ maxWidth: '280px' })
-        .setLngLat(e.lngLat)
-        .setHTML(`
-          <div style="font-weight:600;font-size:13px;margin-bottom:5px;color:#1a2433">${p.nom || p.code}</div>
-          <div style="color:${col};font-size:12px;font-weight:600;margin-bottom:6px">${label}</div>
-          <div style="font-size:10px;color:#556;margin-bottom:${arrete?.fichier ? '8px' : '0'}">
-            ${typeLabel} · Dept ${p.departement}
-            ${arrete?.numero ? `<br>Arrêté n° ${arrete.numero}` : ''}
-            ${arrete?.dateDebut ? ` · en vigueur depuis ${arrete.dateDebut}` : ''}
-          </div>
-          ${arrete?.fichier
-            ? `<a href="${arrete.fichier}" target="_blank" rel="noopener"
-                  style="font-size:10px;font-family:monospace;color:#1a6fb5;text-decoration:none">
-                 Voir l'arrêté préfectoral →
-               </a>`
-            : ''}
-        `)
-        .addTo(mapgl);
-    });
+  function onEachFeature(feature, layer) {
+    const code = feature.properties.code;
+    const nom  = feature.properties.nom;
+    const r    = restrictionMap[code];
+    const niv  = r ? (NIVEAU_LABEL[r.niveau] || r.niveau) : 'Aucune restriction';
+    const col  = r ? NIVEAU_COLOR[r.niveau] : '#4caf50';
 
-    // Stats zones — déclenché une fois que les tiles sont chargées
-    mapgl.once('idle', updateMapStatsFromFeatures);
-  });
+    layer.bindTooltip(`
+      <strong>${nom}</strong> (${code})<br>
+      <span style="color:${col}">${niv}</span>
+    `, { sticky: true, opacity: 1 });
+
+    layer.on('click', () => showDeptDetail(code, nom, r));
+    layer.on('mouseover', e => e.target.setStyle({ fillOpacity: 0.85, weight: 2 }));
+    layer.on('mouseout',  e => geojsonLayer.resetStyle(e.target));
+  }
+
+  // Charger le GeoJSON (une seule fois)
+  if (geojsonData) {
+    if (geojsonLayer) map.removeLayer(geojsonLayer);
+    geojsonLayer = L.geoJSON(geojsonData, { style: styleFeature, onEachFeature }).addTo(map);
+    return;
+  }
+
+  fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson')
+    .then(r => r.json())
+    .then(gj => {
+      geojsonData = gj;
+      if (geojsonLayer) map.removeLayer(geojsonLayer);
+      geojsonLayer = L.geoJSON(gj, { style: styleFeature, onEachFeature }).addTo(map);
+    })
+    .catch(e => { showToast('Erreur chargement GeoJSON'); console.error(e); });
+
+  // Resize au cas où le container était caché
+  setTimeout(() => map.invalidateSize(), 50);
+}
+
+function showDeptDetail(code, nom, r) {
+  const el = document.getElementById('dept-detail');
+  if (!r) {
+    el.innerHTML = `<div class="dept-detail-title">${nom} (${code}) — Aucune restriction en vigueur</div>`;
+  } else {
+    const col = NIVEAU_COLOR[r.niveau] || '#aaa';
+    el.innerHTML = `
+      <div class="dept-detail-title">
+        <span class="eau-dot" style="background:${col};width:10px;height:10px;display:inline-block;border-radius:50%"></span>
+        ${nom} (${code}) — <span style="color:${col}">${NIVEAU_LABEL[r.niveau] || r.niveau}</span>
+      </div>
+      ${r.arrete_url
+        ? `<a href="${escHtml(r.arrete_url)}" target="_blank" rel="noopener"
+              style="font-size:11px;font-family:var(--mono);color:var(--accent);text-decoration:none">
+             Voir l'arrêté →
+           </a>`
+        : '<span style="font-size:11px;color:var(--muted)">Pas d\'arrêté disponible</span>'}`;
+  }
+  el.classList.add('open');
 }
 
 // ─────────────────────────────────────────
@@ -1078,16 +887,20 @@ function renderMap() {
 // ─────────────────────────────────────────
 function renderArchives() {
   const cal = document.getElementById('arc-calendar');
-  if (!archive?.dates) { cal.innerHTML = '<div class="empty-state">Aucune archive disponible</div>'; return; }
+  if (!archive?.dates) {
+    cal.innerHTML = '<div class="empty-state">Aucune archive disponible</div>';
+    return;
+  }
 
   const availSet = new Set(archive.dates);
   const today    = new Date();
   const start    = new Date(today); start.setDate(start.getDate() - 89);
 
+  // Regrouper par mois
   const months = {};
   for (let d = new Date(start); d <= today; d.setDate(d.getDate() + 1)) {
-    const iso  = d.toISOString().slice(0, 10);
-    const mkey = iso.slice(0, 7);
+    const iso   = d.toISOString().slice(0, 10);
+    const mkey  = iso.slice(0, 7); // YYYY-MM
     if (!months[mkey]) months[mkey] = [];
     months[mkey].push(iso);
   }
@@ -1102,11 +915,9 @@ function renderArchives() {
       const hasData = availSet.has(iso);
       const isToday = iso === today.toISOString().slice(0,10);
       const isSel   = iso === currentDate;
-      const count   = archive.counts?.[iso];
-      const cls     = ['arc-day', hasData?'has-data':'', isToday?'today':'', isSel?'selected':''].filter(Boolean).join(' ');
+      const cls     = ['arc-day', hasData ? 'has-data' : '', isToday ? 'today' : '', isSel ? 'selected' : ''].filter(Boolean).join(' ');
       const onclick = hasData ? `onclick="loadDate('${iso}')"` : '';
-      const countHtml = hasData && count ? `<span class="arc-day-count">${count}</span>` : '';
-      return `<div class="${cls}" ${onclick} title="${iso}">${dd}${countHtml}</div>`;
+      return `<div class="${cls}" ${onclick} title="${iso}">${dd}</div>`;
     }).join('');
     return `<div class="arc-month">
       <div class="arc-month-title">${label}</div>
@@ -1121,8 +932,6 @@ async function loadDate(date) {
   try {
     D = await loadData(date);
     currentDate = date;
-    // Mettre à jour l'URL pour permettre le partage
-    history.replaceState(null, '', `?date=${date}`);
     renderAll();
     if (currentView === 'archives') renderArchives();
   } catch(e) {
@@ -1135,13 +944,19 @@ async function loadDate(date) {
 // ─────────────────────────────────────────
 function switchView(view) {
   currentView = view;
+
   document.querySelectorAll('.view').forEach(el => el.classList.remove('active'));
   document.getElementById(`${view}-view`).classList.add('active');
+
   document.querySelectorAll('.nav-item').forEach(el => {
     el.classList.toggle('active', el.dataset.view === view);
   });
+
   if (view === 'carte') {
-    setTimeout(() => { renderMap(); if (mapgl) mapgl.resize(); }, 50);
+    setTimeout(() => {
+      renderMap();
+      if (map) map.invalidateSize();
+    }, 30);
   }
   if (view === 'archives') renderArchives();
 }
@@ -1168,6 +983,9 @@ function showToast(msg) {
   t._t = setTimeout(() => t.classList.remove('show'), 2500);
 }
 
+// ─────────────────────────────────────────
+// START
+// ─────────────────────────────────────────
 init();
 </script>
 </body>
