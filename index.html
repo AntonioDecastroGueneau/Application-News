@@ -278,7 +278,6 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
   <div id="main">
     <div class="view active" id="feed-view">
       <div id="signal-bar"></div>
-      <div id="briefing-jorf"></div>
       <div id="feed-toolbar">
         <div class="feed-title" id="feed-titre">—</div>
         <button class="badge-filter on" data-cat="all" onclick="filterCat('all')">Tout</button>
@@ -364,34 +363,12 @@ function renderAll(){
   eauEl.innerHTML=crises.length?crises.slice(0,4).map(r=>{const col=NIVEAU_COLOR[normalizeNiveau(r.niveau)]||'#dc2626';
     return `<div class="eau-alert-item" style="background:${col}18;border:1px solid ${col}30"><span style="width:6px;height:6px;border-radius:50%;background:${col};flex-shrink:0;display:inline-block"></span><span style="color:#e8ecf2;font-size:11px">${r.dept_nom} (${r.dept_code})</span></div>`;}
   ).join(''):`<div style="font-size:11px;color:var(--sb-muted);padding:4px 0">Aucune alerte majeure</div>`;
-  renderBriefing();
   renderFeed();
   if(currentView==='carte'){renderMap();renderMapEncart();}
   if(currentView==='archives')renderArchives();
   if(currentView==='jo')renderJO();
 }
 
-function renderBriefing(){
-  const el=document.getElementById('briefing-jorf');
-  if(!el)return;
-  const items=D?.briefing_jorf||[];
-  if(!items.length){el.innerHTML='';return;}
-  const open=el.dataset.open!=='false';
-  el.innerHTML=`<div class="briefing-card">
-    <div class="briefing-header" onclick="toggleBriefing()">Briefing réglementaire JORF
-      <span class="briefing-toggle">${items.length} textes · ${open?'Réduire ▲':'Développer ▼'}</span>
-    </div>
-    ${open?`<div class="briefing-items">${items.map(it=>`<div class="briefing-item">
-      <span class="briefing-nature">${escHtml(it.nature||'Texte')}</span>
-      <div><div class="briefing-titre">${escHtml(it.titre)}</div><div class="briefing-essentiel">${escHtml(it.essentiel||'')}</div></div>
-    </div>`).join('')}</div>`:''}
-  </div>`;
-}
-function toggleBriefing(){
-  const el=document.getElementById('briefing-jorf');
-  el.dataset.open=el.dataset.open==='false'?'true':'false';
-  renderBriefing();
-}
 
 function renderFeed(){
   const items=getFilteredItems(),prio=items.filter(i=>i.criticite>=2),veille=items.filter(i=>i.criticite<2);
@@ -507,12 +484,26 @@ function renderJO(){
   if(!groupEl)return;
   const nbT=D?.stats?.jo_analyses||0,nbG=D?.stats?.jo_retenus||0;
   if(statsEl)statsEl.innerHTML=[[nbT,'Textes analysés',false],[nbG,'Pertinents GSF',true],[items.length,'Dans ce JO',false]].map(([v,l,a])=>`<div class="jo-stat ${a&&v>0?'accent':''}"><div class="jo-stat-val">${v}</div><div class="jo-stat-lbl">${l}</div></div>`).join('');
-  if(!items.length){groupEl.innerHTML='<div class="jo-empty">Aucun texte JO pour cette date</div>';return;}
+
+  // Briefing exécutif
+  const briefing=D?.briefing_jorf||[];
+  const briefingHtml=briefing.length?`<div class="briefing-card" style="margin-bottom:16px">
+    <div class="briefing-header" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'flex':'none';this.querySelector('.briefing-toggle').textContent=this.nextElementSibling.style.display==='none'?'Développer ▼':'Réduire ▲'">
+      Résumé exécutif — textes significatifs du jour
+      <span class="briefing-toggle">Réduire ▲</span>
+    </div>
+    <div class="briefing-items">${briefing.map(it=>`<div class="briefing-item">
+      <span class="briefing-nature">${escHtml(it.nature||'Texte')}</span>
+      <div><div class="briefing-titre">${escHtml(it.titre)}</div><div class="briefing-essentiel">${escHtml(it.essentiel||'')}</div></div>
+    </div>`).join('')}</div>
+  </div>`:'';
+
+  if(!items.length){groupEl.innerHTML=briefingHtml+'<div class="jo-empty">Aucun texte JO pour cette date</div>';return;}
   const groups={};
   items.forEach(item=>{const nat=(item.nature||'AUTRE').toUpperCase(),label=JO_NATURES[nat]||nat||'Autre';if(!groups[label])groups[label]=[];if(!search||(item.titre||'').toLowerCase().includes(search))groups[label].push(item);});
   const total=Object.values(groups).reduce((s,g)=>s+g.length,0);
-  if(!total){groupEl.innerHTML='<div class="jo-empty">Aucun résultat</div>';return;}
-  groupEl.innerHTML=Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([label,its])=>`<div class="jo-theme-group open"><div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')"><span class="jo-theme-name">${escHtml(label)}</span><span class="jo-theme-count">${its.length}</span><span class="jo-chevron">▶</span></div><div class="jo-items">${its.map(item=>`<div class="jo-item"><div class="jo-item-nature">${escHtml(item.nature||label)}</div><div class="jo-item-titre">${escHtml(item.titre)}</div>${item.url?`<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`:'<span style="font-size:10px;color:var(--muted2)">Pas de lien</span>'}</div>`).join('')}</div></div>`).join('');
+  if(!total){groupEl.innerHTML=briefingHtml+'<div class="jo-empty">Aucun résultat</div>';return;}
+  groupEl.innerHTML=briefingHtml+Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([label,its])=>`<div class="jo-theme-group open"><div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')"><span class="jo-theme-name">${escHtml(label)}</span><span class="jo-theme-count">${its.length}</span><span class="jo-chevron">▶</span></div><div class="jo-items">${its.map(item=>`<div class="jo-item"><div class="jo-item-nature">${escHtml(item.nature||label)}</div><div class="jo-item-titre">${escHtml(item.titre)}</div>${item.url?`<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`:'<span style="font-size:10px;color:var(--muted2)">Pas de lien</span>'}</div>`).join('')}</div></div>`).join('');
 }
 function filterJO(){renderJO();}
 
