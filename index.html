@@ -487,6 +487,75 @@ html, body {
   box-shadow: 0 4px 20px rgba(0,0,0,.5) !important;
 }
 .leaflet-popup-tip { background: var(--surface2) !important; }
+
+/* ── TOP 5 URGENCES ── */
+#top5-banner { background: var(--surface); border-bottom: 1px solid var(--border);
+  padding: 10px 20px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.top5-label { font-family: var(--mono); font-size: 9px; font-weight: 600;
+  letter-spacing: .15em; color: var(--muted2); text-transform: uppercase;
+  white-space: nowrap; }
+.top5-pill { display: flex; align-items: center; gap: 6px; padding: 4px 10px;
+  border-radius: 20px; border: 1px solid var(--border2); cursor: pointer;
+  transition: all .15s; background: var(--surface2); max-width: 280px; }
+.top5-pill:hover { border-color: var(--accent); }
+.top5-pill-crit { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.top5-pill-text { font-size: 11px; color: var(--text); white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis; }
+
+/* ── DATE ARTICLE ── */
+.card-date { font-family: var(--mono); font-size: 10px; color: var(--muted2);
+  margin-left: auto; white-space: nowrap; }
+
+/* ── FILTRE 24H ── */
+.filter-toggle { display: flex; align-items: center; gap: 8px; padding: 5px 0;
+  cursor: pointer; user-select: none; }
+.filter-toggle input { display: none; }
+.toggle-track { width: 28px; height: 14px; border-radius: 7px;
+  background: var(--border2); position: relative; transition: background .2s; }
+.filter-toggle.on .toggle-track { background: var(--accent); }
+.toggle-thumb { width: 10px; height: 10px; border-radius: 50%; background: #fff;
+  position: absolute; top: 2px; left: 2px; transition: left .2s; }
+.filter-toggle.on .toggle-thumb { left: 16px; }
+.toggle-lbl { font-size: 11px; color: var(--muted); }
+.filter-toggle.on .toggle-lbl { color: var(--text); }
+
+/* ── ONGLET JO ── */
+#jo-view { padding: 16px; overflow-y: auto; height: 100%; }
+.jo-title { font-family: var(--mono); font-size: 11px; font-weight: 600;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--muted2);
+  margin-bottom: 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.jo-search { width: 100%; background: var(--surface2); border: 1px solid var(--border2);
+  border-radius: var(--radius); padding: 6px 12px; color: var(--text); font-size: 12px;
+  font-family: var(--sans); margin-bottom: 12px; outline: none; }
+.jo-search:focus { border-color: var(--accent); }
+.jo-theme-group { margin-bottom: 16px; }
+.jo-theme-header { display: flex; align-items: center; gap: 8px; cursor: pointer;
+  padding: 6px 0; border-bottom: 1px solid var(--border); margin-bottom: 4px; }
+.jo-theme-name { font-size: 12px; font-weight: 500; color: var(--text); flex: 1; }
+.jo-theme-count { font-family: var(--mono); font-size: 10px; color: var(--muted2);
+  background: var(--surface2); padding: 1px 6px; border-radius: 10px; }
+.jo-chevron { font-size: 10px; color: var(--muted2); transition: transform .2s; }
+.jo-theme-group.open .jo-chevron { transform: rotate(90deg); }
+.jo-items { display: none; flex-direction: column; gap: 6px; padding: 4px 0; }
+.jo-theme-group.open .jo-items { display: flex; }
+.jo-item { padding: 8px 10px; border-radius: var(--radius);
+  background: var(--surface2); border: 1px solid var(--border);
+  transition: border-color .15s; cursor: default; }
+.jo-item:hover { border-color: var(--border2); }
+.jo-item-nature { font-family: var(--mono); font-size: 9px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); margin-bottom: 3px; }
+.jo-item-titre { font-size: 11px; color: var(--text); line-height: 1.4; margin-bottom: 4px; }
+.jo-item-link { font-family: var(--mono); font-size: 10px; color: var(--accent);
+  text-decoration: none; }
+.jo-item-link:hover { text-decoration: underline; }
+.jo-empty { font-size: 12px; color: var(--muted); padding: 20px; text-align: center;
+  font-family: var(--mono); }
+
+/* ── COMPTEUR RESTRICTIONS ── */
+.eau-counter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.eau-count-chip { display: flex; align-items: center; gap: 4px; padding: 3px 8px;
+  border-radius: 10px; font-family: var(--mono); font-size: 10px; }
+
 </style>
 </head>
 <body>
@@ -523,6 +592,9 @@ html, body {
       <div class="nav-item" data-view="archives" onclick="switchView('archives')">
         <span class="nav-icon">◷</span> Archives
       </div>
+      <div class="nav-item" data-view="jo" onclick="switchView('jo')">
+        <span class="nav-icon">⊞</span> JO / DILA
+      </div>
     </div>
 
     <!-- Filtres -->
@@ -551,9 +623,20 @@ html, body {
       <div id="sidebar-stats"></div>
     </div>
 
+    <!-- Filtre 24h -->
+    <div class="s-section">
+      <div class="s-label">Affichage</div>
+      <label class="filter-toggle on" id="toggle-24h" onclick="toggle24h(this)">
+        <input type="checkbox" checked>
+        <div class="toggle-track"><div class="toggle-thumb"></div></div>
+        <span class="toggle-lbl">Articles &lt; 24h</span>
+      </label>
+    </div>
+
     <!-- Alertes eau -->
     <div class="s-section">
       <div class="s-label">Alertes eau</div>
+      <div id="eau-counter" class="eau-counter"></div>
       <div id="sidebar-eau"></div>
     </div>
 
@@ -564,6 +647,7 @@ html, body {
 
     <!-- FEED -->
     <div class="view active" id="feed-view">
+      <div id="top5-banner"></div>
       <div id="feed-toolbar">
         <div class="feed-title" id="feed-titre">—</div>
         <button class="badge-filter on" data-cat="all" onclick="filterCat('all')">Tout</button>
@@ -591,6 +675,13 @@ html, body {
       <div id="dept-detail"></div>
     </div>
 
+    <!-- JO / DILA -->
+    <div class="view" id="jo-view">
+      <div class="jo-title">Journal Officiel — tous les textes analysés</div>
+      <input class="jo-search" id="jo-search" type="text" placeholder="Rechercher un arrêté, décret..." oninput="filterJO()">
+      <div id="jo-groups"></div>
+    </div>
+
     <!-- ARCHIVES -->
     <div class="view" id="archives-view">
       <div class="arc-title">Archives — 90 jours</div>
@@ -606,12 +697,13 @@ html, body {
 // ─────────────────────────────────────────
 // STATE
 // ─────────────────────────────────────────
-let D          = null;   // JSON du jour actif
-let archive    = null;   // {dates: [...], updated_at}
+let D          = null;
+let archive    = null;
 let currentDate = null;
 let currentView = 'feed';
 let catFilter   = 'all';
 let srcFilters  = { jorf: true, presse: true, eau: true };
+let filter24h   = true;   // filtre 24h actif par défaut
 let map         = null;
 let geojsonLayer = null;
 let geojsonData  = null;
@@ -707,10 +799,24 @@ function renderSidebar() {
       <span class="stat-val">${v}</span>
     </div>`).join('');
 
+  // Compteur restrictions par niveau
+  const counterEl = document.getElementById('eau-counter');
+  const restr = D.restrictions_eau || [];
+  const counts = { vigilance: 0, alerte: 0, 'alerte renforcée': 0, crise: 0 };
+  restr.forEach(r => { if (counts[r.niveau] !== undefined) counts[r.niveau]++; });
+  counterEl.innerHTML = Object.entries(counts)
+    .filter(([,v]) => v > 0)
+    .map(([niv, nb]) => `
+      <div class="eau-count-chip" style="background:${NIVEAU_COLOR[niv]}18;border:1px solid ${NIVEAU_COLOR[niv]}40">
+        <span style="background:${NIVEAU_COLOR[niv]};width:6px;height:6px;border-radius:50%;display:inline-block"></span>
+        <span style="color:${NIVEAU_COLOR[niv]}">${nb}</span>
+        <span style="color:var(--muted2)">${niv}</span>
+      </div>`).join('') || '<span style="font-size:11px;color:var(--muted)">Aucune restriction</span>';
+
   // Alertes eau résumé
   const eauEl = document.getElementById('sidebar-eau');
-  const crises = (D.restrictions_eau || []).filter(r => r.niveau === 'crise');
-  const alertes = (D.restrictions_eau || []).filter(r => r.niveau === 'alerte renforcée');
+  const crises = restr.filter(r => r.niveau === 'crise');
+  const alertes = restr.filter(r => r.niveau === 'alerte renforcée');
   if (!crises.length && !alertes.length) {
     eauEl.innerHTML = `<div style="font-size:11px;color:var(--muted)">Aucune alerte majeure</div>`;
   } else {
@@ -726,6 +832,22 @@ function renderSidebar() {
 // FEED
 // ─────────────────────────────────────────
 function renderFeed() {
+  // Top 5
+  const top5 = (D.items || []).filter(i => i.top5).slice(0, 5);
+  const banner = document.getElementById('top5-banner');
+  if (top5.length) {
+    const CRIT_COL = { 1: 'var(--crit1)', 2: 'var(--crit2)', 3: 'var(--crit3)' };
+    banner.innerHTML = `<span class="top5-label">⚡ Top 5</span>` +
+      top5.map(i => `
+        <div class="top5-pill" onclick="scrollToItem('${i.id}')">
+          <div class="top5-pill-crit" style="background:${CRIT_COL[i.criticite]||'var(--muted)'}"></div>
+          <span class="top5-pill-text">${escHtml(i.titre)}</span>
+        </div>`).join('');
+    banner.style.display = 'flex';
+  } else {
+    banner.style.display = 'none';
+  }
+
   document.getElementById('feed-titre').textContent =
     'Veille du ' + formatDate(D.date) + '  ·  ' + (D.items?.length || 0) + ' signaux';
 
@@ -738,10 +860,11 @@ function renderFeed() {
   }
 
   list.innerHTML = items.map(item => `
-    <div class="card" data-crit="${item.criticite}">
+    <div class="card" id="item-${item.id}" data-crit="${item.criticite}">
       <div class="card-top">
         <span class="card-badge badge-${escHtml(item.categorie)}">${escHtml(item.categorie)}</span>
         <div class="card-titre">${escHtml(item.titre)}</div>
+        ${item.date ? `<span class="card-date">${formatDate(item.date)}</span>` : ''}
       </div>
       <div class="card-resume">${escHtml(item.resume)}</div>
       <div class="card-footer">
@@ -752,15 +875,45 @@ function renderFeed() {
     </div>`).join('');
 }
 
+function scrollToItem(id) {
+  const el = document.getElementById('item-' + id);
+  if (el) { switchView('feed'); el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+}
+
 function getFilteredItems() {
   if (!D?.items) return [];
+
+  // Calcul de la borne 24h (lundi → depuis vendredi 18h)
+  const now = new Date();
+  const isMonday = now.getDay() === 1;
+  let cutoff;
+  if (isMonday) {
+    // Vendredi de la semaine précédente à 18h
+    cutoff = new Date(now);
+    cutoff.setDate(now.getDate() - 3);
+    cutoff.setHours(18, 0, 0, 0);
+  } else {
+    cutoff = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+  }
+
   return D.items.filter(item => {
     if (catFilter !== 'all' && item.categorie !== catFilter) return false;
     const stype = sourceType(item.source);
     if (stype === 'jorf'   && !srcFilters.jorf)   return false;
     if (stype === 'presse' && !srcFilters.presse)  return false;
+    // Filtre 24h
+    if (filter24h && item.date) {
+      const d = new Date(item.date);
+      if (d < cutoff) return false;
+    }
     return true;
   });
+}
+
+function toggle24h(el) {
+  filter24h = !filter24h;
+  el.classList.toggle('on', filter24h);
+  renderFeed();
 }
 
 function filterCat(cat) {
@@ -802,62 +955,57 @@ function renderMap() {
     }).addTo(map);
   }
 
-  if (!D?.restrictions_eau) return;
+  // GeoJSON zones VigiEau (maille fine — même source que vigieau.gouv.fr)
+  const VIGIEAU_GJ = 'https://regleau.s3.gra.perf.cloud.ovh.net/geojson/zones_arretes_en_vigueur.geojson';
 
-  const restrictionMap = {};
-  for (const r of D.restrictions_eau) {
-    restrictionMap[r.dept_code] = r;
+  function getZoneColor(props) {
+    const niv = (props.niveauGravite || props.niveau_gravite || props.statut || '').toLowerCase();
+    return NIVEAU_COLOR[niv] || '#2e4a2e';
+  }
+  function styleZone(feature) {
+    return { fillColor: getZoneColor(feature.properties), fillOpacity: 0.65,
+             color: '#07090d', weight: 0.5, opacity: 0.8 };
+  }
+  function onEachZone(feature, layer) {
+    const p   = feature.properties;
+    const niv = (p.niveauGravite || p.niveau_gravite || p.statut || '').toLowerCase();
+    const nom = p.nomZone || p.nom_zone || p.nom || p.libelle || 'Zone';
+    const dep = p.departement || p.numeroDepartement || '';
+    const col = NIVEAU_COLOR[niv] || '#4caf50';
+    const lbl = NIVEAU_LABEL[niv] || (niv || 'Aucune restriction');
+    layer.bindTooltip(`<strong>${nom}</strong>${dep?' — '+dep:''}<br><span style="color:${col}">${lbl}</span>`,
+      { sticky: true, opacity: 1 });
+    layer.on('click', () => {
+      const el = document.getElementById('dept-detail');
+      const arrete = p.cheminFichier || p.chemin_fichier || '';
+      el.innerHTML = `<div class="dept-detail-title">
+          <span style="background:${col};width:10px;height:10px;display:inline-block;border-radius:50%;margin-right:6px"></span>
+          ${nom} — <span style="color:${col}">${lbl}</span></div>
+        ${arrete ? `<a href="${arrete}" target="_blank" rel="noopener"
+            style="font-size:11px;font-family:var(--mono);color:var(--accent);text-decoration:none">Voir l'arrêté →</a>`
+          : '<span style="font-size:11px;color:var(--muted)">Pas d\'arrêté disponible</span>'}`;
+      el.classList.add('open');
+    });
+    layer.on('mouseover', e => e.target.setStyle({ fillOpacity: 0.85, weight: 1.5 }));
+    layer.on('mouseout',  e => geojsonLayer && geojsonLayer.resetStyle(e.target));
   }
 
-  function getColor(deptCode) {
-    const r = restrictionMap[deptCode];
-    return r ? (NIVEAU_COLOR[r.niveau] || '#4caf50') : '#2e4a2e';
-  }
-
-  function styleFeature(feature) {
-    return {
-      fillColor:   getColor(feature.properties.code),
-      fillOpacity: 0.65,
-      color:       '#07090d',
-      weight:      1,
-      opacity:     0.8,
-    };
-  }
-
-  function onEachFeature(feature, layer) {
-    const code = feature.properties.code;
-    const nom  = feature.properties.nom;
-    const r    = restrictionMap[code];
-    const niv  = r ? (NIVEAU_LABEL[r.niveau] || r.niveau) : 'Aucune restriction';
-    const col  = r ? NIVEAU_COLOR[r.niveau] : '#4caf50';
-
-    layer.bindTooltip(`
-      <strong>${nom}</strong> (${code})<br>
-      <span style="color:${col}">${niv}</span>
-    `, { sticky: true, opacity: 1 });
-
-    layer.on('click', () => showDeptDetail(code, nom, r));
-    layer.on('mouseover', e => e.target.setStyle({ fillOpacity: 0.85, weight: 2 }));
-    layer.on('mouseout',  e => geojsonLayer.resetStyle(e.target));
-  }
-
-  // Charger le GeoJSON (une seule fois)
   if (geojsonData) {
     if (geojsonLayer) map.removeLayer(geojsonLayer);
-    geojsonLayer = L.geoJSON(geojsonData, { style: styleFeature, onEachFeature }).addTo(map);
+    geojsonLayer = L.geoJSON(geojsonData, { style: styleZone, onEachFeature: onEachZone }).addTo(map);
     return;
   }
 
-  fetch('https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson')
+  showToast('Chargement des zones VigiEau…');
+  fetch(VIGIEAU_GJ)
     .then(r => r.json())
     .then(gj => {
       geojsonData = gj;
       if (geojsonLayer) map.removeLayer(geojsonLayer);
-      geojsonLayer = L.geoJSON(gj, { style: styleFeature, onEachFeature }).addTo(map);
+      geojsonLayer = L.geoJSON(gj, { style: styleZone, onEachFeature: onEachZone }).addTo(map);
     })
-    .catch(e => { showToast('Erreur chargement GeoJSON'); console.error(e); });
+    .catch(e => { showToast('Erreur chargement carte VigiEau'); console.error(e); });
 
-  // Resize au cas où le container était caché
   setTimeout(() => map.invalidateSize(), 50);
 }
 
@@ -942,6 +1090,72 @@ async function loadDate(date) {
 // ─────────────────────────────────────────
 // VIEW SWITCHING
 // ─────────────────────────────────────────
+// ─────────────────────────────────────────
+// JO / DILA
+// ─────────────────────────────────────────
+const JO_NATURES = {
+  'ARRETE'    : 'Arrêté',
+  'DECRET'    : 'Décret',
+  'ORDONNANCE': 'Ordonnance',
+  'LOI'       : 'Loi',
+  'CIRCULAIRE': 'Circulaire',
+  'AVIS'      : 'Avis',
+  'DECISION'  : 'Décision',
+};
+
+function renderJO() {
+  const items = D?.jo_autres || [];
+  const search = document.getElementById('jo-search')?.value.toLowerCase() || '';
+  const groupsEl = document.getElementById('jo-groups');
+  if (!groupsEl) return;
+
+  if (!items.length) {
+    groupsEl.innerHTML = '<div class="jo-empty">Aucun texte JO pour cette date</div>';
+    return;
+  }
+
+  // Grouper par nature
+  const groups = {};
+  items.forEach(item => {
+    const nature = (item.nature || 'AUTRE').toUpperCase();
+    const label  = JO_NATURES[nature] || nature || 'Autre';
+    if (!groups[label]) groups[label] = [];
+    const titre = item.titre || '';
+    if (!search || titre.toLowerCase().includes(search)) {
+      groups[label].push(item);
+    }
+  });
+
+  const total = Object.values(groups).reduce((s, g) => s + g.length, 0);
+  if (!total) {
+    groupsEl.innerHTML = '<div class="jo-empty">Aucun résultat pour cette recherche</div>';
+    return;
+  }
+
+  groupsEl.innerHTML = Object.entries(groups)
+    .sort(([a],[b]) => a.localeCompare(b))
+    .map(([label, its]) => {
+      const rows = its.map(item => `
+        <div class="jo-item">
+          <div class="jo-item-nature">${escHtml(item.nature || label)}</div>
+          <div class="jo-item-titre">${escHtml(item.titre)}</div>
+          ${item.url
+            ? `<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`
+            : '<span style="font-size:10px;color:var(--muted2)">Pas de lien disponible</span>'}
+        </div>`).join('');
+      return `<div class="jo-theme-group open">
+        <div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')">
+          <span class="jo-theme-name">${escHtml(label)}</span>
+          <span class="jo-theme-count">${its.length}</span>
+          <span class="jo-chevron">▶</span>
+        </div>
+        <div class="jo-items">${rows}</div>
+      </div>`;
+    }).join('');
+}
+
+function filterJO() { renderJO(); }
+
 function switchView(view) {
   currentView = view;
 
@@ -959,6 +1173,7 @@ function switchView(view) {
     }, 30);
   }
   if (view === 'archives') renderArchives();
+  if (view === 'jo') renderJO();
 }
 
 // ─────────────────────────────────────────
