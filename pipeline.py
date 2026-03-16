@@ -552,16 +552,11 @@ def fetch_rss_source(source: dict):
                 article_dt   = None
                 article_date = TODAY
 
-            # Filtre temporel : 24h glissantes, lundi → depuis vendredi 18h
+            # Filtre temporel souple : exclure uniquement les articles > 7 jours
+            # (certaines sources RSS publient avec des dates décalées)
+            # La fraîcheur du feed est garantie par le cron quotidien
             now = datetime.now()
-            if now.weekday() == 0:  # lundi
-                import calendar as _cal
-                last_friday_18h = now - timedelta(days=3)
-                last_friday_18h = last_friday_18h.replace(hour=18, minute=0, second=0, microsecond=0)
-                cutoff_dt = last_friday_18h
-            else:
-                cutoff_dt = now - timedelta(hours=24)
-
+            cutoff_dt = now - timedelta(days=7)
             if article_dt and article_dt < cutoff_dt:
                 log.debug(f"Article trop ancien ({article_date}), exclu : {titre[:60]}")
                 continue
