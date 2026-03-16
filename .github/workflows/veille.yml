@@ -57,6 +57,10 @@ jobs:
           cp archive.json gh-pages-branch/archive.json
 
           # Copier index.html si modifié (déploiement initial ou mise à jour)
+          # Copier l'historique VigiEau (cache annuel)
+          cp vigieau_history.json gh-pages-branch/vigieau_history.json 2>/dev/null || true
+
+          # Copier index.html si modifié
           cp index.html gh-pages-branch/index.html
 
       # ── 7. Commit et push vers gh-pages ──────────────────────────
