@@ -1,24 +1,24 @@
 {
   "date": "2026-03-16",
-  "generated_at": "07:38",
-  "elapsed_seconds": 1016,
+  "generated_at": "07:44",
+  "elapsed_seconds": 862,
   "errors": [],
   "stats": {
     "jo_analyses": 57,
     "jo_retenus": 0,
     "articles_presse": 11,
-    "depts_restriction": 5
+    "depts_restriction": 0
   },
   "items": [
     {
-      "id": "39031c3990a7",
+      "id": "ad4420b4e91f",
       "source": "INERIS",
-      "categorie": "Émissions",
-      "titre": "[Document] Liste des délégataires permanents de l'Ineris",
-      "resume": "Document PDF contenant une liste des délégataires permanents de l'Ineris.",
+      "categorie": "ICPE",
+      "titre": "[Document] Substances per- et polyfluoroalkylées (PFAS)",
+      "resume": "Ce document complète la méthodologie générale de surveillance environnementale autour des installations classées en matière de PFAS, substances toxiques pouvant provoquer des effets sanitaires sur la population.",
       "criticite": 3,
       "impact_gsf": true,
-      "url": "https://www.ineris.fr/fr/liste-delegataires-permanents-ineris",
+      "url": "https://www.ineris.fr/fr/substances-polyfluoroalkylees-pfas",
       "date": "2026-03-16",
       "top5": true
     },
@@ -27,7 +27,7 @@
       "source": "Novethic",
       "categorie": "Déchets",
       "titre": "Les enjeux de transition écologique redessinent la compétitivité européenne",
-      "resume": "Article discute de la compétitivité européenne et sa relation avec la transition écologique.",
+      "resume": "L'article traite de la compétitivité européenne dans le contexte de la transition écologique, faisant référence à des réformes telles que Omnibus et Clean Industrial Deal.",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/risques-climat-environnement-transition-competitivite-europe",
@@ -35,35 +35,11 @@
       "top5": true
     },
     {
-      "id": "d0cd9cfffedf",
-      "source": "Reporterre",
-      "categorie": "Eau",
-      "titre": "Municipales 2026 : comment s'en sortent les écologistes au premier tour ?",
-      "resume": "Les élections municipales de 2026 montrent des résultats variés pour les écologistes comparativement aux élections précédentes. En tête à Lyon et Bordeaux, mais devancée par un candidat de gauche à Paris.",
-      "criticite": 2,
-      "impact_gsf": true,
-      "url": "https://reporterre.net/Municipales-2026-comment-s-en-sortent-les-ecologistes-au-premier-tour",
-      "date": "2026-03-15",
-      "top5": true
-    },
-    {
-      "id": "aca0601ac468",
-      "source": "Reporterre",
-      "categorie": "Déchets",
-      "titre": "Fréjus repart avec David Rachline, maire d'extrême droite qui bétonne à tout-va",
-      "resume": "David Rachline, maire d'extrême droite à Fréjus, a été réélu pour un troisième mandat. Sa politique de grands projets urbains a entraîné une artificialisation des sols galopante.",
-      "criticite": 2,
-      "impact_gsf": true,
-      "url": "https://reporterre.net/Frejus-repart-avec-David-Rachline-maire-d-extreme-droite-qui-betonne-a-tout-va",
-      "date": "2026-03-15",
-      "top5": true
-    },
-    {
       "id": "7f1ce22698b7",
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "Au Moyen-Orient, l'eau potable ciblée par la guerre",
-      "resume": "Dans le Moyen-Orient, les usines de désalinisation sont ciblées militairement, réduisant ainsi l'approvisionnement en eau potable. Cela risque de devenir une nouvelle cible stratégique pour les conflits autour de cette ressource vitale.",
+      "resume": "Les bombardements d'usines de désalinisation dans le Moyen-Orient ont rendu l'eau potable une cible militaire. Cela s'inscrit dans une longue histoire de conflit autour de cette ressource vitale.",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://reporterre.net/Au-Moyen-Orient-l-eau-potable-ciblee-par-la-guerre",
@@ -75,34 +51,82 @@
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "« 3 428 milliardaires saccagent la planète, et nous avec »",
-      "resume": "L'article traite du phénomène des milliardaires et leur alliance avec l'extrême droite. Cela a un impact potentiel sur la société et est donc considéré comme important.",
+      "resume": "Cette chronique aborde la concentration de richesse extrême et son alliance avec l'extrême droite, pointant l'importance d'y réagir.",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://reporterre.net/3-428-milliardaires-saccagent-la-planete-et-nous-avec",
       "date": "2026-03-14",
-      "top5": false
+      "top5": true
     },
     {
       "id": "cc3122178389",
       "source": "Reporterre",
       "categorie": "Biodiversité",
       "titre": "Municipales : pourquoi le vote est crucial pour l'écologie",
-      "resume": "Les élections municipales sont cruciales pour la transformation écologique car les maires détiennent du pouvoir d'urbanisme et sont près des citoyens.",
+      "resume": "Les élections municipales ont un impact important pour les politiques environnementales en France.",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://reporterre.net/Municipales-pourquoi-le-vote-est-crucial-pour-l-ecologie",
       "date": "2026-03-14",
-      "top5": false
+      "top5": true
     },
     {
       "id": "d28aea853ad5",
       "source": "INERIS",
       "categorie": "Eau",
       "titre": "[Document] Nouvelles approches d’évaluation de la qualité chimique et (éco)toxicologique de rejets industriels : bilan de travaux de recherche de l’Ineris",
-      "resume": "Cette note résume les travaux de recherche qui démontrent l'utilité des stratégies bioanalytiques pour améliorer la surveillance chimique réglementaire des milieux et des rejets industriels.",
+      "resume": "La note résume les travaux de recherche de l'Ineris sur la caractérisation des rejets industriels complexes et leur impact sur l'environnement. Des approches bioanalytiques combinant effets biologiques et physico-chimiques offrent des solutions pour améliorer la surveillance chimique réglementaire.",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://www.ineris.fr/fr/nouvelles-approches-evaluation-qualite-chimique-ecotoxicologique-rejets-industriels-bilan-travaux",
+      "date": "2026-03-16",
+      "top5": false
+    },
+    {
+      "id": "39031c3990a7",
+      "source": "INERIS",
+      "categorie": "Émissions",
+      "titre": "[Document] Liste des délégataires permanents de l'Ineris",
+      "resume": "Fichier PDF incomplet contenant des données de l'Ineris concernant des délégataires permanents. Il semble qu'il y ait une liste qui n'est pas encore complète.",
+      "criticite": 2,
+      "impact_gsf": true,
+      "url": "https://www.ineris.fr/fr/liste-delegataires-permanents-ineris",
+      "date": "2026-03-16",
+      "top5": false
+    },
+    {
+      "id": "d0cd9cfffedf",
+      "source": "Reporterre",
+      "categorie": "Eau",
+      "titre": "Municipales 2026 : comment s'en sortent les écologistes au premier tour ?",
+      "resume": "Municipales 2026 : comment s'en sortent les écologistes au premier tour ?",
+      "criticite": 1,
+      "impact_gsf": false,
+      "url": "https://reporterre.net/Municipales-2026-comment-s-en-sortent-les-ecologistes-au-premier-tour",
+      "date": "2026-03-15",
+      "top5": false
+    },
+    {
+      "id": "aca0601ac468",
+      "source": "Reporterre",
+      "categorie": "Déchets",
+      "titre": "Fréjus repart avec David Rachline, maire d'extrême droite qui bétonne à tout-va",
+      "resume": "David Rachline, maire d'extrême droite de Fréjus, a été réélu dès le premier tour pour un troisième mandat.",
+      "criticite": 1,
+      "impact_gsf": false,
+      "url": "https://reporterre.net/Frejus-repart-avec-David-Rachline-maire-d-extreme-droite-qui-betonne-a-tout-va",
+      "date": "2026-03-15",
+      "top5": false
+    },
+    {
+      "id": "756ad777a3c1",
+      "source": "INERIS",
+      "categorie": "Biodiversité",
+      "titre": "[Actualité] Lancement du projet Persée : une nouvelle approche en écotoxicologie des substances persistantes",
+      "resume": "Le projet Persée lancé le 22 janvier 2026 étudie une nouvelle approche pour évaluer les risques des substances persistantes. Financé par l'ANSES, il réunit des partenaires scientifiques français et allemands.",
+      "criticite": 1,
+      "impact_gsf": false,
+      "url": "https://www.ineris.fr/fr/ineris/actualites/lancement-projet-persee-nouvelle-approche-ecotoxicologie-substances-persistantes",
       "date": "2026-03-16",
       "top5": false
     },
@@ -111,80 +135,15 @@
       "source": "INERIS",
       "categorie": "Eau",
       "titre": "[Document] Traitement des terrils houillers en combustion ou en échauffement : Synthèse bibliographique et retour d’expérience européen",
-      "resume": "En 2023 et suivants, l'Ineris étudie la gestion de terrils houillers en Europe avec des méthodes de combustion ou échauffement. Les principales techniques ont été analysées pour leur efficacité.",
-      "criticite": 2,
-      "impact_gsf": true,
+      "resume": "En 2024 et 2025, l'Ineris a réalisé une synthèse bibliographique européenne des techniques de traitement des terrils houillers en combustion/échauffement pour évaluer leur efficacité.",
+      "criticite": 1,
+      "impact_gsf": false,
       "url": "https://www.ineris.fr/fr/traitement-terrils-houillers-combustion-echauffement-synthese-bibliographique-retour-experience",
       "date": "2026-03-16",
       "top5": false
-    },
-    {
-      "id": "ad4420b4e91f",
-      "source": "INERIS",
-      "categorie": "ICPE",
-      "titre": "[Document] Substances per- et polyfluoroalkylées (PFAS)",
-      "resume": "Ce document complète un guide sur la surveillance des substances PFAS autour des installations classées en fournissant une méthodologie pour une surveillance environnementale correcte.",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.ineris.fr/fr/substances-polyfluoroalkylees-pfas",
-      "date": "2026-03-16",
-      "top5": false
-    },
-    {
-      "id": "756ad777a3c1",
-      "source": "INERIS",
-      "categorie": "Biodiversité",
-      "titre": "[Actualité] Lancement du projet Persée : une nouvelle approche en écotoxicologie des substances persistantes",
-      "resume": "[Actualité] Lancement du projet Persée : une nouvelle approche en écotoxicologie des substances persistantes",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.ineris.fr/fr/ineris/actualites/lancement-projet-persee-nouvelle-approche-ecotoxicologie-substances-persistantes",
-      "date": "2026-03-16",
-      "top5": false
     }
   ],
-  "restrictions_eau": [
-    {
-      "dept_code": "66",
-      "dept_nom": "Pyrénées-Orientales",
-      "niveau": "crise",
-      "niveauSup": "crise",
-      "niveauSou": "crise",
-      "niveauAep": "crise"
-    },
-    {
-      "dept_code": "974",
-      "dept_nom": "La Réunion",
-      "niveau": "alerte",
-      "niveauSup": "vigilance",
-      "niveauSou": "alerte",
-      "niveauAep": "alerte"
-    },
-    {
-      "dept_code": "2B",
-      "dept_nom": "Haute-Corse",
-      "niveau": "vigilance",
-      "niveauSup": "vigilance",
-      "niveauSou": null,
-      "niveauAep": "vigilance"
-    },
-    {
-      "dept_code": "972",
-      "dept_nom": "Martinique",
-      "niveau": "vigilance",
-      "niveauSup": "vigilance",
-      "niveauSou": null,
-      "niveauAep": "vigilance"
-    },
-    {
-      "dept_code": "11",
-      "dept_nom": "Aude",
-      "niveau": "alerte_renforcee",
-      "niveauSup": "alerte_renforcee",
-      "niveauSou": "alerte_renforcee",
-      "niveauAep": "alerte_renforcee"
-    }
-  ],
+  "restrictions_eau": [],
   "jo_autres": [
     {
       "nor": "ARMA2607296A",
