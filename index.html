@@ -423,13 +423,16 @@ function renderMap(){
     else if(p.nomDepartement)dep=String(p.nomDepartement);
     const type=p.type||'';
     const tl={SUP:'Eau superficielle',SOU:'Eau souterraine',AEP:'Eau potable'}[type]||type;
-    const arr=(p.arrete&&p.arrete.cheminFichier)||p.cheminFichier||p.chemin_fichier||p.urlArrete||'';
+    // Cherche le lien arrêté dans toutes les clés possibles (structure VigiEau v2)
+    const arr=(p.arrete&&(p.arrete.cheminFichier||p.arrete.cheminFichierArreteCadre))
+      ||p.cheminFichier||p.chemin_fichier||p.cheminFichierArrete
+      ||p.urlArrete||p.lienArrete||p.pdf||'';
     const col=NIVEAU_COLOR[niv]||'#94a3b8';
     const lbl=NIVEAU_LABEL[niv]||(niv?niv.charAt(0).toUpperCase()+niv.slice(1):'Sans restriction');
     layer.bindTooltip(`<b>${escHtml(nom)}</b>${dep?' — '+escHtml(dep):''}${tl?'<br><small>'+tl+'</small>':''}<br><span style="color:${col};font-weight:600">${lbl}</span>`,{sticky:true,opacity:1});
     layer.on('click',()=>{
       const el=document.getElementById('dept-detail');
-      el.innerHTML=`<div class="dept-detail-title"><span style="width:10px;height:10px;border-radius:50%;background:${col};display:inline-block;flex-shrink:0"></span><strong>${escHtml(nom)}</strong>${dep?' — '+escHtml(dep):''}<span style="color:${col};margin-left:6px">${lbl}</span>${tl?`<span style="font-size:10px;color:var(--muted);margin-left:8px">${tl}</span>`:''}</div>${arr?`<a href="${escHtml(arr)}" target="_blank" rel="noopener" style="font-size:11px;font-family:var(--mono);color:var(--blue);text-decoration:none;margin-top:4px;display:inline-block">📄 Arrêté préfectoral →</a>`:'<span style="font-size:11px;color:var(--muted)">Arrêté non disponible</span>'}`;
+      el.innerHTML=`<div class="dept-detail-title"><span style="width:10px;height:10px;border-radius:50%;background:${col};display:inline-block;flex-shrink:0"></span><strong>${escHtml(nom)}</strong>${dep?' — '+escHtml(dep):''}<span style="color:${col};margin-left:6px">${lbl}</span>${tl?`<span style="font-size:10px;color:var(--muted);margin-left:8px">${tl}</span>`:''}</div>${arr?`<a href="${escHtml(arr)}" target="_blank" rel="noopener" style="font-size:11px;font-family:var(--mono);color:var(--blue);text-decoration:none;margin-top:4px;display:inline-block">📄 Arrêté préfectoral →</a>`:`<span style="font-size:11px;color:var(--muted)">Arrêté PDF non référencé pour cette zone</span>`}`;
       el.classList.add('open');
     });
     layer.on('mouseover',e=>e.target.setStyle({fillOpacity:.85,weight:1.5}));
