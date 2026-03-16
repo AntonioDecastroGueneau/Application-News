@@ -1,41 +1,57 @@
 {
   "date": "2026-03-16",
-  "generated_at": "14:56",
-  "elapsed_seconds": 26,
+  "generated_at": "15:28",
+  "elapsed_seconds": 59,
   "errors": [],
   "stats": {
     "jo_analyses": 57,
     "jo_retenus": 0,
-    "articles_presse": 2,
-    "depts_restriction": 0
+    "articles_presse": 0,
+    "depts_restriction": 5
   },
-  "items": [
+  "items": [],
+  "restrictions_eau": [
     {
-      "id": "a366273cc010",
-      "source": "Actu-Environnement",
-      "categorie": "ICPE",
-      "titre": "Modification des ICPE et Iota : la déclaration en ligne est désormais possible",
-      "resume": "Modification des ICPE et Iota : la déclaration en ligne est désormais possible",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.actu-environnement.com/ae/news/installations-classees-icpe-iota-aiot-modification-notable-declaration-en-ligne-47688.php4#xtor=RSS-6",
-      "date": "2026-03-16",
-      "top5": true
+      "dept_code": "66",
+      "dept_nom": "Pyrénées-Orientales",
+      "niveau": "crise",
+      "niveauSup": "crise",
+      "niveauSou": "crise",
+      "niveauAep": "crise"
     },
     {
-      "id": "bb8d3f1f19a7",
-      "source": "Novethic",
-      "categorie": "Déchets",
-      "titre": "Les enjeux de transition écologique redessinent la compétitivité européenne",
-      "resume": "La transition écologique est au cœur des réformes européennes, notamment avec le rapport Draghi, qui appelle à faire de la compétitivité la priorité de la nouvelle mandature de la Commission.",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/risques-climat-environnement-transition-competitivite-europe",
-      "date": "2026-03-16",
-      "top5": true
+      "dept_code": "974",
+      "dept_nom": "La Réunion",
+      "niveau": "alerte",
+      "niveauSup": "vigilance",
+      "niveauSou": "alerte",
+      "niveauAep": "alerte"
+    },
+    {
+      "dept_code": "2B",
+      "dept_nom": "Haute-Corse",
+      "niveau": "vigilance",
+      "niveauSup": "vigilance",
+      "niveauSou": null,
+      "niveauAep": "vigilance"
+    },
+    {
+      "dept_code": "972",
+      "dept_nom": "Martinique",
+      "niveau": "vigilance",
+      "niveauSup": "vigilance",
+      "niveauSou": null,
+      "niveauAep": "vigilance"
+    },
+    {
+      "dept_code": "11",
+      "dept_nom": "Aude",
+      "niveau": "alerte_renforcee",
+      "niveauSup": "alerte_renforcee",
+      "niveauSou": "alerte_renforcee",
+      "niveauAep": "alerte_renforcee"
     }
   ],
-  "restrictions_eau": [],
   "jo_autres": [
     {
       "nor": "ARMA2607296A",
