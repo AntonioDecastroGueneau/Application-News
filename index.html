@@ -606,7 +606,9 @@ function buildDailyChart(){
     const v2025=agg[m][2025]||0,v2026=agg[m][2026]||0;
     const h2025=((v2025/mx)*160).toFixed(1),h2026=((v2026/mx)*160).toFixed(1);
     const label=m.slice(5)+'/'+m.slice(2,4);
-    return `<div class="bar-group" style="min-width:28px"><div style="display:flex;align-items:flex-end;gap:2px;height:160px"><div style="width:10px;height:${h2025}px;background:${COL2025};border-radius:2px 2px 0 0" title="2025: ${v2025}"></div><div style="width:10px;height:${h2026}px;background:${COL2026};border-radius:2px 2px 0 0" title="2026: ${v2026}"></div></div><div class="bar-label">${label}</div></div>`;
+    const lbl2025=v2025?`<span style="font-size:8px;color:${COL2025};font-family:var(--mono);line-height:1">${v2025}</span>`:'';
+    const lbl2026=v2026?`<span style="font-size:8px;color:${COL2026};font-family:var(--mono);line-height:1">${v2026}</span>`:'';
+    return `<div class="bar-group" style="min-width:28px"><div style="display:flex;align-items:flex-end;gap:2px;height:160px"><div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px"><div>${lbl2025}</div><div style="width:10px;height:${h2025}px;background:${COL2025};border-radius:2px 2px 0 0" title="2025: ${v2025}"></div></div><div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px"><div>${lbl2026}</div><div style="width:10px;height:${h2026}px;background:${COL2026};border-radius:2px 2px 0 0" title="2026: ${v2026}"></div></div></div><div class="bar-label">${label}</div></div>`;
   }).join('');
   return `${legend}<div class="chart-wrap" style="height:220px;align-items:flex-end">${bars}</div>`;
 }
