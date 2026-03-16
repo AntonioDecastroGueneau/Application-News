@@ -275,7 +275,7 @@ def get_groq_client() -> Groq:
     return _groq_client
 
 
-def call_groq(prompt: str, system: str = '') -> str:
+def call_groq(prompt: str, system: str = '', max_tokens: int = 300) -> str:
     """Appelle l'API Groq avec retry sur erreur 429 (rate limit)."""
     client = get_groq_client()
     messages = []
@@ -288,7 +288,7 @@ def call_groq(prompt: str, system: str = '') -> str:
             resp = client.chat.completions.create(
                 model=GROQ_MODEL,
                 messages=messages,
-                max_tokens=300,
+                max_tokens=max_tokens,
                 temperature=0.2,
                 response_format={"type": "json_object"},
             )
@@ -382,6 +382,48 @@ def groq_summarise(titre: str, contenu: str) -> dict:
     return analysis
 
 
+_BRIEFING_SKIP = [
+    'nomination', 'délégation de signature', 'désignation',
+    'portant nomination', 'portant délégation', 'délégation de pouvoir',
+    'cessation de fonctions',
+]
+
+def groq_briefing_jorf(articles: list) -> list:
+    """Génère un briefing exécutif des textes JORF les plus significatifs du jour."""
+    if not articles:
+        return []
+
+    candidates = [
+        a for a in articles
+        if not any(p in a['titre'].lower() for p in _BRIEFING_SKIP)
+    ]
+    if not candidates:
+        return []
+
+    lines = []
+    for i, a in enumerate(candidates[:80]):
+        nature = a.get('contenu', '').split(' — ')[0] or 'Texte'
+        lines.append(f"{i+1}. [{nature}] {a['titre']}")
+
+    system = 'Tu es juriste senior. Reponds uniquement en JSON valide.'
+    prompt = (
+        f"Textes publies au Journal Officiel aujourd'hui ({TODAY}) :\n\n"
+        + '\n'.join(lines)
+        + "\n\nSelectionne les 5 a 8 textes les plus significatifs pour un dirigeant "
+        "attentif a la reglementation environnementale, climatique et sectorielle. "
+        "Ignore nominations, delegations, textes purement administratifs. "
+        "Priorise : decrets d'application de lois structurantes, arretes a portee "
+        "sectorielle large, textes modifiant des equilibres reglementaires importants.\n\n"
+        'JSON: {"items": [{"titre": "...", "nature": "Decret|Arrete|Loi|...", '
+        '"essentiel": "1 phrase max expliquant pourquoi important"}]}'
+    )
+
+    raw = call_groq(prompt, system, max_tokens=700)
+    result = extract_json(raw)
+    if isinstance(result, dict) and 'items' in result:
+        return result['items']
+    log.warning("briefing_jorf: réponse Groq inattendue")
+    return []
 
 
 
@@ -476,13 +518,13 @@ def parse_jorf_xml(content: bytes):
 
 def fetch_jorf():
     log.info("=== JORF ===")
-    items, autres, total_analysed = [], [], 0
+    items, autres, total_analysed, briefing = [], [], 0, []
 
     try:
         url = get_today_jorf_url()
         if not url:
             log.warning("Aucun fichier JORF disponible")
-            return items, autres, 0
+            return items, autres, 0, briefing
 
         log.info(f"Téléchargement : {url}")
         resp = requests.get(url, timeout=180)
@@ -510,6 +552,10 @@ def fetch_jorf():
 
             total_analysed = len(all_articles)
             log.info(f"JORF : {total_analysed} textes keywords généraux")
+
+            # Briefing exécutif — sur l'ensemble des textes du jour
+            briefing = groq_briefing_jorf(all_articles)
+            log.info(f"JORF briefing : {len(briefing)} textes retenus")
 
             def jorf_strict_match(titre: str) -> bool:
                 t = titre.lower()
@@ -557,7 +603,7 @@ def fetch_jorf():
         log.error(f"JORF fatal : {e}", exc_info=True)
 
     log.info(f"JORF : {len(items)} retenus / {total_analysed} analysés ({len(autres)} autres)")
-    return items, autres, total_analysed
+    return items, autres, total_analysed, briefing
 
 
 # ─────────────────────────────────────────────
@@ -1200,10 +1246,11 @@ def main() -> int:
     stats  = {}
     restrictions = []
     jorf_autres  = []
+    briefing_jorf = []
 
     # 1. JORF
     try:
-        jorf_items, jorf_autres, jorf_total = fetch_jorf()
+        jorf_items, jorf_autres, jorf_total, briefing_jorf = fetch_jorf()
         items.extend(jorf_items)
         stats['jo_analyses'] = jorf_total
         stats['jo_retenus']  = len(jorf_items)
@@ -1260,6 +1307,7 @@ def main() -> int:
         'items'           : unique,
         'restrictions_eau': restrictions,
         'jo_autres'       : jorf_autres,
+        'briefing_jorf'   : briefing_jorf,
     }
 
     log.info(f"JSON : {len(unique)} items, {len(restrictions)} départements eau")
