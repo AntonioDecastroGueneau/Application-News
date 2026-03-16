@@ -464,7 +464,18 @@ def fetch_rss_source(source: dict):
     name  = source['name']
 
     try:
-        feed = feedparser.parse(source['url'])
+        # Passage par requests pour forcer un User-Agent navigateur
+        # (feedparser natif est bloqué par certains serveurs sur GitHub Actions)
+        try:
+            rss_resp = requests.get(
+                source['url'],
+                timeout=TIMEOUT,
+                headers={'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'},
+            )
+            feed = feedparser.parse(rss_resp.content)
+        except Exception:
+            feed = feedparser.parse(source['url'])  # fallback feedparser natif
+
         if feed.bozo and not feed.entries:
             raise ValueError(f"Feed invalide : {feed.bozo_exception}")
 
