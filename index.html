@@ -506,18 +506,6 @@ html, body {
 .card-date { font-family: var(--mono); font-size: 10px; color: var(--muted2);
   margin-left: auto; white-space: nowrap; }
 
-/* ── FILTRE 24H ── */
-.filter-toggle { display: flex; align-items: center; gap: 8px; padding: 5px 0;
-  cursor: pointer; user-select: none; }
-.filter-toggle input { display: none; }
-.toggle-track { width: 28px; height: 14px; border-radius: 7px;
-  background: var(--border2); position: relative; transition: background .2s; }
-.filter-toggle.on .toggle-track { background: var(--accent); }
-.toggle-thumb { width: 10px; height: 10px; border-radius: 50%; background: #fff;
-  position: absolute; top: 2px; left: 2px; transition: left .2s; }
-.filter-toggle.on .toggle-thumb { left: 16px; }
-.toggle-lbl { font-size: 11px; color: var(--muted); }
-.filter-toggle.on .toggle-lbl { color: var(--text); }
 
 /* ── ONGLET JO ── */
 #jo-view { padding: 16px; overflow-y: auto; height: 100%; }
@@ -623,16 +611,6 @@ html, body {
       <div id="sidebar-stats"></div>
     </div>
 
-    <!-- Filtre 24h -->
-    <div class="s-section">
-      <div class="s-label">Affichage</div>
-      <label class="filter-toggle on" id="toggle-24h" onclick="toggle24h(this)">
-        <input type="checkbox" checked>
-        <div class="toggle-track"><div class="toggle-thumb"></div></div>
-        <span class="toggle-lbl">Articles &lt; 24h</span>
-      </label>
-    </div>
-
     <!-- Alertes eau -->
     <div class="s-section">
       <div class="s-label">Alertes eau</div>
@@ -704,7 +682,6 @@ let currentDate = null;
 let currentView = 'feed';
 let catFilter   = 'all';
 let srcFilters  = { jorf: true, presse: true, eau: true };
-let filter24h   = true;   // filtre 24h actif par défaut
 let map         = null;
 let geojsonLayer = null;
 let geojsonData  = null;
@@ -893,10 +870,6 @@ function renderFeed() {
 function scrollToItem(id) {
   // S'assurer qu'on est sur le feed et que les items sont rendus
   if (currentView !== 'feed') switchView('feed');
-  // Désactiver le filtre 24h si l'article est potentiellement filtré
-  filter24h = false;
-  const toggle = document.getElementById('toggle-24h');
-  if (toggle) toggle.classList.remove('on');
   renderFeed();
   // Attendre que le DOM soit mis à jour
   setTimeout(() => {
@@ -920,37 +893,13 @@ function scrollToItem(id) {
 function getFilteredItems() {
   if (!D?.items) return [];
 
-  // Calcul de la borne 24h (lundi → depuis vendredi 18h)
-  const now = new Date();
-  const isMonday = now.getDay() === 1;
-  let cutoff;
-  if (isMonday) {
-    // Vendredi de la semaine précédente à 18h
-    cutoff = new Date(now);
-    cutoff.setDate(now.getDate() - 3);
-    cutoff.setHours(18, 0, 0, 0);
-  } else {
-    cutoff = new Date(now.getTime() - 24 * 60 * 60 * 1000);
-  }
-
   return D.items.filter(item => {
     if (catFilter !== 'all' && item.categorie !== catFilter) return false;
     const stype = sourceType(item.source);
     if (stype === 'jorf'   && !srcFilters.jorf)   return false;
     if (stype === 'presse' && !srcFilters.presse)  return false;
-    // Filtre 24h
-    if (filter24h && item.date) {
-      const d = new Date(item.date);
-      if (d < cutoff) return false;
-    }
     return true;
   });
-}
-
-function toggle24h(el) {
-  filter24h = !filter24h;
-  el.classList.toggle('on', filter24h);
-  renderFeed();
 }
 
 function filterCat(cat) {
