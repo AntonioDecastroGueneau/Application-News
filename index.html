@@ -678,6 +678,7 @@ html, body {
     <!-- JO / DILA -->
     <div class="view" id="jo-view">
       <div class="jo-title">Journal Officiel — tous les textes analysés</div>
+      <div id="jo-stats"></div>
       <input class="jo-search" id="jo-search" type="text" placeholder="Rechercher un arrêté, décret..." oninput="filterJO()">
       <div id="jo-groups"></div>
     </div>
@@ -876,8 +877,19 @@ function renderFeed() {
 }
 
 function scrollToItem(id) {
-  const el = document.getElementById('item-' + id);
-  if (el) { switchView('feed'); el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+  if (currentView !== 'feed') {
+    switchView('feed');
+    renderFeed();
+  }
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    const el = document.getElementById('item-' + id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.style.transition = 'box-shadow .4s';
+      el.style.boxShadow = '0 0 0 2px var(--accent)';
+      setTimeout(() => { el.style.boxShadow = ''; el.style.transition = ''; }, 1800);
+    }
+  }));
 }
 
 function getFilteredItems() {
@@ -968,25 +980,38 @@ function renderMap() {
   }
   function onEachZone(feature, layer) {
     const p   = feature.properties;
-    const niv = (p.niveauGravite || p.niveau_gravite || p.statut || '').toLowerCase();
-    const nom = p.nomZone || p.nom_zone || p.nom || p.libelle || 'Zone';
-    const dep = p.departement || p.numeroDepartement || '';
-    const col = NIVEAU_COLOR[niv] || '#4caf50';
-    const lbl = NIVEAU_LABEL[niv] || (niv || 'Aucune restriction');
-    layer.bindTooltip(`<strong>${nom}</strong>${dep?' — '+dep:''}<br><span style="color:${col}">${lbl}</span>`,
-      { sticky: true, opacity: 1 });
+    // Le GeoJSON VigiEau utilise différentes clés selon les versions
+    const niv = (p.niveauGravite || p.niveauGraviteMax || p.niveau || p.statut || '').toLowerCase();
+    // Nom de zone en français — éviter les noms anglais du fond de carte
+    const nom = p.nomZone || p.nom || p.libelle || p.name || 'Zone';
+    const dep = p.nomDepartement || p.departement || p.numeroDepartement || '';
+    const col = NIVEAU_COLOR[niv] || '#2e7d32';
+    const lbl = NIVEAU_LABEL[niv] || (niv ? niv.charAt(0).toUpperCase() + niv.slice(1) : 'Sans restriction');
+    // URL arrêté — plusieurs clés possibles
+    const arrete = p.cheminFichier || p.chemin_fichier || p.urlArrete || p.url_arrete || p.lienArreteRestriction || '';
+
+    layer.bindTooltip(`
+      <strong>${escHtml(nom)}</strong>${dep ? '<br><span style="color:var(--muted2)">'+escHtml(dep)+'</span>' : ''}<br>
+      <span style="color:${col};font-weight:500">${lbl}</span>
+    `, { sticky: true, opacity: 1, className: 'leaflet-tooltip-dark' });
+
     layer.on('click', () => {
       const el = document.getElementById('dept-detail');
-      const arrete = p.cheminFichier || p.chemin_fichier || '';
-      el.innerHTML = `<div class="dept-detail-title">
-          <span style="background:${col};width:10px;height:10px;display:inline-block;border-radius:50%;margin-right:6px"></span>
-          ${nom} — <span style="color:${col}">${lbl}</span></div>
-        ${arrete ? `<a href="${arrete}" target="_blank" rel="noopener"
-            style="font-size:11px;font-family:var(--mono);color:var(--accent);text-decoration:none">Voir l'arrêté →</a>`
-          : '<span style="font-size:11px;color:var(--muted)">Pas d\'arrêté disponible</span>'}`;
+      el.innerHTML = `
+        <div class="dept-detail-title">
+          <span style="background:${col};width:10px;height:10px;display:inline-block;border-radius:50%;margin-right:6px;flex-shrink:0"></span>
+          <strong>${escHtml(nom)}</strong>${dep ? ' — ' + escHtml(dep) : ''}
+          &nbsp;<span style="color:${col}">${lbl}</span>
+        </div>
+        ${arrete
+          ? `<a href="${escHtml(arrete)}" target="_blank" rel="noopener"
+                style="font-size:11px;font-family:var(--mono);color:var(--accent);text-decoration:none;display:inline-block;margin-top:4px">
+               📄 Voir l'arrêté préfectoral →
+             </a>`
+          : '<span style="font-size:11px;color:var(--muted)">Arrêté non disponible pour cette zone</span>'}`;
       el.classList.add('open');
     });
-    layer.on('mouseover', e => e.target.setStyle({ fillOpacity: 0.85, weight: 1.5 }));
+    layer.on('mouseover', e => e.target.setStyle({ fillOpacity: 0.9, weight: 2 }));
     layer.on('mouseout',  e => geojsonLayer && geojsonLayer.resetStyle(e.target));
   }
 
@@ -1108,6 +1133,31 @@ function renderJO() {
   const search = document.getElementById('jo-search')?.value.toLowerCase() || '';
   const groupsEl = document.getElementById('jo-groups');
   if (!groupsEl) return;
+
+  // Stats JO en haut
+  const joStatsEl = document.getElementById('jo-stats');
+  if (joStatsEl) {
+    const nbTotal = D?.stats?.jo_analyses || 0;
+    const nbGsf   = D?.stats?.jo_retenus  || 0;
+    joStatsEl.innerHTML = `
+      <div style="display:flex;gap:16px;margin-bottom:12px;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;align-items:center;background:var(--surface2);
+          border:1px solid var(--border);border-radius:var(--radius);padding:8px 16px">
+          <span style="font-family:var(--mono);font-size:20px;font-weight:600;color:var(--text)">${nbTotal}</span>
+          <span style="font-family:var(--mono);font-size:9px;color:var(--muted2);text-transform:uppercase;letter-spacing:.1em">textes analysés</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;background:var(--surface2);
+          border:1px solid ${nbGsf > 0 ? 'var(--accent)' : 'var(--border)'};border-radius:var(--radius);padding:8px 16px">
+          <span style="font-family:var(--mono);font-size:20px;font-weight:600;color:${nbGsf > 0 ? 'var(--accent)' : 'var(--muted)'}">${nbGsf}</span>
+          <span style="font-family:var(--mono);font-size:9px;color:var(--muted2);text-transform:uppercase;letter-spacing:.1em">pertinents GSF</span>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;background:var(--surface2);
+          border:1px solid var(--border);border-radius:var(--radius);padding:8px 16px">
+          <span style="font-family:var(--mono);font-size:20px;font-weight:600;color:var(--text)">${items.length}</span>
+          <span style="font-family:var(--mono);font-size:9px;color:var(--muted2);text-transform:uppercase;letter-spacing:.1em">dans ce JO</span>
+        </div>
+      </div>`;
+  }
 
   if (!items.length) {
     groupsEl.innerHTML = '<div class="jo-empty">Aucun texte JO pour cette date</div>';
