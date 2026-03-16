@@ -691,13 +691,14 @@ def _normalize_niveau(niveau: str) -> str:
 
 def _parse_vigieau_csv(content: str, year: int) -> dict:
     """
-    Parse un CSV arrêtés VigiEau (restriction ou cadre).
-    Colonnes attendues : id, numero, date_debut, date_fin, statut,
-    departement_pilote, departements, zones_alerte.type, ...
+    Parse un CSV arrêtés VigiEau (format data.gouv.fr).
+    Colonnes : id, numero, date_debut, date_fin, statut, departement,
+               zones_alerte.niveau_gravite (JSON array), ...
     Retourne {'par_mois': {...}, 'par_dept': {...}}
     """
     import csv as _csv
     import io
+    import json as _json
     from collections import defaultdict
 
     par_mois = defaultdict(lambda: {n: 0 for n in NIVEAUX_GRAVITE})
@@ -705,7 +706,7 @@ def _parse_vigieau_csv(content: str, year: int) -> dict:
 
     reader = _csv.DictReader(io.StringIO(content), delimiter=',')
     headers = reader.fieldnames or []
-    log.debug(f"CSV colonnes ({year}): {headers[:10]}")
+    log.debug(f"CSV colonnes ({year}): {headers[:15]}")
 
     rows_ok = 0
     rows_skip = 0
@@ -714,27 +715,45 @@ def _parse_vigieau_csv(content: str, year: int) -> dict:
         try:
             date_debut_str = row.get('date_debut', '').strip()
             date_fin_str   = row.get('date_fin', '').strip()
-            depts_str      = row.get('departements', '').strip()
 
-            # Le niveau peut être dans plusieurs colonnes selon la version du CSV
-            niveau_raw = (
-                row.get('zones_alerte.type', '')       # CSV restriction
-                or row.get('niveauGravite', '')         # CSV cadre v2
-                or row.get('niveau_gravite', '')        # variante
-                or row.get('niveauAlerte', '')          # ancienne API
+            # Département — colonne simple (code numérique ex: "76")
+            dept_code_raw = (
+                row.get('departement', '')
+                or row.get('departement_pilote', '')
+                or ''
+            ).strip().strip('"')
+            dept_code = dept_code_raw.zfill(2) if dept_code_raw else ''
+
+            # Niveau de gravité — zones_alerte.niveau_gravite est un tableau JSON
+            # ex: ["vigilance","vigilance"] ou "vigilance"
+            niveau_raw_col = (
+                row.get('zones_alerte.niveau_gravite', '')
+                or row.get('niveau_gravite', '')
+                or row.get('niveauGravite', '')
+                or row.get('niveauAlerte', '')
                 or ''
             ).strip()
-            niveau = _normalize_niveau(niveau_raw)
 
-            if not date_debut_str:
+            # Parser le tableau JSON ou prendre la valeur directe
+            niveaux_liste = []
+            if niveau_raw_col.startswith('['):
+                try:
+                    parsed = _json.loads(niveau_raw_col)
+                    niveaux_liste = [_normalize_niveau(n) for n in parsed if n]
+                except Exception:
+                    pass
+            elif niveau_raw_col:
+                niveaux_liste = [_normalize_niveau(niveau_raw_col)]
+
+            # Prendre le niveau le plus grave
+            ordre_gravite = {n: i for i, n in enumerate(NIVEAUX_GRAVITE)}
+            niveaux_valides = [n for n in niveaux_liste if n in NIVEAUX_GRAVITE]
+            if not niveaux_valides:
                 rows_skip += 1
                 continue
+            niveau = max(niveaux_valides, key=lambda n: ordre_gravite.get(n, 0))
 
-            # Si le niveau est absent ou inconnu, utiliser 'vigilance' par défaut
-            # pour quand même compter les arrêtés (mieux que de tout ignorer)
-            if niveau not in NIVEAUX_GRAVITE:
-                if niveau:
-                    log.debug(f"Niveau inconnu '{niveau}' → ignoré")
+            if not date_debut_str:
                 rows_skip += 1
                 continue
 
@@ -745,7 +764,7 @@ def _parse_vigieau_csv(content: str, year: int) -> dict:
                 rows_skip += 1
                 continue
 
-            if date_fin_str and date_fin_str not in ('', 'None', 'null', 'NaT'):
+            if date_fin_str and date_fin_str not in ('', 'None', 'null', 'NaT', 'undefined'):
                 try:
                     date_fin = datetime.strptime(date_fin_str[:10], '%Y-%m-%d')
                 except ValueError:
@@ -765,31 +784,21 @@ def _parse_vigieau_csv(content: str, year: int) -> dict:
 
             nb_jours = (d_end - d_start).days + 1
 
-            # Agréger par mois (compter 1 arrêté actif par mois)
+            # Agréger par mois
             cur = d_start
             while cur <= d_end:
                 mois_key = cur.strftime('%Y-%m')
                 par_mois[mois_key][niveau] += 1
-                # Avancer au 1er du mois suivant
                 if cur.month == 12:
                     cur = cur.replace(year=cur.year + 1, month=1, day=1)
                 else:
                     cur = cur.replace(month=cur.month + 1, day=1)
 
             # Agréger par département
-            depts = [d.strip() for d in depts_str.split(';') if d.strip()]
-            if not depts:
-                dept_code = row.get('departement_pilote', '').strip()
-                if dept_code:
-                    depts = [dept_code]
-
-            for dept in depts:
-                parts = dept.split(' - ', 1)
-                code  = parts[0].strip().zfill(2) if parts[0].strip() else '00'
-                nom   = parts[1].strip() if len(parts) > 1 else code
-                if not par_dept[code]['nom']:
-                    par_dept[code]['nom'] = nom
-                par_dept[code]['jours'][niveau] += nb_jours
+            if dept_code:
+                if not par_dept[dept_code]['nom']:
+                    par_dept[dept_code]['nom'] = dept_code
+                par_dept[dept_code]['jours'][niveau] += nb_jours
 
             rows_ok += 1
 
