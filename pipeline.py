@@ -241,22 +241,26 @@ def extract_json(text: str) -> dict:
 
 
 def _gsf_est_pertinent(titre: str, contenu: str) -> bool:
-    """Filtre binaire strict : pertinent pour le responsable Env/Decarbo de GSF ?"""
-    system = 'Tu es un filtre binaire. JSON uniquement, rien dautre.'
+    """Filtre binaire : l'article vaut-il la peine d'être lu par le resp. Env/Decarbo GSF ?"""
+    system = 'Tu es un filtre. Reponds uniquement {ok: true} ou {ok: false}.'
     prompt = (
-        'GSF = groupe de nettoyage industriel. '
-        'Responsable Environnement veut lire : ICPE, REACH, biocides, dechets industriels, '
-        'eau industrielle, decarbonation entreprises, RSE reglementaire, sante-securite '
-        'agents nettoyage, convention collective proprete, circularite/REP.\n'
-        'Exclure : politique, elections, sondages, guerres, geopolitique, immobilier, '
-        'logement, agriculture, finance, faits divers, polemiques societales.\n\n'
+        'Responsable Environnement et Decarbonation chez GSF (nettoyage industriel).\n'
+        'GARDER si le sujet est : reglementation environnementale (ICPE, REACH, biocides, dechets, '
+        'eau industrielle, air, sols), decarbonation des entreprises, RSE/devoir de vigilance, '
+        'sante-securite professionnelle, filiere proprete, circularite/REP, energie industrie, '
+        'biodiversite reglementaire, reporting ESG, risques climatiques entreprises.\n'
+        'REJETER seulement si le sujet est CLAIREMENT : elections/sondages, guerre/geopolitique pure, '
+        'immobilier residentiel, agriculture/elevage, finance de marche, faits divers, sport, culture.\n'
+        'EN CAS DE DOUTE : garder (ok: true).\n\n'
         f'TITRE: {titre}\n'
-        f'DEBUT: {contenu[:300]}\n\n'
-        'Reponds uniquement: {"ok": true} si dans le perimetre, {"ok": false} sinon.'
+        f'DEBUT: {contenu[:200]}\n\n'
+        'Reponds: {"ok": true} ou {"ok": false}'
     )
     raw = call_groq(prompt, system)
     result = extract_json(raw)
-    return bool(result.get('ok', False))
+    # Par défaut garder si le LLM ne répond pas clairement
+    return result.get('ok', True)
+
 
 
 def _gsf_resumer(titre: str, contenu: str) -> dict:
@@ -658,43 +662,94 @@ def fetch_vigieau():
 # ─────────────────────────────────────────────
 # VIGIEAU HISTORIQUE — data.gouv.fr
 # ─────────────────────────────────────────────
+# VIGIEAU HISTORIQUE — data.gouv.fr
+# ─────────────────────────────────────────────
 
-DATAGOUV_DATASET_ID = 'donnee-secheresse-vigieau'
-DATAGOUV_API        = 'https://www.data.gouv.fr/api/1/datasets/'
+DATAGOUV_DATASET_ID   = 'donnee-secheresse-vigieau'
+DATAGOUV_API          = 'https://www.data.gouv.fr/api/1/datasets/'
 VIGIEAU_HISTORY_YEARS = list(range(2020, datetime.now().year + 1))
 
+# Niveaux exacts dans les CSV VigiEau (sensibles à la casse après .lower())
 NIVEAUX_GRAVITE = ['vigilance', 'alerte', 'alerte renforcée', 'crise']
+
+# URLs stables de secours si l'API data.gouv.fr ne répond pas
+# Format : https://www.data.gouv.fr/api/1/datasets/r/<resource_id>
+# Ces IDs proviennent de la page du dataset VigiEau sur data.gouv.fr
+VIGIEAU_FALLBACK_URLS = {
+    2026: 'https://www.data.gouv.fr/api/1/datasets/r/0732e970-c12c-4e6a-adca-5ac9dbc3fdfa',
+}
+
+
+def _normalize_niveau(niveau: str) -> str:
+    """Normalise un niveau de gravité VigiEau pour correspondre à NIVEAUX_GRAVITE."""
+    n = niveau.lower().strip()
+    n = n.replace('_', ' ')
+    n = n.replace('renforcee', 'renforcée')
+    n = n.replace('renforcé', 'renforcée')
+    return n
 
 
 def _parse_vigieau_csv(content: str, year: int) -> dict:
     """
-    Parse un CSV arrêtés VigiEau et retourne les stats agrégées :
-    - par_mois : {YYYY-MM: {vigilance: N, alerte: N, alerte renforcée: N, crise: N}}
-    - par_dept : {code_dept: {nom, jours_alerte, jours_alerte_renforcee, jours_crise, total_jours_graves}}
+    Parse un CSV arrêtés VigiEau (restriction ou cadre).
+    Colonnes attendues : id, numero, date_debut, date_fin, statut,
+    departement_pilote, departements, zones_alerte.type, ...
+    Retourne {'par_mois': {...}, 'par_dept': {...}}
     """
-    import csv
+    import csv as _csv
     import io
     from collections import defaultdict
 
     par_mois = defaultdict(lambda: {n: 0 for n in NIVEAUX_GRAVITE})
     par_dept = defaultdict(lambda: {'nom': '', 'jours': {n: 0 for n in NIVEAUX_GRAVITE}})
 
-    reader = csv.DictReader(io.StringIO(content), delimiter=',')
+    reader = _csv.DictReader(io.StringIO(content), delimiter=',')
+    headers = reader.fieldnames or []
+    log.debug(f"CSV colonnes ({year}): {headers[:10]}")
+
+    rows_ok = 0
+    rows_skip = 0
 
     for row in reader:
         try:
             date_debut_str = row.get('date_debut', '').strip()
             date_fin_str   = row.get('date_fin', '').strip()
-            niveau         = row.get('zones_alerte.type', '').strip().lower()
             depts_str      = row.get('departements', '').strip()
 
-            if not date_debut_str or niveau not in NIVEAUX_GRAVITE:
+            # Le niveau peut être dans plusieurs colonnes selon la version du CSV
+            niveau_raw = (
+                row.get('zones_alerte.type', '')       # CSV restriction
+                or row.get('niveauGravite', '')         # CSV cadre v2
+                or row.get('niveau_gravite', '')        # variante
+                or row.get('niveauAlerte', '')          # ancienne API
+                or ''
+            ).strip()
+            niveau = _normalize_niveau(niveau_raw)
+
+            if not date_debut_str:
+                rows_skip += 1
+                continue
+
+            # Si le niveau est absent ou inconnu, utiliser 'vigilance' par défaut
+            # pour quand même compter les arrêtés (mieux que de tout ignorer)
+            if niveau not in NIVEAUX_GRAVITE:
+                if niveau:
+                    log.debug(f"Niveau inconnu '{niveau}' → ignoré")
+                rows_skip += 1
                 continue
 
             # Parse dates
-            date_debut = datetime.strptime(date_debut_str[:10], '%Y-%m-%d')
-            if date_fin_str and date_fin_str != 'None':
-                date_fin = datetime.strptime(date_fin_str[:10], '%Y-%m-%d')
+            try:
+                date_debut = datetime.strptime(date_debut_str[:10], '%Y-%m-%d')
+            except ValueError:
+                rows_skip += 1
+                continue
+
+            if date_fin_str and date_fin_str not in ('', 'None', 'null', 'NaT'):
+                try:
+                    date_fin = datetime.strptime(date_fin_str[:10], '%Y-%m-%d')
+                except ValueError:
+                    date_fin = datetime.now()
             else:
                 date_fin = datetime.now()
 
@@ -705,51 +760,57 @@ def _parse_vigieau_csv(content: str, year: int) -> dict:
             d_end   = min(date_fin, year_end)
 
             if d_start > d_end:
+                rows_skip += 1
                 continue
 
             nb_jours = (d_end - d_start).days + 1
 
-            # Agréger par mois
-            current = d_start
-            while current <= d_end:
-                mois_key = current.strftime('%Y-%m')
+            # Agréger par mois (compter 1 arrêté actif par mois)
+            cur = d_start
+            while cur <= d_end:
+                mois_key = cur.strftime('%Y-%m')
                 par_mois[mois_key][niveau] += 1
-                current = current.replace(day=28) + timedelta(days=4)
-                current = current.replace(day=1)
+                # Avancer au 1er du mois suivant
+                if cur.month == 12:
+                    cur = cur.replace(year=cur.year + 1, month=1, day=1)
+                else:
+                    cur = cur.replace(month=cur.month + 1, day=1)
 
             # Agréger par département
             depts = [d.strip() for d in depts_str.split(';') if d.strip()]
             if not depts:
                 dept_code = row.get('departement_pilote', '').strip()
-                dept_nom  = dept_code
                 if dept_code:
                     depts = [dept_code]
 
             for dept in depts:
-                # Format attendu: "01 - Ain" ou juste "01"
                 parts = dept.split(' - ', 1)
-                code  = parts[0].strip().zfill(2)
+                code  = parts[0].strip().zfill(2) if parts[0].strip() else '00'
                 nom   = parts[1].strip() if len(parts) > 1 else code
-                par_dept[code]['nom'] = nom
+                if not par_dept[code]['nom']:
+                    par_dept[code]['nom'] = nom
                 par_dept[code]['jours'][niveau] += nb_jours
+
+            rows_ok += 1
 
         except Exception as e:
             log.debug(f"Ligne CSV ignorée : {e}")
+            rows_skip += 1
             continue
 
-    # Sérialiser
-    mois_out = {}
-    for mois, niveaux in sorted(par_mois.items()):
-        mois_out[mois] = niveaux
+    log.info(f"  Parse CSV {year}: {rows_ok} lignes traitées, {rows_skip} ignorées, "
+             f"{len(par_mois)} mois, {len(par_dept)} depts")
 
+    # Sérialiser en dict plain (pas defaultdict)
+    mois_out = {k: dict(v) for k, v in sorted(par_mois.items())}
     dept_out = {}
     for code, data in par_dept.items():
-        graves = (data['jours'].get('alerte', 0) +
-                  data['jours'].get('alerte renforcée', 0) +
-                  data['jours'].get('crise', 0))
+        graves = (data['jours'].get('alerte', 0)
+                  + data['jours'].get('alerte renforcée', 0)
+                  + data['jours'].get('crise', 0))
         dept_out[code] = {
             'nom'          : data['nom'],
-            'jours'        : data['jours'],
+            'jours'        : dict(data['jours']),
             'total_graves' : graves,
         }
 
@@ -759,8 +820,11 @@ def _parse_vigieau_csv(content: str, year: int) -> dict:
 def fetch_vigieau_history() -> dict:
     """
     Télécharge et agrège l'historique des arrêtés VigiEau depuis data.gouv.fr.
-    Cache intelligent : ne re-télécharge que l'année en cours si le cache existe.
-    Retourne un dict prêt à écrire dans vigieau_history.json.
+    Stratégie :
+    1. Appelle l'API data.gouv.fr pour lister les ressources
+    2. Identifie les CSV annuels (matching souple sur le titre)
+    3. Cache intelligent : ne re-télécharge que l'année en cours
+    4. Fallback sur URLs hardcodées si l'API ne répond pas
     """
     log.info("=== VigiEau Historique ===")
 
@@ -772,13 +836,14 @@ def fetch_vigieau_history() -> dict:
     if history_file.exists():
         try:
             existing = json.loads(history_file.read_text(encoding='utf-8'))
-            log.info(f"Cache existant : années {list(existing.get('annees', {}).keys())}")
-        except Exception:
-            existing = {}
+            log.info(f"Cache existant : années {sorted(existing.get('annees', {}).keys())}")
+        except Exception as e:
+            log.warning(f"Cache VigiEau illisible : {e}")
 
     annees_cache = existing.get('annees', {})
 
-    # Récupérer la liste des ressources du dataset via l'API data.gouv.fr
+    # ── Étape 1 : Lister les ressources via l'API data.gouv.fr ──────────────
+    csv_par_annee = {}
     try:
         resp = requests.get(
             f"{DATAGOUV_API}{DATAGOUV_DATASET_ID}/",
@@ -786,75 +851,134 @@ def fetch_vigieau_history() -> dict:
             headers={'User-Agent': 'GSF-Veille/2.0'}
         )
         resp.raise_for_status()
-        dataset = resp.json()
-        resources = dataset.get('resources', [])
-        log.info(f"Dataset VigiEau : {len(resources)} ressources trouvées")
-    except Exception as e:
-        log.error(f"VigiEau history — impossible de lister les ressources : {e}")
-        return existing or {}
+        resources = resp.json().get('resources', [])
+        log.info(f"API data.gouv.fr : {len(resources)} ressources")
 
-    # Identifier les CSV arrêtés par année
-    csv_par_annee = {}
-    for res in resources:
-        title  = res.get('title', '')
-        format = res.get('format', '').lower()
-        url    = res.get('latest', '') or res.get('url', '')
+        for res in resources:
+            title   = res.get('title', '') or ''
+            fmt     = (res.get('format', '') or '').lower()
+            url     = res.get('url', '') or ''
+            filetype = res.get('filetype', '') or ''
 
-        if format not in ('csv', 'text/csv') and not url.endswith('.csv'):
-            continue
+            # Logger pour débug
+            log.debug(f"  Ressource: title='{title}' | format='{fmt}' | filetype='{filetype}'")
 
-        # "Arrêtés" = année en cours, "Arrêtés 2020" = historique
-        if title.strip() == 'Arrêtés':
-            csv_par_annee[current_year] = url
-        else:
+            # Filtre : doit être un CSV (format ou url)
+            is_csv = (
+                fmt in ('csv', 'text/csv')
+                or url.lower().endswith('.csv')
+                or filetype.lower() == 'file'
+            )
+            if not is_csv and 'csv' not in url.lower():
+                continue
+
+            title_lower = title.lower()
+
+            # Matching souple sur le titre — on cherche "arrêt" + éventuellement une année
+            # Exclure "arrêtés cadre" (c'est la réglementation, pas les arrêtés de restriction)
+            if 'cadre' in title_lower:
+                continue
+            if 'arret' not in title_lower and 'arrêt' not in title_lower:
+                continue
+
+            # Identifier l'année
+            found_year = None
             for y in VIGIEAU_HISTORY_YEARS:
-                if str(y) in title and 'Arrêtés' in title:
-                    csv_par_annee[y] = url
+                if str(y) in title:
+                    found_year = y
                     break
 
-    log.info(f"CSV identifiés : {sorted(csv_par_annee.keys())}")
+            if found_year is None:
+                # Pas d'année dans le titre → fichier de l'année en cours
+                found_year = current_year
 
-    # Télécharger uniquement ce qui manque ou l'année en cours
+            if found_year not in csv_par_annee:
+                csv_par_annee[found_year] = url
+                log.info(f"  CSV {found_year} identifié : '{title}' → {url[-50:]}")
+
+    except Exception as e:
+        log.warning(f"API data.gouv.fr inaccessible : {e}")
+
+    # ── Étape 2 : Fallback sur URLs hardcodées si rien trouvé ────────────────
+    if not csv_par_annee:
+        log.info("Fallback sur URLs hardcodées")
+        for year, url in VIGIEAU_FALLBACK_URLS.items():
+            csv_par_annee[year] = url
+
+    if not csv_par_annee:
+        log.warning("Aucun CSV VigiEau identifié — historique non mis à jour")
+        return _save_and_return_history(history_file, annees_cache)
+
+    log.info(f"CSV à traiter : {sorted(csv_par_annee.keys())}")
+
+    # ── Étape 3 : Télécharger et parser ──────────────────────────────────────
     for year in sorted(csv_par_annee.keys()):
-        url = csv_par_annee[year]
+        url      = csv_par_annee[year]
         year_str = str(year)
 
-        # Skip les années passées déjà en cache
+        # Skip les années passées déjà en cache (sauf si cache vide ou corrompu)
         if year_str in annees_cache and year != current_year:
-            log.info(f"Année {year} : cache OK, skip")
-            continue
+            cached = annees_cache[year_str]
+            if cached.get('par_mois') and cached.get('par_dept'):
+                log.info(f"Année {year} : cache OK ({len(cached['par_mois'])} mois)")
+                continue
 
         try:
-            log.info(f"Téléchargement CSV {year} : {url}")
-            r = requests.get(url, timeout=120, headers={'User-Agent': 'GSF-Veille/2.0'})
+            log.info(f"Téléchargement CSV {year} : {url[-60:]}")
+            r = requests.get(
+                url, timeout=120,
+                headers={'User-Agent': 'GSF-Veille/2.0'},
+                allow_redirects=True
+            )
             r.raise_for_status()
-            # Décoder proprement (le CSV peut être en latin-1)
+            log.info(f"  → {len(r.content)} octets")
+
+            # Décoder (UTF-8 ou latin-1)
             try:
                 content = r.content.decode('utf-8')
             except UnicodeDecodeError:
                 content = r.content.decode('latin-1')
 
+            # Vérifier que c'est bien un CSV avec les bonnes colonnes
+            first_line = content.split('\n')[0].lower()
+            if 'date_debut' not in first_line and 'date' not in first_line:
+                log.warning(f"CSV {year} : colonnes inattendues ({first_line[:80]})")
+                continue
+
             stats = _parse_vigieau_csv(content, year)
-            annees_cache[year_str] = stats
-            log.info(f"Année {year} : {len(stats['par_mois'])} mois, {len(stats['par_dept'])} depts")
+
+            if stats['par_mois'] or stats['par_dept']:
+                annees_cache[year_str] = stats
+            else:
+                log.warning(f"CSV {year} : aucune donnée parsée")
 
         except Exception as e:
-            log.warning(f"VigiEau CSV {year} erreur : {e}")
+            log.warning(f"CSV {year} erreur : {e}")
 
-    # Calculer le top 10 départements toutes années confondues
+    return _save_and_return_history(history_file, annees_cache)
+
+
+def _save_and_return_history(history_file, annees_cache: dict) -> dict:
+    """Calcule le top10, sauvegarde et retourne le résultat."""
+    # Top 10 départements toutes années confondues
     dept_total = {}
     for year_str, data in annees_cache.items():
         for code, info in data.get('par_dept', {}).items():
             if code not in dept_total:
-                dept_total[code] = {'nom': info['nom'], 'total_graves': 0,
-                                    'jours': {n: 0 for n in NIVEAUX_GRAVITE}}
+                dept_total[code] = {
+                    'nom': info.get('nom', code),
+                    'total_graves': 0,
+                    'jours': {n: 0 for n in NIVEAUX_GRAVITE}
+                }
             dept_total[code]['total_graves'] += info.get('total_graves', 0)
             for niv in NIVEAUX_GRAVITE:
-                dept_total[code]['jours'][niv] += info['jours'].get(niv, 0)
+                dept_total[code]['jours'][niv] += info.get('jours', {}).get(niv, 0)
 
     top10 = sorted(dept_total.items(), key=lambda x: x[1]['total_graves'], reverse=True)[:10]
-    top10_out = [{'code': c, 'nom': d['nom'], 'total_graves': d['total_graves'],
-                  'jours': d['jours']} for c, d in top10]
+    top10_out = [
+        {'code': c, 'nom': d['nom'], 'total_graves': d['total_graves'], 'jours': d['jours']}
+        for c, d in top10
+    ]
 
     result = {
         'updated_at' : datetime.now().isoformat(),
@@ -862,11 +986,12 @@ def fetch_vigieau_history() -> dict:
         'top10_depts': top10_out,
     }
 
-    # Écrire le cache
     history_file.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
-    log.info(f"vigieau_history.json écrit — {len(annees_cache)} années, top10 calculé")
+    log.info(f"vigieau_history.json : {len(annees_cache)} années, "
+             f"{len(top10_out)} depts top10")
 
     return result
+
 
 
 # ─────────────────────────────────────────────
