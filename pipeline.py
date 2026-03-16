@@ -42,6 +42,7 @@ GROQ_MAX_RETRY  = 4                          # Tentatives sur 429
 GROQ_RETRY_WAIT = 20                         # Secondes d'attente entre retries
 
 KEYWORDS = [
+    # Réglementation environnementale opérationnelle
     'ICPE', 'installation classée', 'eau', 'rejet aqueux', 'émissions',
     'biodiversité', 'espèce protégée', 'énergie', 'déchet', 'déchets',
     'pollution', 'environnement', 'écologique', 'REACH', 'biocide',
@@ -50,55 +51,52 @@ KEYWORDS = [
     'produit chimique', 'COV', 'composé organique volatil',
     'SEVESO', 'PPR', 'DPE', 'amiante', 'plomb', 'REP',
     'responsabilité élargie', 'VHU', 'bâtiment tertiaire',
+    # Climat & décarbonation stratégique
+    'climat', 'climatique', 'réchauffement', 'décarbonation', 'carbone',
+    'GES', 'gaz à effet de serre', 'neutralité carbone', 'net zéro',
+    'SNBC', 'PNACC', 'adaptation', 'mitigation', 'atténuation',
+    'trajectoire', 'transition énergétique', 'transition écologique',
+    'CSRD', 'reporting extra-financier', 'taxonomie verte',
+    'Accord de Paris', 'COP', 'GIEC', 'IPCC',
+    'catastrophe naturelle', 'inondation', 'sécheresse', 'canicule',
+    'événement extrême', 'submersion', 'feu de forêt',
+    'décarboner', 'bas-carbone', 'scope 1', 'scope 2', 'scope 3',
+    'bilan carbone', 'empreinte carbone', 'plan climat',
+    'France 2030', 'loi énergie', 'loi climat',
 ]
 
 JORF_KEYWORDS_STRICT = [
+    # Nettoyage / propreté (opérationnel)
     'nettoyage industriel', 'nettoyage tertiaire', 'nettoyage des locaux',
     'propreté industrielle', 'agent de propreté', 'entreprise de propreté',
     'branche propreté', 'convention collective', 'propreté et services',
     'désinfection', 'décontamination', 'hygiène des locaux',
+    # Déchets
     'déchet dangereux', 'déchets dangereux', 'déchet industriel', 'déchets industriels',
-    'DASRI', 'déchet infectieux', 'déchet de soins',
-    'collecte de déchets', 'traitement de déchets', 'élimination de déchets',
+    'DASRI', 'déchet infectieux', 'collecte de déchets', 'traitement de déchets',
     'responsabilité élargie du producteur', 'filière REP',
+    # Produits chimiques
     'biocide', 'détergent', 'substance dangereuse', 'produit chimique',
     'CMR', 'composé organique volatil', 'COV', 'solvant',
-    'REACH', 'CLP', 'fiche de données de sécurité', 'FDS',
+    'REACH', 'CLP', 'fiche de données de sécurité',
+    # ICPE / risques industriels
     'installation classée', 'ICPE', 'SEVESO', 'rubrique ICPE',
-    'radioprotection', 'zone contrôlée', 'zone surveillée',
-    'amiante', 'désamiantage', 'plomb', 'saturnisme',
+    'radioprotection', 'zone contrôlée', 'amiante', 'plomb',
+    # Climat & énergie (législatif)
+    'stratégie nationale bas-carbone', 'SNBC', 'plan national adaptation',
+    'PNACC', 'transition énergétique', 'neutralité carbone', 'net zéro',
+    'loi climat', 'loi énergie', 'décarbonation', 'gaz à effet de serre',
+    'reporting durabilité', 'CSRD', 'taxonomie', 'plan climat',
+    'objectif climatique', 'trajectoire carbone', 'bilan carbone',
 ]
 
 RSS_SOURCES = [
-    {
-        'name': 'ADEME',
-        'url': 'https://www.ademe.fr/feed/',
-        'categorie': 'Presse',
-        'fallback_crawl': 'https://www.ademe.fr/actualites/',
-    },
+    # ── Presse environnement généraliste ─────────────────────────────
     {
         'name': 'Actu-Environnement',
         'url': 'https://www.actu-environnement.com/flux/rss/environnement/',
         'categorie': 'Presse',
         'fallback_crawl': 'https://www.actu-environnement.com/ae/news/',
-    },
-    {
-        'name': 'Min. Transition Écologique',
-        'url': 'https://www.ecologie.gouv.fr/rss-actualites.xml',
-        'categorie': 'Réglementation',
-        'fallback_crawl': 'https://www.ecologie.gouv.fr/actualites',
-    },
-    {
-        'name': 'Contexte Environnement',
-        'url': 'https://www.contexte.com/articles/rss/edition/environnement',
-        'categorie': 'Réglementation',
-        'fallback_crawl': 'https://www.contexte.com/environnement/',
-    },
-    {
-        'name': 'Novethic',
-        'url': 'https://www.novethic.fr/feed',
-        'categorie': 'Presse',
-        'fallback_crawl': 'https://www.novethic.fr/',
     },
     {
         'name': 'Reporterre',
@@ -107,16 +105,92 @@ RSS_SOURCES = [
         'fallback_crawl': 'https://reporterre.net/',
     },
     {
-        'name': 'Contexte Env.',
-        'url': '',  # Pas de RSS public — fallback scraping uniquement
-        'categorie': 'Réglementation',
-        'fallback_crawl': 'https://www.contexte.com/fr/verticale/environnement/',
+        'name': 'Novethic',
+        'url': 'https://www.novethic.fr/feed',
+        'categorie': 'Presse',
+        'fallback_crawl': 'https://www.novethic.fr/',
     },
+    # ── Institutions françaises climat ───────────────────────────────
+    {
+        'name': 'Min. Transition Écologique',
+        'url': 'https://www.ecologie.gouv.fr/rss-actualites.xml',
+        'categorie': 'Réglementation',
+        'fallback_crawl': 'https://www.ecologie.gouv.fr/actualites',
+    },
+    {
+        'name': 'ADEME',
+        'url': 'https://www.ademe.fr/feed/',
+        'categorie': 'Climat',
+        'fallback_crawl': 'https://www.ademe.fr/actualites/',
+    },
+    {
+        'name': 'Haut Conseil pour le Climat',
+        'url': 'https://www.hautconseilclimat.fr/feed/',
+        'categorie': 'Climat',
+        'fallback_crawl': 'https://www.hautconseilclimat.fr/actualites/',
+        # Tout le contenu HCC est pertinent — pas de filtre
+    },
+    {
+        'name': 'France Stratégie',
+        'url': 'https://www.strategie.gouv.fr/rss.xml',
+        'categorie': 'Climat',
+        'fallback_crawl': 'https://www.strategie.gouv.fr/publications',
+        'require_keywords': [
+            'climat', 'carbone', 'transition', 'énergie', 'décarbonation',
+            'environnement', 'adaptation', 'neutralité', 'SNBC', 'empreinte',
+            'biodiversité', 'trajectoire', 'bas-carbone', 'GES',
+        ],
+    },
+    {
+        'name': 'Vie-publique.fr',
+        'url': 'https://www.vie-publique.fr/rss/actualites.xml',
+        'categorie': 'Réglementation',
+        'fallback_crawl': 'https://www.vie-publique.fr/loi',
+        'require_keywords': [
+            'climat', 'énergie', 'transition', 'environnement', 'carbone',
+            'décarbonation', 'renouvelable', 'biodiversité', 'CSRD',
+            'adaptation', 'neutralité', 'trajectoire', 'émissions',
+        ],
+    },
+    # ── Think tanks & recherche climat ──────────────────────────────
+    {
+        'name': 'The Shift Project',
+        'url': 'https://theshiftproject.org/feed/',
+        'categorie': 'Climat',
+        'fallback_crawl': 'https://theshiftproject.org/articles/',
+    },
+    {
+        'name': 'I4CE',
+        'url': 'https://www.i4ce.org/feed/',
+        'categorie': 'Climat',
+        'fallback_crawl': 'https://www.i4ce.org/publications/',
+        'require_keywords': [
+            'climat', 'carbone', 'transition', 'financement', 'investissement',
+            'décarbonation', 'politique climatique', 'trajectoire', 'adaptation',
+        ],
+    },
+    {
+        'name': 'Carbone 4',
+        'url': 'https://www.carbone4.com/feed',
+        'categorie': 'Climat',
+        'fallback_crawl': 'https://www.carbone4.com/publications',
+    },
+    # ── Europe & politique ───────────────────────────────────────────
     {
         'name': 'Politico Energy EU',
         'url': 'https://www.politico.eu/section/energy-fr/feed/',
         'categorie': 'Réglementation',
         'fallback_crawl': 'https://www.politico.eu/section/energy-fr/',
+        'require_keywords': [
+            'climat', 'énergie', 'carbone', 'taxonomie', 'CSRD', 'Green Deal',
+            'transition', 'renouvelable', 'émissions', 'règlement', 'directive',
+        ],
+    },
+    {
+        'name': 'Contexte Environnement',
+        'url': 'https://www.contexte.com/articles/rss/edition/environnement',
+        'categorie': 'Réglementation',
+        'fallback_crawl': 'https://www.contexte.com/environnement/',
     },
 ]
 
@@ -159,9 +233,19 @@ def keyword_match(text: str) -> bool:
 
 def categorise(text: str) -> str:
     t = text.lower()
+    if any(k in t for k in ['snbc', 'pnacc', 'accord de paris', 'cop ', 'giec', 'ipcc',
+                             'neutralité carbone', 'net zéro', 'trajectoire carbone',
+                             'plan national adaptation', 'stratégie nationale bas-carbone',
+                             'canicule', 'inondation', 'feu de forêt', 'submersion',
+                             'événement extrême', 'catastrophe climatique', 'réchauffement']):
+        return 'Climat'
+    if any(k in t for k in ['csrd', 'taxonomie', 'reporting durabilité', 'devoir de vigilance',
+                             'décarbonation', 'bilan carbone', 'scope', 'bas-carbone',
+                             'transition énergétique', 'transition écologique']):
+        return 'Climat'
     if any(k in t for k in ['icpe', 'installation classée', 'seveso', 'autorisation', 'enregistrement']):
         return 'ICPE'
-    if any(k in t for k in ['eau', 'rejet', 'assainissement', 'captage', 'nappe']):
+    if any(k in t for k in ['eau', 'rejet', 'assainissement', 'captage', 'nappe', 'sécheresse']):
         return 'Eau'
     if any(k in t for k in ['énergie', 'dpe', 'thermique', 'renouvelable', 'carbone', 'ges']):
         return 'Énergie'
@@ -241,16 +325,21 @@ def extract_json(text: str) -> dict:
 
 
 def _gsf_est_pertinent(titre: str, contenu: str) -> bool:
-    """Filtre binaire : l'article vaut-il la peine d'être lu par le resp. Env/Decarbo GSF ?"""
-    system = 'Tu es un filtre. Reponds uniquement {ok: true} ou {ok: false}.'
+    """Filtre binaire : l'article vaut-il la peine d'être lu par le resp. Climat/Env GSF ?"""
+    system = 'Tu es un filtre. Reponds uniquement {"ok": true} ou {"ok": false}.'
     prompt = (
-        'Responsable Environnement et Decarbonation chez GSF (nettoyage industriel).\n'
-        'GARDER si le sujet est : reglementation environnementale (ICPE, REACH, biocides, dechets, '
-        'eau industrielle, air, sols), decarbonation des entreprises, RSE/devoir de vigilance, '
-        'sante-securite professionnelle, filiere proprete, circularite/REP, energie industrie, '
-        'biodiversite reglementaire, reporting ESG, risques climatiques entreprises.\n'
-        'REJETER seulement si le sujet est CLAIREMENT : elections/sondages, guerre/geopolitique pure, '
-        'immobilier residentiel, agriculture/elevage, finance de marche, faits divers, sport, culture.\n'
+        'Responsable Climat et Environnement chez GSF (groupe de services, 42000 salaries).\n\n'
+        'GARDER si le sujet concerne :\n'
+        '- Politique climatique : lois, projets de loi, plans gouvernementaux (SNBC, PNACC, loi climat, loi energie)\n'
+        '- Trajectoires decarbonation : objectifs nationaux/europeens, net zero, neutralite carbone\n'
+        '- Rapports et etudes : GIEC/IPCC, Haut Conseil Climat, France Strategie, ADEME, I4CE, Shift Project\n'
+        '- Reglementation ESG/RSE : CSRD, taxonomie verte, bilan carbone, reporting extra-financier\n'
+        '- Evenements climatiques : canicule, inondation, secheresse, feu de foret, submersion\n'
+        '- Adaptation climatique : risques entreprises, resilience, vulnerabilite sectorielle\n'
+        '- Reglementation environnementale : ICPE, REACH, dechets, air, eau, biodiversite\n'
+        '- Transition energetique : renouvelables, efficacite energetique, hydrogene, scope 1/2/3\n\n'
+        'REJETER si le sujet est CLAIREMENT : elections/partis politiques, guerre/geopolitique sans lien climatique, '
+        'immobilier residentiel, agriculture/elevage, finance de marche, faits divers, sport, culture, sante humaine sans lien environnemental.\n'
         'EN CAS DE DOUTE : garder (ok: true).\n\n'
         f'TITRE: {titre}\n'
         f'DEBUT: {contenu[:200]}\n\n'
@@ -265,17 +354,18 @@ def _gsf_est_pertinent(titre: str, contenu: str) -> bool:
 
 def _gsf_resumer(titre: str, contenu: str) -> dict:
     """Resume et donne un score de priorite a un article pertinent pour GSF."""
-    system = 'Analyste reglementaire GSF. JSON valide uniquement.'
+    system = 'Analyste climat et environnement GSF. JSON valide uniquement.'
     prompt = (
-        'GSF nettoie usines, hopitaux, sites nucleaires. '
-        'Produits chimiques, dechets industriels, ICPE.\n\n'
+        'Tu travailles pour le Responsable Climat et Environnement de GSF (groupe de services, 42000 salaries, '
+        'secteurs industrie/tertiaire/sante/nucleaire). Ta mission : suivre la politique climatique, '
+        'la reglementation environnementale, les trajectoires de decarbonation et les risques climatiques.\n\n'
         'Score:\n'
-        '  1 = tendance sectorielle a connaitre\n'
-        '  2 = reglementation en evolution pouvant affecter GSF\n'
-        '  3 = obligation legale en vigueur OU risque direct GSF\n\n'
+        '  1 = information de veille, tendance a connaitre\n'
+        '  2 = evolution reglementaire ou politique a anticiper pour GSF\n'
+        '  3 = obligation immediate, risque direct ou decision strategique urgente pour GSF\n\n'
         f'TITRE: {titre}\n'
         f'CONTENU: {contenu[:600]}\n\n'
-        'JSON: {"resume": "1-2 phrases utiles", "score": 1}'
+        'JSON: {"resume": "1-2 phrases concises sur ce que ca change pour GSF", "score": 1}'
     )
     raw = call_groq(prompt, system)
     result = extract_json(raw)
@@ -296,32 +386,28 @@ def groq_summarise(titre: str, contenu: str) -> dict:
 def groq_impact_gsf(titre: str, contenu: str) -> dict:
     """Évalue la pertinence et l'impact d'un texte JO pour GSF."""
     system = (
-        "Tu es un analyste réglementaire pour GSF (nettoyage industriel, 42 000 salariés). "
+        "Tu es un analyste réglementaire et climat pour GSF (42 000 salariés, services). "
         "Réponds UNIQUEMENT en JSON valide, sans texte avant ou après."
     )
     prompt = (
-        "GSF intervient dans : usines agroalimentaires, industrie, nucléaire, pharmaceutique, "
-        "hôpitaux, bureaux, transports. GSF gère des déchets industriels, utilise des produits "
-        "chimiques (détergents, désinfectants, biocides) et exploite des installations ICPE.\n\n"
+        "GSF est un groupe de services (nettoyage industriel, tertiaire, nucléaire, santé). "
+        "Le Responsable Climat et Environnement suit la réglementation opérationnelle ET la politique climatique.\n\n"
         "EXCLUSIONS ABSOLUES (pertinent=false) :\n"
         "- Professions réglementées (médecins, avocats, notaires...)\n"
         "- Nominations, mutations, concours fonction publique\n"
-        "- Finances publiques, fiscalité, défense, justice\n"
-        "- Urbanisme, agriculture, sylviculture (sauf lien direct nettoyage/déchets)\n\n"
-        "PERTINENT uniquement si le texte modifie directement :\n"
-        "- Règles biocides, détergents, CMR, solvants, REACH\n"
-        "- Réglementation ICPE (rubriques, seuils, obligations)\n"
-        "- Gestion/collecte/traitement déchets industriels ou dangereux\n"
-        "- Normes hygiène agroalimentaire, pharma, santé, nucléaire\n"
-        "- Santé-sécurité agents de nettoyage (TMS, chimiques, EPI)\n"
-        "- Rejets aqueux, eaux usées industrielles\n"
-        "- Conventions collectives ou accords branche propreté\n\n"
+        "- Finances publiques, défense, justice, agriculture pure\n\n"
+        "PERTINENT si le texte concerne :\n"
+        "- Réglementation climatique : loi climat/énergie, SNBC, PNACC, objectifs GES\n"
+        "- CSRD, reporting durabilité, taxonomie verte, bilan carbone obligatoire\n"
+        "- ICPE, REACH, biocides, déchets industriels, CMR\n"
+        "- Transition énergétique, efficacité énergétique bâtiments\n"
+        "- Biodiversité réglementaire (Natura 2000, espèces protégées)\n"
+        "- Santé-sécurité agents nettoyage, conventions collectives propreté\n\n"
         "EN CAS DE DOUTE : pertinent=false.\n\n"
         f"TITRE : {titre}\n"
         f"EXTRAIT : {contenu[:600]}\n\n"
-        "Réponds avec ce JSON exactement :\n"
         '{"pertinent": true, "score": 2, "resume": "2 phrases max si pertinent, sinon vide"}\n'
-        "score : 1=veille, 2=à surveiller, 3=obligation directe sur opérations GSF"
+        "score : 1=veille, 2=évolution à anticiper, 3=obligation directe immédiate"
     )
     raw = call_groq(prompt, system)
     result = extract_json(raw)
