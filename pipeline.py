@@ -242,15 +242,27 @@ def extract_json(text: str) -> dict:
 def groq_summarise(titre: str, contenu: str) -> dict:
     """Résume un article et évalue son score pour GSF."""
     system = (
-        "Tu es un analyste veille réglementaire pour GSF, entreprise de propreté et services. "
+        "Tu es un analyste veille réglementaire senior pour GSF Propreté & Services. "
+        "Tu connais parfaitement les activités de GSF et tu appliques des critères STRICTS. "
         "Réponds UNIQUEMENT en JSON valide, sans texte avant ou après."
     )
     prompt = (
+        "CONTEXTE GSF (2e groupe français de propreté, 42 000 salariés, 1,6 Md€) :\n"
+        "Activités : nettoyage industriel, tertiaire, agroalimentaire, pharma, "
+        "nucléaire, hôpitaux, transports, surfaces de vente.\n"
+        "Opérations : détergents/désinfectants/biocides, déchets industriels, ICPE, EPI.\n\n"
+        "RÈGLE DE SCORING (sois très strict) :\n"
+        "score=1 (Veille) : info environnementale générale sans impact direct GSF\n"
+        "  -> actualité politique, élections, guerres, sécheresse générale\n"
+        "score=2 (Important) : réglementation SUSCEPTIBLE d'affecter GSF dans les 6 mois\n"
+        "  -> norme produits ménagers, réforme ICPE, accord branche propreté\n"
+        "score=3 (Impact direct) : obligation légale IMMÉDIATE sur opérations GSF\n"
+        "  -> interdiction biocide utilisé, obligation EPI nettoyage, arrêté ICPE site GSF\n\n"
+        "INTERDIT score=3 : politique, élections, géopolitique, sécheresse générale, "
+        "sujets sans lien direct avec le nettoyage/propreté industriel.\n\n"
         f"TITRE : {titre}\n"
         f"CONTENU : {contenu[:800]}\n\n"
-        "Génère un JSON avec ces champs exactement :\n"
-        '{"resume": "2 phrases max résumant l\'article", "score": 1}\n'
-        "score : 1=intéressant, 2=important, 3=impact direct opérations GSF"
+        'Génère exactement : {"resume": "2 phrases factuelles utiles pour GSF", "score": 1}'
     )
     raw = call_groq(prompt, system)
     result = extract_json(raw)
