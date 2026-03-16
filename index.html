@@ -171,6 +171,15 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
 .jo-stat-lbl{font-size:9px;color:var(--muted);margin-top:2px;letter-spacing:.04em;text-transform:uppercase}
 .jo-search{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 12px;color:var(--text);font-size:12px;font-family:var(--sans);outline:none;margin-top:10px;transition:border-color .15s}
 .jo-search:focus{border-color:var(--blue)}
+#briefing-jorf{margin:12px 16px 0}
+.briefing-card{background:var(--surface);border:1px solid var(--blue-border);border-left:3px solid var(--blue);border-radius:var(--radius);padding:12px 16px}
+.briefing-header{font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none}
+.briefing-toggle{font-size:10px;font-weight:400;color:var(--muted);text-transform:none;letter-spacing:0;margin-left:auto}
+.briefing-items{display:flex;flex-direction:column;gap:8px}
+.briefing-item{display:flex;gap:8px;align-items:flex-start}
+.briefing-nature{font-size:10px;font-family:var(--mono);background:var(--blue-bg);color:var(--blue);padding:2px 5px;border-radius:3px;flex-shrink:0;margin-top:2px;white-space:nowrap}
+.briefing-titre{font-size:12.5px;color:var(--text2);font-weight:500;line-height:1.4}
+.briefing-essentiel{font-size:11.5px;color:var(--muted);margin-top:2px;line-height:1.4}
 .jo-content{padding:12px 20px}
 .jo-theme-group{margin-bottom:8px}
 .jo-theme-header{display:flex;align-items:center;gap:8px;padding:8px 12px;cursor:pointer;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);transition:background .1s}
@@ -269,6 +278,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
   <div id="main">
     <div class="view active" id="feed-view">
       <div id="signal-bar"></div>
+      <div id="briefing-jorf"></div>
       <div id="feed-toolbar">
         <div class="feed-title" id="feed-titre">—</div>
         <button class="badge-filter on" data-cat="all" onclick="filterCat('all')">Tout</button>
@@ -354,10 +364,33 @@ function renderAll(){
   eauEl.innerHTML=crises.length?crises.slice(0,4).map(r=>{const col=NIVEAU_COLOR[normalizeNiveau(r.niveau)]||'#dc2626';
     return `<div class="eau-alert-item" style="background:${col}18;border:1px solid ${col}30"><span style="width:6px;height:6px;border-radius:50%;background:${col};flex-shrink:0;display:inline-block"></span><span style="color:#e8ecf2;font-size:11px">${r.dept_nom} (${r.dept_code})</span></div>`;}
   ).join(''):`<div style="font-size:11px;color:var(--sb-muted);padding:4px 0">Aucune alerte majeure</div>`;
+  renderBriefing();
   renderFeed();
   if(currentView==='carte'){renderMap();renderMapEncart();}
   if(currentView==='archives')renderArchives();
   if(currentView==='jo')renderJO();
+}
+
+function renderBriefing(){
+  const el=document.getElementById('briefing-jorf');
+  if(!el)return;
+  const items=D?.briefing_jorf||[];
+  if(!items.length){el.innerHTML='';return;}
+  const open=el.dataset.open!=='false';
+  el.innerHTML=`<div class="briefing-card">
+    <div class="briefing-header" onclick="toggleBriefing()">Briefing réglementaire JORF
+      <span class="briefing-toggle">${items.length} textes · ${open?'Réduire ▲':'Développer ▼'}</span>
+    </div>
+    ${open?`<div class="briefing-items">${items.map(it=>`<div class="briefing-item">
+      <span class="briefing-nature">${escHtml(it.nature||'Texte')}</span>
+      <div><div class="briefing-titre">${escHtml(it.titre)}</div><div class="briefing-essentiel">${escHtml(it.essentiel||'')}</div></div>
+    </div>`).join('')}</div>`:''}
+  </div>`;
+}
+function toggleBriefing(){
+  const el=document.getElementById('briefing-jorf');
+  el.dataset.open=el.dataset.open==='false'?'true':'false';
+  renderBriefing();
 }
 
 function renderFeed(){
