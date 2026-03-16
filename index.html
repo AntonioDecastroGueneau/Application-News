@@ -485,17 +485,11 @@ function renderJO(){
   const nbT=D?.stats?.jo_analyses||0,nbG=D?.stats?.jo_retenus||0;
   if(statsEl)statsEl.innerHTML=[[nbT,'Textes analysés',false],[nbG,'Pertinents GSF',true],[items.length,'Dans ce JO',false]].map(([v,l,a])=>`<div class="jo-stat ${a&&v>0?'accent':''}"><div class="jo-stat-val">${v}</div><div class="jo-stat-lbl">${l}</div></div>`).join('');
 
-  // Briefing exécutif
-  const briefing=D?.briefing_jorf||[];
-  const briefingHtml=briefing.length?`<div class="briefing-card" style="margin-bottom:16px">
-    <div class="briefing-header" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'flex':'none';this.querySelector('.briefing-toggle').textContent=this.nextElementSibling.style.display==='none'?'Développer ▼':'Réduire ▲'">
-      Résumé exécutif — textes significatifs du jour
-      <span class="briefing-toggle">Réduire ▲</span>
-    </div>
-    <div class="briefing-items">${briefing.map(it=>`<div class="briefing-item">
-      <span class="briefing-nature">${escHtml(it.nature||'Texte')}</span>
-      <div><div class="briefing-titre">${escHtml(it.titre)}</div><div class="briefing-essentiel">${escHtml(it.essentiel||'')}</div></div>
-    </div>`).join('')}</div>
+  // Briefing exécutif (texte rédigé libre)
+  const briefing=D?.briefing_jorf||'';
+  const briefingHtml=briefing?`<div class="briefing-card" style="margin-bottom:16px">
+    <div class="briefing-header">Résumé exécutif du jour</div>
+    <div style="font-size:13px;color:var(--text2);line-height:1.6">${escHtml(briefing)}</div>
   </div>`:'';
 
   if(!items.length){groupEl.innerHTML=briefingHtml+'<div class="jo-empty">Aucun texte JO pour cette date</div>';return;}

@@ -388,42 +388,42 @@ _BRIEFING_SKIP = [
     'cessation de fonctions',
 ]
 
-def groq_briefing_jorf(articles: list) -> list:
-    """Génère un briefing exécutif des textes JORF les plus significatifs du jour."""
+def groq_briefing_jorf(articles: list) -> str:
+    """Génère un briefing rédigé des textes JORF significatifs du jour (texte libre)."""
     if not articles:
-        return []
+        return ''
 
     candidates = [
         a for a in articles
         if not any(p in a['titre'].lower() for p in _BRIEFING_SKIP)
     ]
     if not candidates:
-        return []
+        return ''
 
     lines = []
     for i, a in enumerate(candidates[:80]):
         nature = a.get('contenu', '').split(' — ')[0] or 'Texte'
         lines.append(f"{i+1}. [{nature}] {a['titre']}")
 
-    system = 'Tu es juriste senior. Reponds uniquement en JSON valide.'
+    system = 'Tu es juriste senior conseillant un directeur RSE. Reponds uniquement en JSON valide.'
     prompt = (
         f"Textes publies au Journal Officiel aujourd'hui ({TODAY}) :\n\n"
         + '\n'.join(lines)
-        + "\n\nSelectionne les 5 a 8 textes les plus significatifs pour un dirigeant "
-        "attentif a la reglementation environnementale, climatique et sectorielle. "
-        "Ignore nominations, delegations, textes purement administratifs. "
-        "Priorise : decrets d'application de lois structurantes, arretes a portee "
-        "sectorielle large, textes modifiant des equilibres reglementaires importants.\n\n"
-        'JSON: {"items": [{"titre": "...", "nature": "Decret|Arrete|Loi|...", '
-        '"essentiel": "1 phrase max expliquant pourquoi important"}]}'
+        + "\n\nRedige un briefing TRES court (3-5 phrases max, ou 2-3 bullets si plusieurs sujets distincts) "
+        "a destination d'un Responsable Climat et Environnement. "
+        "Synthetise ce qui est reellement significatif : decrets d'application de lois majeures, "
+        "arretes a portee sectorielle large, evolutions reglementaires importantes. "
+        "Si les textes du jour sont mineurs ou purement administratifs, dis-le clairement en 1 phrase. "
+        "NE copie PAS les titres. Redige en francais, style direct et concis. "
+        'JSON: {"briefing": "texte redige ici"}'
     )
 
-    raw = call_groq(prompt, system, max_tokens=700)
+    raw = call_groq(prompt, system, max_tokens=400)
     result = extract_json(raw)
-    if isinstance(result, dict) and 'items' in result:
-        return result['items']
+    if isinstance(result, dict) and 'briefing' in result:
+        return result['briefing']
     log.warning("briefing_jorf: réponse Groq inattendue")
-    return []
+    return ''
 
 
 
