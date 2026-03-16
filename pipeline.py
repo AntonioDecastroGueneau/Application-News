@@ -383,35 +383,6 @@ def groq_summarise(titre: str, contenu: str) -> dict:
 
 
 
-def groq_impact_gsf(titre: str, contenu: str) -> dict:
-    """Évalue la pertinence et l'impact d'un texte JO pour GSF."""
-    system = (
-        "Tu es un analyste réglementaire et climat pour GSF (42 000 salariés, services). "
-        "Réponds UNIQUEMENT en JSON valide, sans texte avant ou après."
-    )
-    prompt = (
-        "GSF est un groupe de services (nettoyage industriel, tertiaire, nucléaire, santé). "
-        "Le Responsable Climat et Environnement suit la réglementation opérationnelle ET la politique climatique.\n\n"
-        "EXCLUSIONS ABSOLUES (pertinent=false) :\n"
-        "- Professions réglementées (médecins, avocats, notaires...)\n"
-        "- Nominations, mutations, concours fonction publique\n"
-        "- Finances publiques, défense, justice, agriculture pure\n\n"
-        "PERTINENT si le texte concerne :\n"
-        "- Réglementation climatique : loi climat/énergie, SNBC, PNACC, objectifs GES\n"
-        "- CSRD, reporting durabilité, taxonomie verte, bilan carbone obligatoire\n"
-        "- ICPE, REACH, biocides, déchets industriels, CMR\n"
-        "- Transition énergétique, efficacité énergétique bâtiments\n"
-        "- Biodiversité réglementaire (Natura 2000, espèces protégées)\n"
-        "- Santé-sécurité agents nettoyage, conventions collectives propreté\n\n"
-        "EN CAS DE DOUTE : pertinent=false.\n\n"
-        f"TITRE : {titre}\n"
-        f"EXTRAIT : {contenu[:600]}\n\n"
-        '{"pertinent": true, "score": 2, "resume": "2 phrases max si pertinent, sinon vide"}\n'
-        "score : 1=veille, 2=évolution à anticiper, 3=obligation directe immédiate"
-    )
-    raw = call_groq(prompt, system)
-    result = extract_json(raw)
-    return result if result else {'pertinent': False, 'score': 1, 'resume': ''}
 
 
 # ─────────────────────────────────────────────
@@ -766,6 +737,30 @@ VIGIEAU_FALLBACK_URLS = {
 }
 
 
+DEPT_NOMS = {
+    '01':'Ain','02':'Aisne','03':'Allier','04':'Alpes-de-Haute-Provence','05':'Hautes-Alpes',
+    '06':'Alpes-Maritimes','07':'Ardèche','08':'Ardennes','09':'Ariège','10':'Aube',
+    '11':'Aude','12':'Aveyron','13':'Bouches-du-Rhône','14':'Calvados','15':'Cantal',
+    '16':'Charente','17':'Charente-Maritime','18':'Cher','19':'Corrèze','2A':'Corse-du-Sud',
+    '2B':'Haute-Corse','21':'Côte-d\'Or','22':'Côtes-d\'Armor','23':'Creuse','24':'Dordogne',
+    '25':'Doubs','26':'Drôme','27':'Eure','28':'Eure-et-Loir','29':'Finistère',
+    '30':'Gard','31':'Haute-Garonne','32':'Gers','33':'Gironde','34':'Hérault',
+    '35':'Ille-et-Vilaine','36':'Indre','37':'Indre-et-Loire','38':'Isère','39':'Jura',
+    '40':'Landes','41':'Loir-et-Cher','42':'Loire','43':'Haute-Loire','44':'Loire-Atlantique',
+    '45':'Loiret','46':'Lot','47':'Lot-et-Garonne','48':'Lozère','49':'Maine-et-Loire',
+    '50':'Manche','51':'Marne','52':'Haute-Marne','53':'Mayenne','54':'Meurthe-et-Moselle',
+    '55':'Meuse','56':'Morbihan','57':'Moselle','58':'Nièvre','59':'Nord',
+    '60':'Oise','61':'Orne','62':'Pas-de-Calais','63':'Puy-de-Dôme','64':'Pyrénées-Atlantiques',
+    '65':'Hautes-Pyrénées','66':'Pyrénées-Orientales','67':'Bas-Rhin','68':'Haut-Rhin','69':'Rhône',
+    '70':'Haute-Saône','71':'Saône-et-Loire','72':'Sarthe','73':'Savoie','74':'Haute-Savoie',
+    '75':'Paris','76':'Seine-Maritime','77':'Seine-et-Marne','78':'Yvelines','79':'Deux-Sèvres',
+    '80':'Somme','81':'Tarn','82':'Tarn-et-Garonne','83':'Var','84':'Vaucluse',
+    '85':'Vendée','86':'Vienne','87':'Haute-Vienne','88':'Vosges','89':'Yonne',
+    '90':'Territoire de Belfort','91':'Essonne','92':'Hauts-de-Seine','93':'Seine-Saint-Denis',
+    '94':'Val-de-Marne','95':'Val-d\'Oise','971':'Guadeloupe','972':'Martinique',
+    '973':'Guyane','974':'La Réunion','976':'Mayotte',
+}
+
 def _normalize_niveau(niveau: str) -> str:
     """Normalise un niveau de gravité VigiEau pour correspondre à NIVEAUX_GRAVITE."""
     n = niveau.lower().strip()
@@ -883,7 +878,7 @@ def _parse_vigieau_csv(content: str, year: int) -> dict:
             # Agréger par département
             if dept_code:
                 if not par_dept[dept_code]['nom']:
-                    par_dept[dept_code]['nom'] = dept_code
+                    par_dept[dept_code]['nom'] = DEPT_NOMS.get(dept_code, dept_code)
                 par_dept[dept_code]['jours'][niveau] += nb_jours
 
             rows_ok += 1
@@ -1057,11 +1052,11 @@ def _save_and_return_history(history_file, annees_cache: dict) -> dict:
     """Calcule le top10, sauvegarde et retourne le résultat."""
     # Top 10 départements toutes années confondues
     dept_total = {}
-    for year_str, data in annees_cache.items():
+    for _, data in annees_cache.items():
         for code, info in data.get('par_dept', {}).items():
             if code not in dept_total:
                 dept_total[code] = {
-                    'nom': info.get('nom', code),
+                    'nom': DEPT_NOMS.get(code, info.get('nom', code)),
                     'total_graves': 0,
                     'jours': {n: 0 for n in NIVEAUX_GRAVITE}
                 }

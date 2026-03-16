@@ -1,0 +1,4517 @@
+{
+  "updated_at": "2026-03-16T19:32:25.966352",
+  "annees": {
+    "2020": {
+      "par_mois": {
+        "2020-01": {
+          "vigilance": 2,
+          "alerte": 4,
+          "alerte renforcée": 0,
+          "crise": 0
+        },
+        "2020-02": {
+          "vigilance": 1,
+          "alerte": 3,
+          "alerte renforcée": 0,
+          "crise": 0
+        },
+        "2020-03": {
+          "vigilance": 2,
+          "alerte": 3,
+          "alerte renforcée": 0,
+          "crise": 0
+        },
+        "2020-04": {
+          "vigilance": 4,
+          "alerte": 9,
+          "alerte renforcée": 0,
+          "crise": 0
+        },
+        "2020-05": {
+          "vigilance": 8,
+          "alerte": 11,
+          "alerte renforcée": 0,
+          "crise": 0
+        },
+        "2020-06": {
+          "vigilance": 22,
+          "alerte": 26,
+          "alerte renforcée": 0,
+          "crise": 5
+        },
+        "2020-07": {
+          "vigilance": 56,
+          "alerte": 117,
+          "alerte renforcée": 0,
+          "crise": 60
+        },
+        "2020-08": {
+          "vigilance": 42,
+          "alerte": 131,
+          "alerte renforcée": 0,
+          "crise": 148
+        },
+        "2020-09": {
+          "vigilance": 27,
+          "alerte": 71,
+          "alerte renforcée": 0,
+          "crise": 142
+        },
+        "2020-10": {
+          "vigilance": 41,
+          "alerte": 43,
+          "alerte renforcée": 0,
+          "crise": 86
+        },
+        "2020-11": {
+          "vigilance": 5,
+          "alerte": 5,
+          "alerte renforcée": 0,
+          "crise": 3
+        },
+        "2020-12": {
+          "vigilance": 3,
+          "alerte": 4,
+          "alerte renforcée": 0,
+          "crise": 0
+        }
+      },
+      "par_dept": {
+        "38": {
+          "nom": "Isère",
+          "jours": {
+            "vigilance": 47,
+            "alerte": 234,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 234
+        },
+        "36": {
+          "nom": "Indre",
+          "jours": {
+            "vigilance": 46,
+            "alerte": 14,
+            "alerte renforcée": 0,
+            "crise": 77
+          },
+          "total_graves": 91
+        },
+        "26": {
+          "nom": "Drôme",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 211,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 211
+        },
+        "59": {
+          "nom": "Nord",
+          "jours": {
+            "vigilance": 108,
+            "alerte": 123,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 123
+        },
+        "60": {
+          "nom": "Oise",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 202,
+            "alerte renforcée": 0,
+            "crise": 53
+          },
+          "total_graves": 255
+        },
+        "69": {
+          "nom": "Rhône",
+          "jours": {
+            "vigilance": 39,
+            "alerte": 174,
+            "alerte renforcée": 0,
+            "crise": 21
+          },
+          "total_graves": 195
+        },
+        "01": {
+          "nom": "Ain",
+          "jours": {
+            "vigilance": 78,
+            "alerte": 125,
+            "alerte renforcée": 0,
+            "crise": 72
+          },
+          "total_graves": 197
+        },
+        "66": {
+          "nom": "Pyrénées-Orientales",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 48,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 48
+        },
+        "42": {
+          "nom": "Loire",
+          "jours": {
+            "vigilance": 84,
+            "alerte": 87,
+            "alerte renforcée": 0,
+            "crise": 9
+          },
+          "total_graves": 96
+        },
+        "07": {
+          "nom": "Ardèche",
+          "jours": {
+            "vigilance": 26,
+            "alerte": 35,
+            "alerte renforcée": 0,
+            "crise": 58
+          },
+          "total_graves": 93
+        },
+        "39": {
+          "nom": "Jura",
+          "jours": {
+            "vigilance": 91,
+            "alerte": 21,
+            "alerte renforcée": 0,
+            "crise": 34
+          },
+          "total_graves": 55
+        },
+        "71": {
+          "nom": "Saône-et-Loire",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 70,
+            "alerte renforcée": 0,
+            "crise": 91
+          },
+          "total_graves": 161
+        },
+        "63": {
+          "nom": "Puy-de-Dôme",
+          "jours": {
+            "vigilance": 103,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 80
+          },
+          "total_graves": 80
+        },
+        "17": {
+          "nom": "Charente-Maritime",
+          "jours": {
+            "vigilance": 109,
+            "alerte": 116,
+            "alerte renforcée": 0,
+            "crise": 202
+          },
+          "total_graves": 318
+        },
+        "74": {
+          "nom": "Haute-Savoie",
+          "jours": {
+            "vigilance": 131,
+            "alerte": 402,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 402
+        },
+        "43": {
+          "nom": "Haute-Loire",
+          "jours": {
+            "vigilance": 71,
+            "alerte": 77,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 77
+        },
+        "73": {
+          "nom": "Savoie",
+          "jours": {
+            "vigilance": 50,
+            "alerte": 100,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 100
+        },
+        "16": {
+          "nom": "Charente",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 154,
+            "alerte renforcée": 0,
+            "crise": 301
+          },
+          "total_graves": 455
+        },
+        "85": {
+          "nom": "Vendée",
+          "jours": {
+            "vigilance": 15,
+            "alerte": 25,
+            "alerte renforcée": 0,
+            "crise": 92
+          },
+          "total_graves": 117
+        },
+        "44": {
+          "nom": "Loire-Atlantique",
+          "jours": {
+            "vigilance": 37,
+            "alerte": 24,
+            "alerte renforcée": 0,
+            "crise": 94
+          },
+          "total_graves": 118
+        },
+        "12": {
+          "nom": "Aveyron",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 97,
+            "alerte renforcée": 0,
+            "crise": 56
+          },
+          "total_graves": 153
+        },
+        "86": {
+          "nom": "Vienne",
+          "jours": {
+            "vigilance": 22,
+            "alerte": 200,
+            "alerte renforcée": 0,
+            "crise": 246
+          },
+          "total_graves": 446
+        },
+        "62": {
+          "nom": "Pas-de-Calais",
+          "jours": {
+            "vigilance": 118,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "79": {
+          "nom": "Deux-Sèvres",
+          "jours": {
+            "vigilance": 122,
+            "alerte": 568,
+            "alerte renforcée": 0,
+            "crise": 455
+          },
+          "total_graves": 1023
+        },
+        "89": {
+          "nom": "Yonne",
+          "jours": {
+            "vigilance": 31,
+            "alerte": 31,
+            "alerte renforcée": 0,
+            "crise": 71
+          },
+          "total_graves": 102
+        },
+        "49": {
+          "nom": "Maine-et-Loire",
+          "jours": {
+            "vigilance": 81,
+            "alerte": 83,
+            "alerte renforcée": 0,
+            "crise": 83
+          },
+          "total_graves": 166
+        },
+        "21": {
+          "nom": "Côte-d'Or",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 42,
+            "alerte renforcée": 0,
+            "crise": 84
+          },
+          "total_graves": 126
+        },
+        "19": {
+          "nom": "Corrèze",
+          "jours": {
+            "vigilance": 74,
+            "alerte": 22,
+            "alerte renforcée": 0,
+            "crise": 49
+          },
+          "total_graves": 71
+        },
+        "81": {
+          "nom": "Tarn",
+          "jours": {
+            "vigilance": 199,
+            "alerte": 31,
+            "alerte renforcée": 0,
+            "crise": 565
+          },
+          "total_graves": 596
+        },
+        "52": {
+          "nom": "Haute-Marne",
+          "jours": {
+            "vigilance": 42,
+            "alerte": 18,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 18
+        },
+        "45": {
+          "nom": "Loiret",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 46,
+            "alerte renforcée": 0,
+            "crise": 320
+          },
+          "total_graves": 366
+        },
+        "58": {
+          "nom": "Nièvre",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 32,
+            "alerte renforcée": 0,
+            "crise": 83
+          },
+          "total_graves": 115
+        },
+        "46": {
+          "nom": "Lot",
+          "jours": {
+            "vigilance": 16,
+            "alerte": 7,
+            "alerte renforcée": 0,
+            "crise": 104
+          },
+          "total_graves": 111
+        },
+        "27": {
+          "nom": "Eure",
+          "jours": {
+            "vigilance": 312,
+            "alerte": 55,
+            "alerte renforcée": 0,
+            "crise": 55
+          },
+          "total_graves": 110
+        },
+        "24": {
+          "nom": "Dordogne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 14,
+            "alerte renforcée": 0,
+            "crise": 107
+          },
+          "total_graves": 121
+        },
+        "82": {
+          "nom": "Tarn-et-Garonne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 14,
+            "alerte renforcée": 0,
+            "crise": 106
+          },
+          "total_graves": 120
+        },
+        "87": {
+          "nom": "Haute-Vienne",
+          "jours": {
+            "vigilance": 44,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 63
+          },
+          "total_graves": 63
+        },
+        "28": {
+          "nom": "Eure-et-Loir",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 117
+          },
+          "total_graves": 117
+        },
+        "67": {
+          "nom": "Bas-Rhin",
+          "jours": {
+            "vigilance": 48,
+            "alerte": 211,
+            "alerte renforcée": 0,
+            "crise": 79
+          },
+          "total_graves": 290
+        },
+        "78": {
+          "nom": "Yvelines",
+          "jours": {
+            "vigilance": 38,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 61
+          },
+          "total_graves": 61
+        },
+        "53": {
+          "nom": "Mayenne",
+          "jours": {
+            "vigilance": 9,
+            "alerte": 86,
+            "alerte renforcée": 0,
+            "crise": 21
+          },
+          "total_graves": 107
+        },
+        "77": {
+          "nom": "Seine-et-Marne",
+          "jours": {
+            "vigilance": 8,
+            "alerte": 13,
+            "alerte renforcée": 0,
+            "crise": 85
+          },
+          "total_graves": 98
+        },
+        "18": {
+          "nom": "Cher",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 12,
+            "alerte renforcée": 0,
+            "crise": 133
+          },
+          "total_graves": 145
+        },
+        "08": {
+          "nom": "Ardennes",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 166,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 166
+        },
+        "05": {
+          "nom": "Hautes-Alpes",
+          "jours": {
+            "vigilance": 13,
+            "alerte": 70,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 70
+        },
+        "64": {
+          "nom": "Pyrénées-Atlantiques",
+          "jours": {
+            "vigilance": 42,
+            "alerte": 105,
+            "alerte renforcée": 0,
+            "crise": 280
+          },
+          "total_graves": 385
+        },
+        "94": {
+          "nom": "Val-de-Marne",
+          "jours": {
+            "vigilance": 86,
+            "alerte": 12,
+            "alerte renforcée": 0,
+            "crise": 55
+          },
+          "total_graves": 67
+        },
+        "03": {
+          "nom": "Allier",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 11,
+            "alerte renforcée": 0,
+            "crise": 78
+          },
+          "total_graves": 89
+        },
+        "40": {
+          "nom": "Landes",
+          "jours": {
+            "vigilance": 268,
+            "alerte": 63,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 63
+        },
+        "91": {
+          "nom": "Essonne",
+          "jours": {
+            "vigilance": 134,
+            "alerte": 10,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 10
+        },
+        "04": {
+          "nom": "Alpes-de-Haute-Provence",
+          "jours": {
+            "vigilance": 107,
+            "alerte": 344,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 344
+        },
+        "25": {
+          "nom": "Doubs",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 18,
+            "alerte renforcée": 0,
+            "crise": 20
+          },
+          "total_graves": 38
+        },
+        "57": {
+          "nom": "Moselle",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 140,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 140
+        },
+        "47": {
+          "nom": "Lot-et-Garonne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 12,
+            "alerte renforcée": 0,
+            "crise": 79
+          },
+          "total_graves": 91
+        },
+        "31": {
+          "nom": "Haute-Garonne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 106
+          },
+          "total_graves": 106
+        },
+        "33": {
+          "nom": "Gironde",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 10,
+            "alerte renforcée": 0,
+            "crise": 74
+          },
+          "total_graves": 84
+        },
+        "02": {
+          "nom": "Aisne",
+          "jours": {
+            "vigilance": 137,
+            "alerte": 480,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 480
+        },
+        "41": {
+          "nom": "Loir-et-Cher",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 87
+          },
+          "total_graves": 87
+        },
+        "72": {
+          "nom": "Sarthe",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 20,
+            "alerte renforcée": 0,
+            "crise": 63
+          },
+          "total_graves": 83
+        },
+        "61": {
+          "nom": "Orne",
+          "jours": {
+            "vigilance": 8,
+            "alerte": 58,
+            "alerte renforcée": 0,
+            "crise": 18
+          },
+          "total_graves": 76
+        },
+        "23": {
+          "nom": "Creuse",
+          "jours": {
+            "vigilance": 31,
+            "alerte": 10,
+            "alerte renforcée": 0,
+            "crise": 61
+          },
+          "total_graves": 71
+        },
+        "10": {
+          "nom": "Aube",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 28,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 28
+        },
+        "15": {
+          "nom": "Cantal",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 28,
+            "alerte renforcée": 0,
+            "crise": 55
+          },
+          "total_graves": 83
+        },
+        "55": {
+          "nom": "Meuse",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 25,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 25
+        },
+        "51": {
+          "nom": "Marne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 100,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 100
+        },
+        "30": {
+          "nom": "Gard",
+          "jours": {
+            "vigilance": 24,
+            "alerte": 48,
+            "alerte renforcée": 0,
+            "crise": 28
+          },
+          "total_graves": 76
+        },
+        "88": {
+          "nom": "Vosges",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 30,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 30
+        },
+        "37": {
+          "nom": "Indre-et-Loire",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 97
+          },
+          "total_graves": 97
+        },
+        "48": {
+          "nom": "Lozère",
+          "jours": {
+            "vigilance": 12,
+            "alerte": 87,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 87
+        },
+        "65": {
+          "nom": "Hautes-Pyrénées",
+          "jours": {
+            "vigilance": 103,
+            "alerte": 16,
+            "alerte renforcée": 0,
+            "crise": 95
+          },
+          "total_graves": 111
+        },
+        "68": {
+          "nom": "Haut-Rhin",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 154,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 154
+        },
+        "34": {
+          "nom": "Hérault",
+          "jours": {
+            "vigilance": 13,
+            "alerte": 50,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 50
+        },
+        "95": {
+          "nom": "Val-d'Oise",
+          "jours": {
+            "vigilance": 39,
+            "alerte": 45,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 45
+        },
+        "13": {
+          "nom": "Bouches-du-Rhône",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 14,
+            "alerte renforcée": 0,
+            "crise": 63
+          },
+          "total_graves": 77
+        },
+        "83": {
+          "nom": "Var",
+          "jours": {
+            "vigilance": 77,
+            "alerte": 11,
+            "alerte renforcée": 0,
+            "crise": 56
+          },
+          "total_graves": 67
+        },
+        "11": {
+          "nom": "Aude",
+          "jours": {
+            "vigilance": 27,
+            "alerte": 35,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 35
+        },
+        "56": {
+          "nom": "Morbihan",
+          "jours": {
+            "vigilance": 27,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "93": {
+          "nom": "Seine-Saint-Denis",
+          "jours": {
+            "vigilance": 86,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "75": {
+          "nom": "Paris",
+          "jours": {
+            "vigilance": 86,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "92": {
+          "nom": "Hauts-de-Seine",
+          "jours": {
+            "vigilance": 86,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "32": {
+          "nom": "Gers",
+          "jours": {
+            "vigilance": 158,
+            "alerte": 16,
+            "alerte renforcée": 0,
+            "crise": 202
+          },
+          "total_graves": 218
+        },
+        "50": {
+          "nom": "Manche",
+          "jours": {
+            "vigilance": 79,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "84": {
+          "nom": "Vaucluse",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 42,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 42
+        },
+        "14": {
+          "nom": "Calvados",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 68,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 68
+        },
+        "2B": {
+          "nom": "Haute-Corse",
+          "jours": {
+            "vigilance": 38,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "70": {
+          "nom": "Haute-Saône",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 27
+          },
+          "total_graves": 27
+        },
+        "90": {
+          "nom": "Territoire de Belfort",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 17
+          },
+          "total_graves": 17
+        },
+        "35": {
+          "nom": "Ille-et-Vilaine",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 15,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 15
+        },
+        "80": {
+          "nom": "Somme",
+          "jours": {
+            "vigilance": 63,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "54": {
+          "nom": "Meurthe-et-Moselle",
+          "jours": {
+            "vigilance": 72,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        }
+      }
+    },
+    "2021": {
+      "par_mois": {
+        "2021-01": {
+          "vigilance": 1,
+          "alerte": 0,
+          "alerte renforcée": 0,
+          "crise": 0
+        },
+        "2021-02": {
+          "vigilance": 1,
+          "alerte": 0,
+          "alerte renforcée": 0,
+          "crise": 0
+        },
+        "2021-03": {
+          "vigilance": 2,
+          "alerte": 0,
+          "alerte renforcée": 0,
+          "crise": 0
+        },
+        "2021-04": {
+          "vigilance": 14,
+          "alerte": 10,
+          "alerte renforcée": 0,
+          "crise": 3
+        },
+        "2021-05": {
+          "vigilance": 22,
+          "alerte": 20,
+          "alerte renforcée": 0,
+          "crise": 7
+        },
+        "2021-06": {
+          "vigilance": 48,
+          "alerte": 34,
+          "alerte renforcée": 0,
+          "crise": 10
+        },
+        "2021-07": {
+          "vigilance": 45,
+          "alerte": 39,
+          "alerte renforcée": 0,
+          "crise": 20
+        },
+        "2021-08": {
+          "vigilance": 41,
+          "alerte": 83,
+          "alerte renforcée": 0,
+          "crise": 48
+        },
+        "2021-09": {
+          "vigilance": 40,
+          "alerte": 67,
+          "alerte renforcée": 0,
+          "crise": 78
+        },
+        "2021-10": {
+          "vigilance": 30,
+          "alerte": 36,
+          "alerte renforcée": 0,
+          "crise": 45
+        },
+        "2021-11": {
+          "vigilance": 3,
+          "alerte": 7,
+          "alerte renforcée": 0,
+          "crise": 2
+        },
+        "2021-12": {
+          "vigilance": 2,
+          "alerte": 1,
+          "alerte renforcée": 0,
+          "crise": 0
+        }
+      },
+      "par_dept": {
+        "01": {
+          "nom": "Ain",
+          "jours": {
+            "vigilance": 212,
+            "alerte": 153,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 153
+        },
+        "69": {
+          "nom": "Rhône",
+          "jours": {
+            "vigilance": 140,
+            "alerte": 87,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 87
+        },
+        "16": {
+          "nom": "Charente",
+          "jours": {
+            "vigilance": 21,
+            "alerte": 208,
+            "alerte renforcée": 0,
+            "crise": 132
+          },
+          "total_graves": 340
+        },
+        "13": {
+          "nom": "Bouches-du-Rhône",
+          "jours": {
+            "vigilance": 11,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 176
+          },
+          "total_graves": 176
+        },
+        "17": {
+          "nom": "Charente-Maritime",
+          "jours": {
+            "vigilance": 167,
+            "alerte": 197,
+            "alerte renforcée": 0,
+            "crise": 109
+          },
+          "total_graves": 306
+        },
+        "79": {
+          "nom": "Deux-Sèvres",
+          "jours": {
+            "vigilance": 854,
+            "alerte": 617,
+            "alerte renforcée": 0,
+            "crise": 195
+          },
+          "total_graves": 812
+        },
+        "60": {
+          "nom": "Oise",
+          "jours": {
+            "vigilance": 277,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "86": {
+          "nom": "Vienne",
+          "jours": {
+            "vigilance": 168,
+            "alerte": 112,
+            "alerte renforcée": 0,
+            "crise": 131
+          },
+          "total_graves": 243
+        },
+        "34": {
+          "nom": "Hérault",
+          "jours": {
+            "vigilance": 64,
+            "alerte": 100,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 100
+        },
+        "30": {
+          "nom": "Gard",
+          "jours": {
+            "vigilance": 111,
+            "alerte": 68,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 68
+        },
+        "44": {
+          "nom": "Loire-Atlantique",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 76,
+            "alerte renforcée": 0,
+            "crise": 117
+          },
+          "total_graves": 193
+        },
+        "83": {
+          "nom": "Var",
+          "jours": {
+            "vigilance": 176,
+            "alerte": 179,
+            "alerte renforcée": 0,
+            "crise": 284
+          },
+          "total_graves": 463
+        },
+        "85": {
+          "nom": "Vendée",
+          "jours": {
+            "vigilance": 21,
+            "alerte": 161,
+            "alerte renforcée": 0,
+            "crise": 101
+          },
+          "total_graves": 262
+        },
+        "14": {
+          "nom": "Calvados",
+          "jours": {
+            "vigilance": 90,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "49": {
+          "nom": "Maine-et-Loire",
+          "jours": {
+            "vigilance": 86,
+            "alerte": 175,
+            "alerte renforcée": 0,
+            "crise": 95
+          },
+          "total_graves": 270
+        },
+        "56": {
+          "nom": "Morbihan",
+          "jours": {
+            "vigilance": 182,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "72": {
+          "nom": "Sarthe",
+          "jours": {
+            "vigilance": 42,
+            "alerte": 93,
+            "alerte renforcée": 0,
+            "crise": 27
+          },
+          "total_graves": 120
+        },
+        "38": {
+          "nom": "Isère",
+          "jours": {
+            "vigilance": 149,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "66": {
+          "nom": "Pyrénées-Orientales",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 237,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 237
+        },
+        "46": {
+          "nom": "Lot",
+          "jours": {
+            "vigilance": 4,
+            "alerte": 31,
+            "alerte renforcée": 0,
+            "crise": 72
+          },
+          "total_graves": 103
+        },
+        "45": {
+          "nom": "Loiret",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 106,
+            "alerte renforcée": 0,
+            "crise": 102
+          },
+          "total_graves": 208
+        },
+        "26": {
+          "nom": "Drôme",
+          "jours": {
+            "vigilance": 339,
+            "alerte": 21,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 21
+        },
+        "81": {
+          "nom": "Tarn",
+          "jours": {
+            "vigilance": 212,
+            "alerte": 250,
+            "alerte renforcée": 0,
+            "crise": 463
+          },
+          "total_graves": 713
+        },
+        "12": {
+          "nom": "Aveyron",
+          "jours": {
+            "vigilance": 88,
+            "alerte": 65,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 65
+        },
+        "31": {
+          "nom": "Haute-Garonne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 147
+          },
+          "total_graves": 147
+        },
+        "64": {
+          "nom": "Pyrénées-Atlantiques",
+          "jours": {
+            "vigilance": 167,
+            "alerte": 154,
+            "alerte renforcée": 0,
+            "crise": 330
+          },
+          "total_graves": 484
+        },
+        "53": {
+          "nom": "Mayenne",
+          "jours": {
+            "vigilance": 102,
+            "alerte": 37,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 37
+        },
+        "11": {
+          "nom": "Aude",
+          "jours": {
+            "vigilance": 22,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 115
+          },
+          "total_graves": 115
+        },
+        "63": {
+          "nom": "Puy-de-Dôme",
+          "jours": {
+            "vigilance": 90,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "82": {
+          "nom": "Tarn-et-Garonne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 7,
+            "alerte renforcée": 0,
+            "crise": 93
+          },
+          "total_graves": 100
+        },
+        "23": {
+          "nom": "Creuse",
+          "jours": {
+            "vigilance": 117,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "28": {
+          "nom": "Eure-et-Loir",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 46,
+            "alerte renforcée": 0,
+            "crise": 67
+          },
+          "total_graves": 113
+        },
+        "77": {
+          "nom": "Seine-et-Marne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 142,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 142
+        },
+        "2B": {
+          "nom": "Haute-Corse",
+          "jours": {
+            "vigilance": 88,
+            "alerte": 11,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 11
+        },
+        "40": {
+          "nom": "Landes",
+          "jours": {
+            "vigilance": 101,
+            "alerte": 105,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 105
+        },
+        "05": {
+          "nom": "Hautes-Alpes",
+          "jours": {
+            "vigilance": 63,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "32": {
+          "nom": "Gers",
+          "jours": {
+            "vigilance": 35,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 33
+          },
+          "total_graves": 33
+        },
+        "04": {
+          "nom": "Alpes-de-Haute-Provence",
+          "jours": {
+            "vigilance": 91,
+            "alerte": 241,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 241
+        },
+        "48": {
+          "nom": "Lozère",
+          "jours": {
+            "vigilance": 13,
+            "alerte": 77,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 77
+        },
+        "07": {
+          "nom": "Ardèche",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 63,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 63
+        },
+        "47": {
+          "nom": "Lot-et-Garonne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 14,
+            "alerte renforcée": 0,
+            "crise": 65
+          },
+          "total_graves": 79
+        },
+        "06": {
+          "nom": "Alpes-Maritimes",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 76,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 76
+        },
+        "18": {
+          "nom": "Cher",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 75
+          },
+          "total_graves": 75
+        },
+        "24": {
+          "nom": "Dordogne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 8,
+            "alerte renforcée": 0,
+            "crise": 65
+          },
+          "total_graves": 73
+        },
+        "37": {
+          "nom": "Indre-et-Loire",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 72
+          },
+          "total_graves": 72
+        },
+        "41": {
+          "nom": "Loir-et-Cher",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 87,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 87
+        },
+        "84": {
+          "nom": "Vaucluse",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 68,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 68
+        },
+        "42": {
+          "nom": "Loire",
+          "jours": {
+            "vigilance": 35,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "15": {
+          "nom": "Cantal",
+          "jours": {
+            "vigilance": 66,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "65": {
+          "nom": "Hautes-Pyrénées",
+          "jours": {
+            "vigilance": 65,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 59
+          },
+          "total_graves": 59
+        },
+        "43": {
+          "nom": "Haute-Loire",
+          "jours": {
+            "vigilance": 35,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "33": {
+          "nom": "Gironde",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 63
+          },
+          "total_graves": 63
+        },
+        "35": {
+          "nom": "Ille-et-Vilaine",
+          "jours": {
+            "vigilance": 9,
+            "alerte": 48,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 48
+        },
+        "89": {
+          "nom": "Yonne",
+          "jours": {
+            "vigilance": 70,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "54": {
+          "nom": "Meurthe-et-Moselle",
+          "jours": {
+            "vigilance": 53,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "57": {
+          "nom": "Moselle",
+          "jours": {
+            "vigilance": 88,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "91": {
+          "nom": "Essonne",
+          "jours": {
+            "vigilance": 36,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "21": {
+          "nom": "Côte-d'Or",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 64,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 64
+        },
+        "58": {
+          "nom": "Nièvre",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 75,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 75
+        }
+      }
+    },
+    "2022": {
+      "par_mois": {
+        "2022-01": {
+          "vigilance": 1,
+          "alerte": 1,
+          "alerte renforcée": 0,
+          "crise": 0
+        },
+        "2022-02": {
+          "vigilance": 1,
+          "alerte": 0,
+          "alerte renforcée": 0,
+          "crise": 0
+        },
+        "2022-03": {
+          "vigilance": 1,
+          "alerte": 1,
+          "alerte renforcée": 0,
+          "crise": 0
+        },
+        "2022-04": {
+          "vigilance": 11,
+          "alerte": 27,
+          "alerte renforcée": 0,
+          "crise": 1
+        },
+        "2022-05": {
+          "vigilance": 48,
+          "alerte": 46,
+          "alerte renforcée": 0,
+          "crise": 16
+        },
+        "2022-06": {
+          "vigilance": 92,
+          "alerte": 126,
+          "alerte renforcée": 0,
+          "crise": 59
+        },
+        "2022-07": {
+          "vigilance": 101,
+          "alerte": 202,
+          "alerte renforcée": 0,
+          "crise": 213
+        },
+        "2022-08": {
+          "vigilance": 54,
+          "alerte": 95,
+          "alerte renforcée": 0,
+          "crise": 350
+        },
+        "2022-09": {
+          "vigilance": 29,
+          "alerte": 61,
+          "alerte renforcée": 0,
+          "crise": 255
+        },
+        "2022-10": {
+          "vigilance": 56,
+          "alerte": 96,
+          "alerte renforcée": 0,
+          "crise": 203
+        },
+        "2022-11": {
+          "vigilance": 40,
+          "alerte": 67,
+          "alerte renforcée": 0,
+          "crise": 68
+        },
+        "2022-12": {
+          "vigilance": 26,
+          "alerte": 20,
+          "alerte renforcée": 0,
+          "crise": 11
+        }
+      },
+      "par_dept": {
+        "01": {
+          "nom": "Ain",
+          "jours": {
+            "vigilance": 155,
+            "alerte": 70,
+            "alerte renforcée": 0,
+            "crise": 73
+          },
+          "total_graves": 143
+        },
+        "66": {
+          "nom": "Pyrénées-Orientales",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 227,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 227
+        },
+        "06": {
+          "nom": "Alpes-Maritimes",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 152,
+            "alerte renforcée": 0,
+            "crise": 185
+          },
+          "total_graves": 337
+        },
+        "83": {
+          "nom": "Var",
+          "jours": {
+            "vigilance": 165,
+            "alerte": 443,
+            "alerte renforcée": 0,
+            "crise": 419
+          },
+          "total_graves": 862
+        },
+        "86": {
+          "nom": "Vienne",
+          "jours": {
+            "vigilance": 126,
+            "alerte": 256,
+            "alerte renforcée": 0,
+            "crise": 1041
+          },
+          "total_graves": 1297
+        },
+        "13": {
+          "nom": "Bouches-du-Rhône",
+          "jours": {
+            "vigilance": 94,
+            "alerte": 14,
+            "alerte renforcée": 0,
+            "crise": 227
+          },
+          "total_graves": 241
+        },
+        "16": {
+          "nom": "Charente",
+          "jours": {
+            "vigilance": 64,
+            "alerte": 218,
+            "alerte renforcée": 0,
+            "crise": 565
+          },
+          "total_graves": 783
+        },
+        "17": {
+          "nom": "Charente-Maritime",
+          "jours": {
+            "vigilance": 30,
+            "alerte": 158,
+            "alerte renforcée": 0,
+            "crise": 376
+          },
+          "total_graves": 534
+        },
+        "79": {
+          "nom": "Deux-Sèvres",
+          "jours": {
+            "vigilance": 223,
+            "alerte": 424,
+            "alerte renforcée": 0,
+            "crise": 2286
+          },
+          "total_graves": 2710
+        },
+        "49": {
+          "nom": "Maine-et-Loire",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 102,
+            "alerte renforcée": 0,
+            "crise": 425
+          },
+          "total_graves": 527
+        },
+        "26": {
+          "nom": "Drôme",
+          "jours": {
+            "vigilance": 125,
+            "alerte": 243,
+            "alerte renforcée": 0,
+            "crise": 211
+          },
+          "total_graves": 454
+        },
+        "53": {
+          "nom": "Mayenne",
+          "jours": {
+            "vigilance": 117,
+            "alerte": 76,
+            "alerte renforcée": 0,
+            "crise": 82
+          },
+          "total_graves": 158
+        },
+        "45": {
+          "nom": "Loiret",
+          "jours": {
+            "vigilance": 88,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 367
+          },
+          "total_graves": 367
+        },
+        "84": {
+          "nom": "Vaucluse",
+          "jours": {
+            "vigilance": 43,
+            "alerte": 319,
+            "alerte renforcée": 0,
+            "crise": 231
+          },
+          "total_graves": 550
+        },
+        "05": {
+          "nom": "Hautes-Alpes",
+          "jours": {
+            "vigilance": 41,
+            "alerte": 266,
+            "alerte renforcée": 0,
+            "crise": 88
+          },
+          "total_graves": 354
+        },
+        "36": {
+          "nom": "Indre",
+          "jours": {
+            "vigilance": 124,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 183
+          },
+          "total_graves": 183
+        },
+        "18": {
+          "nom": "Cher",
+          "jours": {
+            "vigilance": 34,
+            "alerte": 8,
+            "alerte renforcée": 0,
+            "crise": 151
+          },
+          "total_graves": 159
+        },
+        "37": {
+          "nom": "Indre-et-Loire",
+          "jours": {
+            "vigilance": 66,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 398
+          },
+          "total_graves": 398
+        },
+        "35": {
+          "nom": "Ille-et-Vilaine",
+          "jours": {
+            "vigilance": 38,
+            "alerte": 87,
+            "alerte renforcée": 0,
+            "crise": 98
+          },
+          "total_graves": 185
+        },
+        "44": {
+          "nom": "Loire-Atlantique",
+          "jours": {
+            "vigilance": 50,
+            "alerte": 23,
+            "alerte renforcée": 0,
+            "crise": 357
+          },
+          "total_graves": 380
+        },
+        "85": {
+          "nom": "Vendée",
+          "jours": {
+            "vigilance": 22,
+            "alerte": 103,
+            "alerte renforcée": 0,
+            "crise": 463
+          },
+          "total_graves": 566
+        },
+        "41": {
+          "nom": "Loir-et-Cher",
+          "jours": {
+            "vigilance": 8,
+            "alerte": 56,
+            "alerte renforcée": 0,
+            "crise": 108
+          },
+          "total_graves": 164
+        },
+        "04": {
+          "nom": "Alpes-de-Haute-Provence",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 83,
+            "alerte renforcée": 0,
+            "crise": 132
+          },
+          "total_graves": 215
+        },
+        "23": {
+          "nom": "Creuse",
+          "jours": {
+            "vigilance": 69,
+            "alerte": 76,
+            "alerte renforcée": 0,
+            "crise": 62
+          },
+          "total_graves": 138
+        },
+        "59": {
+          "nom": "Nord",
+          "jours": {
+            "vigilance": 42,
+            "alerte": 41,
+            "alerte renforcée": 0,
+            "crise": 126
+          },
+          "total_graves": 167
+        },
+        "62": {
+          "nom": "Pas-de-Calais",
+          "jours": {
+            "vigilance": 64,
+            "alerte": 143,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 143
+        },
+        "72": {
+          "nom": "Sarthe",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 100,
+            "alerte renforcée": 0,
+            "crise": 145
+          },
+          "total_graves": 245
+        },
+        "87": {
+          "nom": "Haute-Vienne",
+          "jours": {
+            "vigilance": 202,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 125
+          },
+          "total_graves": 125
+        },
+        "89": {
+          "nom": "Yonne",
+          "jours": {
+            "vigilance": 7,
+            "alerte": 159,
+            "alerte renforcée": 0,
+            "crise": 83
+          },
+          "total_graves": 242
+        },
+        "74": {
+          "nom": "Haute-Savoie",
+          "jours": {
+            "vigilance": 151,
+            "alerte": 706,
+            "alerte renforcée": 0,
+            "crise": 360
+          },
+          "total_graves": 1066
+        },
+        "14": {
+          "nom": "Calvados",
+          "jours": {
+            "vigilance": 54,
+            "alerte": 55,
+            "alerte renforcée": 0,
+            "crise": 81
+          },
+          "total_graves": 136
+        },
+        "64": {
+          "nom": "Pyrénées-Atlantiques",
+          "jours": {
+            "vigilance": 317,
+            "alerte": 138,
+            "alerte renforcée": 0,
+            "crise": 583
+          },
+          "total_graves": 721
+        },
+        "69": {
+          "nom": "Rhône",
+          "jours": {
+            "vigilance": 123,
+            "alerte": 329,
+            "alerte renforcée": 0,
+            "crise": 115
+          },
+          "total_graves": 444
+        },
+        "42": {
+          "nom": "Loire",
+          "jours": {
+            "vigilance": 16,
+            "alerte": 100,
+            "alerte renforcée": 0,
+            "crise": 53
+          },
+          "total_graves": 153
+        },
+        "15": {
+          "nom": "Cantal",
+          "jours": {
+            "vigilance": 29,
+            "alerte": 68,
+            "alerte renforcée": 0,
+            "crise": 101
+          },
+          "total_graves": 169
+        },
+        "43": {
+          "nom": "Haute-Loire",
+          "jours": {
+            "vigilance": 24,
+            "alerte": 154,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 154
+        },
+        "63": {
+          "nom": "Puy-de-Dôme",
+          "jours": {
+            "vigilance": 32,
+            "alerte": 43,
+            "alerte renforcée": 0,
+            "crise": 92
+          },
+          "total_graves": 135
+        },
+        "2B": {
+          "nom": "Haute-Corse",
+          "jours": {
+            "vigilance": 165,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "58": {
+          "nom": "Nièvre",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 108,
+            "alerte renforcée": 0,
+            "crise": 88
+          },
+          "total_graves": 196
+        },
+        "02": {
+          "nom": "Aisne",
+          "jours": {
+            "vigilance": 237,
+            "alerte": 156,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 156
+        },
+        "38": {
+          "nom": "Isère",
+          "jours": {
+            "vigilance": 100,
+            "alerte": 348,
+            "alerte renforcée": 0,
+            "crise": 189
+          },
+          "total_graves": 537
+        },
+        "81": {
+          "nom": "Tarn",
+          "jours": {
+            "vigilance": 55,
+            "alerte": 108,
+            "alerte renforcée": 0,
+            "crise": 1066
+          },
+          "total_graves": 1174
+        },
+        "54": {
+          "nom": "Meurthe-et-Moselle",
+          "jours": {
+            "vigilance": 177,
+            "alerte": 109,
+            "alerte renforcée": 0,
+            "crise": 68
+          },
+          "total_graves": 177
+        },
+        "76": {
+          "nom": "Seine-Maritime",
+          "jours": {
+            "vigilance": 1076,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 38
+          },
+          "total_graves": 38
+        },
+        "28": {
+          "nom": "Eure-et-Loir",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 130
+          },
+          "total_graves": 130
+        },
+        "48": {
+          "nom": "Lozère",
+          "jours": {
+            "vigilance": 47,
+            "alerte": 117,
+            "alerte renforcée": 0,
+            "crise": 52
+          },
+          "total_graves": 169
+        },
+        "33": {
+          "nom": "Gironde",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 47,
+            "alerte renforcée": 0,
+            "crise": 229
+          },
+          "total_graves": 276
+        },
+        "39": {
+          "nom": "Jura",
+          "jours": {
+            "vigilance": 54,
+            "alerte": 43,
+            "alerte renforcée": 0,
+            "crise": 61
+          },
+          "total_graves": 104
+        },
+        "03": {
+          "nom": "Allier",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 41,
+            "alerte renforcée": 0,
+            "crise": 76
+          },
+          "total_graves": 117
+        },
+        "71": {
+          "nom": "Saône-et-Loire",
+          "jours": {
+            "vigilance": 35,
+            "alerte": 75,
+            "alerte renforcée": 0,
+            "crise": 102
+          },
+          "total_graves": 177
+        },
+        "46": {
+          "nom": "Lot",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 84,
+            "alerte renforcée": 0,
+            "crise": 139
+          },
+          "total_graves": 223
+        },
+        "82": {
+          "nom": "Tarn-et-Garonne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 54,
+            "alerte renforcée": 0,
+            "crise": 170
+          },
+          "total_graves": 224
+        },
+        "30": {
+          "nom": "Gard",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 49,
+            "alerte renforcée": 0,
+            "crise": 108
+          },
+          "total_graves": 157
+        },
+        "90": {
+          "nom": "Territoire de Belfort",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 49,
+            "alerte renforcée": 0,
+            "crise": 45
+          },
+          "total_graves": 94
+        },
+        "25": {
+          "nom": "Doubs",
+          "jours": {
+            "vigilance": 97,
+            "alerte": 156,
+            "alerte renforcée": 0,
+            "crise": 164
+          },
+          "total_graves": 320
+        },
+        "56": {
+          "nom": "Morbihan",
+          "jours": {
+            "vigilance": 2,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 284
+          },
+          "total_graves": 284
+        },
+        "40": {
+          "nom": "Landes",
+          "jours": {
+            "vigilance": 337,
+            "alerte": 363,
+            "alerte renforcée": 0,
+            "crise": 292
+          },
+          "total_graves": 655
+        },
+        "34": {
+          "nom": "Hérault",
+          "jours": {
+            "vigilance": 23,
+            "alerte": 190,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 190
+        },
+        "57": {
+          "nom": "Moselle",
+          "jours": {
+            "vigilance": 146,
+            "alerte": 78,
+            "alerte renforcée": 0,
+            "crise": 31
+          },
+          "total_graves": 109
+        },
+        "94": {
+          "nom": "Val-de-Marne",
+          "jours": {
+            "vigilance": 162,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 48
+          },
+          "total_graves": 48
+        },
+        "21": {
+          "nom": "Côte-d'Or",
+          "jours": {
+            "vigilance": 42,
+            "alerte": 44,
+            "alerte renforcée": 0,
+            "crise": 77
+          },
+          "total_graves": 121
+        },
+        "80": {
+          "nom": "Somme",
+          "jours": {
+            "vigilance": 245,
+            "alerte": 173,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 173
+        },
+        "19": {
+          "nom": "Corrèze",
+          "jours": {
+            "vigilance": 77,
+            "alerte": 192,
+            "alerte renforcée": 0,
+            "crise": 116
+          },
+          "total_graves": 308
+        },
+        "73": {
+          "nom": "Savoie",
+          "jours": {
+            "vigilance": 24,
+            "alerte": 91,
+            "alerte renforcée": 0,
+            "crise": 80
+          },
+          "total_graves": 171
+        },
+        "2A": {
+          "nom": "Corse-du-Sud",
+          "jours": {
+            "vigilance": 13,
+            "alerte": 26,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 26
+        },
+        "09": {
+          "nom": "Ariège",
+          "jours": {
+            "vigilance": 15,
+            "alerte": 91,
+            "alerte renforcée": 0,
+            "crise": 216
+          },
+          "total_graves": 307
+        },
+        "47": {
+          "nom": "Lot-et-Garonne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 28,
+            "alerte renforcée": 0,
+            "crise": 151
+          },
+          "total_graves": 179
+        },
+        "11": {
+          "nom": "Aude",
+          "jours": {
+            "vigilance": 77,
+            "alerte": 115,
+            "alerte renforcée": 0,
+            "crise": 132
+          },
+          "total_graves": 247
+        },
+        "70": {
+          "nom": "Haute-Saône",
+          "jours": {
+            "vigilance": 103,
+            "alerte": 27,
+            "alerte renforcée": 0,
+            "crise": 123
+          },
+          "total_graves": 150
+        },
+        "88": {
+          "nom": "Vosges",
+          "jours": {
+            "vigilance": 205,
+            "alerte": 34,
+            "alerte renforcée": 0,
+            "crise": 76
+          },
+          "total_graves": 110
+        },
+        "08": {
+          "nom": "Ardennes",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 286,
+            "alerte renforcée": 0,
+            "crise": 69
+          },
+          "total_graves": 355
+        },
+        "12": {
+          "nom": "Aveyron",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 52,
+            "alerte renforcée": 0,
+            "crise": 132
+          },
+          "total_graves": 184
+        },
+        "68": {
+          "nom": "Haut-Rhin",
+          "jours": {
+            "vigilance": 139,
+            "alerte": 73,
+            "alerte renforcée": 0,
+            "crise": 128
+          },
+          "total_graves": 201
+        },
+        "67": {
+          "nom": "Bas-Rhin",
+          "jours": {
+            "vigilance": 68,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "32": {
+          "nom": "Gers",
+          "jours": {
+            "vigilance": 39,
+            "alerte": 120,
+            "alerte renforcée": 0,
+            "crise": 815
+          },
+          "total_graves": 935
+        },
+        "29": {
+          "nom": "Finistère",
+          "jours": {
+            "vigilance": 28,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 71
+          },
+          "total_graves": 71
+        },
+        "78": {
+          "nom": "Yvelines",
+          "jours": {
+            "vigilance": 31,
+            "alerte": 35,
+            "alerte renforcée": 0,
+            "crise": 48
+          },
+          "total_graves": 83
+        },
+        "91": {
+          "nom": "Essonne",
+          "jours": {
+            "vigilance": 259,
+            "alerte": 53,
+            "alerte renforcée": 0,
+            "crise": 56
+          },
+          "total_graves": 109
+        },
+        "10": {
+          "nom": "Aube",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 272,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 272
+        },
+        "24": {
+          "nom": "Dordogne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 147
+          },
+          "total_graves": 147
+        },
+        "07": {
+          "nom": "Ardèche",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 94,
+            "alerte renforcée": 0,
+            "crise": 59
+          },
+          "total_graves": 153
+        },
+        "65": {
+          "nom": "Hautes-Pyrénées",
+          "jours": {
+            "vigilance": 36,
+            "alerte": 56,
+            "alerte renforcée": 0,
+            "crise": 294
+          },
+          "total_graves": 350
+        },
+        "61": {
+          "nom": "Orne",
+          "jours": {
+            "vigilance": 44,
+            "alerte": 18,
+            "alerte renforcée": 0,
+            "crise": 87
+          },
+          "total_graves": 105
+        },
+        "31": {
+          "nom": "Haute-Garonne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 167
+          },
+          "total_graves": 167
+        },
+        "51": {
+          "nom": "Marne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 550,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 550
+        },
+        "55": {
+          "nom": "Meuse",
+          "jours": {
+            "vigilance": 29,
+            "alerte": 64,
+            "alerte renforcée": 0,
+            "crise": 39
+          },
+          "total_graves": 103
+        },
+        "95": {
+          "nom": "Val-d'Oise",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 145,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 145
+        },
+        "50": {
+          "nom": "Manche",
+          "jours": {
+            "vigilance": 26,
+            "alerte": 55,
+            "alerte renforcée": 0,
+            "crise": 79
+          },
+          "total_graves": 134
+        },
+        "52": {
+          "nom": "Haute-Marne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 2,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 2
+        },
+        "22": {
+          "nom": "Côtes-d'Armor",
+          "jours": {
+            "vigilance": 44,
+            "alerte": 29,
+            "alerte renforcée": 0,
+            "crise": 67
+          },
+          "total_graves": 96
+        },
+        "27": {
+          "nom": "Eure",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 75,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 75
+        },
+        "60": {
+          "nom": "Oise",
+          "jours": {
+            "vigilance": 26,
+            "alerte": 58,
+            "alerte renforcée": 0,
+            "crise": 124
+          },
+          "total_graves": 182
+        },
+        "93": {
+          "nom": "Seine-Saint-Denis",
+          "jours": {
+            "vigilance": 90,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "92": {
+          "nom": "Hauts-de-Seine",
+          "jours": {
+            "vigilance": 90,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "75": {
+          "nom": "Paris",
+          "jours": {
+            "vigilance": 90,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "976": {
+          "nom": "Mayotte",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 84
+          },
+          "total_graves": 84
+        }
+      }
+    },
+    "2023": {
+      "par_mois": {
+        "2023-01": {
+          "vigilance": 7,
+          "alerte": 9,
+          "alerte renforcée": 0,
+          "crise": 5
+        },
+        "2023-02": {
+          "vigilance": 10,
+          "alerte": 9,
+          "alerte renforcée": 0,
+          "crise": 3
+        },
+        "2023-03": {
+          "vigilance": 54,
+          "alerte": 22,
+          "alerte renforcée": 0,
+          "crise": 5
+        },
+        "2023-04": {
+          "vigilance": 75,
+          "alerte": 44,
+          "alerte renforcée": 0,
+          "crise": 6
+        },
+        "2023-05": {
+          "vigilance": 64,
+          "alerte": 57,
+          "alerte renforcée": 0,
+          "crise": 11
+        },
+        "2023-06": {
+          "vigilance": 117,
+          "alerte": 148,
+          "alerte renforcée": 0,
+          "crise": 49
+        },
+        "2023-07": {
+          "vigilance": 104,
+          "alerte": 245,
+          "alerte renforcée": 0,
+          "crise": 150
+        },
+        "2023-08": {
+          "vigilance": 79,
+          "alerte": 183,
+          "alerte renforcée": 0,
+          "crise": 292
+        },
+        "2023-09": {
+          "vigilance": 57,
+          "alerte": 102,
+          "alerte renforcée": 0,
+          "crise": 310
+        },
+        "2023-10": {
+          "vigilance": 55,
+          "alerte": 91,
+          "alerte renforcée": 0,
+          "crise": 310
+        },
+        "2023-11": {
+          "vigilance": 78,
+          "alerte": 53,
+          "alerte renforcée": 0,
+          "crise": 44
+        },
+        "2023-12": {
+          "vigilance": 8,
+          "alerte": 9,
+          "alerte renforcée": 0,
+          "crise": 7
+        }
+      },
+      "par_dept": {
+        "76": {
+          "nom": "Seine-Maritime",
+          "jours": {
+            "vigilance": 1084,
+            "alerte": 120,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 120
+        },
+        "37": {
+          "nom": "Indre-et-Loire",
+          "jours": {
+            "vigilance": 88,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 405
+          },
+          "total_graves": 405
+        },
+        "10": {
+          "nom": "Aube",
+          "jours": {
+            "vigilance": 178,
+            "alerte": 223,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 223
+        },
+        "976": {
+          "nom": "Mayotte",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 343
+          },
+          "total_graves": 343
+        },
+        "69": {
+          "nom": "Rhône",
+          "jours": {
+            "vigilance": 170,
+            "alerte": 540,
+            "alerte renforcée": 0,
+            "crise": 24
+          },
+          "total_graves": 564
+        },
+        "01": {
+          "nom": "Ain",
+          "jours": {
+            "vigilance": 144,
+            "alerte": 160,
+            "alerte renforcée": 0,
+            "crise": 109
+          },
+          "total_graves": 269
+        },
+        "49": {
+          "nom": "Maine-et-Loire",
+          "jours": {
+            "vigilance": 148,
+            "alerte": 260,
+            "alerte renforcée": 0,
+            "crise": 338
+          },
+          "total_graves": 598
+        },
+        "53": {
+          "nom": "Mayenne",
+          "jours": {
+            "vigilance": 220,
+            "alerte": 84,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 84
+        },
+        "86": {
+          "nom": "Vienne",
+          "jours": {
+            "vigilance": 50,
+            "alerte": 401,
+            "alerte renforcée": 0,
+            "crise": 603
+          },
+          "total_graves": 1004
+        },
+        "48": {
+          "nom": "Lozère",
+          "jours": {
+            "vigilance": 155,
+            "alerte": 327,
+            "alerte renforcée": 0,
+            "crise": 42
+          },
+          "total_graves": 369
+        },
+        "73": {
+          "nom": "Savoie",
+          "jours": {
+            "vigilance": 151,
+            "alerte": 141,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 141
+        },
+        "35": {
+          "nom": "Ille-et-Vilaine",
+          "jours": {
+            "vigilance": 58,
+            "alerte": 120,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 120
+        },
+        "60": {
+          "nom": "Oise",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 105,
+            "alerte renforcée": 0,
+            "crise": 151
+          },
+          "total_graves": 256
+        },
+        "66": {
+          "nom": "Pyrénées-Orientales",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 53,
+            "alerte renforcée": 0,
+            "crise": 254
+          },
+          "total_graves": 307
+        },
+        "46": {
+          "nom": "Lot",
+          "jours": {
+            "vigilance": 36,
+            "alerte": 226,
+            "alerte renforcée": 0,
+            "crise": 314
+          },
+          "total_graves": 540
+        },
+        "82": {
+          "nom": "Tarn-et-Garonne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 71,
+            "alerte renforcée": 0,
+            "crise": 102
+          },
+          "total_graves": 173
+        },
+        "74": {
+          "nom": "Haute-Savoie",
+          "jours": {
+            "vigilance": 105,
+            "alerte": 143,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 143
+        },
+        "13": {
+          "nom": "Bouches-du-Rhône",
+          "jours": {
+            "vigilance": 49,
+            "alerte": 31,
+            "alerte renforcée": 0,
+            "crise": 201
+          },
+          "total_graves": 232
+        },
+        "83": {
+          "nom": "Var",
+          "jours": {
+            "vigilance": 539,
+            "alerte": 904,
+            "alerte renforcée": 0,
+            "crise": 438
+          },
+          "total_graves": 1342
+        },
+        "26": {
+          "nom": "Drôme",
+          "jours": {
+            "vigilance": 323,
+            "alerte": 511,
+            "alerte renforcée": 0,
+            "crise": 192
+          },
+          "total_graves": 703
+        },
+        "78": {
+          "nom": "Yvelines",
+          "jours": {
+            "vigilance": 129,
+            "alerte": 72,
+            "alerte renforcée": 0,
+            "crise": 127
+          },
+          "total_graves": 199
+        },
+        "19": {
+          "nom": "Corrèze",
+          "jours": {
+            "vigilance": 183,
+            "alerte": 148,
+            "alerte renforcée": 0,
+            "crise": 214
+          },
+          "total_graves": 362
+        },
+        "07": {
+          "nom": "Ardèche",
+          "jours": {
+            "vigilance": 24,
+            "alerte": 122,
+            "alerte renforcée": 0,
+            "crise": 84
+          },
+          "total_graves": 206
+        },
+        "94": {
+          "nom": "Val-de-Marne",
+          "jours": {
+            "vigilance": 240,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "72": {
+          "nom": "Sarthe",
+          "jours": {
+            "vigilance": 35,
+            "alerte": 22,
+            "alerte renforcée": 0,
+            "crise": 130
+          },
+          "total_graves": 152
+        },
+        "38": {
+          "nom": "Isère",
+          "jours": {
+            "vigilance": 180,
+            "alerte": 609,
+            "alerte renforcée": 0,
+            "crise": 136
+          },
+          "total_graves": 745
+        },
+        "23": {
+          "nom": "Creuse",
+          "jours": {
+            "vigilance": 117,
+            "alerte": 49,
+            "alerte renforcée": 0,
+            "crise": 94
+          },
+          "total_graves": 143
+        },
+        "06": {
+          "nom": "Alpes-Maritimes",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 192,
+            "alerte renforcée": 0,
+            "crise": 112
+          },
+          "total_graves": 304
+        },
+        "89": {
+          "nom": "Yonne",
+          "jours": {
+            "vigilance": 97,
+            "alerte": 87,
+            "alerte renforcée": 0,
+            "crise": 62
+          },
+          "total_graves": 149
+        },
+        "30": {
+          "nom": "Gard",
+          "jours": {
+            "vigilance": 92,
+            "alerte": 74,
+            "alerte renforcée": 0,
+            "crise": 145
+          },
+          "total_graves": 219
+        },
+        "84": {
+          "nom": "Vaucluse",
+          "jours": {
+            "vigilance": 277,
+            "alerte": 426,
+            "alerte renforcée": 0,
+            "crise": 58
+          },
+          "total_graves": 484
+        },
+        "65": {
+          "nom": "Hautes-Pyrénées",
+          "jours": {
+            "vigilance": 206,
+            "alerte": 28,
+            "alerte renforcée": 0,
+            "crise": 146
+          },
+          "total_graves": 174
+        },
+        "32": {
+          "nom": "Gers",
+          "jours": {
+            "vigilance": 157,
+            "alerte": 74,
+            "alerte renforcée": 0,
+            "crise": 146
+          },
+          "total_graves": 220
+        },
+        "31": {
+          "nom": "Haute-Garonne",
+          "jours": {
+            "vigilance": 111,
+            "alerte": 24,
+            "alerte renforcée": 0,
+            "crise": 98
+          },
+          "total_graves": 122
+        },
+        "11": {
+          "nom": "Aude",
+          "jours": {
+            "vigilance": 109,
+            "alerte": 183,
+            "alerte renforcée": 0,
+            "crise": 283
+          },
+          "total_graves": 466
+        },
+        "09": {
+          "nom": "Ariège",
+          "jours": {
+            "vigilance": 428,
+            "alerte": 138,
+            "alerte renforcée": 0,
+            "crise": 16
+          },
+          "total_graves": 154
+        },
+        "47": {
+          "nom": "Lot-et-Garonne",
+          "jours": {
+            "vigilance": 87,
+            "alerte": 20,
+            "alerte renforcée": 0,
+            "crise": 140
+          },
+          "total_graves": 160
+        },
+        "04": {
+          "nom": "Alpes-de-Haute-Provence",
+          "jours": {
+            "vigilance": 17,
+            "alerte": 100,
+            "alerte renforcée": 0,
+            "crise": 105
+          },
+          "total_graves": 205
+        },
+        "70": {
+          "nom": "Haute-Saône",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 378,
+            "alerte renforcée": 0,
+            "crise": 56
+          },
+          "total_graves": 434
+        },
+        "41": {
+          "nom": "Loir-et-Cher",
+          "jours": {
+            "vigilance": 77,
+            "alerte": 43,
+            "alerte renforcée": 0,
+            "crise": 105
+          },
+          "total_graves": 148
+        },
+        "51": {
+          "nom": "Marne",
+          "jours": {
+            "vigilance": 828,
+            "alerte": 387,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 387
+        },
+        "14": {
+          "nom": "Calvados",
+          "jours": {
+            "vigilance": 106,
+            "alerte": 92,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 92
+        },
+        "27": {
+          "nom": "Eure",
+          "jours": {
+            "vigilance": 77,
+            "alerte": 108,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 108
+        },
+        "71": {
+          "nom": "Saône-et-Loire",
+          "jours": {
+            "vigilance": 153,
+            "alerte": 109,
+            "alerte renforcée": 0,
+            "crise": 136
+          },
+          "total_graves": 245
+        },
+        "36": {
+          "nom": "Indre",
+          "jours": {
+            "vigilance": 56,
+            "alerte": 28,
+            "alerte renforcée": 0,
+            "crise": 130
+          },
+          "total_graves": 158
+        },
+        "34": {
+          "nom": "Hérault",
+          "jours": {
+            "vigilance": 59,
+            "alerte": 105,
+            "alerte renforcée": 0,
+            "crise": 201
+          },
+          "total_graves": 306
+        },
+        "80": {
+          "nom": "Somme",
+          "jours": {
+            "vigilance": 210,
+            "alerte": 158,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 158
+        },
+        "61": {
+          "nom": "Orne",
+          "jours": {
+            "vigilance": 69,
+            "alerte": 109,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 109
+        },
+        "05": {
+          "nom": "Hautes-Alpes",
+          "jours": {
+            "vigilance": 321,
+            "alerte": 87,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 87
+        },
+        "59": {
+          "nom": "Nord",
+          "jours": {
+            "vigilance": 87,
+            "alerte": 162,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 162
+        },
+        "45": {
+          "nom": "Loiret",
+          "jours": {
+            "vigilance": 75,
+            "alerte": 8,
+            "alerte renforcée": 0,
+            "crise": 561
+          },
+          "total_graves": 569
+        },
+        "62": {
+          "nom": "Pas-de-Calais",
+          "jours": {
+            "vigilance": 289,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "79": {
+          "nom": "Deux-Sèvres",
+          "jours": {
+            "vigilance": 98,
+            "alerte": 432,
+            "alerte renforcée": 0,
+            "crise": 341
+          },
+          "total_graves": 773
+        },
+        "02": {
+          "nom": "Aisne",
+          "jours": {
+            "vigilance": 49,
+            "alerte": 155,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 155
+        },
+        "44": {
+          "nom": "Loire-Atlantique",
+          "jours": {
+            "vigilance": 28,
+            "alerte": 36,
+            "alerte renforcée": 0,
+            "crise": 237
+          },
+          "total_graves": 273
+        },
+        "18": {
+          "nom": "Cher",
+          "jours": {
+            "vigilance": 14,
+            "alerte": 21,
+            "alerte renforcée": 0,
+            "crise": 135
+          },
+          "total_graves": 156
+        },
+        "16": {
+          "nom": "Charente",
+          "jours": {
+            "vigilance": 17,
+            "alerte": 180,
+            "alerte renforcée": 0,
+            "crise": 281
+          },
+          "total_graves": 461
+        },
+        "17": {
+          "nom": "Charente-Maritime",
+          "jours": {
+            "vigilance": 259,
+            "alerte": 48,
+            "alerte renforcée": 0,
+            "crise": 164
+          },
+          "total_graves": 212
+        },
+        "81": {
+          "nom": "Tarn",
+          "jours": {
+            "vigilance": 487,
+            "alerte": 423,
+            "alerte renforcée": 0,
+            "crise": 1449
+          },
+          "total_graves": 1872
+        },
+        "24": {
+          "nom": "Dordogne",
+          "jours": {
+            "vigilance": 7,
+            "alerte": 51,
+            "alerte renforcée": 0,
+            "crise": 388
+          },
+          "total_graves": 439
+        },
+        "21": {
+          "nom": "Côte-d'Or",
+          "jours": {
+            "vigilance": 5,
+            "alerte": 26,
+            "alerte renforcée": 0,
+            "crise": 113
+          },
+          "total_graves": 139
+        },
+        "85": {
+          "nom": "Vendée",
+          "jours": {
+            "vigilance": 14,
+            "alerte": 138,
+            "alerte renforcée": 0,
+            "crise": 291
+          },
+          "total_graves": 429
+        },
+        "08": {
+          "nom": "Ardennes",
+          "jours": {
+            "vigilance": 162,
+            "alerte": 226,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 226
+        },
+        "95": {
+          "nom": "Val-d'Oise",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 162,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 162
+        },
+        "64": {
+          "nom": "Pyrénées-Atlantiques",
+          "jours": {
+            "vigilance": 216,
+            "alerte": 119,
+            "alerte renforcée": 0,
+            "crise": 628
+          },
+          "total_graves": 747
+        },
+        "28": {
+          "nom": "Eure-et-Loir",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 149
+          },
+          "total_graves": 149
+        },
+        "58": {
+          "nom": "Nièvre",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 52,
+            "alerte renforcée": 0,
+            "crise": 99
+          },
+          "total_graves": 151
+        },
+        "91": {
+          "nom": "Essonne",
+          "jours": {
+            "vigilance": 203,
+            "alerte": 90,
+            "alerte renforcée": 0,
+            "crise": 20
+          },
+          "total_graves": 110
+        },
+        "88": {
+          "nom": "Vosges",
+          "jours": {
+            "vigilance": 160,
+            "alerte": 323,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 323
+        },
+        "39": {
+          "nom": "Jura",
+          "jours": {
+            "vigilance": 40,
+            "alerte": 57,
+            "alerte renforcée": 0,
+            "crise": 86
+          },
+          "total_graves": 143
+        },
+        "52": {
+          "nom": "Haute-Marne",
+          "jours": {
+            "vigilance": 15,
+            "alerte": 97,
+            "alerte renforcée": 0,
+            "crise": 29
+          },
+          "total_graves": 126
+        },
+        "77": {
+          "nom": "Seine-et-Marne",
+          "jours": {
+            "vigilance": 27,
+            "alerte": 162,
+            "alerte renforcée": 0,
+            "crise": 10
+          },
+          "total_graves": 172
+        },
+        "87": {
+          "nom": "Haute-Vienne",
+          "jours": {
+            "vigilance": 253,
+            "alerte": 109,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 109
+        },
+        "12": {
+          "nom": "Aveyron",
+          "jours": {
+            "vigilance": 7,
+            "alerte": 108,
+            "alerte renforcée": 0,
+            "crise": 381
+          },
+          "total_graves": 489
+        },
+        "75": {
+          "nom": "Paris",
+          "jours": {
+            "vigilance": 136,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "92": {
+          "nom": "Hauts-de-Seine",
+          "jours": {
+            "vigilance": 136,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "93": {
+          "nom": "Seine-Saint-Denis",
+          "jours": {
+            "vigilance": 136,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "90": {
+          "nom": "Territoire de Belfort",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 79,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 79
+        },
+        "03": {
+          "nom": "Allier",
+          "jours": {
+            "vigilance": 28,
+            "alerte": 35,
+            "alerte renforcée": 0,
+            "crise": 60
+          },
+          "total_graves": 95
+        },
+        "68": {
+          "nom": "Haut-Rhin",
+          "jours": {
+            "vigilance": 70,
+            "alerte": 116,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 116
+        },
+        "25": {
+          "nom": "Doubs",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 207,
+            "alerte renforcée": 0,
+            "crise": 178
+          },
+          "total_graves": 385
+        },
+        "67": {
+          "nom": "Bas-Rhin",
+          "jours": {
+            "vigilance": 203,
+            "alerte": 343,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 343
+        },
+        "42": {
+          "nom": "Loire",
+          "jours": {
+            "vigilance": 23,
+            "alerte": 74,
+            "alerte renforcée": 0,
+            "crise": 48
+          },
+          "total_graves": 122
+        },
+        "57": {
+          "nom": "Moselle",
+          "jours": {
+            "vigilance": 166,
+            "alerte": 159,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 159
+        },
+        "33": {
+          "nom": "Gironde",
+          "jours": {
+            "vigilance": 82,
+            "alerte": 49,
+            "alerte renforcée": 0,
+            "crise": 306
+          },
+          "total_graves": 355
+        },
+        "55": {
+          "nom": "Meuse",
+          "jours": {
+            "vigilance": 32,
+            "alerte": 70,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 70
+        },
+        "54": {
+          "nom": "Meurthe-et-Moselle",
+          "jours": {
+            "vigilance": 155,
+            "alerte": 143,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 143
+        },
+        "63": {
+          "nom": "Puy-de-Dôme",
+          "jours": {
+            "vigilance": 7,
+            "alerte": 45,
+            "alerte renforcée": 0,
+            "crise": 88
+          },
+          "total_graves": 133
+        },
+        "15": {
+          "nom": "Cantal",
+          "jours": {
+            "vigilance": 192,
+            "alerte": 41,
+            "alerte renforcée": 0,
+            "crise": 165
+          },
+          "total_graves": 206
+        },
+        "40": {
+          "nom": "Landes",
+          "jours": {
+            "vigilance": 74,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 197
+          },
+          "total_graves": 197
+        },
+        "971": {
+          "nom": "Guadeloupe",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 64
+          },
+          "total_graves": 64
+        },
+        "2A": {
+          "nom": "Corse-du-Sud",
+          "jours": {
+            "vigilance": 91,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "43": {
+          "nom": "Haute-Loire",
+          "jours": {
+            "vigilance": 10,
+            "alerte": 58,
+            "alerte renforcée": 0,
+            "crise": 39
+          },
+          "total_graves": 97
+        },
+        "56": {
+          "nom": "Morbihan",
+          "jours": {
+            "vigilance": 64,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "974": {
+          "nom": "La Réunion",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 31,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 31
+        }
+      }
+    },
+    "2024": {
+      "par_mois": {
+        "2024-01": {
+          "vigilance": 1,
+          "alerte": 2,
+          "alerte renforcée": 0,
+          "crise": 5
+        },
+        "2024-02": {
+          "vigilance": 2,
+          "alerte": 0,
+          "alerte renforcée": 0,
+          "crise": 6
+        },
+        "2024-03": {
+          "vigilance": 2,
+          "alerte": 2,
+          "alerte renforcée": 0,
+          "crise": 4
+        },
+        "2024-04": {
+          "vigilance": 1,
+          "alerte": 4,
+          "alerte renforcée": 0,
+          "crise": 5
+        },
+        "2024-05": {
+          "vigilance": 1,
+          "alerte": 3,
+          "alerte renforcée": 0,
+          "crise": 7
+        },
+        "2024-06": {
+          "vigilance": 5,
+          "alerte": 8,
+          "alerte renforcée": 0,
+          "crise": 8
+        },
+        "2024-07": {
+          "vigilance": 13,
+          "alerte": 28,
+          "alerte renforcée": 0,
+          "crise": 12
+        },
+        "2024-08": {
+          "vigilance": 60,
+          "alerte": 79,
+          "alerte renforcée": 0,
+          "crise": 62
+        },
+        "2024-09": {
+          "vigilance": 46,
+          "alerte": 58,
+          "alerte renforcée": 0,
+          "crise": 52
+        },
+        "2024-10": {
+          "vigilance": 34,
+          "alerte": 24,
+          "alerte renforcée": 0,
+          "crise": 24
+        },
+        "2024-11": {
+          "vigilance": 4,
+          "alerte": 1,
+          "alerte renforcée": 0,
+          "crise": 7
+        },
+        "2024-12": {
+          "vigilance": 3,
+          "alerte": 2,
+          "alerte renforcée": 0,
+          "crise": 4
+        }
+      },
+      "par_dept": {
+        "48": {
+          "nom": "Lozère",
+          "jours": {
+            "vigilance": 73,
+            "alerte": 41,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 41
+        },
+        "66": {
+          "nom": "Pyrénées-Orientales",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 370
+          },
+          "total_graves": 370
+        },
+        "84": {
+          "nom": "Vaucluse",
+          "jours": {
+            "vigilance": 59,
+            "alerte": 94,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 94
+        },
+        "11": {
+          "nom": "Aude",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 371
+          },
+          "total_graves": 371
+        },
+        "30": {
+          "nom": "Gard",
+          "jours": {
+            "vigilance": 91,
+            "alerte": 91,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 91
+        },
+        "34": {
+          "nom": "Hérault",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 183,
+            "alerte renforcée": 0,
+            "crise": 184
+          },
+          "total_graves": 367
+        },
+        "83": {
+          "nom": "Var",
+          "jours": {
+            "vigilance": 286,
+            "alerte": 369,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 369
+        },
+        "01": {
+          "nom": "Ain",
+          "jours": {
+            "vigilance": 197,
+            "alerte": 83,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 83
+        },
+        "971": {
+          "nom": "Guadeloupe",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 250
+          },
+          "total_graves": 250
+        },
+        "972": {
+          "nom": "Martinique",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 21,
+            "alerte renforcée": 0,
+            "crise": 11
+          },
+          "total_graves": 32
+        },
+        "2B": {
+          "nom": "Haute-Corse",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 129,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 129
+        },
+        "09": {
+          "nom": "Ariège",
+          "jours": {
+            "vigilance": 35,
+            "alerte": 15,
+            "alerte renforcée": 0,
+            "crise": 67
+          },
+          "total_graves": 82
+        },
+        "81": {
+          "nom": "Tarn",
+          "jours": {
+            "vigilance": 28,
+            "alerte": 7,
+            "alerte renforcée": 0,
+            "crise": 85
+          },
+          "total_graves": 92
+        },
+        "31": {
+          "nom": "Haute-Garonne",
+          "jours": {
+            "vigilance": 28,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 104
+          },
+          "total_graves": 104
+        },
+        "64": {
+          "nom": "Pyrénées-Atlantiques",
+          "jours": {
+            "vigilance": 140,
+            "alerte": 77,
+            "alerte renforcée": 0,
+            "crise": 105
+          },
+          "total_graves": 182
+        },
+        "2A": {
+          "nom": "Corse-du-Sud",
+          "jours": {
+            "vigilance": 86,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "13": {
+          "nom": "Bouches-du-Rhône",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 43,
+            "alerte renforcée": 0,
+            "crise": 54
+          },
+          "total_graves": 97
+        },
+        "12": {
+          "nom": "Aveyron",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 108,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 108
+        },
+        "85": {
+          "nom": "Vendée",
+          "jours": {
+            "vigilance": 49,
+            "alerte": 133,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 133
+        },
+        "16": {
+          "nom": "Charente",
+          "jours": {
+            "vigilance": 46,
+            "alerte": 28,
+            "alerte renforcée": 0,
+            "crise": 101
+          },
+          "total_graves": 129
+        },
+        "07": {
+          "nom": "Ardèche",
+          "jours": {
+            "vigilance": 21,
+            "alerte": 81,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 81
+        },
+        "45": {
+          "nom": "Loiret",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 27,
+            "alerte renforcée": 0,
+            "crise": 44
+          },
+          "total_graves": 71
+        },
+        "82": {
+          "nom": "Tarn-et-Garonne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 21,
+            "alerte renforcée": 0,
+            "crise": 71
+          },
+          "total_graves": 92
+        },
+        "46": {
+          "nom": "Lot",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 14,
+            "alerte renforcée": 0,
+            "crise": 78
+          },
+          "total_graves": 92
+        },
+        "40": {
+          "nom": "Landes",
+          "jours": {
+            "vigilance": 210,
+            "alerte": 93,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 93
+        },
+        "47": {
+          "nom": "Lot-et-Garonne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 7,
+            "alerte renforcée": 0,
+            "crise": 83
+          },
+          "total_graves": 90
+        },
+        "04": {
+          "nom": "Alpes-de-Haute-Provence",
+          "jours": {
+            "vigilance": 5,
+            "alerte": 47,
+            "alerte renforcée": 0,
+            "crise": 28
+          },
+          "total_graves": 75
+        },
+        "44": {
+          "nom": "Loire-Atlantique",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 59,
+            "alerte renforcée": 0,
+            "crise": 11
+          },
+          "total_graves": 70
+        },
+        "33": {
+          "nom": "Gironde",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 42,
+            "alerte renforcée": 0,
+            "crise": 106
+          },
+          "total_graves": 148
+        },
+        "65": {
+          "nom": "Hautes-Pyrénées",
+          "jours": {
+            "vigilance": 244,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 30
+          },
+          "total_graves": 30
+        },
+        "49": {
+          "nom": "Maine-et-Loire",
+          "jours": {
+            "vigilance": 71,
+            "alerte": 107,
+            "alerte renforcée": 0,
+            "crise": 14
+          },
+          "total_graves": 121
+        },
+        "32": {
+          "nom": "Gers",
+          "jours": {
+            "vigilance": 72,
+            "alerte": 41,
+            "alerte renforcée": 0,
+            "crise": 43
+          },
+          "total_graves": 84
+        },
+        "24": {
+          "nom": "Dordogne",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 70
+          },
+          "total_graves": 70
+        },
+        "19": {
+          "nom": "Corrèze",
+          "jours": {
+            "vigilance": 28,
+            "alerte": 28,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 28
+        },
+        "86": {
+          "nom": "Vienne",
+          "jours": {
+            "vigilance": 70,
+            "alerte": 70,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 70
+        },
+        "26": {
+          "nom": "Drôme",
+          "jours": {
+            "vigilance": 163,
+            "alerte": 90,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 90
+        },
+        "53": {
+          "nom": "Mayenne",
+          "jours": {
+            "vigilance": 7,
+            "alerte": 50,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 50
+        },
+        "15": {
+          "nom": "Cantal",
+          "jours": {
+            "vigilance": 35,
+            "alerte": 79,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 79
+        },
+        "72": {
+          "nom": "Sarthe",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 50,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 50
+        },
+        "42": {
+          "nom": "Loire",
+          "jours": {
+            "vigilance": 20,
+            "alerte": 17,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 17
+        },
+        "38": {
+          "nom": "Isère",
+          "jours": {
+            "vigilance": 135,
+            "alerte": 34,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 34
+        },
+        "25": {
+          "nom": "Doubs",
+          "jours": {
+            "vigilance": 70,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "36": {
+          "nom": "Indre",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 7,
+            "alerte renforcée": 0,
+            "crise": 27
+          },
+          "total_graves": 34
+        },
+        "17": {
+          "nom": "Charente-Maritime",
+          "jours": {
+            "vigilance": 28,
+            "alerte": 49,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 49
+        },
+        "79": {
+          "nom": "Deux-Sèvres",
+          "jours": {
+            "vigilance": 121,
+            "alerte": 75,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 75
+        },
+        "41": {
+          "nom": "Loir-et-Cher",
+          "jours": {
+            "vigilance": 47,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "63": {
+          "nom": "Puy-de-Dôme",
+          "jours": {
+            "vigilance": 11,
+            "alerte": 37,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 37
+        },
+        "73": {
+          "nom": "Savoie",
+          "jours": {
+            "vigilance": 37,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "74": {
+          "nom": "Haute-Savoie",
+          "jours": {
+            "vigilance": 46,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "87": {
+          "nom": "Haute-Vienne",
+          "jours": {
+            "vigilance": 80,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "28": {
+          "nom": "Eure-et-Loir",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 29,
+            "alerte renforcée": 0,
+            "crise": 22
+          },
+          "total_graves": 51
+        },
+        "39": {
+          "nom": "Jura",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 29,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 29
+        },
+        "90": {
+          "nom": "Territoire de Belfort",
+          "jours": {
+            "vigilance": 31,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "43": {
+          "nom": "Haute-Loire",
+          "jours": {
+            "vigilance": 24,
+            "alerte": 19,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 19
+        },
+        "05": {
+          "nom": "Hautes-Alpes",
+          "jours": {
+            "vigilance": 42,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "78": {
+          "nom": "Yvelines",
+          "jours": {
+            "vigilance": 44,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "03": {
+          "nom": "Allier",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 12,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 12
+        },
+        "23": {
+          "nom": "Creuse",
+          "jours": {
+            "vigilance": 37,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "976": {
+          "nom": "Mayotte",
+          "jours": {
+            "vigilance": 105,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        },
+        "974": {
+          "nom": "La Réunion",
+          "jours": {
+            "vigilance": 0,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 9
+          },
+          "total_graves": 9
+        },
+        "10": {
+          "nom": "Aube",
+          "jours": {
+            "vigilance": 1,
+            "alerte": 0,
+            "alerte renforcée": 0,
+            "crise": 0
+          },
+          "total_graves": 0
+        }
+      }
+    }
+  },
+  "top10_depts": [
+    {
+      "code": "79",
+      "nom": "Deux-Sèvres",
+      "total_graves": 5393,
+      "jours": {
+        "vigilance": 1418,
+        "alerte": 2116,
+        "alerte renforcée": 0,
+        "crise": 3277
+      }
+    },
+    {
+      "code": "81",
+      "nom": "Tarn",
+      "total_graves": 4447,
+      "jours": {
+        "vigilance": 981,
+        "alerte": 819,
+        "alerte renforcée": 0,
+        "crise": 3628
+      }
+    },
+    {
+      "code": "83",
+      "nom": "Var",
+      "total_graves": 3103,
+      "jours": {
+        "vigilance": 1243,
+        "alerte": 1906,
+        "alerte renforcée": 0,
+        "crise": 1197
+      }
+    },
+    {
+      "code": "86",
+      "nom": "Vienne",
+      "total_graves": 3060,
+      "jours": {
+        "vigilance": 436,
+        "alerte": 1039,
+        "alerte renforcée": 0,
+        "crise": 2021
+      }
+    },
+    {
+      "code": "64",
+      "nom": "Pyrénées-Atlantiques",
+      "total_graves": 2519,
+      "jours": {
+        "vigilance": 882,
+        "alerte": 593,
+        "alerte renforcée": 0,
+        "crise": 1926
+      }
+    },
+    {
+      "code": "16",
+      "nom": "Charente",
+      "total_graves": 2168,
+      "jours": {
+        "vigilance": 148,
+        "alerte": 788,
+        "alerte renforcée": 0,
+        "crise": 1380
+      }
+    },
+    {
+      "code": "49",
+      "nom": "Maine-et-Loire",
+      "total_graves": 1682,
+      "jours": {
+        "vigilance": 386,
+        "alerte": 727,
+        "alerte renforcée": 0,
+        "crise": 955
+      }
+    },
+    {
+      "code": "74",
+      "nom": "Haute-Savoie",
+      "total_graves": 1611,
+      "jours": {
+        "vigilance": 433,
+        "alerte": 1251,
+        "alerte renforcée": 0,
+        "crise": 360
+      }
+    },
+    {
+      "code": "45",
+      "nom": "Loiret",
+      "total_graves": 1581,
+      "jours": {
+        "vigilance": 163,
+        "alerte": 187,
+        "alerte renforcée": 0,
+        "crise": 1394
+      }
+    },
+    {
+      "code": "38",
+      "nom": "Isère",
+      "total_graves": 1550,
+      "jours": {
+        "vigilance": 611,
+        "alerte": 1225,
+        "alerte renforcée": 0,
+        "crise": 325
+      }
+    }
+  ]
+}
