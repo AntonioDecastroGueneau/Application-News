@@ -38,13 +38,6 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python pipeline.py
 
-      # ── 4b. Fetch Mastodon timeline ───────────────────────────────
-      - name: Fetch Mastodon timeline
-        env:
-          MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-        run: python mastodon_fetch.py
-
       # ── 5. Récupération de la branche gh-pages ───────────────────
       - name: Checkout gh-pages
         uses: actions/checkout@v4
@@ -58,7 +51,7 @@ jobs:
           # Créer le dossier data s'il n'existe pas
           mkdir -p gh-pages-branch/data
 
-          # Copier le JSON du jour + Mastodon
+          # Copier le JSON du jour
           cp data/*.json gh-pages-branch/data/ 2>/dev/null || true
 
           # Copier archive.json à la racine de gh-pages
