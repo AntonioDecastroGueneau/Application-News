@@ -374,6 +374,32 @@ def _gsf_resumer(titre: str, contenu: str) -> dict:
     return result if result else {'resume': titre[:200], 'score': 1}
 
 
+def groq_summarise_jorf(titre: str, contenu: str) -> dict:
+    """
+    Évalue un texte du JORF pré-filtré par mots-clés.
+    Plus strict que groq_summarise car le pré-filtre de mots-clés est large.
+    Retourne pertinent=False si le texte ne concerne pas directement GSF.
+    """
+    system = 'Tu es juriste RSE pour GSF (nettoyage industriel). JSON uniquement.'
+    prompt = (
+        'GSF exploite des sites ICPE, utilise des biocides/detergents/produits CMR, '
+        'gere des dechets industriels, emploie 42000 agents de nettoyage.\n\n'
+        'Ce texte du JO a ete pre-filtre par mots-cles. Verifie s\'il concerne DIRECTEMENT GSF :\n'
+        '  PERTINENT : texte qui modifie des obligations operationnelles ou reglementaires directes de GSF\n'
+        '  (biocides, ICPE, dechets industriels, CMR, solvants, convention collective proprete, '
+        'hygiène industrielle, radioprotection)\n'
+        '  NON PERTINENT : textes d\'autres secteurs (boulangerie, agriculture, medecine, BTP, '
+        'pêche, transport, education, defense, etc.) meme s\'ils contiennent des mots comme '
+        '\'nettoyage\' ou \'proprete\' de facon incidente.\n\n'
+        f'TITRE: {titre}\n'
+        f'CONTENU: {contenu[:400]}\n\n'
+        'Reponds: {"pertinent": true/false, "resume": "1 phrase si pertinent", "score": 2}'
+    )
+    raw = call_groq(prompt, system)
+    result = extract_json(raw)
+    return result if result else {'pertinent': False, 'resume': '', 'score': 1}
+
+
 def groq_summarise(titre: str, contenu: str) -> dict:
     """2 appels Groq : filtre d'abord, resume si pertinent."""
     if not _gsf_est_pertinent(titre, contenu):
@@ -585,7 +611,11 @@ def fetch_jorf():
                         if full:
                             contenu = full
 
-                    analysis = groq_summarise(art['titre'], contenu)
+                    analysis = groq_summarise_jorf(art['titre'], contenu)
+                    # Exclure si le LLM juge non pertinent après analyse complète
+                    if analysis.get('pertinent') is False:
+                        log.debug(f"JORF exclu (non pertinent) : {art['titre'][:60]}")
+                        continue
 
                     items.append({
                         'id'       : make_id('JORF', art['titre']),
@@ -665,7 +695,11 @@ def fetch_rss_source(source: dict):
             # (certaines sources RSS publient avec des dates décalées)
             # La fraîcheur du feed est garantie par le cron quotidien
             now = datetime.now()
-            cutoff_dt = now - timedelta(days=7)
+            # Filtre 24h strict — lundi : accepte depuis vendredi 18h
+            if now.weekday() == 0:  # lundi
+                cutoff_dt = (now - timedelta(days=3)).replace(hour=18, minute=0, second=0, microsecond=0)
+            else:
+                cutoff_dt = now - timedelta(hours=24)
             if article_dt and article_dt < cutoff_dt:
                 log.debug(f"Article trop ancien ({article_date}), exclu : {titre[:60]}")
                 continue
@@ -1253,7 +1287,7 @@ def main() -> int:
     # 1. JORF
     try:
         jorf_items, jorf_autres, jorf_total, briefing_jorf = fetch_jorf()
-        items.extend(jorf_items)
+        # Les items JORF vont dans jo_retenus (onglet JO), PAS dans le feed
         stats['jo_analyses'] = jorf_total
         stats['jo_retenus']  = len(jorf_items)
     except Exception as e:
@@ -1290,7 +1324,12 @@ def main() -> int:
     # Déduplication + tri criticité décroissante
     seen   = set()
     unique = []
-    for item in sorted(items, key=lambda x: -x.get('criticite', 1)):
+    # Tri : date décroissante d'abord, puis criticité décroissante
+    def sort_key(x):
+        d = x.get('date', '2000-01-01')
+        c = x.get('criticite', 1)
+        return (d, c)
+    for item in sorted(items, key=sort_key, reverse=True):
         if item['id'] not in seen:
             seen.add(item['id'])
             unique.append(item)
@@ -1309,6 +1348,7 @@ def main() -> int:
         'items'           : unique,
         'restrictions_eau': restrictions,
         'jo_autres'       : jorf_autres,
+        'jo_retenus'      : jorf_items,
         'briefing_jorf'   : briefing_jorf,
     }
 
