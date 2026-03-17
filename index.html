@@ -480,25 +480,55 @@ function renderMap(){
 const JO_NATURES={ARRETE:'Arrêté',DECRET:'Décret',ORDONNANCE:'Ordonnance',LOI:'Loi',CIRCULAIRE:'Circulaire',AVIS:'Avis',DECISION:'Décision'};
 function renderJO(){
   const items=D?.jo_autres||[],search=(document.getElementById('jo-search')?.value||'').toLowerCase();
+  const joRetenus=D?.jo_retenus||[];
   const statsEl=document.getElementById('jo-stats'),groupEl=document.getElementById('jo-groups');
   if(!groupEl)return;
   const nbT=D?.stats?.jo_analyses||0,nbG=D?.stats?.jo_retenus||0;
   if(statsEl)statsEl.innerHTML=[[nbT,'Textes analysés',false],[nbG,'Pertinents GSF',true],[items.length,'Dans ce JO',false]].map(([v,l,a])=>`<div class="jo-stat ${a&&v>0?'accent':''}"><div class="jo-stat-val">${v}</div><div class="jo-stat-lbl">${l}</div></div>`).join('');
 
-  // Briefing exécutif (texte rédigé libre) — compatibilité ancien format array
+  // Briefing exécutif
   const _br=D?.briefing_jorf;
-  const briefing=typeof _br==='string'?_br:(Array.isArray(_br)?_br.map(it=>it.essentiel||'').filter(Boolean).join(' '):'' );
+  const briefing=typeof _br==='string'?_br:(Array.isArray(_br)?_br.map(it=>it.essentiel||'').filter(Boolean).join(' '):'');
   const briefingHtml=briefing?`<div class="briefing-card" style="margin-bottom:16px">
     <div class="briefing-header">Résumé exécutif du jour</div>
     <div style="font-size:13px;color:var(--text2);line-height:1.6">${escHtml(briefing)}</div>
   </div>`:'';
 
-  if(!items.length){groupEl.innerHTML=briefingHtml+'<div class="jo-empty">Aucun texte JO pour cette date</div>';return;}
+  // Section signaux GSF (jo_retenus) — en haut, bien visible
+  let joGsfHtml = '';
+  if(joRetenus.length){
+    const filtered=joRetenus.filter(it=>!search||(it.titre||'').toLowerCase().includes(search));
+    if(filtered.length){
+      joGsfHtml=`<div style="margin-bottom:16px">
+        <div class="feed-section-hd prio" style="border-radius:6px 6px 0 0;position:static">
+          <span class="feed-section-lbl">Signaux GSF — textes à impact direct</span>
+          <span class="feed-section-badge">${filtered.length}</span>
+        </div>
+        ${filtered.map(item=>{
+          const cc=['','prio1','prio2','prio3'][item.criticite]||'prio1';
+          const cl=['','Veille','À surveiller','⚠ Impact direct'][item.criticite]||'Veille';
+          return `<div class="card ${cc}" style="background:var(--surface);border-left-color:${item.criticite>=3?'var(--red)':'var(--orange)'}">
+            <span class="card-badge badge-${escHtml(item.categorie)}">${escHtml(item.categorie)}</span>
+            <div class="card-body">
+              <div class="card-titre">${escHtml(item.titre)}</div>
+              <div class="card-resume">${escHtml(item.resume)}</div>
+            </div>
+            <div class="card-right">
+              <span class="crit-badge crit${item.criticite}">${cl}</span>
+              ${item.url?`<a class="card-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`:''}
+            </div>
+          </div>`;
+        }).join('')}
+      </div>`;
+    }
+  }
+
+  if(!items.length){groupEl.innerHTML=joGsfHtml+briefingHtml+'<div class="jo-empty">Aucun autre texte JO pour cette date</div>';return;}
   const groups={};
   items.forEach(item=>{const nat=(item.nature||'AUTRE').toUpperCase(),label=JO_NATURES[nat]||nat||'Autre';if(!groups[label])groups[label]=[];if(!search||(item.titre||'').toLowerCase().includes(search))groups[label].push(item);});
   const total=Object.values(groups).reduce((s,g)=>s+g.length,0);
-  if(!total){groupEl.innerHTML=briefingHtml+'<div class="jo-empty">Aucun résultat</div>';return;}
-  groupEl.innerHTML=briefingHtml+Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([label,its])=>`<div class="jo-theme-group open"><div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')"><span class="jo-theme-name">${escHtml(label)}</span><span class="jo-theme-count">${its.length}</span><span class="jo-chevron">▶</span></div><div class="jo-items">${its.map(item=>`<div class="jo-item"><div class="jo-item-nature">${escHtml(item.nature||label)}</div><div class="jo-item-titre">${escHtml(item.titre)}</div>${item.url?`<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`:'<span style="font-size:10px;color:var(--muted2)">Pas de lien</span>'}</div>`).join('')}</div></div>`).join('');
+  if(!total){groupEl.innerHTML=joGsfHtml+briefingHtml+'<div class="jo-empty">Aucun résultat</div>';return;}
+  groupEl.innerHTML=joGsfHtml+briefingHtml+Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([label,its])=>`<div class="jo-theme-group open"><div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')"><span class="jo-theme-name">${escHtml(label)}</span><span class="jo-theme-count">${its.length}</span><span class="jo-chevron">▶</span></div><div class="jo-items">${its.map(item=>`<div class="jo-item"><div class="jo-item-nature">${escHtml(item.nature||label)}</div><div class="jo-item-titre">${escHtml(item.titre)}</div>${item.url?`<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`:'<span style="font-size:10px;color:var(--muted2)">Pas de lien</span>'}</div>`).join('')}</div></div>`).join('');
 }
 function filterJO(){renderJO();}
 
