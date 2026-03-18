@@ -1,1356 +1,676 @@
-#!/usr/bin/env python3
-"""
-Veille Environnementale GSF — Pipeline quotidien
-Exécuté chaque matin à 07:20 UTC via GitHub Actions
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veille Environnementale — GSF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/pmtiles@3.2.1/dist/pmtiles.js"></script>
+<style>
+:root {
+  --bg:        #f5f6f8;
+  --surface:   #ffffff;
+  --surface2:  #f0f2f5;
+  --surface3:  #e8eaed;
+  --border:    #e2e5ea;
+  --border2:   #d0d4db;
+  --text:      #111827;
+  --text2:     #374151;
+  --muted:     #6b7280;
+  --muted2:    #9ca3af;
+  --sb-bg:     #1a1f2e;
+  --sb-border: #2a3347;
+  --sb-text:   #c9d0dc;
+  --sb-muted:  #6b7891;
+  --sb-hover:  #232b3e;
+  --sb-active: #2d3a52;
+  --sb-accent: #4ade80;
+  --green:     #16a34a;
+  --green-bg:  #f0fdf4;
+  --green-border:#bbf7d0;
+  --orange:    #ea580c;
+  --orange-bg: #fff7ed;
+  --orange-border:#fed7aa;
+  --red:       #dc2626;
+  --red-bg:    #fef2f2;
+  --red-border:#fecaca;
+  --blue:      #2563eb;
+  --blue-bg:   #eff6ff;
+  --blue-border:#bfdbfe;
+  --eau-vigilance:#84cc16;
+  --eau-alerte:#eab308;
+  --eau-renforce:#f97316;
+  --eau-crise:#dc2626;
+  --sidebar-w: 220px;
+  --radius:    8px;
+  --radius-sm: 5px;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:13px;line-height:1.5;overflow:hidden}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+#loading{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg);gap:12px}
+.loading-spinner{width:24px;height:24px;border:2px solid var(--border2);border-top-color:var(--green);border-radius:50%;animation:spin .7s linear infinite}
+.loading-text{font-size:12px;color:var(--muted);font-family:var(--mono)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+#layout{display:flex;height:100vh}
+#sidebar{width:var(--sidebar-w);flex-shrink:0;height:100vh;overflow-y:auto;background:var(--sb-bg);border-right:1px solid var(--sb-border);display:flex;flex-direction:column}
+.sb-header{padding:16px 16px 12px;border-bottom:1px solid var(--sb-border);flex-shrink:0}
+.sb-brand{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--sb-accent);margin-bottom:4px}
+.sb-brand-dot{width:7px;height:7px;border-radius:50%;background:var(--sb-accent);box-shadow:0 0 8px var(--sb-accent);animation:pulse 2.5s ease-in-out infinite}
+.sb-title{font-size:13px;font-weight:500;color:#e8ecf2}
+.sb-date{font-size:10px;color:var(--sb-muted);font-family:var(--mono);margin-top:2px}
+.sb-status{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:500;letter-spacing:.08em;padding:2px 8px;border-radius:20px;margin-top:6px;background:rgba(74,222,128,.12);color:var(--sb-accent);border:1px solid rgba(74,222,128,.2)}
+.sb-status.err{background:rgba(239,68,68,.12);color:#f87171;border-color:rgba(239,68,68,.2)}
+.sb-nav{padding:10px 8px;flex:1}
+.sb-section-lbl{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sb-muted);padding:0 8px;margin:12px 0 4px}
+.sb-section-lbl:first-child{margin-top:4px}
+.nav-item{display:flex;align-items:center;gap:9px;padding:7px 8px;border-radius:var(--radius-sm);cursor:pointer;font-size:13px;font-weight:400;color:var(--sb-text);transition:all .15s;margin-bottom:1px;user-select:none}
+.nav-item:hover{background:var(--sb-hover)}
+.nav-item.active{background:var(--sb-active);color:#e8ecf2;font-weight:500}
+.nav-item.active .nav-dot{background:var(--sb-accent);box-shadow:0 0 6px var(--sb-accent)}
+.nav-dot{width:6px;height:6px;border-radius:50%;background:var(--sb-muted);flex-shrink:0;transition:all .15s}
+.nav-item:hover .nav-dot{background:var(--sb-text)}
+.sb-stats{padding:12px 12px 10px;border-top:1px solid var(--sb-border);flex-shrink:0}
+.sb-stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+.stat-cell{background:rgba(255,255,255,.04);border:1px solid var(--sb-border);border-radius:var(--radius-sm);padding:8px 10px}
+.stat-val{font-family:var(--mono);font-size:20px;font-weight:500;color:#e8ecf2;line-height:1}
+.stat-val.zero{color:var(--sb-muted)}
+.stat-val.accent{color:var(--sb-accent)}
+.stat-lbl{font-size:9px;color:var(--sb-muted);margin-top:3px;letter-spacing:.03em}
+.eau-alert-item{display:flex;align-items:center;gap:6px;padding:5px 8px;border-radius:var(--radius-sm);font-size:11px;margin-top:4px}
+.sb-filters{padding:8px 12px 10px;border-top:1px solid var(--sb-border);flex-shrink:0}
+.filter-row{display:flex;align-items:center;gap:8px;padding:4px 0;cursor:pointer;user-select:none}
+.filter-row input[type=checkbox]{display:none}
+.fcheck{width:14px;height:14px;border-radius:3px;flex-shrink:0;border:1px solid var(--sb-border);display:flex;align-items:center;justify-content:center;font-size:9px;transition:all .15s}
+.filter-row.on .fcheck{background:var(--sb-accent);border-color:var(--sb-accent);color:var(--sb-bg)}
+.filter-lbl{font-size:12px;color:var(--sb-text)}
+#main{flex:1;min-width:0;height:100vh;display:flex;flex-direction:column;background:var(--bg)}
+.view{display:none;flex:1;flex-direction:column;overflow:hidden}
+.view.active{display:flex}
+#feed-view{flex-direction:column}
+#signal-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:8px 20px;display:none;align-items:center;gap:8px;flex-shrink:0;flex-wrap:wrap}
+.signal-bar-lbl{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);flex-shrink:0;white-space:nowrap}
+.signal-pill{display:flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:11px;cursor:pointer;border:1px solid var(--border);background:var(--surface2);color:var(--text2);transition:all .15s;max-width:220px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.signal-pill:hover{border-color:var(--border2);background:var(--surface3)}
+.signal-pill.p3{background:var(--red-bg);border-color:var(--red-border);color:var(--red)}
+.signal-pill.p2{background:var(--orange-bg);border-color:var(--orange-border);color:var(--orange)}
+.signal-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.signal-pill.p3 .signal-dot{background:var(--red)}
+.signal-pill.p2 .signal-dot{background:var(--orange)}
+#feed-toolbar{background:var(--surface);border-bottom:1px solid var(--border);padding:8px 20px;display:flex;align-items:center;gap:8px;flex-shrink:0;flex-wrap:wrap}
+.feed-title{font-size:13px;font-weight:500;color:var(--text);margin-right:4px}
+.badge-filter{padding:3px 10px;border-radius:20px;font-size:11px;border:1px solid var(--border);background:none;color:var(--muted);cursor:pointer;font-family:var(--sans);transition:all .15s}
+.badge-filter:hover{border-color:var(--border2);color:var(--text2)}
+.badge-filter.on{background:var(--blue-bg);border-color:var(--blue-border);color:var(--blue);font-weight:500}
+#feed-list{flex:1;overflow-y:auto}
+.card{background:var(--surface);border-bottom:1px solid var(--border);padding:12px 20px 12px 16px;display:grid;grid-template-columns:auto 1fr auto;gap:0 12px;cursor:pointer;transition:background .1s;border-left:3px solid transparent}
+.card:hover{background:var(--surface2)}
+.card.prio3{border-left-color:var(--red)}
+.card.prio2{border-left-color:var(--orange)}
+.card.prio1{border-left-color:var(--border2)}
+.card-badge{display:inline-flex;align-items:center;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:500;white-space:nowrap;align-self:start;margin-top:1px}
+.badge-ICPE{background:#eff6ff;color:#1d4ed8}
+.badge-Eau{background:#f0f9ff;color:#0369a1}
+.badge-Énergie{background:#fefce8;color:#a16207}
+.badge-Déchets{background:#fff7ed;color:#c2410c}
+.badge-Émissions{background:#fdf4ff;color:#7e22ce}
+.badge-Biodiversité{background:#f0fdf4;color:#15803d}
+.badge-Climat{background:#fdf4ff;color:#7e22ce}
+.badge-Environnement,.badge-Presse{background:var(--surface2);color:var(--muted)}
+.card-body{min-width:0}
+.card-titre{font-size:13px;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:4px}
+.card-resume{font-size:12px;color:var(--text2);line-height:1.55}
+.card-meta{display:flex;gap:10px;margin-top:5px;font-size:11px;color:var(--muted)}
+.card-date{font-family:var(--mono)}
+.card-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
+.crit-badge{font-size:10px;font-weight:500;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.crit3{background:var(--red-bg);color:var(--red)}
+.crit2{background:var(--orange-bg);color:var(--orange)}
+.crit1{background:var(--surface2);color:var(--muted)}
+.card-link{font-size:11px;color:var(--blue);text-decoration:none;font-family:var(--mono)}
+.card-link:hover{text-decoration:underline}
+.feed-section-hd{display:flex;align-items:center;gap:8px;padding:10px 20px 8px 16px;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:2}
+.feed-section-hd.prio{background:var(--red-bg);border-bottom-color:var(--red-border)}
+.feed-section-icon{font-size:11px}
+.feed-section-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.feed-section-hd.prio .feed-section-lbl{color:var(--red)}
+.feed-section-badge{margin-left:auto;font-size:10px;padding:1px 8px;border-radius:10px;background:var(--surface2);color:var(--muted);border:1px solid var(--border)}
+.feed-section-hd.prio .feed-section-badge{background:var(--red-bg);color:var(--red);border-color:var(--red-border)}
+.feed-consulter-hd{display:flex;align-items:center;gap:8px;padding:10px 20px 10px 16px;background:var(--surface2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s}
+.feed-consulter-hd:hover{background:var(--surface3)}
+.feed-consulter-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.feed-chevron{font-size:9px;color:var(--muted2);transition:transform .2s;margin-left:2px}
+.feed-consulter-items{background:var(--surface2)}
+.feed-consulter-items .card{background:var(--surface2)}
+.feed-consulter-items .card:hover{background:var(--surface3)}
+.empty-state{padding:48px 20px;text-align:center;font-size:13px;color:var(--muted)}
+#carte-view{position:relative}
+#map-container{width:100%;height:100%}
+#map-legend{position:absolute;top:12px;left:12px;z-index:1000;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;box-shadow:0 1px 4px rgba(0,0,0,.08);font-size:11px}
+.legend-title{font-weight:600;color:var(--muted);font-size:10px;letter-spacing:.06em}
+.legend-chip{display:flex;align-items:center;gap:4px;color:var(--text2)}
+.legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+#dept-detail{position:absolute;bottom:0;left:0;right:0;z-index:1000;background:var(--surface);border-top:1px solid var(--border);padding:10px 16px;display:none;flex-direction:column;gap:4px;box-shadow:0 -2px 8px rgba(0,0,0,.06)}
+#dept-detail.open{display:flex}
+.dept-detail-title{font-size:13px;font-weight:500;color:var(--text);display:flex;align-items:center;gap:6px}
+#jo-view{padding:0;overflow-y:auto}
+.jo-header{padding:16px 20px 12px;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:2}
+.jo-title-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.jo-page-title{font-size:14px;font-weight:600;color:var(--text)}
+.jo-stats-row{display:flex;gap:8px;flex-wrap:wrap}
+.jo-stat{display:flex;flex-direction:column;align-items:center;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:6px 14px;min-width:80px}
+.jo-stat.accent{border-color:var(--green-border);background:var(--green-bg)}
+.jo-stat-val{font-family:var(--mono);font-size:18px;font-weight:500;color:var(--text);line-height:1}
+.jo-stat.accent .jo-stat-val{color:var(--green)}
+.jo-stat-lbl{font-size:9px;color:var(--muted);margin-top:2px;letter-spacing:.04em;text-transform:uppercase}
+.jo-search{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 12px;color:var(--text);font-size:12px;font-family:var(--sans);outline:none;margin-top:10px;transition:border-color .15s}
+.jo-search:focus{border-color:var(--blue)}
+#briefing-jorf{margin:12px 16px 0}
+.briefing-card{background:var(--surface);border:1px solid var(--blue-border);border-left:3px solid var(--blue);border-radius:var(--radius);padding:12px 16px}
+.briefing-header{font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none}
+.briefing-toggle{font-size:10px;font-weight:400;color:var(--muted);text-transform:none;letter-spacing:0;margin-left:auto}
+.briefing-items{display:flex;flex-direction:column;gap:8px}
+.briefing-item{display:flex;gap:8px;align-items:flex-start}
+.briefing-nature{font-size:10px;font-family:var(--mono);background:var(--blue-bg);color:var(--blue);padding:2px 5px;border-radius:3px;flex-shrink:0;margin-top:2px;white-space:nowrap}
+.briefing-titre{font-size:12.5px;color:var(--text2);font-weight:500;line-height:1.4}
+.briefing-essentiel{font-size:11.5px;color:var(--muted);margin-top:2px;line-height:1.4}
+.jo-content{padding:12px 20px}
+.jo-theme-group{margin-bottom:8px}
+.jo-theme-header{display:flex;align-items:center;gap:8px;padding:8px 12px;cursor:pointer;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);transition:background .1s}
+.jo-theme-header:hover{background:var(--surface2)}
+.jo-theme-group.open .jo-theme-header{border-radius:var(--radius-sm) var(--radius-sm) 0 0}
+.jo-theme-name{font-size:12px;font-weight:500;color:var(--text);flex:1}
+.jo-theme-count{font-family:var(--mono);font-size:10px;color:var(--muted);background:var(--surface2);padding:1px 7px;border-radius:10px;border:1px solid var(--border)}
+.jo-chevron{font-size:9px;color:var(--muted2);transition:transform .2s}
+.jo-theme-group.open .jo-chevron{transform:rotate(90deg)}
+.jo-items{display:none;flex-direction:column;border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius-sm) var(--radius-sm);overflow:hidden}
+.jo-theme-group.open .jo-items{display:flex}
+.jo-item{padding:10px 12px;border-top:1px solid var(--border);background:var(--surface);transition:background .1s}
+.jo-item:first-child{border-top:none}
+.jo-item:hover{background:var(--surface2)}
+.jo-item-nature{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:3px}
+.jo-item-titre{font-size:12px;color:var(--text);line-height:1.4;margin-bottom:4px}
+.jo-item-link{font-family:var(--mono);font-size:10px;color:var(--blue);text-decoration:none}
+.jo-item-link:hover{text-decoration:underline}
+.jo-empty{padding:32px;text-align:center;font-size:12px;color:var(--muted)}
+#archives-view{padding:20px;overflow-y:auto}
+.arc-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:16px}
+.arc-month{margin-bottom:20px}
+.arc-month-title{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.arc-days{display:flex;flex-wrap:wrap;gap:4px}
+.arc-day{width:32px;height:32px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted2);background:var(--surface);border:1px solid var(--border)}
+.arc-day.has-data{color:var(--text);cursor:pointer}
+.arc-day.has-data:hover{background:var(--blue-bg);border-color:var(--blue-border);color:var(--blue)}
+.arc-day.today{border-color:var(--blue);color:var(--blue);font-weight:600}
+.arc-day.selected{background:var(--blue-bg);border-color:var(--blue);color:var(--blue);font-weight:600}
+#historique-view{padding:20px;overflow-y:auto}
+.hist-page-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:16px}
+.hist-section{margin-bottom:28px}
+.hist-section-title{font-size:12px;font-weight:600;color:var(--text2);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.hist-section-title::before{content:'';width:3px;height:14px;background:var(--blue);border-radius:2px}
+.chart-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;height:220px;display:flex;align-items:flex-end;gap:2px;overflow-x:auto}
+.bar-group{display:flex;flex-direction:column;align-items:center;flex:1;min-width:18px;gap:2px}
+.bar-stack{width:100%;display:flex;flex-direction:column-reverse}
+.bar-seg{width:100%;min-height:1px;cursor:pointer;transition:opacity .15s}
+.bar-seg:hover{opacity:.8}
+.bar-label{font-size:8px;color:var(--muted2);font-family:var(--mono);margin-top:2px;white-space:nowrap}
+.year-tabs{display:flex;gap:4px;margin-bottom:10px;flex-wrap:wrap}
+.year-tab{padding:3px 10px;border-radius:20px;font-size:11px;border:1px solid var(--border);color:var(--muted);cursor:pointer;background:none;font-family:var(--sans);transition:all .15s}
+.year-tab:hover{border-color:var(--border2);color:var(--text)}
+.year-tab.active{background:var(--blue-bg);border-color:var(--blue-border);color:var(--blue);font-weight:500}
+.top10-list{display:flex;flex-direction:column;gap:8px}
+.top10-row{display:flex;align-items:center;gap:10px}
+.top10-rank{font-family:var(--mono);font-size:10px;color:var(--muted2);width:18px;text-align:right;flex-shrink:0}
+.top10-name{font-size:12px;color:var(--text2);width:150px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top10-bar-wrap{flex:1;height:16px;background:var(--surface2);border-radius:2px;overflow:hidden;display:flex}
+.top10-seg{height:100%}
+.top10-val{font-family:var(--mono);font-size:10px;color:var(--muted);width:40px;text-align:right;flex-shrink:0}
+.hist-loading{padding:32px;text-align:center;font-size:12px;color:var(--muted)}
+.hist-legend{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.hist-legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2)}
+.hist-legend-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.hist-chart-subtitle{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hist-source{font-size:11px;color:var(--muted);margin-top:16px;padding-top:12px;border-top:1px solid var(--border)}
+.hist-source a{color:var(--blue);text-decoration:none}.hist-source a:hover{text-decoration:underline}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);background:var(--text);color:#fff;padding:8px 18px;border-radius:20px;font-size:12px;opacity:0;transition:all .25s;z-index:9999;pointer-events:none;white-space:nowrap}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+<div id="loading"><div class="loading-spinner"></div><div class="loading-text">Chargement…</div></div>
+<div id="layout">
+  <div id="sidebar">
+    <div class="sb-header">
+      <div class="sb-brand"><div class="sb-brand-dot"></div>GSF</div>
+      <div class="sb-title">Veille Environnementale</div>
+      <div class="sb-date" id="hdr-date">—</div>
+      <div id="hdr-status" class="sb-status">CHARGEMENT</div>
+    </div>
+    <div class="sb-nav">
+      <div class="sb-section-lbl">Navigation</div>
+      <div class="nav-item active" data-view="feed" onclick="switchView('feed')"><div class="nav-dot"></div>Feed</div>
+      <div class="nav-item" data-view="carte" onclick="switchView('carte')"><div class="nav-dot"></div>Carte Eau</div>
+      <div class="nav-item" data-view="jo" onclick="switchView('jo')"><div class="nav-dot"></div>JO / DILA</div>
+      <div class="nav-item" data-view="archives" onclick="switchView('archives')"><div class="nav-dot"></div>Archives</div>
+      <div class="nav-item" data-view="historique" onclick="switchView('historique')"><div class="nav-dot"></div>Historique Eau</div>
+    </div>
+    <div class="sb-stats">
+      <div class="sb-stats-grid">
+        <div class="stat-cell"><div class="stat-val zero" id="stat-jo-retenus">—</div><div class="stat-lbl">JO retenus</div></div>
+        <div class="stat-cell"><div class="stat-val accent" id="stat-prio">—</div><div class="stat-lbl">Signaux prio</div></div>
+        <div class="stat-cell"><div class="stat-val" id="stat-jo-analyses">—</div><div class="stat-lbl">JO analysés</div></div>
+        <div class="stat-cell"><div class="stat-val" id="stat-depts">—</div><div class="stat-lbl">Depts alertés</div></div>
+      </div>
+      <div id="sidebar-eau"></div>
+    </div>
+    <div class="sb-filters">
+      <div class="sb-section-lbl" style="padding:0;margin-bottom:6px">Sources</div>
+      <label class="filter-row on" id="f-jorf"><input type="checkbox" checked onchange="toggleFilter('jorf',this.checked)"><div class="fcheck">✓</div><span class="filter-lbl">JO / DILA</span></label>
+      <label class="filter-row on" id="f-presse"><input type="checkbox" checked onchange="toggleFilter('presse',this.checked)"><div class="fcheck">✓</div><span class="filter-lbl">Presse</span></label>
+    </div>
+  </div>
+  <div id="main">
+    <div class="view active" id="feed-view">
+      <div id="signal-bar"></div>
+      <div id="feed-toolbar">
+        <div class="feed-title" id="feed-titre">—</div>
+        <button class="badge-filter on" data-cat="all" onclick="filterCat('all')">Tout</button>
+        <button class="badge-filter" data-cat="Climat" onclick="filterCat('Climat')">Climat</button>
+        <button class="badge-filter" data-cat="ICPE" onclick="filterCat('ICPE')">ICPE</button>
+        <button class="badge-filter" data-cat="Eau" onclick="filterCat('Eau')">Eau</button>
+        <button class="badge-filter" data-cat="Énergie" onclick="filterCat('Énergie')">Énergie</button>
+        <button class="badge-filter" data-cat="Biodiversité" onclick="filterCat('Biodiversité')">Biodiversité</button>
+        <button class="badge-filter" data-cat="Déchets" onclick="filterCat('Déchets')">Déchets</button>
+        <button class="badge-filter" data-cat="Presse" onclick="filterCat('Presse')">Presse</button>
+      </div>
+      <div id="feed-list"></div>
+    </div>
+    <div class="view" id="carte-view">
+      <div id="map-legend">
+        <span class="legend-title">RESTRICTIONS EAU</span>
+        <span class="legend-chip"><span class="legend-dot" style="background:#84cc16"></span>Vigilance</span>
+        <span class="legend-chip"><span class="legend-dot" style="background:#eab308"></span>Alerte</span>
+        <span class="legend-chip"><span class="legend-dot" style="background:#f97316"></span>Alerte renforcée</span>
+        <span class="legend-chip"><span class="legend-dot" style="background:#dc2626"></span>Crise</span>
+      </div>
+      <div id="map-encart" style="position:absolute;top:12px;right:12px;z-index:1000;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;box-shadow:0 1px 4px rgba(0,0,0,.08);min-width:160px"></div>
+      <div id="map-container" style="flex:1"></div>
+      <div id="dept-detail"></div>
+    </div>
+    <div class="view" id="jo-view">
+      <div class="jo-header">
+        <div class="jo-title-row"><div class="jo-page-title">Journal Officiel — tous les textes du jour</div></div>
+        <div class="jo-stats-row" id="jo-stats"></div>
+        <input class="jo-search" id="jo-search" type="text" placeholder="Rechercher un arrêté, décret, loi…" oninput="filterJO()">
+      </div>
+      <div class="jo-content" id="jo-groups"></div>
+    </div>
+    <div class="view" id="archives-view">
+      <div class="arc-title">Archives — 90 jours</div>
+      <div id="arc-calendar"></div>
+    </div>
+    <div class="view" id="historique-view">
+      <div class="hist-page-title">Historique Restrictions Eau — 2020 → 2026</div>
+      <div id="hist-content"><div class="hist-loading">Chargement…</div></div>
+    </div>
+  </div>
+</div>
+<div id="toast"></div>
+<script>
+let D=null,archive=null,currentDate=null,currentView='feed',catFilter='all';
+let srcFilters={jorf:true,presse:true};
+let mapgl=null,histData=null,histYear='all';
+const JORF_SOURCES=['JORF','Légifrance RSS'];
+function sourceType(src){return JORF_SOURCES.includes(src)?'jorf':'presse'}
+const NIVEAU_COLOR={'vigilance':'#84cc16','alerte':'#eab308','alerte_renforcee':'#f97316','alerte renforcée':'#f97316','alerte renforce':'#f97316','crise':'#dc2626'};
+const NIVEAU_LABEL={'vigilance':'Vigilance','alerte':'Alerte','alerte_renforcee':'Alerte renforcée','alerte renforcée':'Alerte renforcée','alerte renforce':'Alerte renforcée','crise':'Crise'};
+function normalizeNiveau(r){if(!r)return '';return r.toLowerCase().trim().replace(/_/g,' ').replace('renforcee','renforcée').replace('renforcé','renforcée')}
 
-Dépendances :
-    pip install requests feedparser groq beautifulsoup4
-"""
+async function init(){
+  try{
+    archive=await(await fetch('archive.json')).json();
+    if(archive?.dates?.length){currentDate=archive.dates[0];D=await(await fetch(`data/${currentDate}.json`)).json();}
+    renderAll();
+    document.getElementById('loading').style.display='none';
+  }catch(e){
+    document.getElementById('loading').style.display='none';
+    const s=document.getElementById('hdr-status');s.textContent='ERREUR';s.className='sb-status err';
+    showToast('Impossible de charger les données');console.error(e);
+  }
+}
 
-import os
-import sys
-import json
-import tarfile
-import io
-import re
-import html
-import hashlib
-import logging
-import time
-from datetime import datetime, timedelta
-from pathlib import Path
-from urllib.parse import urljoin
-
-import requests
-import feedparser
-from groq import Groq
-
-
-# ─────────────────────────────────────────────
-# CONFIG
-# ─────────────────────────────────────────────
-
-TODAY      = datetime.now().strftime('%Y-%m-%d')
-SCRIPT_DIR = Path(__file__).parent.resolve()
-LOG_PATH   = SCRIPT_DIR / 'pipeline.log'
-
-JORF_BASE_URL     = 'https://echanges.dila.gouv.fr/OPENDATA/JORF/'
-VIGIEAU_DEPTS_URL = 'https://api.vigieau.gouv.fr/api/departements'
-
-# Groq
-GROQ_MODEL      = 'llama-3.3-70b-versatile'
-GROQ_MAX_RETRY  = 4
-GROQ_RETRY_WAIT = 20
-
-# ─────────────────────────────────────────────
-# DESCRIPTION GSF — injectée dans tous les prompts LLM
-# ─────────────────────────────────────────────
-
-GSF_CONTEXT = """
-GSF est un groupe français de propreté et de services aux entreprises (42 000 salariés,
-~1,27 Md€ de CA en 2023), positionné comme acteur majeur du soft FM (facility management).
-
-Ce que fait GSF :
-- Nettoyage et propreté des locaux : bureaux, sites tertiaires, industriels, milieux
-  sensibles (santé, agroalimentaire, chimie, pétrochimie, nucléaire).
-- Propreté industrielle : décapage et traitement des sols, nettoyage de lignes de
-  production, interventions en environnements à risques (certifications MASE).
-- Gestion des déchets : collecte interne, tri, gestion déléguée des flux, optimisation
-  des filières et des coûts sur les sites clients.
-- Entretien des espaces verts : gestion paysagère des abords de sites industriels,
-  tertiaires ou logistiques.
-- Services de logistique interne : manutention légère, gestion de flux, préparation de
-  commandes et de salles.
-- Soft FM / services généraux : accueil et hospitality management, courrier et gestion
-  documentaire, factotum / petits travaux (maintenance de premier niveau).
-
-Comment GSF opère :
-- Environ 160 établissements en France, maillage territorial dense.
-- Modèle multiservices et multisectoriel, solutions sur mesure pour chaque client.
-- Utilise des biocides, détergents, produits CMR et solvants dans ses prestations.
-- Exploite des sites classés ICPE (installations classées pour la protection
-  de l'environnement).
-- Gère une flotte de véhicules (électrification en cours).
-- Engagé dans une trajectoire de décarbonation : BGES annuel, plan climat,
-  suivi des risques climatiques sur ses 3 000+ sites clients.
-""".strip()
-
-
-# ─────────────────────────────────────────────
-# KEYWORDS — premier filtre large (présence dans titre/contenu)
-# ─────────────────────────────────────────────
-
-KEYWORDS = [
-    # Réglementation environnementale opérationnelle
-    'ICPE', 'installation classée', 'eau', 'rejet aqueux', 'émissions',
-    'biodiversité', 'espèce protégée', 'énergie', 'déchet', 'déchets',
-    'pollution', 'environnement', 'écologique', 'REACH', 'biocide',
-    'bruit', 'sol', 'air', 'risque industriel', 'Natura 2000',
-    'nettoyage', 'propreté', 'entretien', 'désinfection',
-    'produit chimique', 'COV', 'composé organique volatil',
-    'SEVESO', 'PPR', 'DPE', 'amiante', 'plomb', 'REP',
-    'responsabilité élargie', 'VHU', 'bâtiment tertiaire',
-    # Climat & décarbonation stratégique
-    'climat', 'climatique', 'réchauffement', 'décarbonation', 'carbone',
-    'GES', 'gaz à effet de serre', 'neutralité carbone', 'net zéro',
-    'SNBC', 'PNACC', 'adaptation', 'mitigation', 'atténuation',
-    'trajectoire', 'transition énergétique', 'transition écologique',
-    'CSRD', 'reporting extra-financier', 'taxonomie verte',
-    'Accord de Paris', 'COP', 'GIEC', 'IPCC',
-    'catastrophe naturelle', 'inondation', 'sécheresse', 'canicule',
-    'événement extrême', 'submersion', 'feu de forêt',
-    'décarboner', 'bas-carbone', 'scope 1', 'scope 2', 'scope 3',
-    'bilan carbone', 'empreinte carbone', 'plan climat',
-    'France 2030', 'loi énergie', 'loi climat',
-]
-
-
-# ─────────────────────────────────────────────
-# SOURCES RSS
-# ─────────────────────────────────────────────
-
-RSS_SOURCES = [
-    # ── Presse environnement généraliste ─────────────────────────────
-    {
-        'name': 'Actu-Environnement',
-        'url': 'https://www.actu-environnement.com/flux/rss/environnement/',
-        'categorie': 'Presse',
-        'fallback_crawl': 'https://www.actu-environnement.com/ae/news/',
-    },
-    {
-        'name': 'Reporterre',
-        'url': 'https://reporterre.net/spip.php?page=backend',
-        'categorie': 'Presse',
-        'fallback_crawl': 'https://reporterre.net/',
-    },
-    {
-        'name': 'Novethic',
-        'url': 'https://www.novethic.fr/feed',
-        'categorie': 'Presse',
-        'fallback_crawl': 'https://www.novethic.fr/',
-    },
-    # ── Institutions françaises climat ───────────────────────────────
-    {
-        'name': 'Min. Transition Écologique',
-        'url': 'https://www.ecologie.gouv.fr/rss-actualites.xml',
-        'categorie': 'Réglementation',
-        'fallback_crawl': 'https://www.ecologie.gouv.fr/actualites',
-    },
-    {
-        'name': 'ADEME',
-        'url': 'https://www.ademe.fr/feed/',
-        'categorie': 'Climat',
-        'fallback_crawl': 'https://www.ademe.fr/actualites/',
-    },
-    {
-        'name': 'Haut Conseil pour le Climat',
-        'url': 'https://www.hautconseilclimat.fr/feed/',
-        'categorie': 'Climat',
-        'fallback_crawl': 'https://www.hautconseilclimat.fr/actualites/',
-    },
-    {
-        'name': 'France Stratégie',
-        'url': 'https://www.strategie.gouv.fr/rss.xml',
-        'categorie': 'Climat',
-        'fallback_crawl': 'https://www.strategie.gouv.fr/publications',
-        'require_keywords': [
-            'climat', 'carbone', 'transition', 'énergie', 'décarbonation',
-            'environnement', 'adaptation', 'neutralité', 'SNBC', 'empreinte',
-            'biodiversité', 'trajectoire', 'bas-carbone', 'GES',
-        ],
-    },
-    {
-        'name': 'Vie-publique.fr',
-        'url': 'https://www.vie-publique.fr/rss/actualites.xml',
-        'categorie': 'Réglementation',
-        'fallback_crawl': 'https://www.vie-publique.fr/loi',
-        'require_keywords': [
-            'climat', 'énergie', 'transition', 'environnement', 'carbone',
-            'décarbonation', 'renouvelable', 'biodiversité', 'CSRD',
-            'adaptation', 'neutralité', 'trajectoire', 'émissions',
-        ],
-    },
-    # ── Think tanks & recherche climat ──────────────────────────────
-    {
-        'name': 'The Shift Project',
-        'url': 'https://theshiftproject.org/feed/',
-        'categorie': 'Climat',
-        'fallback_crawl': 'https://theshiftproject.org/articles/',
-    },
-    {
-        'name': 'I4CE',
-        'url': 'https://www.i4ce.org/feed/',
-        'categorie': 'Climat',
-        'fallback_crawl': 'https://www.i4ce.org/publications/',
-        'require_keywords': [
-            'climat', 'carbone', 'transition', 'financement', 'investissement',
-            'décarbonation', 'politique climatique', 'trajectoire', 'adaptation',
-        ],
-    },
-    {
-        'name': 'Carbone 4',
-        'url': 'https://www.carbone4.com/feed',
-        'categorie': 'Climat',
-        'fallback_crawl': 'https://www.carbone4.com/publications',
-    },
-    # ── Europe & politique ───────────────────────────────────────────
-    {
-        'name': 'Politico Energy EU',
-        'url': 'https://www.politico.eu/section/energy-fr/feed/',
-        'categorie': 'Réglementation',
-        'fallback_crawl': 'https://www.politico.eu/section/energy-fr/',
-        'require_keywords': [
-            'climat', 'énergie', 'carbone', 'taxonomie', 'CSRD', 'Green Deal',
-            'transition', 'renouvelable', 'émissions', 'règlement', 'directive',
-        ],
-    },
-    {
-        'name': 'Contexte Environnement',
-        'url': 'https://www.contexte.com/articles/rss/edition/environnement',
-        'categorie': 'Réglementation',
-        'fallback_crawl': 'https://www.contexte.com/environnement/',
-    },
-]
-
-TIMEOUT = 30
-
-NIVEAUX_ORDRE = {
-    'vigilance': 1,
-    'alerte': 2,
-    'alerte renforcée': 3,
-    'crise': 4,
+function renderAll(){
+  if(!D)return;
+  const s=D.stats||{};
+  document.getElementById('hdr-date').textContent=formatDate(D.date)+' — '+D.generated_at;
+  const se=document.getElementById('hdr-status');
+  se.textContent=D.errors?.length?'PARTIEL':'OK';se.className='sb-status'+(D.errors?.length?' err':'');
+  const joRet=s.jo_retenus??0,prio=(D.items||[]).filter(i=>i.criticite>=2).length;
+  document.getElementById('stat-jo-retenus').textContent=joRet;
+  document.getElementById('stat-jo-retenus').className='stat-val'+(joRet===0?' zero':' accent');
+  document.getElementById('stat-prio').textContent=prio;
+  document.getElementById('stat-prio').className='stat-val'+(prio===0?' zero':' accent');
+  document.getElementById('stat-jo-analyses').textContent=s.jo_analyses??'—';
+  document.getElementById('stat-depts').textContent=s.depts_restriction??'—';
+  const restr=D.restrictions_eau||[],eauEl=document.getElementById('sidebar-eau');
+  const crises=restr.filter(r=>r.niveau==='crise'||normalizeNiveau(r.niveau)==='alerte renforcée');
+  eauEl.innerHTML=crises.length?crises.slice(0,4).map(r=>{const col=NIVEAU_COLOR[normalizeNiveau(r.niveau)]||'#dc2626';
+    return `<div class="eau-alert-item" style="background:${col}18;border:1px solid ${col}30"><span style="width:6px;height:6px;border-radius:50%;background:${col};flex-shrink:0;display:inline-block"></span><span style="color:#e8ecf2;font-size:11px">${r.dept_nom} (${r.dept_code})</span></div>`;}
+  ).join(''):`<div style="font-size:11px;color:var(--sb-muted);padding:4px 0">Aucune alerte majeure</div>`;
+  renderFeed();
+  if(currentView==='carte'){renderMap();renderMapEncart();}
+  if(currentView==='archives')renderArchives();
+  if(currentView==='jo')renderJO();
 }
 
 
-# ─────────────────────────────────────────────
-# LOGGING
-# ─────────────────────────────────────────────
-
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s [%(levelname)s] %(message)s',
-    handlers=[
-        logging.FileHandler(LOG_PATH, encoding='utf-8'),
-        logging.StreamHandler(sys.stdout),
-    ]
-)
-log = logging.getLogger(__name__)
-
-
-# ─────────────────────────────────────────────
-# HELPERS
-# ─────────────────────────────────────────────
-
-def make_id(source: str, titre: str) -> str:
-    return hashlib.md5(f"{source}:{titre}".encode()).hexdigest()[:12]
-
-
-def keyword_match(text: str) -> bool:
-    t = text.lower()
-    return any(kw.lower() in t for kw in KEYWORDS)
-
-
-def categorise(text: str) -> str:
-    t = text.lower()
-    if any(k in t for k in ['snbc', 'pnacc', 'accord de paris', 'cop ', 'giec', 'ipcc',
-                             'neutralité carbone', 'net zéro', 'trajectoire carbone',
-                             'plan national adaptation', 'stratégie nationale bas-carbone',
-                             'canicule', 'inondation', 'feu de forêt', 'submersion',
-                             'événement extrême', 'catastrophe climatique', 'réchauffement',
-                             'catastrophe naturelle']):
-        return 'Climat'
-    if any(k in t for k in ['csrd', 'taxonomie', 'reporting durabilité', 'devoir de vigilance',
-                             'décarbonation', 'bilan carbone', 'scope', 'bas-carbone',
-                             'transition énergétique', 'transition écologique']):
-        return 'Climat'
-    if any(k in t for k in ['icpe', 'installation classée', 'seveso', 'autorisation', 'enregistrement']):
-        return 'ICPE'
-    if any(k in t for k in ['eau', 'rejet', 'assainissement', 'captage', 'nappe', 'sécheresse']):
-        return 'Eau'
-    if any(k in t for k in ['énergie', 'dpe', 'thermique', 'renouvelable', 'carbone', 'ges']):
-        return 'Énergie'
-    if any(k in t for k in ['biodiversité', 'espèce', 'natura', 'faune', 'flore', 'erc']):
-        return 'Biodiversité'
-    if any(k in t for k in ['déchet', 'rep', 'vhu', 'tri', 'recyclage', 'traitement']):
-        return 'Déchets'
-    if any(k in t for k in ['émission', 'cov', 'pollution', 'bruit', 'air', 'formaldéhyde']):
-        return 'Émissions'
-    return 'Environnement'
-
-
-# ─────────────────────────────────────────────
-# GROQ
-# ─────────────────────────────────────────────
-
-_groq_client = None
-
-
-def get_groq_client() -> Groq:
-    global _groq_client
-    if _groq_client is None:
-        api_key = os.environ.get('GROQ_API_KEY', '')
-        if not api_key:
-            raise RuntimeError("GROQ_API_KEY manquant dans les variables d'environnement")
-        _groq_client = Groq(api_key=api_key)
-    return _groq_client
-
-
-def call_groq(prompt: str, system: str = '', max_tokens: int = 300) -> str:
-    """Appelle l'API Groq avec retry sur erreur 429 (rate limit)."""
-    client = get_groq_client()
-    sys_content = system if 'json' in system.lower() else (system + ' Reponds en JSON.').strip()
-    messages = [
-        {'role': 'system', 'content': sys_content},
-        {'role': 'user',   'content': prompt},
-    ]
-    for attempt in range(1, GROQ_MAX_RETRY + 1):
-        try:
-            resp = client.chat.completions.create(
-                model=GROQ_MODEL,
-                messages=messages,
-                max_tokens=max_tokens,
-                temperature=0.2,
-                response_format={"type": "json_object"},
-            )
-            return resp.choices[0].message.content.strip()
-        except Exception as e:
-            err_str = str(e)
-            if '429' in err_str or 'rate_limit' in err_str.lower():
-                wait = GROQ_RETRY_WAIT * attempt
-                log.warning(f"Groq rate limit (tentative {attempt}/{GROQ_MAX_RETRY}) — attente {wait}s")
-                time.sleep(wait)
-            else:
-                log.warning(f"Groq erreur : {e}")
-                return ''
-    log.error("Groq : toutes les tentatives épuisées")
-    return ''
-
-
-def extract_json(text: str) -> dict:
-    """Extrait le premier bloc JSON valide d'une chaîne."""
-    try:
-        return json.loads(text)
-    except Exception:
-        pass
-    match = re.search(r'\{.*?\}', text, re.DOTALL)
-    if match:
-        try:
-            return json.loads(match.group())
-        except Exception:
-            pass
-    return {}
-
-
-# ─────────────────────────────────────────────
-# LLM — ANALYSE JORF
-# Un seul passage Groq par texte, pas de double filtre.
-# Le LLM est le seul juge de pertinence.
-# ─────────────────────────────────────────────
-
-def groq_analyse_jorf(titre: str, contenu: str) -> dict:
-    """
-    Évalue un texte du JORF pré-filtré par mots-clés larges.
-
-    Le LLM décide seul de la pertinence pour GSF, sans liste stricte en amont.
-    Retourne :
-        pertinent  : bool
-        resume     : str   — ce que ça change pour GSF (1 phrase, si pertinent)
-        pourquoi   : str   — pourquoi c'est un signal important (si score >= 2)
-        score      : int   — 1 (veille) | 2 (à anticiper) | 3 (obligation/risque immédiat)
-    """
-    system = 'Tu es juriste RSE senior conseillant le Responsable Climat de GSF. JSON uniquement.'
-    prompt = (
-        f"{GSF_CONTEXT}\n\n"
-        "Ce texte du Journal Officiel a passé un premier filtre par mots-clés environnementaux.\n"
-        "Détermine s'il est pertinent pour le Responsable Climat & Environnement de GSF.\n\n"
-        "PERTINENT si le texte concerne directement :\n"
-        "  - Obligations réglementaires (ICPE, biocides, REACH, déchets, CMR, amiante, plomb)\n"
-        "  - Convention collective propreté / conditions de travail\n"
-        "  - Politique climatique nationale ou européenne (SNBC, PNACC, CSRD, taxonomie, loi climat)\n"
-        "  - Risques climatiques : arrêtés CatNat, PPR, sécheresse, inondations, événements extrêmes\n"
-        "    (utile pour le suivi des sites GSF exposés et le dashboard risques climatiques)\n"
-        "  - Transition énergétique, décarbonation, bilan carbone, reporting durabilité\n"
-        "  - Eau : restrictions, qualité, rejets aqueux\n"
-        "  - Biodiversité, air, bruit sur sites industriels\n\n"
-        "NON PERTINENT si le texte concerne exclusivement : agriculture/élevage, pêche, défense,\n"
-        "médecine humaine sans lien avec les sites GSF, enseignement, culture, sport,\n"
-        "BTP résidentiel, finance de marché — même si 'nettoyage' ou 'environnement' y apparaît.\n\n"
-        "EN CAS DE DOUTE : pertinent = true.\n\n"
-        "Score :\n"
-        "  1 = information de veille, tendance à connaître\n"
-        "  2 = évolution réglementaire ou politique à anticiper pour GSF\n"
-        "  3 = obligation immédiate, risque direct ou décision stratégique urgente\n\n"
-        f"TITRE: {titre}\n"
-        f"CONTENU: {contenu[:500]}\n\n"
-        'JSON: {"pertinent": true, "resume": "ce que ça change pour GSF en 1 phrase", '
-        '"pourquoi": "pourquoi c\'est un signal important (obligatoire si score >= 2, sinon vide)", '
-        '"score": 2}'
-    )
-    raw = call_groq(prompt, system, max_tokens=350)
-    result = extract_json(raw)
-    return result if result else {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1}
-
-
-# ─────────────────────────────────────────────
-# LLM — ANALYSE RSS / PRESSE
-# ─────────────────────────────────────────────
-
-def _gsf_est_pertinent(titre: str, contenu: str) -> bool:
-    """Filtre binaire rapide : l'article vaut-il la peine d'être analysé ?"""
-    system = 'Tu es un filtre. Reponds uniquement {"ok": true} ou {"ok": false}.'
-    prompt = (
-        f"{GSF_CONTEXT}\n\n"
-        "GARDER si le sujet concerne :\n"
-        "- Politique climatique : lois, plans gouvernementaux (SNBC, PNACC, loi climat, loi énergie)\n"
-        "- Trajectoires décarbonation : objectifs nationaux/européens, net zero, neutralité carbone\n"
-        "- Rapports et études : GIEC/IPCC, Haut Conseil Climat, France Stratégie, ADEME, I4CE, Shift Project\n"
-        "- Réglementation ESG/RSE : CSRD, taxonomie verte, bilan carbone, reporting extra-financier\n"
-        "- Événements climatiques : canicule, inondation, sécheresse, feu de forêt, submersion\n"
-        "- Adaptation climatique : risques entreprises, résilience, vulnérabilité sectorielle\n"
-        "- Réglementation environnementale : ICPE, REACH, déchets, air, eau, biodiversité\n"
-        "- Transition énergétique : renouvelables, efficacité énergétique, scope 1/2/3\n\n"
-        "REJETER si CLAIREMENT : élections/partis politiques, guerre/géopolitique sans lien climatique,\n"
-        "immobilier résidentiel, agriculture/élevage, finance de marché, faits divers, sport, culture,\n"
-        "santé humaine sans lien environnemental.\n"
-        "EN CAS DE DOUTE : garder (ok: true).\n\n"
-        f"TITRE: {titre}\n"
-        f"DEBUT: {contenu[:200]}\n\n"
-        'Reponds: {"ok": true} ou {"ok": false}'
-    )
-    raw = call_groq(prompt, system)
-    result = extract_json(raw)
-    return result.get('ok', True)
-
-
-def _gsf_resumer(titre: str, contenu: str) -> dict:
-    """
-    Résume et score un article pertinent.
-    Retourne resume, pourquoi (si score >= 2) et score.
-    """
-    system = 'Analyste climat et environnement GSF. JSON valide uniquement.'
-    prompt = (
-        f"{GSF_CONTEXT}\n\n"
-        "Ta mission : suivre la politique climatique, la réglementation environnementale,\n"
-        "les trajectoires de décarbonation et les risques climatiques.\n\n"
-        "Score :\n"
-        "  1 = information de veille, tendance à connaître\n"
-        "  2 = évolution réglementaire ou politique à anticiper pour GSF\n"
-        "  3 = obligation immédiate, risque direct ou décision stratégique urgente pour GSF\n\n"
-        f"TITRE: {titre}\n"
-        f"CONTENU: {contenu[:600]}\n\n"
-        'JSON: {"resume": "1-2 phrases concises sur ce que ça change pour GSF", '
-        '"pourquoi": "pourquoi c\'est un signal important (obligatoire si score >= 2, sinon vide)", '
-        '"score": 1}'
-    )
-    raw = call_groq(prompt, system, max_tokens=350)
-    result = extract_json(raw)
-    return result if result else {'resume': titre[:200], 'pourquoi': '', 'score': 1}
-
-
-def groq_analyse_rss(titre: str, contenu: str) -> dict:
-    """2 appels Groq : filtre rapide, puis résumé complet si pertinent."""
-    if not _gsf_est_pertinent(titre, contenu):
-        log.debug(f'Exclu (non pertinent GSF) : {titre[:60]}')
-        return {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1}
-    analysis = _gsf_resumer(titre, contenu)
-    analysis['pertinent'] = True
-    # Vider pourquoi si score = 1 (pas un signal fort)
-    if int(analysis.get('score', 1)) < 2:
-        analysis['pourquoi'] = ''
-    return analysis
-
-
-# ─────────────────────────────────────────────
-# LLM — BRIEFING JORF
-# ─────────────────────────────────────────────
-
-_BRIEFING_SKIP = [
-    'nomination', 'délégation de signature', 'désignation',
-    'portant nomination', 'portant délégation', 'délégation de pouvoir',
-    'cessation de fonctions',
-]
-
-
-def groq_briefing_jorf(articles: list) -> str:
-    """Génère un briefing rédigé des textes JORF significatifs du jour."""
-    if not articles:
-        return ''
-    candidates = [
-        a for a in articles
-        if not any(p in a['titre'].lower() for p in _BRIEFING_SKIP)
-    ]
-    if not candidates:
-        return ''
-
-    lines = []
-    for i, a in enumerate(candidates[:80]):
-        nature = a.get('contenu', '').split(' — ')[0] or 'Texte'
-        lines.append(f"{i+1}. [{nature}] {a['titre']}")
-
-    system = 'Tu es juriste senior conseillant un directeur RSE. Reponds uniquement en JSON valide.'
-    prompt = (
-        f"Textes publiés au Journal Officiel aujourd'hui ({TODAY}) :\n\n"
-        + '\n'.join(lines)
-        + "\n\nRédige un briefing TRÈS court (3-5 phrases max, ou 2-3 bullets si plusieurs sujets distincts) "
-        "à destination d'un Responsable Climat et Environnement. "
-        "Synthétise ce qui est réellement significatif : décrets d'application de lois majeures, "
-        "arrêtés à portée sectorielle large, évolutions réglementaires importantes. "
-        "Si les textes du jour sont mineurs ou purement administratifs, dis-le clairement en 1 phrase. "
-        "NE copie PAS les titres. Rédige en français, style direct et concis. "
-        'JSON: {"briefing": "texte rédigé ici"}'
-    )
-    raw = call_groq(prompt, system, max_tokens=400)
-    result = extract_json(raw)
-    if isinstance(result, dict) and 'briefing' in result:
-        return result['briefing']
-    log.warning("briefing_jorf: réponse Groq inattendue")
-    return ''
-
-
-# ─────────────────────────────────────────────
-# CRAWL FALLBACK
-# ─────────────────────────────────────────────
-
-def crawl_article(url: str) -> str:
-    """Récupère le contenu textuel d'une URL via BeautifulSoup."""
-    try:
-        from bs4 import BeautifulSoup
-        resp = requests.get(url, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, 'html.parser')
-        for tag in soup(['script', 'style', 'nav', 'header', 'footer', 'aside']):
-            tag.decompose()
-        return soup.get_text(separator=' ', strip=True)[:2500]
-    except Exception as e:
-        log.debug(f"Crawl error {url}: {e}")
-    return ''
-
-
-# ─────────────────────────────────────────────
-# JORF — Journal Officiel
-#
-# Architecture du filtre :
-#   1. keyword_match() large → capte tout ce qui contient un terme environnemental
-#   2. groq_analyse_jorf()   → le LLM décide de la pertinence et du score
-#   Pas de liste stricte intermédiaire : le LLM est l'unique juge de pertinence.
-# ─────────────────────────────────────────────
-
-def list_jorf_files() -> list:
-    try:
-        resp = requests.get(JORF_BASE_URL, timeout=TIMEOUT)
-        resp.raise_for_status()
-        return sorted(re.findall(r'href="(JORF[^"]*\.tar\.gz)"', resp.text))
-    except Exception as e:
-        log.warning(f"JORF listing error : {e}")
-        return []
-
-
-def get_today_jorf_url():
-    files = list_jorf_files()
-    today_compact = datetime.now().strftime('%Y%m%d')
-    today_files = [f for f in files if today_compact in f]
-    chosen = today_files[-1] if today_files else (files[-1] if files else None)
-    if chosen:
-        log.info(f"Fichier JORF sélectionné : {chosen}")
-        return urljoin(JORF_BASE_URL, chosen)
-    return None
-
-
-def parse_jorf_xml(content: bytes):
-    import xml.etree.ElementTree as ET
-    articles = []
-    try:
-        root = ET.fromstring(content)
-    except ET.ParseError as e:
-        log.debug(f"XML parse error : {e}")
-        return articles
-
-    seen_nor = set()
-
-    for texte in root.iter('TEXTE'):
-        nor = texte.get('nor', '').strip()
-        titre_el = texte.find('TITRE_TXT')
-        titre = (titre_el.text or '').strip() if titre_el is not None else ''
-
-        if not titre:
-            continue
-        if nor and nor in seen_nor:
-            continue
-        if nor:
-            seen_nor.add(nor)
-
-        nature    = texte.get('nature', '')
-        ministere = texte.get('ministere', '')
-        date_pub  = texte.get('date_publi', TODAY)
-        cid       = texte.get('cid', '')
-
-        url = f'https://www.legifrance.gouv.fr/jorf/id/{cid}' if cid else (
-              f'https://www.legifrance.gouv.fr/jorf/id/{nor}' if nor else '')
-        contenu = ' — '.join(filter(None, [nature, ministere]))
-
-        if keyword_match(titre + ' ' + contenu):
-            articles.append({
-                'titre'   : titre,
-                'contenu' : contenu[:500],
-                'url'     : url,
-                'nor'     : nor,
-                'date'    : date_pub,
-            })
-
-    return articles
-
-
-def fetch_jorf():
-    log.info("=== JORF ===")
-    items, autres, total_analysed, briefing = [], [], 0, []
-
-    try:
-        url = get_today_jorf_url()
-        if not url:
-            log.warning("Aucun fichier JORF disponible")
-            return items, autres, 0, briefing
-
-        log.info(f"Téléchargement : {url}")
-        resp = requests.get(url, timeout=180)
-        resp.raise_for_status()
-
-        with tarfile.open(fileobj=io.BytesIO(resp.content), mode='r:gz') as tar:
-            xml_members = [m for m in tar.getmembers() if m.name.endswith('.xml')]
-            log.info(f"JORF : {len(xml_members)} fichiers XML")
-
-            all_articles = []
-            seen_nor_global = set()
-            for member in xml_members:
-                try:
-                    f = tar.extractfile(member)
-                    if f:
-                        for art in parse_jorf_xml(f.read()):
-                            nor = art.get('nor', '')
-                            if nor and nor in seen_nor_global:
-                                continue
-                            if nor:
-                                seen_nor_global.add(nor)
-                            all_articles.append(art)
-                except Exception as e:
-                    log.debug(f"Erreur XML {member.name} : {e}")
-
-            total_analysed = len(all_articles)
-            log.info(f"JORF : {total_analysed} textes pré-filtrés par keywords")
-
-            # Briefing exécutif — sur l'ensemble des textes du jour
-            briefing = groq_briefing_jorf(all_articles)
-            log.info(f"JORF briefing : {'OK' if briefing else 'vide'} ({len(briefing)} cars)")
-
-            # ── Analyse LLM de chaque texte — pas de liste stricte ──────────
-            for art in all_articles:
-                try:
-                    contenu = art['contenu']
-                    # Enrichissement : récupérer le texte complet si possible
-                    if art.get('url') and 'legifrance' in art.get('url', ''):
-                        full = crawl_article(art['url'])
-                        if full:
-                            contenu = full
-
-                    analysis = groq_analyse_jorf(art['titre'], contenu)
-
-                    if analysis.get('pertinent') is False:
-                        # Texte non pertinent pour GSF → dans jo_autres (visible, non alerté)
-                        autres.append({
-                            'nor'      : art.get('nor', ''),
-                            'titre'    : art['titre'],
-                            'nature'   : art.get('contenu', '').split(' — ')[0],
-                            'ministere': art.get('contenu', '').split(' — ')[1]
-                                         if ' — ' in art.get('contenu', '') else '',
-                            'url'      : art.get('url', ''),
-                            'date'     : art.get('date', TODAY),
-                        })
-                        log.debug(f"JORF → autres : {art['titre'][:60]}")
-                        continue
-
-                    score = int(analysis.get('score', 2))
-                    pourquoi = analysis.get('pourquoi', '')
-                    # Vider pourquoi si score = 1 (veille simple, pas un signal)
-                    if score < 2:
-                        pourquoi = ''
-
-                    items.append({
-                        'id'        : make_id('JORF', art['titre']),
-                        'source'    : 'JORF',
-                        'categorie' : categorise(art['titre'] + ' ' + contenu),
-                        'titre'     : art['titre'],
-                        'resume'    : analysis.get('resume') or art['titre'],
-                        'pourquoi'  : pourquoi,
-                        'criticite' : score,
-                        'impact_gsf': True,
-                        'url'       : art.get('url', ''),
-                        'date'      : TODAY,
-                    })
-                    log.debug(f"JORF retenu (score={score}) : {art['titre'][:60]}")
-
-                except Exception as e:
-                    log.debug(f"Erreur analyse JORF : {e}")
-
-    except Exception as e:
-        log.error(f"JORF fatal : {e}", exc_info=True)
-
-    log.info(f"JORF : {len(items)} retenus / {total_analysed} analysés ({len(autres)} autres)")
-    return items, autres, total_analysed, briefing
-
-
-# ─────────────────────────────────────────────
-# RSS / PRESSE
-# ─────────────────────────────────────────────
-
-def fetch_rss_source(source: dict):
-    items = []
-    name  = source['name']
-
-    try:
-        try:
-            rss_resp = requests.get(
-                source['url'],
-                timeout=TIMEOUT,
-                headers={'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 '
-                                       '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'},
-            )
-            feed = feedparser.parse(rss_resp.content)
-        except Exception:
-            feed = feedparser.parse(source['url'])
-
-        if feed.bozo and not feed.entries:
-            raise ValueError(f"Feed invalide : {feed.bozo_exception}")
-
-        entries = feed.entries[:15]
-        log.info(f"RSS {name} : {len(entries)} entrées")
-
-        for entry in entries:
-            titre = (entry.get('title') or '').strip()
-            if not titre:
-                continue
-
-            contenu = html.unescape(re.sub(r'<[^>]+>', ' ', (
-                entry.get('summary') or
-                entry.get('description') or
-                (entry.get('content') or [{}])[0].get('value') or ''
-            ))).strip()
-
-            url = entry.get('link', '')
-
-            pub = entry.get('published_parsed') or entry.get('updated_parsed')
-            if pub:
-                import time as _time
-                try:
-                    article_dt   = datetime.fromtimestamp(_time.mktime(pub))
-                    article_date = article_dt.strftime('%Y-%m-%d')
-                except Exception:
-                    article_dt   = None
-                    article_date = TODAY
-            else:
-                article_dt   = None
-                article_date = TODAY
-
-            # Filtre temporel : lundi → accepte depuis vendredi 18h, sinon 24h
-            now = datetime.now()
-            if now.weekday() == 0:
-                cutoff_dt = (now - timedelta(days=3)).replace(
-                    hour=18, minute=0, second=0, microsecond=0)
-            else:
-                cutoff_dt = now - timedelta(hours=24)
-            if article_dt and article_dt < cutoff_dt:
-                log.debug(f"Article trop ancien ({article_date}), exclu : {titre[:60]}")
-                continue
-
-            if len(contenu) < 100 and url:
-                contenu = crawl_article(url) or contenu
-
-            # Filtre source avec require_keywords (France Stratégie, Vie-publique, etc.)
-            if source.get('require_keywords'):
-                txt = (titre + ' ' + contenu).lower()
-                if not any(k.lower() in txt for k in source['require_keywords']):
-                    continue
-
-            if not keyword_match(titre + ' ' + contenu):
-                continue
-
-            analysis = groq_analyse_rss(titre, contenu)
-            if analysis.get('pertinent') is False:
-                log.debug(f"Non pertinent GSF, exclu : {titre[:60]}")
-                continue
-
-            score    = int(analysis.get('score', 1))
-            pourquoi = analysis.get('pourquoi', '')
-            if score < 2:
-                pourquoi = ''
-
-            items.append({
-                'id'        : make_id(name, titre),
-                'source'    : name,
-                'categorie' : categorise(titre + ' ' + contenu),
-                'titre'     : titre,
-                'resume'    : analysis.get('resume') or titre,
-                'pourquoi'  : pourquoi,
-                'criticite' : score,
-                'impact_gsf': score >= 2,
-                'url'       : url,
-                'date'      : article_date,
-            })
-
-    except Exception as e:
-        log.warning(f"RSS {name} error : {e}")
-
-        if source.get('fallback_crawl'):
-            try:
-                log.info(f"Fallback → {source['fallback_crawl']}")
-                contenu = crawl_article(source['fallback_crawl'])
-                if contenu:
-                    analysis = groq_analyse_rss(f"Actualités {name}", contenu)
-                    items.append({
-                        'id'        : make_id(name, 'fallback'),
-                        'source'    : name,
-                        'categorie' : 'Presse',
-                        'titre'     : f'Actualités {name}',
-                        'resume'    : analysis.get('resume') or 'Source consultée via fallback.',
-                        'pourquoi'  : '',
-                        'criticite' : 1,
-                        'impact_gsf': False,
-                        'url'       : source['fallback_crawl'],
-                        'date'      : TODAY,
-                    })
-            except Exception as e2:
-                log.warning(f"Fallback {name} error : {e2}")
-
-    return items
-
-
-def fetch_rss():
-    log.info("=== RSS ===")
-    all_items = []
-    for source in RSS_SOURCES:
-        items = fetch_rss_source(source)
-        all_items.extend(items)
-        log.info(f"RSS {source['name']} : {len(items)} retenus")
-    return all_items
-
-
-# ─────────────────────────────────────────────
-# VIGIEAU
-# ─────────────────────────────────────────────
-
-def fetch_vigieau():
-    log.info("=== VigiEau ===")
-    restrictions = []
-    try:
-        resp = requests.get(VIGIEAU_DEPTS_URL, timeout=TIMEOUT)
-        resp.raise_for_status()
-        for dept in resp.json():
-            niv = dept.get('niveauGraviteMax')
-            if not niv:
-                continue
-            restrictions.append({
-                'dept_code': dept.get('code', ''),
-                'dept_nom' : dept.get('nom', ''),
-                'niveau'   : niv,
-                'niveauSup': dept.get('niveauGraviteSupMax'),
-                'niveauSou': dept.get('niveauGraviteSouMax'),
-                'niveauAep': dept.get('niveauGraviteAepMax'),
-            })
-        restrictions.sort(key=lambda x: NIVEAUX_ORDRE.get(x['niveau'], 0), reverse=True)
-        log.info(f"VigiEau : {len(restrictions)} départements en restriction")
-    except Exception as e:
-        log.error(f"VigiEau fatal : {e}", exc_info=True)
-    return restrictions
-
-
-# ─────────────────────────────────────────────
-# VIGIEAU HISTORIQUE — data.gouv.fr
-# ─────────────────────────────────────────────
-
-DATAGOUV_DATASET_ID   = 'donnee-secheresse-vigieau'
-DATAGOUV_API          = 'https://www.data.gouv.fr/api/1/datasets/'
-VIGIEAU_HISTORY_YEARS = list(range(2020, datetime.now().year + 1))
-
-NIVEAUX_GRAVITE = ['vigilance', 'alerte', 'alerte renforcée', 'crise']
-
-VIGIEAU_FALLBACK_URLS = {
-    2026: 'https://www.data.gouv.fr/api/1/datasets/r/0732e970-c12c-4e6a-adca-5ac9dbc3fdfa',
+function renderFeed(){
+  const items=getFilteredItems(),prio=items.filter(i=>i.criticite>=2),veille=items.filter(i=>i.criticite<2);
+  const bar=document.getElementById('signal-bar');
+  if(prio.length){
+    bar.style.display='flex';
+    bar.innerHTML=`<span class="signal-bar-lbl">Signaux</span>`+prio.slice(0,5).map(i=>`<div class="signal-pill ${i.criticite===3?'p3':'p2'}" onclick="scrollToItem('${i.id}')"><div class="signal-dot"></div><span style="overflow:hidden;text-overflow:ellipsis">${escHtml(i.titre)}</span></div>`).join('');
+  }else{bar.style.display='none';}
+  document.getElementById('feed-titre').textContent='Veille du '+formatDate(D.date)+' · '+items.length+' signaux';
+  const list=document.getElementById('feed-list');
+  if(!items.length){list.innerHTML=`<div class="empty-state">Aucun résultat</div>`;return;}
+  function cardHtml(item){
+    const cc=['','prio1','prio2','prio3'][item.criticite]||'prio1';
+    const cl=['','Veille','À surveiller','⚠ Impact direct'][item.criticite]||'Veille';
+    const bc='badge-'+(item.categorie||'Environnement');
+    return `<div class="card ${cc}" id="item-${item.id}" data-crit="${item.criticite}">
+      <span class="card-badge ${bc}">${escHtml(item.categorie)}</span>
+      <div class="card-body">
+        <div class="card-titre">${escHtml(item.titre)}</div>
+        <div class="card-resume">${escHtml(item.resume)}</div>
+        <div class="card-meta"><span>${escHtml(item.source)}</span>${item.date?`<span class="card-date">${formatDate(item.date)}</span>`:''}</div>
+      </div>
+      <div class="card-right">
+        <span class="crit-badge crit${item.criticite}">${cl}</span>
+        ${item.url?`<a class="card-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Lire →</a>`:''}
+      </div></div>`;}
+  let html='';
+  if(prio.length)html+=`<div class="feed-section-hd prio"><span class="feed-section-lbl">Signaux prioritaires</span><span class="feed-section-badge">${prio.length}</span></div>`+prio.map(cardHtml).join('');
+  if(veille.length)html+=`<div class="feed-consulter-hd" onclick="toggleConsulter(this)"><span class="feed-consulter-lbl">À consulter — veille générale</span><span class="feed-section-badge" style="margin-left:auto">${veille.length} articles</span><span class="feed-chevron">▶</span></div><div class="feed-consulter-items" style="display:none">${veille.map(cardHtml).join('')}</div>`;
+  list.innerHTML=html;
 }
 
-DEPT_NOMS = {
-    '01':'Ain','02':'Aisne','03':'Allier','04':'Alpes-de-Haute-Provence','05':'Hautes-Alpes',
-    '06':'Alpes-Maritimes','07':'Ardèche','08':'Ardennes','09':'Ariège','10':'Aube',
-    '11':'Aude','12':'Aveyron','13':'Bouches-du-Rhône','14':'Calvados','15':'Cantal',
-    '16':'Charente','17':'Charente-Maritime','18':'Cher','19':'Corrèze','2A':'Corse-du-Sud',
-    '2B':'Haute-Corse','21':"Côte-d'Or",'22':'Côtes-d\'Armor','23':'Creuse','24':'Dordogne',
-    '25':'Doubs','26':'Drôme','27':'Eure','28':'Eure-et-Loir','29':'Finistère',
-    '30':'Gard','31':'Haute-Garonne','32':'Gers','33':'Gironde','34':'Hérault',
-    '35':'Ille-et-Vilaine','36':'Indre','37':'Indre-et-Loire','38':'Isère','39':'Jura',
-    '40':'Landes','41':'Loir-et-Cher','42':'Loire','43':'Haute-Loire','44':'Loire-Atlantique',
-    '45':'Loiret','46':'Lot','47':'Lot-et-Garonne','48':'Lozère','49':'Maine-et-Loire',
-    '50':'Manche','51':'Marne','52':'Haute-Marne','53':'Mayenne','54':'Meurthe-et-Moselle',
-    '55':'Meuse','56':'Morbihan','57':'Moselle','58':'Nièvre','59':'Nord',
-    '60':'Oise','61':'Orne','62':'Pas-de-Calais','63':'Puy-de-Dôme','64':'Pyrénées-Atlantiques',
-    '65':'Hautes-Pyrénées','66':'Pyrénées-Orientales','67':'Bas-Rhin','68':'Haut-Rhin','69':'Rhône',
-    '70':'Haute-Saône','71':'Saône-et-Loire','72':'Sarthe','73':'Savoie','74':'Haute-Savoie',
-    '75':'Paris','76':'Seine-Maritime','77':'Seine-et-Marne','78':'Yvelines','79':'Deux-Sèvres',
-    '80':'Somme','81':'Tarn','82':'Tarn-et-Garonne','83':'Var','84':'Vaucluse',
-    '85':'Vendée','86':'Vienne','87':'Haute-Vienne','88':'Vosges','89':'Yonne',
-    '90':'Territoire de Belfort','91':'Essonne','92':'Hauts-de-Seine','93':'Seine-Saint-Denis',
-    '94':'Val-de-Marne','95':"Val-d'Oise",'971':'Guadeloupe','972':'Martinique',
-    '973':'Guyane','974':'La Réunion','976':'Mayotte',
+function toggleConsulter(el){
+  const next=el.nextElementSibling,chev=el.querySelector('.feed-chevron'),open=next.style.display!=='none';
+  next.style.display=open?'none':'block';chev.style.transform=open?'':'rotate(90deg)';
+}
+function scrollToItem(id){
+  if(currentView!=='feed')switchView('feed');
+  renderFeed();
+  setTimeout(()=>{
+    const el=document.getElementById('item-'+id);
+    if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.style.outline='2px solid var(--blue)';el.style.boxShadow='0 0 12px rgba(37,99,235,.2)';setTimeout(()=>{el.style.outline='';el.style.boxShadow='';},2000);}
+  },150);
+}
+function getFilteredItems(){
+  if(!D?.items)return[];
+  return D.items.filter(item=>{
+    if(catFilter!=='all'&&item.categorie!==catFilter)return false;
+    const st=sourceType(item.source);
+    if(st==='jorf'&&!srcFilters.jorf)return false;
+    if(st==='presse'&&!srcFilters.presse)return false;
+    return true;
+  });
+}
+function filterCat(cat){catFilter=cat;document.querySelectorAll('.badge-filter').forEach(b=>b.classList.toggle('on',b.dataset.cat===cat));renderFeed();}
+function toggleFilter(key,val){srcFilters[key]=val;const row=document.getElementById(`f-${key}`);row?.classList.toggle('on',val);if(row?.querySelector('.fcheck'))row.querySelector('.fcheck').textContent=val?'✓':'';renderFeed();}
+
+const PMTILES_URL  = 'https://regleau.s3.gra.perf.cloud.ovh.net/pmtiles/zones_arretes_en_vigueur.pmtiles';
+const SOURCE_LAYER = 'zones_arretes_en_vigueur';
+function renderMap(){
+  if(mapgl){setTimeout(()=>mapgl.resize(),30);return;}
+  const protocol=new pmtiles.Protocol();
+  maplibregl.addProtocol('pmtiles',protocol.tile.bind(protocol));
+  mapgl=new maplibregl.Map({
+    container:'map-container',
+    style:'https://openmaptiles.data.gouv.fr/styles/osm-bright/style.json',
+    center:[2.3,46.6],zoom:4.8,attributionControl:false,
+  });
+  mapgl.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
+  mapgl.on('load',()=>{
+    mapgl.addSource('vigieau',{type:'vector',url:`pmtiles://${PMTILES_URL}`});
+    mapgl.addLayer({id:'zones-fill',type:'fill',source:'vigieau','source-layer':SOURCE_LAYER,
+      paint:{'fill-color':['match',['downcase',['get','niveauGravite']],
+        'vigilance','#84cc16','alerte','#eab308','alerte renforcée','#f97316','alerte_renforcée','#f97316','crise','#dc2626','#94a3b8'],
+        'fill-opacity':0.55}});
+    mapgl.addLayer({id:'zones-outline',type:'line',source:'vigieau','source-layer':SOURCE_LAYER,
+      paint:{'line-color':'#ffffff','line-width':0.5,'line-opacity':0.8}});
+    mapgl.addLayer({id:'zones-hover',type:'fill',source:'vigieau','source-layer':SOURCE_LAYER,
+      paint:{'fill-color':'#000000','fill-opacity':['case',['boolean',['feature-state','hover'],false],0.1,0]}});
+    let hoveredId=null;
+    mapgl.on('mousemove','zones-fill',e=>{
+      if(e.features.length){
+        if(hoveredId!==null)mapgl.setFeatureState({source:'vigieau',sourceLayer:SOURCE_LAYER,id:hoveredId},{hover:false});
+        hoveredId=e.features[0].id;
+        mapgl.setFeatureState({source:'vigieau',sourceLayer:SOURCE_LAYER,id:hoveredId},{hover:true});
+        mapgl.getCanvas().style.cursor='pointer';
+      }
+    });
+    mapgl.on('mouseleave','zones-fill',()=>{
+      if(hoveredId!==null)mapgl.setFeatureState({source:'vigieau',sourceLayer:SOURCE_LAYER,id:hoveredId},{hover:false});
+      hoveredId=null;mapgl.getCanvas().style.cursor='';
+    });
+    mapgl.on('click','zones-fill',e=>{
+      const p=e.features[0].properties;
+      const niv=(p.niveauGravite||'').toLowerCase();
+      const col=NIVEAU_COLOR[niv]||'#94a3b8';
+      const lbl=NIVEAU_LABEL[niv]||(niv?niv.charAt(0).toUpperCase()+niv.slice(1):'Sans restriction');
+      let arrete=null;try{arrete=JSON.parse(p.arreteRestriction);}catch{}
+      const tl={SUP:'Eaux de surface',SOU:'Eaux souterraines',AEP:'Eau potable'}[p.type]||p.type||'';
+      const arr=arrete?.fichier||arrete?.cheminFichier||'';
+      const el=document.getElementById('dept-detail');
+      el.innerHTML=`<div class="dept-detail-title"><span style="width:10px;height:10px;border-radius:50%;background:${col};display:inline-block;flex-shrink:0"></span><strong>${escHtml(p.nom||p.code)}</strong>${p.departement?' — dept '+p.departement:''}<span style="color:${col};margin-left:6px">${lbl}</span>${tl?`<span style="font-size:10px;color:var(--muted);margin-left:8px">${tl}</span>`:''}</div>${arrete?.dateDebut?`<div style="font-size:11px;color:var(--muted);margin-top:2px">En vigueur depuis : ${escHtml(arrete.dateDebut)}</div>`:''} ${arr?`<a href="${escHtml(arr)}" target="_blank" rel="noopener" style="font-size:11px;font-family:var(--mono);color:var(--blue);text-decoration:none;margin-top:4px;display:inline-block">📄 Arrêté préfectoral →</a>`:`<span style="font-size:11px;color:var(--muted)">Arrêté PDF non référencé pour cette zone</span>`}`;
+      el.classList.add('open');
+    });
+  });
+  setTimeout(()=>mapgl.resize(),50);
 }
 
+const JO_NATURES={ARRETE:'Arrêté',DECRET:'Décret',ORDONNANCE:'Ordonnance',LOI:'Loi',CIRCULAIRE:'Circulaire',AVIS:'Avis',DECISION:'Décision'};
+function renderJO(){
+  const items=D?.jo_autres||[],search=(document.getElementById('jo-search')?.value||'').toLowerCase();
+  const joRetenus=D?.jo_retenus||[];
+  const statsEl=document.getElementById('jo-stats'),groupEl=document.getElementById('jo-groups');
+  if(!groupEl)return;
+  const nbT=D?.stats?.jo_analyses||0,nbG=D?.stats?.jo_retenus||0;
+  if(statsEl)statsEl.innerHTML=[[nbT,'Textes analysés',false],[nbG,'Pertinents GSF',true],[items.length,'Dans ce JO',false]].map(([v,l,a])=>`<div class="jo-stat ${a&&v>0?'accent':''}"><div class="jo-stat-val">${v}</div><div class="jo-stat-lbl">${l}</div></div>`).join('');
 
-def _normalize_niveau(niveau: str) -> str:
-    n = niveau.lower().strip().replace('_', ' ')
-    n = n.replace('renforcee', 'renforcée').replace('renforcé', 'renforcée')
-    return n
+  // Briefing exécutif
+  const _br=D?.briefing_jorf;
+  const briefing=typeof _br==='string'?_br:(Array.isArray(_br)?_br.map(it=>it.essentiel||'').filter(Boolean).join(' '):'');
+  const briefingHtml=briefing?`<div class="briefing-card" style="margin-bottom:16px">
+    <div class="briefing-header">Résumé exécutif du jour</div>
+    <div style="font-size:13px;color:var(--text2);line-height:1.6">${escHtml(briefing)}</div>
+  </div>`:'';
 
-
-def _parse_vigieau_csv(content: str, year: int, compute_daily: bool = False) -> dict:
-    import csv as _csv
-    import json as _json
-    from collections import defaultdict
-
-    par_mois = defaultdict(lambda: {n: 0 for n in NIVEAUX_GRAVITE})
-    par_dept = defaultdict(lambda: {'nom': '', 'jours': {n: 0 for n in NIVEAUX_GRAVITE}})
-    par_jour = defaultdict(lambda: {n: 0 for n in NIVEAUX_GRAVITE}) if compute_daily else None
-
-    reader   = _csv.DictReader(io.StringIO(content), delimiter=',')
-    headers  = reader.fieldnames or []
-    log.debug(f"CSV colonnes ({year}): {headers[:15]}")
-
-    rows_ok = rows_skip = 0
-
-    for row in reader:
-        try:
-            date_debut_str = row.get('date_debut', '').strip()
-            date_fin_str   = row.get('date_fin', '').strip()
-
-            dept_code_raw = (
-                row.get('departement', '') or row.get('departement_pilote', '') or ''
-            ).strip().strip('"')
-            dept_code = dept_code_raw.zfill(2) if dept_code_raw else ''
-
-            niveau_raw_col = (
-                row.get('zones_alerte.niveau_gravite', '')
-                or row.get('niveau_gravite', '')
-                or row.get('niveauGravite', '')
-                or row.get('niveauAlerte', '')
-                or ''
-            ).strip()
-
-            niveaux_liste = []
-            if niveau_raw_col.startswith('['):
-                try:
-                    parsed = _json.loads(niveau_raw_col)
-                    niveaux_liste = [_normalize_niveau(n) for n in parsed if n]
-                except Exception:
-                    pass
-            elif niveau_raw_col:
-                niveaux_liste = [_normalize_niveau(niveau_raw_col)]
-
-            ordre_gravite  = {n: i for i, n in enumerate(NIVEAUX_GRAVITE)}
-            niveaux_valides = [n for n in niveaux_liste if n in NIVEAUX_GRAVITE]
-            if not niveaux_valides:
-                rows_skip += 1
-                continue
-            niveau = max(niveaux_valides, key=lambda n: ordre_gravite.get(n, 0))
-
-            if not date_debut_str:
-                rows_skip += 1
-                continue
-
-            try:
-                date_debut = datetime.strptime(date_debut_str[:10], '%Y-%m-%d')
-            except ValueError:
-                rows_skip += 1
-                continue
-
-            if date_fin_str and date_fin_str not in ('', 'None', 'null', 'NaT', 'undefined'):
-                try:
-                    date_fin = datetime.strptime(date_fin_str[:10], '%Y-%m-%d')
-                except ValueError:
-                    date_fin = datetime.now()
-            else:
-                date_fin = datetime.now()
-
-            year_start = datetime(year, 1, 1)
-            year_end   = datetime(year, 12, 31)
-            d_start    = max(date_debut, year_start)
-            d_end      = min(date_fin, year_end)
-
-            if d_start > d_end:
-                rows_skip += 1
-                continue
-
-            nb_jours = (d_end - d_start).days + 1
-
-            cur = d_start
-            while cur <= d_end:
-                mois_key = cur.strftime('%Y-%m')
-                par_mois[mois_key][niveau] += 1
-                if cur.month == 12:
-                    cur = cur.replace(year=cur.year + 1, month=1, day=1)
-                else:
-                    cur = cur.replace(month=cur.month + 1, day=1)
-
-            if compute_daily:
-                jour_cur = d_start
-                while jour_cur <= d_end:
-                    par_jour[jour_cur.strftime('%Y-%m-%d')][niveau] += 1
-                    jour_cur += timedelta(days=1)
-
-            if dept_code:
-                if not par_dept[dept_code]['nom']:
-                    par_dept[dept_code]['nom'] = DEPT_NOMS.get(dept_code, dept_code)
-                par_dept[dept_code]['jours'][niveau] += nb_jours
-
-            rows_ok += 1
-
-        except Exception as e:
-            log.debug(f"Ligne CSV ignorée : {e}")
-            rows_skip += 1
-
-    log.info(f"  Parse CSV {year}: {rows_ok} lignes traitées, {rows_skip} ignorées, "
-             f"{len(par_mois)} mois, {len(par_dept)} depts")
-
-    mois_out = {k: dict(v) for k, v in sorted(par_mois.items())}
-    dept_out = {}
-    for code, data in par_dept.items():
-        graves = (data['jours'].get('alerte', 0)
-                  + data['jours'].get('alerte renforcée', 0)
-                  + data['jours'].get('crise', 0))
-        dept_out[code] = {
-            'nom'         : data['nom'],
-            'jours'       : dict(data['jours']),
-            'total_graves': graves,
-        }
-
-    jour_out = {k: dict(v) for k, v in sorted(par_jour.items())} if compute_daily else {}
-    return {'par_mois': mois_out, 'par_dept': dept_out, 'par_jour': jour_out}
-
-
-def _save_and_return_history(history_file: Path, annees_cache: dict) -> dict:
-    dept_total = {}
-    for _, data in annees_cache.items():
-        for code, info in data.get('par_dept', {}).items():
-            if code not in dept_total:
-                dept_total[code] = {
-                    'nom'         : DEPT_NOMS.get(code, info.get('nom', code)),
-                    'total_graves': 0,
-                    'jours'       : {n: 0 for n in NIVEAUX_GRAVITE},
-                }
-            dept_total[code]['total_graves'] += info.get('total_graves', 0)
-            for niv in NIVEAUX_GRAVITE:
-                dept_total[code]['jours'][niv] += info.get('jours', {}).get(niv, 0)
-
-    top10 = sorted(dept_total.items(), key=lambda x: x[1]['total_graves'], reverse=True)[:10]
-    top10_out = [
-        {'code': c, 'nom': d['nom'], 'total_graves': d['total_graves'], 'jours': d['jours']}
-        for c, d in top10
-    ]
-    result = {
-        'updated_at' : datetime.now().isoformat(),
-        'annees'     : annees_cache,
-        'top10_depts': top10_out,
-        'comparaison': {
-            str(y): annees_cache.get(str(y), {}).get('par_jour', {})
-            for y in [datetime.now().year - 1, datetime.now().year]
-        },
+  // Section signaux GSF (jo_retenus) — en haut, bien visible
+  let joGsfHtml = '';
+  if(joRetenus.length){
+    const filtered=joRetenus.filter(it=>!search||(it.titre||'').toLowerCase().includes(search));
+    if(filtered.length){
+      joGsfHtml=`<div style="margin-bottom:16px">
+        <div class="feed-section-hd prio" style="border-radius:6px 6px 0 0;position:static">
+          <span class="feed-section-lbl">Signaux GSF — textes à impact direct</span>
+          <span class="feed-section-badge">${filtered.length}</span>
+        </div>
+        ${filtered.map(item=>{
+          const cc=['','prio1','prio2','prio3'][item.criticite]||'prio1';
+          const cl=['','Veille','À surveiller','⚠ Impact direct'][item.criticite]||'Veille';
+          return `<div class="card ${cc}" style="background:var(--surface);border-left-color:${item.criticite>=3?'var(--red)':'var(--orange)'}">
+            <span class="card-badge badge-${escHtml(item.categorie)}">${escHtml(item.categorie)}</span>
+            <div class="card-body">
+              <div class="card-titre">${escHtml(item.titre)}</div>
+              <div class="card-resume">${escHtml(item.resume)}</div>
+            </div>
+            <div class="card-right">
+              <span class="crit-badge crit${item.criticite}">${cl}</span>
+              ${item.url?`<a class="card-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`:''}
+            </div>
+          </div>`;
+        }).join('')}
+      </div>`;
     }
-    history_file.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
-    log.info(f"vigieau_history.json : {len(annees_cache)} années, {len(top10_out)} depts top10")
-    return result
+  }
 
+  if(!items.length){groupEl.innerHTML=joGsfHtml+briefingHtml+'<div class="jo-empty">Aucun autre texte JO pour cette date</div>';return;}
+  const groups={};
+  items.forEach(item=>{const nat=(item.nature||'AUTRE').toUpperCase(),label=JO_NATURES[nat]||nat||'Autre';if(!groups[label])groups[label]=[];if(!search||(item.titre||'').toLowerCase().includes(search))groups[label].push(item);});
+  const total=Object.values(groups).reduce((s,g)=>s+g.length,0);
+  if(!total){groupEl.innerHTML=joGsfHtml+briefingHtml+'<div class="jo-empty">Aucun résultat</div>';return;}
+  groupEl.innerHTML=joGsfHtml+briefingHtml+Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([label,its])=>`<div class="jo-theme-group open"><div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')"><span class="jo-theme-name">${escHtml(label)}</span><span class="jo-theme-count">${its.length}</span><span class="jo-chevron">▶</span></div><div class="jo-items">${its.map(item=>`<div class="jo-item"><div class="jo-item-nature">${escHtml(item.nature||label)}</div><div class="jo-item-titre">${escHtml(item.titre)}</div>${item.url?`<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`:'<span style="font-size:10px;color:var(--muted2)">Pas de lien</span>'}</div>`).join('')}</div></div>`).join('');
+}
+function filterJO(){renderJO();}
 
-def fetch_vigieau_history() -> dict:
-    """Télécharge et agrège l'historique des arrêtés VigiEau depuis data.gouv.fr."""
-    log.info("=== VigiEau Historique ===")
+function renderArchives(){
+  const cal=document.getElementById('arc-calendar');
+  if(!archive?.dates){cal.innerHTML='<div class="empty-state">Aucune archive</div>';return;}
+  const av=new Set(archive.dates),today=new Date(),start=new Date(today);start.setDate(start.getDate()-89);
+  const months={};
+  for(let d=new Date(start);d<=today;d.setDate(d.getDate()+1)){const iso=d.toISOString().slice(0,10),mk=iso.slice(0,7);if(!months[mk])months[mk]=[];months[mk].push(iso);}
+  const MOIS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+  cal.innerHTML=Object.entries(months).reverse().map(([mk,days])=>{
+    const[y,m]=mk.split('-');
+    return `<div class="arc-month"><div class="arc-month-title">${MOIS[parseInt(m)-1]} ${y}</div><div class="arc-days">${days.map(iso=>{const dd=iso.slice(8),hd=av.has(iso),it=iso===today.toISOString().slice(0,10),is=iso===currentDate;const cls=['arc-day',hd?'has-data':'',it?'today':'',is?'selected':''].filter(Boolean).join(' ');return `<div class="${cls}" ${hd?`onclick="loadDate('${iso}')"`:''}>${dd}</div>`;}).join('')}</div></div>`;
+  }).join('');
+}
+async function loadDate(date){
+  if(date===currentDate)return;showToast(`Chargement du ${formatDate(date)}…`);
+  try{D=await(await fetch(`data/${date}.json`)).json();currentDate=date;renderAll();if(currentView==='archives')renderArchives();}
+  catch(e){showToast(`Données indisponibles pour ${date}`);}
+}
 
-    history_file = SCRIPT_DIR / 'vigieau_history.json'
-    current_year = datetime.now().year
+async function loadHistorique(){
+  const el=document.getElementById('hist-content');if(!el)return;
+  if(histData){renderHistorique();return;}
+  try{
+    const raw=await(await fetch('vigieau_history.json')).json();
+    histData=raw;
+    if(raw.comparaison)histData.comparaison=raw.comparaison;
+    renderHistorique();
+  }
+  catch(e){el.innerHTML=`<div class="hist-loading">Données historiques non disponibles (${e.message})</div>`;}
+}
+const NV=['vigilance','alerte','alerte renforcée','crise'];
+const CV={vigilance:'#84cc16',alerte:'#eab308','alerte renforcée':'#f97316',crise:'#dc2626'};
+function renderHistorique(){
+  const el=document.getElementById('hist-content');if(!histData)return;
+  const annees=Object.keys(histData.annees||{}).sort(),top10=histData.top10_depts||[];
+  let tabs='<div class="year-tabs">';
+  tabs+=`<button class="year-tab ${histYear==='all'?'active':''}" onclick="setHistYear('all')">Toutes</button>`;
+  annees.forEach(y=>{tabs+=`<button class="year-tab ${histYear===y?'active':''}" onclick="setHistYear('${y}')">${y}</button>`;});
+  tabs+='</div>';
+  const NV_LABELS={vigilance:'Vigilance',alerte:'Alerte',['alerte renforcée']:'Alerte renforcée',crise:'Crise'};
+  const legend=`<div class="hist-legend">${NV.map(n=>`<span class="hist-legend-item"><span class="hist-legend-dot" style="background:${CV[n]}"></span>${NV_LABELS[n]}</span>`).join('')}</div>`;
+  const lastYear=annees[annees.length-1]||'2024';
+  el.innerHTML=`
+    <div class="hist-section">
+      <div class="hist-section-title">Nombre de départements sous arrêté de restriction — par mois</div>
+      ${tabs}
+      ${legend}
+      <div class="hist-chart-subtitle">Chaque barre représente le nombre cumulé d'arrêtés préfectoraux actifs dans le mois, par niveau de gravité.</div>
+      <div class="chart-wrap" id="month-chart">${buildMonthChart(annees)}</div>
+    </div>
+    <div class="hist-section">
+      <div class="hist-section-title">Top 10 départements — jours cumulés en restriction grave (alerte + alerte renforcée + crise), 2020–${lastYear}</div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px">
+        <div class="hist-legend" style="margin-bottom:14px">${['alerte','alerte renforcée','crise'].map(n=>`<span class="hist-legend-item"><span class="hist-legend-dot" style="background:${CV[n]}"></span>${NV_LABELS[n]}</span>`).join('')}</div>
+        <div class="hist-chart-subtitle">Les barres représentent la durée cumulée (en jours) passée sous arrêté pour chaque niveau de restriction.</div>
+        <div class="top10-list" style="margin-top:12px">${buildTop10(top10)}</div>
+      </div>
+    </div>
+    <div class="hist-section">
+      <div class="hist-section-title">Comparaison journalière — restrictions actives 2025 vs 2026</div>
+      <div class="hist-chart-subtitle">Nombre total de zones sous arrêté chaque jour (tous niveaux confondus).</div>
+      ${buildDailyChart()}
+    </div>
+    <div class="hist-source">Source : <a href="https://www.data.gouv.fr/fr/datasets/donnee-secheresse-vigieau/" target="_blank" rel="noopener">VigiEau — data.gouv.fr</a> · Arrêtés préfectoraux de restriction d'eau 2020–${lastYear} · Mis à jour quotidiennement par le pipeline GSF Veille.</div>`;
+}
+function setHistYear(y){histYear=y;renderHistorique();}
+function buildMonthChart(annees){
+  if(!histData)return'';let md={};
+  if(histYear==='all'){annees.forEach(y=>{Object.entries((histData.annees[y]||{}).par_mois||{}).forEach(([mois,niveaux])=>{if(!md[mois])md[mois]={vigilance:0,alerte:0,'alerte renforcée':0,crise:0};NV.forEach(n=>{md[mois][n]=Math.max(md[mois][n],niveaux[n]||0);});});});}
+  else md=(histData.annees[histYear]||{}).par_mois||{};
+  const keys=Object.keys(md).sort();if(!keys.length)return'<div class="hist-loading">Pas de données</div>';
+  const mx=Math.max(...keys.map(m=>NV.reduce((s,n)=>s+(md[m][n]||0),0)),1);
+  return keys.map(mois=>{const d=md[mois],label=mois.substring(2).replace('-','/');const segs=NV.filter(n=>(d[n]||0)>0).map(n=>`<div class="bar-seg" style="height:${((d[n]/mx)*180).toFixed(1)}px;background:${CV[n]}" title="${n}: ${d[n]}"></div>`).join('');return `<div class="bar-group"><div class="bar-stack">${segs}</div><div class="bar-label">${label}</div></div>`;}).join('');
+}
+function buildTop10(top10){
+  if(!top10.length)return'<div class="hist-loading">Pas de données</div>';
+  const mx=Math.max(...top10.map(d=>d.total_graves),1);
+  return top10.map((d,i)=>`<div class="top10-row"><div class="top10-rank">${i+1}</div><div class="top10-name" title="${d.nom}">${d.nom}</div><div class="top10-bar-wrap">${['alerte','alerte renforcée','crise'].map(n=>`<div class="top10-seg" style="width:${((d.jours[n]||0)/mx*100).toFixed(1)}%;background:${CV[n]}"></div>`).join('')}</div><div class="top10-val">${d.total_graves}j</div></div>`).join('');
+}
+function buildDailyChart(){
+  if(!histData?.comparaison)return'<div class="hist-loading">Données de comparaison non disponibles</div>';
+  const C2025=histData.comparaison['2025']||{};
+  const C2026=histData.comparaison['2026']||{};
+  if(!Object.keys(C2025).length&&!Object.keys(C2026).length)return'<div class="hist-loading">Données de comparaison non disponibles</div>';
+  const COL2025='#60a5fa',COL2026='#f97316';
+  // Agréger par mois pour les deux années
+  const agg={};
+  function addToAgg(parJour,yearStr){
+    Object.entries(parJour).forEach(([date,niveaux])=>{
+      const mois=date.slice(0,7);
+      if(!agg[mois])agg[mois]={2025:0,2026:0};
+      const total=Object.values(niveaux).reduce((s,v)=>s+(v||0),0);
+      agg[mois][parseInt(yearStr)]=(agg[mois][parseInt(yearStr)]||0)+total;
+    });
+  }
+  addToAgg(C2025,'2025');
+  addToAgg(C2026,'2026');
+  const mois=Object.keys(agg).sort();
+  if(!mois.length)return'<div class="hist-loading">Données de comparaison non disponibles</div>';
+  const mx=Math.max(...mois.map(m=>Math.max(agg[m][2025]||0,agg[m][2026]||0)),1);
+  const legend=`<div style="display:flex;gap:14px;margin-bottom:10px"><span style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2)"><span style="width:10px;height:10px;border-radius:2px;background:${COL2025};flex-shrink:0;display:inline-block"></span>2025</span><span style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2)"><span style="width:10px;height:10px;border-radius:2px;background:${COL2026};flex-shrink:0;display:inline-block"></span>2026</span></div>`;
+  const bars=mois.map(m=>{
+    const v2025=agg[m][2025]||0,v2026=agg[m][2026]||0;
+    const h2025=((v2025/mx)*160).toFixed(1),h2026=((v2026/mx)*160).toFixed(1);
+    const label=m.slice(5)+'/'+m.slice(2,4);
+    const lbl2025=v2025?`<span style="font-size:8px;color:${COL2025};font-family:var(--mono);line-height:1">${v2025}</span>`:'';
+    const lbl2026=v2026?`<span style="font-size:8px;color:${COL2026};font-family:var(--mono);line-height:1">${v2026}</span>`:'';
+    return `<div class="bar-group" style="min-width:28px"><div style="display:flex;align-items:flex-end;gap:2px;height:160px"><div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px"><div>${lbl2025}</div><div style="width:10px;height:${h2025}px;background:${COL2025};border-radius:2px 2px 0 0" title="2025: ${v2025}"></div></div><div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px"><div>${lbl2026}</div><div style="width:10px;height:${h2026}px;background:${COL2026};border-radius:2px 2px 0 0" title="2026: ${v2026}"></div></div></div><div class="bar-label">${label}</div></div>`;
+  }).join('');
+  return `${legend}<div class="chart-wrap" style="height:220px;align-items:flex-end">${bars}</div>`;
+}
 
-    existing = {}
-    if history_file.exists():
-        try:
-            existing = json.loads(history_file.read_text(encoding='utf-8'))
-            log.info(f"Cache existant : années {sorted(existing.get('annees', {}).keys())}")
-        except Exception as e:
-            log.warning(f"Cache VigiEau illisible : {e}")
+function renderMapEncart(){
+  const el=document.getElementById('map-encart');
+  if(!el||!D)return;
+  const restr=D.restrictions_eau||[];
+  if(!restr.length){el.innerHTML='<span style="font-size:11px;color:var(--muted)">Aucune restriction active</span>';return;}
+  const counts={};
+  restr.forEach(r=>{const n=normalizeNiveau(r.niveau);counts[n]=(counts[n]||0)+1;});
+  const ordre=['crise','alerte renforcée','alerte','vigilance'];
+  let html=`<div style="font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--muted);margin-bottom:6px">RESTRICTIONS ACTIVES</div>`;
+  html+=`<div style="font-size:20px;font-weight:600;font-family:var(--mono);color:var(--text);margin-bottom:8px">${restr.length} <span style="font-size:11px;font-weight:400;color:var(--muted)">départements</span></div>`;
+  ordre.forEach(n=>{if(counts[n]){const col=NIVEAU_COLOR[n]||'#94a3b8';html+=`<div style="display:flex;align-items:center;gap:6px;font-size:11px;margin-bottom:3px"><span style="width:8px;height:8px;border-radius:50%;background:${col};flex-shrink:0"></span><span style="flex:1;color:var(--text2)">${NIVEAU_LABEL[n]||n}</span><span style="font-weight:600;font-family:var(--mono);color:var(--text)">${counts[n]}</span></div>`;}});
+  el.innerHTML=html;
+}
 
-    annees_cache    = existing.get('annees', {})
-    csv_par_annee   = {}
-    comprehensive_url = None
-
-    # ── Étape 1 : Lister les ressources via l'API data.gouv.fr ──────────
-    try:
-        resp = requests.get(
-            f"{DATAGOUV_API}{DATAGOUV_DATASET_ID}/",
-            timeout=TIMEOUT,
-            headers={'User-Agent': 'GSF-Veille/2.0'}
-        )
-        resp.raise_for_status()
-        resources = resp.json().get('resources', [])
-        log.info(f"API data.gouv.fr : {len(resources)} ressources")
-
-        for res in resources:
-            title    = res.get('title', '') or ''
-            fmt      = (res.get('format', '') or '').lower()
-            url      = res.get('url', '') or ''
-            filetype = res.get('filetype', '') or ''
-
-            log.debug(f"  Ressource: title='{title}' | format='{fmt}' | filetype='{filetype}'")
-
-            is_csv = (
-                fmt in ('csv', 'text/csv')
-                or url.lower().endswith('.csv')
-                or filetype.lower() == 'file'
-            )
-            if not is_csv and 'csv' not in url.lower():
-                continue
-
-            title_lower = title.lower()
-            if 'cadre' in title_lower:
-                continue
-            if 'arret' not in title_lower and 'arrêt' not in title_lower:
-                continue
-
-            if title.strip() == 'Arrêtés':
-                comprehensive_url = url
-                log.info(f"  Fichier compréhensif 'Arrêtés' identifié → {url[-50:]}")
-                continue
-
-            found_year = None
-            for y in VIGIEAU_HISTORY_YEARS:
-                if str(y) in title:
-                    found_year = y
-                    break
-            if found_year is None:
-                found_year = current_year
-
-            if found_year not in csv_par_annee:
-                csv_par_annee[found_year] = url
-                log.info(f"  CSV {found_year} identifié : '{title}' → {url[-50:]}")
-
-    except Exception as e:
-        log.warning(f"API data.gouv.fr inaccessible : {e}")
-
-    # ── Étape 2 : Fallback URLs hardcodées ──────────────────────────────
-    if not csv_par_annee:
-        log.info("Fallback sur URLs hardcodées")
-        for year, url in VIGIEAU_FALLBACK_URLS.items():
-            csv_par_annee[year] = url
-
-    if not csv_par_annee:
-        log.warning("Aucun CSV VigiEau identifié — historique non mis à jour")
-        return _save_and_return_history(history_file, annees_cache)
-
-    log.info(f"CSV à traiter : {sorted(csv_par_annee.keys())}")
-
-    # ── Étape 3 : Télécharger et parser ─────────────────────────────────
-    for year in sorted(csv_par_annee.keys()):
-        url      = csv_par_annee[year]
-        year_str = str(year)
-
-        if year_str in annees_cache and year != current_year:
-            cached = annees_cache[year_str]
-            if cached.get('par_mois') and cached.get('par_dept'):
-                log.info(f"Année {year} : cache OK ({len(cached['par_mois'])} mois)")
-                continue
-
-        try:
-            log.info(f"Téléchargement CSV {year} : {url[-60:]}")
-            r = requests.get(url, timeout=120, headers={'User-Agent': 'GSF-Veille/2.0'},
-                             allow_redirects=True)
-            r.raise_for_status()
-            log.info(f"  → {len(r.content)} octets")
-
-            try:
-                content = r.content.decode('utf-8')
-            except UnicodeDecodeError:
-                content = r.content.decode('latin-1')
-
-            first_line = content.split('\n')[0].lower()
-            if 'date_debut' not in first_line and 'date' not in first_line:
-                log.warning(f"CSV {year} : colonnes inattendues ({first_line[:80]})")
-                continue
-
-            stats = _parse_vigieau_csv(content, year, compute_daily=(year >= 2024))
-            if stats['par_mois'] or stats['par_dept']:
-                annees_cache[year_str] = stats
-            else:
-                log.warning(f"CSV {year} : aucune donnée parsée")
-
-        except Exception as e:
-            log.warning(f"CSV {year} erreur : {e}")
-
-    # ── Étape 3b : Fichier compréhensif pour années récentes manquantes ─
-    if comprehensive_url:
-        missing_years = [
-            y for y in range(current_year - 1, current_year + 1)
-            if str(y) not in annees_cache
-            or not annees_cache[str(y)].get('par_mois')
-        ]
-        if missing_years:
-            log.info(f"Années manquantes {missing_years} → téléchargement fichier compréhensif")
-            try:
-                r = requests.get(comprehensive_url, timeout=180,
-                                 headers={'User-Agent': 'GSF-Veille/2.0'}, allow_redirects=True)
-                r.raise_for_status()
-                log.info(f"  → fichier compréhensif : {len(r.content)} octets")
-                try:
-                    comp_content = r.content.decode('utf-8')
-                except UnicodeDecodeError:
-                    comp_content = r.content.decode('latin-1')
-
-                first_line = comp_content.split('\n')[0].lower()
-                if 'date_debut' not in first_line and 'date' not in first_line:
-                    log.warning(f"Fichier compréhensif : colonnes inattendues ({first_line[:80]})")
-                else:
-                    for y in missing_years:
-                        log.info(f"  Parsing année {y} depuis fichier compréhensif")
-                        stats = _parse_vigieau_csv(comp_content, y, compute_daily=True)
-                        if stats['par_mois'] or stats['par_dept']:
-                            annees_cache[str(y)] = stats
-                            log.info(f"  Année {y} ajoutée : {len(stats['par_mois'])} mois, "
-                                     f"{len(stats.get('par_jour', {}))} jours")
-                        else:
-                            log.warning(f"  Année {y} : aucune donnée parsée depuis le fichier compréhensif")
-            except Exception as e:
-                log.warning(f"Fichier compréhensif erreur : {e}")
-
-    return _save_and_return_history(history_file, annees_cache)
-
-
-# ─────────────────────────────────────────────
-# ÉCRITURE JSON
-# ─────────────────────────────────────────────
-
-def write_output(json_data: dict, date_str: str):
-    """Écrit les fichiers de sortie dans le workspace GitHub Actions."""
-    data_dir = SCRIPT_DIR / 'data'
-    data_dir.mkdir(exist_ok=True)
-
-    day_file = data_dir / f'{date_str}.json'
-    day_file.write_text(json.dumps(json_data, ensure_ascii=False, indent=2), encoding='utf-8')
-    log.info(f"Écrit : {day_file}")
-
-    archive_file = SCRIPT_DIR / 'archive.json'
-    archive: dict = json.loads(archive_file.read_text()) if archive_file.exists() else {'dates': []}
-    archive.setdefault('dates', [])
-    if date_str not in archive['dates']:
-        archive['dates'].append(date_str)
-    archive['dates'] = sorted(set(archive['dates']), reverse=True)
-    archive['updated_at'] = datetime.now().isoformat()
-
-    # Nettoyage JSON > 90 jours
-    cutoff = datetime.now() - timedelta(days=90)
-    removed = []
-    for f in data_dir.glob('*.json'):
-        try:
-            if datetime.strptime(f.stem, '%Y-%m-%d') < cutoff:
-                f.unlink()
-                removed.append(f.stem)
-                log.info(f"Supprimé : {f.name}")
-        except ValueError:
-            pass
-    if removed:
-        archive['dates'] = [d for d in archive['dates'] if d not in removed]
-
-    archive_file.write_text(json.dumps(archive, ensure_ascii=False, indent=2), encoding='utf-8')
-    log.info(f"archive.json mis à jour ({len(archive['dates'])} dates)")
-
-
-# ─────────────────────────────────────────────
-# MAIN
-# ─────────────────────────────────────────────
-
-def main() -> int:
-    log.info('=' * 60)
-    log.info(f'Pipeline GSF Veille Environnementale — {TODAY}')
-    log.info(f'Modèle LLM : {GROQ_MODEL} via Groq API')
-    log.info('=' * 60)
-
-    start  = datetime.now()
-    errors = []
-    items  = []
-    stats  = {}
-    restrictions  = []
-    jorf_autres   = []
-    jorf_items    = []
-    briefing_jorf = []
-
-    # 1. JORF
-    try:
-        jorf_items, jorf_autres, jorf_total, briefing_jorf = fetch_jorf()
-        stats['jo_analyses'] = jorf_total
-        stats['jo_retenus']  = len(jorf_items)
-    except Exception as e:
-        log.error(f"JORF fatal : {e}")
-        errors.append('JORF')
-        stats.update({'jo_analyses': 0, 'jo_retenus': 0})
-
-    # 2. RSS / Presse
-    try:
-        rss_items = fetch_rss()
-        items.extend(rss_items)
-        stats['articles_presse'] = len(rss_items)
-    except Exception as e:
-        log.error(f"RSS fatal : {e}")
-        errors.append('RSS')
-        stats['articles_presse'] = 0
-
-    # 3. VigiEau
-    try:
-        restrictions = fetch_vigieau()
-        stats['depts_restriction'] = len(restrictions)
-    except Exception as e:
-        log.error(f"VigiEau fatal : {e}")
-        errors.append('VigiEau')
-        stats['depts_restriction'] = 0
-
-    # 4. VigiEau historique (cache intelligent)
-    try:
-        fetch_vigieau_history()
-    except Exception as e:
-        log.error(f"VigiEau history fatal : {e}")
-        errors.append('VigiEau_history')
-
-    # Déduplication + tri criticité décroissante
-    seen   = set()
-    unique = []
-    for item in sorted(items, key=lambda x: (x.get('date', '2000-01-01'),
-                                              x.get('criticite', 1)), reverse=True):
-        if item['id'] not in seen:
-            seen.add(item['id'])
-            unique.append(item)
-
-    for i, item in enumerate(unique):
-        item['top5'] = i < 5
-
-    elapsed = round((datetime.now() - start).total_seconds())
-    json_data = {
-        'date'            : TODAY,
-        'generated_at'    : datetime.now().strftime('%H:%M'),
-        'elapsed_seconds' : elapsed,
-        'errors'          : errors,
-        'stats'           : stats,
-        'items'           : unique,
-        'restrictions_eau': restrictions,
-        'jo_autres'       : jorf_autres,
-        'jo_retenus'      : jorf_items,
-        'briefing_jorf'   : briefing_jorf,
-    }
-
-    log.info(f"JSON : {len(unique)} items RSS, {len(jorf_items)} items JORF, "
-             f"{len(restrictions)} depts eau")
-    write_output(json_data, TODAY)
-
-    duration = (datetime.now() - start).total_seconds()
-    status   = 'OK' if not errors else 'PARTIEL'
-    log.info(f"Pipeline terminé en {duration:.1f}s — {status}")
-    return 0 if not errors else 1
-
-
-if __name__ == '__main__':
-    sys.exit(main())
+function switchView(view){
+  currentView=view;
+  document.querySelectorAll('.view').forEach(el=>el.classList.remove('active'));
+  document.getElementById(`${view}-view`).classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(el=>el.classList.toggle('active',el.dataset.view===view));
+  if(view==='carte'){setTimeout(()=>{renderMap();if(mapgl)mapgl.resize();renderMapEncart();},30);}
+  if(view==='archives')renderArchives();
+  if(view==='jo')renderJO();
+  if(view==='historique')loadHistorique();
+}
+function formatDate(iso){if(!iso)return'—';const[y,m,d]=iso.split('-');const M=['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];return `${parseInt(d)} ${M[parseInt(m)-1]} ${y}`;}
+function escHtml(str){return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2500);}
+init();
+</script>
+</body>
+</html>
