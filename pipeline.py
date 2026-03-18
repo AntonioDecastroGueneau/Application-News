@@ -39,8 +39,8 @@ VIGIEAU_DEPTS_URL = 'https://api.vigieau.gouv.fr/api/departements'
 
 # Groq
 GROQ_MODEL      = 'llama-3.3-70b-versatile'
-GROQ_MAX_RETRY  = 4
-GROQ_RETRY_WAIT = 20
+GROQ_MAX_RETRY  = 3
+GROQ_RETRY_WAIT = 62   # attente fixe sur 429 : reset de la fenêtre 1 minute Groq
 
 # ─────────────────────────────────────────────
 # DESCRIPTION GSF — injectée dans tous les prompts LLM
@@ -312,14 +312,13 @@ def call_groq(prompt: str, system: str = '', max_tokens: int = 300) -> str:
                 temperature=0.2,
                 response_format={"type": "json_object"},
             )
-            time.sleep(2)  # respect rate limit 30 RPM free tier
+            time.sleep(3)  # ~20 req/min, marge confortable sous les 30 RPM free tier
             return resp.choices[0].message.content.strip()
         except Exception as e:
             err_str = str(e)
             if '429' in err_str or 'rate_limit' in err_str.lower():
-                wait = GROQ_RETRY_WAIT * attempt
-                log.warning(f"Groq rate limit (tentative {attempt}/{GROQ_MAX_RETRY}) — attente {wait}s")
-                time.sleep(wait)
+                log.warning(f"Groq rate limit (tentative {attempt}/{GROQ_MAX_RETRY}) — attente {GROQ_RETRY_WAIT}s")
+                time.sleep(GROQ_RETRY_WAIT)
             else:
                 log.warning(f"Groq erreur : {e}")
                 return ''
