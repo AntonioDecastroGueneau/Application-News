@@ -312,6 +312,7 @@ def call_groq(prompt: str, system: str = '', max_tokens: int = 300) -> str:
                 temperature=0.2,
                 response_format={"type": "json_object"},
             )
+            time.sleep(2)  # respect rate limit 30 RPM free tier
             return resp.choices[0].message.content.strip()
         except Exception as e:
             err_str = str(e)
@@ -362,27 +363,33 @@ def groq_analyse_jorf(titre: str, contenu: str) -> dict:
     prompt = (
         f"{GSF_CONTEXT}\n\n"
         "Ce texte du Journal Officiel a passé un premier filtre par mots-clés environnementaux.\n"
-        "Détermine s'il est pertinent pour le Responsable Climat & Environnement de GSF.\n\n"
-        "PERTINENT si le texte concerne directement :\n"
-        "  - Obligations réglementaires (ICPE, biocides, REACH, déchets, CMR, amiante, plomb)\n"
-        "  - Convention collective propreté / conditions de travail\n"
-        "  - Politique climatique nationale ou européenne (SNBC, PNACC, CSRD, taxonomie, loi climat)\n"
-        "  - Risques climatiques : arrêtés CatNat, PPR, sécheresse, inondations, événements extrêmes\n"
-        "    (utile pour le suivi des sites GSF exposés et le dashboard risques climatiques)\n"
-        "  - Transition énergétique, décarbonation, bilan carbone, reporting durabilité\n"
-        "  - Eau : restrictions, qualité, rejets aqueux\n"
-        "  - Biodiversité, air, bruit sur sites industriels\n\n"
-        "NON PERTINENT si le texte concerne exclusivement : agriculture/élevage, pêche, défense,\n"
-        "médecine humaine sans lien avec les sites GSF, enseignement, culture, sport,\n"
-        "BTP résidentiel, finance de marché — même si 'nettoyage' ou 'environnement' y apparaît.\n\n"
-        "EN CAS DE DOUTE : pertinent = true.\n\n"
-        "Score :\n"
+        "Détermine s'il est VRAIMENT pertinent pour le Responsable Climat & Environnement de GSF.\n\n"
+        "PERTINENT uniquement si le texte modifie ou crée une règle qui s'applique DIRECTEMENT à GSF :\n"
+        "  - Réglementation sur les biocides, détergents, produits CMR, REACH, amiante, plomb\n"
+        "  - ICPE : nouvelles rubriques, seuils, obligations de déclaration/autorisation\n"
+        "  - Déchets industriels : nouvelles filières REP, obligations de tri, traçabilité\n"
+        "  - Convention collective de la propreté (branche propreté uniquement, pas transport ni autre)\n"
+        "  - Loi ou décret structurant la politique climatique (SNBC, PNACC, loi climat, CSRD, taxonomie)\n"
+        "  - Arrêtés CatNat, PPR, risques naturels (utile pour le dashboard risques sites GSF)\n"
+        "  - Restrictions d'eau ou rejets aqueux sur sites industriels\n"
+        "  - Obligations de reporting environnemental ou énergétique pour entreprises de services\n\n"
+        "REJETER IMPÉRATIVEMENT (même si un mot-clé environnemental apparaît) :\n"
+        "  - Nominations, délégations de signature, désignations de fonctionnaires\n"
+        "  - Conventions collectives hors branche propreté (transport, BTP, agriculture, santé...)\n"
+        "  - Arrêtés de subventions ou d'ordonnateurs secondaires sans lien direct avec GSF\n"
+        "  - Textes purement administratifs : compositions de commissions, organes de contrôle\n"
+        "  - Réglementation sectorielle sans rapport : agriculture, pêche, défense, enseignement,\n"
+        "    médecine, urbanisme résidentiel, culture, sport\n"
+        "  - Avis syndicaux ou extensions d'accords hors branche propreté\n\n"
+        "RÈGLE ABSOLUE : si le lien avec GSF est indirect, hypothétique ou nécessite plusieurs\n"
+        "déductions, le texte est NON PERTINENT. Être strict vaut mieux que noyer le signal.\n\n"
+        "Score (uniquement si pertinent) :\n"
         "  1 = information de veille, tendance à connaître\n"
         "  2 = évolution réglementaire ou politique à anticiper pour GSF\n"
         "  3 = obligation immédiate, risque direct ou décision stratégique urgente\n\n"
         f"TITRE: {titre}\n"
         f"CONTENU: {contenu[:500]}\n\n"
-        'JSON: {"pertinent": true, "resume": "ce que ça change pour GSF en 1 phrase", '
+        'JSON: {"pertinent": true/false, "resume": "ce que ça change pour GSF en 1 phrase (vide si non pertinent)", '
         '"pourquoi": "pourquoi c\'est un signal important (obligatoire si score >= 2, sinon vide)", '
         '"score": 2}'
     )
