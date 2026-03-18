@@ -1,12 +1,12 @@
 {
   "date": "2026-03-18",
-  "generated_at": "07:46",
-  "elapsed_seconds": 40,
+  "generated_at": "09:12",
+  "elapsed_seconds": 25,
   "errors": [],
   "stats": {
     "jo_analyses": 28,
     "jo_retenus": 1,
-    "articles_presse": 9,
+    "articles_presse": 8,
     "depts_restriction": 0
   },
   "items": [
@@ -15,7 +15,7 @@
       "source": "Vie-publique.fr",
       "categorie": "Presse",
       "titre": "Actualités Vie-publique.fr",
-      "resume": "La loi renforce la lutte contre les fraudes sociales et fiscales, ce qui peut avoir un impact sur les pratiques de GSF en matière de gestion des ressources humaines et de conformité fiscale.",
+      "resume": "La loi relative à la lutte contre les fraudes sociales et fiscales n'a pas d'impact direct sur la politique climatique et environnementale de GSF, mais peut influencer les pratiques de conformité et de gestion des risques au sein de l'entreprise.",
       "criticite": 1,
       "impact_gsf": false,
       "url": "https://www.vie-publique.fr/loi",
@@ -27,7 +27,7 @@
       "source": "Carbone 4",
       "categorie": "Presse",
       "titre": "Actualités Carbone 4",
-      "resume": "L'actualité Carbone 4 propose des ressources pour comprendre les enjeux climatiques et énergétiques, ce qui peut aider GSF à suivre les tendances et les meilleures pratiques en matière de décarbonation.",
+      "resume": "Les ressources proposées par Carbone 4 offrent des analyses et des publications sur les sujets liés à l'énergie et au climat, pouvant aider GSF à mieux comprendre les défis environnementaux et à éclairer ses décisions stratégiques.",
       "criticite": 1,
       "impact_gsf": false,
       "url": "https://www.carbone4.com/publications",
@@ -35,11 +35,23 @@
       "top5": true
     },
     {
+      "id": "6ffcadeb0833",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Soutien aux ENR : ce que propose la Cour des comptes pour maîtriser les coûts",
+      "resume": "La Cour des comptes propose un encadrement plus fin des mécanismes de soutien aux énergies renouvelables pour éviter les sur-rémunérations, ce qui pourrait impacter les coûts et les stratégies de GSF en matière d'investissements dans les ENR.",
+      "criticite": 2,
+      "impact_gsf": true,
+      "url": "https://www.actu-environnement.com/ae/news/rapport-cour-comptes-soutien-public-energies-renouvelables-47700.php4#xtor=RSS-6",
+      "date": "2026-03-17",
+      "top5": true
+    },
+    {
       "id": "a00577bf39d6",
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Révision de la directive cadre sur l'eau : la Commission européenne ouvre un appel à contributions",
-      "resume": "La révision de la directive cadre sur l'eau par la Commission européenne pourrait avoir un impact sur les activités industrielles et tertiaires de GSF, notamment en termes d'accès aux ressources en eau et de gestion des déchets liquides. Cela nécessite une veille attentive pour anticiper les éventuelles évolutions réglementaires.",
+      "resume": "La révision de la directive cadre sur l'eau par la Commission européenne pourrait avoir un impact sur les activités industrielles et de santé de GSF, notamment en termes d'accès aux ressources en eau et de gestion des déchets liquides. Cela nécessite une veille pour anticiper les éventuelles évolutions réglementaires.",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://www.actu-environnement.com/ae/news/revision-dce-plan-actions-resourceeu-commission-europeenne-appel-contributions-47699.php4#xtor=RSS-6",
@@ -51,22 +63,10 @@
       "source": "Actu-Environnement",
       "categorie": "ICPE",
       "titre": "Non-conformités dans une ICPE : le préfet doit reconsidérer le recours à des sanctions administratives",
-      "resume": "L'ordonnance du tribunal administratif de Strasbourg oblige le préfet à réexaminer les sanctions administratives pour les non-conformités dans les ICPE, ce qui pourrait avoir un impact sur la gestion des installations classées de GSF. Cela nécessite une veille sur l'évolution de la réglementation environnementale pour anticiper les changements potentiels dans les procédures de sanction.",
+      "resume": "Cette décision de justice pourrait influencer les pratiques de régulation environnementale dans les ICPE (Installations Classées pour la Protection de l'Environnement), ce qui pourrait avoir un impact sur les activités de GSF dans les secteurs industriels et nucléaires. Il est important de suivre cette évolution pour anticiper les changements potentiels dans les réglementations environnementales.",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://www.actu-environnement.com/ae/news/non-conformites-icpe-reconsiderer-sanctions-administratives-47694.php4#xtor=RSS-6",
-      "date": "2026-03-17",
-      "top5": true
-    },
-    {
-      "id": "ee4c2a12680c",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Incendie d'un entrepôt frigorifique : quand les fautes de l'exploitant exonèrent le Sdis",
-      "resume": "La décision de la cour administrative d'appel de Bordeaux sur les responsabilités de l'exploitant et du Sdis dans le cas d'un incendie d'entrepôt n'a pas d'impact direct sur GSF, mais constitue une information de veille pertinente pour comprendre les tendances en matière de responsabilités environnementales et de gestion des risques.",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.actu-environnement.com/ae/news/incendie-entrepot-frigorifique-icpe-1511-exploitant-fautes-sdis-responsabilite-exoneration-47702.php4#xtor=RSS-6",
       "date": "2026-03-17",
       "top5": true
     },
@@ -75,7 +75,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Pompes à chaleur : l'Afpac lance un centre d'expertise",
-      "resume": "L'Afpac lance un centre d'expertise pour accélérer le déploiement des pompes à chaleur, ce qui pourrait influencer les choix énergétiques de GSF dans le cadre de son plan de décarbonation. Cela pourrait également avoir un impact sur les décisions d'investissement dans les infrastructures énergétiques de l'entreprise.",
+      "resume": "L'Afpac lance un centre d'expertise pour accélérer le déploiement des pompes à chaleur, ce qui pourrait influencer les choix de GSF en matière d'électrification des usages et de réduction des émissions de gaz à effet de serre.",
       "criticite": 1,
       "impact_gsf": false,
       "url": "https://www.actu-environnement.com/ae/news/afpac-centre-expertise-pompes-chaleur-Pac-47697.php4#xtor=RSS-6",
@@ -87,22 +87,10 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Le chiffre du jour : 20 milliards de dollars",
-      "resume": "Le montant important des réparations versées pour la contamination aux PFAS aux États-Unis souligne l'importance de la gestion des substances chimiques pour les entreprises. Cela peut inciter GSF à renforcer ses politiques de gestion des substances chimiques et à évaluer les risques potentiels liés à l'utilisation de ces substances dans ses activités.",
+      "resume": "Le montant élevé des réparations versées pour la contamination aux PFAS aux États-Unis pourrait influencer les politiques environnementales et les réglementations futures en matière de substances chimiques, ce qui pourrait avoir un impact sur les activités de GSF, notamment dans les secteurs industriel et de la santé.",
       "criticite": 1,
       "impact_gsf": false,
       "url": "https://www.actu-environnement.com/dit-aujourdhui/1787.html#xtor=RSS-6",
-      "date": "2026-03-17",
-      "top5": false
-    },
-    {
-      "id": "2cd652021797",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Des eaux usées aux panneaux de particules : l'épopée d'un nouveau matériau biosourcé",
-      "resume": "Le développement d'un nouveau matériau biosourcé à partir d'eaux usées pourrait offrir des opportunités pour GSF en termes d'économie circulaire et de réduction de son empreinte environnementale, notamment dans les secteurs de l'industrie et de la santé.",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.actu-environnement.com/ae/news/epopee-nouveau-materiau-biosource-des-eaux-usees-aux-panneaux-particules-47682.php4#xtor=RSS-6",
       "date": "2026-03-17",
       "top5": false
     },
@@ -111,7 +99,7 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "La sédentarité due au réchauffement climatique pourrait causer 500 000 décès prématurés",
-      "resume": "L'étude sur les conséquences du réchauffement climatique sur la sédentarité pourrait avoir des implications pour la santé et la productivité des salariés de GSF, notamment dans les secteurs où les activités physiques sont réduites en raison des conditions climatiques. Cela pourrait nécessiter des adaptations dans les politiques de santé et de bien-être au travail.",
+      "resume": "L'étude sur les effets du réchauffement climatique sur la sédentarité pourrait avoir des implications pour la santé et la productivité des salariés de GSF, notamment dans les secteurs où les activités physiques sont réduites en raison des conditions climatiques. Cela pourrait nécessiter des adaptations dans les politiques de santé et de bien-être au travail.",
       "criticite": 1,
       "impact_gsf": false,
       "url": "https://reporterre.net/Le-changement-climatique-risque-de-reduire-l-activite-physique",
@@ -336,12 +324,12 @@
       "source": "JORF",
       "categorie": "Déchets",
       "titre": "Arrêté du 9 mars 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des entreprises de désinfection, désinsectisation et dératisation (n° 1605)",
-      "resume": "L'arrêté concerne l'extension d'un accord dans le cadre de la convention collective nationale des entreprises de désinfection, qui peut avoir un impact sur les obligations operationnelles de GSF.",
+      "resume": "L'arrêté concerne la convention collective nationale des entreprises de désinfection, qui peut avoir un impact sur les obligations operationnelles de GSF",
       "criticite": 8,
       "impact_gsf": true,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053685524",
       "date": "2026-03-18"
     }
   ],
-  "briefing_jorf": "Aucun texte publié aujourd'hui n'a d'impact majeur sur l'environnement ou le climat, les arrêtés et décrets publiés étant principalement d'ordre administratif ou sectoriel sans portée large."
+  "briefing_jorf": "Aucun texte publié aujourd'hui n'a une portée significative pour le climat et l'environnement, les textes étant principalement d'ordre administratif ou sectoriel sans impact majeur sur les politiques environnementales."
 }
