@@ -183,13 +183,21 @@ def fetch_rss_source(source: dict, today_str: str):
                                 'date': today_str,
                             })
                 else:
+                    now = datetime.now()
+                    fallback_cutoff = (now - timedelta(days=3)).replace(hour=18, minute=0, second=0, microsecond=0) if now.weekday() == 0 else now - timedelta(hours=24)
                     for link in article_links:
                         try:
+                            titre_art = link['titre']
+                            # Filtre date dans le titre (ex: Carbone 4 "Guidelines2 April 2020")
+                            title_dt = _date_from_text(titre_art)
+                            if title_dt and title_dt < fallback_cutoff:
+                                log.debug(f"Fallback date titre trop ancienne ({title_dt.date()}), exclu : {titre_art[:60]}")
+                                continue
+
                             contenu = crawl_article(link['url'])
                             if not contenu:
                                 continue
 
-                            titre_art = link['titre']
                             txt = titre_art + ' ' + contenu
 
                             if source.get('require_keywords'):
