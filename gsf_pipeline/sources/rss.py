@@ -15,6 +15,27 @@ from ..llm import groq_analyse_rss
 
 log = logging.getLogger(__name__)
 
+_MONTHS = {
+    'january': 1, 'february': 2, 'march': 3, 'april': 4,
+    'may': 5, 'june': 6, 'july': 7, 'august': 8,
+    'september': 9, 'october': 10, 'november': 11, 'december': 12,
+    'janvier': 1, 'février': 2, 'mars': 3, 'avril': 4,
+    'mai': 5, 'juin': 6, 'juillet': 7, 'août': 8,
+    'septembre': 9, 'octobre': 10, 'novembre': 11, 'décembre': 12,
+}
+
+def _date_from_text(text: str):
+    """Extract a date like '2 April 2020' or '5 December 2025' embedded in text."""
+    m = re.search(r'(\d{1,2})\s+([A-Za-zéûîôàè]+)\s+(\d{4})', text)
+    if m:
+        month = _MONTHS.get(m.group(2).lower())
+        if month:
+            try:
+                return datetime(int(m.group(3)), month, int(m.group(1)))
+            except ValueError:
+                pass
+    return None
+
 
 def fetch_rss_source(source: dict, today_str: str):
     items = []
@@ -91,6 +112,13 @@ def fetch_rss_source(source: dict, today_str: str):
 
             if article_dt is None or article_dt < cutoff_dt:
                 log.debug(f"Article sans date ou trop ancien ({article_date}), exclu : {titre[:60]}")
+                continue
+
+            # Certains flux (ex: Carbone 4) publient pubDate=aujourd'hui sur de vieux articles.
+            # Si une date est lisible dans le titre et qu'elle est ancienne → exclure.
+            title_dt = _date_from_text(titre)
+            if title_dt and title_dt < cutoff_dt:
+                log.debug(f"Date dans le titre trop ancienne ({title_dt.date()}), exclu : {titre[:60]}")
                 continue
 
             if len(contenu) < 100 and url:
