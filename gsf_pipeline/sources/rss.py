@@ -51,7 +51,11 @@ def fetch_rss_source(source: dict, today_str: str):
                                   '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
                 },
             )
-            feed = feedparser.parse(rss_resp.content)
+            content = rss_resp.content
+            # Sanitize malformed XML: replace undefined HTML entities (&xxx;)
+            # that break strict XML parsers (e.g. Carbone 4 feed)
+            content = re.sub(rb'&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[\da-fA-F]+;)(\w+);', rb'&amp;\1;', content)
+            feed = feedparser.parse(content)
         except Exception:
             feed = feedparser.parse(source['url'])
 
