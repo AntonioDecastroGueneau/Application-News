@@ -1,51 +1,66 @@
 {
   "date": "2026-03-20",
-  "generated_at": "07:51",
-  "elapsed_seconds": 715,
+  "generated_at": "11:10",
+  "elapsed_seconds": 84,
   "errors": [],
   "stats": {
     "jo_analyses": 25,
     "jo_retenus": 0,
-    "articles_presse": 12,
-    "depts_restriction": 0
+    "articles_presse": 5,
+    "depts_restriction": 0,
+    "pjl_suivis": 0,
+    "pjl_avancements": 0
   },
   "items": [
-    {
-      "id": "906bd559bbb1",
-      "source": "Reporterre",
-      "categorie": "Eau",
-      "titre": "« Les classes populaires vont respirer un air vicié » : une banlieue parisienne lutte contre un méga-incinérateur",
-      "resume": "Le projet de construction d'un méga-incinérateur à Vitry-sur-Seine pour verdir le réseau de chaleur de Paris pourrait avoir des implications pour GSF en termes de gestion des déchets et de décarbonation, mais n'affecte pas directement ses activités.",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://reporterre.net/Les-classes-populaires-vont-respirer-un-air-vicie-une-banlieue-parisienne-lutte-contre-un-mega-incinerateur",
-      "date": "2026-03-20",
-      "top5": true
-    },
     {
       "id": "c55400c399cc",
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "90% des entreprises sorties du périmètre de la CSRD prévoient de maintenir leur reporting",
-      "resume": "La majorité des entreprises exclues de la CSRD maintiennent leurs reportings extra-financiers, ce qui pourrait influencer les attentes des parties prenantes de GSF en matière de transparence environnementale.",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
+      "resume": "L'article indique que 90% des entreprises exclues du périmètre de la CSRD (dont GSF pourrait être concerné en tant qu'entreprise de taille intermédiaire) maintiennent volontairement leur reporting extra-financier, suggérant une adoption durable de ces pratiques malgré les assouplissements réglementaires.",
+      "pourquoi": "Le sujet touche directement à la réglementation ESG/RSE (CSRD, reporting extra-financier) et aux obligations de transparence environnementale, pertinentes pour GSF dans le cadre de sa stratégie RSE et de ses engagements climatiques (scope 1/2/3, bilan carbone).",
+      "criticite": 2,
+      "impact_gsf": true,
       "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/entreprises-taille-intermediaire-maintiennent-reporting-durabilite-csrd",
       "date": "2026-03-20",
       "top5": true
     },
     {
-      "id": "ada1434c4463",
-      "source": "Vie-publique.fr",
-      "categorie": "Presse",
-      "titre": "Actualités Vie-publique.fr",
-      "resume": "Le projet de loi pour les Jeux Olympiques et Paralympiques de 2030 n'a pas d'impact direct sur les activités de GSF, mais pourrait impliquer des adaptations temporaires dans les domaines de l'urbanisme, du logement, de la santé et du travail, potentiellement affectant les sites où GSF opère.",
+      "id": "e05b8613c999",
+      "source": "Min. Transition Écologique",
+      "categorie": "Énergie",
+      "titre": "Économies d’énergie : le vrai du faux pour avoir les bons réflexes",
+      "resume": "L'article aborde les économies d'énergie comme levier de réduction des coûts et de consommation, ce qui impacte directement la gestion énergétique des sites clients de GSF et sa propre flotte de véhicules.",
       "pourquoi": "",
       "criticite": 1,
       "impact_gsf": false,
-      "url": "https://www.vie-publique.fr/loi",
+      "url": "https://www.ecologie.gouv.fr/actualites/economies-denergie-vrai-du-faux-avoir-bons-reflexes",
+      "date": "2026-03-20",
+      "top5": true
+    },
+    {
+      "id": "771e74dc3fd1",
+      "source": "France Stratégie",
+      "categorie": "Presse",
+      "titre": "Actualités France Stratégie",
+      "resume": "Source consultée via fallback.",
+      "pourquoi": "",
+      "criticite": 1,
+      "impact_gsf": false,
+      "url": "https://www.strategie.gouv.fr/publications",
+      "date": "2026-03-20",
+      "top5": true
+    },
+    {
+      "id": "ea6e11b04026",
+      "source": "I4CE",
+      "categorie": "Presse",
+      "titre": "Actualités I4CE",
+      "resume": "L'article d'I4CE aborde les leviers pour atteindre la neutralité climatique européenne d'ici 2050, en s'appuyant sur l'objectif intermédiaire de 2040, ce qui impacte les trajectoires de décarbonation des entreprises comme GSF.",
+      "pourquoi": "",
+      "criticite": 1,
+      "impact_gsf": false,
+      "url": "https://www.i4ce.org/publications/",
       "date": "2026-03-20",
       "top5": true
     },
@@ -54,117 +69,13 @@
       "source": "Carbone 4",
       "categorie": "Presse",
       "titre": "Actualités Carbone 4",
-      "resume": "L'initiative Net Zero et les ressources de Carbone 4 offrent des insights sur les actions à prendre pour la décarbonation, ce qui peut éclairer la stratégie de GSF en matière de réduction d'émissions de carbone.",
+      "resume": "Carbone 4 publie des ressources sur la décarbonation et le net zero, notamment des lignes directrices pour les entreprises, utiles pour GSF dans l'alignement de sa stratégie climat avec les standards internationaux.",
       "pourquoi": "",
       "criticite": 1,
       "impact_gsf": false,
       "url": "https://www.carbone4.com/publications",
       "date": "2026-03-20",
       "top5": true
-    },
-    {
-      "id": "954a233f1850",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Prix négatifs : la CRE veut expérimenter un mécanisme de soutien incitant à l'hybridation solaire-batteries",
-      "resume": "La CRE propose d'expérimenter un mécanisme de soutien pour inciter les grandes installations solaires à chercher une meilleure rémunération sur le marché, ce qui pourrait influencer les choix énergétiques de GSF dans ses opérations. Cela pourrait avoir un impact sur la stratégie de décarbonation de l'entreprise.",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.actu-environnement.com/ae/news/prix-negatifs-systeme-electrique-photovoltaique-batteries-hybride-cannibalisation-47713.php4#xtor=RSS-6",
-      "date": "2026-03-19",
-      "top5": true
-    },
-    {
-      "id": "48f10d656402",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Coût des ENR : le SER et France renouvelables se défendent",
-      "resume": "Le rapport de la Cour des comptes sur l'encadrement des mécanismes de soutien aux énergies renouvelables pourrait influencer les coûts et les politiques énergétiques pour GSF, mais n'a pas d'impact direct immédiat sur l'entreprise.",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.actu-environnement.com/ae/news/reponse-SER-France-renouvelables-rapport-cour-comptes-47720.php4#xtor=RSS-6",
-      "date": "2026-03-19",
-      "top5": false
-    },
-    {
-      "id": "6dd2b2a81869",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Le renouvellement de l'approbation du glyphosate sous l'oeil des juges européens",
-      "resume": "Le renouvellement de l'approbation du glyphosate par la Commission européenne est examiné par le Tribunal de l'UE, ce qui pourrait avoir un impact sur l'utilisation de cet herbicide dans les services d'entretien des espaces verts proposés par GSF.",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.actu-environnement.com/ae/news/glyphosate-approbation-renouvellement-recours-tribunal-ue-47719.php4#xtor=RSS-6",
-      "date": "2026-03-19",
-      "top5": false
-    },
-    {
-      "id": "6273a91c6a44",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "Taxonomie verte : la Commission européenne propose de la simplifier",
-      "resume": "La Commission européenne propose de simplifier la taxonomie verte, ce qui pourrait avoir un impact sur les exigences environnementales pour GSF, mais les détails de cette simplification doivent encore être précisés.",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.actu-environnement.com/ae/news/proposition-simplification-actes-delegues-taxonomie-47716.php4#xtor=RSS-6",
-      "date": "2026-03-19",
-      "top5": false
-    },
-    {
-      "id": "77c888e1ebf4",
-      "source": "Actu-Environnement",
-      "categorie": "Biodiversité",
-      "titre": "Classement Esod : l'échec de la réglementation actuelle pour remédier aux dégâts imputés à la faune sauvage",
-      "resume": "L'échec de la réglementation actuelle pour remédier aux dégâts imputés à la faune sauvage n'a pas d'impact direct sur les activités de GSF, mais pourrait influencer les politiques environnementales futures.",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.actu-environnement.com/ae/news/classement-esod-echec-reglementation-degats-faune-sauvage-47693.php4#xtor=RSS-6",
-      "date": "2026-03-19",
-      "top5": false
-    },
-    {
-      "id": "b6d75f246122",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Les castors permettent de stocker dix fois plus de CO₂ dans les zones humides",
-      "resume": "Les zones humides aménagées par les castors stockent jusqu'à dix fois plus de carbone, ce qui pourrait inspirer des stratégies de décarbonation pour GSF, notamment dans la gestion des espaces verts et la préservation de la biodiversité.",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://reporterre.net/Les-castors-permettent-de-stocker-dix-fois-plus-de-CO%E2%82%82-dans-les-zones-humides",
-      "date": "2026-03-19",
-      "top5": false
-    },
-    {
-      "id": "f6c75babbf42",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "Pacte vert : nouveau recul en vue sur les carburants aériens durables ?",
-      "resume": "Le recul sur les carburants aériens durables pourrait avoir un impact indirect sur les objectifs de décarbonation de GSF, notamment en termes de benchmarking et de comparaison avec d'autres secteurs. Cela pourrait également influencer les décisions stratégiques de GSF en matière de gestion de flotte et de réduction des émissions de gaz à effet de serre.",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.novethic.fr/environnement/climat/pacte-vert-nouveau-recul-en-vue-sur-les-carburants-aeriens-durables",
-      "date": "2026-03-19",
-      "top5": false
-    },
-    {
-      "id": "c709d7e897d3",
-      "source": "I4CE",
-      "categorie": "Déchets",
-      "titre": "Aides publiques aux industries du bois : ne pas faire feu de tout bois",
-      "resume": "Aides publiques aux industries du bois : ne pas faire feu de tout bois",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.i4ce.org/aides-publiques-industries-bois-climat/",
-      "date": "2026-03-19",
-      "top5": false
     }
   ],
   "restrictions_eau": [],
@@ -178,51 +89,11 @@
       "date": "2026-03-20"
     },
     {
-      "nor": "ARMM2607544D",
-      "titre": "Décret du 19 mars 2026 portant nomination dans l'ordre national de la Légion d'honneur en faveur d'un militaire appartenant à l'armée active",
-      "nature": "DECRET",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053703348",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "PRER2607184D",
-      "titre": "Décret du 18 mars 2026 retirant une sanction disciplinaire prise à l'encontre d'un membre de la Légion d'honneur (Accès protégé)",
-      "nature": "DECRET",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053703352",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "JUST2607231A",
-      "titre": "Arrêté du 16 mars 2026 modifiant l'arrêté du 16 octobre 2025 fixant les listes de fonctions des services de l'Etat du ministère de la justice prévues aux articles R. 2124-65 et R. 2124-68 du code général de la propriété des personnes publiques pouvant ouvrir droit à l'attribution d'une concession de logement par nécessité absolue de service ou d'une convention d'occupation précaire avec astreinte",
-      "nature": "ARRETE",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053703399",
-      "date": "2026-03-20"
-    },
-    {
       "nor": "ECOT2604985A",
       "titre": "Arrêté du 18 mars 2026 modifiant l'arrêté du 20 août 2019 portant désignation des pays tiers mentionnés au 7 de l'article L. 440-2 du code monétaire et financier",
       "nature": "ARRETE",
       "ministere": "",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053703492",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "ECOT2606827A",
-      "titre": "Arrêté du 18 mars 2026 portant application des articles L. 562-2 et suivants du code monétaire et financier",
-      "nature": "ARRETE",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053703505",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "SFHH2602782A",
-      "titre": "Arrêté du 16 mars 2026 relatif aux documents électoraux utilisés pour les élections des représentants du personnel aux commissions administratives paritaires locales et départementales de la fonction publique hospitalière autres que celles compétentes pour l'Assistance publique-hôpitaux de Paris, à la commission consultative paritaire et aux comités sociaux d'établissement des établissements publics de santé, des établissements sociaux et des établissements médico-sociaux et des groupements de coopération sanitaire de moyens de droit public",
-      "nature": "ARRETE",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053703695",
       "date": "2026-03-20"
     },
     {
@@ -242,30 +113,6 @@
       "date": "2026-03-20"
     },
     {
-      "nor": "TRAT2525413D",
-      "titre": "Décret n° 2026-199 du 18 mars 2026 relatif aux marchés de travaux, fournitures et services passés par les sociétés concessionnaires sur le réseau autoroutier concédé",
-      "nature": "DECRET",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053703777",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "VLOL2600624D",
-      "titre": "Décret n° 2026-200 du 18 mars 2026 modifiant les exigences de performance énergétique et environnementale des constructions de bâtiment en France métropolitaine",
-      "nature": "DECRET",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053703809",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "VLOL2600652A",
-      "titre": "Arrêté du 18 mars 2026 modifiant les exigences de performance énergétique et environnementale des surélévations",
-      "nature": "ARRETE",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053703826",
-      "date": "2026-03-20"
-    },
-    {
       "nor": "JUSC2606888A",
       "titre": "Arrêté du 17 mars 2026 portant nomination d'un membre professionnel suppléant de la Cour nationale de discipline des commissaires de justice",
       "nature": "ARRETE",
@@ -282,94 +129,28 @@
       "date": "2026-03-20"
     },
     {
-      "nor": "TRST2606548A",
-      "titre": "Arrêté du 16 mars 2026 portant extension d'un avenant à un accord conclu dans le cadre de la branche ferroviaire (n° 3217)",
-      "nature": "ARRETE",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704028",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "ACPP2603622S",
-      "titre": "Décision n° 2026-C-17 du 18 mars 2026 portant agrément d'une entreprise de réassurance",
-      "nature": "DECISION",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704076",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "INPA2607939X",
-      "titre": "Conférence des présidents",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704201",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "INPA2607942X",
-      "titre": "Commissions et organes de contrôle",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704203",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "INPA2607937X",
-      "titre": "Documents et publications",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704205",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "INPS2607940X",
-      "titre": "Commissions / organes temporaires",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704208",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "INPS2607921X",
-      "titre": "Délégations parlementaires",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704210",
-      "date": "2026-03-20"
-    },
-    {
       "nor": "INPS2607933X",
       "titre": "Documents déposés",
       "nature": "INFORMATIONS_PARLEMENTAIRES",
       "ministere": "",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704212",
       "date": "2026-03-20"
-    },
-    {
-      "nor": "INPS2607934X",
-      "titre": "Documents publiés",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704214",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "INPS2607929X",
-      "titre": "Rapports au parlement",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704216",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "INTP2607674V",
-      "titre": "Avis de vacance d'un emploi de directeur départemental interministériel adjoint (direction départementale de l'emploi, du travail, des solidarités et de la protection des populations de la Nièvre)",
-      "nature": "AVIS",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704221",
-      "date": "2026-03-20"
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les textes publiés aujourd'hui sont principalement des mesures administratives et sectorielles. Cependant, deux décrets sont notables pour leur impact sur l'environnement : l'un modifie les exigences de performance énergétique et environnementale des constructions de bâtiment en France métropolitaine, et l'autre modifie les exigences pour les surélévations. Ces décrets pourraient avoir un impact significatif sur la réduction des émissions de gaz à effet de serre et la promotion de constructions plus durables."
+  "briefing_jorf": {
+    "points_significatifs": [
+      {
+        "décret": "Décret n° 2026-200 du 18 mars 2026 modifiant les exigences de performance énergétique et environnementale des constructions de bâtiment en France métropolitaine : renforcement des normes pour les nouvelles constructions, impact direct sur les projets immobiliers et la RSE des acteurs du secteur."
+      },
+      {
+        "arrêté": "Arrêté du 18 mars 2026 modifiant les exigences de performance énergétique et environnementale des surélévations : extension des obligations aux projets de surélévation, alignement sur les nouvelles normes pour les bâtiments existants."
+      },
+      {
+        "décret": "Décret n° 2026-199 du 18 mars 2026 relatif aux marchés de travaux, fournitures et services passés par les sociétés concessionnaires sur le réseau autoroutier concédé : encadrement renforcé des achats publics dans le secteur autoroutier, avec implications pour les politiques RSE des concessionnaires (critères environnementaux, sociaux et de gouvernance)."
+      }
+    ],
+    "autres_textes": "Les autres textes publiés aujourd'hui sont soit mineurs (décisions administratives, informations parlementaires), soit sectoriels (accords collectifs, élections professionnelles) sans impact direct sur les enjeux climat/environnement ou RSE."
+  },
+  "pjl_fiches": []
 }
