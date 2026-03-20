@@ -283,6 +283,8 @@ def categorise(text: str) -> str:
 # ─────────────────────────────────────────────
 
 _groq_client = None
+_groq_last_call: float = 0.0   # timestamp du dernier appel Groq (succès ou échec)
+GROQ_MIN_INTERVAL = 3.0         # secondes minimum entre 2 appels → ~20 req/min
 
 
 def get_groq_client() -> Groq:
@@ -296,7 +298,16 @@ def get_groq_client() -> Groq:
 
 
 def call_groq(prompt: str, system: str = '', max_tokens: int = 300) -> str:
-    """Appelle l'API Groq avec retry sur erreur 429 (rate limit)."""
+    """Appelle l'API Groq avec rate limiter proactif et retry sur erreur 429."""
+    global _groq_last_call
+
+    # ── Rate limiter proactif ────────────────────────────────────────────
+    # On attend AVANT l'appel si le dernier est trop récent,
+    # que ce soit un succès ou un échec. Évite les 429 en amont.
+    elapsed = time.time() - _groq_last_call
+    if elapsed < GROQ_MIN_INTERVAL:
+        time.sleep(GROQ_MIN_INTERVAL - elapsed)
+
     client = get_groq_client()
     sys_content = system if 'json' in system.lower() else (system + ' Reponds en JSON.').strip()
     messages = [
@@ -304,6 +315,7 @@ def call_groq(prompt: str, system: str = '', max_tokens: int = 300) -> str:
         {'role': 'user',   'content': prompt},
     ]
     for attempt in range(1, GROQ_MAX_RETRY + 1):
+        _groq_last_call = time.time()  # horodatage mis à jour à chaque tentative
         try:
             resp = client.chat.completions.create(
                 model=GROQ_MODEL,
@@ -312,13 +324,13 @@ def call_groq(prompt: str, system: str = '', max_tokens: int = 300) -> str:
                 temperature=0.2,
                 response_format={"type": "json_object"},
             )
-            time.sleep(3)  # ~20 req/min, marge confortable sous les 30 RPM free tier
             return resp.choices[0].message.content.strip()
         except Exception as e:
             err_str = str(e)
             if '429' in err_str or 'rate_limit' in err_str.lower():
                 log.warning(f"Groq rate limit (tentative {attempt}/{GROQ_MAX_RETRY}) — attente {GROQ_RETRY_WAIT}s")
                 time.sleep(GROQ_RETRY_WAIT)
+                _groq_last_call = time.time()  # reset après la longue attente
             else:
                 log.warning(f"Groq erreur : {e}")
                 return ''
@@ -399,14 +411,25 @@ def groq_analyse_jorf(titre: str, contenu: str) -> dict:
 
 # ─────────────────────────────────────────────
 # LLM — ANALYSE RSS / PRESSE
+# Un seul appel Groq par article (filtre + résumé fusionnés).
 # ─────────────────────────────────────────────
 
-def _gsf_est_pertinent(titre: str, contenu: str) -> bool:
-    """Filtre binaire rapide : l'article vaut-il la peine d'être analysé ?"""
-    system = 'Tu es un filtre. Reponds uniquement {"ok": true} ou {"ok": false}.'
+def groq_analyse_rss(titre: str, contenu: str) -> dict:
+    """
+    1 seul appel Groq : filtre et résumé fusionnés.
+
+    Retourne :
+        pertinent : bool
+        resume    : str  — ce que ça change pour GSF (1-2 phrases)
+        pourquoi  : str  — signal important (si score >= 2, sinon vide)
+        score     : int  — 1 (veille) | 2 (à anticiper) | 3 (obligation/risque immédiat)
+    """
+    system = 'Tu es analyste climat et environnement pour GSF. JSON valide uniquement.'
     prompt = (
         f"{GSF_CONTEXT}\n\n"
-        "GARDER si le sujet concerne :\n"
+        "Évalue cet article de presse en UNE SEULE passe : décide s'il est pertinent pour GSF,\n"
+        "puis s'il l'est, résume-le et score-le.\n\n"
+        "PERTINENT si le sujet concerne :\n"
         "- Politique climatique : lois, plans gouvernementaux (SNBC, PNACC, loi climat, loi énergie)\n"
         "- Trajectoires décarbonation : objectifs nationaux/européens, net zero, neutralité carbone\n"
         "- Rapports et études : GIEC/IPCC, Haut Conseil Climat, France Stratégie, ADEME, I4CE, Shift Project\n"
@@ -415,55 +438,30 @@ def _gsf_est_pertinent(titre: str, contenu: str) -> bool:
         "- Adaptation climatique : risques entreprises, résilience, vulnérabilité sectorielle\n"
         "- Réglementation environnementale : ICPE, REACH, déchets, air, eau, biodiversité\n"
         "- Transition énergétique : renouvelables, efficacité énergétique, scope 1/2/3\n\n"
-        "REJETER si CLAIREMENT : élections/partis politiques, guerre/géopolitique sans lien climatique,\n"
+        "NON PERTINENT si CLAIREMENT : élections/partis politiques, guerre/géopolitique sans lien climatique,\n"
         "immobilier résidentiel, agriculture/élevage, finance de marché, faits divers, sport, culture,\n"
         "santé humaine sans lien environnemental.\n"
-        "EN CAS DE DOUTE : garder (ok: true).\n\n"
-        f"TITRE: {titre}\n"
-        f"DEBUT: {contenu[:200]}\n\n"
-        'Reponds: {"ok": true} ou {"ok": false}'
-    )
-    raw = call_groq(prompt, system)
-    result = extract_json(raw)
-    return result.get('ok', True)
-
-
-def _gsf_resumer(titre: str, contenu: str) -> dict:
-    """
-    Résume et score un article pertinent.
-    Retourne resume, pourquoi (si score >= 2) et score.
-    """
-    system = 'Analyste climat et environnement GSF. JSON valide uniquement.'
-    prompt = (
-        f"{GSF_CONTEXT}\n\n"
-        "Ta mission : suivre la politique climatique, la réglementation environnementale,\n"
-        "les trajectoires de décarbonation et les risques climatiques.\n\n"
-        "Score :\n"
+        "EN CAS DE DOUTE : pertinent = true.\n\n"
+        "Score (uniquement si pertinent) :\n"
         "  1 = information de veille, tendance à connaître\n"
         "  2 = évolution réglementaire ou politique à anticiper pour GSF\n"
         "  3 = obligation immédiate, risque direct ou décision stratégique urgente pour GSF\n\n"
         f"TITRE: {titre}\n"
         f"CONTENU: {contenu[:600]}\n\n"
-        'JSON: {"resume": "1-2 phrases concises sur ce que ça change pour GSF", '
+        'JSON: {"pertinent": true/false, '
+        '"resume": "1-2 phrases sur ce que ça change pour GSF (vide si non pertinent)", '
         '"pourquoi": "pourquoi c\'est un signal important (obligatoire si score >= 2, sinon vide)", '
         '"score": 1}'
     )
     raw = call_groq(prompt, system, max_tokens=350)
     result = extract_json(raw)
-    return result if result else {'resume': titre[:200], 'pourquoi': '', 'score': 1}
-
-
-def groq_analyse_rss(titre: str, contenu: str) -> dict:
-    """2 appels Groq : filtre rapide, puis résumé complet si pertinent."""
-    if not _gsf_est_pertinent(titre, contenu):
-        log.debug(f'Exclu (non pertinent GSF) : {titre[:60]}')
+    if not result:
         return {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1}
-    analysis = _gsf_resumer(titre, contenu)
-    analysis['pertinent'] = True
+
     # Vider pourquoi si score = 1 (pas un signal fort)
-    if int(analysis.get('score', 1)) < 2:
-        analysis['pourquoi'] = ''
-    return analysis
+    if int(result.get('score', 1)) < 2:
+        result['pourquoi'] = ''
+    return result
 
 
 # ─────────────────────────────────────────────
