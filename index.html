@@ -548,7 +548,7 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 
 <script>
 let D=null,archive=null,currentDate=null,currentView='feed',catFilter='all';
-let likes=JSON.parse(localStorage.getItem('gsf_likes')||'[]');
+let likes=JSON.parse(localStorage.getItem('gsf_likes')||'[]'); // cache local, remplacé par Supabase au chargement
 let srcFilters={jorf:true,presse:true};
 let mapgl=null;
 
@@ -578,6 +578,7 @@ async function init(){
     renderAll();
     updateLikesBadge();
     document.getElementById('loading').style.display='none';
+    loadLikesFromSupa();
   }catch(e){
     document.getElementById('loading').style.display='none';
     const s=document.getElementById('hdr-status');s.textContent='ERREUR';s.className='sb-status err';
@@ -989,7 +990,7 @@ async function saveDossier(){
 }
 
 // ── Likes / Favoris ───────────────────────────────────────────────────
-function saveLikes(){localStorage.setItem('gsf_likes',JSON.stringify(likes));updateLikesBadge();}
+function _likesLocalSave(){localStorage.setItem('gsf_likes',JSON.stringify(likes));}
 function updateLikesBadge(){
   const badge=document.getElementById('nav-likes-badge');
   const count=document.getElementById('likes-count');
@@ -998,13 +999,35 @@ function updateLikesBadge(){
   if(count)count.textContent=likes.length+' article'+(likes.length!==1?'s':'');
   if(btnClear)btnClear.style.display=likes.length?'':'none';
 }
+async function loadLikesFromSupa(){
+  try{
+    const{data,error}=await getSupa().from('user_likes').select('article_id,article_data,liked_at').order('liked_at',{ascending:false});
+    if(error)throw error;
+    if(data&&data.length){
+      likes=(data||[]).map(r=>({...r.article_data,likedAt:r.liked_at}));
+      _likesLocalSave();
+      updateLikesBadge();
+      renderFeed();
+      if(currentView==='likes')renderLikes();
+    }
+  }catch(e){console.warn('Likes Supabase load:',e);}
+}
 function toggleLike(itemId){
   const item=D?.items?.find(i=>i.id===itemId)||likes.find(l=>l.id===itemId);
   if(!item)return;
   const idx=likes.findIndex(l=>l.id===itemId);
-  if(idx>=0){likes.splice(idx,1);showToast('Retiré des favoris');}
-  else{likes.unshift({...item,likedAt:new Date().toISOString(),dataDate:currentDate});showToast('⭐ Sauvegardé dans les favoris');}
-  saveLikes();
+  if(idx>=0){
+    likes.splice(idx,1);
+    showToast('Retiré des favoris');
+    getSupa().from('user_likes').delete().eq('article_id',itemId).then(({error})=>{if(error)console.warn('Like delete:',error);});
+  }else{
+    const likedAt=new Date().toISOString();
+    const entry={...item,likedAt,dataDate:currentDate};
+    likes.unshift(entry);
+    showToast('⭐ Sauvegardé dans les favoris');
+    getSupa().from('user_likes').upsert({article_id:itemId,article_data:{...item,dataDate:currentDate},liked_at:likedAt}).then(({error})=>{if(error)console.warn('Like upsert:',error);});
+  }
+  _likesLocalSave();updateLikesBadge();
   const btn=document.querySelector(`[data-like-id="${itemId}"]`);
   if(btn){const now=likes.some(l=>l.id===itemId);btn.textContent=now?'★':'☆';btn.classList.toggle('liked',now);}
   if(currentView==='likes')renderLikes();
@@ -1037,7 +1060,8 @@ function renderLikes(){
 }
 function clearLikes(){
   if(!confirm(`Supprimer les ${likes.length} favoris ?`))return;
-  likes=[];saveLikes();renderLikes();renderFeed();
+  likes=[];_likesLocalSave();renderLikes();renderFeed();updateLikesBadge();
+  getSupa().from('user_likes').delete().neq('article_id','').then(({error})=>{if(error)console.warn('Likes clear:',error);});
 }
 
 function switchView(view){
