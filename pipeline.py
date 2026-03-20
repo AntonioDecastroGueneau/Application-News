@@ -1227,6 +1227,322 @@ def fetch_vigieau_history() -> dict:
 
 
 # ─────────────────────────────────────────────
+# PARLEMENT — Suivi des projets de loi gouvernementaux
+#
+# Sources : flux RSS officiels AN + Vie-publique.fr
+# Périmètre : PJL gouvernementaux environnement/énergie/climat
+# Persistance : parlement_fiches.json (commité dans le repo)
+#
+# Budget Groq : 10 analyses max par run (nouveaux PJL uniquement)
+# Suivi d'avancement : 0 appel Groq (diff RSS sur fiches existantes)
+#
+# Pipeline de filtrage (du moins cher au plus cher) :
+#   Filtre 1 — keyword_match() sur titre+description  → 0 appel
+#   Filtre 2 — détection "Projet de loi" dans titre   → 0 appel
+#   Filtre 3 — groq_analyse_pjl() 1 appel             → quota
+# ─────────────────────────────────────────────
+
+PARLEMENT_FICHES   = SCRIPT_DIR / 'parlement_fiches.json'
+PARLEMENT_MAX_GROQ = 10   # analyses Groq max par run sur nouveaux PJL
+
+# Stades législatifs dans l'ordre chronologique
+STADES_ORDRE = [
+    'Dépôt', 'Commission', 'Séance publique AN',
+    'Sénat 1ère lecture', 'Commission mixte paritaire',
+    'Sénat 2ème lecture', 'AN 2ème lecture', 'Adopté', 'Promulgué',
+]
+
+# Sources RSS parlementaires
+# — Publications AN  : tous documents, on filtre "Projet de loi" dans le titre
+# — Commission DD AN : déjà pré-filtrée environnement/énergie
+# — Vie-publique Lois: couverture large, inclut navettes Sénat
+PARLEMENT_RSS = [
+    {
+        'name': 'AN Publications',
+        'url' : 'http://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires',
+    },
+    {
+        'name': 'AN Commission Développement Durable',
+        'url' : 'http://www2.assemblee-nationale.fr/feeds/detail/ID_419865/(type)/instance',
+    },
+    {
+        'name': 'Vie-publique Lois',
+        'url' : 'https://www.vie-publique.fr/rss/lois.xml',
+    },
+]
+
+# Marqueurs de stade détectables dans les titres/descriptions RSS
+_STADE_PATTERNS = [
+    ('Promulgué',                  ['promulgu', 'loi n°', 'parue au jo']),
+    ('Adopté',                     ['adopté définitivement', 'adoption définitive']),
+    ('Commission mixte paritaire', ['commission mixte paritaire', 'cmp']),
+    ('AN 2ème lecture',            ['2e lecture', 'deuxième lecture', 'nouvelle lecture']),
+    ('Sénat 1ère lecture',         ['sénat', 'haute assemblée', '1ère lecture sénat']),
+    ('Séance publique AN',         ['séance publique', 'hémicycle', 'discussion générale']),
+    ('Commission',                 ['en commission', 'examiné par la commission',
+                                    'rapporteur désigné', 'renvoyé en commission']),
+]
+
+
+def _detect_stade_rss(titre: str, description: str = '') -> str:
+    """
+    Déduit le stade législatif depuis le titre et la description d'un item RSS.
+    Retourne une chaîne normalisée parmi STADES_ORDRE.
+    """
+    texte = (titre + ' ' + description).lower()
+    for stade, patterns in _STADE_PATTERNS:
+        if any(p in texte for p in patterns):
+            return stade
+    return 'Dépôt'
+
+
+def _is_pjl_gouvernemental(titre: str) -> bool:
+    """
+    Filtre 2 (gratuit) : vérifie que le titre correspond à un PJL gouvernemental.
+    Élimine les propositions de loi (PPL), rapports, amendements, etc.
+    """
+    t = titre.lower().strip()
+    # Doit commencer par "projet de loi"
+    if not t.startswith('projet de loi'):
+        return False
+    # Exclure les textes budgétaires purs (PLF, PLFSS) sauf si lien env.
+    if any(k in t for k in ['finances', 'financement de la sécurité sociale']):
+        return keyword_match(titre)  # garder seulement si mot-clé env.
+    return True
+
+
+def groq_analyse_pjl(titre: str, description: str) -> dict:
+    """
+    Filtre 3 — 1 seul appel Groq par nouveau PJL.
+    Titre + description RSS (pas de crawl) → pertinent, resume, score, horizon.
+    """
+    system = 'Tu es conseiller RSE senior pour GSF. JSON valide uniquement.'
+    prompt = (
+        f"{GSF_CONTEXT}\n\n"
+        "Évalue ce projet de loi gouvernemental pour le Responsable Climat & Environnement de GSF.\n\n"
+        "PERTINENT si le texte crée ou modifie des obligations s'appliquant à GSF :\n"
+        "- Réglementation env. : ICPE, déchets, eau, air, biocides, REACH, amiante\n"
+        "- Politique climatique : SNBC, PNACC, trajectoire décarbonation, loi énergie\n"
+        "- Obligations ESG/RSE : CSRD, taxonomie, bilan carbone, reporting\n"
+        "- Transition énergétique : renouvelables, efficacité, DPE tertiaire\n"
+        "- Biodiversité/sols/eau : obligations pour sites industriels et services\n\n"
+        "NON PERTINENT : sans lien direct avec les activités ou obligations de GSF.\n"
+        "EN CAS DE DOUTE : pertinent = true.\n\n"
+        "Score d'urgence pour GSF :\n"
+        "  1 = à connaître, horizon > 18 mois\n"
+        "  2 = à anticiper, impact probable dans 6-18 mois\n"
+        "  3 = impact direct imminent, action requise\n\n"
+        f"TITRE: {titre}\n"
+        f"DESCRIPTION: {description[:400]}\n\n"
+        'JSON: {"pertinent": true/false, '
+        '"resume": "ce que ce PJL change pour GSF en 1-2 phrases (vide si non pertinent)", '
+        '"pourquoi": "signal clé (obligatoire si score >= 2, sinon vide)", '
+        '"score": 1, '
+        '"horizon": "estimation entrée en vigueur ex: fin 2026"}'
+    )
+    raw    = call_groq(prompt, system, max_tokens=350)
+    result = extract_json(raw)
+    if not result:
+        return {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1, 'horizon': ''}
+    if int(result.get('score', 1)) < 2:
+        result['pourquoi'] = ''
+    return result
+
+
+def _load_fiches() -> dict:
+    """Charge parlement_fiches.json ou retourne un dict vide."""
+    if PARLEMENT_FICHES.exists():
+        try:
+            return json.loads(PARLEMENT_FICHES.read_text(encoding='utf-8'))
+        except Exception as e:
+            log.warning(f"Parlement : impossible de lire les fiches ({e}), reset")
+    return {}
+
+
+def _save_fiches(fiches: dict):
+    """Persiste parlement_fiches.json dans le repo."""
+    PARLEMENT_FICHES.write_text(
+        json.dumps(fiches, ensure_ascii=False, indent=2), encoding='utf-8'
+    )
+    log.info(f"parlement_fiches.json : {len(fiches)} fiches")
+
+
+def _parse_parlement_feed(source: dict) -> list:
+    """
+    Lit un flux RSS parlementaire et retourne une liste d'entrées normalisées :
+    {titre, description, url, date, fiche_id}
+    """
+    entries = []
+    try:
+        resp = requests.get(
+            source['url'], timeout=TIMEOUT,
+            headers={'User-Agent': 'GSF-Veille/2.0'},
+        )
+        feed = feedparser.parse(resp.content)
+        if feed.bozo and not feed.entries:
+            raise ValueError(f"Feed invalide : {feed.bozo_exception}")
+
+        for entry in feed.entries[:30]:   # 30 entrées max par source
+            titre = (entry.get('title') or '').strip()
+            if not titre:
+                continue
+
+            description = html.unescape(re.sub(r'<[^>]+>', ' ', (
+                entry.get('summary') or entry.get('description') or ''
+            ))).strip()
+
+            url  = entry.get('link', '')
+            pub  = entry.get('published_parsed') or entry.get('updated_parsed')
+            date = TODAY
+            if pub:
+                try:
+                    import time as _time
+                    date = datetime.fromtimestamp(_time.mktime(pub)).strftime('%Y-%m-%d')
+                except Exception:
+                    pass
+
+            # Identifiant stable basé sur l'URL ou le titre
+            fiche_id = 'pjl-' + hashlib.md5(
+                (url or titre).encode()
+            ).hexdigest()[:12]
+
+            entries.append({
+                'titre'      : titre,
+                'description': description,
+                'url'        : url,
+                'date'       : date,
+                'fiche_id'   : fiche_id,
+                'source'     : source['name'],
+            })
+
+        log.info(f"Parlement RSS {source['name']} : {len(entries)} entrées")
+    except Exception as e:
+        log.warning(f"Parlement RSS {source['name']} : {e}")
+    return entries
+
+
+def fetch_parlement() -> list:
+    """
+    Collecte les flux RSS parlementaires, filtre les PJL environnementaux,
+    met à jour les fiches de suivi et retourne la liste pour le JSON du jour.
+
+    Budget Groq : PARLEMENT_MAX_GROQ analyses max (nouveaux PJL uniquement).
+    Suivi avancement : 0 appel Groq, diff RSS pur.
+    """
+    log.info("=== Parlement ===")
+    fiches        = _load_fiches()
+    nouveaux      = 0
+    maj           = 0
+    groq_used     = 0
+    groq_skipped  = 0
+
+    # ── Étape 1 : Collecter tous les items RSS ───────────────────────────
+    all_entries = []
+    for source in PARLEMENT_RSS:
+        all_entries.extend(_parse_parlement_feed(source))
+
+    # Dédupliquer par fiche_id (même PJL dans plusieurs sources)
+    seen_ids = set()
+    entries  = []
+    for e in all_entries:
+        if e['fiche_id'] not in seen_ids:
+            seen_ids.add(e['fiche_id'])
+            entries.append(e)
+
+    log.info(f"Parlement : {len(entries)} entrées uniques après déduplication")
+
+    # ── Étape 2 : Traiter chaque entrée ─────────────────────────────────
+    for entry in entries:
+        titre       = entry['titre']
+        description = entry['description']
+        fiche_id    = entry['fiche_id']
+        stade_rss   = _detect_stade_rss(titre, description)
+
+        # ── Fiche existante → mise à jour stade (0 appel Groq) ──────────
+        if fiche_id in fiches:
+            fiche = fiches[fiche_id]
+            fiche['nouveau_stade'] = False   # reset avant chaque run
+
+            if stade_rss != fiche['stade']:
+                log.info(f"Parlement avancement : {titre[:50]} "
+                         f"[{fiche['stade']} → {stade_rss}]")
+                fiche['historique'].append({
+                    'date' : TODAY,
+                    'stade': stade_rss,
+                    'event': f"Avancement : {fiche['stade']} → {stade_rss}",
+                })
+                fiche['stade']        = stade_rss
+                fiche['stade_index']  = STADES_ORDRE.index(stade_rss) \
+                                        if stade_rss in STADES_ORDRE else 0
+                fiche['nouveau_stade'] = True
+                fiche['updated_at']   = TODAY
+                maj += 1
+            continue
+
+        # ── Nouveau PJL — Filtre 1 : keyword_match ──────────────────────
+        if not keyword_match(titre + ' ' + description):
+            log.debug(f"Parlement filtre1 (keywords) : {titre[:60]}")
+            continue
+
+        # ── Nouveau PJL — Filtre 2 : "Projet de loi" gouvernemental ─────
+        if not _is_pjl_gouvernemental(titre):
+            log.debug(f"Parlement filtre2 (pas PJL gov) : {titre[:60]}")
+            continue
+
+        # ── Nouveau PJL — Filtre 3 : Groq (quota limité) ────────────────
+        if groq_used >= PARLEMENT_MAX_GROQ:
+            groq_skipped += 1
+            log.debug(f"Parlement quota Groq atteint, PJL différé : {titre[:60]}")
+            continue
+
+        analysis = groq_analyse_pjl(titre, description)
+        groq_used += 1
+
+        if not analysis.get('pertinent'):
+            log.debug(f"Parlement non pertinent GSF : {titre[:60]}")
+            continue
+
+        fiches[fiche_id] = {
+            'id'          : fiche_id,
+            'titre'       : titre,
+            'date_depot'  : entry['date'],
+            'stade'       : stade_rss,
+            'stade_index' : STADES_ORDRE.index(stade_rss)
+                            if stade_rss in STADES_ORDRE else 0,
+            'url_an'      : entry['url'],
+            'source_rss'  : entry['source'],
+            'resume_gsf'  : analysis.get('resume', ''),
+            'pourquoi'    : analysis.get('pourquoi', ''),
+            'score'       : int(analysis.get('score', 1)),
+            'horizon'     : analysis.get('horizon', ''),
+            'nouveau_stade': False,
+            'historique'  : [{'date': TODAY, 'stade': stade_rss, 'event': 'Découverte'}],
+            'created_at'  : TODAY,
+            'updated_at'  : TODAY,
+        }
+        nouveaux += 1
+        log.info(f"Parlement nouveau PJL retenu "
+                 f"(score={analysis['score']}) : {titre[:60]}")
+
+    # Reset nouveau_stade sur les fiches non vues ce run
+    for fiche_id, fiche in fiches.items():
+        if fiche_id not in seen_ids:
+            fiche['nouveau_stade'] = False
+
+    _save_fiches(fiches)
+
+    log.info(f"Parlement : {nouveaux} nouveaux, {maj} avancements, "
+             f"{groq_used} appels Groq, {groq_skipped} PJL différés (quota)")
+
+    # Retourner trié par score décroissant puis stade le plus avancé
+    return sorted(
+        fiches.values(),
+        key=lambda f: (f.get('score', 1), f.get('stade_index', 0)),
+        reverse=True,
+    )
+
+
+# ─────────────────────────────────────────────
 # ÉCRITURE JSON
 # ─────────────────────────────────────────────
 
@@ -1320,6 +1636,17 @@ def main() -> int:
         log.error(f"VigiEau history fatal : {e}")
         errors.append('VigiEau_history')
 
+    # 5. Parlement — suivi des PJL environnementaux
+    pjl_fiches = []
+    try:
+        pjl_fiches = fetch_parlement()
+        stats['pjl_suivis']      = len(pjl_fiches)
+        stats['pjl_avancements'] = sum(1 for f in pjl_fiches if f.get('nouveau_stade'))
+    except Exception as e:
+        log.error(f"Parlement fatal : {e}")
+        errors.append('Parlement')
+        stats.update({'pjl_suivis': 0, 'pjl_avancements': 0})
+
     # Déduplication + tri criticité décroissante
     seen   = set()
     unique = []
@@ -1344,6 +1671,7 @@ def main() -> int:
         'jo_autres'       : jorf_autres,
         'jo_retenus'      : jorf_items,
         'briefing_jorf'   : briefing_jorf,
+        'pjl_fiches'      : pjl_fiches,
     }
 
     log.info(f"JSON : {len(unique)} items RSS, {len(jorf_items)} items JORF, "
