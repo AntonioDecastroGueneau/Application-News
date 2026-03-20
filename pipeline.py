@@ -607,31 +607,36 @@ def groq_briefing_jorf(articles: list) -> str:
         nature = a.get('contenu', '').split(' — ')[0] or 'Texte'
         lines.append(f"{i+1}. [{nature}] {a['titre']}")
 
-    system = 'Tu es juriste senior conseillant un directeur RSE. Reponds uniquement en JSON valide.'
+    system = 'Tu es expert RSE. Réponds UNIQUEMENT avec ce JSON exact : {"briefing": "ton texte ici"}'
     prompt = (
-        f"Textes publiés au Journal Officiel aujourd'hui ({TODAY}) :\n\n"
+        f"Textes du Journal Officiel du {TODAY} :\n\n"
         + '\n'.join(lines)
-        + "\n\nRédige un briefing TRÈS court (3-5 phrases max, ou 2-3 bullets si plusieurs sujets distincts) "
-        "à destination d'un Responsable Climat et Environnement. "
-        "Synthétise ce qui est réellement significatif : décrets d'application de lois majeures, "
-        "arrêtés à portée sectorielle large, évolutions réglementaires importantes. "
-        "Si les textes du jour sont mineurs ou purement administratifs, dis-le clairement en 1 phrase. "
-        "NE copie PAS les titres. Rédige en français, style direct et concis. "
-        'JSON: {"briefing": "texte rédigé ici"}'
+        + "\n\nEn 2-3 phrases maximum, résume ce qui est significatif pour un "
+        "Responsable Environnement/Climat d'une grande entreprise de services. "
+        "Si rien n'est pertinent, écris une seule phrase le disant. "
+        "RÉPONDS UNIQUEMENT avec ce JSON, sans autre texte : "
+        '{"briefing": "ton résumé ici"}'
     )
-    raw = call_groq(prompt, system, max_tokens=400)
+    raw = call_groq(prompt, system, max_tokens=300)
     result = extract_json(raw)
-    if isinstance(result, dict) and 'briefing' in result:
-        briefing = result['briefing']
-        # Mistral peut retourner briefing comme dict imbriqué — on force string
-        if isinstance(briefing, dict):
-            briefing = briefing.get('text') or briefing.get('content') or str(briefing)
-        briefing = str(briefing).strip()
-        if briefing and len(briefing) > 10:
-            return briefing
-        return "Aucun texte réglementaire significatif pour GSF dans ce JO."
-    log.warning("briefing_jorf: réponse inattendue")
-    return ''
+    if not isinstance(result, dict):
+        return ''
+
+    # Chercher la valeur texte dans n'importe quelle clé du dict
+    briefing = ''
+    for key in ('briefing', 'pertinence', 'summary', 'résumé', 'texte', 'content'):
+        val = result.get(key, '')
+        if isinstance(val, str) and len(val.strip()) > 10:
+            briefing = val.strip()
+            break
+    # Si toujours rien, prendre la première valeur string du dict
+    if not briefing:
+        for val in result.values():
+            if isinstance(val, str) and len(val.strip()) > 10:
+                briefing = val.strip()
+                break
+
+    return briefing or "Aucun texte réglementaire significatif pour GSF dans ce JO."
 
 
 # ─────────────────────────────────────────────
@@ -764,9 +769,13 @@ def fetch_jorf():
             total_analysed = len(all_articles)
             log.info(f"JORF : {total_analysed} textes pré-filtrés par keywords")
 
-            # Briefing exécutif — sur l'ensemble des textes du jour
-            briefing = groq_briefing_jorf(all_articles)
-            log.info(f"JORF briefing : {'OK' if briefing else 'vide'} ({len(briefing)} cars)")
+            # Briefing exécutif — isolé pour ne pas bloquer l'analyse si erreur
+            try:
+                briefing = groq_briefing_jorf(all_articles)
+                log.info(f"JORF briefing : {'OK' if briefing else 'vide'} ({len(briefing)} cars)")
+            except Exception as e:
+                log.warning(f"JORF briefing erreur (non bloquant) : {e}")
+                briefing = ''
 
             # ── Analyse LLM de chaque texte — pas de liste stricte ──────────
             for art in all_articles:
@@ -1567,13 +1576,42 @@ def _parse_parlement_feed(source: dict) -> list:
     return entries
 
 
-def fetch_parlement() -> list:
+def groq_briefing_parlement(entries: list) -> str:
+    """Briefing LLM sur l'activité parlementaire du jour (toutes entrées RSS)."""
+    if not entries:
+        return ''
+    lines = [f"{i+1}. [{e['source']}] {e['titre']}" for i, e in enumerate(entries[:40])]
+    system = 'Tu es expert RSE. Réponds UNIQUEMENT avec ce JSON exact : {"briefing": "ton texte ici"}'
+    prompt = (
+        f"Activité parlementaire du {TODAY} :\n\n" + '\n'.join(lines) +
+        "\n\nEn 2-3 phrases, résume ce qui est significatif pour un Responsable "
+        "Environnement/Climat d'une grande entreprise de services (climat, énergie, "
+        "déchets, RSE, reporting). Si rien n'est pertinent, dis-le en 1 phrase. "
+        'Réponds UNIQUEMENT : {"briefing": "ton résumé"}'
+    )
+    raw = call_groq(prompt, system, max_tokens=250)
+    result = extract_json(raw)
+    if not isinstance(result, dict):
+        return ''
+    for key in ('briefing', 'pertinence', 'summary', 'résumé', 'texte', 'content'):
+        val = result.get(key, '')
+        if isinstance(val, str) and len(val.strip()) > 10:
+            return val.strip()
+    for val in result.values():
+        if isinstance(val, str) and len(val.strip()) > 10:
+            return val.strip()
+    return ''
+
+
+def fetch_parlement() -> tuple:
     """
     Collecte les flux RSS parlementaires, filtre les PJL environnementaux,
-    met à jour les fiches de suivi et retourne la liste pour le JSON du jour.
+    met à jour les fiches de suivi.
 
-    Budget Groq : PARLEMENT_MAX_GROQ analyses max (nouveaux PJL uniquement).
-    Suivi avancement : 0 appel Groq, diff RSS pur.
+    Retourne : (fiches_list, pjl_autres, pjl_briefing)
+      - fiches_list  : PJL retenus GSF (analysés Groq, persistés)
+      - pjl_autres   : toutes entrées RSS groupées par source (pour 'à consulter')
+      - pjl_briefing : résumé LLM de l'activité parlementaire du jour
     """
     log.info("=== Parlement ===")
     fiches        = _load_fiches()
@@ -1587,7 +1625,7 @@ def fetch_parlement() -> list:
     for source in PARLEMENT_RSS:
         all_entries.extend(_parse_parlement_feed(source))
 
-    # Dédupliquer par fiche_id (même PJL dans plusieurs sources)
+    # Dédupliquer par fiche_id
     seen_ids = set()
     entries  = []
     for e in all_entries:
@@ -1596,6 +1634,13 @@ def fetch_parlement() -> list:
             entries.append(e)
 
     log.info(f"Parlement : {len(entries)} entrées uniques après déduplication")
+
+    # Briefing LLM sur toutes les entrées du jour
+    try:
+        pjl_briefing = groq_briefing_parlement(entries)
+    except Exception as e:
+        log.warning(f"Parlement briefing erreur : {e}")
+        pjl_briefing = ''
 
     # ── Étape 2 : Traiter chaque entrée ─────────────────────────────────
     for entry in entries:
@@ -1607,8 +1652,7 @@ def fetch_parlement() -> list:
         # ── Fiche existante → mise à jour stade (0 appel Groq) ──────────
         if fiche_id in fiches:
             fiche = fiches[fiche_id]
-            fiche['nouveau_stade'] = False   # reset avant chaque run
-
+            fiche['nouveau_stade'] = False
             if stade_rss != fiche['stade']:
                 log.info(f"Parlement avancement : {titre[:50]} "
                          f"[{fiche['stade']} → {stade_rss}]")
@@ -1625,27 +1669,23 @@ def fetch_parlement() -> list:
                 maj += 1
             continue
 
-        # ── Nouveau PJL — Filtre 1 : keyword_match ──────────────────────
+        # ── Nouveau — Filtre 1 : keyword_match ──────────────────────────
         if not keyword_match(titre + ' ' + description):
-            log.debug(f"Parlement filtre1 (keywords) : {titre[:60]}")
             continue
 
-        # ── Nouveau PJL — Filtre 2 : "Projet de loi" gouvernemental ─────
+        # ── Nouveau — Filtre 2 : PJL gouvernemental ─────────────────────
         if not _is_pjl_gouvernemental(titre):
-            log.debug(f"Parlement filtre2 (pas PJL gov) : {titre[:60]}")
             continue
 
-        # ── Nouveau PJL — Filtre 3 : Groq (quota limité) ────────────────
+        # ── Nouveau — Filtre 3 : Groq ────────────────────────────────────
         if groq_used >= PARLEMENT_MAX_GROQ:
             groq_skipped += 1
-            log.debug(f"Parlement quota Groq atteint, PJL différé : {titre[:60]}")
             continue
 
         analysis = groq_analyse_pjl(titre, description)
         groq_used += 1
 
         if not analysis.get('pertinent'):
-            log.debug(f"Parlement non pertinent GSF : {titre[:60]}")
             continue
 
         fiches[fiche_id] = {
@@ -1676,16 +1716,30 @@ def fetch_parlement() -> list:
             fiche['nouveau_stade'] = False
 
     _save_fiches(fiches)
-
     log.info(f"Parlement : {nouveaux} nouveaux, {maj} avancements, "
              f"{groq_used} appels Groq, {groq_skipped} PJL différés (quota)")
 
-    # Retourner trié par score décroissant puis stade le plus avancé
-    return sorted(
+    # ── pjl_autres : toutes entrées groupées par source ──────────────────
+    # Structure : [{"source": "AN Publications", "items": [{titre, url, date}, ...]}, ...]
+    groups = {}
+    for e in entries:
+        src = e['source']
+        if src not in groups:
+            groups[src] = []
+        groups[src].append({
+            'titre': e['titre'],
+            'url'  : e['url'],
+            'date' : e['date'],
+        })
+    pjl_autres = [{'source': src, 'items': items}
+                  for src, items in groups.items()]
+
+    fiches_list = sorted(
         fiches.values(),
         key=lambda f: (f.get('score', 1), f.get('stade_index', 0)),
         reverse=True,
     )
+    return fiches_list, pjl_autres, pjl_briefing
 
 
 # ─────────────────────────────────────────────
@@ -1783,9 +1837,11 @@ def main() -> int:
         errors.append('VigiEau_history')
 
     # 5. Parlement — suivi des PJL environnementaux
-    pjl_fiches = []
+    pjl_fiches   = []
+    pjl_autres   = []
+    pjl_briefing = ''
     try:
-        pjl_fiches = fetch_parlement()
+        pjl_fiches, pjl_autres, pjl_briefing = fetch_parlement()
         stats['pjl_suivis']      = len(pjl_fiches)
         stats['pjl_avancements'] = sum(1 for f in pjl_fiches if f.get('nouveau_stade'))
     except Exception as e:
@@ -1818,6 +1874,8 @@ def main() -> int:
         'jo_retenus'      : jorf_items,
         'briefing_jorf'   : briefing_jorf,
         'pjl_fiches'      : pjl_fiches,
+        'pjl_autres'      : pjl_autres,
+        'pjl_briefing'    : pjl_briefing,
     }
 
     log.info(f"JSON : {len(unique)} items RSS, {len(jorf_items)} items JORF, "
