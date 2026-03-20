@@ -4,7 +4,7 @@ Veille Environnementale GSF — Pipeline quotidien
 Exécuté chaque matin à 07:20 UTC via GitHub Actions
 
 Dépendances :
-    pip install requests feedparser groq beautifulsoup4
+    pip install requests feedparser groq mistralai beautifulsoup4
 """
 
 import os
@@ -24,6 +24,7 @@ from urllib.parse import urljoin
 import requests
 import feedparser
 from groq import Groq
+from mistralai import Mistral
 
 
 # ─────────────────────────────────────────────
@@ -37,14 +38,25 @@ LOG_PATH   = SCRIPT_DIR / 'pipeline.log'
 JORF_BASE_URL     = 'https://echanges.dila.gouv.fr/OPENDATA/JORF/'
 VIGIEAU_DEPTS_URL = 'https://api.vigieau.gouv.fr/api/departements'
 
-# Groq — modèle mixte
-# 8b  : filtrage en masse (500k TPD, 6k TPM)  → groq_briefing, analyse JORF/RSS/PJL
-# 70b : enrichissement score ≥ 2 uniquement   (100k TPD, 12k TPM)
-GROQ_MODEL_FILTER  = 'llama-3.1-8b-instant'      # filtre et résumés courants
-GROQ_MODEL_ENRICH  = 'llama-3.3-70b-versatile'   # signaux forts score ≥ 2 seulement
-GROQ_MODEL         = GROQ_MODEL_FILTER            # alias compat (briefing JORF)
-GROQ_MAX_RETRY  = 3
-GROQ_RETRY_WAIT = 62   # attente fixe sur 429 : reset de la fenêtre 1 minute Groq
+# ── LLM — providers et modèles ───────────────────────────────────────────────
+# Mistral  : principal  (1B tokens/mois, 1 req/s, free tier Experiment)
+# Groq     : fallback   (si Mistral 429 ou indisponible)
+#
+# Modèle unique Mistral : mistral-small-latest
+#   → filtre, résumé, enrichissement — tout en un seul provider
+# Groq fallback mixte :
+#   8b  (llama-3.1-8b-instant)    → filtrage/résumé
+#   70b (llama-3.3-70b-versatile) → enrichissement score ≥ 2
+
+MISTRAL_MODEL      = 'mistral-small-latest'
+MISTRAL_MIN_INTERVAL = 1.2          # 1 req/s max → on prend 1.2s avec marge
+
+GROQ_MODEL_FILTER  = 'llama-3.1-8b-instant'
+GROQ_MODEL_ENRICH  = 'llama-3.3-70b-versatile'
+GROQ_MODEL         = GROQ_MODEL_FILTER            # alias compat
+GROQ_MAX_RETRY     = 3
+GROQ_RETRY_WAIT    = 62
+GROQ_MIN_INTERVAL  = 10.0   # secondes entre appels Groq (calibré TPM 6k)
 
 # ─────────────────────────────────────────────
 # DESCRIPTION GSF — injectée dans tous les prompts LLM
@@ -283,14 +295,17 @@ def categorise(text: str) -> str:
 
 
 # ─────────────────────────────────────────────
-# GROQ
+# LLM — clients et appel unifié
+#
+# call_llm() : point d'entrée unique pour tout le pipeline
+#   1. Mistral  (principal, 1 req/s)
+#   2. Groq 8b  (fallback si Mistral 429 ou erreur)
 # ─────────────────────────────────────────────
 
-_groq_client = None
-_groq_last_call: float = 0.0   # timestamp du dernier appel Groq (succès ou échec)
-GROQ_MIN_INTERVAL = 10.0        # secondes minimum entre 2 appels
-                                 # Calibré sur TPM : ~1200t/appel → max 5 appels/min
-                                 # 60s / 5 = 12s, on prend 10s avec légère marge
+_mistral_client = None
+_groq_client    = None
+_mistral_last_call: float = 0.0
+_groq_last_call:    float = 0.0
 
 # Version courte de GSF_CONTEXT injectée dans les prompts (économie ~320 tokens/appel)
 GSF_CONTEXT_SHORT = (
@@ -302,32 +317,57 @@ GSF_CONTEXT_SHORT = (
 )
 
 
-def get_groq_client() -> Groq:
+def _get_mistral_client() -> Mistral:
+    global _mistral_client
+    if _mistral_client is None:
+        api_key = os.environ.get('MISTRAL_API_KEY', '')
+        if not api_key:
+            raise RuntimeError("MISTRAL_API_KEY manquant")
+        _mistral_client = Mistral(api_key=api_key)
+    return _mistral_client
+
+
+def _get_groq_client() -> Groq:
     global _groq_client
     if _groq_client is None:
         api_key = os.environ.get('GROQ_API_KEY', '')
         if not api_key:
-            raise RuntimeError("GROQ_API_KEY manquant dans les variables d'environnement")
+            raise RuntimeError("GROQ_API_KEY manquant")
         _groq_client = Groq(api_key=api_key)
     return _groq_client
 
 
-def call_groq(prompt: str, system: str = '', max_tokens: int = 300,
-              model: str = None) -> str:
-    """Appelle l'API Groq avec rate limiter proactif et retry sur erreur 429.
+def _call_mistral(prompt: str, system: str, max_tokens: int) -> str:
+    """Appelle Mistral avec rate limiter 1 req/s."""
+    global _mistral_last_call
+    elapsed = time.time() - _mistral_last_call
+    if elapsed < MISTRAL_MIN_INTERVAL:
+        time.sleep(MISTRAL_MIN_INTERVAL - elapsed)
+    _mistral_last_call = time.time()
 
-    model : GROQ_MODEL_FILTER (8b, défaut) ou GROQ_MODEL_ENRICH (70b, signaux forts)
-    """
+    client = _get_mistral_client()
+    resp = client.chat.complete(
+        model=MISTRAL_MODEL,
+        messages=[
+            {'role': 'system', 'content': system},
+            {'role': 'user',   'content': prompt},
+        ],
+        max_tokens=max_tokens,
+        temperature=0.2,
+        response_format={"type": "json_object"},
+    )
+    return resp.choices[0].message.content.strip()
+
+
+def _call_groq_fallback(prompt: str, system: str, max_tokens: int,
+                        model: str) -> str:
+    """Fallback Groq avec rate limiter 10s et retry × 3."""
     global _groq_last_call
-
-    used_model = model or GROQ_MODEL_FILTER
-
-    # ── Rate limiter proactif ────────────────────────────────────────────
     elapsed = time.time() - _groq_last_call
     if elapsed < GROQ_MIN_INTERVAL:
         time.sleep(GROQ_MIN_INTERVAL - elapsed)
 
-    client = get_groq_client()
+    client = _get_groq_client()
     sys_content = system if 'json' in system.lower() else (system + ' Reponds en JSON.').strip()
     messages = [
         {'role': 'system', 'content': sys_content},
@@ -337,7 +377,7 @@ def call_groq(prompt: str, system: str = '', max_tokens: int = 300,
         _groq_last_call = time.time()
         try:
             resp = client.chat.completions.create(
-                model=used_model,
+                model=model,
                 messages=messages,
                 max_tokens=max_tokens,
                 temperature=0.2,
@@ -347,15 +387,46 @@ def call_groq(prompt: str, system: str = '', max_tokens: int = 300,
         except Exception as e:
             err_str = str(e)
             if '429' in err_str or 'rate_limit' in err_str.lower():
-                log.warning(f"Groq rate limit [{used_model}] "
+                log.warning(f"Groq fallback rate limit [{model}] "
                             f"(tentative {attempt}/{GROQ_MAX_RETRY}) — attente {GROQ_RETRY_WAIT}s")
                 time.sleep(GROQ_RETRY_WAIT)
                 _groq_last_call = time.time()
             else:
-                log.warning(f"Groq erreur [{used_model}] : {e}")
+                log.warning(f"Groq fallback erreur [{model}] : {e}")
                 return ''
-    log.error(f"Groq [{used_model}] : toutes les tentatives épuisées")
+    log.error(f"Groq fallback [{model}] : toutes les tentatives épuisées")
     return ''
+
+
+def call_llm(prompt: str, system: str = '', max_tokens: int = 300,
+             enrich: bool = False) -> str:
+    """Point d'entrée unique pour tous les appels LLM du pipeline.
+
+    Tente Mistral en premier. Si 429 ou erreur → fallback Groq automatique.
+    enrich=True : utilise Groq 70b pour l'enrichissement (si Mistral échoue).
+    """
+    # ── Tentative Mistral (principal) ───────────────────────────────────
+    try:
+        result = _call_mistral(prompt, system, max_tokens)
+        if result:
+            return result
+    except Exception as e:
+        err_str = str(e)
+        if '429' in err_str or 'rate_limit' in err_str.lower() or 'quota' in err_str.lower():
+            log.warning(f"Mistral rate limit → fallback Groq")
+        else:
+            log.warning(f"Mistral erreur → fallback Groq : {e}")
+
+    # ── Fallback Groq ────────────────────────────────────────────────────
+    groq_model = GROQ_MODEL_ENRICH if enrich else GROQ_MODEL_FILTER
+    return _call_groq_fallback(prompt, system, max_tokens, groq_model)
+
+
+# Alias de compatibilité — call_groq redirige vers call_llm
+def call_groq(prompt: str, system: str = '', max_tokens: int = 300,
+              model: str = None) -> str:
+    enrich = (model == GROQ_MODEL_ENRICH)
+    return call_llm(prompt, system, max_tokens, enrich=enrich)
 
 
 def extract_json(text: str) -> dict:
