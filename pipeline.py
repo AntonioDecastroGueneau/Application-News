@@ -37,8 +37,12 @@ LOG_PATH   = SCRIPT_DIR / 'pipeline.log'
 JORF_BASE_URL     = 'https://echanges.dila.gouv.fr/OPENDATA/JORF/'
 VIGIEAU_DEPTS_URL = 'https://api.vigieau.gouv.fr/api/departements'
 
-# Groq
-GROQ_MODEL      = 'llama-3.3-70b-versatile'
+# Groq — modèle mixte
+# 8b  : filtrage en masse (500k TPD, 6k TPM)  → groq_briefing, analyse JORF/RSS/PJL
+# 70b : enrichissement score ≥ 2 uniquement   (100k TPD, 12k TPM)
+GROQ_MODEL_FILTER  = 'llama-3.1-8b-instant'      # filtre et résumés courants
+GROQ_MODEL_ENRICH  = 'llama-3.3-70b-versatile'   # signaux forts score ≥ 2 seulement
+GROQ_MODEL         = GROQ_MODEL_FILTER            # alias compat (briefing JORF)
 GROQ_MAX_RETRY  = 3
 GROQ_RETRY_WAIT = 62   # attente fixe sur 429 : reset de la fenêtre 1 minute Groq
 
@@ -308,13 +312,17 @@ def get_groq_client() -> Groq:
     return _groq_client
 
 
-def call_groq(prompt: str, system: str = '', max_tokens: int = 300) -> str:
-    """Appelle l'API Groq avec rate limiter proactif et retry sur erreur 429."""
+def call_groq(prompt: str, system: str = '', max_tokens: int = 300,
+              model: str = None) -> str:
+    """Appelle l'API Groq avec rate limiter proactif et retry sur erreur 429.
+
+    model : GROQ_MODEL_FILTER (8b, défaut) ou GROQ_MODEL_ENRICH (70b, signaux forts)
+    """
     global _groq_last_call
 
+    used_model = model or GROQ_MODEL_FILTER
+
     # ── Rate limiter proactif ────────────────────────────────────────────
-    # On attend AVANT l'appel si le dernier est trop récent,
-    # que ce soit un succès ou un échec. Évite les 429 en amont.
     elapsed = time.time() - _groq_last_call
     if elapsed < GROQ_MIN_INTERVAL:
         time.sleep(GROQ_MIN_INTERVAL - elapsed)
@@ -326,10 +334,10 @@ def call_groq(prompt: str, system: str = '', max_tokens: int = 300) -> str:
         {'role': 'user',   'content': prompt},
     ]
     for attempt in range(1, GROQ_MAX_RETRY + 1):
-        _groq_last_call = time.time()  # horodatage mis à jour à chaque tentative
+        _groq_last_call = time.time()
         try:
             resp = client.chat.completions.create(
-                model=GROQ_MODEL,
+                model=used_model,
                 messages=messages,
                 max_tokens=max_tokens,
                 temperature=0.2,
@@ -339,13 +347,14 @@ def call_groq(prompt: str, system: str = '', max_tokens: int = 300) -> str:
         except Exception as e:
             err_str = str(e)
             if '429' in err_str or 'rate_limit' in err_str.lower():
-                log.warning(f"Groq rate limit (tentative {attempt}/{GROQ_MAX_RETRY}) — attente {GROQ_RETRY_WAIT}s")
+                log.warning(f"Groq rate limit [{used_model}] "
+                            f"(tentative {attempt}/{GROQ_MAX_RETRY}) — attente {GROQ_RETRY_WAIT}s")
                 time.sleep(GROQ_RETRY_WAIT)
-                _groq_last_call = time.time()  # reset après la longue attente
+                _groq_last_call = time.time()
             else:
-                log.warning(f"Groq erreur : {e}")
+                log.warning(f"Groq erreur [{used_model}] : {e}")
                 return ''
-    log.error("Groq : toutes les tentatives épuisées")
+    log.error(f"Groq [{used_model}] : toutes les tentatives épuisées")
     return ''
 
 
@@ -372,14 +381,9 @@ def extract_json(text: str) -> dict:
 
 def groq_analyse_jorf(titre: str, contenu: str) -> dict:
     """
-    Évalue un texte du JORF pré-filtré par mots-clés larges.
-
-    Le LLM décide seul de la pertinence pour GSF, sans liste stricte en amont.
-    Retourne :
-        pertinent  : bool
-        resume     : str   — ce que ça change pour GSF (1 phrase, si pertinent)
-        pourquoi   : str   — pourquoi c'est un signal important (si score >= 2)
-        score      : int   — 1 (veille) | 2 (à anticiper) | 3 (obligation/risque immédiat)
+    Évalue un texte du JORF.
+    Passe 1 (8b)  : filtrage + résumé + score
+    Passe 2 (70b) : enrichissement pourquoi uniquement si score >= 2
     """
     system = 'Tu es juriste RSE senior conseillant le Responsable Climat de GSF. JSON uniquement.'
     prompt = (
@@ -412,12 +416,35 @@ def groq_analyse_jorf(titre: str, contenu: str) -> dict:
         f"TITRE: {titre}\n"
         f"CONTENU: {contenu[:500]}\n\n"
         'JSON: {"pertinent": true/false, "resume": "ce que ça change pour GSF en 1 phrase (vide si non pertinent)", '
-        '"pourquoi": "pourquoi c\'est un signal important (obligatoire si score >= 2, sinon vide)", '
-        '"score": 2}'
+        '"pourquoi": "", "score": 1}'
     )
-    raw = call_groq(prompt, system, max_tokens=350)
+    # Passe 1 — 8b : filtrage + résumé + score
+    raw    = call_groq(prompt, system, max_tokens=300, model=GROQ_MODEL_FILTER)
     result = extract_json(raw)
-    return result if result else {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1}
+    if not result:
+        return {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1}
+
+    score = int(result.get('score', 1))
+    if not result.get('pertinent') or score < 2:
+        result['pourquoi'] = ''
+        return result
+
+    # Passe 2 — 70b : enrichissement pourquoi sur signaux forts uniquement
+    enrich_prompt = (
+        f"{GSF_CONTEXT_SHORT}\n\n"
+        f"Texte JO retenu (score {score}/3) : {titre}\n"
+        f"Résumé : {result.get('resume','')}\n\n"
+        "En 1-2 phrases précises, explique POURQUOI c'est un signal stratégique important pour GSF : "
+        "quelle obligation concrète, quel délai, quel risque ou quelle opportunité.\n"
+        'JSON: {"pourquoi": "..."}'
+    )
+    raw2 = call_groq(enrich_prompt, 'Expert RSE GSF. JSON uniquement.',
+                     max_tokens=150, model=GROQ_MODEL_ENRICH)
+    enrich = extract_json(raw2)
+    if enrich.get('pourquoi'):
+        result['pourquoi'] = enrich['pourquoi']
+    log.debug(f"JORF enrichi 70b (score={score}) : {titre[:50]}")
+    return result
 
 
 # ─────────────────────────────────────────────
@@ -427,13 +454,9 @@ def groq_analyse_jorf(titre: str, contenu: str) -> dict:
 
 def groq_analyse_rss(titre: str, contenu: str) -> dict:
     """
-    1 seul appel Groq : filtre et résumé fusionnés.
-
-    Retourne :
-        pertinent : bool
-        resume    : str  — ce que ça change pour GSF (1-2 phrases)
-        pourquoi  : str  — signal important (si score >= 2, sinon vide)
-        score     : int  — 1 (veille) | 2 (à anticiper) | 3 (obligation/risque immédiat)
+    Évalue un article RSS pour GSF.
+    Passe 1 (8b)  : filtrage + résumé + score
+    Passe 2 (70b) : enrichissement pourquoi si score >= 2
     """
     system = 'Tu es analyste climat et environnement pour GSF. JSON valide uniquement.'
     prompt = (
@@ -461,17 +484,34 @@ def groq_analyse_rss(titre: str, contenu: str) -> dict:
         f"CONTENU: {contenu[:600]}\n\n"
         'JSON: {"pertinent": true/false, '
         '"resume": "1-2 phrases sur ce que ça change pour GSF (vide si non pertinent)", '
-        '"pourquoi": "pourquoi c\'est un signal important (obligatoire si score >= 2, sinon vide)", '
-        '"score": 1}'
+        '"pourquoi": "", "score": 1}'
     )
-    raw = call_groq(prompt, system, max_tokens=350)
+    # Passe 1 — 8b : filtrage + résumé + score
+    raw    = call_groq(prompt, system, max_tokens=300, model=GROQ_MODEL_FILTER)
     result = extract_json(raw)
     if not result:
         return {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1}
 
-    # Vider pourquoi si score = 1 (pas un signal fort)
-    if int(result.get('score', 1)) < 2:
+    score = int(result.get('score', 1))
+    if not result.get('pertinent') or score < 2:
         result['pourquoi'] = ''
+        return result
+
+    # Passe 2 — 70b : enrichissement pourquoi sur signaux forts uniquement
+    enrich_prompt = (
+        f"{GSF_CONTEXT_SHORT}\n\n"
+        f"Article retenu (score {score}/3) : {titre}\n"
+        f"Résumé : {result.get('resume','')}\n\n"
+        "En 1-2 phrases précises, explique POURQUOI c'est un signal stratégique important pour GSF : "
+        "quelle implication concrète, quel délai d'action, quel risque ou quelle opportunité.\n"
+        'JSON: {"pourquoi": "..."}'
+    )
+    raw2 = call_groq(enrich_prompt, 'Expert RSE GSF. JSON uniquement.',
+                     max_tokens=150, model=GROQ_MODEL_ENRICH)
+    enrich = extract_json(raw2)
+    if enrich.get('pourquoi'):
+        result['pourquoi'] = enrich['pourquoi']
+    log.debug(f"RSS enrichi 70b (score={score}) : {titre[:50]}")
     return result
 
 
@@ -1324,8 +1364,9 @@ def _is_pjl_gouvernemental(titre: str) -> bool:
 
 def groq_analyse_pjl(titre: str, description: str) -> dict:
     """
-    Filtre 3 — 1 seul appel Groq par nouveau PJL.
-    Titre + description RSS (pas de crawl) → pertinent, resume, score, horizon.
+    Évalue un PJL gouvernemental pour GSF.
+    Passe 1 (8b)  : filtrage + résumé + score + horizon
+    Passe 2 (70b) : enrichissement pourquoi si score >= 2
     """
     system = 'Tu es conseiller RSE senior pour GSF. JSON valide uniquement.'
     prompt = (
@@ -1347,16 +1388,36 @@ def groq_analyse_pjl(titre: str, description: str) -> dict:
         f"DESCRIPTION: {description[:400]}\n\n"
         'JSON: {"pertinent": true/false, '
         '"resume": "ce que ce PJL change pour GSF en 1-2 phrases (vide si non pertinent)", '
-        '"pourquoi": "signal clé (obligatoire si score >= 2, sinon vide)", '
-        '"score": 1, '
+        '"pourquoi": "", "score": 1, '
         '"horizon": "estimation entrée en vigueur ex: fin 2026"}'
     )
-    raw    = call_groq(prompt, system, max_tokens=350)
+    # Passe 1 — 8b
+    raw    = call_groq(prompt, system, max_tokens=300, model=GROQ_MODEL_FILTER)
     result = extract_json(raw)
     if not result:
         return {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1, 'horizon': ''}
-    if int(result.get('score', 1)) < 2:
+
+    score = int(result.get('score', 1))
+    if not result.get('pertinent') or score < 2:
         result['pourquoi'] = ''
+        return result
+
+    # Passe 2 — 70b : enrichissement pourquoi sur PJL à fort impact
+    enrich_prompt = (
+        f"{GSF_CONTEXT_SHORT}\n\n"
+        f"PJL retenu (score {score}/3) : {titre}\n"
+        f"Résumé : {result.get('resume','')}\n"
+        f"Horizon estimé : {result.get('horizon','')}\n\n"
+        "En 1-2 phrases, explique POURQUOI c'est un signal stratégique pour GSF : "
+        "quelle obligation concrète, quel délai d'anticipation, quel risque opérationnel.\n"
+        'JSON: {"pourquoi": "..."}'
+    )
+    raw2 = call_groq(enrich_prompt, 'Expert RSE GSF. JSON uniquement.',
+                     max_tokens=150, model=GROQ_MODEL_ENRICH)
+    enrich = extract_json(raw2)
+    if enrich.get('pourquoi'):
+        result['pourquoi'] = enrich['pourquoi']
+    log.debug(f"PJL enrichi 70b (score={score}) : {titre[:50]}")
     return result
 
 
