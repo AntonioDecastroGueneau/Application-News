@@ -62,6 +62,9 @@ jobs:
           # Copier l'historique VigiEau (cache annuel)
           cp vigieau_history.json gh-pages-branch/vigieau_history.json 2>/dev/null || true
 
+          # Copier les fiches de suivi parlementaire
+          cp parlement_fiches.json gh-pages-branch/parlement_fiches.json 2>/dev/null || true
+
           # Copier index.html si modifié
           cp index.html gh-pages-branch/index.html
 
