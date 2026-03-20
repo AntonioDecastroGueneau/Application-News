@@ -1,0 +1,181 @@
+import io
+import logging
+import re
+import tarfile
+from datetime import datetime
+from pathlib import Path
+from urllib.parse import urljoin
+
+import requests
+
+from ..config import JORF_BASE_URL, TIMEOUT
+from ..crawl import crawl_article
+from ..filters import categorise, keyword_match, make_id
+from ..llm import groq_analyse_jorf, groq_briefing_jorf
+
+log = logging.getLogger(__name__)
+
+
+def list_jorf_files() -> list:
+    try:
+        resp = requests.get(JORF_BASE_URL, timeout=TIMEOUT)
+        resp.raise_for_status()
+        return sorted(re.findall(r'href="(JORF[^"]*\.tar\.gz)"', resp.text))
+    except Exception as e:
+        log.warning(f"JORF listing error : {e}")
+        return []
+
+
+def get_today_jorf_url(today_compact: str):
+    files = list_jorf_files()
+    today_files = [f for f in files if today_compact in f]
+    chosen = today_files[-1] if today_files else (files[-1] if files else None)
+    if chosen:
+        log.info(f"Fichier JORF sélectionné : {chosen}")
+        return urljoin(JORF_BASE_URL, chosen)
+    return None
+
+
+def parse_jorf_xml(content: bytes, today_str: str):
+    import xml.etree.ElementTree as ET
+
+    articles = []
+    try:
+        root = ET.fromstring(content)
+    except ET.ParseError as e:
+        log.debug(f"XML parse error : {e}")
+        return articles
+
+    seen_nor = set()
+
+    for texte in root.iter('TEXTE'):
+        nor = (texte.get('nor', '') or '').strip()
+        titre_el = texte.find('TITRE_TXT')
+        titre = (titre_el.text or '').strip() if titre_el is not None else ''
+
+        if not titre:
+            continue
+        if nor and nor in seen_nor:
+            continue
+        if nor:
+            seen_nor.add(nor)
+
+        nature = texte.get('nature', '')
+        ministere = texte.get('ministere', '')
+        date_pub = texte.get('date_publi', today_str)
+        cid = texte.get('cid', '')
+
+        url = f'https://www.legifrance.gouv.fr/jorf/id/{cid}' if cid else (
+            f'https://www.legifrance.gouv.fr/jorf/id/{nor}' if nor else ''
+        )
+        contenu = ' — '.join(filter(None, [nature, ministere]))
+
+        if keyword_match(titre + ' ' + contenu):
+            articles.append({
+                'titre': titre,
+                'contenu': contenu[:500],
+                'url': url,
+                'nor': nor,
+                'date': date_pub,
+            })
+
+    return articles
+
+
+def fetch_jorf(today_str: str):
+    """Fetch and analyze daily JORF texts for GSF relevance."""
+    log.info("=== JORF ===")
+    items, autres, total_analysed, briefing = [], [], 0, []
+
+    today_compact = today_str.replace('-', '')
+    try:
+        url = get_today_jorf_url(today_compact)
+        if not url:
+            log.warning("Aucun fichier JORF disponible")
+            return items, autres, 0, briefing
+
+        log.info(f"Téléchargement : {url}")
+        resp = requests.get(url, timeout=180)
+        resp.raise_for_status()
+
+        with tarfile.open(fileobj=io.BytesIO(resp.content), mode='r:gz') as tar:
+            xml_members = [m for m in tar.getmembers() if m.name.endswith('.xml')]
+            log.info(f"JORF : {len(xml_members)} fichiers XML")
+
+            all_articles = []
+            seen_nor_global = set()
+            for member in xml_members:
+                try:
+                    f = tar.extractfile(member)
+                    if f:
+                        for art in parse_jorf_xml(f.read(), today_str):
+                            nor = art.get('nor', '')
+                            if nor and nor in seen_nor_global:
+                                continue
+                            if nor:
+                                seen_nor_global.add(nor)
+                            all_articles.append(art)
+                except Exception as e:
+                    log.debug(f"Erreur XML {member.name} : {e}")
+
+            total_analysed = len(all_articles)
+            log.info(f"JORF : {total_analysed} textes pré-filtrés par keywords")
+
+            try:
+                briefing = groq_briefing_jorf(all_articles, today_str)
+                log.info(f"JORF briefing : {'OK' if briefing else 'vide'} ({len(briefing)} cars)")
+            except Exception as e:
+                log.warning(f"JORF briefing erreur (non bloquant) : {e}")
+                briefing = ''
+
+            for art in all_articles:
+                try:
+                    contenu = art['contenu']
+                    if art.get('url') and 'legifrance' in art.get('url', ''):
+                        full = crawl_article(art['url'])
+                        if full:
+                            contenu = full
+
+                    analysis = groq_analyse_jorf(art['titre'], contenu)
+
+                    if analysis.get('pertinent') is False:
+                        autres.append({
+                            'nor': art.get('nor', ''),
+                            'titre': art['titre'],
+                            'nature': art.get('contenu', '').split(' — ')[0],
+                            'ministere': (
+                                art.get('contenu', '').split(' — ')[1] if ' — ' in art.get('contenu', '') else ''
+                            ),
+                            'url': art.get('url', ''),
+                            'date': art.get('date', today_str),
+                        })
+                        log.debug(f"JORF → autres : {art['titre'][:60]}")
+                        continue
+
+                    score = int(analysis.get('score', 2))
+                    pourquoi = analysis.get('pourquoi', '')
+                    if score < 2:
+                        pourquoi = ''
+
+                    items.append({
+                        'id': make_id('JORF', art['titre']),
+                        'source': 'JORF',
+                        'categorie': categorise(art['titre'] + ' ' + contenu),
+                        'titre': art['titre'],
+                        'resume': analysis.get('resume') or art['titre'],
+                        'pourquoi': pourquoi,
+                        'criticite': score,
+                        'impact_gsf': True,
+                        'url': art.get('url', ''),
+                        'date': today_str,
+                    })
+                    log.debug(f"JORF retenu (score={score}) : {art['titre'][:60]}")
+                except Exception as e:
+                    log.debug(f"Erreur analyse JORF : {e}")
+
+    except Exception as e:
+        log.error(f"JORF fatal : {e}", exc_info=True)
+
+    log.info(f"JORF : {len(items)} retenus / {total_analysed} analysés ({len(autres)} autres)")
+    return items, autres, total_analysed, briefing
+
