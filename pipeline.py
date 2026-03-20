@@ -63,61 +63,66 @@ GROQ_MIN_INTERVAL  = 10.0   # secondes entre appels Groq (calibré TPM 6k)
 # ─────────────────────────────────────────────
 
 GSF_CONTEXT = """
-GSF est un groupe français de propreté et de services aux entreprises (42 000 salariés,
-~1,27 Md€ de CA en 2023), positionné comme acteur majeur du soft FM (facility management).
+GSF est un prestataire multiservices (propreté, maintenance, FM) qui intervient sur les
+sites de ses clients — il n'est PAS exploitant ICPE.
 
-Ce que fait GSF :
-- Nettoyage et propreté des locaux : bureaux, sites tertiaires, industriels, milieux
-  sensibles (santé, agroalimentaire, chimie, pétrochimie, nucléaire).
-- Propreté industrielle : décapage et traitement des sols, nettoyage de lignes de
-  production, interventions en environnements à risques (certifications MASE).
-- Gestion des déchets : collecte interne, tri, gestion déléguée des flux, optimisation
-  des filières et des coûts sur les sites clients.
-- Entretien des espaces verts : gestion paysagère des abords de sites industriels,
-  tertiaires ou logistiques.
-- Services de logistique interne : manutention légère, gestion de flux, préparation de
-  commandes et de salles.
-- Soft FM / services généraux : accueil et hospitality management, courrier et gestion
-  documentaire, factotum / petits travaux (maintenance de premier niveau).
+Enjeux environnement / climat / carbone :
+- Flotte de véhicules (scope 1 significatif) : électrification en cours
+- Consommation énergétique locaux et prestations (eau, électricité, chauffage)
+- Déchets produits lors des prestations (tri, traçabilité, éco-organismes)
+- Obligation BGES et plan climat / trajectoire de réduction des émissions
+- CSRD / reporting extra-financier (grande entreprise de services)
+- Certifications ISO 14001, démarches RSE et bas-carbone
 
-Comment GSF opère :
-- Environ 160 établissements en France, maillage territorial dense.
-- Modèle multiservices et multisectoriel, solutions sur mesure pour chaque client.
-- Utilise des biocides, détergents, produits CMR et solvants dans ses prestations.
-- Exploite des sites classés ICPE (installations classées pour la protection
-  de l'environnement).
-- Gère une flotte de véhicules (électrification en cours).
-- Engagé dans une trajectoire de décarbonation : BGES annuel, plan climat,
-  suivi des risques climatiques sur ses 3 000+ sites clients.
+Risques indirects et chaîne de valeur :
+- 3 000+ sites clients exposés aux aléas climatiques (inondations, sécheresse, canicules)
+  → impacts sur volumes de prestations, contrats, résilience opérationnelle
+- Exigences carbone croissantes des clients (nucléaire, santé, agroalimentaire, industrie)
+  sur empreinte, réduction déchets, éco-efficacité des prestations
 """.strip()
+
+# Version courte injectée dans les prompts LLM (~60 tokens)
+GSF_CONTEXT_SHORT = (
+    "GSF : prestataire propreté/FM, intervient chez ses clients (non exploitant ICPE). "
+    "Enjeux : BGES/plan climat, flotte véhicules (scope 1), énergie, déchets prestations, "
+    "CSRD/reporting, ISO 14001. "
+    "Risques indirects : aléas climatiques sur 3 000+ sites clients, "
+    "exigences carbone des clients (nucléaire, santé, industrie)."
+)
 
 
 # ─────────────────────────────────────────────
 # KEYWORDS — premier filtre large (présence dans titre/contenu)
+# Resserré sur les enjeux réels de GSF : climat, carbone, énergie,
+# déchets de services, reporting ESG, risques climatiques.
 # ─────────────────────────────────────────────
 
 KEYWORDS = [
-    # Réglementation environnementale opérationnelle
-    'ICPE', 'installation classée', 'eau', 'rejet aqueux', 'émissions',
-    'biodiversité', 'espèce protégée', 'énergie', 'déchet', 'déchets',
-    'pollution', 'environnement', 'écologique', 'REACH', 'biocide',
-    'bruit', 'sol', 'air', 'risque industriel', 'Natura 2000',
-    'nettoyage', 'propreté', 'entretien', 'désinfection',
-    'produit chimique', 'COV', 'composé organique volatil',
-    'SEVESO', 'PPR', 'DPE', 'amiante', 'plomb', 'REP',
-    'responsabilité élargie', 'VHU', 'bâtiment tertiaire',
-    # Climat & décarbonation stratégique
+    # Climat & décarbonation
     'climat', 'climatique', 'réchauffement', 'décarbonation', 'carbone',
     'GES', 'gaz à effet de serre', 'neutralité carbone', 'net zéro',
-    'SNBC', 'PNACC', 'adaptation', 'mitigation', 'atténuation',
-    'trajectoire', 'transition énergétique', 'transition écologique',
-    'CSRD', 'reporting extra-financier', 'taxonomie verte',
+    'SNBC', 'PNACC', 'adaptation', 'atténuation', 'trajectoire',
+    'transition énergétique', 'transition écologique',
     'Accord de Paris', 'COP', 'GIEC', 'IPCC',
-    'catastrophe naturelle', 'inondation', 'sécheresse', 'canicule',
-    'événement extrême', 'submersion', 'feu de forêt',
     'décarboner', 'bas-carbone', 'scope 1', 'scope 2', 'scope 3',
     'bilan carbone', 'empreinte carbone', 'plan climat',
-    'France 2030', 'loi énergie', 'loi climat',
+    'loi énergie', 'loi climat', 'France 2030',
+    # Reporting & obligations ESG
+    'CSRD', 'reporting extra-financier', 'taxonomie verte',
+    'reporting environnemental', 'reporting durabilité',
+    'bilan GES', 'BGES',
+    # Énergie
+    'énergie', 'efficacité énergétique', 'renouvelable', 'DPE',
+    'bâtiment tertiaire', 'rénovation énergétique',
+    # Déchets (angle prestataire de services)
+    'déchet', 'déchets', 'REP', 'responsabilité élargie',
+    'tri', 'recyclage', 'éco-organisme', 'traçabilité déchets',
+    # Risques climatiques physiques
+    'inondation', 'sécheresse', 'canicule', 'événement extrême',
+    'submersion', 'feu de forêt', 'catastrophe naturelle', 'PPR',
+    # Mobilité & flotte
+    'véhicule électrique', 'électrification', 'flotte',
+    'mobilité durable', 'ZFE',
 ]
 
 
@@ -307,14 +312,6 @@ _groq_client    = None
 _mistral_last_call: float = 0.0
 _groq_last_call:    float = 0.0
 
-# Version courte de GSF_CONTEXT injectée dans les prompts (économie ~320 tokens/appel)
-GSF_CONTEXT_SHORT = (
-    "GSF : groupe français propreté/FM, 42 000 salariés, ~1,27 Md€ CA. "
-    "Activités : nettoyage locaux (tertiaire, industrie, santé, nucléaire), "
-    "propreté industrielle, gestion déchets, espaces verts, soft FM. "
-    "Contraintes clés : biocides, CMR, ICPE, REACH, flotte véhicules, "
-    "décarbonation (BGES, plan climat, 3 000+ sites clients)."
-)
 
 
 def _get_mistral_client() -> Mistral:
@@ -456,34 +453,29 @@ def groq_analyse_jorf(titre: str, contenu: str) -> dict:
     Passe 1 (8b)  : filtrage + résumé + score
     Passe 2 (70b) : enrichissement pourquoi uniquement si score >= 2
     """
-    system = 'Tu es juriste RSE senior conseillant le Responsable Climat de GSF. JSON uniquement.'
+    system = 'Tu es expert climat et RSE conseillant le Responsable Environnement de GSF. JSON uniquement.'
     prompt = (
         f"{GSF_CONTEXT_SHORT}\n\n"
-        "Ce texte du Journal Officiel a passé un premier filtre par mots-clés environnementaux.\n"
-        "Détermine s'il est VRAIMENT pertinent pour le Responsable Climat & Environnement de GSF.\n\n"
-        "PERTINENT uniquement si le texte modifie ou crée une règle qui s'applique DIRECTEMENT à GSF :\n"
-        "  - Réglementation sur les biocides, détergents, produits CMR, REACH, amiante, plomb\n"
-        "  - ICPE : nouvelles rubriques, seuils, obligations de déclaration/autorisation\n"
-        "  - Déchets industriels : nouvelles filières REP, obligations de tri, traçabilité\n"
-        "  - Convention collective de la propreté (branche propreté uniquement, pas transport ni autre)\n"
-        "  - Loi ou décret structurant la politique climatique (SNBC, PNACC, loi climat, CSRD, taxonomie)\n"
-        "  - Arrêtés CatNat, PPR, risques naturels (utile pour le dashboard risques sites GSF)\n"
-        "  - Restrictions d'eau ou rejets aqueux sur sites industriels\n"
-        "  - Obligations de reporting environnemental ou énergétique pour entreprises de services\n\n"
-        "REJETER IMPÉRATIVEMENT (même si un mot-clé environnemental apparaît) :\n"
-        "  - Nominations, délégations de signature, désignations de fonctionnaires\n"
-        "  - Conventions collectives hors branche propreté (transport, BTP, agriculture, santé...)\n"
-        "  - Arrêtés de subventions ou d'ordonnateurs secondaires sans lien direct avec GSF\n"
-        "  - Textes purement administratifs : compositions de commissions, organes de contrôle\n"
-        "  - Réglementation sectorielle sans rapport : agriculture, pêche, défense, enseignement,\n"
-        "    médecine, urbanisme résidentiel, culture, sport\n"
-        "  - Avis syndicaux ou extensions d'accords hors branche propreté\n\n"
-        "RÈGLE ABSOLUE : si le lien avec GSF est indirect, hypothétique ou nécessite plusieurs\n"
-        "déductions, le texte est NON PERTINENT. Être strict vaut mieux que noyer le signal.\n\n"
-        "Score (uniquement si pertinent) :\n"
-        "  1 = information de veille, tendance à connaître\n"
-        "  2 = évolution réglementaire ou politique à anticiper pour GSF\n"
-        "  3 = obligation immédiate, risque direct ou décision stratégique urgente\n\n"
+        "Ce texte du Journal Officiel a passé un premier filtre par mots-clés.\n"
+        "Détermine s'il est VRAIMENT pertinent pour le Responsable Environnement / Climat de GSF.\n\n"
+        "PERTINENT si le texte crée ou modifie une obligation s'appliquant DIRECTEMENT à GSF :\n"
+        "  - Obligations BGES, bilan GES, plan climat pour grandes entreprises de services\n"
+        "  - CSRD / reporting extra-financier / taxonomie verte\n"
+        "  - Réglementation déchets : nouvelles filières REP, tri, traçabilité\n"
+        "  - Réglementation énergie : efficacité énergétique, DPE tertiaire, renouvelables\n"
+        "  - Mobilité et flotte : ZFE, véhicules électriques, réglementation transport\n"
+        "  - Arrêtés CatNat, PPR, risques naturels (risques sur sites clients GSF)\n"
+        "  - Loi ou décret structurant la politique climatique (SNBC, PNACC, loi énergie-climat)\n\n"
+        "REJETER IMPÉRATIVEMENT :\n"
+        "  - Réglementation ICPE, SEVESO, biocides, REACH, amiante (GSF n'est pas exploitant)\n"
+        "  - Nominations, délégations de signature, textes purement administratifs\n"
+        "  - Conventions collectives hors branche propreté\n"
+        "  - Réglementation sectorielle sans rapport : agriculture, pêche, défense, santé humaine\n\n"
+        "RÈGLE : si le lien avec GSF est indirect ou nécessite plusieurs déductions → NON PERTINENT.\n\n"
+        "Score (si pertinent) :\n"
+        "  1 = information de veille\n"
+        "  2 = évolution réglementaire à anticiper\n"
+        "  3 = obligation immédiate ou risque direct\n\n"
         f"TITRE: {titre}\n"
         f"CONTENU: {contenu[:500]}\n\n"
         'JSON: {"pertinent": true/false, "resume": "ce que ça change pour GSF en 1 phrase (vide si non pertinent)", '
@@ -495,14 +487,14 @@ def groq_analyse_jorf(titre: str, contenu: str) -> dict:
     if not result:
         return {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1}
 
-    score = int(result.get('score', 1))
+    score = int(result.get('score') or 1)
     if not result.get('pertinent') or score < 2:
         result['pourquoi'] = ''
         return result
 
     # Passe 2 — 70b : enrichissement pourquoi sur signaux forts uniquement
     enrich_prompt = (
-        f"{GSF_CONTEXT_SHORT}\n\n"
+        f"{GSF_CONTEXT}\n\n"
         f"Texte JO retenu (score {score}/3) : {titre}\n"
         f"Résumé : {result.get('resume','')}\n\n"
         "En 1-2 phrases précises, explique POURQUOI c'est un signal stratégique important pour GSF : "
@@ -529,28 +521,26 @@ def groq_analyse_rss(titre: str, contenu: str) -> dict:
     Passe 1 (8b)  : filtrage + résumé + score
     Passe 2 (70b) : enrichissement pourquoi si score >= 2
     """
-    system = 'Tu es analyste climat et environnement pour GSF. JSON valide uniquement.'
+    system = 'Tu es analyste climat et RSE pour GSF. JSON valide uniquement.'
     prompt = (
         f"{GSF_CONTEXT_SHORT}\n\n"
-        "Évalue cet article de presse en UNE SEULE passe : décide s'il est pertinent pour GSF,\n"
-        "puis s'il l'est, résume-le et score-le.\n\n"
-        "PERTINENT si le sujet concerne :\n"
-        "- Politique climatique : lois, plans gouvernementaux (SNBC, PNACC, loi climat, loi énergie)\n"
-        "- Trajectoires décarbonation : objectifs nationaux/européens, net zero, neutralité carbone\n"
-        "- Rapports et études : GIEC/IPCC, Haut Conseil Climat, France Stratégie, ADEME, I4CE, Shift Project\n"
-        "- Réglementation ESG/RSE : CSRD, taxonomie verte, bilan carbone, reporting extra-financier\n"
-        "- Événements climatiques : canicule, inondation, sécheresse, feu de forêt, submersion\n"
-        "- Adaptation climatique : risques entreprises, résilience, vulnérabilité sectorielle\n"
-        "- Réglementation environnementale : ICPE, REACH, déchets, air, eau, biodiversité\n"
-        "- Transition énergétique : renouvelables, efficacité énergétique, scope 1/2/3\n\n"
-        "NON PERTINENT si CLAIREMENT : élections/partis politiques, guerre/géopolitique sans lien climatique,\n"
-        "immobilier résidentiel, agriculture/élevage, finance de marché, faits divers, sport, culture,\n"
-        "santé humaine sans lien environnemental.\n"
+        "Évalue cet article : est-il pertinent pour le Responsable Environnement / Climat de GSF ?\n\n"
+        "PERTINENT si le sujet concerne directement GSF :\n"
+        "- Politique climatique : SNBC, PNACC, loi énergie-climat, trajectoires nationales\n"
+        "- Décarbonation entreprises : objectifs net zéro, scope 1/2/3, bilan GES, BGES\n"
+        "- Reporting ESG : CSRD, taxonomie verte, reporting extra-financier\n"
+        "- Réglementation déchets : REP, tri, traçabilité, éco-organismes\n"
+        "- Énergie & bâtiment : efficacité énergétique, DPE tertiaire, renouvelables\n"
+        "- Mobilité durable : ZFE, électrification flottes, véhicules propres\n"
+        "- Risques climatiques : canicule, inondation, sécheresse, événements extrêmes\n"
+        "- Rapports de référence : GIEC, Haut Conseil Climat, ADEME, I4CE, Shift Project\n\n"
+        "NON PERTINENT : ICPE/SEVESO/REACH (GSF non exploitant), élections, géopolitique,\n"
+        "agriculture, immobilier résidentiel, finance de marché, faits divers, sport.\n"
         "EN CAS DE DOUTE : pertinent = true.\n\n"
-        "Score (uniquement si pertinent) :\n"
-        "  1 = information de veille, tendance à connaître\n"
-        "  2 = évolution réglementaire ou politique à anticiper pour GSF\n"
-        "  3 = obligation immédiate, risque direct ou décision stratégique urgente pour GSF\n\n"
+        "Score :\n"
+        "  1 = veille, tendance à connaître\n"
+        "  2 = évolution à anticiper pour GSF\n"
+        "  3 = obligation immédiate ou risque direct\n\n"
         f"TITRE: {titre}\n"
         f"CONTENU: {contenu[:600]}\n\n"
         'JSON: {"pertinent": true/false, '
@@ -563,14 +553,14 @@ def groq_analyse_rss(titre: str, contenu: str) -> dict:
     if not result:
         return {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1}
 
-    score = int(result.get('score', 1))
+    score = int(result.get('score') or 1)
     if not result.get('pertinent') or score < 2:
         result['pourquoi'] = ''
         return result
 
     # Passe 2 — 70b : enrichissement pourquoi sur signaux forts uniquement
     enrich_prompt = (
-        f"{GSF_CONTEXT_SHORT}\n\n"
+        f"{GSF_CONTEXT}\n\n"
         f"Article retenu (score {score}/3) : {titre}\n"
         f"Résumé : {result.get('resume','')}\n\n"
         "En 1-2 phrases précises, explique POURQUOI c'est un signal stratégique important pour GSF : "
@@ -628,8 +618,11 @@ def groq_briefing_jorf(articles: list) -> str:
     raw = call_groq(prompt, system, max_tokens=400)
     result = extract_json(raw)
     if isinstance(result, dict) and 'briefing' in result:
-        return result['briefing']
-    log.warning("briefing_jorf: réponse Groq inattendue")
+        briefing = result['briefing']
+        if briefing and len(briefing.strip()) > 10:
+            return briefing.strip()
+        return "Aucun texte réglementaire significatif pour GSF dans ce JO."
+    log.warning("briefing_jorf: réponse inattendue")
     return ''
 
 
@@ -1442,14 +1435,16 @@ def groq_analyse_pjl(titre: str, description: str) -> dict:
     system = 'Tu es conseiller RSE senior pour GSF. JSON valide uniquement.'
     prompt = (
         f"{GSF_CONTEXT_SHORT}\n\n"
-        "Évalue ce projet de loi gouvernemental pour le Responsable Climat & Environnement de GSF.\n\n"
+        "Évalue ce projet de loi gouvernemental pour le Responsable Environnement / Climat de GSF.\n\n"
         "PERTINENT si le texte crée ou modifie des obligations s'appliquant à GSF :\n"
-        "- Réglementation env. : ICPE, déchets, eau, air, biocides, REACH, amiante\n"
-        "- Politique climatique : SNBC, PNACC, trajectoire décarbonation, loi énergie\n"
-        "- Obligations ESG/RSE : CSRD, taxonomie, bilan carbone, reporting\n"
-        "- Transition énergétique : renouvelables, efficacité, DPE tertiaire\n"
-        "- Biodiversité/sols/eau : obligations pour sites industriels et services\n\n"
-        "NON PERTINENT : sans lien direct avec les activités ou obligations de GSF.\n"
+        "- Obligations BGES, bilan GES, plan climat pour grandes entreprises\n"
+        "- CSRD, taxonomie verte, reporting extra-financier\n"
+        "- Réglementation déchets : REP, tri, traçabilité, éco-organismes\n"
+        "- Énergie & bâtiment : efficacité énergétique, DPE tertiaire, renouvelables\n"
+        "- Mobilité : ZFE, électrification flottes, véhicules propres\n"
+        "- Politique climatique structurante : SNBC, PNACC, loi énergie-climat\n\n"
+        "NON PERTINENT : ICPE, SEVESO, biocides, REACH (GSF non exploitant), "
+        "agriculture, défense, santé humaine, textes sans lien avec GSF.\n"
         "EN CAS DE DOUTE : pertinent = true.\n\n"
         "Score d'urgence pour GSF :\n"
         "  1 = à connaître, horizon > 18 mois\n"
@@ -1468,14 +1463,14 @@ def groq_analyse_pjl(titre: str, description: str) -> dict:
     if not result:
         return {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1, 'horizon': ''}
 
-    score = int(result.get('score', 1))
+    score = int(result.get('score') or 1)
     if not result.get('pertinent') or score < 2:
         result['pourquoi'] = ''
         return result
 
     # Passe 2 — 70b : enrichissement pourquoi sur PJL à fort impact
     enrich_prompt = (
-        f"{GSF_CONTEXT_SHORT}\n\n"
+        f"{GSF_CONTEXT}\n\n"
         f"PJL retenu (score {score}/3) : {titre}\n"
         f"Résumé : {result.get('resume','')}\n"
         f"Horizon estimé : {result.get('horizon','')}\n\n"
