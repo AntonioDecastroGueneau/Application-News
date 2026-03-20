@@ -353,7 +353,11 @@ def _call_mistral(prompt: str, system: str, max_tokens: int) -> str:
         temperature=0.2,
         response_format={"type": "json_object"},
     )
-    return resp.choices[0].message.content.strip()
+    content = resp.choices[0].message.content
+    # mistralai v1+ peut retourner un dict déjà parsé avec json_object
+    if isinstance(content, dict):
+        return json.dumps(content, ensure_ascii=False)
+    return str(content).strip()
 
 
 def _call_groq_fallback(prompt: str, system: str, max_tokens: int,
