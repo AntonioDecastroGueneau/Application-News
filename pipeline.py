@@ -284,7 +284,18 @@ def categorise(text: str) -> str:
 
 _groq_client = None
 _groq_last_call: float = 0.0   # timestamp du dernier appel Groq (succès ou échec)
-GROQ_MIN_INTERVAL = 3.0         # secondes minimum entre 2 appels → ~20 req/min
+GROQ_MIN_INTERVAL = 10.0        # secondes minimum entre 2 appels
+                                 # Calibré sur TPM : ~1200t/appel → max 5 appels/min
+                                 # 60s / 5 = 12s, on prend 10s avec légère marge
+
+# Version courte de GSF_CONTEXT injectée dans les prompts (économie ~320 tokens/appel)
+GSF_CONTEXT_SHORT = (
+    "GSF : groupe français propreté/FM, 42 000 salariés, ~1,27 Md€ CA. "
+    "Activités : nettoyage locaux (tertiaire, industrie, santé, nucléaire), "
+    "propreté industrielle, gestion déchets, espaces verts, soft FM. "
+    "Contraintes clés : biocides, CMR, ICPE, REACH, flotte véhicules, "
+    "décarbonation (BGES, plan climat, 3 000+ sites clients)."
+)
 
 
 def get_groq_client() -> Groq:
@@ -372,7 +383,7 @@ def groq_analyse_jorf(titre: str, contenu: str) -> dict:
     """
     system = 'Tu es juriste RSE senior conseillant le Responsable Climat de GSF. JSON uniquement.'
     prompt = (
-        f"{GSF_CONTEXT}\n\n"
+        f"{GSF_CONTEXT_SHORT}\n\n"
         "Ce texte du Journal Officiel a passé un premier filtre par mots-clés environnementaux.\n"
         "Détermine s'il est VRAIMENT pertinent pour le Responsable Climat & Environnement de GSF.\n\n"
         "PERTINENT uniquement si le texte modifie ou crée une règle qui s'applique DIRECTEMENT à GSF :\n"
@@ -426,7 +437,7 @@ def groq_analyse_rss(titre: str, contenu: str) -> dict:
     """
     system = 'Tu es analyste climat et environnement pour GSF. JSON valide uniquement.'
     prompt = (
-        f"{GSF_CONTEXT}\n\n"
+        f"{GSF_CONTEXT_SHORT}\n\n"
         "Évalue cet article de presse en UNE SEULE passe : décide s'il est pertinent pour GSF,\n"
         "puis s'il l'est, résume-le et score-le.\n\n"
         "PERTINENT si le sujet concerne :\n"
@@ -1318,7 +1329,7 @@ def groq_analyse_pjl(titre: str, description: str) -> dict:
     """
     system = 'Tu es conseiller RSE senior pour GSF. JSON valide uniquement.'
     prompt = (
-        f"{GSF_CONTEXT}\n\n"
+        f"{GSF_CONTEXT_SHORT}\n\n"
         "Évalue ce projet de loi gouvernemental pour le Responsable Climat & Environnement de GSF.\n\n"
         "PERTINENT si le texte crée ou modifie des obligations s'appliquant à GSF :\n"
         "- Réglementation env. : ICPE, déchets, eau, air, biocides, REACH, amiante\n"
