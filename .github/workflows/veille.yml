@@ -36,7 +36,8 @@ jobs:
       # ── 4. Exécution du pipeline ─────────────────────────────────
       - name: Run pipeline
         env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY:    ${{ secrets.GROQ_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
         run: python pipeline.py
 
       # ── 5. Récupération de la branche gh-pages ───────────────────
