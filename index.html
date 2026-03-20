@@ -294,6 +294,44 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .parl-progress-track { height: 4px; background: var(--surface3); border-radius: 2px; overflow: hidden; }
 .parl-progress-bar { height: 100%; background: var(--blue); border-radius: 2px; }
 .parl-stade-badge { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 500; background: var(--blue-bg); color: var(--blue); border: 1px solid var(--blue-border); }
+/* ── Parlement — stats + tabs + cards ───────────────────────────────── */
+.parl-stats-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
+.parl-stat { display: flex; flex-direction: column; align-items: center; background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 6px 14px; min-width: 80px; }
+.parl-stat.accent { border-color: var(--orange-border); background: var(--orange-bg); }
+.parl-stat-val { font-family: var(--mono); font-size: 18px; font-weight: 500; color: var(--text); line-height: 1; }
+.parl-stat.accent .parl-stat-val { color: var(--orange); }
+.parl-stat-lbl { font-size: 9px; color: var(--muted); margin-top: 2px; letter-spacing: .04em; text-transform: uppercase; }
+.parl-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); background: var(--surface); padding: 0 20px; }
+.parl-tab { padding: 10px 16px; font-size: 13px; font-weight: 500; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; transition: all .15s; user-select: none; white-space: nowrap; }
+.parl-tab:hover { color: var(--text2); }
+.parl-tab.active { color: var(--blue); border-bottom-color: var(--blue); }
+.parl-tab-panel { display: none; flex: 1; flex-direction: column; overflow-y: auto; }
+.parl-tab-panel.active { display: flex; }
+.parl-content { padding: 12px 20px; display: flex; flex-direction: column; gap: 0; }
+.parl-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; border-left: 3px solid var(--border2); transition: background .1s; cursor: pointer; margin-bottom: 1px; border-radius: 0; border-top: none; }
+.parl-card:first-child { border-radius: var(--radius) var(--radius) 0 0; border-top: 1px solid var(--border); }
+.parl-card:last-child { border-radius: 0 0 var(--radius) var(--radius); }
+.parl-card:hover { background: var(--surface2); }
+.parl-card.score3 { border-left-color: var(--red); }
+.parl-card.score2 { border-left-color: var(--orange); }
+.parl-card.score1 { border-left-color: var(--border2); }
+.parl-card-top { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+.parl-card-titre { font-size: 13px; font-weight: 500; color: var(--text); line-height: 1.4; flex: 1; }
+.parl-badges { display: flex; gap: 6px; flex-wrap: wrap; flex-shrink: 0; align-items: flex-start; }
+.parl-score-badge { font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+.parl-score3 { background: var(--red-bg); color: var(--red); }
+.parl-score2 { background: var(--orange-bg); color: var(--orange); }
+.parl-score1 { background: var(--surface2); color: var(--muted); }
+.parl-new-badge { font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 4px; background: #fdf4ff; color: #7e22ce; border: 1px solid #e9d5ff; white-space: nowrap; }
+.parl-resume { font-size: 12px; color: var(--text2); line-height: 1.55; margin-bottom: 8px; }
+.parl-meta { display: flex; gap: 10px; margin-top: 6px; font-size: 11px; color: var(--muted); flex-wrap: wrap; align-items: center; }
+.parl-meta a { color: var(--blue); text-decoration: none; font-family: var(--mono); font-size: 11px; }
+.parl-meta a:hover { text-decoration: underline; }
+.parl-historique { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); display: none; }
+.parl-card.open .parl-historique { display: block; }
+.parl-hist-item { display: flex; gap: 8px; align-items: baseline; font-size: 11px; color: var(--muted); padding: 2px 0; }
+.parl-hist-date { font-family: var(--mono); flex-shrink: 0; }
+.parl-empty { padding: 48px 20px; text-align: center; font-size: 13px; color: var(--muted); }
 /* ── Avancement badge on suivi items ─────────────────────────────────── */
 .suivi-avt-badge { display:inline-flex; align-items:center; gap:4px; font-size:11px; font-weight:500; padding:2px 8px; border-radius:4px; background:var(--blue-bg); color:var(--blue); border:1px solid var(--blue-border); white-space:nowrap; }
 
@@ -463,23 +501,32 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
     </div>
     <div class="view" id="parlement-view">
       <div class="parl-header">
-        <div class="parl-title-row"><div class="parl-page-title">Dossiers législatifs</div></div>
-      </div>
-      <div style="font-size:12px;color:var(--muted);background:var(--blue-bg);border-bottom:1px solid var(--blue-border);padding:9px 20px;line-height:1.6;flex-shrink:0">
-        Ajoutez un dossier avec son URL Assemblée Nationale — le pipeline le scrape automatiquement chaque nuit pour détecter les avancements de stade.
-      </div>
-      <div class="suivi-toolbar">
-        <div class="suivi-toolbar-left">
-          <button class="btn-add-dossier" onclick="openAddDossierModal()">+ Nouveau dossier</button>
-          <div class="suivi-filter-group">
-            <button class="suivi-filter-btn on" data-statut="all" onclick="filterSuivi('all')">Tout</button>
-            <button class="suivi-filter-btn" data-statut="critique" onclick="filterSuivi('critique')">Critique</button>
-            <button class="suivi-filter-btn" data-statut="a_surveiller" onclick="filterSuivi('a_surveiller')">À surveiller</button>
-            <button class="suivi-filter-btn" data-statut="pour_info" onclick="filterSuivi('pour_info')">Pour info</button>
-          </div>
+        <div class="parl-title-row"><div class="parl-page-title">Veille Parlementaire</div></div>
+        <div class="parl-stats-row" id="parl-stats"></div>
+        <div class="parl-tabs">
+          <div class="parl-tab active" data-panel="legislatif" onclick="switchParlTab('legislatif')">Pipeline auto</div>
+          <div class="parl-tab" data-panel="suivi" onclick="switchParlTab('suivi')">Mes dossiers <span id="nav-suivi-count" style="font-size:10px;font-family:var(--mono);background:rgba(37,99,235,.12);color:var(--blue);padding:1px 5px;border-radius:10px;margin-left:4px;display:none"></span></div>
         </div>
       </div>
-      <div class="suivi-list" id="suivi-list"><div class="empty-state">Chargement…</div></div>
+      <!-- Tab Pipeline auto -->
+      <div class="parl-tab-panel active" id="legislatif-panel">
+        <div class="parl-content" id="parl-content"></div>
+      </div>
+      <!-- Tab Mes dossiers -->
+      <div class="parl-tab-panel" id="suivi-panel">
+        <div class="suivi-toolbar">
+          <div class="suivi-toolbar-left">
+            <button class="btn-add-dossier" onclick="openAddDossierModal()">+ Nouveau dossier</button>
+            <div class="suivi-filter-group">
+              <button class="suivi-filter-btn on" data-statut="all" onclick="filterSuivi('all')">Tout</button>
+              <button class="suivi-filter-btn" data-statut="critique" onclick="filterSuivi('critique')">Critique</button>
+              <button class="suivi-filter-btn" data-statut="a_surveiller" onclick="filterSuivi('a_surveiller')">À surveiller</button>
+              <button class="suivi-filter-btn" data-statut="pour_info" onclick="filterSuivi('pour_info')">Pour info</button>
+            </div>
+          </div>
+        </div>
+        <div class="suivi-list" id="suivi-list"><div class="empty-state">Chargement…</div></div>
+      </div>
     </div>
     <div class="view" id="likes-view">
       <div class="likes-header">
@@ -607,6 +654,7 @@ function renderAll(){
   renderFeed();
   if(currentView==='carte'){renderMap();renderMapEncart();}
   if(currentView==='jo')renderJO();
+  if(currentView==='parlement')renderParlement();
 }
 
 
@@ -778,10 +826,122 @@ function renderJO(){
   if(!total){groupEl.innerHTML=joGsfHtml+briefingHtml+'<div class="jo-empty">Aucun résultat</div>';return;}
   groupEl.innerHTML=joGsfHtml+briefingHtml+Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([label,its])=>`<div class="jo-theme-group open"><div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')"><span class="jo-theme-name">${escHtml(label)}</span><span class="jo-theme-count">${its.length}</span><span class="jo-chevron">▶</span></div><div class="jo-items">${its.map(item=>`<div class="jo-item"><div class="jo-item-nature">${escHtml(item.nature||label)}</div><div class="jo-item-titre">${escHtml(item.titre)}</div>${item.url?`<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`:'<span style="font-size:10px;color:var(--muted2)">Pas de lien</span>'}</div>`).join('')}</div></div>`).join('');
 }
-// STADES_ORDRE used in drawer progress bar
+// STADES_ORDRE used in parlement + drawer progress bars
 const STADES_ORDRE=['Dépôt','Commission','Séance publique AN','Sénat 1ère lecture','Commission mixte paritaire','Sénat 2ème lecture','AN 2ème lecture','Adopté','Promulgué'];
+const SCORE_LABEL={1:'Veille',2:'À anticiper',3:'⚠ Impact direct'};
 
+function renderParlement(){
+  const fiches=D?.pjl_fiches||[];
+  const autres=D?.pjl_autres||[];
+  const statsEl=document.getElementById('parl-stats');
+  const contentEl=document.getElementById('parl-content');
+  if(!contentEl)return;
 
+  const briefing=(()=>{
+    const b=D?.pjl_briefing;
+    if(!b)return '';
+    if(typeof b==='string')return b;
+    if(typeof b==='object')return Object.values(b).find(v=>typeof v==='string'&&v.length>10)||'';
+    return '';
+  })();
+
+  const nbAdv=fiches.filter(f=>f.nouveau_stade).length;
+  const nbScore3=fiches.filter(f=>f.score>=3).length;
+  const nbAutres=autres.reduce((s,g)=>s+(g.items||[]).length,0);
+
+  if(statsEl)statsEl.innerHTML=[
+    [fiches.length,'PJL suivis',false],
+    [nbAdv,"Avancements aujourd'hui",nbAdv>0],
+    [nbScore3,'Impact direct',nbScore3>0],
+    [nbAutres,'Textes du jour',false],
+  ].map(([v,l,a])=>`<div class="parl-stat ${a?'accent':''}"><div class="parl-stat-val">${v}</div><div class="parl-stat-lbl">${l}</div></div>`).join('');
+
+  let html='';
+  if(briefing){
+    html+=`<div class="briefing-card" style="margin-bottom:16px">
+      <div class="briefing-header">Résumé de l'activité parlementaire du jour</div>
+      <div style="font-size:13px;color:var(--text2);line-height:1.6">${escHtml(briefing)}</div>
+    </div>`;
+  }
+
+  if(fiches.length){
+    html+=`<div class="feed-section-hd prio" style="border-radius:6px 6px 0 0;position:static">
+      <span class="feed-section-lbl">Signaux GSF — PJL à suivre</span>
+      <span class="feed-section-badge">${fiches.length}</span>
+    </div>`;
+    html+=fiches.map(f=>{
+      const idx=STADES_ORDRE.indexOf(f.stade);
+      const pct=idx<0?0:Math.round((idx/(STADES_ORDRE.length-1))*100);
+      const sc=f.score||1;
+      const hist=(f.historique||[]);
+      const histHtml=hist.length>1?hist.slice().reverse().map(h=>
+        `<div class="parl-hist-item"><span class="parl-hist-date">${h.date}</span><span>${escHtml(h.event||h.stade)}</span></div>`
+      ).join(''):'';
+      return `<div class="parl-card score${sc}" onclick="this.classList.toggle('open')">
+        <div class="parl-card-top">
+          <div class="parl-card-titre">${escHtml(f.titre)}</div>
+          <div class="parl-badges">
+            ${f.nouveau_stade?'<span class="parl-new-badge">↑ Avancé</span>':''}
+            <span class="parl-score-badge parl-score${sc}">${SCORE_LABEL[sc]||'Veille'}</span>
+          </div>
+        </div>
+        ${f.resume_gsf?`<div class="parl-resume">${escHtml(f.resume_gsf)}</div>`:''}
+        ${f.pourquoi?`<div class="parl-pourquoi">${escHtml(f.pourquoi)}</div>`:''}
+        <div class="parl-progress">
+          <div class="parl-progress-label">
+            <span class="parl-stade-badge">${escHtml(f.stade||'Dépôt')}</span>
+            <span>${pct}%</span>
+          </div>
+          <div class="parl-progress-track"><div class="parl-progress-bar" style="width:${pct}%"></div></div>
+        </div>
+        <div class="parl-meta">
+          <span>Déposé le ${formatDate(f.date_depot)}</span>
+          ${f.horizon?`<span>Entrée en vigueur : <strong>${escHtml(f.horizon)}</strong></span>`:''}
+          ${f.url_an?`<a href="${escHtml(f.url_an)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">AN →</a>`:''}
+        </div>
+        ${histHtml?`<div class="parl-historique">${histHtml}</div>`:''}
+      </div>`;
+    }).join('');
+    html+='<div style="margin-bottom:20px"></div>';
+  }else{
+    html+=`<div class="parl-empty">Aucun PJL environnemental retenu ce run.<br><span style="font-size:11px;color:var(--muted2)">Le pipeline détectera automatiquement les nouveaux PJL lors des prochains runs.</span></div>`;
+  }
+
+  if(autres.length){
+    html+=`<div class="feed-consulter-hd" onclick="toggleConsulter(this)" style="border-radius:6px 6px 0 0">
+      <span class="feed-consulter-lbl">À consulter — activité parlementaire du jour</span>
+      <span class="feed-section-badge" style="margin-left:auto">${nbAutres} textes</span>
+      <span class="feed-chevron">▶</span>
+    </div>
+    <div class="feed-consulter-items" style="display:none;border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px">`;
+    autres.forEach(group=>{
+      const items=group.items||[];
+      html+=`<div class="jo-theme-group">
+        <div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')">
+          <span class="jo-theme-name">${escHtml(group.source)}</span>
+          <span class="jo-theme-count">${items.length}</span>
+          <span class="jo-chevron">▶</span>
+        </div>
+        <div class="jo-items">${items.map(item=>`<div class="jo-item" style="display:flex;align-items:center;gap:10px">
+          <div style="flex:1;font-size:12px;color:var(--text)">${escHtml(item.titre)}</div>
+          <div style="display:flex;align-items:center;gap:8px;flex-shrink:0">
+            <span style="font-size:10px;color:var(--muted2);font-family:var(--mono)">${item.date}</span>
+            ${item.url?`<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">→</a>`:''}
+          </div>
+        </div>`).join('')}</div>
+      </div>`;
+    });
+    html+='</div>';
+  }
+
+  contentEl.innerHTML=html;
+}
+
+function switchParlTab(tab){
+  document.querySelectorAll('.parl-tab').forEach(t=>t.classList.toggle('active',t.dataset.panel===tab));
+  document.querySelectorAll('.parl-tab-panel').forEach(p=>p.classList.toggle('active',p.id===tab+'-panel'));
+  if(tab==='suivi')loadDossiersSuivi();
+}
 
 function filterJO(){renderJO();}
 
@@ -1072,7 +1232,7 @@ function switchView(view){
   if(view==='carte'){setTimeout(()=>{renderMap();if(mapgl)mapgl.resize();renderMapEncart();},30);}
   if(view==='jo')renderJO();
   if(view==='likes')renderLikes();
-  if(view==='parlement')loadDossiersSuivi();
+  if(view==='parlement'){renderParlement();loadDossiersSuivi();}
 }
 function formatDate(iso){if(!iso)return'—';const[y,m,d]=iso.split('-');const M=['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];return `${parseInt(d)} ${M[parseInt(m)-1]} ${y}`;}
 function escHtml(str){return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
