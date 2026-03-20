@@ -27,11 +27,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
 
       # ── 3. Dépendances ───────────────────────────────────────────
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install --upgrade pip
+          pip install --no-cache-dir -r requirements.txt
 
       # ── 4. Exécution du pipeline ─────────────────────────────────
       - name: Run pipeline
