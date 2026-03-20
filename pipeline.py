@@ -24,7 +24,7 @@ from urllib.parse import urljoin
 import requests
 import feedparser
 from groq import Groq
-from mistralai import Mistral
+from mistralai.client import Mistral
 
 
 # ─────────────────────────────────────────────
