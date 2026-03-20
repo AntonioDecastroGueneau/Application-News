@@ -2,6 +2,7 @@ import hashlib
 import json
 import logging
 import re
+from datetime import datetime, timedelta
 from typing import Any, Dict, List, Optional, Tuple
 
 import requests
@@ -259,6 +260,13 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         if e['fiche_id'] not in seen_ids:
             seen_ids.add(e['fiche_id'])
             entries.append(e)
+
+    # Filter: keep only entries from the last 31 days (or with no date found)
+    cutoff_date = (datetime.now() - timedelta(days=31)).strftime('%Y-%m-%d')
+    before = len(entries)
+    entries = [e for e in entries if e['date'] == today_str or e['date'] >= cutoff_date]
+    if before - len(entries):
+        log.info(f"Parlement : {before - len(entries)} entrées exclues (plus anciennes que 31 jours)")
 
     log.info(f"Parlement : {len(entries)} entrées uniques après déduplication")
 

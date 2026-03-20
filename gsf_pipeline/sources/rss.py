@@ -2,7 +2,8 @@ import html
 import logging
 import re
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 
 import feedparser
 import requests
@@ -58,16 +59,27 @@ def fetch_rss_source(source: dict, today_str: str):
             url = entry.get('link', '')
 
             pub = entry.get('published_parsed') or entry.get('updated_parsed')
+            article_dt = None
+            article_date = today_str
             if pub:
                 try:
                     article_dt = datetime.fromtimestamp(time.mktime(pub))
                     article_date = article_dt.strftime('%Y-%m-%d')
                 except Exception:
-                    article_dt = None
-                    article_date = today_str
-            else:
-                article_dt = None
-                article_date = today_str
+                    pass
+            if article_dt is None:
+                # feedparser couldn't auto-parse — try the raw string
+                raw = entry.get('published') or entry.get('updated') or ''
+                if raw:
+                    try:
+                        article_dt = parsedate_to_datetime(raw).astimezone(timezone.utc).replace(tzinfo=None)
+                        article_date = article_dt.strftime('%Y-%m-%d')
+                    except Exception:
+                        try:
+                            article_dt = datetime.fromisoformat(raw.replace('Z', '+00:00')).replace(tzinfo=None)
+                            article_date = article_dt.strftime('%Y-%m-%d')
+                        except Exception:
+                            pass
 
             now = datetime.now()
             if now.weekday() == 0:
@@ -77,8 +89,8 @@ def fetch_rss_source(source: dict, today_str: str):
             else:
                 cutoff_dt = now - timedelta(hours=24)
 
-            if article_dt and article_dt < cutoff_dt:
-                log.debug(f"Article trop ancien ({article_date}), exclu : {titre[:60]}")
+            if article_dt is None or article_dt < cutoff_dt:
+                log.debug(f"Article sans date ou trop ancien ({article_date}), exclu : {titre[:60]}")
                 continue
 
             if len(contenu) < 100 and url:
