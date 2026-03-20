@@ -1,12 +1,12 @@
 {
   "date": "2026-03-20",
-  "generated_at": "11:29",
-  "elapsed_seconds": 76,
+  "generated_at": "13:20",
+  "elapsed_seconds": 261,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
     "jo_retenus": 0,
-    "articles_presse": 11,
+    "articles_presse": 5,
     "depts_restriction": 0,
     "pjl_suivis": 0,
     "pjl_avancements": 0
@@ -17,8 +17,8 @@
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "« Les classes populaires vont respirer un air vicié » : une banlieue parisienne lutte contre un méga-incinérateur",
-      "resume": "L'article aborde les enjeux de pollution atmosphérique liés à la combustion de déchets et de biomasse dans un projet de centrale thermique, ce qui impacte directement les politiques de gestion des déchets et de qualité de l'air pour les prestataires comme GSF.",
-      "pourquoi": "Le sujet touche à la réglementation déchets (REP, traçabilité), aux risques climatiques (pollution de l'air) et aux attentes des parties prenantes (communautés locales, clients sensibles à la qualité de l'air). Bien que GSF ne soit pas exploitant ICPE, ces enjeux influencent ses obligations en matière de reporting ESG (CSRD) et de gestion des déchets pour ses clients.",
+      "resume": "Cet article met en lumière les enjeux de pollution atmosphérique liés à la combustion de déchets et de biomasse dans les incinérateurs, un sujet pouvant impacter les politiques de gestion des déchets et la qualité de l'air des sites clients de GSF.",
+      "pourquoi": "Bien que l'article traite d'un incinérateur (ICPE), il aborde des enjeux transversaux pour GSF : 1) la gestion des déchets (REP, traçabilité, impacts sanitaires) qui influence les pratiques des clients et les exigences réglementaires, 2) la qualité de l'air et les risques climatiques locaux (perturbation des activités, pression réglementaire), 3) la transition énergétique des réseaux de chaleur (biomasse/déchets) qui peut impacter les contrats de propreté/FM. Ces éléments sont pertinents pour un Responsable Environnement/Climat de GSF dans une logique de veille et d'anticipation des risques indirects (scope 3, CSRD, BGES).",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://reporterre.net/Les-classes-populaires-vont-respirer-un-air-vicie-une-banlieue-parisienne-lutte-contre-un-mega-incinerateur",
@@ -30,8 +30,8 @@
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "90% des entreprises sorties du périmètre de la CSRD prévoient de maintenir leur reporting",
-      "resume": "L'article souligne que 90% des entreprises exclues du périmètre CSRD maintiennent leur reporting extra-financier, ce qui indique une tendance forte vers la transparence ESG, pertinente pour GSF dans le cadre de ses engagements clients et de sa stratégie RSE.",
-      "pourquoi": "Le sujet touche directement au reporting ESG (CSRD) et à la stratégie de transparence environnementale de GSF, notamment pour répondre aux exigences carbone de ses clients (nucléaire, santé, industrie) et anticiper les attentes réglementaires futures. Même si GSF n'est pas dans le périmètre CSRD, cette tendance influence ses pratiques et celles de ses clients.",
+      "resume": "L'article souligne que 90% des entreprises exclues du périmètre CSRD maintiennent leur reporting extra-financier, ce qui indique une adoption durable des pratiques ESG par les clients de GSF, renforçant l'importance de la CSRD et du reporting pour les prestataires de services comme GSF.",
+      "pourquoi": "Le sujet concerne directement le reporting ESG (CSRD) et les attentes des clients de GSF en matière de transparence environnementale, ce qui impacte directement les obligations et stratégies de reporting extra-financier de l'entreprise. La CSRD, bien que partiellement exclue pour certaines entreprises, reste un enjeu clé pour les clients de GSF, notamment dans les secteurs nucléaire, santé et industrie.",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/entreprises-taille-intermediaire-maintiennent-reporting-durabilite-csrd",
@@ -43,8 +43,8 @@
       "source": "Min. Transition Écologique",
       "categorie": "Énergie",
       "titre": "Économies d’énergie : le vrai du faux pour avoir les bons réflexes",
-      "resume": "L'article aborde les économies d'énergie, un levier clé pour réduire les émissions de GSF (scope 2) et ses coûts opérationnels, notamment via l'optimisation des consommations sur ses sites clients.",
-      "pourquoi": "Les économies d'énergie sont un enjeu direct pour GSF, notamment pour réduire son empreinte carbone (scope 2) et répondre aux exigences clients (nucléaire, santé, industrie) en matière de décarbonation. Bien que l'article soit grand public, les bonnes pratiques qu'il mentionne (ex : optimisation des appareils, gestion des consommations) s'appliquent aux prestations de propreté/FM de GSF, qui gère des équipements énergétivores (aspirateurs, machines de nettoyage, etc.).",
+      "resume": "L'article aborde les économies d'énergie, un levier clé pour réduire les consommations énergétiques des sites clients de GSF et contribuer à la décarbonation de ses prestations, aligné sur les enjeux de reporting ESG et de conformité réglementaire (DPE tertiaire, SNBC).",
+      "pourquoi": "L'article traite d'économies d'énergie, un sujet directement lié à plusieurs enjeux de GSF : réduction des consommations énergétiques (scope 2), efficacité énergétique des bâtiments tertiaires (DPE), et alignement avec les politiques climatiques nationales (SNBC, loi énergie-climat). Cela impacte la stratégie de décarbonation de GSF et ses obligations en matière de reporting ESG (CSRD, bilan GES).",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://www.ecologie.gouv.fr/actualites/economies-denergie-vrai-du-faux-avoir-bons-reflexes",
@@ -69,91 +69,13 @@
       "source": "Carbone 4",
       "categorie": "Presse",
       "titre": "Actualités Carbone 4",
-      "resume": "Carbone 4 propose des ressources sur la décarbonation (Net Zero Initiative) et l'empreinte carbone des outils numériques, utiles pour GSF dans sa stratégie de réduction des émissions scope 1/2/3 et son reporting CSRD.",
+      "resume": "Carbone 4 propose des ressources sur la décarbonation (Net Zero Initiative) et l'empreinte carbone des outils numériques, utiles pour GSF dans le cadre de sa stratégie climat, reporting CSRD et gestion des scopes 1/2/3.",
       "pourquoi": "",
       "criticite": 1,
       "impact_gsf": false,
       "url": "https://www.carbone4.com/publications",
       "date": "2026-03-20",
       "top5": true
-    },
-    {
-      "id": "954a233f1850",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Prix négatifs : la CRE veut expérimenter un mécanisme de soutien incitant à l'hybridation solaire-batteries",
-      "resume": "La CRE expérimente un mécanisme incitant à l'hybridation solaire-batteries, ce qui pourrait influencer les coûts énergétiques et les opportunités d'autoconsommation pour les sites clients de GSF, notamment dans le tertiaire ou l'industrie.",
-      "pourquoi": "L'article touche à la transition énergétique (solaire, batteries) et aux mécanismes de soutien public, ce qui impacte indirectement les coûts et stratégies énergétiques des clients de GSF (scope 2). Bien que non direct, cela peut influencer les attentes clients en matière de décarbonation et d'efficacité énergétique.",
-      "criticite": 2,
-      "impact_gsf": true,
-      "url": "https://www.actu-environnement.com/ae/news/prix-negatifs-systeme-electrique-photovoltaique-batteries-hybride-cannibalisation-47713.php4#xtor=RSS-6",
-      "date": "2026-03-19",
-      "top5": false
-    },
-    {
-      "id": "6273a91c6a44",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "Taxonomie verte : la Commission européenne propose de la simplifier",
-      "resume": "La simplification de la taxonomie verte européenne pourrait impacter les critères de reporting ESG (CSRD) pour GSF, notamment sur la classification des activités durables dans ses prestations de propreté et FM.",
-      "pourquoi": "La taxonomie verte influence directement les obligations de reporting extra-financier (CSRD) et la crédibilité des engagements climatiques des entreprises. GSF, soumis à ces exigences via ses clients (nucléaire, santé, industrie), doit suivre les évolutions réglementaires européennes pour adapter ses stratégies de décarbonation et de transparence.",
-      "criticite": 2,
-      "impact_gsf": true,
-      "url": "https://www.actu-environnement.com/ae/news/proposition-simplification-actes-delegues-taxonomie-47716.php4#xtor=RSS-6",
-      "date": "2026-03-19",
-      "top5": false
-    },
-    {
-      "id": "f6c75babbf42",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "Pacte vert : nouveau recul en vue sur les carburants aériens durables ?",
-      "resume": "L'article aborde les retards dans la décarbonation du secteur aérien via les carburants durables (SAF), un enjeu indirect pour GSF via la pression carbone de ses clients industriels ou tertiaires dépendants du transport aérien.",
-      "pourquoi": "Bien que le sujet ne concerne pas directement GSF, il impacte indirectement ses clients (nucléaire, santé, industrie) via leurs chaînes de valeur et leurs exigences carbone. La décarbonation du transport aérien est un levier de réduction des scopes 3 pour les entreprises clientes de GSF.",
-      "criticite": 2,
-      "impact_gsf": true,
-      "url": "https://www.novethic.fr/environnement/climat/pacte-vert-nouveau-recul-en-vue-sur-les-carburants-aeriens-durables",
-      "date": "2026-03-19",
-      "top5": false
-    },
-    {
-      "id": "7c10c88553cf",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "Devoir de vigilance : en quoi la condamnation du Groupe Rocher peut peser sur les affaires en cours",
-      "resume": "La condamnation du Groupe Rocher pour manquement au devoir de vigilance renforce les obligations des entreprises en matière de vigilance climatique et sociale, ce qui peut impacter les exigences des clients de GSF (nucléaire, santé, industrie) en matière de reporting ESG et de gestion des risques indirects.",
-      "pourquoi": "Le devoir de vigilance (loi de 2017) impose aux grandes entreprises de prévenir les risques liés à leurs activités, y compris environnementaux et climatiques. GSF, en tant que prestataire de services pour des secteurs sensibles (nucléaire, santé, industrie), doit anticiper l'extension de ces obligations à ses clients et ses propres pratiques (ex : gestion des déchets, énergie, mobilité). Cela peut influencer les exigences contractuelles des clients en matière de reporting ESG (CSRD) et de gestion des risques climatiques.",
-      "criticite": 2,
-      "impact_gsf": true,
-      "url": "https://www.novethic.fr/economie-et-social/droits-humains/jugement-groupe-rocher-devoir-vigilance-consequences-juridiques-entreprise",
-      "date": "2026-03-19",
-      "top5": false
-    },
-    {
-      "id": "48f10d656402",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Coût des ENR : le SER et France renouvelables se défendent",
-      "resume": "L'article aborde la régulation des coûts des énergies renouvelables (ENR), un sujet indirectement lié à la stratégie énergétique de GSF, notamment pour ses engagements en matière de décarbonation et de reporting ESG (scope 2).",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.actu-environnement.com/ae/news/reponse-SER-France-renouvelables-rapport-cour-comptes-47720.php4#xtor=RSS-6",
-      "date": "2026-03-19",
-      "top5": false
-    },
-    {
-      "id": "b6d75f246122",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Les castors permettent de stocker dix fois plus de CO₂ dans les zones humides",
-      "resume": "Les castors et leurs zones humides aménagées pourraient inspirer des solutions de stockage carbone pour GSF, notamment dans le cadre de ses enjeux BGES/plan climat ou de ses partenariats avec des clients sensibles aux risques climatiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://reporterre.net/Les-castors-permettent-de-stocker-dix-fois-plus-de-CO%E2%82%82-dans-les-zones-humides",
-      "date": "2026-03-19",
-      "top5": false
     }
   ],
   "restrictions_eau": [],
@@ -288,6 +210,119 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "{'pertinence': \"Aucun texte publié aujourd'hui n'a d'impact direct ou significatif sur les enjeux climatiques, environnementaux ou RSE. Les arrêtés et décrets concernent principalement des mesures administratives, des élections professionnelles, des conventions collectives sectorielles ou des questions de protection sociale, sans lien avec les politiques environnementales ou la transition écologique.\", 'recommandation': \"Aucune action immédiate n'est requise de votre part. Vous pouvez archiver cette information sans suite.\"}",
-  "pjl_fiches": []
+  "briefing_jorf": "Aucun texte du Journal Officiel du 20 mars 2026 ne traite directement de sujets environnementaux, climatiques ou de responsabilité sociétale des entreprises (RSE). Les arrêtés et décrets concernent principalement des mesures administratives, sociales ou de gestion des ressources humaines.",
+  "pjl_fiches": [],
+  "pjl_autres": [
+    {
+      "source": "AN Publications",
+      "items": [
+        {
+          "titre": "N° 2409 rapport - Rapport de M. Gérard Leseul et Mme Sonia de la Provôté établi au nom de l'office, sur les apports de la science pour lutter contre la dermatose nodulaire contagieuse",
+          "url": "https://www.assemblee-nationale.fr/17/rap-off/i2409.asp",
+          "date": "2026-01-29"
+        },
+        {
+          "titre": "Texte adopté n° 3 - Projet de loi relative aux résultats de la gestion et portant approbation des comptes, rejeté par l'Assemblée nationale après engagement de la procédure accélérée, de l'année 2023",
+          "url": "https://www.assemblee-nationale.fr/17/ta/ta0003.asp",
+          "date": "2024-10-14"
+        },
+        {
+          "titre": "N° 2101 - Proposition de loi de M. Nicolas Thierry pour une génération sans tabac",
+          "url": "https://www.assemblee-nationale.fr/17/propositions/pion2101.asp",
+          "date": "2025-11-18"
+        },
+        {
+          "titre": "N° 572 - Proposition de loi de Mme Danielle Brulebois pour un accès plus juste et plus transparent au marché de l'assurance affinitaire",
+          "url": "https://www.assemblee-nationale.fr/17/propositions/pion0572.asp",
+          "date": "2024-11-19"
+        },
+        {
+          "titre": "N° 2553 - Proposition de loi de Mme Océane Godard pour un droit effectif aux acomptes sur salaire et rémunération",
+          "url": "https://www.assemblee-nationale.fr/17/propositions/pion2553.asp",
+          "date": "2026-03-03"
+        },
+        {
+          "titre": "N° 2568 - Proposition de loi de M. Charles Fournier visant à représenter la nature en entreprise",
+          "url": "https://www.assemblee-nationale.fr/17/propositions/pion2568.asp",
+          "date": "2026-03-03"
+        },
+        {
+          "titre": "N° 2542 - Proposition de résolution de Mme Karine Lebon tendant à la création d'une commission d'enquête sur les manquements et dysfonctionnements du Comité national d'accueil et d'actions pour les Réunionnais en mobilité",
+          "url": "https://www.assemblee-nationale.fr/17/propositions/pion2542.asp",
+          "date": "2026-03-05"
+        },
+        {
+          "titre": "N° 2575 - Proposition de résolution de M. Stéphane Viry visant à faire du don de plasma la grande cause nationale 2027",
+          "url": "https://www.assemblee-nationale.fr/17/propositions/pion2575.asp",
+          "date": "2026-03-18"
+        },
+        {
+          "titre": "N° 1436 - Proposition de loi, adoptée par le Sénat, visant à rééquilibrer la filière à responsabilité élargie du producteur des produits et matériaux de construction du secteur du bâtiment au profit des produits du bois",
+          "url": "https://www.assemblee-nationale.fr/17/propositions/pion1436.asp",
+          "date": "2025-05-16"
+        },
+        {
+          "titre": "N° 2538 - Proposition de loi, modifiée, par le Sénat, visant à améliorer la protection et l'accompagnement des parents d'enfants atteints d'un cancer, d'une maladie grave ou d'un handicap",
+          "url": "https://www.assemblee-nationale.fr/17/propositions/pion2538.asp",
+          "date": "2026-03-16"
+        }
+      ]
+    },
+    {
+      "source": "AN Commission Développement Durable",
+      "items": [
+        {
+          "titre": "N° 2521 rapport - Rapport de Mme Sophie Mette sur la proposition de loi, adoptée par le Sénat, visant à rééquilibrer la filière à responsabilité élargie du producteur des produits et matériaux de construction du secteur du bâtiment au profit des produits du bois (n°1436).",
+          "url": "https://www.assemblee-nationale.fr/17/rapports/r2521.asp",
+          "date": "2026-03-18"
+        },
+        {
+          "titre": "N° 2546 - Proposition de loi de M. Philippe Schreck visant à faciliter la lutte contre la prédation des élevages par des animaux sauvages",
+          "url": "https://www.assemblee-nationale.fr/17/propositions/pion2546.asp",
+          "date": "2026-03-03"
+        },
+        {
+          "titre": "N° 2559 - Proposition de loi de M. Marc Chavent relative à la cessibilité des droits à l'artificialisation et à la création de crédits de construction",
+          "url": "https://www.assemblee-nationale.fr/17/propositions/pion2559.asp",
+          "date": "2026-03-03"
+        },
+        {
+          "titre": "Compte rendu de réunion n° 32 - Commission du développement durable et de l'aménagement du territoire",
+          "url": "https://www.assemblee-nationale.fr/17/cr-dvp/25-26/c2526032.asp",
+          "date": "2026-02-26"
+        },
+        {
+          "titre": "Compte rendu de réunion n° 31 - Commission du développement durable et de l'aménagement du territoire",
+          "url": "https://www.assemblee-nationale.fr/17/cr-dvp/25-26/c2526031.asp",
+          "date": "2026-02-25"
+        },
+        {
+          "titre": "N° 2526 rapport - Rapport de Mme Anne Bergantz sur la proposition de loi, adoptée par le Sénat après engagement de la procédure accélérée, visant à soutenir les collectivités territoriales dans la prévention et la gestion des inondations (n°1041).",
+          "url": "https://www.assemblee-nationale.fr/17/rapports/r2526.asp",
+          "date": "2026-02-25"
+        },
+        {
+          "titre": "Compte rendu de réunion n° 30 - Commission du développement durable et de l'aménagement du territoire",
+          "url": "https://www.assemblee-nationale.fr/17/cr-dvp/25-26/c2526030.asp",
+          "date": "2026-02-24"
+        },
+        {
+          "titre": "Compte rendu de réunion n° 29 - Commission du développement durable et de l'aménagement du territoire",
+          "url": "https://www.assemblee-nationale.fr/17/cr-dvp/25-26/c2526029.asp",
+          "date": "2026-02-18"
+        },
+        {
+          "titre": "N° 2506 rapport d'information - Rapport d'information de Mme Constance de Pélichy et M. Vincent Thiébaut déposé en application de l'article 145 du règlement, par la commission du développement durable et de l'aménagement du territoire, en conclusion des travaux d'une mission d'information sur la territorialisation et le portage des politiques publiques en termes d'aménagement du territoire et de transition énergétique et écologique",
+          "url": "https://www.assemblee-nationale.fr/17/rap-info/i2506.asp",
+          "date": "2026-02-18"
+        },
+        {
+          "titre": "N° 2501 - Proposition de loi de M. Marcellin Nadeau pour un statut et un cadre juridiques du risque naturel environnemental des algues sargasses",
+          "url": "https://www.assemblee-nationale.fr/17/propositions/pion2501.asp",
+          "date": "2026-02-17"
+        }
+      ]
+    }
+  ],
+  "pjl_briefing": "Plusieurs textes parlementaires en 2026 sont pertinents pour un Responsable Environnement/Climat : la proposition de loi n°2559 sur la cessibilité des droits à l'artificialisation et crédits de construction, le rapport n°2506 sur la territorialisation des politiques publiques d'aménagement et transition écologique, ainsi que la proposition de loi n°2501 sur le statut des algues sargasses, qui impactent directement les enjeux de biodiversité, artificialisation des sols et gestion des risques naturels. Les autres textes (santé, assurance, tabac) ou rapports (inondations, prédation) ont un lien indirect avec la RSE."
 }

@@ -546,7 +546,13 @@ function renderJO(){
 
   // Briefing exécutif
   const _br=D?.briefing_jorf;
-  const briefing=typeof _br==='string'?_br:(Array.isArray(_br)?_br.map(it=>it.essentiel||'').filter(Boolean).join(' '):'');
+  let briefing='';
+  if(typeof _br==='string') briefing=_br;
+  else if(Array.isArray(_br)) briefing=_br.map(it=>it.essentiel||'').filter(Boolean).join(' ');
+  else if(_br && typeof _br==='object'){
+    // dict brut retourné par Mistral — prendre la première valeur string
+    briefing=Object.values(_br).find(v=>typeof v==='string'&&v.length>10)||'';
+  }
   const briefingHtml=briefing?`<div class="briefing-card" style="margin-bottom:16px">
     <div class="briefing-header">Résumé exécutif du jour</div>
     <div style="font-size:13px;color:var(--text2);line-height:1.6">${escHtml(briefing)}</div>
@@ -592,59 +598,119 @@ const STADES_ORDRE=['Dépôt','Commission','Séance publique AN','Sénat 1ère l
 const SCORE_LABEL={1:'Veille',2:'À anticiper',3:'⚠ Impact direct'};
 
 function renderParlement(){
-  const fiches=D?.pjl_fiches||[];
-  const statsEl=document.getElementById('parl-stats');
-  const contentEl=document.getElementById('parl-content');
-  if(!contentEl)return;
+  const fiches   = D?.pjl_fiches||[];
+  const autres   = D?.pjl_autres||[];
+  const statsEl  = document.getElementById('parl-stats');
+  const contentEl= document.getElementById('parl-content');
+  if(!contentEl) return;
 
-  const nbAdv=fiches.filter(f=>f.nouveau_stade).length;
-  const nbScore3=fiches.filter(f=>f.score>=3).length;
-  if(statsEl)statsEl.innerHTML=[
+  const briefing = (()=>{
+    const b=D?.pjl_briefing;
+    if(!b) return '';
+    if(typeof b==='string') return b;
+    if(typeof b==='object') return Object.values(b).find(v=>typeof v==='string'&&v.length>10)||'';
+    return '';
+  })();
+
+  const nbAdv    = fiches.filter(f=>f.nouveau_stade).length;
+  const nbScore3 = fiches.filter(f=>f.score>=3).length;
+  const nbAutres = autres.reduce((s,g)=>s+(g.items||[]).length, 0);
+
+  if(statsEl) statsEl.innerHTML=[
     [fiches.length,'PJL suivis',false],
     [nbAdv,'Avancements aujourd\'hui',nbAdv>0],
     [nbScore3,'Impact direct',nbScore3>0],
+    [nbAutres,'Textes RSS du jour',false],
   ].map(([v,l,a])=>`<div class="parl-stat ${a?'accent':''}"><div class="parl-stat-val">${v}</div><div class="parl-stat-lbl">${l}</div></div>`).join('');
 
-  if(!fiches.length){
-    contentEl.innerHTML='<div class="parl-empty">Aucun projet de loi suivi pour l\'instant.<br><span style="font-size:11px;color:var(--muted2)">Le pipeline détectera automatiquement les nouveaux PJL environnementaux lors du prochain run.</span></div>';
-    return;
+  let html = '';
+
+  // ── Briefing ─────────────────────────────────────────────────────────
+  if(briefing){
+    html+=`<div class="briefing-card" style="margin-bottom:16px">
+      <div class="briefing-header">Résumé de l'activité parlementaire du jour</div>
+      <div style="font-size:13px;color:var(--text2);line-height:1.6">${escHtml(briefing)}</div>
+    </div>`;
   }
 
-  contentEl.innerHTML=fiches.map(f=>{
-    const idx=STADES_ORDRE.indexOf(f.stade);
-    const pct=idx<0?0:Math.round((idx/(STADES_ORDRE.length-1))*100);
-    const sc=f.score||1;
-    const scLbl=SCORE_LABEL[sc]||'Veille';
-    const hist=(f.historique||[]);
-    const histHtml=hist.length>1?hist.slice().reverse().map(h=>
-      `<div class="parl-hist-item"><span class="parl-hist-date">${h.date}</span><span>${escHtml(h.event||h.stade)}</span></div>`
-    ).join(''):'';
-
-    return `<div class="parl-card score${sc}" onclick="this.classList.toggle('open')">
-      <div class="parl-card-top">
-        <div class="parl-card-titre">${escHtml(f.titre)}</div>
-        <div class="parl-badges">
-          ${f.nouveau_stade?'<span class="parl-new-badge">↑ Avancé aujourd\'hui</span>':''}
-          <span class="parl-score-badge parl-score${sc}">${scLbl}</span>
-        </div>
-      </div>
-      ${f.resume_gsf?`<div class="parl-resume">${escHtml(f.resume_gsf)}</div>`:''}
-      ${f.pourquoi?`<div class="parl-pourquoi">${escHtml(f.pourquoi)}</div>`:''}
-      <div class="parl-progress">
-        <div class="parl-progress-label">
-          <span class="parl-stade-badge">${escHtml(f.stade||'Dépôt')}</span>
-          <span>${pct}%</span>
-        </div>
-        <div class="parl-progress-track"><div class="parl-progress-bar" style="width:${pct}%"></div></div>
-      </div>
-      <div class="parl-meta">
-        <span>Déposé le ${formatDate(f.date_depot)}</span>
-        ${f.horizon?`<span>Entrée en vigueur estimée : <strong>${escHtml(f.horizon)}</strong></span>`:''}
-        ${f.url_an?`<a href="${escHtml(f.url_an)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">AN →</a>`:''}
-      </div>
-      ${histHtml?`<div class="parl-historique"><div style="font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--muted);margin-bottom:4px">HISTORIQUE</div>${histHtml}</div>`:''}
+  // ── Signaux GSF ───────────────────────────────────────────────────────
+  if(fiches.length){
+    html+=`<div class="feed-section-hd prio" style="border-radius:6px 6px 0 0;position:static">
+      <span class="feed-section-lbl">Signaux GSF — PJL à suivre</span>
+      <span class="feed-section-badge">${fiches.length}</span>
     </div>`;
-  }).join('');
+    html+=fiches.map(f=>{
+      const idx=STADES_ORDRE.indexOf(f.stade);
+      const pct=idx<0?0:Math.round((idx/(STADES_ORDRE.length-1))*100);
+      const sc=f.score||1;
+      const hist=f.historique||[];
+      const histHtml=hist.length>1?hist.slice().reverse().map(h=>
+        `<div class="parl-hist-item"><span class="parl-hist-date">${h.date}</span><span>${escHtml(h.event||h.stade)}</span></div>`
+      ).join(''):'';
+      return `<div class="parl-card score${sc}" onclick="this.classList.toggle('open')" style="border-radius:0;border-top:none">
+        <div class="parl-card-top">
+          <div class="parl-card-titre">${escHtml(f.titre)}</div>
+          <div class="parl-badges">
+            ${f.nouveau_stade?'<span class="parl-new-badge">↑ Avancé</span>':''}
+            <span class="parl-score-badge parl-score${sc}">${SCORE_LABEL[sc]||'Veille'}</span>
+          </div>
+        </div>
+        ${f.resume_gsf?`<div class="parl-resume">${escHtml(f.resume_gsf)}</div>`:''}
+        ${f.pourquoi?`<div class="parl-pourquoi">${escHtml(f.pourquoi)}</div>`:''}
+        <div class="parl-progress">
+          <div class="parl-progress-label">
+            <span class="parl-stade-badge">${escHtml(f.stade||'Dépôt')}</span>
+            <span>${pct}%</span>
+          </div>
+          <div class="parl-progress-track"><div class="parl-progress-bar" style="width:${pct}%"></div></div>
+        </div>
+        <div class="parl-meta">
+          <span>Déposé le ${formatDate(f.date_depot)}</span>
+          ${f.horizon?`<span>Entrée en vigueur : <strong>${escHtml(f.horizon)}</strong></span>`:''}
+          ${f.url_an?`<a href="${escHtml(f.url_an)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">AN →</a>`:''}
+        </div>
+        ${histHtml?`<div class="parl-historique">${histHtml}</div>`:''}
+      </div>`;
+    }).join('');
+    html+='<div style="margin-bottom:20px"></div>';
+  } else {
+    html+=`<div class="parl-empty" style="margin-bottom:16px">
+      Aucun PJL environnemental retenu ce run.<br>
+      <span style="font-size:11px;color:var(--muted2)">Le pipeline détectera automatiquement les nouveaux PJL lors des prochains runs.</span>
+    </div>`;
+  }
+
+  // ── À consulter — accordéons par source ───────────────────────────────
+  if(autres.length){
+    html+=`<div class="feed-consulter-hd" onclick="toggleConsulter(this)" style="border-radius:6px 6px 0 0">
+      <span class="feed-consulter-lbl">À consulter — activité parlementaire du jour</span>
+      <span class="feed-section-badge" style="margin-left:auto">${nbAutres} textes</span>
+      <span class="feed-chevron">▶</span>
+    </div>
+    <div class="feed-consulter-items" style="display:none;border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px">`;
+    autres.forEach(group=>{
+      const items=group.items||[];
+      html+=`<div class="jo-theme-group">
+        <div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')">
+          <span class="jo-theme-name">${escHtml(group.source)}</span>
+          <span class="jo-theme-count">${items.length}</span>
+          <span class="jo-chevron">▶</span>
+        </div>
+        <div class="jo-items">
+          ${items.map(item=>`<div class="jo-item" style="display:flex;align-items:center;gap:10px">
+            <div style="flex:1;font-size:12px;color:var(--text)">${escHtml(item.titre)}</div>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0">
+              <span style="font-size:10px;color:var(--muted2);font-family:var(--mono)">${item.date}</span>
+              ${item.url?`<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">→</a>`:''}
+            </div>
+          </div>`).join('')}
+        </div>
+      </div>`;
+    });
+    html+='</div>';
+  }
+
+  contentEl.innerHTML=html;
 }
 
 function filterJO(){renderJO();}
