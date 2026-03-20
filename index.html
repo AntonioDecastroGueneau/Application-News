@@ -1129,9 +1129,11 @@ function closeAddDossierModal(){
 async function saveDossier(){
   const titre=(document.getElementById('form-titre')?.value||'').trim();
   if(!titre){showToast('Le titre est obligatoire');return;}
+  const urlAN=(document.getElementById('form-url')?.value||'').trim()||null;
   const dossier={
     titre,
-    url_dossier:(document.getElementById('form-url')?.value||'').trim()||null,
+    url_an:urlAN,
+    url_dossier:urlAN,
     statut:document.getElementById('form-statut')?.value||'a_surveiller',
     resume_gsf:(document.getElementById('form-resume')?.value||'').trim()||null,
     pourquoi:(document.getElementById('form-pourquoi')?.value||'').trim()||null,
