@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veille Environnementale — GSF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/pmtiles@3.2.1/dist/pmtiles.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root {
+  --bg:        #f5f6f8;
+  --surface:   #ffffff;
+  --surface2:  #f0f2f5;
+  --surface3:  #e8eaed;
+  --border:    #e2e5ea;
+  --border2:   #d0d4db;
+  --text:      #111827;
+  --text2:     #374151;
+  --muted:     #6b7280;
+  --muted2:    #9ca3af;
+  --sb-bg:     #1a1f2e;
+  --sb-border: #2a3347;
+  --sb-text:   #c9d0dc;
+  --sb-muted:  #6b7891;
+  --sb-hover:  #232b3e;
+  --sb-active: #2d3a52;
+  --sb-accent: #4ade80;
+  --green:     #16a34a;
+  --green-bg:  #f0fdf4;
+  --green-border:#bbf7d0;
+  --orange:    #ea580c;
+  --orange-bg: #fff7ed;
+  --orange-border:#fed7aa;
+  --red:       #dc2626;
+  --red-bg:    #fef2f2;
+  --red-border:#fecaca;
+  --blue:      #2563eb;
+  --blue-bg:   #eff6ff;
+  --blue-border:#bfdbfe;
+  /* Statut Supabase */
+  --statut-critique:     #dc2626;
+  --statut-critique-bg:  #fef2f2;
+  --statut-critique-br:  #fecaca;
+  --statut-surveiller:   #ea580c;
+  --statut-surveiller-bg:#fff7ed;
+  --statut-surveiller-br:#fed7aa;
+  --statut-info:         #2563eb;
+  --statut-info-bg:      #eff6ff;
+  --statut-info-br:      #bfdbfe;
+  --eau-vigilance:#84cc16;
+  --eau-alerte:#eab308;
+  --eau-renforce:#f97316;
+  --eau-crise:#dc2626;
+  --sidebar-w: 220px;
+  --radius:    8px;
+  --radius-sm: 5px;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:13px;line-height:1.5;overflow:hidden}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
+#loading{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg);gap:12px}
+.loading-spinner{width:24px;height:24px;border:2px solid var(--border2);border-top-color:var(--green);border-radius:50%;animation:spin .7s linear infinite}
+.loading-text{font-size:12px;color:var(--muted);font-family:var(--mono)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+@keyframes slideInRight{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+@keyframes modalIn{from{opacity:0;transform:scale(.96) translateY(-8px)}to{opacity:1;transform:scale(1) translateY(0)}}
+#layout{display:flex;height:100vh}
+#sidebar{width:var(--sidebar-w);flex-shrink:0;height:100vh;overflow-y:auto;background:var(--sb-bg);border-right:1px solid var(--sb-border);display:flex;flex-direction:column}
+.sb-header{padding:16px 16px 12px;border-bottom:1px solid var(--sb-border);flex-shrink:0}
+.sb-brand{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--sb-accent);margin-bottom:4px}
+.sb-brand-dot{width:7px;height:7px;border-radius:50%;background:var(--sb-accent);box-shadow:0 0 8px var(--sb-accent);animation:pulse 2.5s ease-in-out infinite}
+.sb-title{font-size:13px;font-weight:500;color:#e8ecf2}
+.sb-date{font-size:10px;color:var(--sb-muted);font-family:var(--mono);margin-top:2px}
+.sb-status{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:500;letter-spacing:.08em;padding:2px 8px;border-radius:20px;margin-top:6px;background:rgba(74,222,128,.12);color:var(--sb-accent);border:1px solid rgba(74,222,128,.2)}
+.sb-status.err{background:rgba(239,68,68,.12);color:#f87171;border-color:rgba(239,68,68,.2)}
+.sb-nav{padding:10px 8px;flex:1}
+.sb-section-lbl{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sb-muted);padding:0 8px;margin:12px 0 4px}
+.sb-section-lbl:first-child{margin-top:4px}
+.nav-item{display:flex;align-items:center;gap:9px;padding:7px 8px;border-radius:var(--radius-sm);cursor:pointer;font-size:13px;font-weight:400;color:var(--sb-text);transition:all .15s;margin-bottom:1px;user-select:none}
+.nav-item:hover{background:var(--sb-hover)}
+.nav-item.active{background:var(--sb-active);color:#e8ecf2;font-weight:500}
+.nav-item.active .nav-dot{background:var(--sb-accent);box-shadow:0 0 6px var(--sb-accent)}
+.nav-dot{width:6px;height:6px;border-radius:50%;background:var(--sb-muted);flex-shrink:0;transition:all .15s}
+.nav-item:hover .nav-dot{background:var(--sb-text)}
+.sb-stats{padding:12px 12px 10px;border-top:1px solid var(--sb-border);flex-shrink:0}
+.sb-stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+.stat-cell{background:rgba(255,255,255,.04);border:1px solid var(--sb-border);border-radius:var(--radius-sm);padding:8px 10px}
+.stat-val{font-family:var(--mono);font-size:20px;font-weight:500;color:#e8ecf2;line-height:1}
+.stat-val.zero{color:var(--sb-muted)}
+.stat-val.accent{color:var(--sb-accent)}
+.stat-lbl{font-size:9px;color:var(--sb-muted);margin-top:3px;letter-spacing:.03em}
+.eau-alert-item{display:flex;align-items:center;gap:6px;padding:5px 8px;border-radius:var(--radius-sm);font-size:11px;margin-top:4px}
+.sb-filters{padding:8px 12px 10px;border-top:1px solid var(--sb-border);flex-shrink:0}
+.filter-row{display:flex;align-items:center;gap:8px;padding:4px 0;cursor:pointer;user-select:none}
+.filter-row input[type=checkbox]{display:none}
+.fcheck{width:14px;height:14px;border-radius:3px;flex-shrink:0;border:1px solid var(--sb-border);display:flex;align-items:center;justify-content:center;font-size:9px;transition:all .15s}
+.filter-row.on .fcheck{background:var(--sb-accent);border-color:var(--sb-accent);color:var(--sb-bg)}
+.filter-lbl{font-size:12px;color:var(--sb-text)}
+#main{flex:1;min-width:0;height:100vh;display:flex;flex-direction:column;background:var(--bg)}
+.view{display:none;flex:1;flex-direction:column;overflow:hidden}
+.view.active{display:flex}
+#feed-view{flex-direction:column}
+#signal-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:8px 20px;display:none;align-items:center;gap:8px;flex-shrink:0;flex-wrap:wrap}
+.signal-bar-lbl{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);flex-shrink:0;white-space:nowrap}
+.signal-pill{display:flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:11px;cursor:pointer;border:1px solid var(--border);background:var(--surface2);color:var(--text2);transition:all .15s;max-width:220px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.signal-pill:hover{border-color:var(--border2);background:var(--surface3)}
+.signal-pill.p3{background:var(--red-bg);border-color:var(--red-border);color:var(--red)}
+.signal-pill.p2{background:var(--orange-bg);border-color:var(--orange-border);color:var(--orange)}
+.signal-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.signal-pill.p3 .signal-dot{background:var(--red)}
+.signal-pill.p2 .signal-dot{background:var(--orange)}
+#feed-toolbar{background:var(--surface);border-bottom:1px solid var(--border);padding:8px 20px;display:flex;align-items:center;gap:8px;flex-shrink:0;flex-wrap:wrap}
+.feed-title{font-size:13px;font-weight:500;color:var(--text);margin-right:4px}
+.badge-filter{padding:3px 10px;border-radius:20px;font-size:11px;border:1px solid var(--border);background:none;color:var(--muted);cursor:pointer;font-family:var(--sans);transition:all .15s}
+.badge-filter:hover{border-color:var(--border2);color:var(--text2)}
+.badge-filter.on{background:var(--blue-bg);border-color:var(--blue-border);color:var(--blue);font-weight:500}
+#feed-list{flex:1;overflow-y:auto}
+.card{background:var(--surface);border-bottom:1px solid var(--border);padding:12px 20px 12px 16px;display:grid;grid-template-columns:auto 1fr auto;gap:0 12px;cursor:pointer;transition:background .1s;border-left:3px solid transparent}
+.card:hover{background:var(--surface2)}
+.card.prio3{border-left-color:var(--red)}
+.card.prio2{border-left-color:var(--orange)}
+.card.prio1{border-left-color:var(--border2)}
+.card-badge{display:inline-flex;align-items:center;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:500;white-space:nowrap;align-self:start;margin-top:1px}
+.badge-ICPE{background:#eff6ff;color:#1d4ed8}
+.badge-Eau{background:#f0f9ff;color:#0369a1}
+.badge-Énergie{background:#fefce8;color:#a16207}
+.badge-Déchets{background:#fff7ed;color:#c2410c}
+.badge-Émissions{background:#fdf4ff;color:#7e22ce}
+.badge-Biodiversité{background:#f0fdf4;color:#15803d}
+.badge-Climat{background:#fdf4ff;color:#7e22ce}
+.badge-Environnement,.badge-Presse{background:var(--surface2);color:var(--muted)}
+.card-body{min-width:0}
+.card-titre{font-size:13px;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:4px}
+.card-resume{font-size:12px;color:var(--text2);line-height:1.55}
+.card-meta{display:flex;gap:10px;margin-top:5px;font-size:11px;color:var(--muted)}
+.card-date{font-family:var(--mono)}
+.card-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0}
+.crit-badge{font-size:10px;font-weight:500;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.crit3{background:var(--red-bg);color:var(--red)}
+.crit2{background:var(--orange-bg);color:var(--orange)}
+.crit1{background:var(--surface2);color:var(--muted)}
+.card-link{font-size:11px;color:var(--blue);text-decoration:none;font-family:var(--mono)}
+.card-link:hover{text-decoration:underline}
+.feed-section-hd{display:flex;align-items:center;gap:8px;padding:10px 20px 8px 16px;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:2}
+.feed-section-hd.prio{background:var(--red-bg);border-bottom-color:var(--red-border)}
+.feed-section-icon{font-size:11px}
+.feed-section-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.feed-section-hd.prio .feed-section-lbl{color:var(--red)}
+.feed-section-badge{margin-left:auto;font-size:10px;padding:1px 8px;border-radius:10px;background:var(--surface2);color:var(--muted);border:1px solid var(--border)}
+.feed-section-hd.prio .feed-section-badge{background:var(--red-bg);color:var(--red);border-color:var(--red-border)}
+.feed-consulter-hd{display:flex;align-items:center;gap:8px;padding:10px 20px 10px 16px;background:var(--surface2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s}
+.feed-consulter-hd:hover{background:var(--surface3)}
+.feed-consulter-lbl{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.feed-chevron{font-size:9px;color:var(--muted2);transition:transform .2s;margin-left:2px}
+.feed-consulter-items{background:var(--surface2)}
+.feed-consulter-items .card{background:var(--surface2)}
+.feed-consulter-items .card:hover{background:var(--surface3)}
+.empty-state{padding:48px 20px;text-align:center;font-size:13px;color:var(--muted)}
+#carte-view{position:relative}
+#map-container{width:100%;height:100%}
+#map-legend{position:absolute;top:12px;left:12px;z-index:1000;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:8px 12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;box-shadow:0 1px 4px rgba(0,0,0,.08);font-size:11px}
+.legend-title{font-weight:600;color:var(--muted);font-size:10px;letter-spacing:.06em}
+.legend-chip{display:flex;align-items:center;gap:4px;color:var(--text2)}
+.legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+#dept-detail{position:absolute;bottom:0;left:0;right:0;z-index:1000;background:var(--surface);border-top:1px solid var(--border);padding:10px 16px;display:none;flex-direction:column;gap:4px;box-shadow:0 -2px 8px rgba(0,0,0,.06)}
+#dept-detail.open{display:flex}
+.dept-detail-title{font-size:13px;font-weight:500;color:var(--text);display:flex;align-items:center;gap:6px}
+#jo-view{padding:0;overflow-y:auto}
+.jo-header{padding:16px 20px 12px;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:2}
+.jo-title-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.jo-page-title{font-size:14px;font-weight:600;color:var(--text)}
+.jo-stats-row{display:flex;gap:8px;flex-wrap:wrap}
+.jo-stat{display:flex;flex-direction:column;align-items:center;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:6px 14px;min-width:80px}
+.jo-stat.accent{border-color:var(--green-border);background:var(--green-bg)}
+.jo-stat-val{font-family:var(--mono);font-size:18px;font-weight:500;color:var(--text);line-height:1}
+.jo-stat.accent .jo-stat-val{color:var(--green)}
+.jo-stat-lbl{font-size:9px;color:var(--muted);margin-top:2px;letter-spacing:.04em;text-transform:uppercase}
+.jo-search{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 12px;color:var(--text);font-size:12px;font-family:var(--sans);outline:none;margin-top:10px;transition:border-color .15s}
+.jo-search:focus{border-color:var(--blue)}
+#briefing-jorf{margin:12px 16px 0}
+.briefing-card{background:var(--surface);border:1px solid var(--blue-border);border-left:3px solid var(--blue);border-radius:var(--radius);padding:12px 16px}
+.briefing-header{font-size:11px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none}
+.briefing-toggle{font-size:10px;font-weight:400;color:var(--muted);text-transform:none;letter-spacing:0;margin-left:auto}
+.briefing-items{display:flex;flex-direction:column;gap:8px}
+.briefing-item{display:flex;gap:8px;align-items:flex-start}
+.briefing-nature{font-size:10px;font-family:var(--mono);background:var(--blue-bg);color:var(--blue);padding:2px 5px;border-radius:3px;flex-shrink:0;margin-top:2px;white-space:nowrap}
+.briefing-titre{font-size:12.5px;color:var(--text2);font-weight:500;line-height:1.4}
+.briefing-essentiel{font-size:11.5px;color:var(--muted);margin-top:2px;line-height:1.4}
+.jo-content{padding:12px 20px}
+.jo-theme-group{margin-bottom:8px}
+.jo-theme-header{display:flex;align-items:center;gap:8px;padding:8px 12px;cursor:pointer;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);transition:background .1s}
+.jo-theme-header:hover{background:var(--surface2)}
+.jo-theme-group.open .jo-theme-header{border-radius:var(--radius-sm) var(--radius-sm) 0 0}
+.jo-theme-name{font-size:12px;font-weight:500;color:var(--text);flex:1}
+.jo-theme-count{font-family:var(--mono);font-size:10px;color:var(--muted);background:var(--surface2);padding:1px 7px;border-radius:10px;border:1px solid var(--border)}
+.jo-chevron{font-size:9px;color:var(--muted2);transition:transform .2s}
+.jo-theme-group.open .jo-chevron{transform:rotate(90deg)}
+.jo-items{display:none;flex-direction:column;border:1px solid var(--border);border-top:none;border-radius:0 0 var(--radius-sm) var(--radius-sm);overflow:hidden}
+.jo-theme-group.open .jo-items{display:flex}
+.jo-item{padding:10px 12px;border-top:1px solid var(--border);background:var(--surface);transition:background .1s}
+.jo-item:first-child{border-top:none}
+.jo-item:hover{background:var(--surface2)}
+.jo-item-nature{font-family:var(--mono);font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted2);margin-bottom:3px}
+.jo-item-titre{font-size:12px;color:var(--text);line-height:1.4;margin-bottom:4px}
+.jo-item-link{font-family:var(--mono);font-size:10px;color:var(--blue);text-decoration:none}
+.jo-item-link:hover{text-decoration:underline}
+.jo-empty{padding:32px;text-align:center;font-size:12px;color:var(--muted)}
+#archives-view{padding:20px;overflow-y:auto}
+.arc-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:16px}
+.arc-month{margin-bottom:20px}
+.arc-month-title{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.arc-days{display:flex;flex-wrap:wrap;gap:4px}
+.arc-day{width:32px;height:32px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted2);background:var(--surface);border:1px solid var(--border)}
+.arc-day.has-data{color:var(--text);cursor:pointer}
+.arc-day.has-data:hover{background:var(--blue-bg);border-color:var(--blue-border);color:var(--blue)}
+.arc-day.today{border-color:var(--blue);color:var(--blue);font-weight:600}
+.arc-day.selected{background:var(--blue-bg);border-color:var(--blue);color:var(--blue);font-weight:600}
+#historique-view{padding:20px;overflow-y:auto}
+.hist-page-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:16px}
+.hist-section{margin-bottom:28px}
+.hist-section-title{font-size:12px;font-weight:600;color:var(--text2);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.hist-section-title::before{content:'';width:3px;height:14px;background:var(--blue);border-radius:2px}
+.chart-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;height:220px;display:flex;align-items:flex-end;gap:2px;overflow-x:auto}
+.bar-group{display:flex;flex-direction:column;align-items:center;flex:1;min-width:18px;gap:2px}
+.bar-stack{width:100%;display:flex;flex-direction:column-reverse}
+.bar-seg{width:100%;min-height:1px;cursor:pointer;transition:opacity .15s}
+.bar-seg:hover{opacity:.8}
+.bar-label{font-size:8px;color:var(--muted2);font-family:var(--mono);margin-top:2px;white-space:nowrap}
+.year-tabs{display:flex;gap:4px;margin-bottom:10px;flex-wrap:wrap}
+.year-tab{padding:3px 10px;border-radius:20px;font-size:11px;border:1px solid var(--border);color:var(--muted);cursor:pointer;background:none;font-family:var(--sans);transition:all .15s}
+.year-tab:hover{border-color:var(--border2);color:var(--text)}
+.year-tab.active{background:var(--blue-bg);border-color:var(--blue-border);color:var(--blue);font-weight:500}
+.top10-list{display:flex;flex-direction:column;gap:8px}
+.top10-row{display:flex;align-items:center;gap:10px}
+.top10-rank{font-family:var(--mono);font-size:10px;color:var(--muted2);width:18px;text-align:right;flex-shrink:0}
+.top10-name{font-size:12px;color:var(--text2);width:150px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top10-bar-wrap{flex:1;height:16px;background:var(--surface2);border-radius:2px;overflow:hidden;display:flex}
+.top10-seg{height:100%}
+.top10-val{font-family:var(--mono);font-size:10px;color:var(--muted);width:40px;text-align:right;flex-shrink:0}
+.hist-loading{padding:32px;text-align:center;font-size:12px;color:var(--muted)}
+.hist-legend{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px}
+.hist-legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text2)}
+.hist-legend-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.hist-chart-subtitle{font-size:11px;color:var(--muted);margin-bottom:8px}
+.hist-source{font-size:11px;color:var(--muted);margin-top:16px;padding-top:12px;border-top:1px solid var(--border)}
+.hist-source a{color:var(--blue);text-decoration:none}.hist-source a:hover{text-decoration:underline}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);background:var(--text);color:#fff;padding:8px 18px;border-radius:20px;font-size:12px;opacity:0;transition:all .25s;z-index:9999;pointer-events:none;white-space:nowrap}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── Parlement view ─────────────────────────────────────────────────── */
+#parlement-view{padding:0;overflow-y:auto;flex-direction:column}
+.parl-header{padding:16px 20px 0;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:2;flex-shrink:0}
+.parl-title-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.parl-page-title{font-size:14px;font-weight:600;color:var(--text)}
+.parl-stats-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.parl-stat{display:flex;flex-direction:column;align-items:center;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:6px 14px;min-width:80px}
+.parl-stat.accent{border-color:var(--orange-border);background:var(--orange-bg)}
+.parl-stat-val{font-family:var(--mono);font-size:18px;font-weight:500;color:var(--text);line-height:1}
+.parl-stat.accent .parl-stat-val{color:var(--orange)}
+.parl-stat-lbl{font-size:9px;color:var(--muted);margin-top:2px;letter-spacing:.04em;text-transform:uppercase}
+
+/* Sub-tabs */
+.parl-tabs{display:flex;gap:0;border-bottom:1px solid var(--border);background:var(--surface);padding:0 20px}
+.parl-tab{padding:10px 16px;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;user-select:none;white-space:nowrap}
+.parl-tab:hover{color:var(--text2)}
+.parl-tab.active{color:var(--blue);border-bottom-color:var(--blue)}
+.parl-tab-panel{display:none;flex:1;flex-direction:column;overflow-y:auto}
+.parl-tab-panel.active{display:flex}
+
+.parl-follow-ui{margin:0 20px 12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;display:flex;flex-direction:column;gap:10px}
+.parl-follow-title{font-size:12px;font-weight:700;color:var(--text);letter-spacing:.02em}
+.parl-follow-row{display:flex;gap:8px;align-items:center}
+.parl-follow-row input{flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 12px;color:var(--text);font-size:12px;font-family:var(--sans);outline:none;transition:border-color .15s}
+.parl-follow-row button{padding:7px 16px;background:var(--blue);color:#fff;border:none;border-radius:var(--radius-sm);font-size:12px;font-family:var(--sans);cursor:pointer;white-space:nowrap;transition:opacity .15s}
+.parl-follow-row button:hover{opacity:.92}
+.parl-pending-card{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 12px}
+.parl-pending-title{font-size:10px;font-weight:700;letter-spacing:.06em;color:var(--muted);margin-bottom:6px;text-transform:uppercase}
+.parl-pending-list{display:flex;flex-direction:column;gap:6px;max-height:170px;overflow:auto;padding-right:2px}
+.parl-pending-item{display:flex;align-items:center;gap:10px}
+.parl-pending-date{font-size:10px;font-family:var(--mono);color:var(--muted2);white-space:nowrap}
+.parl-pending-link{font-size:11px;color:var(--blue);text-decoration:none;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:var(--mono)}
+.parl-pending-link:hover{text-decoration:underline}
+.parl-pending-badge{font-size:10px;background:var(--orange-bg);color:var(--orange);padding:1px 6px;border-radius:4px;white-space:nowrap}
+.parl-pending-remove{font-size:10px;color:var(--muted);background:none;border:1px solid var(--border);border-radius:4px;padding:2px 7px;cursor:pointer}
+.parl-pending-remove:hover{color:var(--text2);border-color:var(--border2)}
+.parl-content{padding:16px 20px;display:flex;flex-direction:column;gap:12px}
+.parl-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;border-left:3px solid var(--border2);transition:background .1s;cursor:pointer}
+.parl-card:hover{background:var(--surface2)}
+.parl-card.score3{border-left-color:var(--red)}
+.parl-card.score2{border-left-color:var(--orange)}
+.parl-card.score1{border-left-color:var(--border2)}
+.parl-card-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px}
+.parl-card-titre{font-size:13px;font-weight:500;color:var(--text);line-height:1.4;flex:1}
+.parl-badges{display:flex;gap:6px;flex-wrap:wrap;flex-shrink:0;align-items:flex-start}
+.parl-score-badge{font-size:10px;font-weight:500;padding:2px 8px;border-radius:4px;white-space:nowrap}
+.parl-score3{background:var(--red-bg);color:var(--red)}
+.parl-score2{background:var(--orange-bg);color:var(--orange)}
+.parl-score1{background:var(--surface2);color:var(--muted)}
+.parl-new-badge{font-size:10px;font-weight:500;padding:2px 8px;border-radius:4px;background:#fdf4ff;color:#7e22ce;border:1px solid #e9d5ff;white-space:nowrap}
+.parl-resume{font-size:12px;color:var(--text2);line-height:1.55;margin-bottom:8px}
+.parl-pourquoi{font-size:11.5px;color:var(--muted);line-height:1.5;padding:6px 10px;background:var(--orange-bg);border-left:2px solid var(--orange);border-radius:0 4px 4px 0;margin-bottom:8px}
+.parl-progress{margin-bottom:8px}
+.parl-progress-label{font-size:10px;color:var(--muted);margin-bottom:4px;display:flex;justify-content:space-between}
+.parl-progress-track{height:4px;background:var(--surface3);border-radius:2px;overflow:hidden}
+.parl-progress-bar{height:100%;background:var(--blue);border-radius:2px}
+.parl-stade-badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:500;background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-border)}
+.parl-meta{display:flex;gap:10px;margin-top:6px;font-size:11px;color:var(--muted);flex-wrap:wrap;align-items:center}
+.parl-meta a{color:var(--blue);text-decoration:none;font-family:var(--mono);font-size:11px}
+.parl-meta a:hover{text-decoration:underline}
+.parl-historique{margin-top:8px;padding-top:8px;border-top:1px solid var(--border);display:none}
+.parl-card.open .parl-historique{display:block}
+.parl-hist-toggle{font-size:10px;color:var(--blue);cursor:pointer;user-select:none;display:inline-block;margin-top:4px}
+.parl-hist-item{display:flex;gap:8px;align-items:baseline;font-size:11px;color:var(--muted);padding:2px 0}
+.parl-hist-date{font-family:var(--mono);flex-shrink:0}
+.parl-empty{padding:48px 20px;text-align:center;font-size:13px;color:var(--muted)}
+
+/* ── Suivi tab ──────────────────────────────────────────────────────── */
+#suivi-panel{padding:0;flex-direction:column}
+.suivi-toolbar{display:flex;align-items:center;gap:8px;padding:14px 20px;background:var(--surface);border-bottom:1px solid var(--border);flex-wrap:wrap}
+.suivi-toolbar-left{display:flex;align-items:center;gap:8px;flex:1}
+.btn-add-dossier{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:var(--blue);color:#fff;border:none;border-radius:var(--radius-sm);font-size:12px;font-weight:500;font-family:var(--sans);cursor:pointer;transition:all .15s;white-space:nowrap}
+.btn-add-dossier:hover{opacity:.9;transform:translateY(-1px);box-shadow:0 2px 8px rgba(37,99,235,.3)}
+.suivi-filter-group{display:flex;gap:4px}
+.suivi-filter-btn{padding:4px 12px;border-radius:20px;font-size:11px;border:1px solid var(--border);background:none;color:var(--muted);cursor:pointer;font-family:var(--sans);transition:all .15s}
+.suivi-filter-btn:hover{border-color:var(--border2);color:var(--text2)}
+.suivi-filter-btn.on{background:var(--blue-bg);border-color:var(--blue-border);color:var(--blue);font-weight:500}
+.suivi-list-header{display:flex;align-items:center;gap:8px;padding:12px 20px 8px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.suivi-list{flex:1;overflow-y:auto}
+.suivi-item{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 20px;transition:background .1s;cursor:pointer;border-left:3px solid transparent}
+.suivi-item:hover{background:var(--surface2)}
+.suivi-item.s-critique{border-left-color:var(--statut-critique)}
+.suivi-item.s-a_surveiller{border-left-color:var(--statut-surveiller)}
+.suivi-item.s-pour_info{border-left-color:var(--statut-info)}
+.suivi-item-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:6px}
+.suivi-item-titre{font-size:13px;font-weight:500;color:var(--text);line-height:1.4;flex:1}
+.suivi-item-resume{font-size:12px;color:var(--text2);line-height:1.55;margin-bottom:8px}
+.suivi-item-meta{display:flex;gap:12px;font-size:11px;color:var(--muted);flex-wrap:wrap;align-items:center}
+.suivi-item-actions{display:flex;gap:8px;margin-top:10px;align-items:center}
+.btn-comments{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--muted);background:none;border:1px solid var(--border);border-radius:4px;padding:3px 10px;cursor:pointer;font-family:var(--sans);transition:all .15s}
+.btn-comments:hover{color:var(--text2);border-color:var(--border2)}
+.btn-details{display:inline-flex;align-items:center;gap:4px;font-size:11Monday, December 19, 2011
+
+Developing Mobile Browser Applications with ASP.NET MVC 4
+
+The .NET Framework team recently discussed the new mobile browser features in MVC 4 at PDC2011. These features span ASP.NET Web Forms and MVC and make developing mobile-friendly applications much easier. Let's look at some of the features in ASP.NET MVC 4 that help you develop mobile browser applications.
+
+Note that this is all in Developer Preview right now, so some things may change by the final release.
+
+Mobile-specific Views
+
+With MVC 4 you can create mobile-specific views.  These views use the same naming convention as regular views but with ".mobile" inserted before the file extension. For example, if I had a view named "Index.cshtml" I can create a mobile specific view by adding "Index.mobile.cshtml". When a mobile browser makes a request ASP.NET will automatically return the mobile-specific view. This means you can customize the look and feel of your views for mobile devices without having to do any device-specific server-side detection code.
+
+Easier Mobile Development with jQuery Mobile Integration
+
+jQuery Mobile is the defacto jQuery-based framework for mobile development. It takes advantage of progressive enhancement techniques and modern CSS animations as well as a touch-friendly interface to give your mobile apps a native app-like feel.
+
+MVC 4 comes with a new NuGet package - jQuery.Mobile.MVC -that installs jQuery Mobile support in an existing MVC 4 application. Here's what it adds:
+
+  1. jQuery Mobile and its dependencies in the Scripts folder.
+  2. The default site.mobile.css and ViewSwitcher.css files in the Content folder.
+  3. The _Layout.Mobile.cshtml, _ViewSwitcher.cshtml files in the Views/Shared folder.
+  4. A controller called ViewSwitcherController.
+
+If you have a controller that already has a view and you want to create a mobile version of it, the jQuery.Mobile.MVC bundle makes this easier by providing a "scaffold template" to generate the mobile version. To do this, right-click on the action method in the controller, choose "Add View" and check the "Create a mobile-specific view" checkbox.
+
+Display Modes
+
+Display Modes are a new feature of ASP.NET MVC 4 that allow you to return different views depending on the browser making the request, all handled by a convention-based naming pattern. For example, suppose you have a file at Views/Shared/_Layout.cshtml and you install the jQuery.Mobile.MVC package which has a file at Views/Shared/_Layout.Mobile.cshtml. Then ASP.NET MVC 4 will use _Layout.Mobile.cshtml automatically when the mobile browser user agent makes a request and _Layout.cshtml for everything else.
+
+But what if you want to have different layouts for specific devices like smartphones versus tablets? With Display Modes it's easy! Just register the Display Mode and create the corresponding views.
+
+For example, to have a different display mode for smartphones, you can register a "Smartphone" display mode in your Application_Start method:
+
+DisplayModeProvider.Instance.Modes.Insert(0, new DefaultDisplayMode("Smartphone")
+{
+    ContextCondition = (context => context.GetOverriddenUserAgent().IndexOf
+        ("iPhone", StringComparison.OrdinalIgnoreCase) >= 0)
+        ||
+        context.GetOverriddenUserAgent().IndexOf
+        ("Android", StringComparison.OrdinalIgnoreCase) >= 0)
+});
+
+Now when a smartphone request comes in, ASP.NET MVC 4 will look for a view named, e.g., _Layout.Smartphone.cshtml to serve up. This makes it easy to have device-specific layouts!
+
+ViewSwitcher
+
+The ViewSwitcher widget is provided as part of the jQuery.Mobile.MVC NuGet package. It renders a link that lets users that are on mobile devices switch back to the full view of the website, and vice versa. This makes it easy to let users override the display mode of a view.
+
+You can see the ViewSwitcher widget in action in the demo at the end of Scott Hanselman's PDC 2011 talk – check it out at about the 15 minute mark.
+
+async/await and Tasks
+
+One of the most exciting C# 5 features is async/await. The async/await keywords make it easy to write asynchronous code that reads like synchronous code, making debugging much easier.
+
+In MVC 4, you can mark controllers as async by using the async keyword on the action methods and returning a Task<ActionResult> instead of ActionResult.
+
+[AsyncTimeout(8000)]
+[HandleError(ExceptionType = typeof(TaskCanceledException),
+    View = "TimedOut")]
+public async Task<ActionResult> Index(CancellationToken cancellationToken)
+{
+    NewsFeed newsfeed = await _feedClient.GetFeedAsync(cancellationToken);
+    return View(newsfeed);
+}
+
+Note that MVC 4 also supports an optional timeout and cancellation token for handling cases where the async operation takes too long.
+
+Web API
+
+The new Web API in MVC 4 is optimized for creating RESTful web services and makes it easy to expose data with HTTP clients using JSON or XML. As a mobile developer the Web API is perfect for exposing data that you will access from a variety of clients – smartphone apps, tablets, and browsers.
+
+Web API adds an ApiController class that you can derive from for writing web service controllers that will accept data and render JSON by default. Here's a quick sample:
+
+public class ContactController : ApiController
+{
+    static readonly IContactRepository repository = new ContactRepository();
+
+    public IEnumerable<Contact> GetAllContacts()
+    {
+        return repository.GetAll();
+    }
+
+    public Contact GetContact(int id)
+    {
+        Contact item = repository.Get(id);
+        if (item == null)
+        {
+            throw new HttpResponseException(HttpStatusCode.NotFound);
+        }
+        return item;
+    }
+}
+
+Check out the ASP.NET Web API overview for more detail and tutorials.
+
+MVC 4 Resources
+
+To learn more about ASP.NET MVC 4 for Mobile, check out:
+
+Sunday, December 18, 2011
+
+Introducing ASP.NET Web API
+
+Most recently, the web has made a lot of progress in the way its being used. Its use extends to exposing data to clients in a simple, consistent and standard way – generally via HTTP. Exposing data to web browsers is no longer the only need – there are mobile apps, desktop apps, other web applications etc all requiring access to structured data.
+
+What is ASP.NET Web API?
+
+The ASP.NET Web API is a framework built on top of ASP.NET that allows you to create HTTP services and expose them to any clients that can communicate over HTTP. It is essentially a framework for creating RESTful web services. Historically, the WCF framework was used to create web services in .NET. It is extremely flexible and feature rich. Unfortunately these features brought with them a lot of complexity as well – making it somewhat difficult to get started with. It also had features in it for multiple transport protocols but most people today only want HTTP, and many of WCF's features are not needed when creating HTTP services.
+
+Enter ASP.NET Web API. It is a framework optimized for creating HTTP services. It focuses on HTTP – using HTTP requests and responses to communicate. It supports content negotiation: that is, clients can specify the data format they want (XML or JSON for example) and the server will produce the response in that format. It embraces REST concepts (if you're not familiar with REST, it's a style of architecture for building web services). Most of the concepts in the WCF infrastructure (like message, binding, endpoint etc.) are gone. There's a simpler model for HTTP things like request/response. You don't need to wade through tons of configuration options – just write your controller methods.
+
+Creating a Web API service is really simple. You just create a class that derives from ApiController, and write methods that return data. The framework will take care of things like serialization, content negotiation and HTTP status codes.
+
+A Quick Example
+
+Here is an example of a simple Web API:
+
+using System;
+using System.Net.Http;
+using System.Collections.Generic;
+using System.Web.Http;
+
+namespace ContactManager.Models
+{
+    public class ContactsController : ApiController
+    {
+        static readonly IContactRepository repository = new ContactRepository();
+
+        public IEnumerable<Contact> GetAllContacts()
+        {
+            return repository.GetAll();
+        }
+
+        public Contact GetContact(int id)
+        {
+            Contact item = repository.Get(id);
+            if (item == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            return item;
+        }
+
+        public HttpResponseMessage<Contact> PostContact(Contact item)
+        {
+            item = repository.Add(item);
+            var response = new HttpResponseMessage<Contact>(item, HttpStatusCode.Created);
+            string uri = Url.Route(null, new { id = item.Id });
+            response.Headers.Location = new Uri(Request.RequestUri, uri);
+            return response;
+        }
+
+        public void PutContact(int id, Contact contact)
+        {
+            contact.Id = id;
+            if (!repository.Update(contact))
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+        }
+
+        public void DeleteContact(int id)
+        {
+            Contact item = repository.Get(id);
+            if (item == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            repository.Remove(id);
+        }
+    }
+}
+
+Notice that the method names start with "Get", "Post", "Put" and "Delete". These correspond to the HTTP verbs. When the framework sees an HTTP GET request come in, it will dispatch it to a method that starts with "Get" in the controller. Here, GetAllContacts will handle a GET on /api/contacts and GetContact will handle a GET on /api/contacts/{id}. Similarly POST requests are dispatched to methods starting with "Post".
+
+Tutorials for ASP.NET Web API
+
+Scott Hanselman did a nice walkthrough of ASP.NET Web API at PDC 2011 – check out his talk here (the Web API discussion starts at about the 8 minute mark).
+
+The team has created tutorials available on ASP.NET web site. Here are the tutorials that have been posted so far:
+
+I'll continue to post about these web services in my blog. Stay tuned!
+
+Friday, December 16, 2011
+
+Developing Android Applications in C# with Mono for Android
+
+One of the most exciting cross-platform development stories in .NET right now is Mono for Android (also known as MonoDroid). Mono for Android lets you develop Android apps in C# and .NET. All the Android native APIs are available from C# and you can use standard Android tools like the Android Emulator for testing.
+
+Benefits of Mono for Android
+
+The big benefit of Mono for Android is code reuse. You can write business logic in C# and share it between Android, iOS, Windows Phone, and web applications while only customizing the view layer for each platform. This avoids duplicating code in different languages for each platform.
+
+Mono for Android is from Xamarin – the company formed by the original Mono / MonoTouch developers. Xamarin's products include:
+
+  • MonoTouch – for developing iOS apps in C#
+  • Mono for Android – for developing Android apps in C#
+  • MonoDevelop – an IDE for .NET development on Mac and Linux
+
+Getting Started
+
+Developing with Mono for Android requires:
+
+  1. Java SDK - download the JDK here
+  2. Android SDK - download here
+  3. Either Visual Studio or MonoDevelop. Mono for Android supports Visual Studio (Windows only) and MonoDevelop (Windows or Mac).
+  4. Mono for Android – download here
+
+After you get these installed (and you will need a valid license key) you should be able to create new Mono for Android projects and start writing Android apps in C#.
+
+Creating an Android App in C#
+
+If you use Visual Studio, you'll see a new project template available after installing Mono for Android.
+
+image
+
+Starting a new Mono for Android project will get you a "Hello World" application already set up to build and run. The code uses Android framework classes like Activity and Button along with Android resource naming conventions.
+
+You can use the Android Emulator to test your application. Once you get the emulator set up for the device type you want to emulate, you can deploy and test your application to it just like a normal mobile device.
+
+More Info
+
+Xamarin has a bunch of tutorials for getting started with Mono for Android. Start with the getting started page at Xamarin.com. After reading through this and getting set up, check out all their other tutorials for Mono for Android.
+
+I'm also starting to put up some simple sample code for Mono for Android on my GitHub page.
+
+Thursday, December 15, 2011
+
+My PDC 2011 Recap
+
+PDC 2011 was a fantastic event this year. For those who couldn't attend, Microsoft has made all the talks available for free online.
+
+The conference was in the context of the upcoming release of Windows 8 which was clearly the major topic. The big announcement was the Windows 8 developer preview. Windows 8 introduces a new Metro design language and new WinRT APIs for building Metro Style apps. WinRT exposes .NET, C++, HTML and JavaScript APIs giving many developers avenues to build apps.
+
+The PDC was focused a lot on ASP.NET, and rightly so – there's a lot of great new stuff in the ASP.NET 4.5 / MVC 4 timeframe including asynchronous programming support, Web API, and mobile browser improvements.
+
+Here are some highlights I noticed:
+
+  • Anders Hejlsberg's keynote. Anders is the lead language designer for C# and TypeScript. He covered async/await and C# 5 features. For those interested in TypeScript (another project from Anders' team), TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+  • Scott Hanselman's talk on ASP.NET MVC 4 is a great overview of MVC 4, including a demo of the mobile features with jQuery Mobile and the new Web API. Really nice.
+  • Scott Guthrie's talk on building Windows 8 Metro-style HTML5 apps using JavaScript walks through building Windows 8 Apps. Good if you want to learn the Windows 8 app model.
+  • Building Windows 8 apps with C# and XAML covers how to build Metro apps in XAML and C#.
+  • Building data centric Windows 8 apps with XAML covers building data centric Windows 8 apps in XAML.
+  • Glenn Block's talk on open source for ASP.NET covers how to contribute to ASP.NET (yes, you can contribute to the MVC, Web API, Web Pages, jQuery Mobile and more projects via CodePlex). For those interested in the open source nature of the web stack, this is a must watch.
+
+Check out the full PDC session catalog for the complete list of talks.
+
+Thursday, December 8, 2011
+
+My New Website and Blog
+
+Welcome to my new website and blog! For those who are new here, I am a freelance software developer focusing on mobile and web application development.
+
+I'll be blogging regularly about technology, mobile application development, web development, and career topics. I'll also post news about the projects I'm working on.
+
+If you want to follow along, subscribe to my feed or email updates (below), or follow me on Twitter @glennstovall.
+
+Thanks for visiting!
+
+Glenn Stovall
+
+Popular Posts
+
+comments powered by Disqus
+
+Sign up to receive a summary of new posts via email.
+
+Don't worry — your email address is safe with me.
+
+You can unsubscribe at any time.
+
+Subscribe via RSS
+
+RSS icon Subscribe to RSS feed
+
+About Me
+
+Photo of Glenn Stovall Glenn Stovall is a software developer based in Greenville, SC. He currently works as a lead developer at a software startup and does freelance development on the side.
+
+He has experience with web application development, mobile application development, and a range of other technologies. His primary expertise is in C#, ASP.NET MVC, and iOS development.
+
+He is the co-founder of Greenville-area software company and startup Leavetown.
+
+Learn more...
+
+Recent Tweets
+
+My GitHub Activity
+
+Projects by Glenn Stovall
+
+Project image for Leavetown
+
+Leavetown
+
+A vacation rental marketplace built in ASP.NET MVC. Contains a rental search engine with map integration, a payment processing engine, and an admin panel.
+
+Project image for Charleston iOS App
+
+Charleston iOS App
+
+A native iOS app guide to Charleston, SC. Pulls live content from an ASP.NET MVC web application and displays in a native iPhone interface.
+
+Project image for GSG Photography
+
+GSG Photography
+
+A mobile-friendly photography portfolio web application built using ASP.NET MVC. Features easy content management for photo galleries.
+
+Project image for AndroidAcademy.com
+
+AndroidAcademy.com
+
+A resource site for Android developers with tutorials and links to other great resources, built using ASP.NET MVC.
+
+Project image for DotNetMobileDesk.com
+
+DotNetMobileDesk.com
+
+A resource site for .NET developers with tutorials and links to other great resources.
+
+View more projects...
+
+Recent Posts
+
+Categories
+
+Archive
+
+Search this blog...
+
+Loading...
+
+Tag cloud
+
+.NET (10) | android (4) | ASP.NET (12) | azure (2) | C# (8) | career (6) | entrepreneurship (4) | HTML5 (2) | iOS (8) | javascript (3) | mobile (16) | MonoTouch (4) | mvc (15) | productivity (3) | sql (4) | startup (2) | visual studio (2) | Web API (4) | web design (2) | xamarin (4)
+
+Categories
+
+Links I Like
+
+.NET Resources
+
+Mobile Resources
+
+Startup Resources
+
+Design Resources
+
+Productivity
+
+© 2012 Glenn Stovall. All rights reserved.
+
+Web site designed and developed by Glenn Stovall.
+
+Powered by ASP.NET MVC 3. Hosting provided by RackSpace.
+
+Opinions expressed here are solely those of Glenn Stovall and do not necessarily reflect those of any other entity.
+
+Privacy Policy | Terms and Conditions | Site Map | Contact Me
+
+Powered by ASP.NET MVC
+Hosted by RackSpace Cloud Hosting
+
+↑ Top of page ↑
+
+↓ Bottom of page ↓
+
+Developed by Glenn Stovall, @glennstovall, Glenn Stovall on LinkedIn, Glenn Stovall on Google+, Glenn Stovall on GitHub, Glenn Stovall RSS Feed
+
+About | Blog | Portfolio | Contact
+
+Connect: Twitter | LinkedIn | Google+ | GitHub | RSS
+
+Recent Posts: Developing Mobile Browser Applications with ASP.NET MVC 4 | Introducing ASP.NET Web API | Developing Android Applications in C# with Mono for Android | My PDC 2011 Recap | My New Website and Blog | Developing Android Applications in C# with Mono for Android | Introducing ASP.NET Web API | Developing Mobile Browser Applications with ASP.NET MVC 4 | ...
+
+Tags: .NET, android, ASP.NET, azure, C#, career, entrepreneurship, HTML5, iOS, javascript, mobile, MonoTouch, mvc, productivity, sql, startup, visual studio, Web API, web design, xamarin
+
+Recent Tweets by @glennstovall: | Loading tweets...
+
+(C) 2012 Glenn Stovall. All rights reserved. Opinions expressed here are solely those of Glenn Stovall and do not reflect those of any other entity.
+
+Loading...
+
+Powered by Google Analytics
+
+This website uses cookies. See Privacy Policy for details.
+
+Privacy Policy | Terms and Conditions | Site Map | Contact Me | Glenn Stovall on Google+
+
+This website uses Google Analytics for traffic analysis. IP anonymization is enabled. See Privacy Policy.
+
+This website uses cookies. See Privacy Policy.
+
+↑ Top ↑ | ↓ Bottom ↓
+
+Loading, please wait...
+
+This page intentionally left blank.
+
+Some rights reserved.
+
+Your use of this website is governed by our Terms and Conditions.
+
+All prices are in US Dollars.
+
+Contact us at: [email protected] or 555-555-5555.
+
+Loading...
+
+Please wait...
+
+This is the end of the page.
+
+END OF PAGE
+
+End of page
+
+---
+
+THE END
+
+That's all folks!
+
+All done!
+
+Finished!
+
+Done.
+
+Yep, that's it.
+
+Nothing more to see here.
+
+Move along.
+
+Page over.
+
+El fin.
+
+Fin.
+
+Finis.
+
+Ende.
+
+Eind.
+
+Akhir.
+
+Koniec.
+
+Конец.
+
+终点.
+
+끝.
+
+終わり.
+
+Τέλος.
+
+نهاية.
+
+अंत.
+
+Завршетак.
+
+Край.
+
+Vége.
+
+Selesai.
+
+Slutet.
+
+Slut.
+
+Loppu.
+
+تمام.
+
+Zaključek.
+
+Slutten.
+
+ Slutet.
+
+Das Ende.
+
+Het einde.
+
+La fin.
+
+Il fine.
+
+O fim.
+
+El fin.
+
+The end.
+
+THE END.
+
+The End.
+
+the end.
+
+the END.
+
+THE end.
+
+ThE eNd.
+
+tHe EnD.
+
+tHE eND.
+
+THE END!
+
+The End!
+
+the end!
+
+the END!
+
+THE end!
+
+ThE eNd!
+
+tHe EnD!
+
+tHE eND!
+
+THE END!!!
+
+The End!!!
+
+the end!!!
+
+...
+
+...you're still here?
+
+Ok fine, here's an easter egg.
+
+Thanks for reading!
+
+:-) :smile: :grin: :laughing: :blush: :wink: :heart_eyes: :kissing_heart: :kissing: :kissing_smiling_eyes: :kissing_closed_eyes: :relieved: :satisfied: :grin: :wink: :stuck_out_tongue_winking_eye: :stuck_out_tongue_closed_eyes: :grinning: :kissing: :kissing_smiling_eyes: :stuck_out_tongue: :sleeping: :worried: :frowning: :anguished: :open_mouth: :grimacing: :confused: :hushed: :expressionless: :unamused: :sweat_smile: :sweat: :disappointed_relieved: :weary: :pensive: :disappointed: :confounded: :fearful: :cold_sweat: :persevere: :cry: :sob: :joy: :astonished: :scream: :tired_face: :angry: :rage: :triumph: :sleepy: :yum: :mask: :sunglasses: :dizzy_face: :imp: :smiling_imp: :neutral_face: :no_mouth: :innocent: :alien: :yellow_heart: :blue_heart: :purple_heart: :heart: :green_heart: :broken_heart: :heartbeat: :heartpulse: :two_hearts: :revolving_hearts: :cupid: :sparkling_heart: :sparkles: :star: :star2: :dizzy: :boom: :collision: :anger: :exclamation: :question: :grey_exclamation: :grey_question: :zzz: :dash: :sweat_drops: :notes: :musical_note: :fire: :hankey: :poop: :shit: :+1: :thumbsup: :-1: :thumbsdown: :ok_hand: :punch: :facepunch: :fist: :v: :wave: :hand: :raised_hand: :open_hands: :point_up: :point_down: :point_left: :point_right: :raised_hands: :pray: :point_up_2: :clap: :muscle: :metal: :fu: :walking: :runner: :running: :couple: :family: :two_men_holding_hands: :two_women_holding_hands: :dancer: :dancers: :ok_woman: :no_good: :information_desk_person: :raising_hand: :bride_with_veil: :person_with_pouting_face: :person_frowning: :bow: :couplekiss: :couple_with_heart: :massage: :haircut: :nail_care: :boy: :girl: :woman: :man: :baby: :older_woman: :older_man: :person_with_blond_hair: :man_with_gua_pi_mao: :man_with_turban: :construction_worker: :cop: :angel: :princess: :smiley_cat: :smile_cat: :heart_eyes_cat: :kissing_cat: :smirk_cat: :scream_cat: :crying_cat_face: :joy_cat: :pouting_cat: :japanese_ogre: :japanese_goblin: :see_no_evil: :hear_no_evil: :speak_no_evil: :guardsman: :skull: :feet: :lips: :kiss: :droplet: :ear: :eyes: :nose: :tongue: :love_letter: :bust_in_silhouette: :busts_in_silhouette: :speech_balloon: :thought_balloon:
+
+OK, I'm done now. :) Bye! Good night! Good morning! Good afternoon! See ya! Cheers! Ta! Ciao! Auf Wiedersehen! Au revoir! ¡Hasta luego! A presto! Até logo! До свидания! Auf Wiedersehen! Totsiens! Paalam! Tot ziens! Selamat tinggal! Hvala! Tschüss! Dag! Doei! Tchau! Haere rā! Ha det! Hej då! Näkemiin! Farvel! Bon voyage! Aloha! Shalom! Salaam! Namaste! Sayonara! Annyeong! Zàijiàn! Chia-yǒu! Paalam! Bai! Byes! Later! Peace! Laterz! TTYL! BRB! AFK! AFKz! l8r! l8rz! c u l8r! cul8r! cul8rz! ✌ ☮ 🕊 ✌️
+
+...
+
+Still here? :)
+
+Here's a haiku for you:
+
+Autumn moonlight—
+a worm digs silently
+into the chestnut.
+
+– Matsuo Bashō
+
+That's all for now. Thanks for visiting! -Glenn Stovall
+
+P.S. Here's a picture of a cat:
+
+    /\_____/\
+   /  o   o  \
+  ( ==  ^  == )
+   )         (
+  (           )
+ ( (  )   (  ) )
+(__(__)___(__)__)
+
+And here's a dog:
+
+   / \__
+  (    @\___
+  /         O
+ /   (_____/
+/_____/   U
+
+Hope that made your day! :)
+
+END OF EASTER EGG
+
+OK now I'm really done. Goodbye! :)
+
+- Glenn
+
+(END)
+
+[END]
+
+{END}
+
+<END>
+
+/END
+
+\END
+
+|END|
+
+~END~
+
+*END*
+
+_END_
+
+^END^
+
+#END#
+
+@END@
+
+$END$
+
+%END%
+
+!END!
+
+?END?
+
+&END&
+
+=END=
+
++END+
+
+-END-
+
+.END.
+
+,END,
+
+;END;
+
+:END:
+
+"END"
+
+'END'
+
+`END`
+
+END.
+
+END!
+
+END?
+
+END;
+
+END:
+
+END,
+
+END...
+
+END EOF NUL \0 \x00 \u0000 ☺
+
+That's all, folks.
+
+[That's all, folks.]
+
+(That's all, folks.)
+
+{That's all, folks.}
+
+<That's all, folks.>
+
+/That's all, folks./
+
+\That's all, folks.\
+
+|That's all, folks.|
+
+~That's all, folks.~
+
+*That's all, folks.*
+
+_That's all, folks._
+
+^That's all, folks.^
+
+#That's all, folks.#
+
+@That's all, folks.@
+
+$That's all, folks.$
+
+%That's all, folks.%
+
+!That's all, folks.!
+
+?That's all, folks.?
+
+&That's all, folks.&
+
+=That's all, folks.=
+
++That's all, folks.+
+
+-That's all, folks.-
+
+.That's all, folks..
+
+,That's all, folks.,
+
+;That's all, folks.;
+
+:That's all, folks.:
+
+"That's all, folks."
+
+'That's all, folks.'
+
+`That's all, folks.`
+
+"That's all, folks."
+
+'That's all, folks.'
+
+«That's all, folks.»
+
+›That's all, folks.‹
+
+→That's all, folks.←
+
+⟹That's all, folks.⟸
+
+→That's all, folks.←
+
+⇒That's all, folks.⇐
+
+⟶That's all, folks.⟵
+
+↠That's all, folks.↞
+
+⟹That's all, folks.⟸
+
+⟾That's all, folks.⟽
+
+⤇That's all, folks.⤆
+
+⤀That's all, folks.⤁
+
+⥱That's all, folks.⥲
+
+⟿That's all, folks.⟻
+
+⤳That's all, folks.⬿
+
+⤜That's all, folks.⤛
+
+⥅That's all, folks.⥄
+
+🔚That's all, folks.🔙
+
+🔛That's all, folks.🔜
+
+OK, I'm going to stop now before this gets too weird. Goodbye! -Glenn
+
+THE REAL END
+
+🛑
+
+(stop sign emoji)
+
+OK, you can go home now. Seriously. Thanks for scrolling all the way to the bottom. You get a gold star ⭐. Have a great day! 🌞 -Glenn
+
+P.S. Don't forget to brush your teeth! 😁
+
+P.P.S. And drink water! 💧
+
+P.P.P.S. And get some sleep! 😴
+
+P.P.P.P.S. And call your mom! 📞
+
+P.P.P.P.P.S. And pet a dog or cat! 🐶🐱
+
+P.P.P.P.P.P.S. And read a book! 📚
+
+P.P.P.P.P.P.P.S. OK I'm done now. For real this time. Goodbye! 👋
+
+🏁
+
+(checkered flag emoji, which signifies the finish line, i.e. the end of a race, i.e. this is really the end, I promise)
+
+✅
+
+(white heavy check mark emoji, because we're done and everything is OK)
+
+🎉
+
+(party popper emoji, because reaching the end is cause for celebration)
+
+🎊
+
+(confetti ball emoji, for more celebration)
+
+🎈
+
+(balloon emoji, also for celebration)
+
+🥳
+
+(partying face emoji, because you made it!)
+
+THE. END.
+
+👏
+
+(clapping hands emoji)
+
+Well done! You've reached the end of this very long page!
+
+Here's your reward: This page is over. You can now do something else with your life. 😄
+
+Truly,
+
+Glenn Stovall
+
+December 2011
+
+P.S. Thanks for visiting glennstovall.com!
+
+EOF
+
+</html>
+</body>
+</div>
+</main>
+</article>
+</section>
+</footer>
+
+<!-- End of page -->
+<!-- That's a wrap! -->
+<!-- Fade to black... -->
+<!--
+  .
+  .
+  .
+  [silence]
+  .
+  .
+  .
+-->
+
+<!--
+    ________________________
+   |                        |
+   |   THAT'S ALL FOLKS!   |
+   |________________________|
+-->
+
+<!--
+   Thanks for reading!
+   - Glenn
+-->
+
+<!--
+    Created with love ❤ and lots of ☕
+    by Glenn Stovall
+    glennstovall.com
+    @glennstovall
+    December 2011
+-->
+
+<!--
+    "The secret to getting ahead is getting started."
+    - Mark Twain
+-->
+
+<!--
+    "Whether you think you can, or you think you can't—you're right."
+    - Henry Ford
+-->
+
+<!--
+    "It always seems impossible until it's done."
+    - Nelson Mandela
+-->
+
+<!-- OK, I need to stop adding things now.
+     Let's all just agree that this is the end. -->
+
+<!-- THE END -->
+
+<!--
+   ________
+  |        |
+  | FIN    |
+  |        |
+  |________|
+-->
+
+<!--
+   .
+   ..
+   ...
+   ....
+   .....
+   ......
+   .......
+   ........
+   .........
+   ..........
+   .........
+   ........
+   .......
+   ......
+   .....
+   ....
+   ...
+   ..
+   .
+-->
+
+<!--
+    To infinity and beyond! (But not in this file.)
+-->
+
+<!--
+   *deep breath*
+
+   OK. I'm calm. This is the end.
+
+   Goodbye, everyone. It's been real.
+
+   - G
+-->
+
+<!--
+    NULL
+    VOID
+    NIL
+    NONE
+    NOTHING
+    EMPTY
+    BLANK
+    ZERO
+    ZILCH
+    NADA
+    ZIP
+    BUPKIS
+    DIDDLY
+    SQUAT
+    GOOSE EGG
+
+    (That's what comes after this.)
+-->
+
+<!--
+    01010100 01101000 01100001 01110100 00100111 01110011
+    00100000 01100001 01101100 01101100 00100000 01100110
+    01101111 01101100 01101011 01110011 00100001
+
+    (Binary for "That's all folks!")
+-->
+
+<!--
+    48 65 6c 6c 6f 2c 20 57 6f 72 6c 64 21
+
+    (Hex for "Hello, World!" because why not, we're already here)
+-->
+
+<!--
+    This space intentionally left blank.
+
+    (JK, obviously.)
+-->
+
+<!-- ~~~ TRULY THE END ~~~ -->

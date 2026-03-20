@@ -2,7 +2,7 @@ import hashlib
 import json
 import logging
 import re
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 import requests
 
@@ -16,6 +16,7 @@ from ..config import (
 )
 from ..filters import keyword_match
 from ..llm import groq_analyse_pjl, groq_briefing_parlement
+from ..supabase_sync import SupabaseSync
 
 log = logging.getLogger(__name__)
 
@@ -180,6 +181,41 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
     groq_used = 0
     groq_skipped = 0
 
+    # ── Sync bidirectionnel Supabase ──────────────────────────────────
+    sync = SupabaseSync()
+    if sync.ready:
+        # Charger les dossiers ajoutés manuellement depuis l'UI
+        manuel_rows = sync.load_manuel_dossiers()
+        for row in manuel_rows:
+            url_an = row.get('url_an', '')
+            if not url_an:
+                continue
+            fiche_id = 'pjl-' + hashlib.md5(url_an.encode()).hexdigest()[:12]
+            if fiche_id not in fiches:
+                # Importer le dossier Supabase dans le cache local
+                fiches[fiche_id] = {
+                    'id':          fiche_id,
+                    'titre':       row.get('titre', ''),
+                    'date_depot':  str(row.get('date_depot') or today_str),
+                    'stade':       row.get('stade', 'Dépôt'),
+                    'stade_index': row.get('stade_index', 0),
+                    'url_an':      url_an,
+                    'url_dossier': row.get('url_dossier', ''),
+                    'source_rss':  'manuel',
+                    'resume_gsf':  row.get('resume_gsf', ''),
+                    'pourquoi':    row.get('pourquoi', ''),
+                    'score':       row.get('score', 2),
+                    'horizon':     row.get('horizon', ''),
+                    'nouveau_stade': False,
+                    'manuel':      True,
+                    'historique':  [{'date': today_str, 'stade': row.get('stade', 'Dépôt'), 'event': 'Importé depuis UI'}],
+                    'created_at':  today_str,
+                    'updated_at':  today_str,
+                    'supabase_id': row.get('id'),
+                    'statut':      row.get('statut', 'a_surveiller'),
+                }
+                log.info(f"Parlement: dossier manuel importé depuis Supabase — {row.get('titre','')[:50]}")
+
     all_entries = []
     for source in AN_SCRAPER_SOURCES:
         all_entries.extend(_scrape_an_listing(source, today_str))
@@ -215,17 +251,22 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
             if url_dossier:
                 stade_actuel = _scrape_dossier_stade(url_dossier) or stade
                 if stade_actuel and stade_actuel != fiche['stade']:
-                    log.info(f"Parlement avancement : {titre[:50]} [{fiche['stade']} → {stade_actuel}]")
+                    ancien_stade = fiche['stade']
+                    log.info(f"Parlement avancement : {titre[:50]} [{ancien_stade} → {stade_actuel}]")
                     fiche.setdefault('historique', []).append({
                         'date': today_str,
                         'stade': stade_actuel,
-                        'event': f"Avancement : {fiche['stade']} → {stade_actuel}",
+                        'event': f"Avancement : {ancien_stade} → {stade_actuel}",
                     })
                     fiche['stade'] = stade_actuel
                     fiche['stade_index'] = STADES_ORDRE.index(stade_actuel) if stade_actuel in STADES_ORDRE else 0
                     fiche['nouveau_stade'] = True
                     fiche['updated_at'] = today_str
                     maj += 1
+                    # Sync Supabase
+                    if sync.ready:
+                        sync.upsert_dossier(fiche)
+                        sync.record_stage_change(fiche, ancien_stade, stade_actuel)
             continue
 
         # Filter 1: keyword_match
@@ -247,7 +288,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         if not analysis.get('pertinent'):
             continue
 
-        fiches[fiche_id] = {
+        new_fiche = {
             'id': fiche_id,
             'titre': titre,
             'date_depot': entry['date'],
@@ -266,8 +307,13 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
             'created_at': today_str,
             'updated_at': today_str,
         }
+        fiches[fiche_id] = new_fiche
         nouveaux += 1
         log.info(f"Parlement PJL retenu (score={analysis['score']}) : {titre[:60]}")
+        # Sync Supabase
+        if sync.ready:
+            sync.upsert_dossier(new_fiche)
+            sync.record_creation(new_fiche)
 
     # Step 3: manually added dossiers update stage (manuel=True)
     for fiche_id, fiche in fiches.items():
@@ -281,20 +327,25 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         try:
             stade_actuel = _scrape_dossier_stade(url_dossier)
             if stade_actuel and stade_actuel != fiche.get('stade', ''):
+                ancien_stade = fiche.get('stade', '?')
                 log.info(
                     f"Parlement manuel avancement : {fiche['titre'][:50]} "
-                    f"[{fiche.get('stade')} → {stade_actuel}]"
+                    f"[{ancien_stade} → {stade_actuel}]"
                 )
                 fiche.setdefault('historique', []).append({
                     'date': today_str,
                     'stade': stade_actuel,
-                    'event': f"Avancement : {fiche.get('stade','?')} → {stade_actuel}",
+                    'event': f"Avancement : {ancien_stade} → {stade_actuel}",
                 })
                 fiche['stade'] = stade_actuel
                 fiche['stade_index'] = STADES_ORDRE.index(stade_actuel) if stade_actuel in STADES_ORDRE else 0
                 fiche['nouveau_stade'] = True
                 fiche['updated_at'] = today_str
                 maj += 1
+                # Sync Supabase
+                if sync.ready:
+                    sync.upsert_dossier(fiche)
+                    sync.record_stage_change(fiche, ancien_stade, stade_actuel)
         except Exception as e:
             log.debug(f"Parlement manuel MAJ {fiche_id}: {e}")
 
