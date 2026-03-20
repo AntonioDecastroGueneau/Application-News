@@ -48,6 +48,26 @@ class SupabaseSync:
 
     # ── Read ──────────────────────────────────────────────────────────
 
+    def load_all_dossiers(self) -> list:
+        """
+        Pull all tracked dossiers from Supabase (pipeline + manuel).
+        Used to seed the local cache on a fresh run (e.g. GitHub Actions).
+        """
+        if not self._ready:
+            return []
+        try:
+            resp = (
+                self._client.table('legislative_dossiers')
+                .select('*')
+                .execute()
+            )
+            rows = resp.data or []
+            log.info(f"Supabase: {len(rows)} dossier(s) chargé(s) depuis Supabase")
+            return rows
+        except Exception as e:
+            log.warning(f"Supabase load_all_dossiers: {e}")
+            return []
+
     def load_manuel_dossiers(self) -> list:
         """
         Pull dossiers added manually from the UI (source = 'manuel').

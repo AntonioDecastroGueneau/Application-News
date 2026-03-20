@@ -184,6 +184,36 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
     # ── Sync bidirectionnel Supabase ──────────────────────────────────
     sync = SupabaseSync()
     if sync.ready:
+        # Si le cache local est vide (ex: GitHub Actions), on charge tout depuis Supabase
+        if not fiches:
+            all_rows = sync.load_all_dossiers()
+            for row in all_rows:
+                url_an = row.get('url_an', '')
+                if not url_an:
+                    continue
+                fiche_id = 'pjl-' + hashlib.md5(url_an.encode()).hexdigest()[:12]
+                fiches[fiche_id] = {
+                    'id':          fiche_id,
+                    'titre':       row.get('titre', ''),
+                    'date_depot':  str(row.get('date_depot') or today_str),
+                    'stade':       row.get('stade', 'Dépôt'),
+                    'stade_index': row.get('stade_index', 0),
+                    'url_an':      url_an,
+                    'url_dossier': row.get('url_dossier', ''),
+                    'source_rss':  row.get('source', 'pipeline'),
+                    'resume_gsf':  row.get('resume_gsf', ''),
+                    'pourquoi':    row.get('pourquoi', ''),
+                    'score':       row.get('score', 2),
+                    'horizon':     row.get('horizon', ''),
+                    'nouveau_stade': False,
+                    'manuel':      row.get('source') == 'manuel',
+                    'historique':  [],
+                    'created_at':  str(row.get('created_at') or today_str),
+                    'updated_at':  str(row.get('updated_at') or today_str),
+                    'supabase_id': row.get('id'),
+                    'statut':      row.get('statut', 'a_surveiller'),
+                }
+
         # Charger les dossiers ajoutés manuellement depuis l'UI
         manuel_rows = sync.load_manuel_dossiers()
         for row in manuel_rows:
