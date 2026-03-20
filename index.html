@@ -357,6 +357,36 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
 .btn-cancel:hover{border-color:var(--border2);color:var(--text2)}
 .btn-save{padding:7px 16px;background:var(--blue);color:#fff;border:none;border-radius:var(--radius-sm);font-size:12px;font-weight:500;font-family:var(--sans);cursor:pointer;transition:opacity .15s}
 .btn-save:hover{opacity:.9}
+
+/* ── Likes / Favoris ─────────────────────────────────────────────────── */
+#likes-view{padding:0;flex-direction:column;overflow-y:auto}
+.likes-header{padding:14px 20px;background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px;flex-shrink:0;position:sticky;top:0;z-index:2}
+.likes-page-title{font-size:14px;font-weight:600;color:var(--text);flex:1}
+.likes-count{font-size:11px;font-family:var(--mono);background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:2px 9px;color:var(--muted)}
+.btn-clear-likes{font-size:11px;color:var(--muted);background:none;border:1px solid var(--border);border-radius:var(--radius-sm);padding:4px 10px;cursor:pointer;font-family:var(--sans);transition:all .15s}
+.btn-clear-likes:hover{color:var(--red);border-color:var(--red-border)}
+.likes-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;gap:10px;padding:48px 20px;text-align:center}
+.likes-empty-icon{font-size:36px;opacity:.3}
+.likes-empty-text{font-size:13px;color:var(--muted)}
+.likes-empty-hint{font-size:11px;color:var(--muted2);line-height:1.5}
+.likes-grid{padding:16px 20px;display:flex;flex-direction:column;gap:10px}
+.like-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;border-left:3px solid var(--border2);position:relative;transition:background .1s}
+.like-card:hover{background:var(--surface2)}
+.like-card.prio3{border-left-color:var(--red)}
+.like-card.prio2{border-left-color:var(--orange)}
+.like-card-top{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.like-card-meta{font-size:10px;font-family:var(--mono);color:var(--muted2);margin-left:auto;white-space:nowrap}
+.like-remove{background:none;border:none;color:var(--muted2);cursor:pointer;font-size:14px;padding:0 0 0 8px;line-height:1;transition:color .15s;flex-shrink:0}
+.like-remove:hover{color:var(--red)}
+.like-titre{font-size:13px;font-weight:500;color:var(--text);line-height:1.4;margin-bottom:5px}
+.like-resume{font-size:12px;color:var(--text2);line-height:1.55;margin-bottom:8px}
+.like-footer{display:flex;align-items:center;gap:10px;font-size:11px;color:var(--muted)}
+.like-footer a{color:var(--blue);text-decoration:none;font-family:var(--mono)}
+.like-footer a:hover{text-decoration:underline}
+/* ─ Bouton like dans le feed ─ */
+.like-btn{background:none;border:none;cursor:pointer;font-size:16px;color:var(--muted2);padding:2px 0;line-height:1;transition:all .15s;flex-shrink:0}
+.like-btn:hover{color:#f59e0b;transform:scale(1.2)}
+.like-btn.liked{color:#f59e0b}
 </style>
 </head>
 <body>
@@ -374,7 +404,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
       <div class="nav-item active" data-view="feed" onclick="switchView('feed')"><div class="nav-dot"></div>Feed</div>
       <div class="nav-item" data-view="carte" onclick="switchView('carte')"><div class="nav-dot"></div>Carte Eau</div>
       <div class="nav-item" data-view="jo" onclick="switchView('jo')"><div class="nav-dot"></div>JO / DILA</div>
-      <div class="nav-item" data-view="archives" onclick="switchView('archives')"><div class="nav-dot"></div>Archives</div>
+      <div class="nav-item" data-view="likes" onclick="switchView('likes')"><div class="nav-dot"></div>Favoris <span id="nav-likes-badge" style="margin-left:auto;font-size:9px;font-family:var(--mono);background:rgba(245,158,11,.15);color:#f59e0b;padding:1px 6px;border-radius:10px;display:none"></span></div>
       <div class="nav-item" data-view="historique" onclick="switchView('historique')"><div class="nav-dot"></div>Historique Eau</div>
       <div class="nav-item" data-view="parlement" onclick="switchView('parlement')"><div class="nav-dot"></div>Parlement <span id="nav-parl-badge" style="margin-left:auto;font-size:9px;font-family:var(--mono);background:rgba(74,222,128,.15);color:var(--sb-accent);padding:1px 6px;border-radius:10px;display:none"></span></div>
     </div>
@@ -436,16 +466,20 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
         <div class="parl-title-row"><div class="parl-page-title">Veille Parlementaire</div></div>
         <div class="parl-stats-row" id="parl-stats"></div>
         <div class="parl-tabs">
-          <div class="parl-tab active" data-panel="legislatif" onclick="switchParlTab('legislatif')">Législatif</div>
-          <div class="parl-tab" data-panel="suivi" onclick="switchParlTab('suivi')">Suivi <span id="nav-suivi-count" style="font-size:10px;font-family:var(--mono);background:rgba(37,99,235,.12);color:var(--blue);padding:1px 5px;border-radius:10px;margin-left:4px;display:none"></span></div>
+          <div class="parl-tab active" data-panel="legislatif" onclick="switchParlTab('legislatif')">Pipeline auto</div>
+          <div class="parl-tab" data-panel="suivi" onclick="switchParlTab('suivi')">Mes dossiers <span id="nav-suivi-count" style="font-size:10px;font-family:var(--mono);background:rgba(37,99,235,.12);color:var(--blue);padding:1px 5px;border-radius:10px;margin-left:4px;display:none"></span></div>
         </div>
       </div>
       <!-- Tab Législatif -->
       <div class="parl-tab-panel active" id="legislatif-panel">
         <div style="padding:12px 20px 0">
+          <div style="font-size:11px;color:var(--muted);background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 12px;margin-bottom:10px;line-height:1.5">
+            <strong style="color:var(--text2)">Pipeline automatique</strong> — Le pipeline détecte chaque nuit les nouveaux PJL environnementaux.<br>
+            Pour soumettre un dossier spécifique à suivre dès le prochain run, collez son URL ci-dessous.
+          </div>
           <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
             <input id="parl-dossier-input" type="text"
-              placeholder="URL dossier AN à suivre — ex: assemblee-nationale.fr/dyn/17/dossiers/…"
+              placeholder="URL dossier AN à soumettre au pipeline — ex: assemblee-nationale.fr/dyn/17/dossiers/…"
               style="flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 12px;color:var(--text);font-size:12px;font-family:var(--sans);outline:none;transition:border-color .15s"
               onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor=''">
             <button onclick="ajouterDossierManuel()"
@@ -458,6 +492,9 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
       </div>
       <!-- Tab Suivi Supabase -->
       <div class="parl-tab-panel" id="suivi-panel">
+        <div style="font-size:11px;color:var(--muted);background:var(--blue-bg);border-bottom:1px solid var(--blue-border);padding:8px 20px;line-height:1.5;flex-shrink:0">
+          <strong style="color:var(--blue)">Mes dossiers</strong> — Suivi manuel et collaboratif. Ajoutez vos propres dossiers, changez leur statut, laissez des commentaires d'analyse. Indépendant du pipeline.
+        </div>
         <div class="suivi-toolbar">
           <div class="suivi-toolbar-left">
             <button class="btn-add-dossier" onclick="openAddDossierModal()">+ Nouveau dossier</button>
@@ -472,8 +509,13 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
         <div class="suivi-list" id="suivi-list"><div class="empty-state">Chargement…</div></div>
       </div>
     </div>
-    <div class="view" id="archives-view">      <div class="arc-title">Archives — 90 jours</div>
-      <div id="arc-calendar"></div>
+    <div class="view" id="likes-view">
+      <div class="likes-header">
+        <div class="likes-page-title">Favoris</div>
+        <span class="likes-count" id="likes-count">0 article</span>
+        <button class="btn-clear-likes" onclick="clearLikes()" id="btn-clear-likes" style="display:none">Tout effacer</button>
+      </div>
+      <div id="likes-content"></div>
     </div>
     <div class="view" id="historique-view">
       <div class="hist-page-title">Historique Restrictions Eau — 2020 → 2026</div>
@@ -538,6 +580,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
 
 <script>
 let D=null,archive=null,currentDate=null,currentView='feed',catFilter='all';
+let likes=JSON.parse(localStorage.getItem('gsf_likes')||'[]');
 let srcFilters={jorf:true,presse:true};
 let mapgl=null,histData=null,histYear='all';
 
@@ -565,6 +608,7 @@ async function init(){
     archive=await(await fetch('archive.json')).json();
     if(archive?.dates?.length){currentDate=archive.dates[0];D=await(await fetch(`data/${currentDate}.json`)).json();}
     renderAll();
+    updateLikesBadge();
     document.getElementById('loading').style.display='none';
   }catch(e){
     document.getElementById('loading').style.display='none';
@@ -622,6 +666,7 @@ function renderFeed(){
     const cc=['','prio1','prio2','prio3'][item.criticite]||'prio1';
     const cl=['','Veille','À surveiller','⚠ Impact direct'][item.criticite]||'Veille';
     const bc='badge-'+(item.categorie||'Environnement');
+    const isLiked=likes.some(l=>l.id===item.id);
     return `<div class="card ${cc}" id="item-${item.id}" data-crit="${item.criticite}">
       <span class="card-badge ${bc}">${escHtml(item.categorie)}</span>
       <div class="card-body">
@@ -630,6 +675,7 @@ function renderFeed(){
         <div class="card-meta"><span>${escHtml(item.source)}</span>${item.date?`<span class="card-date">${formatDate(item.date)}</span>`:''}</div>
       </div>
       <div class="card-right">
+        <button class="like-btn${isLiked?' liked':''}" data-like-id="${item.id}" onclick="event.stopPropagation();toggleLike('${item.id}')" title="${isLiked?'Retirer des favoris':'Sauvegarder'}">${isLiked?'★':'☆'}</button>
         <span class="crit-badge crit${item.criticite}">${cl}</span>
         ${item.url?`<a class="card-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Lire →</a>`:''}
       </div></div>`;}
@@ -1257,15 +1303,67 @@ async function saveDossier(){
   }catch(e){showToast('Erreur : '+e.message);}
 }
 
+// ── Likes / Favoris ───────────────────────────────────────────────────
+function saveLikes(){localStorage.setItem('gsf_likes',JSON.stringify(likes));updateLikesBadge();}
+function updateLikesBadge(){
+  const badge=document.getElementById('nav-likes-badge');
+  const count=document.getElementById('likes-count');
+  const btnClear=document.getElementById('btn-clear-likes');
+  if(badge){badge.textContent=likes.length;badge.style.display=likes.length?'inline':'none';}
+  if(count)count.textContent=likes.length+' article'+(likes.length!==1?'s':'');
+  if(btnClear)btnClear.style.display=likes.length?'':'none';
+}
+function toggleLike(itemId){
+  const item=D?.items?.find(i=>i.id===itemId)||likes.find(l=>l.id===itemId);
+  if(!item)return;
+  const idx=likes.findIndex(l=>l.id===itemId);
+  if(idx>=0){likes.splice(idx,1);showToast('Retiré des favoris');}
+  else{likes.unshift({...item,likedAt:new Date().toISOString(),dataDate:currentDate});showToast('⭐ Sauvegardé dans les favoris');}
+  saveLikes();
+  const btn=document.querySelector(`[data-like-id="${itemId}"]`);
+  if(btn){const now=likes.some(l=>l.id===itemId);btn.textContent=now?'★':'☆';btn.classList.toggle('liked',now);}
+  if(currentView==='likes')renderLikes();
+}
+function renderLikes(){
+  const el=document.getElementById('likes-content');
+  if(!el)return;
+  updateLikesBadge();
+  if(!likes.length){
+    el.innerHTML=`<div class="likes-empty"><div class="likes-empty-icon">☆</div><div class="likes-empty-text">Aucun article sauvegardé</div><div class="likes-empty-hint">Cliquez sur ☆ dans le feed pour sauvegarder<br>les articles qui vous intéressent.</div></div>`;
+    return;
+  }
+  el.innerHTML=`<div class="likes-grid">${likes.map(item=>{
+    const cc=item.criticite>=3?'prio3':item.criticite>=2?'prio2':'';
+    const bc='badge-'+(item.categorie||'Environnement');
+    return `<div class="like-card ${cc}">
+      <div class="like-card-top">
+        <span class="card-badge ${bc}">${escHtml(item.categorie)}</span>
+        <span class="like-card-meta">Veille du ${formatDate(item.dataDate||item.date)}</span>
+        <button class="like-remove" onclick="toggleLike('${item.id}')" title="Retirer">✕</button>
+      </div>
+      <div class="like-titre">${escHtml(item.titre)}</div>
+      ${item.resume?`<div class="like-resume">${escHtml(item.resume)}</div>`:''}
+      <div class="like-footer">
+        <span>${escHtml(item.source)}</span>
+        ${item.url?`<a href="${escHtml(item.url)}" target="_blank" rel="noopener">Lire l'article →</a>`:''}
+      </div>
+    </div>`;
+  }).join('')}</div>`;
+}
+function clearLikes(){
+  if(!confirm(`Supprimer les ${likes.length} favoris ?`))return;
+  likes=[];saveLikes();renderLikes();renderFeed();
+}
+
 function switchView(view){
   currentView=view;
   document.querySelectorAll('.view').forEach(el=>el.classList.remove('active'));
   document.getElementById(`${view}-view`).classList.add('active');
   document.querySelectorAll('.nav-item').forEach(el=>el.classList.toggle('active',el.dataset.view===view));
   if(view==='carte'){setTimeout(()=>{renderMap();if(mapgl)mapgl.resize();renderMapEncart();},30);}
-  if(view==='archives')renderArchives();
   if(view==='jo')renderJO();
   if(view==='historique')loadHistorique();
+  if(view==='likes')renderLikes();
   if(view==='parlement'){renderParlement();loadDossiersSuivi();}
 }
 function formatDate(iso){if(!iso)return'—';const[y,m,d]=iso.split('-');const M=['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];return `${parseInt(d)} ${M[parseInt(m)-1]} ${y}`;}

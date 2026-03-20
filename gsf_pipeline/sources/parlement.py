@@ -62,7 +62,9 @@ def _scrape_an_listing(source: dict, today_str: str) -> list:
             date_str = today_str
             date_el = item.find(string=re.compile(r'Mis en ligne|mis en ligne', re.I))
             if date_el:
-                m = re.search(r'(\d{1,2})\s+(\w+)\s+(\d{4})', str(date_el))
+                # Chercher la date dans le texte du parent (la date peut être dans un nœud sibling)
+                search_text = date_el.parent.get_text(' ') if date_el.parent else str(date_el)
+                m = re.search(r'(\d{1,2})\s+(\w+)\s+(\d{4})', search_text)
                 if m:
                     mois_fr = {
                         'janvier': '01', 'février': '02', 'mars': '03', 'avril': '04',
