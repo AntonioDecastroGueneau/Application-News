@@ -280,6 +280,82 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
 .parl-hist-item{display:flex;gap:8px;align-items:baseline;font-size:11px;color:var(--muted);padding:2px 0}
 .parl-hist-date{font-family:var(--mono);flex-shrink:0}
 .parl-empty{padding:48px 20px;text-align:center;font-size:13px;color:var(--muted)}
+
+/* ── Parlement sub-tabs ──────────────────────────────────────────────── */
+.parl-header{padding:16px 20px 0!important}
+.parl-tabs{display:flex;gap:0;border-bottom:1px solid var(--border);background:var(--surface);padding:0 20px;margin-top:12px}
+.parl-tab{padding:10px 16px;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;user-select:none;white-space:nowrap}
+.parl-tab:hover{color:var(--text2)}
+.parl-tab.active{color:var(--blue);border-bottom-color:var(--blue)}
+.parl-tab-panel{display:none;flex:1;flex-direction:column;overflow-y:auto}
+.parl-tab-panel.active{display:flex}
+
+/* ── Suivi tab ──────────────────────────────────────────────────────── */
+#suivi-panel{flex-direction:column}
+.suivi-toolbar{display:flex;align-items:center;gap:8px;padding:14px 20px;background:var(--surface);border-bottom:1px solid var(--border);flex-wrap:wrap;flex-shrink:0}
+.suivi-toolbar-left{display:flex;align-items:center;gap:8px;flex:1}
+.btn-add-dossier{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;background:var(--blue);color:#fff;border:none;border-radius:var(--radius-sm);font-size:12px;font-weight:500;font-family:var(--sans);cursor:pointer;transition:all .15s;white-space:nowrap}
+.btn-add-dossier:hover{opacity:.9;box-shadow:0 2px 8px rgba(37,99,235,.3)}
+.suivi-filter-group{display:flex;gap:4px}
+.suivi-filter-btn{padding:4px 12px;border-radius:20px;font-size:11px;border:1px solid var(--border);background:none;color:var(--muted);cursor:pointer;font-family:var(--sans);transition:all .15s}
+.suivi-filter-btn:hover{border-color:var(--border2);color:var(--text2)}
+.suivi-filter-btn.on{background:var(--blue-bg);border-color:var(--blue-border);color:var(--blue);font-weight:500}
+.suivi-list{flex:1;overflow-y:auto}
+.suivi-item{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 20px;transition:background .1s;cursor:pointer;border-left:3px solid transparent}
+.suivi-item:hover{background:var(--surface2)}
+.suivi-item.s-critique{border-left-color:var(--statut-critique)}
+.suivi-item.s-a_surveiller{border-left-color:var(--statut-surveiller)}
+.suivi-item.s-pour_info{border-left-color:var(--statut-info)}
+.suivi-item-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:6px}
+.suivi-item-titre{font-size:13px;font-weight:500;color:var(--text);line-height:1.4;flex:1}
+.suivi-item-resume{font-size:12px;color:var(--text2);line-height:1.55;margin-bottom:8px}
+.suivi-item-meta{display:flex;gap:12px;font-size:11px;color:var(--muted);flex-wrap:wrap;align-items:center}
+.suivi-item-actions{display:flex;gap:8px;margin-top:10px;align-items:center}
+.btn-comments{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--muted);background:none;border:1px solid var(--border);border-radius:4px;padding:3px 10px;cursor:pointer;font-family:var(--sans);transition:all .15s}
+.btn-comments:hover{color:var(--text2);border-color:var(--border2)}
+.btn-details{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--blue);background:none;border:none;cursor:pointer;font-family:var(--mono);padding:0;text-decoration:none}
+.btn-details:hover{text-decoration:underline}
+
+/* ── Dossier drawer ──────────────────────────────────────────────────── */
+#dossier-drawer{position:fixed;top:0;right:0;bottom:0;width:460px;max-width:100vw;background:var(--surface);border-left:1px solid var(--border);z-index:500;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .25s ease;box-shadow:-4px 0 20px rgba(0,0,0,.1)}
+#dossier-drawer.open{transform:translateX(0)}
+#drawer-overlay{display:none;position:fixed;inset:0;z-index:499;background:rgba(0,0,0,.25)}
+.drawer-header{padding:16px 20px;border-bottom:1px solid var(--border);flex-shrink:0;display:flex;flex-direction:column;gap:8px}
+.drawer-title-row{display:flex;align-items:flex-start;gap:10px}
+.drawer-title{font-size:14px;font-weight:600;color:var(--text);line-height:1.4;flex:1}
+.drawer-close{background:none;border:none;font-size:18px;color:var(--muted);cursor:pointer;padding:0;line-height:1;flex-shrink:0;transition:color .15s}
+.drawer-close:hover{color:var(--text)}
+.drawer-statut-row{display:flex;gap:6px;flex-wrap:wrap}
+.drawer-body{flex:1;overflow-y:auto;padding:16px 20px;display:flex;flex-direction:column;gap:16px}
+.drawer-section-title{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.drawer-comment-form{margin-top:4px;display:flex;flex-direction:column;gap:6px}
+.drawer-comment-form textarea{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 10px;color:var(--text);font-size:12px;font-family:var(--sans);resize:vertical;outline:none;transition:border-color .15s}
+.drawer-comment-form textarea:focus{border-color:var(--blue)}
+.comment-item{padding:8px 0;border-bottom:1px solid var(--border)}
+.comment-item:last-child{border-bottom:none}
+.comment-meta{display:flex;justify-content:space-between;margin-bottom:4px}
+.comment-auteur{font-size:11px;font-weight:500;color:var(--text2)}
+.comment-date{font-size:10px;font-family:var(--mono);color:var(--muted)}
+.comment-content{font-size:12.5px;color:var(--text);line-height:1.5}
+
+/* ── Modal nouveau dossier ───────────────────────────────────────────── */
+#modal-overlay{display:none;position:fixed;inset:0;z-index:600;background:rgba(0,0,0,.45);align-items:center;justify-content:center}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);width:480px;max-width:calc(100vw - 32px);max-height:90vh;display:flex;flex-direction:column;animation:modalIn .2s ease;box-shadow:0 8px 32px rgba(0,0,0,.2)}
+.modal-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;flex-shrink:0}
+.modal-title{font-size:14px;font-weight:600;color:var(--text);flex:1}
+.modal-close{background:none;border:none;font-size:18px;color:var(--muted);cursor:pointer;padding:0;line-height:1}
+.modal-close:hover{color:var(--text)}
+.modal-body{padding:20px;overflow-y:auto;display:flex;flex-direction:column;gap:14px}
+.form-group{display:flex;flex-direction:column;gap:5px}
+.form-label{font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--text2);text-transform:uppercase}
+.form-input,.form-select,.form-textarea{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 10px;color:var(--text);font-size:12px;font-family:var(--sans);outline:none;transition:border-color .15s}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--blue)}
+.form-textarea{resize:vertical}
+.modal-footer{padding:14px 20px;border-top:1px solid var(--border);display:flex;justify-content:flex-end;gap:8px;flex-shrink:0}
+.btn-cancel{padding:7px 16px;background:none;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:12px;font-family:var(--sans);color:var(--muted);cursor:pointer;transition:all .15s}
+.btn-cancel:hover{border-color:var(--border2);color:var(--text2)}
+.btn-save{padding:7px 16px;background:var(--blue);color:#fff;border:none;border-radius:var(--radius-sm);font-size:12px;font-weight:500;font-family:var(--sans);cursor:pointer;transition:opacity .15s}
+.btn-save:hover{opacity:.9}
 </style>
 </head>
 <body>
@@ -308,6 +384,7 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
         <div class="stat-cell"><div class="stat-val" id="stat-jo-analyses">—</div><div class="stat-lbl">JO analysés</div></div>
         <div class="stat-cell"><div class="stat-val" id="stat-depts">—</div><div class="stat-lbl">Depts alertés</div></div>
         <div class="stat-cell"><div class="stat-val" id="stat-pjl">—</div><div class="stat-lbl">PJL suivis</div></div>
+        <div class="stat-cell"><div class="stat-val zero" id="stat-suivi">—</div><div class="stat-lbl">Suivi dossiers</div></div>
       </div>
       <div id="sidebar-eau"></div>
     </div>
@@ -355,22 +432,44 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
     </div>
     <div class="view" id="parlement-view">
       <div class="parl-header">
-        <div class="parl-title-row"><div class="parl-page-title">Veille Parlementaire — Projets de loi gouvernementaux</div></div>
+        <div class="parl-title-row"><div class="parl-page-title">Veille Parlementaire</div></div>
         <div class="parl-stats-row" id="parl-stats"></div>
-        <div style="margin-top:12px;display:flex;gap:8px;align-items:center">
-          <input id="parl-dossier-input" type="text"
-            placeholder="Coller une URL de dossier AN à suivre — ex: assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N…"
-            style="flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 12px;color:var(--text);font-size:12px;font-family:var(--sans);outline:none;transition:border-color .15s"
-            onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor=''"
-          >
-          <button onclick="ajouterDossierManuel()"
-            style="padding:7px 16px;background:var(--blue);color:#fff;border:none;border-radius:var(--radius-sm);font-size:12px;font-family:var(--sans);cursor:pointer;white-space:nowrap;transition:opacity .15s"
-            onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'"
-          >Suivre ce dossier</button>
+        <div class="parl-tabs">
+          <div class="parl-tab active" data-panel="legislatif" onclick="switchParlTab('legislatif')">Législatif</div>
+          <div class="parl-tab" data-panel="suivi" onclick="switchParlTab('suivi')">Suivi <span id="nav-suivi-count" style="font-size:10px;font-family:var(--mono);background:rgba(37,99,235,.12);color:var(--blue);padding:1px 5px;border-radius:10px;margin-left:4px;display:none"></span></div>
         </div>
-        <div id="parl-dossier-msg" style="font-size:11px;color:var(--muted);margin-top:6px;display:none"></div>
       </div>
-      <div class="parl-content" id="parl-content"></div>
+      <!-- Tab Législatif -->
+      <div class="parl-tab-panel active" id="legislatif-panel">
+        <div style="padding:12px 20px 0">
+          <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+            <input id="parl-dossier-input" type="text"
+              placeholder="URL dossier AN à suivre — ex: assemblee-nationale.fr/dyn/17/dossiers/…"
+              style="flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 12px;color:var(--text);font-size:12px;font-family:var(--sans);outline:none;transition:border-color .15s"
+              onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor=''">
+            <button onclick="ajouterDossierManuel()"
+              style="padding:7px 16px;background:var(--blue);color:#fff;border:none;border-radius:var(--radius-sm);font-size:12px;font-family:var(--sans);cursor:pointer;white-space:nowrap"
+            >Suivre ce dossier</button>
+          </div>
+          <div id="parl-dossier-msg" style="font-size:11px;color:var(--muted);margin-bottom:8px;display:none"></div>
+        </div>
+        <div class="parl-content" id="parl-content"></div>
+      </div>
+      <!-- Tab Suivi Supabase -->
+      <div class="parl-tab-panel" id="suivi-panel">
+        <div class="suivi-toolbar">
+          <div class="suivi-toolbar-left">
+            <button class="btn-add-dossier" onclick="openAddDossierModal()">+ Nouveau dossier</button>
+            <div class="suivi-filter-group">
+              <button class="suivi-filter-btn on" data-statut="all" onclick="filterSuivi('all')">Tout</button>
+              <button class="suivi-filter-btn" data-statut="critique" onclick="filterSuivi('critique')">Critique</button>
+              <button class="suivi-filter-btn" data-statut="a_surveiller" onclick="filterSuivi('a_surveiller')">À surveiller</button>
+              <button class="suivi-filter-btn" data-statut="pour_info" onclick="filterSuivi('pour_info')">Pour info</button>
+            </div>
+          </div>
+        </div>
+        <div class="suivi-list" id="suivi-list"><div class="empty-state">Chargement…</div></div>
+      </div>
     </div>
     <div class="view" id="archives-view">      <div class="arc-title">Archives — 90 jours</div>
       <div id="arc-calendar"></div>
@@ -382,10 +481,78 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
   </div>
 </div>
 <div id="toast"></div>
+
+<!-- Drawer dossier -->
+<div id="drawer-overlay" onclick="closeDossierDrawer()"></div>
+<div id="dossier-drawer">
+  <div class="drawer-header">
+    <div class="drawer-title-row">
+      <div id="drawer-title" class="drawer-title">—</div>
+      <button class="drawer-close" onclick="closeDossierDrawer()">✕</button>
+    </div>
+    <div class="drawer-statut-row" id="drawer-statut-row"></div>
+  </div>
+  <div class="drawer-body" id="drawer-body"></div>
+</div>
+
+<!-- Modal nouveau dossier -->
+<div id="modal-overlay" onclick="if(event.target===this)closeAddDossierModal()">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">Nouveau dossier de suivi</div>
+      <button class="modal-close" onclick="closeAddDossierModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label class="form-label">Titre *</label>
+        <input class="form-input" id="form-titre" type="text" placeholder="Titre du dossier ou de la loi">
+      </div>
+      <div class="form-group">
+        <label class="form-label">URL dossier AN</label>
+        <input class="form-input" id="form-url" type="url" placeholder="https://assemblee-nationale.fr/dyn/…">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Statut</label>
+        <select class="form-select" id="form-statut">
+          <option value="pour_info">Pour info</option>
+          <option value="a_surveiller" selected>À surveiller</option>
+          <option value="critique">Critique</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Résumé GSF</label>
+        <textarea class="form-textarea" id="form-resume" rows="3" placeholder="Résumé de ce dossier pour GSF…"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Pourquoi c'est important</label>
+        <textarea class="form-textarea" id="form-pourquoi" rows="2" placeholder="Impact ICPE, réforme loi eau…"></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-cancel" onclick="closeAddDossierModal()">Annuler</button>
+      <button class="btn-save" onclick="saveDossier()">Enregistrer</button>
+    </div>
+  </div>
+</div>
+
 <script>
 let D=null,archive=null,currentDate=null,currentView='feed',catFilter='all';
 let srcFilters={jorf:true,presse:true};
 let mapgl=null,histData=null,histYear='all';
+
+// ── Supabase ──────────────────────────────────────────────────────────
+const SUPA_URL='https://fsucjfaogepwvczdyikz.supabase.co';
+const SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZzdWNqZmFvZ2Vwd3ZjemR5aWt6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM5NjIxMTcsImV4cCI6MjA4OTUzODExN30.v9PBKS5Vasil3yufao6s9Y1vAjdhsFHd2g0q2FQXR6I';
+let _supa=null;
+function getSupa(){if(!_supa)_supa=supabase.createClient(SUPA_URL,SUPA_KEY);return _supa;}
+
+// ── État suivi ────────────────────────────────────────────────────────
+let dossiersSuivi=[];
+let suiviFilter='all';
+let drawerDossierId=null;
+const STATUT_LABEL={critique:'Critique',a_surveiller:'À surveiller',pour_info:'Pour info'};
+const STATUT_CLASS={critique:'s-critique',a_surveiller:'s-a_surveiller',pour_info:'s-pour_info'};
+const STATUT_BADGE={critique:'crit3',a_surveiller:'crit2',pour_info:'crit1'};
 const JORF_SOURCES=['JORF','Légifrance RSS'];
 function sourceType(src){return JORF_SOURCES.includes(src)?'jorf':'presse'}
 const NIVEAU_COLOR={'vigilance':'#84cc16','alerte':'#eab308','alerte_renforcee':'#f97316','alerte renforcée':'#f97316','alerte renforce':'#f97316','crise':'#dc2626'};
@@ -905,6 +1072,190 @@ function renderMapEncart(){
   el.innerHTML=html;
 }
 
+// ── Suivi : chargement ────────────────────────────────────────────────
+async function loadDossiersSuivi(){
+  const list=document.getElementById('suivi-list');
+  if(list)list.innerHTML='<div class="empty-state">Chargement…</div>';
+  try{
+    const {data,error}=await getSupa()
+      .from('legislative_dossiers')
+      .select('*,dossier_comments(count)')
+      .order('statut').order('updated_at',{ascending:false});
+    if(error)throw error;
+    dossiersSuivi=data||[];
+    renderSuivi();
+    // MAJ stat sidebar
+    const el=document.getElementById('stat-suivi');
+    if(el){el.textContent=dossiersSuivi.length||'0';el.className='stat-val'+(dossiersSuivi.length?'':' zero');}
+    const nc=document.getElementById('nav-suivi-count');
+    if(nc){nc.textContent=dossiersSuivi.length;nc.style.display=dossiersSuivi.length?'inline':'none';}
+  }catch(e){
+    console.error(e);
+    if(list)list.innerHTML=`<div class="empty-state">Erreur : ${escHtml(e.message)}</div>`;
+  }
+}
+
+// ── Suivi : rendu ─────────────────────────────────────────────────────
+function renderSuivi(){
+  const list=document.getElementById('suivi-list');
+  if(!list)return;
+  const items=suiviFilter==='all'?dossiersSuivi:dossiersSuivi.filter(d=>d.statut===suiviFilter);
+  if(!items.length){list.innerHTML='<div class="empty-state">Aucun dossier</div>';return;}
+  list.innerHTML=items.map(d=>{
+    const nb=d.dossier_comments?.[0]?.count||0;
+    const sc=STATUT_CLASS[d.statut]||'';
+    const bl=STATUT_BADGE[d.statut]||'crit1';
+    const sl=STATUT_LABEL[d.statut]||d.statut;
+    const lnk=d.url_an||d.url_dossier;
+    return `<div class="suivi-item ${sc}" onclick="openDossierDrawer('${d.id}')">
+      <div class="suivi-item-top">
+        <div class="suivi-item-titre">${escHtml(d.titre)}</div>
+        <span class="crit-badge ${bl}">${sl}</span>
+      </div>
+      ${d.resume_gsf?`<div class="suivi-item-resume">${escHtml(d.resume_gsf)}</div>`:''}
+      <div class="suivi-item-meta">
+        ${d.stade?`<span>${escHtml(d.stade)}</span>`:''}
+        <span>${d.source==='pipeline'?'🔄 Pipeline':'✋ Manuel'}</span>
+        <span style="font-family:var(--mono)">${formatDate(d.updated_at?.slice(0,10))}</span>
+      </div>
+      <div class="suivi-item-actions">
+        <button class="btn-comments" onclick="event.stopPropagation();openDossierDrawer('${d.id}')">💬 ${nb} commentaire${nb!==1?'s':''}</button>
+        ${lnk?`<a class="btn-details" href="${escHtml(lnk)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">AN →</a>`:''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterSuivi(statut){
+  suiviFilter=statut;
+  document.querySelectorAll('.suivi-filter-btn').forEach(b=>b.classList.toggle('on',b.dataset.statut===statut));
+  renderSuivi();
+}
+
+function switchParlTab(tab){
+  document.querySelectorAll('.parl-tab').forEach(t=>t.classList.toggle('active',t.dataset.panel===tab));
+  document.querySelectorAll('.parl-tab-panel').forEach(p=>p.classList.toggle('active',p.id===tab+'-panel'));
+  if(tab==='suivi'&&!dossiersSuivi.length)loadDossiersSuivi();
+}
+
+// ── Drawer ────────────────────────────────────────────────────────────
+async function openDossierDrawer(id){
+  drawerDossierId=id;
+  const d=dossiersSuivi.find(x=>x.id===id);
+  if(!d)return;
+  document.getElementById('drawer-title').textContent=d.titre;
+  document.getElementById('drawer-statut-row').innerHTML=
+    Object.entries(STATUT_LABEL).map(([val,lbl])=>{
+      const bc=STATUT_BADGE[val];
+      const active=val===d.statut?'outline:2px solid var(--blue);outline-offset:2px':'';
+      return `<button class="crit-badge ${bc}" style="${active}" onclick="updateStatut('${id}','${val}')">${lbl}</button>`;
+    }).join('');
+  const idx=STADES_ORDRE.indexOf(d.stade);
+  const pct=idx<0?0:Math.round((idx/(STADES_ORDRE.length-1))*100);
+  document.getElementById('drawer-body').innerHTML=`
+    ${d.resume_gsf?`<div><div class="drawer-section-title">Résumé</div><p style="font-size:13px;color:var(--text2);line-height:1.6">${escHtml(d.resume_gsf)}</p></div>`:''}
+    ${d.pourquoi?`<div><div class="drawer-section-title">Pourquoi GSF</div><div class="parl-pourquoi">${escHtml(d.pourquoi)}</div></div>`:''}
+    ${d.stade?`<div><div class="parl-progress"><div class="parl-progress-label"><span class="parl-stade-badge">${escHtml(d.stade)}</span><span>${pct}%</span></div><div class="parl-progress-track"><div class="parl-progress-bar" style="width:${pct}%"></div></div></div></div>`:''}
+    <div>
+      <div class="drawer-section-title">Commentaires</div>
+      <div id="drawer-comments-list"><div class="empty-state" style="padding:12px 0">Chargement…</div></div>
+      <div class="drawer-comment-form">
+        <textarea id="drawer-comment-input" rows="2" placeholder="Ajouter un commentaire…"></textarea>
+        <button class="btn-save" onclick="addComment('${id}')">Envoyer</button>
+      </div>
+    </div>`;
+  document.getElementById('dossier-drawer').classList.add('open');
+  document.getElementById('drawer-overlay').style.display='block';
+  try{
+    const {data}=await getSupa().from('dossier_comments').select('*').eq('dossier_id',id).order('created_at');
+    renderDrawerComments(data||[]);
+  }catch{document.getElementById('drawer-comments-list').innerHTML='<div class="empty-state" style="padding:12px 0">Erreur de chargement</div>';}
+}
+
+function closeDossierDrawer(){
+  drawerDossierId=null;
+  document.getElementById('dossier-drawer').classList.remove('open');
+  document.getElementById('drawer-overlay').style.display='none';
+}
+
+function renderDrawerComments(comments){
+  const el=document.getElementById('drawer-comments-list');
+  if(!el)return;
+  if(!comments.length){el.innerHTML='<div style="font-size:12px;color:var(--muted);padding:6px 0">Aucun commentaire</div>';return;}
+  el.innerHTML=comments.map(c=>`<div class="comment-item">
+    <div class="comment-meta"><span class="comment-auteur">${escHtml(c.auteur||'GSF')}</span><span class="comment-date">${formatDate(c.created_at?.slice(0,10))}</span></div>
+    <div class="comment-content">${escHtml(c.content)}</div>
+  </div>`).join('');
+}
+
+async function addComment(dossierId){
+  const input=document.getElementById('drawer-comment-input');
+  const content=(input?.value||'').trim();
+  if(!content)return;
+  try{
+    const {error}=await getSupa().from('dossier_comments').insert({dossier_id:dossierId,content});
+    if(error)throw error;
+    input.value='';
+    const {data}=await getSupa().from('dossier_comments').select('*').eq('dossier_id',dossierId).order('created_at');
+    renderDrawerComments(data||[]);
+    const d=dossiersSuivi.find(x=>x.id===dossierId);
+    if(d){if(!d.dossier_comments)d.dossier_comments=[{count:0}];d.dossier_comments[0].count=(d.dossier_comments[0].count||0)+1;renderSuivi();}
+    showToast('Commentaire ajouté');
+  }catch(e){showToast('Erreur : '+e.message);}
+}
+
+async function updateStatut(dossierId,statut){
+  try{
+    const {error}=await getSupa().from('legislative_dossiers').update({statut}).eq('id',dossierId);
+    if(error)throw error;
+    const d=dossiersSuivi.find(x=>x.id===dossierId);
+    if(d){d.statut=statut;renderSuivi();}
+    // Refresh statut buttons
+    document.getElementById('drawer-statut-row').innerHTML=
+      Object.entries(STATUT_LABEL).map(([val,lbl])=>{
+        const bc=STATUT_BADGE[val];
+        const active=val===statut?'outline:2px solid var(--blue);outline-offset:2px':'';
+        return `<button class="crit-badge ${bc}" style="${active}" onclick="updateStatut('${dossierId}','${val}')">${lbl}</button>`;
+      }).join('');
+    showToast('Statut mis à jour');
+  }catch(e){showToast('Erreur : '+e.message);}
+}
+
+// ── Modal nouveau dossier ─────────────────────────────────────────────
+function openAddDossierModal(){
+  document.getElementById('modal-overlay').style.display='flex';
+  setTimeout(()=>document.getElementById('form-titre')?.focus(),50);
+}
+
+function closeAddDossierModal(){
+  document.getElementById('modal-overlay').style.display='none';
+  ['form-titre','form-url','form-resume','form-pourquoi'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  const fs=document.getElementById('form-statut');if(fs)fs.value='a_surveiller';
+}
+
+async function saveDossier(){
+  const titre=(document.getElementById('form-titre')?.value||'').trim();
+  if(!titre){showToast('Le titre est obligatoire');return;}
+  const dossier={
+    titre,
+    url_dossier:(document.getElementById('form-url')?.value||'').trim()||null,
+    statut:document.getElementById('form-statut')?.value||'a_surveiller',
+    resume_gsf:(document.getElementById('form-resume')?.value||'').trim()||null,
+    pourquoi:(document.getElementById('form-pourquoi')?.value||'').trim()||null,
+    source:'manuel',
+  };
+  try{
+    const {data,error}=await getSupa().from('legislative_dossiers').insert(dossier).select().single();
+    if(error)throw error;
+    dossiersSuivi.unshift({...data,dossier_comments:[{count:0}]});
+    renderSuivi();
+    closeAddDossierModal();
+    showToast('Dossier ajouté');
+    const el=document.getElementById('stat-suivi');
+    if(el){el.textContent=dossiersSuivi.length;el.className='stat-val';}
+  }catch(e){showToast('Erreur : '+e.message);}
+}
+
 function switchView(view){
   currentView=view;
   document.querySelectorAll('.view').forEach(el=>el.classList.remove('active'));
@@ -914,7 +1265,7 @@ function switchView(view){
   if(view==='archives')renderArchives();
   if(view==='jo')renderJO();
   if(view==='historique')loadHistorique();
-  if(view==='parlement')renderParlement();
+  if(view==='parlement'){renderParlement();loadDossiersSuivi();}
 }
 function formatDate(iso){if(!iso)return'—';const[y,m,d]=iso.split('-');const M=['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];return `${parseInt(d)} ${M[parseInt(m)-1]} ${y}`;}
 function escHtml(str){return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
