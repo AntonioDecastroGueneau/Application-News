@@ -658,6 +658,64 @@ def crawl_article(url: str) -> str:
     return ''
 
 
+def crawl_article_links(listing_url: str, base_url: str, max_links: int = 5) -> list:
+    """
+    Crawle une page de listing et extrait les liens d'articles individuels.
+    Retourne une liste de dicts {titre, url}.
+    Stratégie générique : cherche les <a> avec href contenant des segments d'article.
+    """
+    try:
+        from bs4 import BeautifulSoup
+        resp = requests.get(listing_url, timeout=TIMEOUT,
+                           headers={'User-Agent': 'GSF-Veille/2.0'})
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, 'html.parser')
+
+        links = []
+        seen  = set()
+
+        # Cherche les liens qui ressemblent à des articles
+        for a in soup.find_all('a', href=True):
+            href  = a['href'].strip()
+            titre = a.get_text(strip=True)
+
+            # Ignorer liens vides, navigation, pagination
+            if not titre or len(titre) < 15:
+                continue
+            if any(skip in href for skip in [
+                '#', 'mailto:', 'javascript:', '/tag/', '/category/',
+                '/page/', '/feed', '/rss', '/newsletter', '/contact',
+                '/about', '/team', '/equipe', '/linstitut',
+            ]):
+                continue
+
+            # Construire l'URL absolue
+            if href.startswith('http'):
+                full_url = href
+            elif href.startswith('/'):
+                full_url = base_url.rstrip('/') + href
+            else:
+                continue
+
+            # Dédupliquer
+            if full_url in seen:
+                continue
+            seen.add(full_url)
+
+            # Garder seulement les liens du même domaine
+            if base_url.split('/')[2] not in full_url:
+                continue
+
+            links.append({'titre': titre[:200], 'url': full_url})
+            if len(links) >= max_links:
+                break
+
+        return links
+    except Exception as e:
+        log.debug(f"crawl_article_links error {listing_url}: {e}")
+    return []
+
+
 # ─────────────────────────────────────────────
 # JORF — Journal Officiel
 #
@@ -935,23 +993,72 @@ def fetch_rss_source(source: dict):
         log.warning(f"RSS {name} error : {e}")
 
         if source.get('fallback_crawl'):
+            fallback_url = source['fallback_crawl']
+            base_url     = '/'.join(fallback_url.split('/')[:3])
             try:
-                log.info(f"Fallback → {source['fallback_crawl']}")
-                contenu = crawl_article(source['fallback_crawl'])
-                if contenu:
-                    analysis = groq_analyse_rss(f"Actualités {name}", contenu)
-                    items.append({
-                        'id'        : make_id(name, 'fallback'),
-                        'source'    : name,
-                        'categorie' : 'Presse',
-                        'titre'     : f'Actualités {name}',
-                        'resume'    : analysis.get('resume') or 'Source consultée via fallback.',
-                        'pourquoi'  : '',
-                        'criticite' : 1,
-                        'impact_gsf': False,
-                        'url'       : source['fallback_crawl'],
-                        'date'      : TODAY,
-                    })
+                log.info(f"Fallback → {fallback_url}")
+                article_links = crawl_article_links(fallback_url, base_url, max_links=5)
+
+                if not article_links:
+                    # Dernier recours : fallback générique page entière
+                    contenu = crawl_article(fallback_url)
+                    if contenu and keyword_match(contenu):
+                        analysis = groq_analyse_rss(f"Actualités {name}", contenu)
+                        if analysis.get('pertinent') is not False:
+                            items.append({
+                                'id'        : make_id(name, 'fallback'),
+                                'source'    : name,
+                                'categorie' : 'Presse',
+                                'titre'     : f'Actualités {name}',
+                                'resume'    : analysis.get('resume') or 'Source consultée via fallback.',
+                                'pourquoi'  : '',
+                                'criticite' : 1,
+                                'impact_gsf': False,
+                                'url'       : fallback_url,
+                                'date'      : TODAY,
+                            })
+                else:
+                    # Crawl et analyse de chaque article individuel
+                    for link in article_links:
+                        try:
+                            contenu = crawl_article(link['url'])
+                            if not contenu:
+                                continue
+
+                            titre_art = link['titre']
+                            txt       = titre_art + ' ' + contenu
+
+                            # Filtre require_keywords si présent
+                            if source.get('require_keywords'):
+                                if not any(k.lower() in txt.lower()
+                                           for k in source['require_keywords']):
+                                    continue
+
+                            if not keyword_match(txt):
+                                continue
+
+                            analysis = groq_analyse_rss(titre_art, contenu)
+                            if analysis.get('pertinent') is False:
+                                continue
+
+                            score    = int(analysis.get('score') or 1)
+                            pourquoi = analysis.get('pourquoi', '') if score >= 2 else ''
+
+                            items.append({
+                                'id'        : make_id(name, titre_art),
+                                'source'    : name,
+                                'categorie' : categorise(txt),
+                                'titre'     : titre_art,
+                                'resume'    : analysis.get('resume') or titre_art,
+                                'pourquoi'  : pourquoi,
+                                'criticite' : score,
+                                'impact_gsf': score >= 2,
+                                'url'       : link['url'],
+                                'date'      : TODAY,
+                            })
+                        except Exception as e_art:
+                            log.debug(f"Fallback article {link['url']} : {e_art}")
+
             except Exception as e2:
                 log.warning(f"Fallback {name} error : {e2}")
 
@@ -1384,32 +1491,31 @@ STADES_ORDRE = [
     'Sénat 2ème lecture', 'AN 2ème lecture', 'Adopté', 'Promulgué',
 ]
 
-# Sources RSS parlementaires
-# — Publications AN  : tous documents, on filtre "Projet de loi" dans le titre
-# — Commission DD AN : déjà pré-filtrée environnement/énergie
-# — Vie-publique Lois: couverture large, inclut navettes Sénat
-PARLEMENT_RSS = [
+AN_BASE          = 'https://www2.assemblee-nationale.fr'
+AN_DOSSIERS_BASE = 'https://www.assemblee-nationale.fr/dyn/17/dossiers'
+
+# Pages AN à scraper — triées par date de mise en ligne
+AN_SCRAPER_SOURCES = [
     {
-        'name': 'AN Publications',
-        'url' : 'http://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires',
+        'name': 'AN Projets de loi',
+        'url' : (f'{AN_BASE}/documents/liste'
+                 '?limit=30&type=projets-loi&legis=17&type_tri=DATE_MISE_LIGNE'),
     },
     {
-        'name': 'AN Commission Développement Durable',
-        'url' : 'http://www2.assemblee-nationale.fr/feeds/detail/ID_419865/(type)/instance',
-    },
-    {
-        'name': 'Vie-publique Lois',
-        'url' : 'https://www.vie-publique.fr/rss/lois.xml',
+        'name': 'AN Textes adoptés',
+        'url' : (f'{AN_BASE}/documents/liste'
+                 '?limit=30&type=ta&legis=17&type_tri=DATE_MISE_LIGNE'),
     },
 ]
 
-# Marqueurs de stade détectables dans les titres/descriptions RSS
+# Marqueurs de stade détectables dans les titres
 _STADE_PATTERNS = [
     ('Promulgué',                  ['promulgu', 'loi n°', 'parue au jo']),
-    ('Adopté',                     ['adopté définitivement', 'adoption définitive']),
+    ('Adopté',                     ['adopté définitivement', 'adoption définitive',
+                                    'texte adopté']),
     ('Commission mixte paritaire', ['commission mixte paritaire', 'cmp']),
     ('AN 2ème lecture',            ['2e lecture', 'deuxième lecture', 'nouvelle lecture']),
-    ('Sénat 1ère lecture',         ['sénat', 'haute assemblée', '1ère lecture sénat']),
+    ('Sénat 1ère lecture',         ['sénat', 'haute assemblée']),
     ('Séance publique AN',         ['séance publique', 'hémicycle', 'discussion générale']),
     ('Commission',                 ['en commission', 'examiné par la commission',
                                     'rapporteur désigné', 'renvoyé en commission']),
@@ -1417,10 +1523,6 @@ _STADE_PATTERNS = [
 
 
 def _detect_stade_rss(titre: str, description: str = '') -> str:
-    """
-    Déduit le stade législatif depuis le titre et la description d'un item RSS.
-    Retourne une chaîne normalisée parmi STADES_ORDRE.
-    """
     texte = (titre + ' ' + description).lower()
     for stade, patterns in _STADE_PATTERNS:
         if any(p in texte for p in patterns):
@@ -1429,18 +1531,130 @@ def _detect_stade_rss(titre: str, description: str = '') -> str:
 
 
 def _is_pjl_gouvernemental(titre: str) -> bool:
-    """
-    Filtre 2 (gratuit) : vérifie que le titre correspond à un PJL gouvernemental.
-    Élimine les propositions de loi (PPL), rapports, amendements, etc.
-    """
     t = titre.lower().strip()
-    # Doit commencer par "projet de loi"
     if not t.startswith('projet de loi'):
         return False
-    # Exclure les textes budgétaires purs (PLF, PLFSS) sauf si lien env.
     if any(k in t for k in ['finances', 'financement de la sécurité sociale']):
-        return keyword_match(titre)  # garder seulement si mot-clé env.
+        return keyword_match(titre)
     return True
+
+
+def _scrape_an_listing(source: dict) -> list:
+    """
+    Scrape une page de listing AN (projets-loi ou textes adoptés).
+    Retourne une liste d'entrées {titre, url_doc, url_dossier, date, source, fiche_id}.
+    """
+    from bs4 import BeautifulSoup
+    entries = []
+    try:
+        resp = requests.get(source['url'], timeout=TIMEOUT,
+                           headers={'User-Agent': 'GSF-Veille/2.0'})
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, 'html.parser')
+
+        # Chaque PJL est dans un <li> ou <div> avec un <h3> titre
+        # Structure : ### Titre - N° XXXX / Mis en ligne DATE / [Dossier] [Document]
+        for item in soup.find_all(['li', 'div'], class_=re.compile(r'document|item|pjl', re.I)):
+            h3 = item.find(['h3', 'h2', 'strong'])
+            if not h3:
+                continue
+            titre = h3.get_text(strip=True)
+            if not titre or len(titre) < 10:
+                continue
+
+            # Date de mise en ligne
+            date_str = TODAY
+            date_el = item.find(string=re.compile(r'Mis en ligne|mis en ligne', re.I))
+            if date_el:
+                m = re.search(r'(\d{1,2})\s+(\w+)\s+(\d{4})', str(date_el))
+                if m:
+                    mois_fr = {
+                        'janvier':'01','février':'02','mars':'03','avril':'04',
+                        'mai':'05','juin':'06','juillet':'07','août':'08',
+                        'septembre':'09','octobre':'10','novembre':'11','décembre':'12'
+                    }
+                    mois = mois_fr.get(m.group(2).lower(), '01')
+                    date_str = f"{m.group(3)}-{mois}-{int(m.group(1)):02d}"
+
+            # Liens dossier et document
+            url_dossier, url_doc = '', ''
+            for a in item.find_all('a', href=True):
+                href = a['href']
+                txt  = a.get_text(strip=True).lower()
+                if 'dossier' in txt or '/dossiers/' in href:
+                    url_dossier = href if href.startswith('http') else AN_BASE + href
+                elif 'document' in txt or '/projets/' in href or '/ta/' in href:
+                    url_doc = href if href.startswith('http') else AN_BASE + href
+
+            url = url_dossier or url_doc
+            if not url:
+                continue
+
+            fiche_id = 'pjl-' + hashlib.md5(url.encode()).hexdigest()[:12]
+            entries.append({
+                'titre'      : titre,
+                'description': '',
+                'url'        : url,
+                'url_dossier': url_dossier,
+                'date'       : date_str,
+                'source'     : source['name'],
+                'fiche_id'   : fiche_id,
+            })
+
+        # Fallback : parser les <h3> directement si structure différente
+        if not entries:
+            for h3 in soup.find_all('h3'):
+                titre = h3.get_text(strip=True)
+                if not titre or len(titre) < 15:
+                    continue
+                parent = h3.find_parent(['li', 'div', 'article', 'section'])
+                if not parent:
+                    continue
+                links = parent.find_all('a', href=True)
+                url_dossier, url_doc = '', ''
+                for a in links:
+                    href = a['href']
+                    txt  = a.get_text(strip=True).lower()
+                    if 'dossier' in txt or '/dossiers/' in href:
+                        url_dossier = href if href.startswith('http') else AN_BASE + href
+                    elif 'document' in txt or '/projets/' in href or '/ta/' in href:
+                        url_doc = href if href.startswith('http') else AN_BASE + href
+                url = url_dossier or url_doc
+                if not url:
+                    continue
+                fiche_id = 'pjl-' + hashlib.md5(url.encode()).hexdigest()[:12]
+                entries.append({
+                    'titre'      : titre,
+                    'description': '',
+                    'url'        : url,
+                    'url_dossier': url_dossier,
+                    'date'       : TODAY,
+                    'source'     : source['name'],
+                    'fiche_id'   : fiche_id,
+                })
+
+        log.info(f"Parlement scraper {source['name']} : {len(entries)} entrées")
+    except Exception as e:
+        log.warning(f"Parlement scraper {source['name']} : {e}")
+    return entries
+
+
+def _scrape_dossier_stade(url_dossier: str) -> str:
+    """
+    Scrape une page de dossier législatif AN pour détecter le stade actuel.
+    Retourne une chaîne normalisée parmi STADES_ORDRE.
+    """
+    try:
+        from bs4 import BeautifulSoup
+        resp = requests.get(url_dossier, timeout=TIMEOUT,
+                           headers={'User-Agent': 'GSF-Veille/2.0'})
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, 'html.parser')
+        texte = soup.get_text(separator=' ', strip=True).lower()[:3000]
+        return _detect_stade_rss(texte)
+    except Exception as e:
+        log.debug(f"scrape_dossier_stade {url_dossier}: {e}")
+    return ''
 
 
 def groq_analyse_pjl(titre: str, description: str) -> dict:
@@ -1522,62 +1736,8 @@ def _save_fiches(fiches: dict):
     log.info(f"parlement_fiches.json : {len(fiches)} fiches")
 
 
-def _parse_parlement_feed(source: dict) -> list:
-    """
-    Lit un flux RSS parlementaire et retourne une liste d'entrées normalisées :
-    {titre, description, url, date, fiche_id}
-    """
-    entries = []
-    try:
-        resp = requests.get(
-            source['url'], timeout=TIMEOUT,
-            headers={'User-Agent': 'GSF-Veille/2.0'},
-        )
-        feed = feedparser.parse(resp.content)
-        if feed.bozo and not feed.entries:
-            raise ValueError(f"Feed invalide : {feed.bozo_exception}")
-
-        for entry in feed.entries[:30]:   # 30 entrées max par source
-            titre = (entry.get('title') or '').strip()
-            if not titre:
-                continue
-
-            description = html.unescape(re.sub(r'<[^>]+>', ' ', (
-                entry.get('summary') or entry.get('description') or ''
-            ))).strip()
-
-            url  = entry.get('link', '')
-            pub  = entry.get('published_parsed') or entry.get('updated_parsed')
-            date = TODAY
-            if pub:
-                try:
-                    import time as _time
-                    date = datetime.fromtimestamp(_time.mktime(pub)).strftime('%Y-%m-%d')
-                except Exception:
-                    pass
-
-            # Identifiant stable basé sur l'URL ou le titre
-            fiche_id = 'pjl-' + hashlib.md5(
-                (url or titre).encode()
-            ).hexdigest()[:12]
-
-            entries.append({
-                'titre'      : titre,
-                'description': description,
-                'url'        : url,
-                'date'       : date,
-                'fiche_id'   : fiche_id,
-                'source'     : source['name'],
-            })
-
-        log.info(f"Parlement RSS {source['name']} : {len(entries)} entrées")
-    except Exception as e:
-        log.warning(f"Parlement RSS {source['name']} : {e}")
-    return entries
-
-
 def groq_briefing_parlement(entries: list) -> str:
-    """Briefing LLM sur l'activité parlementaire du jour (toutes entrées RSS)."""
+    """Briefing LLM sur l'activité parlementaire scraped."""
     if not entries:
         return ''
     lines = [f"{i+1}. [{e['source']}] {e['titre']}" for i, e in enumerate(entries[:40])]
@@ -1605,13 +1765,11 @@ def groq_briefing_parlement(entries: list) -> str:
 
 def fetch_parlement() -> tuple:
     """
-    Collecte les flux RSS parlementaires, filtre les PJL environnementaux,
-    met à jour les fiches de suivi.
+    Scrape les pages AN (projets de loi + textes adoptés), filtre les PJL
+    environnementaux, met à jour les fiches de suivi et traite les dossiers
+    ajoutés manuellement.
 
     Retourne : (fiches_list, pjl_autres, pjl_briefing)
-      - fiches_list  : PJL retenus GSF (analysés Groq, persistés)
-      - pjl_autres   : toutes entrées RSS groupées par source (pour 'à consulter')
-      - pjl_briefing : résumé LLM de l'activité parlementaire du jour
     """
     log.info("=== Parlement ===")
     fiches        = _load_fiches()
@@ -1620,10 +1778,10 @@ def fetch_parlement() -> tuple:
     groq_used     = 0
     groq_skipped  = 0
 
-    # ── Étape 1 : Collecter tous les items RSS ───────────────────────────
+    # ── Étape 1 : Scraper les pages AN ──────────────────────────────────
     all_entries = []
-    for source in PARLEMENT_RSS:
-        all_entries.extend(_parse_parlement_feed(source))
+    for source in AN_SCRAPER_SOURCES:
+        all_entries.extend(_scrape_an_listing(source))
 
     # Dédupliquer par fiche_id
     seen_ids = set()
@@ -1635,49 +1793,52 @@ def fetch_parlement() -> tuple:
 
     log.info(f"Parlement : {len(entries)} entrées uniques après déduplication")
 
-    # Briefing LLM sur toutes les entrées du jour
+    # Briefing LLM
     try:
         pjl_briefing = groq_briefing_parlement(entries)
     except Exception as e:
         log.warning(f"Parlement briefing erreur : {e}")
         pjl_briefing = ''
 
-    # ── Étape 2 : Traiter chaque entrée ─────────────────────────────────
+    # ── Étape 2 : Traiter chaque entrée scrapée ──────────────────────────
     for entry in entries:
         titre       = entry['titre']
-        description = entry['description']
+        description = entry.get('description', '')
         fiche_id    = entry['fiche_id']
-        stade_rss   = _detect_stade_rss(titre, description)
+        stade       = _detect_stade_rss(titre, description)
 
-        # ── Fiche existante → mise à jour stade (0 appel Groq) ──────────
+        # Fiche existante → mise à jour stade via scrape du dossier
         if fiche_id in fiches:
             fiche = fiches[fiche_id]
             fiche['nouveau_stade'] = False
-            if stade_rss != fiche['stade']:
-                log.info(f"Parlement avancement : {titre[:50]} "
-                         f"[{fiche['stade']} → {stade_rss}]")
-                fiche['historique'].append({
-                    'date' : TODAY,
-                    'stade': stade_rss,
-                    'event': f"Avancement : {fiche['stade']} → {stade_rss}",
-                })
-                fiche['stade']        = stade_rss
-                fiche['stade_index']  = STADES_ORDRE.index(stade_rss) \
-                                        if stade_rss in STADES_ORDRE else 0
-                fiche['nouveau_stade'] = True
-                fiche['updated_at']   = TODAY
-                maj += 1
+            url_dossier = fiche.get('url_dossier') or entry.get('url_dossier', '')
+            if url_dossier:
+                stade_actuel = _scrape_dossier_stade(url_dossier) or stade
+                if stade_actuel and stade_actuel != fiche['stade']:
+                    log.info(f"Parlement avancement : {titre[:50]} "
+                             f"[{fiche['stade']} → {stade_actuel}]")
+                    fiche['historique'].append({
+                        'date' : TODAY,
+                        'stade': stade_actuel,
+                        'event': f"Avancement : {fiche['stade']} → {stade_actuel}",
+                    })
+                    fiche['stade']        = stade_actuel
+                    fiche['stade_index']  = STADES_ORDRE.index(stade_actuel) \
+                                            if stade_actuel in STADES_ORDRE else 0
+                    fiche['nouveau_stade'] = True
+                    fiche['updated_at']   = TODAY
+                    maj += 1
             continue
 
-        # ── Nouveau — Filtre 1 : keyword_match ──────────────────────────
+        # Filtre 1 : keyword_match
         if not keyword_match(titre + ' ' + description):
             continue
 
-        # ── Nouveau — Filtre 2 : PJL gouvernemental ─────────────────────
+        # Filtre 2 : PJL gouvernemental
         if not _is_pjl_gouvernemental(titre):
             continue
 
-        # ── Nouveau — Filtre 3 : Groq ────────────────────────────────────
+        # Filtre 3 : Groq (quota)
         if groq_used >= PARLEMENT_MAX_GROQ:
             groq_skipped += 1
             continue
@@ -1692,47 +1853,75 @@ def fetch_parlement() -> tuple:
             'id'          : fiche_id,
             'titre'       : titre,
             'date_depot'  : entry['date'],
-            'stade'       : stade_rss,
-            'stade_index' : STADES_ORDRE.index(stade_rss)
-                            if stade_rss in STADES_ORDRE else 0,
+            'stade'       : stade,
+            'stade_index' : STADES_ORDRE.index(stade) if stade in STADES_ORDRE else 0,
             'url_an'      : entry['url'],
+            'url_dossier' : entry.get('url_dossier', ''),
             'source_rss'  : entry['source'],
             'resume_gsf'  : analysis.get('resume', ''),
             'pourquoi'    : analysis.get('pourquoi', ''),
             'score'       : int(analysis.get('score', 1)),
             'horizon'     : analysis.get('horizon', ''),
             'nouveau_stade': False,
-            'historique'  : [{'date': TODAY, 'stade': stade_rss, 'event': 'Découverte'}],
+            'manuel'      : False,
+            'historique'  : [{'date': TODAY, 'stade': stade, 'event': 'Découverte'}],
             'created_at'  : TODAY,
             'updated_at'  : TODAY,
         }
         nouveaux += 1
-        log.info(f"Parlement nouveau PJL retenu "
-                 f"(score={analysis['score']}) : {titre[:60]}")
+        log.info(f"Parlement PJL retenu (score={analysis['score']}) : {titre[:60]}")
 
-    # Reset nouveau_stade sur les fiches non vues ce run
+    # ── Étape 3 : Dossiers ajoutés manuellement ──────────────────────────
+    # Les fiches avec manuel=True et url_dossier sont scraped pour MAJ stade
     for fiche_id, fiche in fiches.items():
-        if fiche_id not in seen_ids:
+        if not fiche.get('manuel'):
+            continue
+        fiche_id in seen_ids or seen_ids.add(fiche_id)
+        fiche['nouveau_stade'] = False
+        url_dossier = fiche.get('url_dossier', '')
+        if not url_dossier:
+            continue
+        try:
+            stade_actuel = _scrape_dossier_stade(url_dossier)
+            if stade_actuel and stade_actuel != fiche.get('stade', ''):
+                log.info(f"Parlement manuel avancement : {fiche['titre'][:50]} "
+                         f"[{fiche.get('stade')} → {stade_actuel}]")
+                fiche.setdefault('historique', []).append({
+                    'date' : TODAY,
+                    'stade': stade_actuel,
+                    'event': f"Avancement : {fiche.get('stade','?')} → {stade_actuel}",
+                })
+                fiche['stade']        = stade_actuel
+                fiche['stade_index']  = STADES_ORDRE.index(stade_actuel) \
+                                        if stade_actuel in STADES_ORDRE else 0
+                fiche['nouveau_stade'] = True
+                fiche['updated_at']   = TODAY
+                maj += 1
+        except Exception as e:
+            log.debug(f"Parlement manuel MAJ {fiche_id}: {e}")
+
+    # Reset nouveau_stade pour les fiches non vues
+    for fiche_id, fiche in fiches.items():
+        if fiche_id not in seen_ids and not fiche.get('manuel'):
             fiche['nouveau_stade'] = False
 
     _save_fiches(fiches)
     log.info(f"Parlement : {nouveaux} nouveaux, {maj} avancements, "
              f"{groq_used} appels Groq, {groq_skipped} PJL différés (quota)")
 
-    # ── pjl_autres : toutes entrées groupées par source ──────────────────
-    # Structure : [{"source": "AN Publications", "items": [{titre, url, date}, ...]}, ...]
+    # pjl_autres groupés par source
     groups = {}
     for e in entries:
         src = e['source']
         if src not in groups:
             groups[src] = []
         groups[src].append({
-            'titre': e['titre'],
-            'url'  : e['url'],
-            'date' : e['date'],
+            'titre'      : e['titre'],
+            'url'        : e['url'],
+            'url_dossier': e.get('url_dossier', ''),
+            'date'       : e['date'],
         })
-    pjl_autres = [{'source': src, 'items': items}
-                  for src, items in groups.items()]
+    pjl_autres = [{'source': src, 'items': items} for src, items in groups.items()]
 
     fiches_list = sorted(
         fiches.values(),
