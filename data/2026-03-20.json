@@ -1,12 +1,12 @@
 {
   "date": "2026-03-20",
-  "generated_at": "11:10",
-  "elapsed_seconds": 84,
+  "generated_at": "11:21",
+  "elapsed_seconds": 63,
   "errors": [],
   "stats": {
-    "jo_analyses": 25,
+    "jo_analyses": 16,
     "jo_retenus": 0,
-    "articles_presse": 5,
+    "articles_presse": 11,
     "depts_restriction": 0,
     "pjl_suivis": 0,
     "pjl_avancements": 0
@@ -17,8 +17,8 @@
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "90% des entreprises sorties du périmètre de la CSRD prévoient de maintenir leur reporting",
-      "resume": "L'article indique que 90% des entreprises exclues du périmètre de la CSRD (dont GSF pourrait être concerné en tant qu'entreprise de taille intermédiaire) maintiennent volontairement leur reporting extra-financier, suggérant une adoption durable de ces pratiques malgré les assouplissements réglementaires.",
-      "pourquoi": "Le sujet touche directement à la réglementation ESG/RSE (CSRD, reporting extra-financier) et aux obligations de transparence environnementale, pertinentes pour GSF dans le cadre de sa stratégie RSE et de ses engagements climatiques (scope 1/2/3, bilan carbone).",
+      "resume": "L'article souligne que 90% des entreprises exclues du champ de la CSRD maintiennent leur reporting extra-financier, ce qui indique une tendance forte vers la transparence ESG, y compris pour des acteurs comme GSF non directement concernés par la CSRD mais soumis à des exigences clients en matière de reporting carbone et ESG.",
+      "pourquoi": "Le sujet touche directement au reporting ESG (CSRD) et aux attentes des clients de GSF en matière de transparence environnementale, même si GSF n'est pas directement soumis à la CSRD. Cela influence les pratiques de reporting extra-financier et les exigences des donneurs d'ordre (nucléaire, santé, industrie) envers leurs prestataires comme GSF.",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/entreprises-taille-intermediaire-maintiennent-reporting-durabilite-csrd",
@@ -30,37 +30,37 @@
       "source": "Min. Transition Écologique",
       "categorie": "Énergie",
       "titre": "Économies d’énergie : le vrai du faux pour avoir les bons réflexes",
-      "resume": "L'article aborde les économies d'énergie comme levier de réduction des coûts et de consommation, ce qui impacte directement la gestion énergétique des sites clients de GSF et sa propre flotte de véhicules.",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
+      "resume": "L'article aborde les économies d'énergie, un levier clé pour réduire les consommations énergétiques des sites clients de GSF et contribuer à la décarbonation de ses prestations, en lien avec les enjeux de reporting ESG (CSRD) et de conformité réglementaire (DPE tertiaire, loi énergie-climat).",
+      "pourquoi": "L'article traite d'un sujet transverse à plusieurs enjeux stratégiques pour GSF : efficacité énergétique des bâtiments tertiaires (DPE, loi énergie-climat), réduction des coûts opérationnels, et alignement avec les attentes clients en matière de décarbonation. Bien que générique, il rappelle des bonnes pratiques applicables aux sites clients de GSF, notamment dans le cadre de la gestion des contrats de propreté/FM où l'énergie est un poste de consommation significatif. Le contenu peut servir de base pour des actions de sensibilisation interne ou externe.",
+      "criticite": 2,
+      "impact_gsf": true,
       "url": "https://www.ecologie.gouv.fr/actualites/economies-denergie-vrai-du-faux-avoir-bons-reflexes",
       "date": "2026-03-20",
       "top5": true
     },
     {
-      "id": "771e74dc3fd1",
-      "source": "France Stratégie",
-      "categorie": "Presse",
-      "titre": "Actualités France Stratégie",
-      "resume": "Source consultée via fallback.",
+      "id": "906bd559bbb1",
+      "source": "Reporterre",
+      "categorie": "Eau",
+      "titre": "« Les classes populaires vont respirer un air vicié » : une banlieue parisienne lutte contre un méga-incinérateur",
+      "resume": "L'article aborde les enjeux de pollution atmosphérique liés à un projet d'incinérateur, illustrant les risques indirects de réglementation environnementale et de pression sociétale sur les activités de GSF (déchets, énergie, reporting ESG).",
       "pourquoi": "",
       "criticite": 1,
       "impact_gsf": false,
-      "url": "https://www.strategie.gouv.fr/publications",
+      "url": "https://reporterre.net/Les-classes-populaires-vont-respirer-un-air-vicie-une-banlieue-parisienne-lutte-contre-un-mega-incinerateur",
       "date": "2026-03-20",
       "top5": true
     },
     {
-      "id": "ea6e11b04026",
-      "source": "I4CE",
+      "id": "ada1434c4463",
+      "source": "Vie-publique.fr",
       "categorie": "Presse",
-      "titre": "Actualités I4CE",
-      "resume": "L'article d'I4CE aborde les leviers pour atteindre la neutralité climatique européenne d'ici 2050, en s'appuyant sur l'objectif intermédiaire de 2040, ce qui impacte les trajectoires de décarbonation des entreprises comme GSF.",
+      "titre": "Actualités Vie-publique.fr",
+      "resume": "Source consultée via fallback.",
       "pourquoi": "",
       "criticite": 1,
       "impact_gsf": false,
-      "url": "https://www.i4ce.org/publications/",
+      "url": "https://www.vie-publique.fr/loi",
       "date": "2026-03-20",
       "top5": true
     },
@@ -69,88 +69,96 @@
       "source": "Carbone 4",
       "categorie": "Presse",
       "titre": "Actualités Carbone 4",
-      "resume": "Carbone 4 publie des ressources sur la décarbonation et le net zero, notamment des lignes directrices pour les entreprises, utiles pour GSF dans l'alignement de sa stratégie climat avec les standards internationaux.",
+      "resume": "Carbone 4 propose des ressources sur la décarbonation (Net Zero Initiative) et l'empreinte carbone des outils numériques, utiles pour structurer la stratégie climat de GSF et anticiper les attentes clients en matière de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "impact_gsf": false,
       "url": "https://www.carbone4.com/publications",
       "date": "2026-03-20",
       "top5": true
+    },
+    {
+      "id": "954a233f1850",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Prix négatifs : la CRE veut expérimenter un mécanisme de soutien incitant à l'hybridation solaire-batteries",
+      "resume": "Ce mécanisme pourrait influencer les coûts énergétiques des sites clients de GSF et les inciter à adopter des solutions hybrides (solaire-batteries), impactant potentiellement les prestations FM et la gestion énergétique des bâtiments.",
+      "pourquoi": "L'article touche à la décarbonation de l'énergie (solaire, batteries) et aux mécanismes de soutien public, ce qui peut impacter les coûts et les stratégies énergétiques des clients de GSF. Bien que GSF ne soit pas directement concerné par les appels d'offres, cette évolution réglementaire peut influencer les choix énergétiques des sites tertiaires où GSF intervient.",
+      "criticite": 2,
+      "impact_gsf": true,
+      "url": "https://www.actu-environnement.com/ae/news/prix-negatifs-systeme-electrique-photovoltaique-batteries-hybride-cannibalisation-47713.php4#xtor=RSS-6",
+      "date": "2026-03-19",
+      "top5": false
+    },
+    {
+      "id": "48f10d656402",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Coût des ENR : le SER et France renouvelables se défendent",
+      "resume": "L'article aborde les coûts des énergies renouvelables (ENR) et les mécanismes de soutien, ce qui impacte indirectement les stratégies énergétiques des entreprises comme GSF, notamment pour réduire leur empreinte carbone et leurs coûts opérationnels.",
+      "pourquoi": "Le sujet touche à la décarbonation et à l'énergie, deux enjeux majeurs pour GSF dans le cadre de sa politique climatique, de son reporting ESG (CSRD) et de sa gestion énergétique des sites clients. Bien que l'article ne concerne pas directement GSF, il influence les coûts et l'accessibilité des ENR, un levier clé pour la transition énergétique des entreprises.",
+      "criticite": 2,
+      "impact_gsf": true,
+      "url": "https://www.actu-environnement.com/ae/news/reponse-SER-France-renouvelables-rapport-cour-comptes-47720.php4#xtor=RSS-6",
+      "date": "2026-03-19",
+      "top5": false
+    },
+    {
+      "id": "6273a91c6a44",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Taxonomie verte : la Commission européenne propose de la simplifier",
+      "resume": "La simplification de la taxonomie verte européenne pourrait impacter les critères de reporting ESG (CSRD) pour GSF, notamment en clarifiant les exigences de traçabilité et de durabilité des prestations de propreté/FM.",
+      "pourquoi": "La taxonomie verte influence directement les obligations de reporting extra-financier (CSRD) et les critères de durabilité des activités, y compris pour les prestataires de services comme GSF. Une simplification pourrait faciliter la conformité mais aussi modifier les attentes clients en matière de transparence carbone.",
+      "criticite": 2,
+      "impact_gsf": true,
+      "url": "https://www.actu-environnement.com/ae/news/proposition-simplification-actes-delegues-taxonomie-47716.php4#xtor=RSS-6",
+      "date": "2026-03-19",
+      "top5": false
+    },
+    {
+      "id": "f6c75babbf42",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "Pacte vert : nouveau recul en vue sur les carburants aériens durables ?",
+      "resume": "L'article aborde la décarbonation du secteur aérien via les carburants durables (SAF), un enjeu indirect pour GSF via les exigences carbone de ses clients (industrie, santé, nucléaire) et les risques de report réglementaire impactant les trajectoires clients.",
+      "pourquoi": "Bien que GSF ne soit pas directement concerné par les SAF, l'article illustre une tendance de report réglementaire dans la décarbonation industrielle, ce qui peut influencer les exigences carbone des clients de GSF (ex : pression accrue sur les scopes 1/2/3). Cela impacte indirectement les stratégies de reporting ESG et les plans climat des clients, donc les attentes envers GSF en tant que prestataire FM/propreté.",
+      "criticite": 2,
+      "impact_gsf": true,
+      "url": "https://www.novethic.fr/environnement/climat/pacte-vert-nouveau-recul-en-vue-sur-les-carburants-aeriens-durables",
+      "date": "2026-03-19",
+      "top5": false
+    },
+    {
+      "id": "7c10c88553cf",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "Devoir de vigilance : en quoi la condamnation du Groupe Rocher peut peser sur les affaires en cours",
+      "resume": "La condamnation du Groupe Rocher pour manquement au devoir de vigilance renforce l'obligation pour GSF de structurer sa vigilance climatique et sociale, notamment dans le cadre de la CSRD et des attentes clients (nucléaire, santé, industrie).",
+      "pourquoi": "Le devoir de vigilance (loi de 2017) s'applique aux entreprises de plus de 500 salariés et concerne les risques climatiques et sociaux dans les chaînes de valeur. GSF, en tant que prestataire FM/propreté, doit anticiper les exigences de ses clients (notamment industriels et nucléaires) en matière de vigilance climatique et de reporting extra-financier (CSRD). La jurisprudence récente (ex. La Poste, Groupe Rocher) élargit les risques juridiques pour les entreprises non conformes, ce qui impacte indirectement GSF via ses clients.",
+      "criticite": 2,
+      "impact_gsf": true,
+      "url": "https://www.novethic.fr/economie-et-social/droits-humains/jugement-groupe-rocher-devoir-vigilance-consequences-juridiques-entreprise",
+      "date": "2026-03-19",
+      "top5": false
+    },
+    {
+      "id": "b6d75f246122",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Les castors permettent de stocker dix fois plus de CO₂ dans les zones humides",
+      "resume": "L'article met en lumière le rôle des zones humides dans le stockage du CO₂, un enjeu indirect pour GSF via la gestion des sites clients exposés aux aléas climatiques (inondations, sécheresses) et la valorisation de la biodiversité dans ses prestations.",
+      "pourquoi": "",
+      "criticite": 1,
+      "impact_gsf": false,
+      "url": "https://reporterre.net/Les-castors-permettent-de-stocker-dix-fois-plus-de-CO%E2%82%82-dans-les-zones-humides",
+      "date": "2026-03-19",
+      "top5": false
     }
   ],
   "restrictions_eau": [],
-  "jo_autres": [
-    {
-      "nor": "RCAR2607627S",
-      "titre": "Décision n° 2026-MA-03 du 20 février 2026 autorisant la SAS Excelis à exploiter un service de radio temporaire par voie hertzienne terrestre en modulation de fréquence dénommé Circuit Paul Ricard",
-      "nature": "DECISION",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704087",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "ECOT2604985A",
-      "titre": "Arrêté du 18 mars 2026 modifiant l'arrêté du 20 août 2019 portant désignation des pays tiers mentionnés au 7 de l'article L. 440-2 du code monétaire et financier",
-      "nature": "ARRETE",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053703492",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "SFHH2602791A",
-      "titre": "Arrêté du 16 mars 2026 fixant le seuil d'effectif prévu à l'article R. 211-507 du code général de la fonction publique relatif aux conditions et modalités de mise en œuvre du vote électronique par internet pour l'élection des représentants au sein des instances de représentation du personnel de la fonction publique hospitalière",
-      "nature": "ARRETE",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053703724",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "SFHA2607696S",
-      "titre": "Décision du 16 mars 2026 portant délégation de signature (Caisse nationale de solidarité pour l'autonomie)",
-      "nature": "DECISION",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053703742",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "JUSC2606888A",
-      "titre": "Arrêté du 17 mars 2026 portant nomination d'un membre professionnel suppléant de la Cour nationale de discipline des commissaires de justice",
-      "nature": "ARRETE",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053703917",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "TRST2606569A",
-      "titre": "Arrêté du 13 mars 2026 portant extension d'accords départementaux (Haute-Savoie) conclus dans le cadre des conventions collectives nationales des ouvriers employés par les entreprises du bâtiment visées par le décret du 1er mars 1962 modifié (entreprises occupant jusqu'à 10 salariés) (n° 1596) et des ouvriers employés par les entreprises du bâtiment non visées par le décret du 1er mars 1962 modifié (entreprises occupant plus de 10 salariés) (n° 1597)",
-      "nature": "ARRETE",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704016",
-      "date": "2026-03-20"
-    },
-    {
-      "nor": "INPS2607933X",
-      "titre": "Documents déposés",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "ministere": "",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053704212",
-      "date": "2026-03-20"
-    }
-  ],
+  "jo_autres": [],
   "jo_retenus": [],
-  "briefing_jorf": {
-    "points_significatifs": [
-      {
-        "décret": "Décret n° 2026-200 du 18 mars 2026 modifiant les exigences de performance énergétique et environnementale des constructions de bâtiment en France métropolitaine : renforcement des normes pour les nouvelles constructions, impact direct sur les projets immobiliers et la RSE des acteurs du secteur."
-      },
-      {
-        "arrêté": "Arrêté du 18 mars 2026 modifiant les exigences de performance énergétique et environnementale des surélévations : extension des obligations aux projets de surélévation, alignement sur les nouvelles normes pour les bâtiments existants."
-      },
-      {
-        "décret": "Décret n° 2026-199 du 18 mars 2026 relatif aux marchés de travaux, fournitures et services passés par les sociétés concessionnaires sur le réseau autoroutier concédé : encadrement renforcé des achats publics dans le secteur autoroutier, avec implications pour les politiques RSE des concessionnaires (critères environnementaux, sociaux et de gouvernance)."
-      }
-    ],
-    "autres_textes": "Les autres textes publiés aujourd'hui sont soit mineurs (décisions administratives, informations parlementaires), soit sectoriels (accords collectifs, élections professionnelles) sans impact direct sur les enjeux climat/environnement ou RSE."
-  },
+  "briefing_jorf": [],
   "pjl_fiches": []
 }
