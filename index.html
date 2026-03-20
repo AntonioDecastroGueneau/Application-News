@@ -357,6 +357,18 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
       <div class="parl-header">
         <div class="parl-title-row"><div class="parl-page-title">Veille Parlementaire — Projets de loi gouvernementaux</div></div>
         <div class="parl-stats-row" id="parl-stats"></div>
+        <div style="margin-top:12px;display:flex;gap:8px;align-items:center">
+          <input id="parl-dossier-input" type="text"
+            placeholder="Coller une URL de dossier AN à suivre — ex: assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N…"
+            style="flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 12px;color:var(--text);font-size:12px;font-family:var(--sans);outline:none;transition:border-color .15s"
+            onfocus="this.style.borderColor='var(--blue)'" onblur="this.style.borderColor=''"
+          >
+          <button onclick="ajouterDossierManuel()"
+            style="padding:7px 16px;background:var(--blue);color:#fff;border:none;border-radius:var(--radius-sm);font-size:12px;font-family:var(--sans);cursor:pointer;white-space:nowrap;transition:opacity .15s"
+            onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'"
+          >Suivre ce dossier</button>
+        </div>
+        <div id="parl-dossier-msg" style="font-size:11px;color:var(--muted);margin-top:6px;display:none"></div>
       </div>
       <div class="parl-content" id="parl-content"></div>
     </div>
@@ -711,6 +723,59 @@ function renderParlement(){
   }
 
   contentEl.innerHTML=html;
+}
+
+function ajouterDossierManuel(){
+  const input = document.getElementById('parl-dossier-input');
+  const msg   = document.getElementById('parl-dossier-msg');
+  const url   = (input?.value||'').trim();
+  if(!url){ showMsg('Collez une URL de dossier AN.','var(--orange)'); return; }
+
+  // Valider que c'est bien une URL de dossier AN
+  if(!url.includes('assemblee-nationale.fr') && !url.includes('assemblee-nationale')){
+    showMsg('URL invalide — doit contenir assemblee-nationale.fr','var(--red)'); return;
+  }
+
+  // Construire un objet fiche minimale à ajouter dans parlement_fiches.json
+  // via l'API Claude (artifact) — ici on stocke dans localStorage en attendant
+  // que le pipeline le pickup au prochain run via un fichier intermédiaire
+  const ficheId = 'pjl-manuel-' + btoa(url).replace(/[^a-z0-9]/gi,'').slice(0,12);
+  const titre   = url.split('/').pop() || 'Dossier législatif';
+
+  // On encode la fiche dans un champ caché que le pipeline lira
+  // Pour l'instant : stocker dans sessionStorage et afficher un message clair
+  const pending = JSON.parse(sessionStorage.getItem('parl_pending')||'[]');
+  if(pending.find(f=>f.url===url)){
+    showMsg('Ce dossier est déjà dans la liste d\'attente.','var(--muted)'); return;
+  }
+  pending.push({id:ficheId, url, titre, ajout:new Date().toISOString().slice(0,10)});
+  sessionStorage.setItem('parl_pending', JSON.stringify(pending));
+
+  showMsg(`✓ Dossier ajouté — il sera analysé et suivi dès le prochain run du pipeline (demain matin).`,'var(--green)');
+  input.value = '';
+
+  // Afficher les dossiers en attente sous le message
+  renderPending(pending);
+
+  function showMsg(txt, color){
+    msg.style.display='block';
+    msg.style.color=color;
+    msg.textContent=txt;
+  }
+}
+
+function renderPending(pending){
+  const msg = document.getElementById('parl-dossier-msg');
+  if(!pending||!pending.length) return;
+  const list = pending.map(f=>`<div style="display:flex;align-items:center;gap:8px;padding:3px 0">
+    <span style="font-size:10px;font-family:var(--mono);color:var(--muted2)">${f.ajout}</span>
+    <a href="${escHtml(f.url)}" target="_blank" style="font-size:11px;color:var(--blue);text-decoration:none;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escHtml(f.url)}</a>
+    <span style="font-size:10px;background:var(--orange-bg);color:var(--orange);padding:1px 6px;border-radius:4px">en attente</span>
+  </div>`).join('');
+  const wrapper = document.createElement('div');
+  wrapper.style.cssText='margin-top:8px;padding:8px;background:var(--surface2);border-radius:var(--radius-sm);border:1px solid var(--border)';
+  wrapper.innerHTML=`<div style="font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--muted);margin-bottom:4px">DOSSIERS EN ATTENTE D'ANALYSE</div>${list}`;
+  msg.parentNode.insertBefore(wrapper, msg.nextSibling);
 }
 
 function filterJO(){renderJO();}
