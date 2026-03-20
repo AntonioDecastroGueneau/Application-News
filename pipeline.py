@@ -623,8 +623,12 @@ def groq_briefing_jorf(articles: list) -> str:
     result = extract_json(raw)
     if isinstance(result, dict) and 'briefing' in result:
         briefing = result['briefing']
-        if briefing and len(briefing.strip()) > 10:
-            return briefing.strip()
+        # Mistral peut retourner briefing comme dict imbriqué — on force string
+        if isinstance(briefing, dict):
+            briefing = briefing.get('text') or briefing.get('content') or str(briefing)
+        briefing = str(briefing).strip()
+        if briefing and len(briefing) > 10:
+            return briefing
         return "Aucun texte réglementaire significatif pour GSF dans ce JO."
     log.warning("briefing_jorf: réponse inattendue")
     return ''
