@@ -251,10 +251,28 @@ def _crawl_pjl_content(url_dossier: str, url_doc: str = '') -> str:
     # Try AN document URL (bill deposited at AN first)
     if url_doc:
         try:
-            content = crawl_article(url_doc)
-            if content and len(content) > 500:
-                log.debug(f"PJL content from AN doc ({len(content)} chars)")
-                return content[:6000]
+            resp_doc = requests.get(url_doc, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
+            resp_doc.raise_for_status()
+            from bs4 import BeautifulSoup as _BS2
+            soup_doc = _BS2(resp_doc.text, 'html.parser')
+            # Look for "Version HTML" link which has the actual bill text
+            html_url = ''
+            for a in soup_doc.find_all('a', href=True):
+                txt_a = a.get_text(strip=True).lower()
+                href = a['href']
+                if 'html' in txt_a and ('texte' in href or 'contenu' in href or '.html' in href):
+                    html_url = href if href.startswith('http') else 'https://www.assemblee-nationale.fr' + href
+                    break
+            if html_url:
+                content = crawl_article(html_url)
+                if content and len(content) > 500:
+                    log.debug(f"PJL content from AN HTML version ({len(content)} chars)")
+                    return content[:6000]
+            # Fallback: use the doc page text itself
+            content = soup_doc.get_text(' ', strip=True)
+            if content and len(content) > 300:
+                log.debug(f"PJL content from AN doc page ({len(content)} chars)")
+                return content[:4000]
         except Exception as e:
             log.debug(f"crawl AN doc {url_doc}: {e}")
 
