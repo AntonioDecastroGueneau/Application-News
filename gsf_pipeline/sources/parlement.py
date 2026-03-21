@@ -596,6 +596,27 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         f"{groq_used} appels Groq, {groq_skipped} PJL différés (quota)"
     )
 
+    # Re-analyse all fiches loaded from Supabase that have no resume_gsf
+    # (handles cases where the entry is no longer in today's RSS feed)
+    for fiche_id, fiche in fiches.items():
+        if fiche.get('resume_gsf') or fiche.get('manuel'):
+            continue
+        if groq_used >= PARLEMENT_MAX_GROQ:
+            break
+        titre = fiche.get('titre', '')
+        url_dossier = fiche.get('url_dossier', '')
+        content = _crawl_pjl_content(url_dossier) if url_dossier else ''
+        analysis = groq_analyse_pjl(titre, content or titre)
+        groq_used += 1
+        if analysis.get('pertinent'):
+            fiche['resume_gsf'] = analysis.get('resume', '')
+            fiche['pourquoi'] = analysis.get('pourquoi', '')
+            fiche['score'] = int(analysis.get('score', 1))
+            fiche['horizon'] = analysis.get('horizon', '')
+            if sync.ready:
+                sync.upsert_dossier(fiche)
+            log.info(f"Parlement re-analyse (orphan) : {titre[:50]}")
+
     # pjl_autres grouped by source — only recent entries (last 3 days)
     recent_cutoff = (datetime.now() - timedelta(days=3)).strftime('%Y-%m-%d')
     groups: Dict[str, list] = {}
