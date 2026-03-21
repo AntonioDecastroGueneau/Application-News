@@ -70,14 +70,14 @@ def parse_jorf_xml(content: bytes, today_str: str):
         )
         contenu = ' — '.join(filter(None, [nature, ministere]))
 
-        if keyword_match(titre + ' ' + contenu):
-            articles.append({
-                'titre': titre,
-                'contenu': contenu[:500],
-                'url': url,
-                'nor': nor,
-                'date': date_pub,
-            })
+        articles.append({
+            'titre': titre,
+            'contenu': contenu[:500],
+            'url': url,
+            'nor': nor,
+            'date': date_pub,
+            'keyword_match': keyword_match(titre + ' ' + contenu),
+        })
 
     return articles
 
@@ -102,7 +102,7 @@ def fetch_jorf(today_str: str):
             xml_members = [m for m in tar.getmembers() if m.name.endswith('.xml')]
             log.info(f"JORF : {len(xml_members)} fichiers XML")
 
-            all_articles = []
+            all_raw = []
             seen_nor_global = set()
             for member in xml_members:
                 try:
@@ -114,12 +114,27 @@ def fetch_jorf(today_str: str):
                                 continue
                             if nor:
                                 seen_nor_global.add(nor)
-                            all_articles.append(art)
+                            all_raw.append(art)
                 except Exception as e:
                     log.debug(f"Erreur XML {member.name} : {e}")
 
+            # Séparer textes à analyser (keyword match) des autres
+            all_articles = [a for a in all_raw if a.get('keyword_match')]
+            non_keyword = [a for a in all_raw if not a.get('keyword_match')]
+
+            # Tous les non-keyword vont directement dans autres
+            for art in non_keyword:
+                autres.append({
+                    'nor': art.get('nor', ''),
+                    'titre': art['titre'],
+                    'nature': art.get('contenu', '').split(' — ')[0],
+                    'ministere': art.get('contenu', '').split(' — ')[1] if ' — ' in art.get('contenu', '') else '',
+                    'url': art.get('url', ''),
+                    'date': art.get('date', today_str),
+                })
+
             total_analysed = len(all_articles)
-            log.info(f"JORF : {total_analysed} textes pré-filtrés par keywords")
+            log.info(f"JORF : {len(all_raw)} textes uniques, {total_analysed} analysés par LLM, {len(non_keyword)} → autres directement")
 
             try:
                 briefing = groq_briefing_jorf(all_articles, today_str)
