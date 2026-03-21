@@ -12,17 +12,11 @@
     "pourquoi": "Le texte intègre des éléments clés pour GSF : 1) Extension des obligations de reporting extra-financier (CSRD) incluant les émissions indirectes (scope 3) liées aux prestations de propreté et à la gestion des déchets, 2) Renforcement des règles sur la traçabilité des déchets (REP) et l'économie circulaire, 3) Accélération des exigences en matière de mobilité durable (ZFE, électrification des flottes) pour les entreprises intervenant chez des clients soumis à ces réglementations, 4) Obligations de transparence sur les données environnementales (taxonomie verte) pour les grands comptes clients de GSF.",
     "score": 2,
     "horizon": "Début 2025 (transposition des directives européennes, entrée en vigueur progressive à partir de 2025-2026)",
-    "nouveau_stade": true,
+    "nouveau_stade": false,
     "manuel": false,
-    "historique": [
-      {
-        "date": "2026-03-21",
-        "stade": "Séance publique AN",
-        "event": "Avancement : Adopté → Séance publique AN"
-      }
-    ],
+    "historique": [],
     "created_at": "2026-03-20T23:57:18.140824+00:00",
-    "updated_at": "2026-03-21",
+    "updated_at": "2026-03-21T09:27:58.468957+00:00",
     "supabase_id": "ab2fc271-9dc3-42f0-8185-9215c1039c06",
     "statut": "a_surveiller"
   },
@@ -30,26 +24,27 @@
     "id": "pjl-3bfa344b156a",
     "titre": "Projet de loi de finances de fin de gestion pour 2025 - N° 2135",
     "date_depot": "2026-03-21",
-    "stade": "Dépôt",
-    "stade_index": 0,
+    "stade": "Promulgué",
+    "stade_index": 8,
     "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
     "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
-    "source_rss": "AN Projets de loi",
+    "source_rss": "pipeline",
     "resume_gsf": "Le projet de loi de finances 2025 pourrait renforcer les obligations de reporting extra-financier (CSRD) et les exigences carbone pour les grandes entreprises, impactant directement GSF dans son rôle de prestataire de services avec des clients soumis à ces réglementations.",
     "pourquoi": "Le texte pourrait inclure des mesures liées à la transparence climatique (CSRD), à l'efficacité énergétique des bâtiments tertiaires (DPE) ou à la mobilité durable (ZFE), toutes pertinentes pour GSF dans le cadre de ses prestations et de sa propre flotte. Les clients de GSF (nucléaire, santé, industrie) sont directement concernés par ces évolutions.",
     "score": 2,
     "horizon": "début 2025 (adoption probable fin 2024)",
-    "nouveau_stade": false,
+    "nouveau_stade": true,
     "manuel": false,
     "historique": [
       {
         "date": "2026-03-21",
-        "stade": "Dépôt",
-        "event": "Découverte"
+        "stade": "Promulgué",
+        "event": "Avancement : Dépôt → Promulgué"
       }
     ],
-    "created_at": "2026-03-21",
+    "created_at": "2026-03-21T09:28:13.105241+00:00",
     "updated_at": "2026-03-21",
-    "supabase_id": "23c19d34-1f9c-4cbc-baaa-11053976a132"
+    "supabase_id": "23c19d34-1f9c-4cbc-baaa-11053976a132",
+    "statut": "a_surveiller"
   }
 }

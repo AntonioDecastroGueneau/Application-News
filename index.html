@@ -924,13 +924,19 @@ function renderParlement(){
           <span class="jo-theme-count">${items.length}</span>
           <span class="jo-chevron">▶</span>
         </div>
-        <div class="jo-items">${items.map(item=>`<div class="jo-item" style="display:flex;align-items:center;gap:10px">
+        <div class="jo-items">${items.map(item=>{
+          const today=new Date();today.setHours(0,0,0,0);
+          const itemDate=item.date?new Date(item.date):null;
+          const daysDiff=itemDate?Math.round((today-itemDate)/86400000):999;
+          const isNew=daysDiff<=2;
+          return `<div class="jo-item" style="display:flex;align-items:center;gap:10px">
           <div style="flex:1;font-size:12px;color:var(--text)">${escHtml(item.titre)}</div>
           <div style="display:flex;align-items:center;gap:8px;flex-shrink:0">
-            <span style="font-size:10px;color:var(--muted2);font-family:var(--mono)">${item.date}</span>
+            ${isNew?`<span style="font-size:9px;font-weight:700;color:#fff;background:var(--accent);padding:2px 5px;border-radius:3px;letter-spacing:.3px">Nouveau</span>`:''}
+            <span style="font-size:10px;color:var(--muted2);font-family:var(--mono)">${item.date?formatDate(item.date):''}</span>
             ${item.url?`<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">→</a>`:''}
           </div>
-        </div>`).join('')}</div>
+        </div>`;}).join('')}</div>
       </div>`;
     });
     html+='</div>';
