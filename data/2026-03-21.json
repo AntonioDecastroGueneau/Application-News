@@ -1,24 +1,37 @@
 {
   "date": "2026-03-21",
-  "generated_at": "09:36",
-  "elapsed_seconds": 104,
+  "generated_at": "09:52",
+  "elapsed_seconds": 111,
   "errors": [],
   "stats": {
     "jo_analyses": 3,
     "jo_retenus": 0,
-    "articles_presse": 2,
+    "articles_presse": 3,
     "depts_restriction": 0,
     "pjl_suivis": 2,
-    "pjl_avancements": 1
+    "pjl_avancements": 0
   },
   "items": [
+    {
+      "id": "a5c675bd6d25",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Industrie : des moteurs électriques sans aimant, avec un rendement toujours plus grand",
+      "resume": "Les moteurs SynRM (Synchronous Reluctance Motors) pourraient réduire la consommation énergétique des équipements de propreté (aspirateurs industriels, machines de lavage) et des systèmes de ventilation/climatisation des sites clients, impactant indirectement le scope 2 de GSF.",
+      "pourquoi": "Les moteurs électriques sans aimant (SynRM) améliorent l'efficacité énergétique des machines tournantes, ce qui est pertinent pour GSF dans le cadre de la décarbonation de ses prestations (énergie consommée chez les clients) et de la réduction de son empreinte carbone (scope 2). Cela s'inscrit dans les enjeux d'efficacité énergétique et de décarbonation des équipements utilisés par GSF.",
+      "criticite": 2,
+      "impact_gsf": true,
+      "url": "https://www.actu-environnement.com/ae/news/moteurs-electriques-sans-aimant-dans-industrie-avec-rendement-toujours-plus-grand-47714.php4#xtor=RSS-6",
+      "date": "2026-03-20",
+      "top5": true
+    },
     {
       "id": "359f046ff50a",
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Le nouveau cadre juridique de l'UE sur les énergies renouvelables et l'efficacité énergétique en consultation",
-      "resume": "Ce cadre juridique post-2030 de l'UE pourrait influencer les exigences réglementaires et les objectifs climatiques des clients de GSF (notamment industriels et tertiaires), impactant indirectement ses obligations en matière de décarbonation et de reporting ESG.",
-      "pourquoi": "L'article traite des énergies renouvelables et de l'efficacité énergétique, deux enjeux centraux pour la décarbonation des entreprises (scope 2) et la conformité aux réglementations européennes (CSRD, taxonomie verte). Bien que GSF ne soit pas directement concerné par le cadre juridique, ses clients (nucléaire, santé, industrie) pourraient être impactés, ce qui influence indirectement ses propres engagements (BGES, plan climat, reporting).",
+      "resume": "La consultation publique de la Commission européenne sur le cadre juridique post-2030 des énergies renouvelables et de l'efficacité énergétique pourrait influencer les exigences réglementaires et les attentes clients de GSF en matière de décarbonation et de transition énergétique.",
+      "pourquoi": "Le sujet touche directement à la réglementation énergie (efficacité énergétique, renouvelables) et aux enjeux de décarbonation des entreprises (scope 1/2/3), pertinents pour GSF dans le cadre de ses obligations CSRD, BGES et de sa stratégie climat. La consultation publique implique une veille proactive pour anticiper les évolutions réglementaires futures.",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://www.actu-environnement.com/ae/news/energies-renouvelables-efficacite-energetique-cadre-juridique-europeen-consultation-47723.php4#xtor=RSS-6",
@@ -30,8 +43,8 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Photovoltaïque : Soren porte à 45 000 tonnes par an ses capacités de recyclage",
-      "resume": "L'article concerne la structuration du recyclage des panneaux photovoltaïques en France, ce qui impacte indirectement GSF via la gestion des déchets de ses clients (scope 3) et les obligations réglementaires liées à la REP (Responsabilité Élargie du Producteur).",
-      "pourquoi": "Le sujet touche à la réglementation déchets (REP) et à la gestion des déchets de prestations, qui sont des enjeux directs pour GSF dans le cadre de son reporting ESG (CSRD) et de sa conformité réglementaire. Cependant, l'impact est indirect car GSF n'est pas directement impliqué dans le recyclage des panneaux, mais doit s'assurer que ses clients respectent leurs obligations en matière de tri et de traçabilité des déchets.",
+      "resume": "Le développement des capacités de recyclage des panneaux photovoltaïques (45 000 tonnes/an) impacte indirectement GSF via la gestion des déchets de ses clients (notamment ceux équipés de panneaux solaires) et la traçabilité des flux de déchets dans le cadre de la REP ou du reporting CSRD.",
+      "pourquoi": "GSF intervient sur des sites clients où des panneaux photovoltaïques peuvent être installés (ex : tertiaire, industrie). La structuration du recyclage de ces panneaux influence les obligations de tri, traçabilité et reporting déchets pour GSF, notamment dans le cadre de la REP (Responsabilité Élargie du Producteur) ou de la CSRD (reporting extra-financier). Cela peut aussi impacter les contrats de prestation de propreté/FM si les clients externalisent la gestion de ces déchets.",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://www.actu-environnement.com/ae/news/contrats-soren-recyclage-panneaux-solaires-47722.php4#xtor=RSS-6",
@@ -67,35 +80,8 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des textes publiés ne traite directement de sujets environnementaux, climatiques ou de responsabilité sociétale des entreprises (RSE). Les décrets concernent des enjeux historiques, judiciaires ou éducatifs, et l'arrêté porte sur un refus de certificat patrimonial.",
+  "briefing_jorf": "Aucun des textes publiés ce jour dans le Journal Officiel ne traite de sujets directement liés à l'environnement, au climat ou à la RSE pour une entreprise de services.",
   "pjl_fiches": [
-    {
-      "id": "pjl-3bfa344b156a",
-      "titre": "Projet de loi de finances de fin de gestion pour 2025 - N° 2135",
-      "date_depot": "2026-03-21",
-      "stade": "Promulgué",
-      "stade_index": 8,
-      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
-      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
-      "source_rss": "pipeline",
-      "resume_gsf": "Le projet de loi de finances 2025 pourrait renforcer les obligations de reporting extra-financier (CSRD) et les exigences carbone pour les grandes entreprises, impactant directement GSF dans son rôle de prestataire de services avec des clients soumis à ces réglementations.",
-      "pourquoi": "Le texte pourrait inclure des mesures liées à la transparence climatique (CSRD), à l'efficacité énergétique des bâtiments tertiaires (DPE) ou à la mobilité durable (ZFE), toutes pertinentes pour GSF dans le cadre de ses prestations et de sa propre flotte. Les clients de GSF (nucléaire, santé, industrie) sont directement concernés par ces évolutions.",
-      "score": 2,
-      "horizon": "début 2025 (adoption probable fin 2024)",
-      "nouveau_stade": true,
-      "manuel": false,
-      "historique": [
-        {
-          "date": "2026-03-21",
-          "stade": "Promulgué",
-          "event": "Avancement : Dépôt → Promulgué"
-        }
-      ],
-      "created_at": "2026-03-21T09:28:13.105241+00:00",
-      "updated_at": "2026-03-21",
-      "supabase_id": "23c19d34-1f9c-4cbc-baaa-11053976a132",
-      "statut": "a_surveiller"
-    },
     {
       "id": "pjl-14aebd68935a",
       "titre": "Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche - N° 2518",
@@ -116,6 +102,34 @@
       "updated_at": "2026-03-21T09:27:58.468957+00:00",
       "supabase_id": "ab2fc271-9dc3-42f0-8185-9215c1039c06",
       "statut": "a_surveiller"
+    },
+    {
+      "id": "pjl-3bfa344b156a",
+      "titre": "Projet de loi de finances de fin de gestion pour 2025 - N° 2135",
+      "date_depot": "2026-03-21",
+      "stade": "Dépôt",
+      "stade_index": 0,
+      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
+      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
+      "source_rss": "AN Projets de loi",
+      "resume_gsf": "Le projet de loi de finances de fin de gestion pour 2025 pourrait intégrer des mesures fiscales ou incitatives liées à la transition énergétique (ex : bonus/malus véhicules, aides à l'électrification des flottes) ou au reporting extra-financier (CSRD), impactant directement les obligations de GSF en matière de flotte, d'énergie ou de reporting.",
+      "pourquoi": {
+        "signal_strategique": "Le PJL 2025 pourrait imposer des obligations concrètes (ex : électrification accélérée de la flotte, reporting CSRD renforcé) avec un délai d'anticipation court (décembre 2024 pour adoption, entrée en vigueur 2025-2026), exposant GSF à un risque opérationnel de non-conformité (pénalités, perte de contrats clients) et de perte de compétitivité face à des concurrents mieux préparés."
+      },
+      "score": 2,
+      "horizon": "décembre 2024 (adoption) / entrée en vigueur progressive en 2025-2026 selon les mesures",
+      "nouveau_stade": false,
+      "manuel": false,
+      "historique": [
+        {
+          "date": "2026-03-21",
+          "stade": "Dépôt",
+          "event": "Découverte"
+        }
+      ],
+      "created_at": "2026-03-21",
+      "updated_at": "2026-03-21",
+      "supabase_id": "8deb3806-fd23-4e89-ba15-8121fd55edb5"
     }
   ],
   "pjl_autres": [
@@ -442,5 +456,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE en matière environnementale et énergétique) et le projet de loi de finances pour 2026 (n°2247) pourraient impacter les obligations de reporting RSE et les incitations fiscales pour la transition écologique. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux majeurs pour une entreprise de services."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises, notamment en matière de reporting extra-financier et de transition énergétique. Aucun autre texte ne traite directement de sujets climatiques ou environnementaux majeurs pour une entreprise de services."
 }
