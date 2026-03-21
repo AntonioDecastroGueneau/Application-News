@@ -52,9 +52,15 @@ def fetch_rss_source(source: dict, today_str: str):
                 },
             )
             content = rss_resp.content
-            # Sanitize malformed XML: replace undefined HTML entities (&xxx;)
-            # that break strict XML parsers (e.g. Carbone 4 feed)
-            content = re.sub(rb'&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[\da-fA-F]+;)(\w+);', rb'&amp;\1;', content)
+            # Repair malformed XML (e.g. undefined HTML entities in Carbone 4 feed)
+            # using lxml's recovery parser before handing off to feedparser.
+            try:
+                from lxml import etree
+                parser = etree.XMLParser(recover=True, resolve_entities=False)
+                root = etree.fromstring(content, parser)
+                content = etree.tostring(root, xml_declaration=True, encoding='utf-8')
+            except Exception:
+                pass
             feed = feedparser.parse(content)
         except Exception:
             feed = feedparser.parse(source['url'])

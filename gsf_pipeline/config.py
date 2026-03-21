@@ -291,17 +291,21 @@ AN_SCRAPER_SOURCES = [
 ]
 
 STADE_PATTERNS = [
-    ('Promulgué', ['promulgu', 'loi n°', 'parue au jo']),
-    ('Adopté', ['adopté définitivement', 'adoption définitive', 'texte adopté']),
+    ('Promulgué',  ['promulgu', 'loi n°', 'parue au jo', 'publiée au jo']),
+    ('Adopté',     ['adopté définitivement', 'adoption définitive', 'texte adopté',
+                    'définitivement adopté', 'loi adoptée', 'adoptée par',
+                    'vote solennel', 'vote conforme']),
     ('Commission mixte paritaire', ['commission mixte paritaire', 'cmp']),
-    ('AN 2ème lecture', ['2e lecture', 'deuxième lecture', 'nouvelle lecture']),
-    ('Sénat 1ère lecture', ['sénat', 'haute assemblée']),
-    ('Séance publique AN', ['séance publique', 'hémicycle', 'discussion générale']),
+    ('Sénat 2ème lecture', ['sénat en deuxième lecture', 'deuxième lecture au sénat']),
+    ('AN 2ème lecture', ['assemblée nationale en deuxième lecture', '2e lecture', 'deuxième lecture', 'nouvelle lecture']),
+    ('Sénat 1ère lecture', ['sénat', 'haute assemblée', 'première lecture au sénat']),
+    ('Séance publique AN', ['séance publique', 'hémicycle', 'discussion générale', 'examen en séance']),
     ('Commission', [
         'en commission',
         'examiné par la commission',
         'rapporteur désigné',
         'renvoyé en commission',
+        'commission saisie',
     ]),
 ]
 
