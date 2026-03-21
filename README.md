@@ -1,6 +1,6 @@
 # Veille Environnementale — Pipeline & Application
 
-An automated regulatory and environmental intelligence platform for large service companies. Runs twice daily via GitHub Actions and deploys a live web app to GitHub Pages.
+An automated regulatory and environmental intelligence platform for a large French service companies. Runs twice daily via GitHub Actions and deploys a live web app to GitHub Pages.
 
 ---
 
