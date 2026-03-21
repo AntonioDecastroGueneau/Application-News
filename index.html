@@ -832,7 +832,7 @@ function renderJO(){
   groupEl.innerHTML=joGsfHtml+briefingHtml+Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([label,its])=>`<div class="jo-theme-group open"><div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')"><span class="jo-theme-name">${escHtml(label)}</span><span class="jo-theme-count">${its.length}</span><span class="jo-chevron">▶</span></div><div class="jo-items">${its.map(item=>`<div class="jo-item"><div class="jo-item-nature">${escHtml(item.nature||label)}</div><div class="jo-item-titre">${escHtml(item.titre)}</div>${item.url?`<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`:'<span style="font-size:10px;color:var(--muted2)">Pas de lien</span>'}</div>`).join('')}</div></div>`).join('');
 }
 // STADES_ORDRE used in parlement + drawer progress bars
-const STADES_ORDRE=['Dépôt','Commission','Séance publique AN','Sénat 1ère lecture','Commission mixte paritaire','Sénat 2ème lecture','AN 2ème lecture','Adopté','Promulgué'];
+const STADES_ORDRE=['Dépôt','Commission','Première lecture à l\'Assemblée nationale','Première lecture au Sénat','Commission mixte paritaire','Deuxième lecture au Sénat','Deuxième lecture à l\'Assemblée nationale','Texte définitivement adopté','Promulgation'];
 const SCORE_LABEL={1:'Veille',2:'À anticiper',3:'⚠ Impact direct'};
 
 function renderParlement(){

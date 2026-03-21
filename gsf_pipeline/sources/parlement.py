@@ -299,31 +299,6 @@ def _scrape_dossier_stade(url_dossier: str) -> str:
     """
     from bs4 import BeautifulSoup
 
-    # Mapping from AN slide labels (lowercased) → STADES_ORDRE values
-    _LABEL_MAP = [
-        ('promulg',                                   'Promulgué'),
-        ('texte définitivement adopté',               'Adopté'),
-        ('adoption définitive',                       'Adopté'),
-        ('lecture définitive',                        'Adopté'),
-        ('commission mixte paritaire',                'Commission mixte paritaire'),
-        ('deuxième lecture au sénat',                 'Sénat 2ème lecture'),
-        ('deuxième lecture à l\'assemblée',           'AN 2ème lecture'),
-        ('nouvelle lecture',                          'AN 2ème lecture'),
-        ('première lecture au sénat',                 'Sénat 1ère lecture'),
-        ('sénat',                                     'Sénat 1ère lecture'),
-        ('première lecture à l\'assemblée',           'Séance publique AN'),
-        ('séance publique',                           'Séance publique AN'),
-        ('commission',                                'Commission'),
-        ('dépôt',                                     'Dépôt'),
-    ]
-
-    def _map_label(label: str) -> str:
-        l = label.lower().strip()
-        for key, stade in _LABEL_MAP:
-            if key in l:
-                return stade
-        return ''
-
     try:
         resp = requests.get(url_dossier, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
         resp.raise_for_status()
@@ -340,11 +315,8 @@ def _scrape_dossier_stade(url_dossier: str) -> str:
                     continue
                 label = label_el.get_text(strip=True)
                 date_txt = date_el.get_text(strip=True) if date_el else ''
-                # A slide is "reached" if it has a date or a status indicator
-                if date_txt:
-                    mapped = _map_label(label)
-                    if mapped:
-                        current_stade = mapped
+                if date_txt and label:
+                    current_stade = label
             if current_stade:
                 log.debug(f"stade (swiper) : {current_stade} — {url_dossier}")
                 return current_stade

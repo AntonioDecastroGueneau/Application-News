@@ -355,13 +355,13 @@ PARLEMENT_MAX_GROQ = 10
 STADES_ORDRE = [
     'Dépôt',
     'Commission',
-    'Séance publique AN',
-    'Sénat 1ère lecture',
+    'Première lecture à l\'Assemblée nationale',
+    'Première lecture au Sénat',
     'Commission mixte paritaire',
-    'Sénat 2ème lecture',
-    'AN 2ème lecture',
-    'Adopté',
-    'Promulgué',
+    'Deuxième lecture au Sénat',
+    'Deuxième lecture à l\'Assemblée nationale',
+    'Texte définitivement adopté',
+    'Promulgation',
 ]
 
 AN_BASE = 'https://www2.assemblee-nationale.fr'
