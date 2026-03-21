@@ -1037,9 +1037,12 @@ async function deleteDossier(id, titre){
   try{
     const{error}=await getSupa().from('legislative_dossiers').delete().eq('id',id);
     if(error)throw error;
+    const urlAn=dossiersSuivi.find(d=>d.id===id)?.url_an;
     dossiersSuivi=dossiersSuivi.filter(d=>d.id!==id);
     delete recentEvents[id];
+    if(urlAn&&D?.pjl_fiches)D.pjl_fiches=D.pjl_fiches.filter(f=>f.url_an!==urlAn);
     renderSuivi();
+    renderParlement();
     const el=document.getElementById('stat-suivi');
     if(el){el.textContent=dossiersSuivi.length||'0';el.className='stat-val'+(dossiersSuivi.length?'':' zero');}
     showToast('Dossier supprimé');
