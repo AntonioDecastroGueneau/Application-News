@@ -598,16 +598,18 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
 
     # Re-analyse all fiches loaded from Supabase that have no resume_gsf
     # (handles cases where the entry is no longer in today's RSS feed)
+    # Uses its own quota (5 max) independent of the new-PJL quota
+    orphan_groq = 0
     for fiche_id, fiche in fiches.items():
         if fiche.get('resume_gsf') or fiche.get('manuel'):
             continue
-        if groq_used >= PARLEMENT_MAX_GROQ:
+        if orphan_groq >= 5:
             break
         titre = fiche.get('titre', '')
         url_dossier = fiche.get('url_dossier', '')
         content = _crawl_pjl_content(url_dossier) if url_dossier else ''
         analysis = groq_analyse_pjl(titre, content or titre)
-        groq_used += 1
+        orphan_groq += 1
         if analysis.get('pertinent'):
             fiche['resume_gsf'] = analysis.get('resume', '')
             fiche['pourquoi'] = analysis.get('pourquoi', '')

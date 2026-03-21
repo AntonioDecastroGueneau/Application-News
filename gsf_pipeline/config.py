@@ -167,17 +167,6 @@ RSS_SOURCES = [
         ],
     },
     {
-        'name': 'Vie-publique.fr',
-        'url': 'https://www.vie-publique.fr/rss/actualites.xml',
-        'categorie': 'Réglementation',
-        'fallback_crawl': 'https://www.vie-publique.fr/loi',
-        'require_keywords': [
-            'climat', 'énergie', 'transition', 'environnement', 'carbone',
-            'décarbonation', 'renouvelable', 'biodiversité', 'CSRD',
-            'adaptation', 'neutralité', 'trajectoire', 'émissions',
-        ],
-    },
-    {
         'name': 'The Shift Project',
         'url': 'https://theshiftproject.org/feed/',
         'categorie': 'Climat',
