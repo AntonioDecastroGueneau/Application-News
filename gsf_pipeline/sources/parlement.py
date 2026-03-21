@@ -312,7 +312,7 @@ def _scrape_dossier_stade(url_dossier: str) -> str:
         ('première lecture au sénat',                 'Sénat 1ère lecture'),
         ('sénat',                                     'Sénat 1ère lecture'),
         ('première lecture à l\'assemblée',           'Séance publique AN'),
-        ('assemblée nationale',                       'Séance publique AN'),
+        ('séance publique',                           'Séance publique AN'),
         ('commission',                                'Commission'),
         ('dépôt',                                     'Dépôt'),
     ]
