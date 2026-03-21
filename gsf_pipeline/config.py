@@ -102,6 +102,15 @@ KEYWORDS = [
     # Mobilité & flotte
     'véhicule électrique', 'électrification', 'flotte',
     'mobilité durable', 'ZFE',
+
+    # English keywords (ESG Today, Guardian)
+    'climate', 'carbon', 'decarbonization', 'decarbonisation', 'net zero',
+    'renewable', 'sustainability', 'sustainable', 'ESG', 'CSRD',
+    'carbon tax', 'carbon price', 'emissions', 'greenhouse gas',
+    'energy transition', 'clean energy', 'electric vehicle',
+    'waste management', 'circular economy', 'biodiversity',
+    'flood', 'drought', 'heatwave', 'climate risk',
+    'scope 1', 'scope 2', 'scope 3', 'carbon footprint',
 ]
 
 
@@ -205,6 +214,46 @@ RSS_SOURCES = [
         'url': 'https://www.contexte.com/articles/rss/edition/environnement',
         'categorie': 'Réglementation',
         'fallback_crawl': 'https://www.contexte.com/environnement/',
+    },
+    {
+        'name': 'GreenUnivers',
+        'url': 'https://www.greenunivers.com/feed/',
+        'categorie': 'Climat',
+        'fallback_crawl': 'https://www.greenunivers.com/',
+    },
+    {
+        'name': 'Le Monde Planète',
+        'url': 'https://www.lemonde.fr/planete/rss_full.xml',
+        'categorie': 'Presse',
+        'fallback_crawl': 'https://www.lemonde.fr/planete/',
+        'require_keywords': [
+            'climat', 'énergie', 'carbone', 'transition', 'environnement',
+            'décarbonation', 'renouvelable', 'CSRD', 'adaptation', 'émissions',
+            'biodiversité', 'déchets', 'REP', 'sécheresse', 'inondation',
+        ],
+    },
+    {
+        'name': 'ESG Today',
+        'url': 'https://www.esgtoday.com/feed/',
+        'categorie': 'Réglementation',
+        'fallback_crawl': 'https://www.esgtoday.com/',
+        'require_keywords': [
+            'CSRD', 'carbon', 'climate', 'ESG', 'sustainability', 'emissions',
+            'decarbonization', 'net zero', 'renewable', 'scope', 'reporting',
+            'taxonomy', 'circular economy', 'waste',
+        ],
+    },
+    {
+        'name': 'The Guardian Environment',
+        'url': 'https://www.theguardian.com/environment/rss',
+        'categorie': 'Climat',
+        'fallback_crawl': 'https://www.theguardian.com/environment',
+        'require_keywords': [
+            'carbon', 'climate', 'emissions', 'net zero', 'decarbonization',
+            'renewable energy', 'carbon price', 'CSRD', 'ESG', 'scope',
+            'energy transition', 'electric vehicle', 'sustainability reporting',
+            'flood', 'drought', 'heatwave',
+        ],
     },
 ]
 
