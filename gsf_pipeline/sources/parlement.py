@@ -141,6 +141,57 @@ def _scrape_an_listing(source: dict, today_str: str) -> list:
     return entries
 
 
+_MOIS_FR = {
+    'janvier': '01', 'février': '02', 'mars': '03', 'avril': '04',
+    'mai': '05', 'juin': '06', 'juillet': '07', 'août': '08',
+    'septembre': '09', 'octobre': '10', 'novembre': '11', 'décembre': '12',
+}
+
+
+def _parse_fr_date(text: str) -> Optional[str]:
+    """Parse a French date like '12 mars 2025' → '2025-03-12'."""
+    m = re.search(r'(\d{1,2})\s+(\w+)\s+(\d{4})', text.strip())
+    if m:
+        mois = _MOIS_FR.get(m.group(2).lower())
+        if mois:
+            return f"{m.group(3)}-{mois}-{int(m.group(1)):02d}"
+    return None
+
+
+def _scrape_deposit_date(url_dossier: str) -> Optional[str]:
+    """
+    Fetch the AN dossier page and extract the deposit date from the first
+    Swiper slide (labelled 'Dépôt').  Returns 'YYYY-MM-DD' or None.
+    """
+    from bs4 import BeautifulSoup
+
+    try:
+        resp = requests.get(url_dossier, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, 'html.parser')
+
+        slides = soup.find_all(class_='swiper-slide')
+        for slide in slides:
+            label_el = slide.find('span', class_=lambda c: c and '_bold' in c and '_colored-primary' in c)
+            if not label_el:
+                continue
+            label = label_el.get_text(strip=True).lower()
+            if 'dépôt' in label or 'depot' in label:
+                date_el = slide.find('span', class_=lambda c: c and '_colored-grey' in c)
+                if date_el:
+                    return _parse_fr_date(date_el.get_text(strip=True))
+        # If no "Dépôt" slide found, try first slide with a date
+        for slide in slides:
+            date_el = slide.find('span', class_=lambda c: c and '_colored-grey' in c)
+            if date_el:
+                d = _parse_fr_date(date_el.get_text(strip=True))
+                if d:
+                    return d
+    except Exception as e:
+        log.debug(f"scrape_deposit_date {url_dossier}: {e}")
+    return None
+
+
 def _scrape_dossier_stade(url_dossier: str) -> str:
     """
     Parse the AN dossier page using the Swiper slider structure.
@@ -461,8 +512,16 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
     )
 
     # pjl_autres grouped by source
+    # For entries that still have today's date, try to scrape the real deposit date
     groups: Dict[str, list] = {}
     for e in entries:
+        date = e['date']
+        if date == today_str and e.get('url_dossier'):
+            real_date = _scrape_deposit_date(e['url_dossier'])
+            if real_date:
+                date = real_date
+                log.debug(f"Parlement date dépôt récupérée : {date} — {e['titre'][:50]}")
+
         src = e['source']
         if src not in groups:
             groups[src] = []
@@ -470,7 +529,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
             'titre': e['titre'],
             'url': e['url'],
             'url_dossier': e.get('url_dossier', ''),
-            'date': e['date'],
+            'date': date,
         })
     pjl_autres = [{'source': src, 'items': items} for src, items in groups.items()]
 
