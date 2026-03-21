@@ -273,6 +273,8 @@ def fetch_rss(today_str: str):
     all_items = []
     for source in RSS_SOURCES:
         items = fetch_rss_source(source, today_str)
+        if not items:
+            log.warning(f"SOURCE VIDE : {source['name']} — 0 articles retenus")
         all_items.extend(items)
         log.info(f"RSS {source['name']} : {len(items)} retenus")
     return all_items

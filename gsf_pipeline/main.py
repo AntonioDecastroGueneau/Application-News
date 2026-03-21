@@ -9,6 +9,7 @@ from .sources.parlement import fetch_parlement
 from .sources.rss import fetch_rss
 from .sources.vigieau import fetch_vigieau, fetch_vigieau_history
 from .config import GROQ_MODEL
+from .llm import get_llm_stats
 
 
 def _setup_logging(log_path: Path):
@@ -38,8 +39,10 @@ def main() -> int:
 
     start = datetime.now()
     errors = []
+    meta_errors = []
     items = []
     stats = {}
+    source_counts = {}
     restrictions = []
     jorf_autres = []
     jorf_items = []
@@ -50,29 +53,44 @@ def main() -> int:
         jorf_items, jorf_autres, jorf_total, briefing_jorf = fetch_jorf(today_str)
         stats['jo_analyses'] = jorf_total
         stats['jo_retenus'] = len(jorf_items)
+        source_counts['JORF'] = len(jorf_items)
+        if len(jorf_items) == 0:
+            log.warning("WARNING: SOURCE VIDE — JORF")
+            meta_errors.append("SOURCE VIDE — JORF : 0 textes retenus")
     except Exception as e:
         log.error(f"JORF fatal : {e}")
         errors.append('JORF')
+        meta_errors.append(f"JORF fatal : {e}")
         stats.update({'jo_analyses': 0, 'jo_retenus': 0})
+        source_counts['JORF'] = 0
 
     # 2. RSS / Presse
     try:
         rss_items = fetch_rss(today_str)
         items.extend(rss_items)
         stats['articles_presse'] = len(rss_items)
+        source_counts['RSS'] = len(rss_items)
+        if len(rss_items) == 0:
+            log.warning("WARNING: SOURCE VIDE — RSS")
+            meta_errors.append("SOURCE VIDE — RSS : 0 articles retenus")
     except Exception as e:
         log.error(f"RSS fatal : {e}")
         errors.append('RSS')
+        meta_errors.append(f"RSS fatal : {e}")
         stats['articles_presse'] = 0
+        source_counts['RSS'] = 0
 
     # 3. VigiEau
     try:
         restrictions = fetch_vigieau()
         stats['depts_restriction'] = len(restrictions)
+        source_counts['VigiEau'] = len(restrictions)
     except Exception as e:
         log.error(f"VigiEau fatal : {e}")
         errors.append('VigiEau')
+        meta_errors.append(f"VigiEau fatal : {e}")
         stats['depts_restriction'] = 0
+        source_counts['VigiEau'] = 0
 
     # 4. VigiEau historique
     try:
@@ -80,6 +98,7 @@ def main() -> int:
     except Exception as e:
         log.error(f"VigiEau history fatal : {e}")
         errors.append('VigiEau_history')
+        meta_errors.append(f"VigiEau_history fatal : {e}")
 
     # 5. Parlement
     pjl_fiches = []
@@ -89,10 +108,16 @@ def main() -> int:
         pjl_fiches, pjl_autres, pjl_briefing = fetch_parlement(script_dir, today_str)
         stats['pjl_suivis'] = len(pjl_fiches)
         stats['pjl_avancements'] = sum(1 for f in pjl_fiches if f.get('nouveau_stade'))
+        source_counts['Parlement'] = len(pjl_fiches)
+        if len(pjl_fiches) == 0:
+            log.warning("WARNING: SOURCE VIDE — Parlement")
+            meta_errors.append("SOURCE VIDE — Parlement : 0 fiches")
     except Exception as e:
         log.error(f"Parlement fatal : {e}")
         errors.append('Parlement')
+        meta_errors.append(f"Parlement fatal : {e}")
         stats.update({'pjl_suivis': 0, 'pjl_avancements': 0})
+        source_counts['Parlement'] = 0
 
     # Dedup + sort by criticite
     seen = set()
@@ -110,12 +135,21 @@ def main() -> int:
         item['top5'] = i < 5
 
     elapsed = round((datetime.now() - start).total_seconds())
+    llm_stats = get_llm_stats()
+    pipeline_meta = {
+        'run_at': datetime.now().isoformat(timespec='seconds'),
+        'sources': source_counts,
+        'errors': meta_errors,
+        'llm_calls': llm_stats['calls'],
+        'llm_seconds': llm_stats['seconds'],
+    }
     json_data = {
         'date': today_str,
         'generated_at': datetime.now().strftime('%H:%M'),
         'elapsed_seconds': elapsed,
         'errors': errors,
         'stats': stats,
+        'pipeline_meta': pipeline_meta,
         'items': unique,
         'restrictions_eau': restrictions,
         'jo_autres': jorf_autres,

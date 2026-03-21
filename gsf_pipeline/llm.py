@@ -26,6 +26,12 @@ _mistral_client = None
 _groq_client = None
 _mistral_last_call: float = 0.0
 _groq_last_call: float = 0.0
+_llm_call_count: int = 0
+_llm_total_seconds: float = 0.0
+
+
+def get_llm_stats() -> dict:
+    return {'calls': _llm_call_count, 'seconds': round(_llm_total_seconds, 1)}
 
 
 def _get_mistral_client() -> Mistral:
@@ -50,13 +56,14 @@ def _get_groq_client() -> Groq:
 
 def _call_mistral(prompt: str, system: str, max_tokens: int) -> str:
     """Call Mistral with a 1 req/s rate limiter."""
-    global _mistral_last_call
+    global _mistral_last_call, _llm_call_count, _llm_total_seconds
     elapsed = time.time() - _mistral_last_call
     if elapsed < MISTRAL_MIN_INTERVAL:
         time.sleep(MISTRAL_MIN_INTERVAL - elapsed)
     _mistral_last_call = time.time()
 
     client = _get_mistral_client()
+    _t = time.time()
     resp = client.chat.complete(
         model=MISTRAL_MODEL,
         messages=[
@@ -67,6 +74,8 @@ def _call_mistral(prompt: str, system: str, max_tokens: int) -> str:
         temperature=0.2,
         response_format={"type": "json_object"},
     )
+    _llm_call_count += 1
+    _llm_total_seconds += time.time() - _t
     content = resp.choices[0].message.content
     # Some SDKs can return a parsed dict when using json_object
     if isinstance(content, dict):
@@ -76,7 +85,7 @@ def _call_mistral(prompt: str, system: str, max_tokens: int) -> str:
 
 def _call_groq_fallback(prompt: str, system: str, max_tokens: int, model: str) -> str:
     """Groq fallback with rate limiter and retry."""
-    global _groq_last_call
+    global _groq_last_call, _llm_call_count, _llm_total_seconds
     elapsed = time.time() - _groq_last_call
     if elapsed < GROQ_MIN_INTERVAL:
         time.sleep(GROQ_MIN_INTERVAL - elapsed)
@@ -90,6 +99,7 @@ def _call_groq_fallback(prompt: str, system: str, max_tokens: int, model: str) -
 
     for attempt in range(1, GROQ_MAX_RETRY + 1):
         _groq_last_call = time.time()
+        _t = time.time()
         try:
             resp = client.chat.completions.create(
                 model=model,
@@ -98,6 +108,8 @@ def _call_groq_fallback(prompt: str, system: str, max_tokens: int, model: str) -
                 temperature=0.2,
                 response_format={"type": "json_object"},
             )
+            _llm_call_count += 1
+            _llm_total_seconds += time.time() - _t
             return resp.choices[0].message.content.strip()
         except Exception as e:
             err_str = str(e)
@@ -146,14 +158,22 @@ def extract_json(text: str) -> dict:
     except Exception:
         pass
 
-    # Fallback: try to locate the first {...} block
-    match = re.search(r'\{.*?\}', text, re.DOTALL)
+    # Fallback: try to locate the first {...} block (greedy to handle nested braces)
+    match = re.search(r'\{.*\}', text, re.DOTALL)
     if match:
         try:
             return json.loads(match.group())
         except Exception:
             pass
     return {}
+
+
+def _safe_score(val) -> int:
+    """Safely cast a score value to an int in [1, 3]."""
+    try:
+        return max(1, min(3, int(float(str(val or 1).split('/')[0]))))
+    except (ValueError, TypeError):
+        return 1
 
 
 # ─────────────────────────────────────────────
@@ -195,7 +215,7 @@ def groq_analyse_jorf(titre: str, contenu: str) -> dict:
     if not result:
         return {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1}
 
-    score = int(result.get('score') or 1)
+    score = _safe_score(result.get('score'))
     if not result.get('pertinent') or score < 2:
         result['pourquoi'] = ''
         return result
@@ -256,7 +276,7 @@ def groq_analyse_rss(titre: str, contenu: str) -> dict:
     if not result:
         return {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1}
 
-    score = int(result.get('score') or 1)
+    score = _safe_score(result.get('score'))
     if not result.get('pertinent') or score < 2:
         result['pourquoi'] = ''
         return result
@@ -382,7 +402,7 @@ def groq_analyse_pjl(titre: str, description: str) -> dict:
     if not result:
         return {'pertinent': False, 'resume': '', 'pourquoi': '', 'score': 1, 'horizon': ''}
 
-    score = int(result.get('score') or 1)
+    score = _safe_score(result.get('score'))
     if not result.get('pertinent') or score < 2:
         result['pourquoi'] = ''
         return result

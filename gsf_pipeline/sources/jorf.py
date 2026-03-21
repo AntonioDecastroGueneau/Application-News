@@ -125,6 +125,9 @@ def fetch_jorf(today_str: str):
                 except Exception as e:
                     log.debug(f"Erreur XML {member.name} : {e}")
 
+            if len(all_raw) == 0:
+                log.warning("JORF : aucun texte extrait du tar.gz — vérifier l'URL")
+
             # Séparer textes à analyser (keyword match) des autres
             all_articles = [a for a in all_raw if a.get('keyword_match')]
             non_keyword = [a for a in all_raw if not a.get('keyword_match')]

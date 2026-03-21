@@ -447,6 +447,8 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         log.info(f"Parlement : {before - len(entries)} entrées exclues (plus anciennes que 31 jours)")
 
     log.info(f"Parlement : {len(entries)} entrées uniques après déduplication")
+    if len(entries) == 0:
+        log.warning("Parlement : aucune entrée scrappée — vérifier l'AN")
 
     # Briefing LLM
     try:
