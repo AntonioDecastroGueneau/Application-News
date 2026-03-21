@@ -12,6 +12,27 @@
     "pourquoi": "Le texte intègre des éléments clés pour GSF : 1) Extension des obligations de reporting extra-financier (CSRD) incluant les émissions indirectes (scope 3) liées aux prestations de propreté et à la gestion des déchets, 2) Renforcement des règles sur la traçabilité des déchets (REP) et l'économie circulaire, 3) Accélération des exigences en matière de mobilité durable (ZFE, électrification des flottes) pour les entreprises intervenant chez des clients soumis à ces réglementations, 4) Obligations de transparence sur les données environnementales (taxonomie verte) pour les grands comptes clients de GSF.",
     "score": 2,
     "horizon": "Début 2025 (transposition des directives européennes, entrée en vigueur progressive à partir de 2025-2026)",
+    "nouveau_stade": false,
+    "manuel": false,
+    "historique": [],
+    "created_at": "2026-03-20T23:57:18.140824+00:00",
+    "updated_at": "2026-03-21T00:07:30.240993+00:00",
+    "supabase_id": "ab2fc271-9dc3-42f0-8185-9215c1039c06",
+    "statut": "a_surveiller"
+  },
+  "pjl-3bfa344b156a": {
+    "id": "pjl-3bfa344b156a",
+    "titre": "Projet de loi de finances de fin de gestion pour 2025 - N° 2135",
+    "date_depot": "2026-03-21",
+    "stade": "Adopté",
+    "stade_index": 7,
+    "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
+    "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
+    "source_rss": "pipeline",
+    "resume_gsf": "Le projet de loi de finances pour 2025 pourrait intégrer des mesures fiscales incitatives ou contraignantes liées à la transition énergétique (ex : bonus/malus pour les flottes de véhicules, crédits d'impôt pour l'efficacité énergétique des bâtiments tertiaires), impactant directement les coûts opérationnels et stratégiques de GSF.",
+    "pourquoi": "Bien que ce texte soit principalement budgétaire, il peut inclure des dispositions fiscales liées à la transition écologique (ex : extension des ZFE, incitations à l'électrification des flottes, aides à la rénovation énergétique des sites clients). Ces mesures pourraient influencer les obligations de reporting (CSRD), les coûts de mobilité (scope 1), ou les investissements en efficacité énergétique pour les sites tertiaires des clients de GSF.",
+    "score": 2,
+    "horizon": "début 2025 (adoption probable fin 2024)",
     "nouveau_stade": true,
     "manuel": false,
     "historique": [
@@ -21,35 +42,9 @@
         "event": "Avancement : Dépôt → Adopté"
       }
     ],
-    "created_at": "2026-03-20T23:57:18.140824+00:00",
+    "created_at": "2026-03-21T00:07:45.565007+00:00",
     "updated_at": "2026-03-21",
-    "supabase_id": "ab2fc271-9dc3-42f0-8185-9215c1039c06",
+    "supabase_id": "1b2e240d-aa98-47aa-ad09-507be789d726",
     "statut": "a_surveiller"
-  },
-  "pjl-3bfa344b156a": {
-    "id": "pjl-3bfa344b156a",
-    "titre": "Projet de loi de finances de fin de gestion pour 2025 - N° 2135",
-    "date_depot": "2026-03-21",
-    "stade": "Dépôt",
-    "stade_index": 0,
-    "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
-    "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
-    "source_rss": "AN Projets de loi",
-    "resume_gsf": "Le projet de loi de finances pour 2025 pourrait intégrer des mesures fiscales incitatives ou contraignantes liées à la transition énergétique (ex : bonus/malus pour les flottes de véhicules, crédits d'impôt pour l'efficacité énergétique des bâtiments tertiaires), impactant directement les coûts opérationnels et stratégiques de GSF.",
-    "pourquoi": "Bien que ce texte soit principalement budgétaire, il peut inclure des dispositions fiscales liées à la transition écologique (ex : extension des ZFE, incitations à l'électrification des flottes, aides à la rénovation énergétique des sites clients). Ces mesures pourraient influencer les obligations de reporting (CSRD), les coûts de mobilité (scope 1), ou les investissements en efficacité énergétique pour les sites tertiaires des clients de GSF.",
-    "score": 2,
-    "horizon": "début 2025 (adoption probable fin 2024)",
-    "nouveau_stade": false,
-    "manuel": false,
-    "historique": [
-      {
-        "date": "2026-03-21",
-        "stade": "Dépôt",
-        "event": "Découverte"
-      }
-    ],
-    "created_at": "2026-03-21",
-    "updated_at": "2026-03-21",
-    "supabase_id": "1b2e240d-aa98-47aa-ad09-507be789d726"
   }
 }
