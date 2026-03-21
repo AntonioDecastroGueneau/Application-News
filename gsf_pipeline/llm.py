@@ -343,9 +343,17 @@ def groq_briefing_jorf(articles: list, today_str: str) -> str:
 
 def groq_analyse_pjl(titre: str, description: str) -> dict:
     system = 'Tu es conseiller RSE senior pour GSF. JSON valide uniquement.'
+    has_content = len(description) > len(titre) + 50
+    content_note = (
+        "Le texte du PJL est fourni ci-dessous — base ton analyse UNIQUEMENT sur ce contenu.\n"
+        if has_content else
+        "ATTENTION : seul le titre est disponible, pas le texte complet. "
+        "Si le titre ne mentionne pas explicitement un sujet GSF, répondre pertinent=false.\n"
+    )
     prompt = (
         f"{GSF_CONTEXT_SHORT}\n\n"
         "Évalue ce projet de loi gouvernemental pour le Responsable Environnement / Climat de GSF.\n\n"
+        f"{content_note}\n"
         "PERTINENT si le texte crée ou modifie des obligations s'appliquant à GSF :\n"
         "- Obligations BGES, bilan GES, plan climat pour grandes entreprises\n"
         "- CSRD, taxonomie verte, reporting extra-financier\n"
@@ -355,14 +363,14 @@ def groq_analyse_pjl(titre: str, description: str) -> dict:
         "- Politique climatique structurante : SNBC, PNACC, loi énergie-climat\n\n"
         "NON PERTINENT : ICPE, SEVESO, biocides, REACH (GSF non exploitant), "
         "agriculture, défense, santé humaine, textes sans lien avec GSF.\n"
-        "EN CAS DE DOUTE : pertinent = true.\n\n"
+        "RÈGLE STRICTE : n'inférer aucun sujet GSF qui n'est pas explicitement mentionné dans le texte.\n\n"
         "Score d'urgence pour GSF :\n"
         "  1 = à connaître, horizon > 18 mois\n"
         "  2 = à anticiper, impact probable dans 6-18 mois\n"
         "  3 = impact direct imminent, action requise\n\n"
         f"TITRE: {titre}\n"
-        f"DESCRIPTION: {description[:400]}\n\n"
-        'JSON: {"pertinent": true/false, "resume": "ce que ce PJL change pour GSF en 1-2 phrases (vide si non pertinent)", '
+        f"TEXTE: {description[:2500]}\n\n"
+        'JSON: {"pertinent": true/false, "resume": "ce que ce PJL change pour GSF en 1-2 phrases, basé uniquement sur le texte (vide si non pertinent)", '
         '"pourquoi": "", "score": 1, "horizon": "estimation entrée en vigueur ex: fin 2026"}'
     )
 
@@ -380,9 +388,11 @@ def groq_analyse_pjl(titre: str, description: str) -> dict:
         f"{GSF_CONTEXT}\n\n"
         f"PJL retenu (score {score}/3) : {titre}\n"
         f"Résumé : {result.get('resume','')}\n"
-        f"Horizon estimé : {result.get('horizon','')}\n\n"
-        "En 1-2 phrases, explique POURQUOI c'est un signal stratégique pour GSF : "
-        "quelle obligation concrète, quel délai d'anticipation, quel risque opérationnel.\n"
+        f"Horizon estimé : {result.get('horizon','')}\n"
+        f"Extrait du texte : {description[:1000]}\n\n"
+        "En 1-2 phrases BASÉES SUR LE TEXTE FOURNI, explique pourquoi c'est un signal "
+        "stratégique pour GSF : quelle obligation concrète, quel délai, quel risque opérationnel. "
+        "Ne pas inventer d'obligations non mentionnées dans le texte.\n"
         'JSON: {"pourquoi": "..."}'
     )
     raw2 = call_groq(enrich_prompt, 'Expert RSE GSF. JSON uniquement.', max_tokens=150, model=GROQ_MODEL_ENRICH)
