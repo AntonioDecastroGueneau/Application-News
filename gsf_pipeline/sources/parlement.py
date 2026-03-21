@@ -60,6 +60,9 @@ def _scrape_an_listing(source: dict, today_str: str) -> list:
             titre = h3.get_text(strip=True)
             if not titre or len(titre) < 10:
                 continue
+            # Skip generic adopted-text labels (e.g. "Texte adopté N° 248")
+            if re.match(r'^Texte adopté\s+N°\s*\d+$', titre, re.IGNORECASE):
+                continue
 
             date_str = today_str
             date_el = item.find(string=re.compile(r'Mis en ligne|mis en ligne', re.I))
