@@ -510,6 +510,21 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
                     if sync.ready:
                         sync.upsert_dossier(fiche)
                         sync.record_stage_change(fiche, ancien_stade, stade_actuel)
+
+            # Re-analyse if resume_gsf is missing (e.g. after a data reset)
+            if not fiche.get('resume_gsf') and groq_used < PARLEMENT_MAX_GROQ:
+                url_doc = entry.get('url_doc', '')
+                content = _crawl_pjl_content(url_dossier, url_doc) if (url_dossier or url_doc) else ''
+                analysis = groq_analyse_pjl(titre, content or titre)
+                groq_used += 1
+                if analysis.get('pertinent'):
+                    fiche['resume_gsf'] = analysis.get('resume', '')
+                    fiche['pourquoi'] = analysis.get('pourquoi', '')
+                    fiche['score'] = int(analysis.get('score', 1))
+                    fiche['horizon'] = analysis.get('horizon', '')
+                    if sync.ready:
+                        sync.upsert_dossier(fiche)
+                    log.info(f"Parlement re-analyse : {titre[:50]}")
             continue
 
         # Filter 1: keyword_match

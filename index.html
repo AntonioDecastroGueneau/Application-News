@@ -1013,7 +1013,7 @@ function renderSuivi(){
       </div>
       <div class="suivi-item-actions">
         <button class="btn-comments" onclick="event.stopPropagation();openDossierDrawer('${d.id}')">${nb} commentaire${nb!==1?'s':''}</button>
-        ${lnk?`<a class="btn-details" href="${escHtml(lnk)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">AN →</a>`:''}
+        ${d.url_an&&d.url_an.includes('assemblee-nationale.fr')?`<a class="btn-details" href="${escHtml(d.url_an)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">AN →</a>`:d.url_dossier&&d.url_dossier.includes('assemblee-nationale.fr')?`<a class="btn-details" href="${escHtml(d.url_dossier)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">AN →</a>`:''}
         <button class="btn-delete-dossier" onclick="event.stopPropagation();deleteDossier('${d.id}','${escHtml(d.titre).replace(/'/g,"\\'")}')" title="Supprimer ce dossier">✕</button>
       </div>
     </div>`;
@@ -1059,8 +1059,7 @@ async function openDossierDrawer(id){
   const idx=STADES_ORDRE.indexOf(d.stade);
   const pct=idx<0?0:Math.round((idx/(STADES_ORDRE.length-1))*100);
   document.getElementById('drawer-body').innerHTML=`
-    ${d.resume_gsf?`<div><div class="drawer-section-title">Résumé</div><p style="font-size:13px;color:var(--text2);line-height:1.6">${escHtml(d.resume_gsf)}</p></div>`:''}
-    ${d.pourquoi?`<div><div class="drawer-section-title">Pourquoi GSF</div><div class="parl-pourquoi">${escHtml(d.pourquoi)}</div></div>`:''}
+    ${(d.pourquoi||d.resume_gsf)?`<div><div class="drawer-section-title">Pourquoi GSF</div><div class="parl-pourquoi">${escHtml(d.pourquoi||d.resume_gsf)}</div></div>`:''}
     ${d.stade?`<div><div class="parl-progress"><div class="parl-progress-label"><span class="parl-stade-badge">${escHtml(d.stade)}</span><span>${pct}%</span></div><div class="parl-progress-track"><div class="parl-progress-bar" style="width:${pct}%"></div></div></div></div>`:''}
     <div>
       <div class="drawer-section-title">Commentaires</div>
