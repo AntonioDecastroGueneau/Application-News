@@ -80,3 +80,34 @@ def crawl_article_links(listing_url: str, base_url: str, max_links: int = 5) -> 
         log.debug(f"crawl_article_links error {listing_url}: {e}")
         return []
 
+
+def crawl_article_links_filtered(listing_url: str, base_url: str, url_contains: str, max_links: int = 8) -> list:
+    """Like crawl_article_links but only keeps links whose URL contains `url_contains`."""
+    try:
+        from bs4 import BeautifulSoup
+        resp = requests.get(listing_url, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, 'html.parser')
+        links = []
+        seen = set()
+        for a in soup.find_all('a', href=True):
+            href = a['href'].strip()
+            titre = a.get_text(strip=True)
+            if not titre or len(titre) < 15:
+                continue
+            full_url = href if href.startswith('http') else base_url.rstrip('/') + href if href.startswith('/') else None
+            if not full_url or full_url in seen:
+                continue
+            if base_url.split('/')[2] not in full_url:
+                continue
+            if url_contains not in full_url:
+                continue
+            seen.add(full_url)
+            links.append({'titre': titre[:200], 'url': full_url})
+            if len(links) >= max_links:
+                break
+        return links
+    except Exception as e:
+        log.debug(f"crawl_article_links_filtered error {listing_url}: {e}")
+        return []
+

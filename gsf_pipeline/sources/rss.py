@@ -9,7 +9,7 @@ import feedparser
 import requests
 
 from ..config import RSS_SOURCES, TIMEOUT
-from ..crawl import crawl_article, crawl_article_links
+from ..crawl import crawl_article, crawl_article_links, crawl_article_links_filtered
 from ..filters import categorise, keyword_match, make_id
 from ..llm import groq_analyse_rss
 
@@ -173,7 +173,11 @@ def fetch_rss_source(source: dict, today_str: str):
             base_url = '/'.join(fallback_url.split('/')[:3])
             try:
                 log.info(f"Fallback → {fallback_url}")
-                article_links = crawl_article_links(fallback_url, base_url, max_links=5)
+                url_pat = source.get('article_url_contains', '')
+                if url_pat:
+                    article_links = crawl_article_links_filtered(fallback_url, base_url, url_pat, max_links=10)
+                else:
+                    article_links = crawl_article_links(fallback_url, base_url, max_links=5)
 
                 if not article_links:
                     contenu = crawl_article(fallback_url)
@@ -204,10 +208,8 @@ def fetch_rss_source(source: dict, today_str: str):
                                 log.debug(f"Fallback date titre trop ancienne ({title_dt.date()}), exclu : {titre_art[:60]}")
                                 continue
 
-                            contenu = crawl_article(link['url'])
-                            if not contenu:
-                                continue
-
+                            contenu = crawl_article(link['url']) or ''
+                            # Paywalled/inaccessible → use title only
                             txt = titre_art + ' ' + contenu
 
                             if source.get('require_keywords'):

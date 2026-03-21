@@ -255,6 +255,47 @@ RSS_SOURCES = [
             'flood', 'drought', 'heatwave',
         ],
     },
+    {
+        'name': 'EFRAG',
+        'url': 'https://invalid-no-rss',
+        'categorie': 'Réglementation',
+        'fallback_crawl': 'https://www.efrag.org/en/news-and-calendar/news',
+        'article_url_contains': '/news-and-calendar/news/',
+        'require_keywords': [
+            'ESRS', 'CSRD', 'sustainability reporting', 'standard', 'reporting',
+            'climate', 'carbon', 'ESG', 'disclosure', 'due diligence',
+        ],
+    },
+    {
+        'name': 'AEF Développement Durable',
+        'url': 'https://invalid-no-rss',
+        'categorie': 'Réglementation',
+        'fallback_crawl': 'https://www.aefinfo.fr/developpement-durable',
+        'require_keywords': [
+            'climat', 'énergie', 'carbone', 'transition', 'environnement',
+            'CSRD', 'RSE', 'décarbonation', 'renouvelable', 'déchets', 'REP',
+        ],
+    },
+    {
+        'name': 'Acteurs Publics',
+        'url': 'https://invalid-no-rss',
+        'categorie': 'Réglementation',
+        'fallback_crawl': 'https://acteurspublics.fr/actualites/',
+        'require_keywords': [
+            'climat', 'énergie', 'carbone', 'transition', 'environnement',
+            'CSRD', 'décarbonation', 'renouvelable', 'déchets',
+        ],
+    },
+    {
+        'name': 'Les Echos Environnement',
+        'url': 'https://invalid-no-rss',
+        'categorie': 'Presse',
+        'fallback_crawl': 'https://www.lesechos.fr/industrie-services/energie-environnement/environnement',
+        'require_keywords': [
+            'climat', 'énergie', 'carbone', 'transition', 'environnement',
+            'CSRD', 'décarbonation', 'renouvelable', 'déchets', 'REP',
+        ],
+    },
 ]
 
 
