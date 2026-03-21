@@ -25,7 +25,13 @@ _MONTHS = {
 }
 
 def _date_from_text(text: str):
-    """Extract a date like '2 April 2020' or '5 December 2025' embedded in text."""
+    """Extract a date embedded in text.
+
+    Handles:
+    - '2 April 2020' / '5 décembre 2025'  (littéral)
+    - '17/03/2026' or '17/03/2026 16:19'  (numérique FR, ex: AEF)
+    """
+    # Littéral : "2 April 2020"
     m = re.search(r'(\d{1,2})\s+([A-Za-zéûîôàè]+)\s+(\d{4})', text)
     if m:
         month = _MONTHS.get(m.group(2).lower())
@@ -34,6 +40,13 @@ def _date_from_text(text: str):
                 return datetime(int(m.group(3)), month, int(m.group(1)))
             except ValueError:
                 pass
+    # Numérique FR : "17/03/2026" ou "17/03/2026 16:19"
+    m2 = re.search(r'\b(\d{1,2})/(\d{2})/(\d{4})\b', text)
+    if m2:
+        try:
+            return datetime(int(m2.group(3)), int(m2.group(2)), int(m2.group(1)))
+        except ValueError:
+            pass
     return None
 
 
