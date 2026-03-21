@@ -142,14 +142,74 @@ def _scrape_an_listing(source: dict, today_str: str) -> list:
 
 
 def _scrape_dossier_stade(url_dossier: str) -> str:
+    """
+    Parse the AN dossier page using the Swiper slider structure.
+
+    The page exposes a `.etape-slider` containing `swiper-slide` elements, one per
+    legislative step. Each slide has:
+      - span._bold._colored-primary  → étape label (e.g. "Première lecture au Sénat")
+      - span._colored-grey._small    → date (if the step has started)
+      - span._small._bold            → completion status (e.g. "Texte adopté ✅")
+
+    We walk slides in order and return the label of the LAST slide that has a date
+    (= the most advanced stage reached so far), mapped to our STADES_ORDRE vocabulary.
+    """
     from bs4 import BeautifulSoup
+
+    # Mapping from AN slide labels (lowercased) → STADES_ORDRE values
+    _LABEL_MAP = [
+        ('promulg',                                   'Promulgué'),
+        ('texte définitivement adopté',               'Adopté'),
+        ('adoption définitive',                       'Adopté'),
+        ('lecture définitive',                        'Adopté'),
+        ('commission mixte paritaire',                'Commission mixte paritaire'),
+        ('deuxième lecture au sénat',                 'Sénat 2ème lecture'),
+        ('deuxième lecture à l\'assemblée',           'AN 2ème lecture'),
+        ('nouvelle lecture',                          'AN 2ème lecture'),
+        ('première lecture au sénat',                 'Sénat 1ère lecture'),
+        ('sénat',                                     'Sénat 1ère lecture'),
+        ('première lecture à l\'assemblée',           'Séance publique AN'),
+        ('assemblée nationale',                       'Séance publique AN'),
+        ('commission',                                'Commission'),
+        ('dépôt',                                     'Dépôt'),
+    ]
+
+    def _map_label(label: str) -> str:
+        l = label.lower().strip()
+        for key, stade in _LABEL_MAP:
+            if key in l:
+                return stade
+        return ''
 
     try:
         resp = requests.get(url_dossier, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'html.parser')
-        texte = soup.get_text(separator=' ', strip=True).lower()[:3000]
+
+        # ── Try the structured Swiper slider first ────────────────────
+        slides = soup.find_all(class_='swiper-slide')
+        if slides:
+            current_stade = ''
+            for slide in slides:
+                label_el = slide.find('span', class_=lambda c: c and '_bold' in c and '_colored-primary' in c)
+                date_el  = slide.find('span', class_=lambda c: c and '_colored-grey' in c)
+                if not label_el:
+                    continue
+                label = label_el.get_text(strip=True)
+                date_txt = date_el.get_text(strip=True) if date_el else ''
+                # A slide is "reached" if it has a date or a status indicator
+                if date_txt:
+                    mapped = _map_label(label)
+                    if mapped:
+                        current_stade = mapped
+            if current_stade:
+                log.debug(f"stade (swiper) : {current_stade} — {url_dossier}")
+                return current_stade
+
+        # ── Fallback: keyword scan on page text ───────────────────────
+        texte = soup.get_text(separator=' ', strip=True).lower()[:5000]
         return _detect_stade_rss(texte)
+
     except Exception as e:
         log.debug(f"scrape_dossier_stade {url_dossier}: {e}")
         return ''
