@@ -117,6 +117,7 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .sb-date { font-size: 11px; color: var(--sb-muted); font-family: var(--mono); margin-top: 3px; }
 .sb-status { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 500; letter-spacing: .06em; padding: 2px 8px; border-radius: 20px; margin-top: 6px; background: rgba(52,211,153,.12); color: var(--sb-accent); border: 1px solid rgba(52,211,153,.2); }
 .sb-status.err { background: rgba(239,68,68,.12); color: #f87171; border-color: rgba(239,68,68,.2); }
+.pipeline-error-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 20px; margin-top: 4px; background: rgba(217,119,6,.15); color: #f59e0b; border: 1px solid rgba(217,119,6,.3); cursor: default; }
 
 /* ── Sidebar navigation ──────────────────────────────────────────────── */
 .sb-nav { padding: 10px 8px; flex: 1; }
@@ -448,6 +449,7 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
       <div class="sb-title">Veille Environnementale</div>
       <div class="sb-date" id="hdr-date">—</div>
       <div id="hdr-status" class="sb-status">CHARGEMENT</div>
+      <div id="hdr-pipeline-badge" style="display:none"></div>
     </div>
     <div class="sb-nav">
       <div class="sb-section-lbl">Navigation</div>
@@ -644,6 +646,8 @@ function renderAll(){
   document.getElementById('hdr-date').textContent=formatDate(D.date)+' — '+D.generated_at;
   const se=document.getElementById('hdr-status');
   se.textContent=D.errors?.length?'PARTIEL':'OK';se.className='sb-status'+(D.errors?.length?' err':'');
+  const badge=document.getElementById('hdr-pipeline-badge');
+  if(badge){const errs=D.pipeline_meta?.errors;if(errs?.length){const tip=errs.join('\n');badge.innerHTML=`<span class="pipeline-error-badge" title="${escHtml(tip)}">⚠ ${errs.length} source(s) en erreur</span>`;badge.style.display='block';}else{badge.style.display='none';}}
   const joRet=s.jo_retenus??0,prio=(D.items||[]).filter(i=>i.criticite>=2).length;
   document.getElementById('stat-jo-retenus').textContent=joRet;
   document.getElementById('stat-jo-retenus').className='stat-val'+(joRet===0?' zero':' accent');
@@ -1103,7 +1107,7 @@ function renderDrawerComments(comments){
 async function deleteComment(commentId, dossierId){
   if(!confirm('Supprimer ce commentaire ?'))return;
   try{
-    const{error}=await getSupa().from('dossier_comments').delete().eq('id',commentId);
+    const{error}=await getSupa().from('dossier_comments').delete().eq('id',commentId).eq('session_token',getSessionToken());
     if(error)throw error;
     const{data}=await getSupa().from('dossier_comments').select('*').eq('dossier_id',dossierId).order('created_at');
     renderDrawerComments(data||[]);
@@ -1135,7 +1139,7 @@ async function saveEditComment(commentId, dossierId){
   const newContent=(ta?.value||'').trim();
   if(!newContent)return;
   try{
-    const{error}=await getSupa().from('dossier_comments').update({content:newContent}).eq('id',commentId);
+    const{error}=await getSupa().from('dossier_comments').update({content:newContent}).eq('id',commentId).eq('session_token',getSessionToken());
     if(error)throw error;
     const{data}=await getSupa().from('dossier_comments').select('*').eq('dossier_id',dossierId).order('created_at');
     renderDrawerComments(data||[]);
@@ -1148,7 +1152,7 @@ async function addComment(dossierId){
   const content=(input?.value||'').trim();
   if(!content)return;
   try{
-    const {error}=await getSupa().from('dossier_comments').insert({dossier_id:dossierId,content});
+    const {error}=await getSupa().from('dossier_comments').insert({dossier_id:dossierId,content,session_token:getSessionToken()});
     if(error)throw error;
     input.value='';
     const {data}=await getSupa().from('dossier_comments').select('*').eq('dossier_id',dossierId).order('created_at');
@@ -1301,6 +1305,7 @@ function switchView(view){
 function formatDate(iso){if(!iso)return'—';const[y,m,d]=iso.split('-');const M=['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];return `${parseInt(d)} ${M[parseInt(m)-1]} ${y}`;}
 function escHtml(str){return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2500);}
+function getSessionToken(){let t=localStorage.getItem('gsf_session');if(!t){t=crypto.randomUUID();localStorage.setItem('gsf_session',t);}return t;}
 init();
 </script>
 </body>
