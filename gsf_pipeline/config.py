@@ -271,6 +271,7 @@ RSS_SOURCES = [
         'url': 'https://invalid-no-rss',
         'categorie': 'Réglementation',
         'fallback_crawl': 'https://www.aefinfo.fr/developpement-durable',
+        'article_url_contains': '/depeche/',
         'require_keywords': [
             'climat', 'énergie', 'carbone', 'transition', 'environnement',
             'CSRD', 'RSE', 'décarbonation', 'renouvelable', 'déchets', 'REP',
@@ -284,16 +285,6 @@ RSS_SOURCES = [
         'require_keywords': [
             'climat', 'énergie', 'carbone', 'transition', 'environnement',
             'CSRD', 'décarbonation', 'renouvelable', 'déchets',
-        ],
-    },
-    {
-        'name': 'Les Echos Environnement',
-        'url': 'https://invalid-no-rss',
-        'categorie': 'Presse',
-        'fallback_crawl': 'https://www.lesechos.fr/industrie-services/energie-environnement/environnement',
-        'require_keywords': [
-            'climat', 'énergie', 'carbone', 'transition', 'environnement',
-            'CSRD', 'décarbonation', 'renouvelable', 'déchets', 'REP',
         ],
     },
 ]
