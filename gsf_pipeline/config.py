@@ -287,6 +287,15 @@ RSS_SOURCES = [
             'CSRD', 'décarbonation', 'renouvelable', 'déchets',
         ],
     },
+    {
+        'name': 'Les Echos Environnement',
+        'url': 'https://news.google.com/rss/search?q=site:lesechos.fr+%28environnement+OR+%22transition+%C3%A9nerg%C3%A9tique%22+OR+carbone+OR+CSRD+OR+RSE+OR+%22%C3%A9nergies+renouvelables%22%29&hl=fr&gl=FR&ceid=FR:fr',
+        'categorie': 'Presse',
+        'require_keywords': [
+            'climat', 'énergie', 'carbone', 'transition', 'environnement',
+            'CSRD', 'RSE', 'décarbonation', 'renouvelable', 'déchets', 'REP',
+        ],
+    },
 ]
 
 
