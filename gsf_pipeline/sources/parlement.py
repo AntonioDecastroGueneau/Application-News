@@ -95,6 +95,7 @@ def _scrape_an_listing(source: dict, today_str: str) -> list:
                 'description': '',
                 'url': url,
                 'url_dossier': url_dossier,
+                'url_doc': url_doc,
                 'date': date_str,
                 'source': source['name'],
                 'fiche_id': fiche_id,
@@ -131,6 +132,7 @@ def _scrape_an_listing(source: dict, today_str: str) -> list:
                     'description': '',
                     'url': url,
                     'url_dossier': url_dossier,
+                    'url_doc': url_doc,
                     'date': today_str,
                     'source': source['name'],
                     'fiche_id': fiche_id,
@@ -199,7 +201,8 @@ def _crawl_pjl_content(url_dossier: str, url_doc: str = '') -> str:
     Strategy:
     1. Parse the AN dossier page to find the Senate dossier link
        (Sénat has the exposé des motifs in plain HTML)
-    2. Fallback: return content from the AN dossier page itself
+    2. If no Senate link (bill deposited at AN first), try url_doc directly
+    3. Fallback: return content from the AN dossier page itself
     """
     from bs4 import BeautifulSoup
 
@@ -244,6 +247,16 @@ def _crawl_pjl_content(url_dossier: str, url_doc: str = '') -> str:
                 return content[:6000]
         except Exception as e:
             log.debug(f"crawl sénat {senat_url}: {e}")
+
+    # Try AN document URL (bill deposited at AN first)
+    if url_doc:
+        try:
+            content = crawl_article(url_doc)
+            if content and len(content) > 500:
+                log.debug(f"PJL content from AN doc ({len(content)} chars)")
+                return content[:6000]
+        except Exception as e:
+            log.debug(f"crawl AN doc {url_doc}: {e}")
 
     # Fallback: AN dossier page text
     if an_content and len(an_content) > 200:
@@ -496,7 +509,8 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
 
         # Crawl real content before LLM analysis
         url_dossier = entry.get('url_dossier', '')
-        content = _crawl_pjl_content(url_dossier) if url_dossier else ''
+        url_doc = entry.get('url_doc', '')
+        content = _crawl_pjl_content(url_dossier, url_doc) if (url_dossier or url_doc) else ''
         description = content or titre
 
         analysis = groq_analyse_pjl(titre, description)
