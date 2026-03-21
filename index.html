@@ -897,7 +897,6 @@ function renderParlement(){
           <div class="parl-progress-track"><div class="parl-progress-bar" style="width:${pct}%"></div></div>
         </div>
         <div class="parl-meta">
-          <span>Déposé le ${formatDate(f.date_depot)}</span>
           ${f.horizon?`<span>Entrée en vigueur : <strong>${escHtml(f.horizon)}</strong></span>`:''}
           ${f.url_an?`<a href="${escHtml(f.url_an)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">AN →</a>`:''}
         </div>
