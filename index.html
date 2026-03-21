@@ -887,8 +887,7 @@ function renderParlement(){
             <span class="parl-score-badge parl-score${sc}">${SCORE_LABEL[sc]||'Veille'}</span>
           </div>
         </div>
-        ${f.resume_gsf?`<div class="parl-resume">${escHtml(f.resume_gsf)}</div>`:''}
-        ${f.pourquoi?`<div class="parl-pourquoi">${escHtml(f.pourquoi)}</div>`:''}
+        ${(f.pourquoi||f.resume_gsf)?`<div class="parl-pourquoi">${escHtml(f.pourquoi||f.resume_gsf)}</div>`:''}
         <div class="parl-progress">
           <div class="parl-progress-label">
             <span class="parl-stade-badge">${escHtml(f.stade||'Dépôt')}</span>

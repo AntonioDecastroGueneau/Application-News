@@ -1,7 +1,7 @@
 {
   "date": "2026-03-21",
-  "generated_at": "10:07",
-  "elapsed_seconds": 105,
+  "generated_at": "10:22",
+  "elapsed_seconds": 140,
   "errors": [],
   "stats": {
     "jo_analyses": 3,
@@ -17,8 +17,8 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Le nouveau cadre juridique de l'UE sur les énergies renouvelables et l'efficacité énergétique en consultation",
-      "resume": "La consultation publique de la Commission européenne sur le cadre juridique post-2030 des énergies renouvelables et de l'efficacité énergétique pourrait influencer les obligations réglementaires futures de GSF en matière d'énergie et de décarbonation, notamment pour ses sites clients.",
-      "pourquoi": "Le sujet touche directement aux enjeux énergétiques et de décarbonation des entreprises (énergie, efficacité énergétique, renouvelables), qui sont des leviers clés pour GSF dans le cadre de ses obligations CSRD, BGES et ISO 14001. Bien que non immédiat, cela pourrait impacter les trajectoires de réduction des émissions (scope 2) et les stratégies clients.",
+      "resume": "La consultation de l'UE sur le cadre post-2030 des énergies renouvelables et de l'efficacité énergétique impacte indirectement GSF via les exigences clients (nucléaire, santé, industrie) en matière de décarbonation et de reporting ESG (CSRD).",
+      "pourquoi": "Le sujet touche aux politiques énergétiques européennes (REPowerEU, Fit for 55) qui influencent les trajectoires de décarbonation des entreprises clientes de GSF, ainsi qu'aux obligations de reporting extra-financier (CSRD) qui s'appliquent à leurs fournisseurs comme GSF. Les évolutions réglementaires en efficacité énergétique et renouvelables peuvent aussi impacter les contrats FM/propreté (ex : audits énergétiques tertiaires).",
       "criticite": 2,
       "impact_gsf": true,
       "url": "https://www.actu-environnement.com/ae/news/energies-renouvelables-efficacite-energetique-cadre-juridique-europeen-consultation-47723.php4#xtor=RSS-6",
@@ -30,10 +30,10 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Photovoltaïque : Soren porte à 45 000 tonnes par an ses capacités de recyclage",
-      "resume": "Cet article impacte indirectement GSF via la gestion des déchets de ses clients (scope 3) et les obligations de recyclage des panneaux photovoltaïques en fin de vie, alignées sur les réglementations REP et la circularité des matériaux.",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
+      "resume": "Le développement des capacités de recyclage des panneaux photovoltaïques en France (45 000 tonnes/an) impacte indirectement GSF via la gestion des déchets de ses clients (scope 3) et les obligations de traçabilité des DEEE dans le cadre de la REP.",
+      "pourquoi": "GSF intervient sur des sites clients où des panneaux photovoltaïques peuvent être présents (ex : toitures tertiaires). La structuration du recyclage des panneaux PV influence les filières de traitement des déchets pour les prestataires de propreté/FM, notamment sur la traçabilité et la conformité réglementaire (REP DEEE). Cela peut impacter les pratiques de GSF en matière de gestion des déchets sur ses sites clients.",
+      "criticite": 2,
+      "impact_gsf": true,
       "url": "https://www.actu-environnement.com/ae/news/contrats-soren-recyclage-panneaux-solaires-47722.php4#xtor=RSS-6",
       "date": "2026-03-20",
       "top5": true
@@ -41,6 +41,398 @@
   ],
   "restrictions_eau": [],
   "jo_autres": [
+    {
+      "nor": "SPOV2512059L",
+      "titre": "LOI n° 2026-201 du 20 mars 2026 relative à l'organisation des jeux Olympiques et Paralympiques de 2030 (1)",
+      "nature": "LOI",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707088",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "INTE2607824A",
+      "titre": "Arrêté du 19 mars 2026 modifiant l'arrêté du 23 janvier 2025 portant habilitation de la Croix-Rouge française pour les formations aux premiers secours",
+      "nature": "ARRETE",
+      "ministere": "Ministère de l'intérieur",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707407",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "INTE2607846A",
+      "titre": "Arrêté du 19 mars 2026 modifiant l'arrêté du 18 février 2026 portant habilitation de la Fédération nationale des métiers de la natation et du sport pour les formations aux premiers secours",
+      "nature": "ARRETE",
+      "ministere": "Ministère de l'intérieur",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707419",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "JUST2607468A",
+      "titre": "Arrêté du 18 mars 2026 fixant les taux de promotion dans le corps des secrétaires administratifs du ministère de la justice pour l'année 2027",
+      "nature": "ARRETE",
+      "ministere": "Ministère de la justice",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707470",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "RCAR2608032S",
+      "titre": "Décision n° 2026-NA-08 du 2 mars 2026 autorisant l'Association départementale des Francas de Meurthe-et-Moselle à exploiter un service de radio temporaire par voie hertzienne terrestre en modulation de fréquence dénommé Radio Francas",
+      "nature": "DECISION",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707652",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "RIAH2602991A",
+      "titre": "Arrêté du 17 mars 2026 autorisant au titre de l'année 2025 l'ouverture de concours externes pour le recrutement de techniciens de la recherche de classe normale à l'Institut national de recherche en informatique et en automatique (INRIA)",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707669",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "ARMA2607883V",
+      "titre": "Avis d'ouverture du concours sur titres pour le recrutement au grade d'ingénieur dans le corps militaire des ingénieurs des études et techniques de l'armement au titre de l'année 2026",
+      "nature": "AVIS",
+      "ministere": "Ministère des armées et des anciens combattants",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707713",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "ARMA2607888V",
+      "titre": "Avis d'ouverture du concours sur titres pour le recrutement de titulaires d'un doctorat au premier échelon du premier grade d'ingénieur dans le corps militaire des ingénieurs de l'armement au titre de l'année 2026",
+      "nature": "AVIS",
+      "ministere": "Ministère des armées et des anciens combattants",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707724",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "ARMA2607901V",
+      "titre": "Avis d'ouverture du concours sur titres pour le recrutement au premier échelon du premier grade d'ingénieur dans le corps militaire des ingénieurs de l'armement au titre de l'année 2026",
+      "nature": "AVIS",
+      "ministere": "Ministère des armées et des anciens combattants",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707735",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "CSCL2607931S",
+      "titre": "Décision n° 2026-902 DC du 19 mars 2026",
+      "nature": "DECISION",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707307",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "INTC2607639A",
+      "titre": "Arrêté du 3 mars 2026 modifiant l'arrêté du 20 janvier 2022 fixant la liste des emplois ouvrant droit à l'indemnité temporaire de mobilité au sein du ministère de l'intérieur",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707380",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "INTD2606843A",
+      "titre": "Arrêté du 19 mars 2026 portant interdiction de déplacement des supporters du club de football du Lille Olympique Sporting Club lors de la rencontre du dimanche 22 mars 2026 à 17 h 15 avec l'Olympique de Marseille",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707396",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "TRST2606349A",
+      "titre": "Arrêté du 19 mars 2026 portant agrément de l'accord du 13 novembre 2025 proposant un accord-type d'intéressement dans la branche des caves coopératives vinicoles et leurs unions",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707442",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "TRST2607346A",
+      "titre": "Arrêté du 19 mars 2026 portant agrément de l'accord du 20 février 2026 portant mise en place de l'intéressement dans la branche de la métallurgie",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707451",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "TRST2607416A",
+      "titre": "Arrêté du 19 mars 2026 portant agrément de l'accord du 20 février 2026 portant mise en place de la participation dans la branche de la métallurgie",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707460",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "JUSF2607578A",
+      "titre": "Arrêté du 19 mars 2026 portant modification du montant de l'avance de la régie auprès de la direction territoriale de la protection judiciaire de la jeunesse de Franche-Comté",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707482",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "JUSF2607579A",
+      "titre": "Arrêté du 19 mars 2026 portant modification du montant de l'avance de la régie auprès de la direction territoriale de la protection judiciaire de la jeunesse de Touraine-Berry",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707492",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "JUSF2607581A",
+      "titre": "Arrêté du 19 mars 2026 portant modification du montant de l'avance de la régie auprès de la direction territoriale de la protection judiciaire de la jeunesse de l'Yonne-Nièvre",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707502",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "ATDB2603335A",
+      "titre": "Arrêté du 12 mars 2026 pris pour l'application en 2026 de l'article L. 1614-4 du code général des collectivités territoriales",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707518",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "CPPD2607975A",
+      "titre": "Arrêté du 20 mars 2026 fixant au titre de l'année 2026 le nombre de places offertes au concours professionnel pour l'accès au grade de contrôleur de 1re classe des douanes et droits indirects",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707526",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "VLOL2533868Z",
+      "titre": "Arrêté du 3 février 2026 modifiant l'arrêté du 21 décembre 2022 relatif à la mission d'accompagnement du service public de la performance énergétique de l'habitat (rectificatif)",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707540",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "PRMG2607519A",
+      "titre": "Arrêté du 19 mars 2026 modifiant l'arrêté du 6 juillet 2023 relatif à la composition de l'instance collégiale d'évaluation des cadres supérieurs au sein des services du Premier ministre",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707544",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "INTC2604219A",
+      "titre": "Arrêté du 18 mars 2026 portant nomination d'un inspecteur général des services actifs de la police nationale",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707558",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "INTP2606286A",
+      "titre": "Arrêté du 19 mars 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707560",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "INTP2607687A",
+      "titre": "Arrêté du 19 mars 2026 portant nomination (directions départementales interministérielles)",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707565",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "ARMH2607373A",
+      "titre": "Arrêté du 13 mars 2026 portant admission à la retraite (ingénieurs civils de la défense)",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707573",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "TRSR2607745A",
+      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707576",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "TRSR2607861A",
+      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707578",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "TRSR2607742A",
+      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707580",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "JUSE2607804A",
+      "titre": "Arrêté du 19 mars 2026 portant nomination dans les fonctions de présidente de formation de jugement à la Cour nationale du droit d'asile (Conseil d'Etat)",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707583",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "ECOG2606804A",
+      "titre": "Arrêté du 12 mars 2026 portant admission à la retraite (corps des mines)",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707586",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "ECOO2605466A",
+      "titre": "Arrêté du 19 mars 2026 portant nomination d'un directeur régional de l'Institut national de la statistique et des études économiques",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707588",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "ESRS2603532A",
+      "titre": "Arrêté du 10 mars 2026 portant nomination à la commission instituée à l'article 51-1 du décret n° 91-1197 du 27 novembre 1991 organisant la profession d'avocat",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707591",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "VLOB2606515A",
+      "titre": "Arrêté du 13 mars 2026 portant nomination au conseil d'administration de l'Agence nationale pour la rénovation urbaine",
+      "nature": "ARRETE",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707595",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "TRST2607668V",
+      "titre": "Avis relatif à l'extension d'avenants et d'un avenant à un accord conclus dans le cadre de la convention collective nationale de la transformation des grains",
+      "nature": "AVIS",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707599",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "TRST2607669V",
+      "titre": "Avis relatif à l'extension d'accords conclus dans le cadre de la convention collective nationale de l'édition",
+      "nature": "AVIS",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707605",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "CSCX2607960S",
+      "titre": "Décision n° 2025-1187 QPC du 20 mars 2026",
+      "nature": "DECISION",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707611",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "CESG2608016X",
+      "titre": "Assemblées plénières",
+      "nature": "",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707647",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "CESG2608017X",
+      "titre": "Formations de travail",
+      "nature": "",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707649",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "INTN2605317D",
+      "titre": "Décret du 10 mars 2026 portant naturalisation, réintégration, mention d'enfants mineurs bénéficiant de l'effet collectif attaché à l'acquisition de la nationalité française par leurs parents, francisation de noms et de prénoms et libération de l'allégeance française (Accès protégé)",
+      "nature": "DECRET",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707696",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "INPA2608059X",
+      "titre": "Commissions et organes de contrôle",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707701",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "INPA2608061X",
+      "titre": "Documents et publications",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707703",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "INPS2608055X",
+      "titre": "Commissions / organes temporaires",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707706",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "INPS2608060X",
+      "titre": "Documents publiés",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707708",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "SFHN2607872V",
+      "titre": "Avis modifiant un avis de vacance d'emplois de directeurs d'hôpital",
+      "nature": "AVIS",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707747",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "SFHS2607882V",
+      "titre": "Avis relatif à une vacance de poste de directeur de caisse de sécurité sociale",
+      "nature": "AVIS",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707749",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "CPPD2607976V",
+      "titre": "Avis fixant le nombre de places offertes au concours professionnel pour l'accès au grade de contrôleur de 1re classe des douanes et droits indirects organisé au titre de l'année 2026",
+      "nature": "AVIS",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707754",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "MICC2607811V",
+      "titre": "Avis n° 2026-02 de la Commission consultative des trésors nationaux",
+      "nature": "AVIS",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707758",
+      "date": "2026-03-21"
+    },
+    {
+      "nor": "",
+      "titre": "Demandes de changement de nom (Accès protégé textes 52 à 63)",
+      "nature": "ANNONCES",
+      "ministere": "",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053707766",
+      "date": "2026-03-21"
+    },
     {
       "nor": "ARMD2606902D",
       "titre": "Décret n° 2026-202 du 20 mars 2026 portant prorogation du mandat des membres de la commission nationale indépendante de reconnaissance et de réparation des préjudices subis par les harkis, les autres personnes rapatriées d'Algérie anciennement de statut civil de droit local et les membres de leurs familles",
@@ -67,7 +459,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des textes publiés dans le Journal Officiel du 20 mars 2026 ne traite de sujets directement liés à l'environnement, au climat ou à la RSE pour une entreprise de services. Les décrets concernent des questions sociétales et judiciaires, et l'arrêté porte sur un refus de certificat patrimonial.",
+  "briefing_jorf": "Aucun des textes publiés dans le Journal Officiel du 20 mars 2026 ne traite directement de sujets environnementaux ou climatiques pertinents pour un Responsable Environnement/Climat d'une grande entreprise de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -99,8 +491,8 @@
       "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
       "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
       "source_rss": "AN Projets de loi",
-      "resume_gsf": "Le projet de loi de finances de fin de gestion pour 2025 pourrait introduire des ajustements budgétaires et fiscaux impactant les obligations de reporting extra-financier (CSRD) et les incitations à la décarbonation des flottes de véhicules pour les entreprises comme GSF.",
-      "pourquoi": "Ce texte, bien que principalement budgétaire, peut inclure des mesures transversales liées à la transition écologique (ex : bonus/malus pour les véhicules professionnels, ajustements des aides à l'électrification des flottes, ou modifications des critères de reporting CSRD pour les grandes entreprises). Ces éléments sont directement liés aux enjeux de GSF (scope 1, CSRD, flotte véhicules).",
+      "resume_gsf": "Le projet de loi de finances de fin de gestion pour 2025 pourrait introduire des ajustements fiscaux ou incitatifs liés à la transition écologique (ex : bonus/malus véhicules, crédits d'impôt énergie) impactant la flotte de GSF et ses clients, ainsi que des mesures de reporting environnemental renforcé.",
+      "pourquoi": "Bien que ce ne soit pas un texte structurant sur la RSE, les lois de finances peuvent contenir des dispositions fiscales ou incitatives (ex : électrification des flottes, crédits d'impôt pour la rénovation énergétique) ayant un impact direct ou indirect sur les activités de GSF (flotte, clients, reporting). Les ajustements fiscaux peuvent aussi influencer les budgets clients et leurs exigences en matière de services de propreté/FM bas carbone.",
       "score": 2,
       "horizon": "début 2025 (adoption probable fin 2024)",
       "nouveau_stade": false,
@@ -114,7 +506,7 @@
       ],
       "created_at": "2026-03-21",
       "updated_at": "2026-03-21",
-      "supabase_id": "33b8b67a-4c16-4203-a2ec-b2ebda730a93"
+      "supabase_id": "a8041f47-b5d8-41ad-af74-70a2c11ae083"
     }
   ],
   "pjl_autres": [
@@ -441,5 +833,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le seul texte directement pertinent pour un Responsable Environnement/Climat, avec des implications potentielles sur la réglementation climatique, la transition énergétique et les obligations de reporting RSE. Aucun autre texte adopté ou en discussion ne traite spécifiquement de ces enjeux."
+  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le plus pertinent pour un Responsable Environnement/Climat, car il intègre des dispositions clés pour la transition écologique (énergies renouvelables, économie circulaire, etc.). Aucun autre texte ne semble directement lié aux enjeux climatiques, énergétiques ou RSE dans cette liste."
 }
