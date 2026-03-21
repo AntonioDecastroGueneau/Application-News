@@ -104,6 +104,9 @@ def fetch_jorf(today_str: str):
 
             all_raw = []
             seen_nor_global = set()
+            # Only keep texts published within the last 7 days
+            from datetime import timedelta
+            date_cutoff = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
             for member in xml_members:
                 try:
                     f = tar.extractfile(member)
@@ -114,6 +117,10 @@ def fetch_jorf(today_str: str):
                                 continue
                             if nor:
                                 seen_nor_global.add(nor)
+                            # Skip texts with old date_publi (consolidations of older laws)
+                            if art.get('date', today_str) < date_cutoff:
+                                log.debug(f"JORF texte ancien ignoré ({art.get('date')}) : {art['titre'][:50]}")
+                                continue
                             all_raw.append(art)
                 except Exception as e:
                     log.debug(f"Erreur XML {member.name} : {e}")
