@@ -619,8 +619,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
                 sync.upsert_dossier(fiche)
             log.info(f"Parlement re-analyse (orphan) : {titre[:50]}")
 
-    # pjl_autres grouped by source — only recent entries (last 3 days)
-    recent_cutoff = (datetime.now() - timedelta(days=3)).strftime('%Y-%m-%d')
+    # pjl_autres grouped by source
     groups: Dict[str, list] = {}
     for e in entries:
         date = e['date']
@@ -629,10 +628,6 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
             if real_date:
                 date = real_date
                 log.debug(f"Parlement date dépôt récupérée : {date} — {e['titre'][:50]}")
-
-        # Only show deposits from the last 3 days
-        if date < recent_cutoff:
-            continue
 
         src = e['source']
         if src not in groups:
