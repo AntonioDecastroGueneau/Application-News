@@ -381,9 +381,12 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .drawer-comment-form textarea:focus { border-color: var(--blue); }
 .comment-item { padding: 8px 0; border-bottom: 1px solid var(--border); }
 .comment-item:last-child { border-bottom: none; }
-.comment-meta { display: flex; justify-content: space-between; margin-bottom: 4px; }
+.comment-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
 .comment-auteur { font-size: 12px; font-weight: 500; color: var(--text2); }
-.comment-date { font-size: 11px; font-family: var(--mono); color: var(--muted); }
+.comment-date { font-size: 11px; font-family: var(--mono); color: var(--muted); flex: 1; }
+.comment-actions { display: flex; gap: 2px; opacity: 0; transition: opacity .15s; }
+.comment-item:hover .comment-actions { opacity: 1; }
+.comment-actions button:hover { color: var(--text) !important; }
 .comment-content { font-size: 13px; color: var(--text); line-height: 1.5; }
 
 /* ── Modal nouveau dossier ───────────────────────────────────────────── */
@@ -1100,10 +1103,60 @@ function renderDrawerComments(comments){
   const el=document.getElementById('drawer-comments-list');
   if(!el)return;
   if(!comments.length){el.innerHTML='<div style="font-size:12px;color:var(--muted);padding:6px 0">Aucun commentaire</div>';return;}
-  el.innerHTML=comments.map(c=>`<div class="comment-item">
-    <div class="comment-meta"><span class="comment-auteur">${escHtml(c.auteur||'GSF')}</span><span class="comment-date">${formatDate(c.created_at?.slice(0,10))}</span></div>
-    <div class="comment-content">${escHtml(c.content)}</div>
+  el.innerHTML=comments.map(c=>`<div class="comment-item" id="comment-${c.id}">
+    <div class="comment-meta">
+      <span class="comment-auteur">${escHtml(c.auteur||'GSF')}</span>
+      <span class="comment-date">${formatDate(c.created_at?.slice(0,10))}</span>
+      <span class="comment-actions">
+        <button onclick="startEditComment('${c.id}','${escHtml(c.dossier_id)}')" title="Modifier" style="background:none;border:none;cursor:pointer;color:var(--muted);font-size:11px;padding:0 4px">✎</button>
+        <button onclick="deleteComment('${c.id}','${escHtml(c.dossier_id)}')" title="Supprimer" style="background:none;border:none;cursor:pointer;color:var(--muted);font-size:11px;padding:0 4px">✕</button>
+      </span>
+    </div>
+    <div class="comment-content" id="comment-content-${c.id}">${escHtml(c.content)}</div>
   </div>`).join('');
+}
+
+async function deleteComment(commentId, dossierId){
+  if(!confirm('Supprimer ce commentaire ?'))return;
+  try{
+    const{error}=await getSupa().from('dossier_comments').delete().eq('id',commentId);
+    if(error)throw error;
+    const{data}=await getSupa().from('dossier_comments').select('*').eq('dossier_id',dossierId).order('created_at');
+    renderDrawerComments(data||[]);
+    const d=dossiersSuivi.find(x=>x.id===dossierId);
+    if(d&&d.dossier_comments?.[0])d.dossier_comments[0].count=Math.max(0,(d.dossier_comments[0].count||1)-1);
+    renderSuivi();
+    showToast('Commentaire supprimé');
+  }catch(e){showToast('Erreur : '+e.message);}
+}
+
+function startEditComment(commentId, dossierId){
+  const contentEl=document.getElementById(`comment-content-${commentId}`);
+  if(!contentEl)return;
+  const current=contentEl.textContent;
+  contentEl.innerHTML=`<textarea id="edit-ta-${commentId}" rows="3" style="width:100%;font-size:12px;border:1px solid var(--border);border-radius:4px;padding:4px;resize:vertical">${escHtml(current)}</textarea>
+    <div style="display:flex;gap:6px;margin-top:4px">
+      <button class="btn-save" style="padding:3px 10px;font-size:11px" onclick="saveEditComment('${commentId}','${dossierId}')">Enregistrer</button>
+      <button class="btn-cancel" style="padding:3px 10px;font-size:11px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;cursor:pointer" onclick="cancelEditComment('${commentId}','${current}')">Annuler</button>
+    </div>`;
+}
+
+function cancelEditComment(commentId, original){
+  const contentEl=document.getElementById(`comment-content-${commentId}`);
+  if(contentEl)contentEl.innerHTML=escHtml(original);
+}
+
+async function saveEditComment(commentId, dossierId){
+  const ta=document.getElementById(`edit-ta-${commentId}`);
+  const newContent=(ta?.value||'').trim();
+  if(!newContent)return;
+  try{
+    const{error}=await getSupa().from('dossier_comments').update({content:newContent}).eq('id',commentId);
+    if(error)throw error;
+    const{data}=await getSupa().from('dossier_comments').select('*').eq('dossier_id',dossierId).order('created_at');
+    renderDrawerComments(data||[]);
+    showToast('Commentaire modifié');
+  }catch(e){showToast('Erreur : '+e.message);}
 }
 
 async function addComment(dossierId){
