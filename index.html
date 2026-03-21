@@ -842,14 +842,6 @@ function renderParlement(){
   const contentEl=document.getElementById('parl-content');
   if(!contentEl)return;
 
-  const briefing=(()=>{
-    const b=D?.pjl_briefing;
-    if(!b)return '';
-    if(typeof b==='string')return b;
-    if(typeof b==='object')return Object.values(b).find(v=>typeof v==='string'&&v.length>10)||'';
-    return '';
-  })();
-
   const nbAdv=fiches.filter(f=>f.nouveau_stade).length;
   const nbScore3=fiches.filter(f=>f.score>=3).length;
   const nbAutres=autres.reduce((s,g)=>s+(g.items||[]).length,0);
@@ -862,13 +854,6 @@ function renderParlement(){
   ].map(([v,l,a])=>`<div class="parl-stat ${a?'accent':''}"><div class="parl-stat-val">${v}</div><div class="parl-stat-lbl">${l}</div></div>`).join('');
 
   let html='';
-  if(briefing){
-    html+=`<div class="briefing-card" style="margin-bottom:16px">
-      <div class="briefing-header">Résumé de l'activité parlementaire du jour</div>
-      <div style="font-size:13px;color:var(--text2);line-height:1.6">${escHtml(briefing)}</div>
-    </div>`;
-  }
-
   if(fiches.length){
     html+=`<div class="feed-section-hd prio" style="border-radius:6px 6px 0 0;position:static">
       <span class="feed-section-lbl">Signaux GSF — PJL à suivre</span>
