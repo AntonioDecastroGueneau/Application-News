@@ -160,6 +160,12 @@ def fetch_jorf(today_str: str):
 
                     analysis = groq_analyse_jorf(art['titre'], contenu)
 
+                    resume = analysis.get('resume', '')
+                    # Reject if LLM resume signals non-relevance despite pertinent=True
+                    _neg = resume.lower()
+                    if any(w in _neg for w in ['aucun lien', 'aucune obligation', 'non pertinent', 'pas de lien', 'sans lien']):
+                        analysis['pertinent'] = False
+
                     if analysis.get('pertinent') is False:
                         autres.append({
                             'nor': art.get('nor', ''),
