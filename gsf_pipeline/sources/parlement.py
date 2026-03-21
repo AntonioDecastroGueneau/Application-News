@@ -609,8 +609,8 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         f"{groq_used} appels Groq, {groq_skipped} PJL différés (quota)"
     )
 
-    # pjl_autres grouped by source
-    # For entries that still have today's date, try to scrape the real deposit date
+    # pjl_autres grouped by source — only recent entries (last 3 days)
+    recent_cutoff = (datetime.now() - timedelta(days=3)).strftime('%Y-%m-%d')
     groups: Dict[str, list] = {}
     for e in entries:
         date = e['date']
@@ -619,6 +619,10 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
             if real_date:
                 date = real_date
                 log.debug(f"Parlement date dépôt récupérée : {date} — {e['titre'][:50]}")
+
+        # Only show deposits from the last 3 days
+        if date < recent_cutoff:
+            continue
 
         src = e['source']
         if src not in groups:
