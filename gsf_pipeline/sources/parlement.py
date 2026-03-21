@@ -15,6 +15,7 @@ from ..config import (
     STADE_PATTERNS,
     TIMEOUT,
 )
+from ..crawl import crawl_article
 from ..filters import keyword_match
 from ..llm import groq_analyse_pjl, groq_briefing_parlement
 from ..supabase_sync import SupabaseSync
@@ -190,6 +191,66 @@ def _scrape_deposit_date(url_dossier: str) -> Optional[str]:
     except Exception as e:
         log.debug(f"scrape_deposit_date {url_dossier}: {e}")
     return None
+
+
+def _crawl_pjl_content(url_dossier: str, url_doc: str = '') -> str:
+    """
+    Fetch meaningful content for a PJL to feed the LLM.
+    Strategy:
+    1. Parse the AN dossier page to find the Senate dossier link
+       (Sénat has the exposé des motifs in plain HTML)
+    2. Fallback: return content from the AN dossier page itself
+    """
+    from bs4 import BeautifulSoup
+
+    senat_url = ''
+    an_content = ''
+
+    if url_dossier:
+        try:
+            resp = requests.get(url_dossier, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, 'html.parser')
+
+            # Look for Senate dossier link
+            for a in soup.find_all('a', href=True):
+                href = a['href']
+                if 'senat.fr' in href and ('dossier' in href.lower() or 'pjl' in href.lower() or 'leg' in href.lower()):
+                    senat_url = href
+                    break
+
+            # Extract useful text from dossier page (title, stages, commission)
+            an_content = soup.get_text(' ', strip=True)
+            # Keep only the relevant middle part (skip nav boilerplate)
+            an_content = an_content[:4000]
+        except Exception as e:
+            log.debug(f"crawl dossier {url_dossier}: {e}")
+
+    # Try Senate page first (has exposé des motifs)
+    if senat_url:
+        try:
+            resp_s = requests.get(senat_url, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
+            resp_s.raise_for_status()
+            # Fix encoding: senat.fr sometimes sends latin-1 with UTF-8 declaration
+            enc = resp_s.encoding or 'utf-8'
+            try:
+                raw = resp_s.content.decode('utf-8')
+            except UnicodeDecodeError:
+                raw = resp_s.content.decode('latin-1')
+            from bs4 import BeautifulSoup as _BS
+            content = _BS(raw, 'html.parser').get_text(' ', strip=True)
+            if content and len(content) > 500:
+                log.debug(f"PJL content from Sénat ({len(content)} chars)")
+                return content[:6000]
+        except Exception as e:
+            log.debug(f"crawl sénat {senat_url}: {e}")
+
+    # Fallback: AN dossier page text
+    if an_content and len(an_content) > 200:
+        log.debug(f"PJL content from AN dossier ({len(an_content)} chars)")
+        return an_content
+
+    return ''
 
 
 def _scrape_dossier_stade(url_dossier: str) -> str:
@@ -432,6 +493,11 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         if groq_used >= PARLEMENT_MAX_GROQ:
             groq_skipped += 1
             continue
+
+        # Crawl real content before LLM analysis
+        url_dossier = entry.get('url_dossier', '')
+        content = _crawl_pjl_content(url_dossier) if url_dossier else ''
+        description = content or titre
 
         analysis = groq_analyse_pjl(titre, description)
         groq_used += 1
