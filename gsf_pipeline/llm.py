@@ -332,6 +332,10 @@ def groq_briefing_jorf(articles: list, today_str: str) -> str:
                 briefing = val.strip()
                 break
 
+    _NEG = ('aucun lien', 'aucune obligation', 'aucun texte', 'rien de pertinent',
+            'non pertinent', 'pas de lien', 'sans lien', 'n\'est identifiable')
+    if briefing and any(n in briefing.lower() for n in _NEG):
+        briefing = ''
     return briefing or "Aucun texte réglementaire significatif pour GSF dans ce JO."
 
 
