@@ -1,41 +1,67 @@
 {
   "date": "2026-03-22",
-  "generated_at": "07:39",
-  "elapsed_seconds": 420,
+  "generated_at": "13:49",
+  "elapsed_seconds": 162,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
     "jo_retenus": 0,
-    "articles_presse": 5,
+    "articles_presse": 6,
     "depts_restriction": 0,
     "pjl_suivis": 1,
     "pjl_avancements": 0
   },
   "pipeline_meta": {
-    "run_at": "2026-03-22T07:39:31",
+    "run_at": "2026-03-22T13:49:38",
     "sources": {
       "JORF": 0,
-      "RSS": 5,
+      "RSS": 6,
       "VigiEau": 0,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 43,
-    "llm_seconds": 46.2
+    "llm_calls": 42,
+    "llm_seconds": 37.8
   },
   "items": [
     {
-      "id": "24f919195204",
+      "id": "cf3e64cb8ed1",
       "source": "AEF Développement Durable",
-      "categorie": "Climat",
-      "titre": "Comptabilité carbone : les investisseurs soutiennent la révision du GHG Protocol sur le scope 2",
-      "resume": "L'article aborde la révision du GHG Protocol sur le scope 2, qui impacte la méthodologie de calcul des émissions indirectes liées à l'énergie (électricité, chauffage) pour les entreprises comme GSF, influençant leur reporting carbone et leur stratégie de décarbonation.",
-      "pourquoi": "Le GHG Protocol est une référence majeure pour le reporting des émissions scope 2, crucial pour la CSRD et les bilans GES de GSF. Une révision pourrait modifier les règles de calcul et les obligations de transparence, nécessitant une adaptation des processus internes.",
+      "categorie": "Eau",
+      "titre": "\"On saura à la fin des négociations sur les véhicules électriques et l’ETS 1 si le pacte vert est détricoté\" (P. Canfin)",
+      "resume": "L'article aborde les négociations sur les véhicules électriques et le système d'échange de quotas d'émission (ETS 1), un sujet clé pour la décarbonation des flottes de GSF, impactant directement son scope 1 et ses obligations réglementaires.",
+      "pourquoi": "Le sujet concerne directement la mobilité durable et la réglementation carbone (ETS 1, véhicules électriques), deux enjeux majeurs pour GSF dans le cadre de sa flotte de véhicules et de ses objectifs de décarbonation. Bien que l'article soit incomplet, le thème est pertinent pour le Responsable Environnement/Climat.",
       "criticite": 2,
       "impact_gsf": true,
-      "url": "https://www.aefinfo.fr/depeche/746951-comptabilite-carbone-les-investisseurs-soutiennent-la-revision-du-ghg-protocol-sur-le-scope-2",
+      "url": "https://www.aefinfo.fr/depeche/747515-on-saura-a-la-fin-des-negociations-sur-les-vehicules-electriques-et-l-ets-1-si-le-pacte-vert-est-detricote-p-canfin",
+      "date": "2026-03-22",
+      "top5": true
+    },
+    {
+      "id": "89d643fc6fb9",
+      "source": "Le Monde Planète",
+      "categorie": "Eau",
+      "titre": "Comment Barcelone s’est spécialisée dans la réutilisation des eaux usées",
+      "resume": "Cet article illustre une tendance forte en matière de gestion de l'eau et de circularité, pertinente pour GSF dans le cadre de ses enjeux de reporting ESG (CSRD) et de réduction de l'empreinte environnementale de ses prestations (eau, déchets).",
+      "pourquoi": "",
+      "criticite": 1,
+      "impact_gsf": false,
+      "url": "https://www.lemonde.fr/planete/article/2026/03/22/a-barcelone-ville-fer-de-lance-du-recyclage-des-eaux-usees_6673773_3244.html",
+      "date": "2026-03-22",
+      "top5": true
+    },
+    {
+      "id": "f671436cb09b",
+      "source": "ESG Today",
+      "categorie": "Énergie",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article couvre des évolutions ESG globales (réglementations climatiques, reporting, finance durable) qui influencent indirectement les attentes clients de GSF en matière de décarbonation et de reporting extra-financier.",
+      "pourquoi": "",
+      "criticite": 1,
+      "impact_gsf": false,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-253/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-253",
       "date": "2026-03-22",
       "top5": true
     },
@@ -44,7 +70,7 @@
       "source": "EFRAG",
       "categorie": "Énergie",
       "titre": "EFRAG Welcomes a New Friend of EFRAG - Sustainability Reporting: Synesgy",
-      "resume": "L'adhésion de Synesgy à EFRAG renforce l'écosystème des outils de reporting ESG, ce qui pourrait influencer les méthodes de collecte de données pour la CSRD/ESRS chez GSF.",
+      "resume": "L'article annonce l'adhésion de Synesgy (plateforme de notation ESG) comme 'Friend of EFRAG', renforçant son engagement dans le développement des ESRS (normes de reporting durable européennes). Cela impacte indirectement GSF via l'évolution des standards de reporting extra-financier (CSRD/ESRS) que ses clients pourraient adopter.",
       "pourquoi": "",
       "criticite": 1,
       "impact_gsf": false,
@@ -53,15 +79,15 @@
       "top5": true
     },
     {
-      "id": "cf3e64cb8ed1",
+      "id": "24f919195204",
       "source": "AEF Développement Durable",
-      "categorie": "Eau",
-      "titre": "\"On saura à la fin des négociations sur les véhicules électriques et l’ETS 1 si le pacte vert est détricoté\" (P. Canfin)",
-      "resume": "L'article aborde les négociations sur les véhicules électriques et le marché carbone (ETS 1), deux sujets clés pour la décarbonation de la flotte de GSF (scope 1) et son alignement avec les politiques climatiques européennes (Pacte Vert).",
+      "categorie": "Climat",
+      "titre": "Comptabilité carbone : les investisseurs soutiennent la révision du GHG Protocol sur le scope 2",
+      "resume": "La révision du GHG Protocol sur le scope 2 pourrait impacter les méthodes de calcul des émissions indirectes liées à l'énergie pour GSF, notamment dans le cadre de son reporting CSRD/ESRS.",
       "pourquoi": "",
       "criticite": 1,
       "impact_gsf": false,
-      "url": "https://www.aefinfo.fr/depeche/747515-on-saura-a-la-fin-des-negociations-sur-les-vehicules-electriques-et-l-ets-1-si-le-pacte-vert-est-detricote-p-canfin",
+      "url": "https://www.aefinfo.fr/depeche/746951-comptabilite-carbone-les-investisseurs-soutiennent-la-revision-du-ghg-protocol-sur-le-scope-2",
       "date": "2026-03-22",
       "top5": true
     },
@@ -70,26 +96,13 @@
       "source": "AEF Développement Durable",
       "categorie": "Climat",
       "titre": "Sur l’adaptation, les entreprises vont \"beaucoup plus vite que sur la décarbonation\", prédit Maximilien RouerPubliée le",
-      "resume": "L'article souligne une accélération des stratégies d'adaptation climatique des entreprises par rapport à la décarbonation, ce qui pourrait impacter les exigences des clients de GSF en matière de résilience opérationnelle face aux aléas climatiques.",
+      "resume": "L'article souligne que les entreprises accélèrent davantage leurs actions d'adaptation climatique que de décarbonation, ce qui pourrait impacter les stratégies de résilience des sites clients de GSF (3 000+ sites) et leurs exigences en matière de services adaptés aux risques climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "impact_gsf": false,
       "url": "https://www.aefinfo.fr/depeche/746443-sur-l-adaptation-les-entreprises-vont-beaucoup-plus-vite-que-sur-la-decarbonation-predit-maximilien-rouer",
       "date": "2026-03-22",
-      "top5": true
-    },
-    {
-      "id": "0e6b90035790",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Face à la crise énergétique, accélérer la transition écologique",
-      "resume": "L'article souligne l'importance stratégique de la transition énergétique pour réduire la dépendance aux énergies fossiles, ce qui impacte indirectement GSF via les exigences carbone de ses clients (nucléaire, santé, industrie) et les risques climatiques sur ses sites d'intervention.",
-      "pourquoi": "",
-      "criticite": 1,
-      "impact_gsf": false,
-      "url": "https://www.lemonde.fr/idees/article/2026/03/21/face-a-la-crise-energetique-accelerer-la-transition-ecologique_6673255_3232.html",
-      "date": "2026-03-21",
-      "top5": true
+      "top5": false
     }
   ],
   "restrictions_eau": [],
@@ -464,7 +477,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés liés aux quotas de pêche (2, 3, 9) et au mécanisme de capacité électrique (4, 5, 6, 11) sont pertinents pour une approche RSE, notamment en matière de gestion durable des ressources naturelles et de transition énergétique. Les autres textes concernent des aspects administratifs, patrimoniaux ou sectoriels moins directement liés à l'environnement ou au climat.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour GSF dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -812,5 +825,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises, notamment en matière de reporting extra-financier et de transition énergétique. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux majeurs pour les grandes entreprises de services."
+  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le seul texte directement pertinent pour un Responsable Environnement/Climat, avec des implications potentielles sur les normes climatiques, énergétiques et de reporting. Aucun autre texte ne traite explicitement de sujets RSE ou environnementaux dans cette liste."
 }
