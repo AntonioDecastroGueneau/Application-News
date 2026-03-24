@@ -235,7 +235,14 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .feed-consulter-items .card { background: transparent; }
 .feed-consulter-items .card:hover { background: var(--surface3); }
 .empty-state { padding: 48px 20px; text-align: center; font-size: 13px; color: var(--muted); }
-.feed-empty-prio { padding: 32px 20px; font-size: 12px; color: var(--muted2); text-align: center; }
+.feed-empty-prio { display: flex; align-items: center; justify-content: center; height: 100%; background: var(--surface2); border-radius: 12px; }
+.feed-empty-prio-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; max-width: 200px; text-align: center; }
+.feed-empty-prio-icon { position: relative; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; }
+.feed-empty-prio-ring { position: absolute; inset: 0; border-radius: 50%; background: var(--primary-container); animation: empty-pulse 3s ease-in-out infinite; }
+.feed-empty-prio-icon .material-symbols-outlined { position: relative; z-index: 1; font-size: 40px; color: var(--sb-accent); font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 40; }
+.feed-empty-prio-title { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.4; }
+.feed-empty-prio-sub { font-size: 12px; color: var(--muted); line-height: 1.5; }
+@keyframes empty-pulse { 0%,100% { transform: scale(0.8); opacity: .15; } 50% { transform: scale(1.2); opacity: .07; } }
 
 /* ── Map / Carte view ────────────────────────────────────────────────── */
 #carte-view { position: relative; }
@@ -714,7 +721,7 @@ function renderFeed(){
   list.style.gridTemplateColumns='55fr 45fr';
   let html=`<div class="feed-col-prio">`;
   if(prio.length)html+=`<div class="feed-section-hd prio"><span class="feed-section-lbl">Signaux prioritaires</span><span class="feed-section-badge">${prio.length}</span></div>`+prio.map(cardHtml).join('');
-  else html+=`<div class="feed-empty-prio">Aucun signal prioritaire aujourd'hui</div>`;
+  else html+=`<div class="feed-empty-prio"><div class="feed-empty-prio-inner"><div class="feed-empty-prio-icon"><div class="feed-empty-prio-ring"></div><span class="material-symbols-outlined">sensors</span></div><div class="feed-empty-prio-title">Tout est calme pour le moment</div><div class="feed-empty-prio-sub">Aucun signal prioritaire ce matin. Prochaine vérification cet après-midi.</div></div></div>`;
   html+=`</div>`;
   if(veille.length)html+=`<div class="feed-col-consulter"><div class="feed-consulter-hd"><span class="feed-consulter-lbl">À consulter</span><span class="feed-section-badge" style="margin-left:auto">${veille.length}</span></div><div class="feed-consulter-items">${veille.map(cardHtml).join('')}</div></div>`;
   list.innerHTML=html;
