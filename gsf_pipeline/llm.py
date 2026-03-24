@@ -7,6 +7,7 @@ import time
 from groq import Groq
 from mistralai.client import Mistral
 
+from .filters import reglements_match
 from .config import (
     GSF_CONTEXT,
     GSF_CONTEXT_SHORT,
@@ -181,6 +182,9 @@ def _safe_score(val) -> int:
 # ─────────────────────────────────────────────
 
 def groq_analyse_jorf(titre: str, contenu: str) -> dict:
+    if kw := reglements_match(titre):
+        log.info(f"JORF signal prioritaire auto ({kw}): {titre[:80]}")
+        return {'pertinent': True, 'score': 3, 'resume': f'Signal réglementaire prioritaire ({kw}).', 'pourquoi': ''}
     system = 'Tu es expert climat et RSE conseillant le Responsable Environnement de GSF. JSON uniquement.'
     prompt = (
         f"{GSF_CONTEXT_SHORT}\n\n"
@@ -242,6 +246,9 @@ def groq_analyse_jorf(titre: str, contenu: str) -> dict:
 # ─────────────────────────────────────────────
 
 def groq_analyse_rss(titre: str, contenu: str) -> dict:
+    if kw := reglements_match(titre):
+        log.info(f"RSS signal prioritaire auto ({kw}): {titre[:80]}")
+        return {'pertinent': True, 'score': 3, 'resume': f'Signal réglementaire prioritaire ({kw}).', 'pourquoi': ''}
     system = 'Tu es analyste climat et RSE pour GSF. JSON valide uniquement.'
     prompt = (
         f"{GSF_CONTEXT_SHORT}\n\n"
@@ -364,6 +371,9 @@ def groq_briefing_jorf(articles: list, today_str: str) -> str:
 # ─────────────────────────────────────────────
 
 def groq_analyse_pjl(titre: str, description: str) -> dict:
+    if kw := reglements_match(titre):
+        log.info(f"PJL signal prioritaire auto ({kw}): {titre[:80]}")
+        return {'pertinent': True, 'score': 3, 'resume': f'Signal réglementaire prioritaire ({kw}).', 'pourquoi': ''}
     system = 'Tu es conseiller RSE senior pour GSF. JSON valide uniquement.'
     has_content = len(description) > len(titre) + 50
     content_note = (

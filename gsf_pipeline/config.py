@@ -68,6 +68,31 @@ GSF_CONTEXT_SHORT = (
 
 
 # ─────────────────────────────────────────────
+# Réglementations prioritaires — score 3 automatique
+# Tout article mentionnant l'un de ces termes dans son titre
+# est forcé pertinent=True, score=3, sans appel LLM de filtrage.
+# ─────────────────────────────────────────────
+
+REGLEMENTS_PRIORITAIRES = [
+    'CSRD', 'CSDDD', 'CS3D', 'SPASER', 'EUDR', 'CBAM', 'MACF',
+    'ISSB', 'BGES', 'BEGES', 'DPEF', 'ZFE', 'DPE',
+    'ISO 14001', 'PPR', 'PNACC', 'SNBC',
+    'Loi Énergie-Climat', 'Loi Energie-Climat',
+    'Décret Tertiaire', 'Decret Tertiaire',
+    'Loi DDADUE', 'Omnibus', 'ESRS', 'SFDR', 'NFRD', 'ESG',
+    'REP', 'EPR', 'SBTi', 'ESPR',
+    'Loi PACTE', 'Loi Devoir de Vigilance', 'Devoir de Vigilance',
+    'Loi Climat et Résilience', 'Loi Climat Résilience',
+    'Loi AGEC', 'Loi EGAlim', 'EGAlim',
+    'Ordonnance 2023-1142', 'Décret 2023-1394',
+    'Taxonomie Verte', 'Taxonomie verte',
+    'Green Deal', 'Loi Industrie Verte', 'Industrie Verte',
+    'Green Claims', 'Règlement Batteries', 'Nature Restoration',
+    'RED III', 'RED 3',
+]
+
+
+# ─────────────────────────────────────────────
 # Keywords — first-pass relevance filter
 # ─────────────────────────────────────────────
 

@@ -1,10 +1,19 @@
 import hashlib
 
-from .config import KEYWORDS
+from .config import KEYWORDS, REGLEMENTS_PRIORITAIRES
 
 
 def make_id(source: str, titre: str) -> str:
     return hashlib.md5(f"{source}:{titre}".encode()).hexdigest()[:12]
+
+
+def reglements_match(text: str) -> str | None:
+    """Return the first matching priority regulation keyword found in text, or None."""
+    t = (text or '').lower()
+    for kw in REGLEMENTS_PRIORITAIRES:
+        if kw.lower() in t:
+            return kw
+    return None
 
 
 def keyword_match(text: str) -> bool:
