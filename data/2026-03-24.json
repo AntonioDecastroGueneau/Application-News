@@ -1,7 +1,7 @@
 {
   "date": "2026-03-24",
-  "generated_at": "14:40",
-  "elapsed_seconds": 182,
+  "generated_at": "15:19",
+  "elapsed_seconds": 209,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
@@ -9,18 +9,18 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-03-24T14:40:22",
+    "run_at": "2026-03-24T15:19:57",
     "sources": {
       "JORF": 0,
-      "RSS": 9,
+      "RSS": 7,
       "VigiEau": 3,
-      "Parlement": 11
+      "Parlement": 7
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 55,
-    "llm_seconds": 51.5
+    "llm_calls": 65,
+    "llm_seconds": 75.1
   },
   "items": [
     {
@@ -28,91 +28,62 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "CSRD 2026, de l'ambition à la simplification : quelles entreprises restent concernées ?",
-      "resume": "Signal réglementaire prioritaire (CSRD).",
-      "pourquoi": "",
+      "resume": "CSRD 2026, de l'ambition à la simplification : quelles entreprises restent concernées ?",
+      "pourquoi": "Mention de CSRD.",
       "criticite": 3,
       "url": "https://www.actu-environnement.com/ae/news/CSRD-2026-ambition-simplification-entreprises-concernees-47718.php4#xtor=RSS-6",
-      "date": "2026-03-24",
-      "image_url": ""
-    },
-    {
-      "id": "563e7b0d0346",
-      "source": "Google News — CSRD",
-      "categorie": "Climat",
-      "titre": "[ETUDE] CSRD 2026, de l'ambition à la simplification : quelles entreprises restent concernées ? - Actu-Environnement",
-      "resume": "Signal réglementaire prioritaire (CSRD).",
-      "pourquoi": "",
-      "criticite": 3,
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaFhEbS01ZElxMUpvdE5oa3Nhc2dMQVhFM3dKcXM5OXpqNVhGNjZld1FXUExhUzFxcFdteWYwb2RlUnJ5clFFb0QzNWFNY3lRWWpUWHNobDFoU2NJOU1wM19wR2x1dG5TTHo5czliTHJFTThaVmNieGI5eDQ1WElkc2k1UzlDXzFmUF96TkdfOGxkTE41NkdHZmx1T1hTQzI1ZEZGQ0FhWWpVMlB2TFVr?oc=5",
-      "date": "2026-03-24",
-      "image_url": ""
-    },
-    {
-      "id": "207e8861783c",
-      "source": "Google News — CSRD",
-      "categorie": "Climat",
-      "titre": "CSRD : comprendre les nouvelles obligations pour les entreprises françaises - TV83",
-      "resume": "Signal réglementaire prioritaire (CSRD).",
-      "pourquoi": "",
-      "criticite": 3,
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNb2xJYk1ielFsXzlTeTNZOWU3a1NnX1cydWdOc2E5ZmJLR2xsNDRLODJhc2FZVDk2MjdaV2hyV21oSWRXU0RJQ19hTlFrS0xERlB6d3kxOE9EVkJVRllPbkUzMk9PTzA2ZXJjdTlqUm16eDJVY1dCRnhXdVd2aFVWdjBRS0paZjVLM2NjT2VyMDRha2xwVHhmb2VxUGE?oc=5",
-      "date": "2026-03-24",
-      "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
+      "date": "2026-03-24"
     },
     {
       "id": "e74343e334fb",
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "L’Espagne confirme sa confiance dans les renouvelables",
-      "resume": "L'article souligne l'accélération des investissements espagnols dans les énergies renouvelables, ce qui pourrait influencer les politiques énergétiques européennes et indirectement les exigences carbone des clients de GSF (notamment industriels ou nucléaires).",
+      "resume": "L'article souligne l'accélération des investissements dans les énergies renouvelables en Espagne, ce qui pourrait influencer indirectement les exigences carbone des clients industriels ou énergétiques d'ABC (notamment dans le secteur nucléaire ou santé) via des critères ESG plus stricts.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/lespagne-confirme-sa-confiance-dans-les-renouvelables-419032/",
-      "date": "2026-03-24",
-      "image_url": ""
+      "date": "2026-03-24"
     },
     {
       "id": "3f5e3f0fade3",
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Les incertitudes s’accumulent sur le financement du réseau électrique",
-      "resume": "L'article souligne l'ampleur des investissements nécessaires dans les réseaux électriques français, ce qui pourrait impacter la disponibilité et le coût de l'électricité pour les activités de GSF, notamment en termes de décarbonation de sa flotte et d'efficacité énergétique des sites clients.",
+      "resume": "L'article souligne l'ampleur des investissements nécessaires dans les réseaux électriques en France, ce qui pourrait impacter les coûts énergétiques et la disponibilité des infrastructures pour les activités de propreté/FM d'ABC, notamment en termes d'efficacité énergétique et de transition vers des énergies renouvelables.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/les-incertitudes-saccumulent-sur-le-financement-du-reseau-electrique-418902/",
-      "date": "2026-03-24",
-      "image_url": ""
+      "date": "2026-03-24"
     },
     {
       "id": "64e59b40e4c7",
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "Zevero Raises $7 Million to Scale Carbon Accounting and Management Platform Across New Markets",
-      "resume": "Zevero développe une plateforme de comptabilité carbone pour aider les entreprises à mesurer, suivre et réduire leurs émissions, ce qui pourrait être un outil complémentaire pour GSF dans le cadre de son reporting CSRD/ESRS ou de la gestion de son bilan GES.",
+      "resume": "Zevero développe une plateforme de comptabilité carbone qui pourrait être utile pour ABC dans le cadre de son reporting CSRD/ESRS ou de la gestion de ses émissions scope 1/2/3, notamment pour la flotte de véhicules et les prestations de propreté.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets/?utm_source=rss&utm_medium=rss&utm_campaign=zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets",
-      "date": "2026-03-24",
-      "image_url": "https://www.esgtoday.com/wp-content/uploads/2026/03/Zevero2.jpg"
+      "date": "2026-03-24"
     },
     {
       "id": "be6b78493faa",
       "source": "ESG Today",
       "categorie": "Biodiversité",
       "titre": "Procurement is Where Nature Strategy Becomes Real",
-      "resume": "L'article souligne l'importance de l'intégration des enjeux de biodiversité dans les stratégies d'achat des entreprises, ce qui peut impacter indirectement GSF via les exigences de ses clients (nucléaire, santé, industrie) en matière de reporting ESG et de durabilité.",
+      "resume": "L'article souligne l'importance de l'intégration des enjeux de biodiversité dans les stratégies d'achat des entreprises, un levier clé pour ABC dans la réduction de son impact indirect (scope 3) via sa chaîne d'approvisionnement en produits et services de nettoyage.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/procurement-is-where-nature-strategy-becomes-real/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-is-where-nature-strategy-becomes-real",
-      "date": "2026-03-24",
-      "image_url": "https://www.esgtoday.com/wp-content/uploads/2026/03/Natcap-Leape.jpg"
+      "date": "2026-03-24"
     },
     {
       "id": "388f8f0bf9e5",
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SRB Online Meeting 25 March 2026",
-      "resume": "L'article concerne une réunion de l'EFRAG sur les normes de reporting de durabilité (ESRS), pertinente pour la préparation de GSF à la CSRD et aux exigences de reporting extra-financier.",
+      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting de durabilité (ESRS), pertinente pour préparer la conformité CSRD/ESRS d'ABC dans son reporting extra-financier.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
@@ -123,7 +94,7 @@
       "source": "EFRAG",
       "categorie": "Énergie",
       "titre": "EFRAG Welcomes a New Friend of EFRAG - Sustainability Reporting: Synesgy",
-      "resume": "L'article annonce l'adhésion de Synesgy (plateforme de notation ESG) comme 'Friend of EFRAG', renforçant son engagement dans les normes ESRS de la CSRD. Cela peut impacter les outils de reporting extra-financier de GSF en facilitant l'accès à des données ESG standardisées pour ses clients.",
+      "resume": "L'adhésion de Synesgy à EFRAG renforce l'écosystème des outils de reporting ESG, ce qui pourrait influencer les méthodes de collecte de données pour la CSRD/ESRS chez ABC, notamment pour le reporting extra-financier et la traçabilité des données clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-welcomes-a-new-friend-of-efrag-sustainability-reporting-synesgy",
@@ -876,7 +847,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour GSF dans ce JO.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-eaefa82a54e1",
@@ -887,7 +858,7 @@
       "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53706",
       "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53706",
       "source_rss": "pipeline",
-      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "resume_abc": "",
       "pourquoi": "",
       "score": 3,
       "horizon": "",
@@ -908,7 +879,7 @@
       "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53730",
       "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53730",
       "source_rss": "pipeline",
-      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "resume_abc": "",
       "pourquoi": "",
       "score": 3,
       "horizon": "",
@@ -929,7 +900,7 @@
       "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53095",
       "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53095",
       "source_rss": "pipeline",
-      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "resume_abc": "",
       "pourquoi": "",
       "score": 3,
       "horizon": "",
@@ -950,7 +921,7 @@
       "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/moldavie_securite_sociale",
       "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/moldavie_securite_sociale",
       "source_rss": "pipeline",
-      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "resume_abc": "",
       "pourquoi": "",
       "score": 3,
       "horizon": "",
@@ -971,7 +942,7 @@
       "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53235",
       "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53235",
       "source_rss": "pipeline",
-      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "resume_abc": "",
       "pourquoi": "",
       "score": 3,
       "horizon": "",
@@ -992,7 +963,7 @@
       "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53388",
       "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53388",
       "source_rss": "pipeline",
-      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "resume_abc": "",
       "pourquoi": "",
       "score": 3,
       "horizon": "",
@@ -1013,7 +984,7 @@
       "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52635",
       "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52635",
       "source_rss": "pipeline",
-      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "resume_abc": "",
       "pourquoi": "",
       "score": 3,
       "horizon": "",
@@ -1024,90 +995,6 @@
       "updated_at": "2026-03-24T13:58:32.059487+00:00",
       "supabase_id": "5e1029c8-fb6a-4ce4-8030-44ae5625a4b0",
       "statut": "a_surveiller"
-    },
-    {
-      "id": "pjl-823d94544bcc",
-      "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République de Moldova relatif à la coopération dans le domaine de la défense - N° 2050",
-      "date_depot": "2026-03-24",
-      "stade": "Première lecture à l'Assemblée nationale",
-      "stade_index": 2,
-      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_autorisant_approbation_accord_gouvernement_moldova_defense",
-      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_autorisant_approbation_accord_gouvernement_moldova_defense",
-      "source_rss": "pipeline",
-      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
-      "pourquoi": "",
-      "score": 3,
-      "horizon": "",
-      "nouveau_stade": false,
-      "manuel": false,
-      "historique": [],
-      "created_at": "2026-03-24T13:38:38.311851+00:00",
-      "updated_at": "2026-03-24T13:58:33.871964+00:00",
-      "supabase_id": "396c4772-7072-4d3c-b0cb-2a4a51368952",
-      "statut": "a_surveiller"
-    },
-    {
-      "id": "pjl-ad52372195a9",
-      "titre": "Projet de loi autorisant l’approbation de la convention entre le Gouvernement de la République française et le Gouvernement de la République de Finlande pour l’élimination de la double imposition en matière d’impôts sur le revenu et la prévention de l’évasion et de la fraude fiscales et l’approbation de l’avenant à la convention entre le Gouvernement de la République française et le Gouvernement du Royaume de Suède en vue d’éviter les doubles impositions et de prévenir l’évasion fiscale en matière d’impôts sur le revenu et sur la fortune - N° 2054",
-      "date_depot": "2026-03-24",
-      "stade": "Première lecture à l'Assemblée nationale",
-      "stade_index": 2,
-      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52549",
-      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52549",
-      "source_rss": "pipeline",
-      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
-      "pourquoi": "",
-      "score": 3,
-      "horizon": "",
-      "nouveau_stade": false,
-      "manuel": false,
-      "historique": [],
-      "created_at": "2026-03-24T13:58:43.884605+00:00",
-      "updated_at": "2026-03-24T14:13:19.909508+00:00",
-      "supabase_id": "2cc6c8b1-a2e8-4391-8398-dd3a883f0ffa",
-      "statut": "a_surveiller"
-    },
-    {
-      "id": "pjl-ae2fa7ec936c",
-      "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement du Monténégro relatif à la coopération dans le domaine de la défense - N° 2236",
-      "date_depot": "2026-03-24",
-      "stade": "Promulgation de la loi",
-      "stade_index": 0,
-      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52561",
-      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52561",
-      "source_rss": "pipeline",
-      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
-      "pourquoi": "",
-      "score": 3,
-      "horizon": "",
-      "nouveau_stade": false,
-      "manuel": false,
-      "historique": [],
-      "created_at": "2026-03-24T13:38:42.508296+00:00",
-      "updated_at": "2026-03-24T13:58:35.612514+00:00",
-      "supabase_id": "2333efc8-292e-46ed-9576-b47dc9327727",
-      "statut": "a_surveiller"
-    },
-    {
-      "id": "pjl-14aebd68935a",
-      "titre": "Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche - N° 2518",
-      "date_depot": "2026-03-20",
-      "stade": "Première lecture à l'Assemblée nationale",
-      "stade_index": 2,
-      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
-      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
-      "source_rss": "pipeline",
-      "resume_gsf": null,
-      "pourquoi": null,
-      "score": 2,
-      "horizon": "Début 2025 (transposition des directives européennes, entrée en vigueur progressive à partir de 2025-2026)",
-      "nouveau_stade": false,
-      "manuel": false,
-      "historique": [],
-      "created_at": "2026-03-20T23:57:18.140824+00:00",
-      "updated_at": "2026-03-21T20:27:48.856604+00:00",
-      "supabase_id": "ab2fc271-9dc3-42f0-8185-9215c1039c06",
-      "statut": "pour_info"
     }
   ],
   "pjl_autres": [
@@ -1428,5 +1315,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises, notamment en matière de reporting extra-financier et de transition écologique. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux majeurs pour les grandes entreprises de services."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l'UE) pourrait inclure des mesures environnementales et énergétiques significatives pour les entreprises, notamment en matière de reporting extra-financier et de transition écologique. Aucun autre texte ne semble directement lié aux enjeux climatiques, énergétiques ou RSE pour une entreprise de services."
 }
