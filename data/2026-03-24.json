@@ -1,26 +1,24 @@
 {
   "date": "2026-03-24",
-  "generated_at": "11:34",
-  "elapsed_seconds": 207,
+  "generated_at": "13:39",
+  "elapsed_seconds": 314,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
-    "jo_retenus": 0,
+    "jo_retenus": 4,
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-03-24T11:34:55",
+    "run_at": "2026-03-24T13:39:55",
     "sources": {
-      "JORF": 0,
-      "RSS": 8,
+      "JORF": 4,
+      "RSS": 10,
       "VigiEau": 3,
-      "Parlement": 1
+      "Parlement": 10
     },
-    "errors": [
-      "SOURCE VIDE — JORF : 0 textes retenus"
-    ],
-    "llm_calls": 61,
-    "llm_seconds": 62.1
+    "errors": [],
+    "llm_calls": 43,
+    "llm_seconds": 155.5
   },
   "items": [
     {
@@ -28,9 +26,9 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "CSRD 2026, de l'ambition à la simplification : quelles entreprises restent concernées ?",
-      "resume": "La directive Omnibus modifie le champ d'application de la CSRD à partir de 2026, ce qui pourrait élargir ou préciser les obligations de reporting extra-financier pour GSF selon sa taille et son secteur d'activité.",
+      "resume": "Signal réglementaire prioritaire (CSRD).",
       "pourquoi": "",
-      "criticite": 1,
+      "criticite": 3,
       "url": "https://www.actu-environnement.com/ae/news/CSRD-2026-ambition-simplification-entreprises-concernees-47718.php4#xtor=RSS-6",
       "date": "2026-03-24",
       "image_url": ""
@@ -40,10 +38,44 @@
       "source": "Novethic",
       "categorie": "Déchets",
       "titre": "Les entreprises à mission, un modèle qui résiste au backlash",
-      "resume": "Le modèle des entreprises à mission peut inspirer GSF pour structurer sa démarche RSE et son engagement climatique dans une approche volontaire et intégrée à sa gouvernance, en cohérence avec les attentes des clients (nucléaire, santé, industrie) et les exigences CSRD.",
+      "resume": "Signal réglementaire prioritaire (REP).",
+      "pourquoi": "",
+      "criticite": 3,
+      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/entreprise-a-mission-barometre-2026-developpement-strategique",
+      "date": "2026-03-24",
+      "image_url": ""
+    },
+    {
+      "id": "0098d72265b8",
+      "source": "EFRAG",
+      "categorie": "Énergie",
+      "titre": "EFRAG Welcomes a New Friend of EFRAG - Sustainability Reporting: Synesgy",
+      "resume": "Signal réglementaire prioritaire (ESG).",
+      "pourquoi": "",
+      "criticite": 3,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-welcomes-a-new-friend-of-efrag-sustainability-reporting-synesgy",
+      "date": "2026-03-24"
+    },
+    {
+      "id": "388f8f0bf9e5",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG SRB Online Meeting 25 March 2026",
+      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting de durabilité (ESRS), pertinente pour les obligations CSRD/ESRS de GSF dans le cadre de son reporting extra-financier.",
+      "pourquoi": "Bien que l'article ne mentionne pas explicitement GSF, il traite d'un sujet réglementaire direct pour le reporting ESG (CSRD/ESRS), essentiel pour GSF dans le cadre de ses obligations de reporting extra-financier et de conformité avec la directive européenne.",
+      "criticite": 2,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
+      "date": "2026-03-24"
+    },
+    {
+      "id": "e74343e334fb",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’Espagne confirme sa confiance dans les renouvelables",
+      "resume": "L'article illustre la dynamique européenne en faveur des énergies renouvelables, un contexte à surveiller pour anticiper les attentes clients de GSF en matière de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/entreprise-a-mission-barometre-2026-developpement-strategique",
+      "url": "https://www.greenunivers.com/2026/03/lespagne-confirme-sa-confiance-dans-les-renouvelables-419032/",
       "date": "2026-03-24",
       "image_url": ""
     },
@@ -52,7 +84,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Les incertitudes s’accumulent sur le financement du réseau électrique",
-      "resume": "L'article souligne l'ampleur des investissements nécessaires dans les réseaux électriques en France pour accompagner l'électrification des usages, ce qui pourrait impacter les coûts énergétiques et les stratégies de décarbonation des entreprises comme GSF, notamment via la CSRD et les objectifs de réduction des scopes 1 et 2.",
+      "resume": "L'article souligne les investissements massifs nécessaires pour moderniser le réseau électrique français, ce qui pourrait impacter les coûts énergétiques et les stratégies de décarbonation des entreprises comme GSF, notamment via l'électrification des flottes ou des sites tertiaires.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/les-incertitudes-saccumulent-sur-le-financement-du-reseau-electrique-418902/",
@@ -64,7 +96,7 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "Zevero Raises $7 Million to Scale Carbon Accounting and Management Platform Across New Markets",
-      "resume": "Zevero propose une solution de comptabilité carbone et gestion des émissions pour les entreprises, ce qui pourrait intéresser GSF pour renforcer ses capacités de reporting ESG (CSRD/ESRS) et optimiser son bilan GES (scope 1/2/3).",
+      "resume": "Zevero propose une solution de comptabilité carbone (scope 1/2/3) qui pourrait être pertinente pour GSF dans le cadre de son reporting CSRD/ESRS ou de la gestion de son BGES, bien que l'article ne mentionne pas de lien direct avec les obligations réglementaires françaises ou européennes.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets/?utm_source=rss&utm_medium=rss&utm_campaign=zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets",
@@ -72,51 +104,40 @@
       "image_url": "https://www.esgtoday.com/wp-content/uploads/2026/03/Zevero2.jpg"
     },
     {
-      "id": "0098d72265b8",
-      "source": "EFRAG",
-      "categorie": "Énergie",
-      "titre": "EFRAG Welcomes a New Friend of EFRAG - Sustainability Reporting: Synesgy",
-      "resume": "L'article annonce l'adhésion de Synesgy à EFRAG comme 'Friend of EFRAG' pour soutenir les normes ESRS, ce qui peut influencer les outils de reporting ESG (CSRD) que GSF devra déployer pour ses clients.",
+      "id": "be6b78493faa",
+      "source": "ESG Today",
+      "categorie": "Biodiversité",
+      "titre": "Procurement is Where Nature Strategy Becomes Real",
+      "resume": "L'article souligne l'importance de l'intégration des enjeux de biodiversité dans les stratégies d'achat des entreprises, ce qui pourrait impacter les fournisseurs de GSF et ses propres pratiques d'approvisionnement en produits/services liés à la propreté et au FM.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-welcomes-a-new-friend-of-efrag-sustainability-reporting-synesgy",
-      "date": "2026-03-24"
+      "url": "https://www.esgtoday.com/procurement-is-where-nature-strategy-becomes-real/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-is-where-nature-strategy-becomes-real",
+      "date": "2026-03-24",
+      "image_url": "https://www.esgtoday.com/wp-content/uploads/2026/03/Natcap-Leape.jpg"
     },
     {
-      "id": "d5b82f84d24c",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "Interdiction des publicités aériennes : le juge reconnaît un objectif d'intérêt général lié à l'environnement",
-      "resume": "L'article confirme la légitimité environnementale de l'interdiction des publicités aériennes, renforçant les politiques publiques de décarbonation. Pour GSF, cela s'inscrit dans la tendance réglementaire croissante limitant les activités à forte empreinte carbone, mais n'impose pas d'action directe immédiate.",
+      "id": "fead8c11f582",
+      "source": "ESG Today",
+      "categorie": "Énergie",
+      "titre": "EU Commission Approves €5 Billion Danish Offshore Wind Program",
+      "resume": "Signal réglementaire prioritaire (PPR).",
       "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/publicites-par-avion-interdiction-objectif-interet-general-responsabilite-etat-indemnisation-47727.php4#xtor=RSS-6",
+      "criticite": 3,
+      "url": "https://www.esgtoday.com/eu-commission-approves-e5-billion-danish-offshore-wind-program/?utm_source=rss&utm_medium=rss&utm_campaign=eu-commission-approves-e5-billion-danish-offshore-wind-program",
       "date": "2026-03-23",
-      "image_url": ""
+      "image_url": "https://www.esgtoday.com/wp-content/uploads/2026/03/Wind-offshore-EU.jpg"
     },
     {
       "id": "a1e9afcd06e6",
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "HotRiver ou comment puiser la chaleur renouvelable dans les fleuves",
-      "resume": "Cette innovation pourrait offrir une solution d'énergie renouvelable pour les sites clients de GSF (bureaux, hôpitaux, etc.), réduisant leur dépendance aux énergies fossiles et leur empreinte carbone, tout en s'alignant sur les objectifs de décarbonation des clients (nucléaire, santé, industrie).",
+      "resume": "L'article présente une solution innovante de récupération de chaleur renouvelable dans les fleuves, potentiellement applicable aux sites clients de GSF pour réduire leur consommation énergétique et leurs émissions scope 2.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/hotriver-ou-comment-puiser-la-chaleur-renouvelable-dans-les-fleuves-418260/",
       "date": "2026-03-23",
       "image_url": ""
-    },
-    {
-      "id": "6de3f2875167",
-      "source": "ESG Today",
-      "categorie": "Biodiversité",
-      "titre": "Cocoon Raises $15 Million to Scale Low-Carbon Building Materials",
-      "resume": "L'article met en lumière l'innovation dans les matériaux de construction bas-carbone, un enjeu indirect pour GSF via ses clients (bâtiments tertiaires) et les exigences carbone croissantes dans le secteur du FM.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/cocoon-raises-15-million-to-scale-low-carbon-building-materials/?utm_source=rss&utm_medium=rss&utm_campaign=cocoon-raises-15-million-to-scale-low-carbon-building-materials",
-      "date": "2026-03-23",
-      "image_url": "https://www.esgtoday.com/wp-content/uploads/2026/03/Cocoon.jpg"
     }
   ],
   "restrictions_eau": [
@@ -774,12 +795,6 @@
       "date": "2026-03-24"
     },
     {
-      "titre": "Décision n° 2026-106 du 18 mars 2026 fixant le calendrier de diffusion des émissions attribuées aux formations politiques représentées par un groupe dans l'une ou l'autre des assemblées du Parlement pour l'année 2026",
-      "nature": "DECISION",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711903",
-      "date": "2026-03-24"
-    },
-    {
       "titre": "Arrêté du 20 mars 2026 autorisant au titre de l'année 2026 l'ouverture d'un examen professionnel d'accès au grade d'adjoint administratif principal de deuxième classe relevant du ministère chargé de la transition écologique, de la biodiversité et des négociations internationales sur le climat et la nature et fixant le nombre de poste offerts pour cet examen",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711283",
@@ -804,21 +819,9 @@
       "date": "2026-03-24"
     },
     {
-      "titre": "Arrêté du 17 mars 2026 approuvant le plan de servitudes aéronautiques de dégagement de l'aérodrome de Vahitahi (Polynésie française)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711673",
-      "date": "2026-03-24"
-    },
-    {
       "titre": "Arrêté du 18 mars 2026 portant attribution du titre de peintre des armées, spécialité peintre de l'air et de l'espace",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711699",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 23 mars 2026 portant cessation de fonctions au cabinet du ministre des petites et moyennes entreprises, du commerce, de l'artisanat, du tourisme et du pouvoir d'achat",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711814",
       "date": "2026-03-24"
     },
     {
@@ -840,12 +843,6 @@
       "date": "2026-03-24"
     },
     {
-      "titre": "Décision n° 2026-C-16 du 18 mars 2026 portant extension d'agrément d'une entreprise d'assurance",
-      "nature": "DECISION",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711892",
-      "date": "2026-03-24"
-    },
-    {
       "titre": "Recommandations en urgence du 3 février 2026 relatives au pôle de psychiatrie du groupe hospitalier Sud Ile-de-France à Melun (Seine-et-Marne)",
       "nature": "RECOMMANDATION",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711911",
@@ -864,9 +861,292 @@
       "date": "2026-03-24"
     }
   ],
-  "jo_retenus": [],
+  "jo_retenus": [
+    {
+      "id": "ac3256652088",
+      "source": "JORF",
+      "categorie": "Déchets",
+      "titre": "Décision n° 2026-106 du 18 mars 2026 fixant le calendrier de diffusion des émissions attribuées aux formations politiques représentées par un groupe dans l'une ou l'autre des assemblées du Parlement pour l'année 2026",
+      "resume": "Signal réglementaire prioritaire (REP).",
+      "pourquoi": "",
+      "criticite": 3,
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711903",
+      "date": "2026-03-24",
+      "image_url": ""
+    },
+    {
+      "id": "5ea9cf6cf139",
+      "source": "JORF",
+      "categorie": "Environnement",
+      "titre": "Arrêté du 17 mars 2026 approuvant le plan de servitudes aéronautiques de dégagement de l'aérodrome de Vahitahi (Polynésie française)",
+      "resume": "Signal réglementaire prioritaire (PPR).",
+      "pourquoi": "",
+      "criticite": 3,
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711673",
+      "date": "2026-03-24",
+      "image_url": ""
+    },
+    {
+      "id": "e3295bf09066",
+      "source": "JORF",
+      "categorie": "Biodiversité",
+      "titre": "Arrêté du 23 mars 2026 portant cessation de fonctions au cabinet du ministre des petites et moyennes entreprises, du commerce, de l'artisanat, du tourisme et du pouvoir d'achat",
+      "resume": "Signal réglementaire prioritaire (REP).",
+      "pourquoi": "",
+      "criticite": 3,
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711814",
+      "date": "2026-03-24",
+      "image_url": ""
+    },
+    {
+      "id": "618d09e68c2c",
+      "source": "JORF",
+      "categorie": "Déchets",
+      "titre": "Décision n° 2026-C-16 du 18 mars 2026 portant extension d'agrément d'une entreprise d'assurance",
+      "resume": "Signal réglementaire prioritaire (REP).",
+      "pourquoi": "",
+      "criticite": 3,
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711892",
+      "date": "2026-03-24",
+      "image_url": ""
+    }
+  ],
   "briefing_jorf": "Aucun texte réglementaire significatif pour GSF dans ce JO.",
   "pjl_fiches": [
+    {
+      "id": "pjl-eaefa82a54e1",
+      "titre": "Projet de loi autorisant l’approbation de la convention entre le Gouvernement de la République française et le Gouvernement de la République de Chypre pour l’élimination de la double imposition en matière d’impôts sur le revenu et la prévention de l’évasion et de la fraude fiscales - N° 2516",
+      "date_depot": "2026-03-24",
+      "stade": "Dépôt",
+      "stade_index": 0,
+      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53706",
+      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53706",
+      "source_rss": "AN Projets de loi",
+      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "pourquoi": "",
+      "score": 3,
+      "horizon": "",
+      "nouveau_stade": false,
+      "manuel": false,
+      "historique": [
+        {
+          "date": "2026-03-24",
+          "stade": "Dépôt",
+          "event": "Découverte"
+        }
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "supabase_id": "9b3b1318-5ad0-4aee-a795-7a473d4aa54c"
+    },
+    {
+      "id": "pjl-d98c13ad70f2",
+      "titre": "Projet de loi autorisant l'approbation de la Convention entre le Gouvernement de la République française et le Gouvernement de la République italienne relative à l’entretien courant et à l’exploitation de la section située en territoire français de la lign - N° 2510",
+      "date_depot": "2026-03-24",
+      "stade": "Dépôt",
+      "stade_index": 0,
+      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53730",
+      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53730",
+      "source_rss": "AN Projets de loi",
+      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "pourquoi": "",
+      "score": 3,
+      "horizon": "",
+      "nouveau_stade": false,
+      "manuel": false,
+      "historique": [
+        {
+          "date": "2026-03-24",
+          "stade": "Dépôt",
+          "event": "Découverte"
+        }
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "supabase_id": "21029b66-9016-4e7b-9980-8dfcad15977e"
+    },
+    {
+      "id": "pjl-7bbecd8fdb3c",
+      "titre": "Projet de loi autorisant l’approbation de la convention d’extradition entre le Gouvernement de la République française et le Gouvernement de la République de Colombie - N° 2509",
+      "date_depot": "2026-03-24",
+      "stade": "Dépôt",
+      "stade_index": 0,
+      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53095",
+      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53095",
+      "source_rss": "AN Projets de loi",
+      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "pourquoi": "",
+      "score": 3,
+      "horizon": "",
+      "nouveau_stade": false,
+      "manuel": false,
+      "historique": [
+        {
+          "date": "2026-03-24",
+          "stade": "Dépôt",
+          "event": "Découverte"
+        }
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "supabase_id": "f20539f8-19b7-4be4-a9e2-0500d1f9aa2a"
+    },
+    {
+      "id": "pjl-096e11ffad4c",
+      "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République de Moldavie dans le domaine de la sécurité sociale - N° 2471",
+      "date_depot": "2026-03-24",
+      "stade": "Dépôt",
+      "stade_index": 0,
+      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/moldavie_securite_sociale",
+      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/moldavie_securite_sociale",
+      "source_rss": "AN Projets de loi",
+      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "pourquoi": "",
+      "score": 3,
+      "horizon": "",
+      "nouveau_stade": false,
+      "manuel": false,
+      "historique": [
+        {
+          "date": "2026-03-24",
+          "stade": "Dépôt",
+          "event": "Découverte"
+        }
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "supabase_id": "3573b3e9-2df1-4396-bb4a-264913ed96aa"
+    },
+    {
+      "id": "pjl-c08d73524da8",
+      "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et la Communauté des Caraïbes relatif à l’adhésion au protocole sur les privilèges et immunités de la Communauté des Caraïbes du 14 janvier 1985 - N° 2414",
+      "date_depot": "2026-03-24",
+      "stade": "Dépôt",
+      "stade_index": 0,
+      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53235",
+      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53235",
+      "source_rss": "AN Projets de loi",
+      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "pourquoi": "",
+      "score": 3,
+      "horizon": "",
+      "nouveau_stade": false,
+      "manuel": false,
+      "historique": [
+        {
+          "date": "2026-03-24",
+          "stade": "Dépôt",
+          "event": "Découverte"
+        }
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "supabase_id": "8a2f0072-d528-4b35-a181-5b837fb7b7cf"
+    },
+    {
+      "id": "pjl-065a49e6f923",
+      "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République du Kazakhstan sur la réadmission des personnes - N° 2416",
+      "date_depot": "2026-03-24",
+      "stade": "Dépôt",
+      "stade_index": 0,
+      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53388",
+      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53388",
+      "source_rss": "AN Projets de loi",
+      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "pourquoi": "",
+      "score": 3,
+      "horizon": "",
+      "nouveau_stade": false,
+      "manuel": false,
+      "historique": [
+        {
+          "date": "2026-03-24",
+          "stade": "Dépôt",
+          "event": "Découverte"
+        }
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "supabase_id": "bed47e8e-058f-46df-8469-5b3b3526efe6"
+    },
+    {
+      "id": "pjl-f782f6dd2c72",
+      "titre": "Projet de loi relatif à la restitution de biens culturels provenant d’États qui, du fait d’une appropriation illicite, en ont été privés - N° 2408",
+      "date_depot": "2026-03-24",
+      "stade": "Dépôt",
+      "stade_index": 0,
+      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52635",
+      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52635",
+      "source_rss": "AN Projets de loi",
+      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "pourquoi": "",
+      "score": 3,
+      "horizon": "",
+      "nouveau_stade": false,
+      "manuel": false,
+      "historique": [
+        {
+          "date": "2026-03-24",
+          "stade": "Dépôt",
+          "event": "Découverte"
+        }
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "supabase_id": "5e1029c8-fb6a-4ce4-8030-44ae5625a4b0"
+    },
+    {
+      "id": "pjl-823d94544bcc",
+      "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République de Moldova relatif à la coopération dans le domaine de la défense - N° 2050",
+      "date_depot": "2026-03-24",
+      "stade": "Dépôt",
+      "stade_index": 0,
+      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_autorisant_approbation_accord_gouvernement_moldova_defense",
+      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_autorisant_approbation_accord_gouvernement_moldova_defense",
+      "source_rss": "AN Projets de loi",
+      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "pourquoi": "",
+      "score": 3,
+      "horizon": "",
+      "nouveau_stade": false,
+      "manuel": false,
+      "historique": [
+        {
+          "date": "2026-03-24",
+          "stade": "Dépôt",
+          "event": "Découverte"
+        }
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "supabase_id": "396c4772-7072-4d3c-b0cb-2a4a51368952"
+    },
+    {
+      "id": "pjl-ae2fa7ec936c",
+      "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement du Monténégro relatif à la coopération dans le domaine de la défense - N° 2236",
+      "date_depot": "2026-03-24",
+      "stade": "Dépôt",
+      "stade_index": 0,
+      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52561",
+      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52561",
+      "source_rss": "AN Projets de loi",
+      "resume_gsf": "Signal réglementaire prioritaire (PPR).",
+      "pourquoi": "",
+      "score": 3,
+      "horizon": "",
+      "nouveau_stade": false,
+      "manuel": false,
+      "historique": [
+        {
+          "date": "2026-03-24",
+          "stade": "Dépôt",
+          "event": "Découverte"
+        }
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "supabase_id": "2333efc8-292e-46ed-9576-b47dc9327727"
+    },
     {
       "id": "pjl-14aebd68935a",
       "titre": "Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche - N° 2518",
@@ -1207,5 +1487,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises, notamment en matière de reporting extra-financier et de transition écologique. Aucun autre texte ne semble directement lié aux enjeux climatiques, énergétiques ou de déchets pour une entreprise de services."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises, notamment en matière de reporting extra-financier et de transition énergétique. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux majeurs pour les entreprises de services."
 }
