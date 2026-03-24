@@ -196,7 +196,7 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .card-compact { background: var(--surface-lowest); border-radius: 8px; border: 1px solid rgba(193,200,194,0.35); padding: 11px 12px; cursor: pointer; transition: background .15s, border-color .15s; display: flex; flex-direction: column; gap: 6px; }
 .card-compact:hover { background: var(--surface2); border-color: rgba(193,200,194,0.6); }
 .card-compact-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-.card-compact-source { font-size: 10px; color: var(--muted2); font-style: italic; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 45%; }
+.card-compact-source { font-size: 10px; font-weight: 500; color: var(--text2); background: var(--surface3); padding: 1px 7px; border-radius: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 50%; flex-shrink: 0; }
 .card-compact-titre { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; transition: color .15s; }
 .card-compact:hover .card-compact-titre { color: var(--primary); }
 .card-compact-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 2px; }
@@ -244,6 +244,12 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .feed-consulter-items .card:hover { background: var(--surface3); }
 .empty-state { padding: 48px 20px; text-align: center; font-size: 13px; color: var(--muted); }
 .feed-empty-prio { display: flex; align-items: center; justify-content: center; height: 100%; background: var(--surface2); border-radius: 12px; }
+.sources-card { flex: 1; min-height: 120px; background: var(--surface-lowest); border: 1px solid rgba(193,200,194,0.25); border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; overflow: hidden; }
+.sources-card-title { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); }
+.sources-grid { display: flex; flex-wrap: wrap; gap: 6px; align-content: start; overflow: hidden; }
+.source-chip { display: flex; align-items: center; gap: 5px; background: var(--surface2); border: 1px solid rgba(193,200,194,0.3); border-radius: 20px; padding: 3px 10px 3px 6px; font-size: 11px; color: var(--text2); white-space: nowrap; }
+.source-chip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--primary-container); flex-shrink: 0; }
+.source-chip-count { font-family: var(--mono); font-size: 10px; color: var(--muted2); margin-left: 2px; }
 .feed-empty-prio-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; max-width: 200px; text-align: center; }
 .feed-empty-prio-icon { position: relative; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; }
 .feed-empty-prio-ring { position: absolute; inset: 0; border-radius: 50%; background: var(--primary-container); animation: empty-pulse 3s ease-in-out infinite; }
@@ -745,11 +751,19 @@ function renderFeed(){
           ${item.url?`<a class="card-compact-link" href="${escHtml(item.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Lire<span class="material-symbols-outlined">open_in_new</span></a>`:''}
         </div>
       </div></div>`;}
+  // Build sources card
+  const srcCounts={};
+  (D.items||[]).forEach(i=>{if(i.source)srcCounts[i.source]=(srcCounts[i.source]||0)+1;});
+  if((D.stats?.jo_retenus||0)>0)srcCounts['JORF']=(srcCounts['JORF']||0)+(D.stats.jo_retenus);
+  if((D.stats?.depts_restriction||0)>0)srcCounts['VigiEau']=D.stats.depts_restriction;
+  const srcEntries=Object.entries(srcCounts).sort((a,b)=>b[1]-a[1]);
+  const sourcesCardHtml=srcEntries.length?`<div class="sources-card"><div class="sources-card-title">Sources consultées</div><div class="sources-grid">${srcEntries.map(([name,count])=>`<div class="source-chip"><div class="source-chip-dot"></div>${escHtml(name)}<span class="source-chip-count">${count}</span></div>`).join('')}</div></div>`:'';
+
   list.style.gridTemplateColumns='55fr 45fr';
   let html=`<div class="feed-col-prio">`;
   if(prio.length)html+=`<div class="feed-section-hd prio"><span class="feed-section-lbl">Signaux prioritaires</span><span class="feed-section-badge">${prio.length}</span></div>`+prio.map(cardHtml).join('');
   else html+=`<div class="feed-empty-prio"><div class="feed-empty-prio-inner"><div class="feed-empty-prio-icon"><div class="feed-empty-prio-ring"></div><span class="material-symbols-outlined">sensors</span></div><div class="feed-empty-prio-title">Tout est calme pour le moment</div><div class="feed-empty-prio-sub">Aucun signal prioritaire ce matin. Prochaine vérification cet après-midi.</div></div></div>`;
-  html+=`</div>`;
+  html+=sourcesCardHtml+`</div>`;
   if(veille.length)html+=`<div class="feed-col-consulter"><div class="feed-consulter-hd"><span class="feed-consulter-lbl">À consulter</span><span class="feed-section-badge" style="margin-left:auto">${veille.length}</span></div><div class="feed-consulter-items">${veille.map(cardHtmlCompact).join('')}</div></div>`;
   list.innerHTML=html;
 }

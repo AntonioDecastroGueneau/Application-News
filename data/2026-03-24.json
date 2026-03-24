@@ -1,7 +1,7 @@
 {
   "date": "2026-03-24",
-  "generated_at": "11:22",
-  "elapsed_seconds": 181,
+  "generated_at": "11:34",
+  "elapsed_seconds": 207,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
@@ -9,10 +9,10 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-03-24T11:22:44",
+    "run_at": "2026-03-24T11:34:55",
     "sources": {
       "JORF": 0,
-      "RSS": 6,
+      "RSS": 8,
       "VigiEau": 3,
       "Parlement": 1
     },
@@ -20,7 +20,7 @@
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 61,
-    "llm_seconds": 58.5
+    "llm_seconds": 62.1
   },
   "items": [
     {
@@ -28,10 +28,22 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "CSRD 2026, de l'ambition à la simplification : quelles entreprises restent concernées ?",
-      "resume": "La directive Omnibus 2025 modifie le champ d'application de la CSRD, potentiellement élargissant ou précisant les obligations de reporting extra-financier pour GSF en tant que prestataire de services, notamment via ses clients concernés par la CSRD (secteurs industriels, santé, etc.).",
-      "pourquoi": "La CSRD (Corporate Sustainability Reporting Directive) impacte directement les entreprises soumises à reporting extra-financier, y compris leurs prestataires de services comme GSF, notamment via les exigences de transparence sur les scopes 1, 2 et 3 (incluant les déchets, l'énergie et la mobilité). L'article aborde une évolution réglementaire majeure (directive Omnibus 2025) qui pourrait modifier les obligations de GSF ou de ses clients, justifiant un suivi attentif pour anticiper les adaptations nécessaires.",
-      "criticite": 2,
+      "resume": "La directive Omnibus modifie le champ d'application de la CSRD à partir de 2026, ce qui pourrait élargir ou préciser les obligations de reporting extra-financier pour GSF selon sa taille et son secteur d'activité.",
+      "pourquoi": "",
+      "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/CSRD-2026-ambition-simplification-entreprises-concernees-47718.php4#xtor=RSS-6",
+      "date": "2026-03-24",
+      "image_url": ""
+    },
+    {
+      "id": "2c4265cb4f59",
+      "source": "Novethic",
+      "categorie": "Déchets",
+      "titre": "Les entreprises à mission, un modèle qui résiste au backlash",
+      "resume": "Le modèle des entreprises à mission peut inspirer GSF pour structurer sa démarche RSE et son engagement climatique dans une approche volontaire et intégrée à sa gouvernance, en cohérence avec les attentes des clients (nucléaire, santé, industrie) et les exigences CSRD.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/entreprise-a-mission-barometre-2026-developpement-strategique",
       "date": "2026-03-24",
       "image_url": ""
     },
@@ -40,7 +52,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Les incertitudes s’accumulent sur le financement du réseau électrique",
-      "resume": "L'article souligne l'ampleur des investissements nécessaires dans les réseaux électriques en France, ce qui impacte indirectement la transition énergétique des entreprises clientes de GSF (notamment en termes d'accès à une électricité décarbonée et de coûts énergétiques).",
+      "resume": "L'article souligne l'ampleur des investissements nécessaires dans les réseaux électriques en France pour accompagner l'électrification des usages, ce qui pourrait impacter les coûts énergétiques et les stratégies de décarbonation des entreprises comme GSF, notamment via la CSRD et les objectifs de réduction des scopes 1 et 2.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/les-incertitudes-saccumulent-sur-le-financement-du-reseau-electrique-418902/",
@@ -48,23 +60,23 @@
       "image_url": ""
     },
     {
-      "id": "be6b78493faa",
+      "id": "64e59b40e4c7",
       "source": "ESG Today",
-      "categorie": "Biodiversité",
-      "titre": "Procurement is Where Nature Strategy Becomes Real",
-      "resume": "L'article souligne l'importance de l'intégration des enjeux de biodiversité dans les stratégies d'achat des entreprises, ce qui peut impacter indirectement GSF via ses clients (ex : exigences en matière de reporting ESG ou de durabilité des fournisseurs).",
+      "categorie": "Climat",
+      "titre": "Zevero Raises $7 Million to Scale Carbon Accounting and Management Platform Across New Markets",
+      "resume": "Zevero propose une solution de comptabilité carbone et gestion des émissions pour les entreprises, ce qui pourrait intéresser GSF pour renforcer ses capacités de reporting ESG (CSRD/ESRS) et optimiser son bilan GES (scope 1/2/3).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.esgtoday.com/procurement-is-where-nature-strategy-becomes-real/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-is-where-nature-strategy-becomes-real",
+      "url": "https://www.esgtoday.com/zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets/?utm_source=rss&utm_medium=rss&utm_campaign=zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets",
       "date": "2026-03-24",
-      "image_url": "https://www.esgtoday.com/wp-content/uploads/2026/03/Natcap-Leape.jpg"
+      "image_url": "https://www.esgtoday.com/wp-content/uploads/2026/03/Zevero2.jpg"
     },
     {
       "id": "0098d72265b8",
       "source": "EFRAG",
       "categorie": "Énergie",
       "titre": "EFRAG Welcomes a New Friend of EFRAG - Sustainability Reporting: Synesgy",
-      "resume": "L'adhésion de Synesgy à EFRAG renforce l'écosystème des outils de reporting ESG, ce qui pourrait influencer les méthodes de collecte de données pour la CSRD/ESRS chez GSF.",
+      "resume": "L'article annonce l'adhésion de Synesgy à EFRAG comme 'Friend of EFRAG' pour soutenir les normes ESRS, ce qui peut influencer les outils de reporting ESG (CSRD) que GSF devra déployer pour ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-welcomes-a-new-friend-of-efrag-sustainability-reporting-synesgy",
@@ -75,7 +87,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Interdiction des publicités aériennes : le juge reconnaît un objectif d'intérêt général lié à l'environnement",
-      "resume": "L'article confirme la légitimité environnementale de l'interdiction des publicités aériennes, renforçant le cadre réglementaire français en matière de réduction des impacts carbone et de sobriété publicitaire, sans impact direct opérationnel pour GSF.",
+      "resume": "L'article confirme la légitimité environnementale de l'interdiction des publicités aériennes, renforçant les politiques publiques de décarbonation. Pour GSF, cela s'inscrit dans la tendance réglementaire croissante limitant les activités à forte empreinte carbone, mais n'impose pas d'action directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/publicites-par-avion-interdiction-objectif-interet-general-responsabilite-etat-indemnisation-47727.php4#xtor=RSS-6",
@@ -87,12 +99,24 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "HotRiver ou comment puiser la chaleur renouvelable dans les fleuves",
-      "resume": "Cette technologie de récupération de chaleur renouvelable dans les fleuves pourrait offrir une solution alternative pour décarboner les sites clients de GSF (chauffage, climatisation) en réduisant leur dépendance aux énergies fossiles.",
+      "resume": "Cette innovation pourrait offrir une solution d'énergie renouvelable pour les sites clients de GSF (bureaux, hôpitaux, etc.), réduisant leur dépendance aux énergies fossiles et leur empreinte carbone, tout en s'alignant sur les objectifs de décarbonation des clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/hotriver-ou-comment-puiser-la-chaleur-renouvelable-dans-les-fleuves-418260/",
       "date": "2026-03-23",
       "image_url": ""
+    },
+    {
+      "id": "6de3f2875167",
+      "source": "ESG Today",
+      "categorie": "Biodiversité",
+      "titre": "Cocoon Raises $15 Million to Scale Low-Carbon Building Materials",
+      "resume": "L'article met en lumière l'innovation dans les matériaux de construction bas-carbone, un enjeu indirect pour GSF via ses clients (bâtiments tertiaires) et les exigences carbone croissantes dans le secteur du FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/cocoon-raises-15-million-to-scale-low-carbon-building-materials/?utm_source=rss&utm_medium=rss&utm_campaign=cocoon-raises-15-million-to-scale-low-carbon-building-materials",
+      "date": "2026-03-23",
+      "image_url": "https://www.esgtoday.com/wp-content/uploads/2026/03/Cocoon.jpg"
     }
   ],
   "restrictions_eau": [
@@ -1183,5 +1207,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale** (N°2518) et le **projet de loi de financement de la sécurité sociale pour 2026** (N°2242) pourraient inclure des mesures liées à la transition énergétique, aux déchets ou au reporting RSE. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux dans cette liste."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises, notamment en matière de reporting extra-financier et de transition écologique. Aucun autre texte ne semble directement lié aux enjeux climatiques, énergétiques ou de déchets pour une entreprise de services."
 }
