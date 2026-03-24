@@ -1,7 +1,7 @@
 {
   "date": "2026-03-24",
-  "generated_at": "21:57",
-  "elapsed_seconds": 145,
+  "generated_at": "22:09",
+  "elapsed_seconds": 164,
   "errors": [],
   "stats": {
     "jo_analyses": 12,
@@ -9,19 +9,18 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-03-24T21:57:33",
+    "run_at": "2026-03-24T22:09:32",
     "sources": {
       "JORF": 0,
-      "RSS": 9,
+      "RSS": 11,
       "VigiEau": 3,
-      "Parlement": 0
+      "Parlement": 1
     },
     "errors": [
-      "SOURCE VIDE — JORF : 0 textes retenus",
-      "SOURCE VIDE — Parlement : 0 fiches"
+      "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 51,
-    "llm_seconds": 47.4
+    "llm_seconds": 52.3
   },
   "items": [
     {
@@ -47,14 +46,36 @@
       "date": "2026-03-24"
     },
     {
-      "id": "2c4265cb4f59",
-      "source": "Novethic",
+      "id": "388f8f0bf9e5",
+      "source": "EFRAG",
       "categorie": "Déchets",
-      "titre": "Les entreprises à mission, un modèle qui résiste au backlash",
-      "resume": "L'article aborde le modèle des entreprises à mission, qui pourrait inspirer ABC dans sa stratégie RSE et son engagement climatique, notamment pour renforcer sa crédibilité auprès des clients sensibles aux enjeux ESG.",
+      "titre": "EFRAG SRB Online Meeting 25 March 2026",
+      "resume": "L'article concerne une réunion de l'EFRAG sur les normes de reporting de durabilité (ESRS), pertinente pour le reporting CSRD/ESRS de ABC et son alignement avec les exigences réglementaires européennes.",
+      "pourquoi": "L'EFRAG (European Financial Reporting Advisory Group) est l'organisme clé pour l'élaboration des normes ESRS (European Sustainability Reporting Standards) sous la CSRD. ABC, en tant qu'entreprise soumise au reporting extra-financier (CSRD), doit suivre ces évolutions pour adapter ses processus de collecte de données et son reporting ESG. La réunion du 25 mars 2026 pourrait aborder des clarifications ou mises à jour sur les ESRS, impactant directement la méthodologie de reporting de ABC.",
+      "criticite": 2,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
+      "date": "2026-03-24"
+    },
+    {
+      "id": "77c9b98be4bd",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Dans l'Eure, le syndicat SERPN mise sur l'IA pour rénover son réseau d'eau",
+      "resume": "L'article illustre une innovation technologique (IA, jumeaux numériques) appliquée à la gestion des infrastructures, un domaine connexe aux enjeux de performance énergétique et de maintenance des équipements chez ABC, bien que non directement applicable à ses activités.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/entreprise-a-mission-barometre-2026-developpement-strategique",
+      "url": "https://www.actu-environnement.com/ae/news/retour-experience-syndicat-eau-SERPN-Leakmited-47724.php4#xtor=RSS-6",
+      "date": "2026-03-24"
+    },
+    {
+      "id": "6993765b1d17",
+      "source": "GreenUnivers",
+      "categorie": "Biodiversité",
+      "titre": "Bercy clarifie l’écosystème de la batterie avec « France Batterie »",
+      "resume": "L'article annonce la création de 'France Batterie', une structure dédiée à la filière batterie en France, avec un objectif de 100 à 120 GWh de production d'ici 2030. Cela pourrait influencer indirectement la stratégie de mobilité durable d'ABC, notamment en matière d'électrification de sa flotte de véhicules (scope 1).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/bercy-clarifie-lecosysteme-de-la-batterie-avec-france-batterie-419136/",
       "date": "2026-03-24"
     },
     {
@@ -62,10 +83,21 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Sébastien Lecornu fait appel aux certificats d’économies d’énergie comme arme anti-crise",
-      "resume": "Le gouvernement français renforce l'utilisation des Certificats d'Économies d'Énergie (CEE) pour accélérer l'électrification des usages, ce qui pourrait impacter les stratégies énergétiques des entreprises comme ABC dans leur gestion des sites clients.",
+      "resume": "Le Premier ministre mobilise les Certificats d'Économies d'Énergie (CEE) pour accélérer l'électrification des usages, ce qui pourrait impacter les stratégies énergétiques des entreprises comme ABC, notamment dans la gestion de leurs sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/sebastien-lecornu-fait-appel-aux-certificats-deconomies-denergie-comme-arme-anti-crise-419137/",
+      "date": "2026-03-24"
+    },
+    {
+      "id": "e74343e334fb",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’Espagne confirme sa confiance dans les renouvelables",
+      "resume": "L'article illustre une tendance européenne forte vers les énergies renouvelables, pouvant influencer les attentes clients d'ABC (ex : secteurs nucléaire, santé, industrie) en matière de décarbonation et de résilience énergétique.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/lespagne-confirme-sa-confiance-dans-les-renouvelables-419032/",
       "date": "2026-03-24"
     },
     {
@@ -73,7 +105,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Les incertitudes s’accumulent sur le financement du réseau électrique",
-      "resume": "L'article souligne l'ampleur des investissements nécessaires dans les réseaux électriques en France, ce qui pourrait impacter les coûts énergétiques et la disponibilité des infrastructures pour les activités de nettoyage et FM d'ABC, notamment via des tarifs ou des contraintes d'accès.",
+      "resume": "L'article souligne l'ampleur des investissements nécessaires pour moderniser et renforcer le réseau électrique français, ce qui pourrait impacter les coûts énergétiques et la disponibilité de l'électricité pour les sites clients d'ABC, notamment dans un contexte de décarbonation et d'électrification des usages.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/les-incertitudes-saccumulent-sur-le-financement-du-reseau-electrique-418902/",
@@ -84,7 +116,7 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "Zevero Raises $7 Million to Scale Carbon Accounting and Management Platform Across New Markets",
-      "resume": "Zevero propose une solution de comptabilité carbone et gestion des émissions (scope 1/2/3) qui pourrait soutenir ABC dans la mesure, le suivi et la réduction de son empreinte carbone, notamment pour répondre aux exigences CSRD/ESRS et aux attentes clients en matière de reporting ESG.",
+      "resume": "Zevero propose une solution de comptabilité carbone pour mesurer, suivre et réduire les émissions, utile pour ABC dans le cadre de ses obligations CSRD/ESRS et de son reporting extra-financier.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets/?utm_source=rss&utm_medium=rss&utm_campaign=zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets",
@@ -95,21 +127,10 @@
       "source": "ESG Today",
       "categorie": "Biodiversité",
       "titre": "Procurement is Where Nature Strategy Becomes Real",
-      "resume": "L'article souligne l'importance de l'intégration de la stratégie 'nature positive' dans les décisions d'achat, ce qui peut impacter la sélection des fournisseurs et prestataires par ABC, notamment pour ses services de propreté/FM.",
+      "resume": "L'article souligne que la stratégie biodiversité des entreprises est souvent déconnectée des décisions d'achat, alors que les achats représentent la majorité de leur impact et risque liés à la nature. Pour ABC, cela implique d'intégrer la biodiversité dans les critères de sélection des fournisseurs et prestataires, notamment pour les services de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/procurement-is-where-nature-strategy-becomes-real/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-is-where-nature-strategy-becomes-real",
-      "date": "2026-03-24"
-    },
-    {
-      "id": "388f8f0bf9e5",
-      "source": "EFRAG",
-      "categorie": "Déchets",
-      "titre": "EFRAG SRB Online Meeting 25 March 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting de durabilité (SRB), pertinente pour la préparation à la CSRD et aux ESRS, impactant directement le reporting extra-financier d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
       "date": "2026-03-24"
     },
     {
@@ -117,7 +138,7 @@
       "source": "EFRAG",
       "categorie": "Énergie",
       "titre": "EFRAG Welcomes a New Friend of EFRAG - Sustainability Reporting: Synesgy",
-      "resume": "L'adhésion de Synesgy à EFRAG renforce l'écosystème des outils de reporting ESG, ce qui pourrait influencer les exigences en matière de données et de traçabilité pour les entreprises comme ABC dans le cadre de la CSRD et des ESRS.",
+      "resume": "L'article annonce l'adhésion de Synesgy à EFRAG comme 'Friend', renforçant son engagement dans le reporting ESG et les ESRS, ce qui impacte indirectement ABC via les exigences clients en matière de reporting extra-financier (CSRD).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-welcomes-a-new-friend-of-efrag-sustainability-reporting-synesgy",
@@ -457,7 +478,40 @@
   ],
   "jo_retenus": [],
   "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
-  "pjl_fiches": [],
+  "pjl_fiches": [
+    {
+      "id": "pjl-14aebd68935a",
+      "titre": "Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche",
+      "date_depot": "2026-03-24",
+      "stade": "Première lecture à l'Assemblée nationale",
+      "stade_index": 2,
+      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
+      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
+      "source_rss": "manuel",
+      "resume_abc": "Économie / finances : compléments aux règles issues de directives financières et de transparence (par exemple sur l’information extra‑financière type CSRD, la régulation de certains acteurs financiers ou de marchés), ajustements de dispositions de droit des sociétés et de droit financier pour se mettre en conformité avec le droit européen.\n\nEnvironnement / énergie : mesures pour transposer ou adapter des directives récentes en matière d’efficacité énergétique et d’énergies renouvelables, ainsi que des ajustements sur la protection de la biodiversité (dérogations « espèces protégées ») et certains dispositifs liés aux emballages et déchets",
+      "pourquoi": "Impact CSRD et efficacité énergétique",
+      "score": 2,
+      "horizon": null,
+      "nouveau_stade": false,
+      "manuel": true,
+      "historique": [
+        {
+          "date": "2026-03-24",
+          "stade": null,
+          "event": "Importé depuis UI"
+        },
+        {
+          "date": "2026-03-24",
+          "stade": "Première lecture à l'Assemblée nationale",
+          "event": "Avancement : None → Première lecture à l'Assemblée nationale"
+        }
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24",
+      "supabase_id": "2f4948e1-de90-40ba-b759-b1b8ba2b0b1f",
+      "statut": "a_surveiller"
+    }
+  ],
   "pjl_autres": [
     {
       "source": "AN Projets de loi",
@@ -753,7 +807,7 @@
           "titre": "Texte adopté N° 222",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_mettre_fin_au_devoir_conjugual_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_mettre_fin_au_devoir_conjugual_17e",
-          "date": "2025-12-02"
+          "date": "2026-03-24"
         },
         {
           "titre": "Texte adopté N° 223",
@@ -765,16 +819,16 @@
           "titre": "Texte adopté N° 221",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/gestion_patrimoine_immobilier_etat_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/gestion_patrimoine_immobilier_etat_17e",
-          "date": "2025-09-16"
+          "date": "2026-03-24"
         },
         {
           "titre": "Texte adopté N° 220",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/traitement_judiciaire_violences_sexuelles_incestueuses_parentales_contre_enfants_situation_parents_protecteurs_meres_protectrices",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/traitement_judiciaire_violences_sexuelles_incestueuses_parentales_contre_enfants_situation_parents_protecteurs_meres_protectrices",
-          "date": "2025-10-20"
+          "date": "2026-03-24"
         }
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le seul texte directement pertinent pour un Responsable Environnement/Climat, avec des implications potentielles sur la réglementation des services (énergie, déchets, reporting extra-financier). Aucun autre texte adopté ou projet ne traite spécifiquement de sujets climatiques, RSE ou de transition écologique."
+  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le plus pertinent pour un Responsable Environnement/Climat, car il intègre des dispositions clés en matière de transition écologique, d’énergies renouvelables et de réglementation environnementale. Aucun autre texte ne semble directement lié aux enjeux climatiques, énergétiques ou RSE pour une entreprise de services."
 }
