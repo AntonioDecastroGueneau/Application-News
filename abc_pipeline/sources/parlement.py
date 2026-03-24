@@ -599,39 +599,8 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
                 'horizon': analysis.get('horizon', ''),
             }
 
-        # Create fiche for ALL analyzed PJLs (pertinent AND non-pertinent)
-        # Non-pertinent ones go to "À consulter" with score=1
-
-        # Use the LLM score, or 1 if not pertinent
-        fiche_score = int(analysis.get('score', 1)) if analysis.get('pertinent') else 1
-        
-        new_fiche = {
-            'id': fiche_id,
-            'titre': titre,
-            'date_depot': entry['date'],
-            'stade': stade,
-            'stade_index': STADES_ORDRE.index(stade) if stade in STADES_ORDRE else 0,
-            'url_an': entry['url'],
-            'url_dossier': entry.get('url_dossier', ''),
-            'source_rss': entry['source'],
-            'resume_abc': analysis.get('resume', ''),
-            'pourquoi': analysis.get('pourquoi', ''),
-            'score': fiche_score,
-            'horizon': analysis.get('horizon', ''),
-            'nouveau_stade': False,
-            'manuel': False,
-            'historique': [{'date': today_str, 'stade': stade, 'event': 'Découverte'}],
-            'created_at': today_str,
-            'updated_at': today_str,
-        }
-        fiches[fiche_id] = new_fiche
-        nouveaux += 1
-        pertinent_label = 'pertinent' if analysis.get('pertinent') else 'non-pertinent (à consulter)'
-        log.info(f"Parlement PJL {pertinent_label} (score={fiche_score}) : {titre[:60]}")
-        # Sync Supabase
-        if sync.ready:
-            sync.upsert_dossier(new_fiche)
-            sync.record_creation(new_fiche)
+        # ✅ Analysis is cached, but NO automatic fiche creation
+        # Only manually-added dossiers by user are tracked in Supabase
 
     # Step 3: manually added dossiers update stage (manuel=True)
     for fiche_id, fiche in fiches.items():
