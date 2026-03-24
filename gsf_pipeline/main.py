@@ -7,7 +7,7 @@ from .output import write_output
 from .sources.jorf import fetch_jorf
 from .sources.parlement import fetch_parlement
 from .sources.rss import fetch_rss
-from .sources.vigieau import fetch_vigieau, fetch_vigieau_history
+from .sources.vigieau import fetch_vigieau
 from .config import GROQ_MODEL
 from .llm import get_llm_stats
 
@@ -92,15 +92,7 @@ def main() -> int:
         stats['depts_restriction'] = 0
         source_counts['VigiEau'] = 0
 
-    # 4. VigiEau historique
-    try:
-        fetch_vigieau_history(script_dir)
-    except Exception as e:
-        log.error(f"VigiEau history fatal : {e}")
-        errors.append('VigiEau_history')
-        meta_errors.append(f"VigiEau_history fatal : {e}")
-
-    # 5. Parlement
+    # 4. Parlement
     pjl_fiches = []
     pjl_autres = []
     pjl_briefing = ''

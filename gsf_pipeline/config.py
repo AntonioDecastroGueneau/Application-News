@@ -300,17 +300,6 @@ NIVEAUX_ORDRE = {
     'crise': 4,
 }
 
-DATAGOUV_DATASET_ID = 'donnee-secheresse-vigieau'
-DATAGOUV_API = 'https://www.data.gouv.fr/api/1/datasets/'
-
-NIVEAUX_GRAVITE = ['vigilance', 'alerte', 'alerte renforcée', 'crise']
-
-VIGIEAU_HISTORY_YEARS = None  # computed in vigieau module using current year
-
-VIGIEAU_FALLBACK_URLS = {
-    2026: 'https://www.data.gouv.fr/api/1/datasets/r/0732e970-c12c-4e6a-adca-5ac9dbc3fdfa',
-}
-
 DEPT_NOMS = {
     '01': 'Ain', '02': 'Aisne', '03': 'Allier', '04': 'Alpes-de-Haute-Provence', '05': 'Hautes-Alpes',
     '06': 'Alpes-Maritimes', '07': 'Ardèche', '08': 'Ardennes', '09': 'Ariège', '10': 'Aube',
