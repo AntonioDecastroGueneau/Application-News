@@ -394,7 +394,6 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
 
     log.info("=== Parlement ===")
     fiches = _load_fiches(PARLEMENT_FICHES)
-    nouveaux = 0
     maj = 0
     groq_used = 0
     groq_skipped = 0
@@ -651,9 +650,9 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         log.warning(f"Parlement : impossible de sauvegarder pjl_cache.json : {e}")
 
     log.info(
-        f"Parlement : {nouveaux} nouveaux, {maj} avancements, "
+        f"Parlement : {maj} avancements, "
         f"{groq_used} appels Groq, {groq_skipped} PJL différés (quota), "
-        f"{cache_hits} du cache (pas de LLM), {cache_skipped} consultés"
+        f"{cache_hits} hits cache, {cache_skipped} ignorés (quota+cache)"
     )
 
     # Re-analyse all fiches loaded from Supabase that have no resume_abc
@@ -681,6 +680,9 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
             if sync.ready:
                 sync.upsert_dossier(fiche)
             log.info(f"Parlement re-analyse (orphan) : {titre[:50]}")
+
+    if orphan_groq > 0:
+        _save_fiches(PARLEMENT_FICHES, fiches)
 
     # pjl_autres grouped by source
     groups: Dict[str, list] = {}

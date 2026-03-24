@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '0 7  * * *'   # 09:00 Paris (UTC+2)
     - cron: '0 13 * * *'   # 14:00 Paris
-   
+
   workflow_dispatch:         # déclenchement manuel depuis l'onglet Actions
 
 permissions:
@@ -34,7 +34,21 @@ jobs:
           pip install --upgrade pip
           pip install --no-cache-dir -r requirements.txt
 
-      # ── 4. Exécution du pipeline ─────────────────────────────────
+      # ── 4. Restauration du cache PJL depuis gh-pages ─────────────
+      #    pjl_cache.json persiste entre les runs via gh-pages.
+      #    Doit être fait AVANT le pipeline pour que le cache soit lisible.
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages-branch
+
+      - name: Restore pjl_cache from gh-pages
+        run: |
+          mkdir -p data
+          cp gh-pages-branch/data/pjl_cache.json data/pjl_cache.json 2>/dev/null || true
+
+      # ── 5. Exécution du pipeline ─────────────────────────────────
       - name: Run pipeline
         env:
           GROQ_API_KEY:      ${{ secrets.GROQ_API_KEY }}
@@ -43,26 +57,18 @@ jobs:
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: python -m abc_pipeline.main
 
-      # ── 5. Récupération de la branche gh-pages ───────────────────
-      - name: Checkout gh-pages
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages-branch
-
       # ── 6. Copie des fichiers générés vers gh-pages ──────────────
       - name: Copy generated files to gh-pages
         run: |
           # Créer le dossier data s'il n'existe pas
           mkdir -p gh-pages-branch/data
 
-          # Copier le JSON du jour
+          # Copier le JSON du jour + le cache PJL
           cp data/*.json gh-pages-branch/data/ 2>/dev/null || true
 
           # Copier archive.json à la racine de gh-pages
           cp archive.json gh-pages-branch/archive.json
 
-          # Copier index.html si modifié (déploiement initial ou mise à jour)
           # Copier l'historique VigiEau (cache annuel)
           cp vigieau_history.json gh-pages-branch/vigieau_history.json 2>/dev/null || true
 

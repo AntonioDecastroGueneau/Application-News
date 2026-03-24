@@ -369,7 +369,6 @@ STADES_ORDRE = [
 ]
 
 AN_BASE = 'https://www2.assemblee-nationale.fr'
-AN_DOSSIERS_BASE = 'https://www.assemblee-nationale.fr/dyn/17/dossiers'
 
 AN_SCRAPER_SOURCES = [
     {
