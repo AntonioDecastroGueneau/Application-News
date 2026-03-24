@@ -1,7 +1,7 @@
 {
   "date": "2026-03-24",
-  "generated_at": "14:23",
-  "elapsed_seconds": 194,
+  "generated_at": "14:40",
+  "elapsed_seconds": 182,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
@@ -9,18 +9,18 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-03-24T14:23:40",
+    "run_at": "2026-03-24T14:40:22",
     "sources": {
       "JORF": 0,
-      "RSS": 10,
+      "RSS": 9,
       "VigiEau": 3,
       "Parlement": 11
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 58,
-    "llm_seconds": 59.9
+    "llm_calls": 55,
+    "llm_seconds": 51.5
   },
   "items": [
     {
@@ -60,22 +60,23 @@
       "image_url": "https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300"
     },
     {
-      "id": "388f8f0bf9e5",
-      "source": "EFRAG",
-      "categorie": "Déchets",
-      "titre": "EFRAG SRB Online Meeting 25 March 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting ESG (CSRD/ESRS), pertinente pour GSF dans le cadre de ses obligations de reporting extra-financier (CSRD) et de conformité aux exigences clients.",
-      "pourquoi": "L'EFRAG est l'organisme européen clé pour l'élaboration des normes ESRS (European Sustainability Reporting Standards) applicables dans le cadre de la CSRD. GSF, en tant qu'entreprise soumise à la CSRD (selon sa taille et son secteur), doit suivre ces évolutions pour adapter ses processus de reporting ESG et répondre aux attentes de ses clients (notamment dans les secteurs nucléaire, santé et industrie).",
-      "criticite": 2,
-      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
-      "date": "2026-03-24"
+      "id": "e74343e334fb",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’Espagne confirme sa confiance dans les renouvelables",
+      "resume": "L'article souligne l'accélération des investissements espagnols dans les énergies renouvelables, ce qui pourrait influencer les politiques énergétiques européennes et indirectement les exigences carbone des clients de GSF (notamment industriels ou nucléaires).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/lespagne-confirme-sa-confiance-dans-les-renouvelables-419032/",
+      "date": "2026-03-24",
+      "image_url": ""
     },
     {
       "id": "3f5e3f0fade3",
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Les incertitudes s’accumulent sur le financement du réseau électrique",
-      "resume": "L'article met en lumière les investissements massifs nécessaires pour moderniser et renforcer le réseau électrique français, ce qui pourrait impacter les coûts énergétiques et les stratégies de décarbonation des entreprises comme GSF, notamment via l'électrification des flottes et des sites clients.",
+      "resume": "L'article souligne l'ampleur des investissements nécessaires dans les réseaux électriques français, ce qui pourrait impacter la disponibilité et le coût de l'électricité pour les activités de GSF, notamment en termes de décarbonation de sa flotte et d'efficacité énergétique des sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/les-incertitudes-saccumulent-sur-le-financement-du-reseau-electrique-418902/",
@@ -87,7 +88,7 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "Zevero Raises $7 Million to Scale Carbon Accounting and Management Platform Across New Markets",
-      "resume": "Zevero propose une solution de comptabilité carbone pour mesurer, suivre et réduire les émissions, utile pour GSF dans le cadre de ses obligations CSRD/ESRS et de son reporting extra-financier.",
+      "resume": "Zevero développe une plateforme de comptabilité carbone pour aider les entreprises à mesurer, suivre et réduire leurs émissions, ce qui pourrait être un outil complémentaire pour GSF dans le cadre de son reporting CSRD/ESRS ou de la gestion de son bilan GES.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets/?utm_source=rss&utm_medium=rss&utm_campaign=zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets",
@@ -99,7 +100,7 @@
       "source": "ESG Today",
       "categorie": "Biodiversité",
       "titre": "Procurement is Where Nature Strategy Becomes Real",
-      "resume": "L'article souligne l'importance de l'intégration des enjeux de biodiversité dans les stratégies d'achat des entreprises, ce qui pourrait influencer les exigences des clients de GSF en matière de reporting ESG et de durabilité des prestations.",
+      "resume": "L'article souligne l'importance de l'intégration des enjeux de biodiversité dans les stratégies d'achat des entreprises, ce qui peut impacter indirectement GSF via les exigences de ses clients (nucléaire, santé, industrie) en matière de reporting ESG et de durabilité.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/procurement-is-where-nature-strategy-becomes-real/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-is-where-nature-strategy-becomes-real",
@@ -107,39 +108,26 @@
       "image_url": "https://www.esgtoday.com/wp-content/uploads/2026/03/Natcap-Leape.jpg"
     },
     {
+      "id": "388f8f0bf9e5",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG SRB Online Meeting 25 March 2026",
+      "resume": "L'article concerne une réunion de l'EFRAG sur les normes de reporting de durabilité (ESRS), pertinente pour la préparation de GSF à la CSRD et aux exigences de reporting extra-financier.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
+      "date": "2026-03-24"
+    },
+    {
       "id": "0098d72265b8",
       "source": "EFRAG",
       "categorie": "Énergie",
       "titre": "EFRAG Welcomes a New Friend of EFRAG - Sustainability Reporting: Synesgy",
-      "resume": "Synesgy rejoint EFRAG comme partenaire pour le reporting de durabilité, renforçant l'alignement avec les ESRS (normes CSRD) que GSF devra appliquer dans son reporting extra-financier.",
+      "resume": "L'article annonce l'adhésion de Synesgy (plateforme de notation ESG) comme 'Friend of EFRAG', renforçant son engagement dans les normes ESRS de la CSRD. Cela peut impacter les outils de reporting extra-financier de GSF en facilitant l'accès à des données ESG standardisées pour ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-welcomes-a-new-friend-of-efrag-sustainability-reporting-synesgy",
       "date": "2026-03-24"
-    },
-    {
-      "id": "a1e9afcd06e6",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "HotRiver ou comment puiser la chaleur renouvelable dans les fleuves",
-      "resume": "L'article présente une solution innovante de récupération de chaleur renouvelable dans les fleuves, potentiellement applicable pour réduire l'empreinte carbone des sites clients de GSF (bureaux, hôpitaux, etc.) en substituant des systèmes de chauffage fossiles.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/03/hotriver-ou-comment-puiser-la-chaleur-renouvelable-dans-les-fleuves-418260/",
-      "date": "2026-03-23",
-      "image_url": ""
-    },
-    {
-      "id": "837d3f9e31ad",
-      "source": "Le Monde Planète",
-      "categorie": "Déchets",
-      "titre": "Flambée des carburants : le gouvernement fait pression sur les raffineurs et annonce des mesures de soutien indirectes pour la pêche, l’agriculture et les transports",
-      "resume": "L'article aborde indirectement la hausse des coûts énergétiques (carburants) qui impacte les coûts opérationnels de GSF, notamment sa flotte de véhicules (scope 1). Les mesures de soutien aux secteurs dépendants des carburants pourraient influencer les politiques clients en matière de décarbonation et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/economie/article/2026/03/23/flambee-des-carburants-le-gouvernement-met-la-pression-sur-les-raffineurs-et-annonce-des-mesures-de-soutien-indirectes-pour-la-peche-et-les-transports_6673986_3234.html",
-      "date": "2026-03-23",
-      "image_url": ""
     }
   ],
   "restrictions_eau": [
