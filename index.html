@@ -707,7 +707,7 @@ function renderAll(){
 function renderFeed(){
   const items=getFilteredItems(),prio=items.filter(i=>i.criticite>=2),veille=items.filter(i=>i.criticite<2);
   const twEl=document.getElementById('feed-typewriter');
-  if(twEl){const h=new Date().getHours();const next=h<9?'9h':h<14?'14h':'demain à 9h';const nb=items.length;typewriter(twEl,[`Nous sommes le ${new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'})}`,`${nb} signal${nb>1?'s':''} analysé${nb>1?'s':''}`,`Prochaine vérification à ${next}`]);}
+  if(twEl){const h=new Date().getHours();const next=h<9?'9h':h<14?'14h':'demain à 9h';const nb=D.pipeline_meta?.llm_calls||items.length;typewriter(twEl,[`Nous sommes le ${new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'})}`,`${nb} article${nb>1?'s':''} analysé${nb>1?'s':''}`,`Prochaine vérification à ${next}`]);}
   const list=document.getElementById('feed-list');
   if(!items.length){list.innerHTML=`<div class="empty-state">Aucun résultat</div>`;return;}
   function cardHtml(item){
