@@ -354,6 +354,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
       (fiches_list, pjl_autres, pjl_briefing)
     """
     PARLEMENT_FICHES = script_dir / 'parlement_fiches.json'
+    PJL_REJECTED = script_dir / 'data' / 'pjl_rejected.json'
 
     log.info("=== Parlement ===")
     fiches = _load_fiches(PARLEMENT_FICHES)
@@ -361,6 +362,15 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
     maj = 0
     groq_used = 0
     groq_skipped = 0
+
+    # Load rejected-PJL cache (URLs deemed non-pertinent, expire after 90 days)
+    try:
+        rejected_cache: dict = json.loads(PJL_REJECTED.read_text(encoding='utf-8')) if PJL_REJECTED.exists() else {}
+    except Exception:
+        rejected_cache = {}
+    cutoff_rejected = (datetime.now() - timedelta(days=90)).isoformat()
+    rejected_cache = {u: d for u, d in rejected_cache.items() if d >= cutoff_rejected}
+    rejected_skipped = 0
 
     # ── Sync bidirectionnel Supabase ──────────────────────────────────
     sync = SupabaseSync()
@@ -512,7 +522,13 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         if not _is_pjl_gouvernemental(titre):
             continue
 
-        # Filter 3: Groq quota for new PJLs
+        # Filter 3: rejected cache
+        url_entry = entry.get('url', '')
+        if url_entry in rejected_cache:
+            rejected_skipped += 1
+            continue
+
+        # Filter 4: Groq quota for new PJLs
         if groq_used >= PARLEMENT_MAX_GROQ:
             groq_skipped += 1
             continue
@@ -527,6 +543,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         groq_used += 1
 
         if not analysis.get('pertinent'):
+            rejected_cache[url_entry] = datetime.now().isoformat()
             continue
 
         new_fiche = {
@@ -596,9 +613,18 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
             fiche['nouveau_stade'] = False
 
     _save_fiches(PARLEMENT_FICHES, fiches)
+
+    # Persist rejected cache
+    try:
+        PJL_REJECTED.parent.mkdir(exist_ok=True)
+        PJL_REJECTED.write_text(json.dumps(rejected_cache, ensure_ascii=False, indent=2), encoding='utf-8')
+    except Exception as e:
+        log.warning(f"Parlement : impossible de sauvegarder pjl_rejected.json : {e}")
+
     log.info(
         f"Parlement : {nouveaux} nouveaux, {maj} avancements, "
-        f"{groq_used} appels Groq, {groq_skipped} PJL différés (quota)"
+        f"{groq_used} appels Groq, {groq_skipped} PJL différés (quota), "
+        f"{rejected_skipped} skippés (cache rejet)"
     )
 
     # Re-analyse all fiches loaded from Supabase that have no resume_gsf
