@@ -76,7 +76,7 @@ GSF_CONTEXT_SHORT = (
 REGLEMENTS_PRIORITAIRES = [
     'CSRD', 'CSDDD', 'CS3D', 'SPASER', 'EUDR', 'CBAM', 'MACF',
     'ISSB', 'BGES', 'BEGES', 'DPEF', 'ZFE',
-    'ISO 14001', 'PPR', 'PNACC', 'SNBC',
+    'ISO 14001', 'PNACC', 'SNBC',
     'Loi Énergie-Climat', 'Loi Energie-Climat',
     'Décret Tertiaire', 'Decret Tertiaire',
     'Loi DDADUE', 'Omnibus', 'ESRS', 'SFDR', 'NFRD',
