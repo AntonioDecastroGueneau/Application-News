@@ -6,15 +6,31 @@ from .config import TIMEOUT
 
 log = logging.getLogger(__name__)
 
+_image_cache: dict = {}
+
+
+def get_crawled_image(url: str) -> str:
+    """Return the og:image URL cached during the last crawl_article() call for this URL."""
+    return _image_cache.get(url, '')
+
 
 def crawl_article(url: str) -> str:
-    """Fetch textual content of an URL via BeautifulSoup."""
+    """Fetch textual content of an URL via BeautifulSoup.
+    Also caches the og:image/twitter:image found, retrievable via get_crawled_image().
+    """
     try:
         from bs4 import BeautifulSoup
 
         resp = requests.get(url, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'html.parser')
+
+        og = (
+            soup.find('meta', property='og:image')
+            or soup.find('meta', attrs={'name': 'twitter:image'})
+        )
+        if og and og.get('content', '').strip().startswith('http'):
+            _image_cache[url] = og['content'].strip()
 
         for tag in soup(['script', 'style', 'nav', 'header', 'footer', 'aside']):
             tag.decompose()

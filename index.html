@@ -187,6 +187,11 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 /* ── Feed cards ──────────────────────────────────────────────────────── */
 .card { background: var(--surface-lowest); border-radius: 12px; box-shadow: 0 2px 12px rgba(21,27,44,0.05); padding: 13px 14px; display: grid; grid-template-columns: auto 1fr auto; gap: 0 12px; cursor: pointer; transition: box-shadow .15s, background .1s; border: 1px solid rgba(193,200,194,0.25); }
 .card:hover { box-shadow: 0 4px 18px rgba(21,27,44,0.09); border-color: rgba(193,200,194,0.5); }
+.card.has-img { display: flex; flex-direction: column; padding: 0; }
+.card-img { width: 100%; height: 160px; overflow: hidden; border-radius: 12px 12px 0 0; flex-shrink: 0; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+.card:hover .card-img img { transform: scale(1.04); }
+.card-content { padding: 13px 14px; display: grid; grid-template-columns: auto 1fr auto; gap: 0 12px; flex: 1; }
 /* Compact cards — right column */
 .card-compact { background: var(--surface-lowest); border-radius: 8px; border: 1px solid rgba(193,200,194,0.35); padding: 11px 12px; cursor: pointer; transition: background .15s, border-color .15s; display: flex; flex-direction: column; gap: 6px; }
 .card-compact:hover { background: var(--surface2); border-color: rgba(193,200,194,0.6); }
@@ -708,17 +713,21 @@ function renderFeed(){
     const cl=['','Veille','À surveiller','⚠ Impact direct'][item.criticite]||'Veille';
     const bc='badge-'+(item.categorie||'Environnement');
     const isLiked=likes.some(l=>l.id===item.id);
-    return `<div class="card ${cc}" id="item-${item.id}" data-crit="${item.criticite}">
-      <span class="card-badge ${bc}">${escHtml(item.categorie)}</span>
-      <div class="card-body">
-        <div class="card-titre">${escHtml(item.titre)}</div>
-        <div class="card-resume">${escHtml(item.resume)}</div>
-        <div class="card-meta"><span>${escHtml(item.source)}</span>${item.date?`<span class="card-date">${formatDate(item.date)}</span>`:''}</div>
-      </div>
-      <div class="card-right">
-        <button class="like-btn${isLiked?' liked':''}" data-like-id="${item.id}" onclick="event.stopPropagation();toggleLike('${item.id}')" title="${isLiked?'Retirer des favoris':'Sauvegarder'}">${isLiked?'★':'☆'}</button>
-        <span class="crit-badge crit${item.criticite}">${cl}</span>
-        ${item.url?`<a class="card-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Lire →</a>`:''}
+    const imgHtml=item.image_url?`<div class="card-img"><img src="${escHtml(item.image_url)}" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>`:'';
+    return `<div class="card ${cc}${item.image_url?' has-img':''}" id="item-${item.id}" data-crit="${item.criticite}">
+      ${imgHtml}
+      <div class="card-content">
+        <span class="card-badge ${bc}">${escHtml(item.categorie)}</span>
+        <div class="card-body">
+          <div class="card-titre">${escHtml(item.titre)}</div>
+          <div class="card-resume">${escHtml(item.resume)}</div>
+          <div class="card-meta"><span>${escHtml(item.source)}</span>${item.date?`<span class="card-date">${formatDate(item.date)}</span>`:''}</div>
+        </div>
+        <div class="card-right">
+          <button class="like-btn${isLiked?' liked':''}" data-like-id="${item.id}" onclick="event.stopPropagation();toggleLike('${item.id}')" title="${isLiked?'Retirer des favoris':'Sauvegarder'}">${isLiked?'★':'☆'}</button>
+          <span class="crit-badge crit${item.criticite}">${cl}</span>
+          ${item.url?`<a class="card-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Lire →</a>`:''}
+        </div>
       </div></div>`;}
   function cardHtmlCompact(item){
     const bc='badge-'+(item.categorie||'Environnement');

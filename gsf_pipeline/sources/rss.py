@@ -9,7 +9,7 @@ import feedparser
 import requests
 
 from ..config import RSS_SOURCES, TIMEOUT
-from ..crawl import crawl_article, crawl_article_links, crawl_article_links_filtered
+from ..crawl import crawl_article, crawl_article_links, crawl_article_links_filtered, get_crawled_image
 from ..filters import categorise, keyword_match, make_id
 from ..llm import groq_analyse_rss
 
@@ -146,6 +146,7 @@ def fetch_rss_source(source: dict, today_str: str):
 
             if len(contenu) < 100 and url:
                 contenu = crawl_article(url) or contenu
+            image_url = get_crawled_image(url) if url else ''
 
             if source.get('require_keywords'):
                 txt = (titre + ' ' + contenu).lower()
@@ -175,6 +176,7 @@ def fetch_rss_source(source: dict, today_str: str):
                 'criticite': score,
                 'url': url,
                 'date': article_date,
+                'image_url': image_url,
             })
 
     except Exception as e:
