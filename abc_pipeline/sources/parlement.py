@@ -396,7 +396,8 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
     fiches = _load_fiches(PARLEMENT_FICHES)
     maj = 0
     groq_used = 0
-    groq_skipped = 0
+    non_env_rejected = 0
+    quota_skipped = 0
     cache_hits = 0
 
     # Load PJL analysis cache (all analyses with full data, expire after 90 days)
@@ -542,12 +543,12 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         else:
             # Filter 4: Pre-filter non-environmental PJLs
             if _is_pjl_non_environmental(titre):
-                groq_skipped += 1
+                non_env_rejected += 1
                 continue
 
             # Filter 5: Groq quota for new PJLs
             if groq_used >= PARLEMENT_MAX_GROQ:
-                groq_skipped += 1
+                quota_skipped += 1
                 continue
 
             # Crawl real content before LLM analysis
@@ -623,8 +624,8 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
 
     log.info(
         f"Parlement : {maj} avancements, "
-        f"{groq_used} appels Groq, {groq_skipped} PJL différés (quota), "
-        f"{cache_hits} hits cache, {cache_skipped} ignorés (quota+cache)"
+        f"{groq_used} appels Groq, {non_env_rejected} rejetés (hors-env), "
+        f"{quota_skipped} différés (quota), {cache_hits} hits cache"
     )
 
     # Re-analyse all fiches loaded from Supabase that have no resume_abc
