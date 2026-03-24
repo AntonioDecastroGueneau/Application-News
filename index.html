@@ -926,7 +926,7 @@ function renderParlement(){
     </div>
     <div class="feed-consulter-items" style="border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px">`;
     autres.forEach(group=>{
-      const items=group.items||[];
+      const items=[...group.items||[]].sort((a,b)=>(b.date||'').localeCompare(a.date||''));
       html+=`<div class="jo-theme-group">
         <div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')">
           <span class="jo-theme-name">${escHtml(group.source)}</span>
