@@ -389,7 +389,7 @@ def groq_analyse_pjl(titre: str, description: str) -> dict:
         "- Politique climatique structurante : SNBC, PNACC, loi énergie-climat\n\n"
         "NON PERTINENT (exclure) : ICPE, SEVESO, biocides, REACH (ABC non exploitant), "
         "agriculture, défense, santé humaine, textes sans rapport avec le climat/énergie/déchets/RSE.\n"
-        "EN CAS DE DOUTE sur la pertinence : pertinent=true avec score=1. "
+        "EN CAS DE DOUTE sur la pertinence : pertinent=FALSE. Seuls les textes clairement applicables à ABC (mentionnés explicitement) sont pertinent=TRUE.\n"
         "Ne pas inférer d'obligations ABC non mentionnées dans le texte.\n\n"
         "Score d'urgence pour ABC :\n"
         "  1 = à connaître, horizon > 18 mois\n"

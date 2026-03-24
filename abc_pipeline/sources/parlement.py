@@ -354,7 +354,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
       (fiches_list, pjl_autres, pjl_briefing)
     """
     PARLEMENT_FICHES = script_dir / 'parlement_fiches.json'
-    PJL_REJECTED = script_dir / 'data' / 'pjl_rejected.json'
+    PJL_CACHE = script_dir / 'data' / 'pjl_cache.json'  # Complete analysis cache, not just rejections
 
     log.info("=== Parlement ===")
     fiches = _load_fiches(PARLEMENT_FICHES)
@@ -362,15 +362,16 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
     maj = 0
     groq_used = 0
     groq_skipped = 0
+    cache_hits = 0
 
-    # Load rejected-PJL cache (URLs deemed non-pertinent, expire after 90 days)
+    # Load PJL analysis cache (all analyses with full data, expire after 90 days)
     try:
-        rejected_cache: dict = json.loads(PJL_REJECTED.read_text(encoding='utf-8')) if PJL_REJECTED.exists() else {}
+        pjl_cache: dict = json.loads(PJL_CACHE.read_text(encoding='utf-8')) if PJL_CACHE.exists() else {}
     except Exception:
-        rejected_cache = {}
-    cutoff_rejected = (datetime.now() - timedelta(days=90)).isoformat()
-    rejected_cache = {u: d for u, d in rejected_cache.items() if d >= cutoff_rejected}
-    rejected_skipped = 0
+        pjl_cache = {}
+    cutoff_cache = (datetime.now() - timedelta(days=90)).isoformat()
+    pjl_cache = {u: d for u, d in pjl_cache.items() if d.get('analyse_date', '') >= cutoff_cache}
+    cache_skipped = 0
 
     # ── Sync bidirectionnel Supabase ──────────────────────────────────
     sync = SupabaseSync()
@@ -522,30 +523,46 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         if not _is_pjl_gouvernemental(titre):
             continue
 
-        # Filter 3: rejected cache
+        # Filter 3: check cache
         url_entry = entry.get('url', '')
-        if url_entry in rejected_cache:
-            rejected_skipped += 1
-            continue
+        if url_entry in pjl_cache:
+            # Use cached analysis instead of calling LLM again
+            analysis = pjl_cache[url_entry].copy()
+            analysis.pop('analyse_date', None)  # Remove cache date from analysis
+            cache_hits += 1
+            cache_skipped += 1
+        else:
+            # Filter 4: Groq quota for new PJLs
+            if groq_used >= PARLEMENT_MAX_GROQ:
+                groq_skipped += 1
+                continue
 
-        # Filter 4: Groq quota for new PJLs
-        if groq_used >= PARLEMENT_MAX_GROQ:
-            groq_skipped += 1
-            continue
+            # Crawl real content before LLM analysis
+            url_dossier = entry.get('url_dossier', '')
+            url_doc = entry.get('url_doc', '')
+            content = _crawl_pjl_content(url_dossier, url_doc) if (url_dossier or url_doc) else ''
+            description = content or titre
 
-        # Crawl real content before LLM analysis
-        url_dossier = entry.get('url_dossier', '')
-        url_doc = entry.get('url_doc', '')
-        content = _crawl_pjl_content(url_dossier, url_doc) if (url_dossier or url_doc) else ''
-        description = content or titre
+            analysis = groq_analyse_pjl(titre, description)
+            groq_used += 1
+            
+            # Save to cache (both pertinent and non-pertinent)
+            pjl_cache[url_entry] = {
+                'titre': titre,
+                'analyse_date': today_str,
+                'pertinent': analysis.get('pertinent', False),
+                'score': int(analysis.get('score', 1)),
+                'resume': analysis.get('resume', ''),
+                'pourquoi': analysis.get('pourquoi', ''),
+                'horizon': analysis.get('horizon', ''),
+            }
 
-        analysis = groq_analyse_pjl(titre, description)
-        groq_used += 1
+        # Create fiche for ALL analyzed PJLs (pertinent AND non-pertinent)
+        # Non-pertinent ones go to "À consulter" with score=1
 
-        if not analysis.get('pertinent'):
-            rejected_cache[url_entry] = datetime.now().isoformat()
-            continue
-
+        # Use the LLM score, or 1 if not pertinent
+        fiche_score = int(analysis.get('score', 1)) if analysis.get('pertinent') else 1
+        
         new_fiche = {
             'id': fiche_id,
             'titre': titre,
@@ -557,7 +574,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
             'source_rss': entry['source'],
             'resume_abc': analysis.get('resume', ''),
             'pourquoi': analysis.get('pourquoi', ''),
-            'score': int(analysis.get('score', 1)),
+            'score': fiche_score,
             'horizon': analysis.get('horizon', ''),
             'nouveau_stade': False,
             'manuel': False,
@@ -567,7 +584,8 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         }
         fiches[fiche_id] = new_fiche
         nouveaux += 1
-        log.info(f"Parlement PJL retenu (score={analysis['score']}) : {titre[:60]}")
+        pertinent_label = 'pertinent' if analysis.get('pertinent') else 'non-pertinent (à consulter)'
+        log.info(f"Parlement PJL {pertinent_label} (score={fiche_score}) : {titre[:60]}")
         # Sync Supabase
         if sync.ready:
             sync.upsert_dossier(new_fiche)
@@ -614,17 +632,17 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
 
     _save_fiches(PARLEMENT_FICHES, fiches)
 
-    # Persist rejected cache
+    # Persist complete analysis cache
     try:
-        PJL_REJECTED.parent.mkdir(exist_ok=True)
-        PJL_REJECTED.write_text(json.dumps(rejected_cache, ensure_ascii=False, indent=2), encoding='utf-8')
+        PJL_CACHE.parent.mkdir(exist_ok=True)
+        PJL_CACHE.write_text(json.dumps(pjl_cache, ensure_ascii=False, indent=2), encoding='utf-8')
     except Exception as e:
-        log.warning(f"Parlement : impossible de sauvegarder pjl_rejected.json : {e}")
+        log.warning(f"Parlement : impossible de sauvegarder pjl_cache.json : {e}")
 
     log.info(
         f"Parlement : {nouveaux} nouveaux, {maj} avancements, "
         f"{groq_used} appels Groq, {groq_skipped} PJL différés (quota), "
-        f"{rejected_skipped} skippés (cache rejet)"
+        f"{cache_hits} du cache (pas de LLM), {cache_skipped} consultés"
     )
 
     # Re-analyse all fiches loaded from Supabase that have no resume_abc
