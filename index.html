@@ -230,12 +230,15 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .feed-consulter-items .card:hover { background: var(--surface3); }
 .empty-state { padding: 48px 20px; text-align: center; font-size: 13px; color: var(--muted); }
 .feed-empty-prio { display: flex; align-items: center; justify-content: center; flex: 1; min-height: 0; background: var(--surface2); border-radius: 12px; }
-/* Sources links — static grid with hover effects */
-.src-filter-outer { padding: 12px 0 6px; }
-.src-filter-label { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); padding: 0 2px 6px; }
-.src-filter-grid { display: flex; flex-wrap: wrap; gap: 6px; }
-.src-link-btn { padding: 5px 12px; border-radius: 6px; font-size: 11px; font-weight: 600; background: var(--surface2); color: var(--text2); border: 1px solid var(--border); text-decoration: none; cursor: pointer; transition: all .2s ease; white-space: nowrap; user-select: none; display: inline-block; }
-.src-link-btn:hover { background: var(--primary-container); color: var(--on-primary-container); border-color: var(--primary-container); transform: translateY(-2px); box-shadow: 0 2px 8px rgba(1,45,29,0.15); }
+/* Sources — label visible, grid dépliée au survol */
+.src-filter-outer { padding: 8px 0 4px; }
+.src-filter-label { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); padding: 0 2px; cursor: default; display: flex; align-items: center; gap: 6px; }
+.src-filter-label::after { content: '›'; font-size: 12px; transition: transform .25s ease; display: inline-block; }
+.src-filter-outer:hover .src-filter-label::after { transform: rotate(90deg); }
+.src-filter-grid { display: flex; flex-wrap: wrap; gap: 6px; max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .25s ease; padding-top: 0; }
+.src-filter-outer:hover .src-filter-grid { max-height: 300px; padding-top: 8px; }
+.src-link-btn { padding: 5px 12px; border-radius: 6px; font-size: 11px; font-weight: 600; background: var(--surface2); color: var(--text2); border: 1px solid var(--border); text-decoration: none; white-space: nowrap; display: inline-block; transition: background .15s, color .15s, transform .15s, box-shadow .15s; }
+.src-link-btn:hover { background: var(--primary-container); color: var(--on-primary-container); border-color: var(--primary-container); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(1,45,29,0.15); }
 .feed-empty-prio-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; max-width: 200px; text-align: center; }
 .feed-empty-prio-icon { position: relative; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; }
 .feed-empty-prio-ring { position: absolute; inset: 0; border-radius: 50%; background: var(--primary-container); animation: empty-pulse 3s ease-in-out infinite; }
@@ -732,34 +735,37 @@ function renderFeed(){
           ${item.url?`<a class="card-compact-link" href="${escHtml(item.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Lire<span class="material-symbols-outlined">open_in_new</span></a>`:''}
         </div>
       </div></div>`;}
-  // Build stacked sources card
-  // Collect all consulted sources (not just those with items)
-  const allSrcNames = new Set();
-  (D.items||[]).forEach(i=>{if(i.source)allSrcNames.add(i.source);});
-  if((D.stats?.jo_retenus||0)>0)allSrcNames.add('JORF');
-  if((D.stats?.jo_analyses||0)>0)allSrcNames.add('JORF');
-  (D.pipeline_meta?.sources?Object.keys(D.pipeline_meta.sources):[]).forEach(s=>allSrcNames.add(s));
-  const srcNames=[...allSrcNames].filter(s=>s&&s!=='VigiEau').sort();
+  // Build sources grid — always show all configured sources, not just today's
   const SOURCE_URLS={
-    'Actu-Environnement':'https://www.actu-environnement.com/flux/rss/environnement/',
-    'Reporterre':'https://reporterre.net/spip.php?page=backend',
-    'Novethic':'https://www.novethic.fr/feed',
+    'Actu-Environnement':        'https://www.actu-environnement.com/flux/rss/environnement/',
+    'Reporterre':                'https://reporterre.net/spip.php?page=backend',
+    'Novethic':                  'https://www.novethic.fr/',
+    'GreenUnivers':              'https://www.greenunivers.com/feed/',
+    'Le Monde Planète':          'https://www.lemonde.fr/planete/rss_full.xml',
+    'Les Echos Environnement':   'https://www.lesechos.fr/industrie-services/energie-environnement/',
+    'The Guardian Environment':  'https://www.theguardian.com/environment/rss',
+    'ESG Today':                 'https://www.esgtoday.com/feed/',
     'Min. Transition Écologique':'https://www.ecologie.gouv.fr/rss-actualites.xml',
-    'ADEME':'https://www.ademe.fr/feed/',
+    'ADEME':                     'https://www.ademe.fr/feed/',
+    'EFRAG':                     'https://www.efrag.org/en/news-and-calendar/news',
+    'AEF Développement Durable': 'https://www.aefinfo.fr/developpement-durable',
+    'Acteurs Publics':           'https://acteurspublics.fr/actualites/',
+    'Contexte Environnement':    'https://www.contexte.com/environnement/',
+    'Politico Energy EU':        'https://www.politico.eu/section/energy-fr/',
     'Haut Conseil pour le Climat':'https://www.hautconseilclimat.fr/feed/',
-    'Carbone 4':'https://www.carbone4.com/feed/',
-    'Institut Montaigne':'https://www.institutmontaigne.org/feed/',
-    'JORF':'https://www.legifrance.gouv.fr/jorf/rss_jorf.html',
-    'AN':'https://www.assemblee-nationale.fr/',
+    'France Stratégie':          'https://www.strategie.gouv.fr/rss.xml',
+    'The Shift Project':         'https://theshiftproject.org/feed/',
+    'I4CE':                      'https://www.i4ce.org/feed/',
+    'Carbone 4':                 'https://www.carbone4.com/feed',
+    'JORF':                      'https://www.legifrance.gouv.fr/jorf/jo',
   };
-  function buildSourcesLinks(names){
-    const links=names.map(n=>{
-      const url=SOURCE_URLS[n]||'';
-      return url?`<a href="${url}" target="_blank" rel="noopener" class="src-link-btn">${escHtml(n)}</a>`:'';
-    }).filter(x=>x).join('');
+  function buildSourcesLinks(){
+    const links=Object.entries(SOURCE_URLS).map(([n,url])=>
+      `<a href="${url}" target="_blank" rel="noopener" class="src-link-btn">${escHtml(n)}</a>`
+    ).join('');
     return `<div class="src-filter-outer"><div class="src-filter-label">Sources</div><div class="src-filter-grid">${links}</div></div>`;
   }
-  const sourcesLinksHtml=srcNames.length?buildSourcesLinks(srcNames):'';
+  const sourcesLinksHtml=buildSourcesLinks();
 
   list.style.gridTemplateColumns='55fr 45fr';
   let html=`<div class="feed-col-prio">`;
