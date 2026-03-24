@@ -9,7 +9,7 @@ from urllib.parse import urljoin
 import requests
 
 from ..config import JORF_BASE_URL, TIMEOUT
-from ..crawl import crawl_article, get_crawled_image
+from ..crawl import crawl_article
 from ..filters import categorise, keyword_match, make_id
 from ..llm import groq_analyse_jorf, groq_briefing_jorf
 
@@ -192,7 +192,6 @@ def fetch_jorf(today_str: str):
                         'criticite': score,
                         'url': art.get('url', ''),
                         'date': today_str,
-                        'image_url': get_crawled_image(art.get('url', '')),
                     })
                     log.debug(f"JORF retenu (score={score}) : {art['titre'][:60]}")
                 except Exception as e:
