@@ -768,8 +768,6 @@ function renderFeed(){
   html+=sourcesLinksHtml+`</div>`;
   if(veille.length)html+=`<div class="feed-col-consulter"><div class="feed-consulter-hd"><span class="feed-consulter-lbl">À consulter</span><span class="feed-section-badge" style="margin-left:auto">${veille.length}</span></div><div class="feed-consulter-items">${veille.map(cardHtmlCompact).join('')}</div></div>`;
   list.innerHTML=html;
-    });
-  });
 }
 function scrollToItem(id){
   if(currentView!=='feed')switchView('feed');
