@@ -181,15 +181,15 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .badge-filter.on { background: var(--blue-bg); color: var(--blue); font-weight: 600; }
 #feed-list { flex: 1; overflow: hidden; display: grid; grid-template-columns: 55fr 45fr; gap: 20px; padding: 0; }
 .feed-col-prio { display: flex; flex-direction: column; gap: 8px; min-width: 0; overflow-y: auto; padding: 20px 0 32px 20px; align-items: start; }
-.feed-col-consulter { background: var(--surface2); border-radius: 12px 0 0 12px; display: flex; flex-direction: column; gap: 0; min-width: 0; overflow-y: auto; padding: 14px 20px 32px 14px; margin: 10px 0; }
+.feed-col-consulter { background: var(--surface2); border-left: 1px solid var(--border); display: flex; flex-direction: column; min-width: 0; overflow-y: auto; padding: 16px 20px 32px 16px; }
 @media (max-width: 768px) { #feed-list { grid-template-columns: 1fr; overflow-y: auto; } .feed-col-prio, .feed-col-consulter { overflow-y: visible; height: auto; } .feed-col-consulter { order: 2; border-radius: 12px; margin: 0; padding: 14px; } }
 
 /* ── Feed cards ──────────────────────────────────────────────────────── */
-.card { background: var(--surface-lowest); border-radius: 12px; box-shadow: 0 2px 12px rgba(21,27,44,0.05); padding: 13px 14px 13px 14px; display: grid; grid-template-columns: auto 1fr auto; gap: 0 12px; cursor: pointer; transition: box-shadow .15s, background .1s; border: none; }
-.card:hover { box-shadow: 0 4px 18px rgba(21,27,44,0.09); }
+.card { background: var(--surface-lowest); border-radius: 12px; box-shadow: 0 2px 12px rgba(21,27,44,0.05); padding: 13px 14px; display: grid; grid-template-columns: auto 1fr auto; gap: 0 12px; cursor: pointer; transition: box-shadow .15s, background .1s; border: 1px solid rgba(193,200,194,0.25); }
+.card:hover { box-shadow: 0 4px 18px rgba(21,27,44,0.09); border-color: rgba(193,200,194,0.5); }
 /* Cards in consulter column: compact rows, no card treatment */
-.feed-col-consulter .card { background: transparent; border-radius: 6px; box-shadow: none; padding: 8px 10px; }
-.feed-col-consulter .card:hover { background: var(--surface3); box-shadow: none; }
+.feed-col-consulter .card { background: var(--surface-lowest); border-radius: 8px; border: 1px solid rgba(193,200,194,0.35); box-shadow: none; padding: 8px 10px; }
+.feed-col-consulter .card:hover { background: var(--surface-lowest); box-shadow: 0 2px 8px rgba(21,27,44,0.06); border-color: rgba(193,200,194,0.6); }
 .card-badge { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 500; white-space: nowrap; align-self: start; margin-top: 2px; }
 .badge-ICPE         { background: #eff6ff; color: #1d4ed8; }
 .badge-Eau          { background: #f0f9ff; color: #0369a1; }
@@ -229,7 +229,7 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .feed-consulter-hd { display: flex; align-items: center; gap: 8px; padding: 4px 4px 10px; cursor: default; }
 .feed-consulter-lbl { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); }
 .feed-chevron { display: none; }
-.feed-consulter-items { display: flex; flex-direction: column; gap: 2px; }
+.feed-consulter-items { display: flex; flex-direction: column; gap: 6px; }
 .feed-consulter-items .card { background: transparent; }
 .feed-consulter-items .card:hover { background: var(--surface3); }
 .empty-state { padding: 48px 20px; text-align: center; font-size: 13px; color: var(--muted); }
