@@ -471,16 +471,14 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
       <div class="sb-brand"><div class="sb-brand-dot"></div>GSF</div>
       <div class="sb-title">Veille Environnementale</div>
       <div class="sb-date" id="hdr-date">—</div>
-      <div id="hdr-status" class="sb-status">CHARGEMENT</div>
-      <div id="hdr-pipeline-badge" style="display:none"></div>
     </div>
     <div class="sb-nav">
       <div class="sb-section-lbl">Navigation</div>
       <div class="nav-item active" data-view="feed" onclick="switchView('feed')"><span class="material-symbols-outlined nav-icon">feed</span>Feed</div>
       <div class="nav-item" data-view="carte" onclick="switchView('carte')"><span class="material-symbols-outlined nav-icon">water_drop</span>Carte Eau</div>
       <div class="nav-item" data-view="jo" onclick="switchView('jo')"><span class="material-symbols-outlined nav-icon">gavel</span>JO / DILA</div>
-      <div class="nav-item" data-view="likes" onclick="switchView('likes')"><span class="material-symbols-outlined nav-icon">bookmark</span>Favoris <span id="nav-likes-badge" style="margin-left:auto;font-size:9px;font-family:var(--mono);background:rgba(245,158,11,.15);color:#f59e0b;padding:1px 6px;border-radius:10px;display:none"></span></div>
-      <div class="nav-item" data-view="parlement" onclick="switchView('parlement')"><span class="material-symbols-outlined nav-icon">folder_open</span>Dossiers <span id="nav-parl-badge" style="margin-left:auto;font-size:9px;font-family:var(--mono);background:rgba(37,99,235,.15);color:var(--blue);padding:1px 6px;border-radius:10px;display:none"></span></div>
+      <div class="nav-item" data-view="likes" onclick="switchView('likes')"><span class="material-symbols-outlined nav-icon">bookmark</span>Favoris <span id="nav-likes-badge" style="margin-left:auto;font-size:9px;font-family:var(--mono);background:rgba(255,255,255,0.2);color:#ffffff;padding:1px 6px;border-radius:10px;display:none"></span></div>
+      <div class="nav-item" data-view="parlement" onclick="switchView('parlement')"><span class="material-symbols-outlined nav-icon">folder_open</span>Dossiers <span id="nav-parl-badge" style="margin-left:auto;font-size:9px;font-family:var(--mono);background:rgba(255,255,255,0.2);color:#ffffff;padding:1px 6px;border-radius:10px;display:none"></span></div>
     </div>
     <div class="sb-stats">
       <div class="sb-stats-grid">
@@ -658,7 +656,6 @@ async function init(){
     loadLikesFromSupa();
   }catch(e){
     document.getElementById('loading').style.display='none';
-    const s=document.getElementById('hdr-status');s.textContent='ERREUR';s.className='sb-status err';
     showToast('Impossible de charger les données');console.error(e);
   }
 }
@@ -667,10 +664,6 @@ function renderAll(){
   if(!D)return;
   const s=D.stats||{};
   document.getElementById('hdr-date').textContent=formatDate(D.date)+' — '+D.generated_at;
-  const se=document.getElementById('hdr-status');
-  se.textContent=D.errors?.length?'PARTIEL':'OK';se.className='sb-status'+(D.errors?.length?' err':'');
-  const badge=document.getElementById('hdr-pipeline-badge');
-  if(badge){const errs=D.pipeline_meta?.errors;if(errs?.length){const tip=errs.join('\n');badge.innerHTML=`<span class="pipeline-error-badge" title="${escHtml(tip)}">⚠ ${errs.length} source(s) en erreur</span>`;badge.style.display='block';}else{badge.style.display='none';}}
   const joRet=s.jo_retenus??0,prio=(D.items||[]).filter(i=>i.criticite>=2).length;
   document.getElementById('stat-jo-retenus').textContent=joRet;
   document.getElementById('stat-jo-retenus').className='stat-val'+(joRet===0?' zero':' accent');
@@ -717,10 +710,9 @@ function renderFeed(){
         <span class="crit-badge crit${item.criticite}">${cl}</span>
         ${item.url?`<a class="card-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Lire →</a>`:''}
       </div></div>`;}
-  list.style.gridTemplateColumns=prio.length?'55fr 45fr':'1fr';
-  let html=`<div class="feed-col-prio">`;
-  if(prio.length)html+=`<div class="feed-section-hd prio"><span class="feed-section-lbl">Signaux prioritaires</span><span class="feed-section-badge">${prio.length}</span></div>`+prio.map(cardHtml).join('');
-  html+=`</div>`;
+  list.style.gridTemplateColumns=prio.length&&veille.length?'55fr 45fr':'1fr';
+  let html='';
+  if(prio.length)html+=`<div class="feed-col-prio"><div class="feed-section-hd prio"><span class="feed-section-lbl">Signaux prioritaires</span><span class="feed-section-badge">${prio.length}</span></div>`+prio.map(cardHtml).join('')+`</div>`;
   if(veille.length)html+=`<div class="feed-col-consulter"><div class="feed-consulter-hd"><span class="feed-consulter-lbl">À consulter</span><span class="feed-section-badge" style="margin-left:auto">${veille.length}</span></div><div class="feed-consulter-items">${veille.map(cardHtml).join('')}</div></div>`;
   list.innerHTML=html;
 }
@@ -920,12 +912,11 @@ function renderParlement(){
   }
 
   if(autres.length){
-    html+=`<div class="feed-consulter-hd" onclick="toggleConsulter(this)" style="border-radius:6px 6px 0 0">
+    html+=`<div class="feed-consulter-hd" style="border-radius:6px 6px 0 0">
       <span class="feed-consulter-lbl">À consulter — activité parlementaire du jour</span>
       <span class="feed-section-badge" style="margin-left:auto">${nbAutres} textes</span>
-      <span class="feed-chevron">▶</span>
     </div>
-    <div class="feed-consulter-items" style="display:none;border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px">`;
+    <div class="feed-consulter-items" style="border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px">`;
     autres.forEach(group=>{
       const items=group.items||[];
       html+=`<div class="jo-theme-group">

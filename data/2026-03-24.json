@@ -1,7 +1,7 @@
 {
   "date": "2026-03-24",
-  "generated_at": "09:33",
-  "elapsed_seconds": 178,
+  "generated_at": "09:49",
+  "elapsed_seconds": 217,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
@@ -9,29 +9,29 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-03-24T09:33:12",
+    "run_at": "2026-03-24T09:49:35",
     "sources": {
       "JORF": 0,
-      "RSS": 7,
+      "RSS": 6,
       "VigiEau": 3,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 59,
-    "llm_seconds": 55.0
+    "llm_calls": 58,
+    "llm_seconds": 59.3
   },
   "items": [
     {
-      "id": "2c4265cb4f59",
-      "source": "Novethic",
-      "categorie": "Déchets",
-      "titre": "Les entreprises à mission, un modèle qui résiste au backlash",
-      "resume": "Le modèle 'entreprise à mission' pourrait influencer les attentes clients de GSF en matière de RSE, notamment dans les secteurs nucléaire, santé ou industrie, mais n'impose pas d'action directe immédiate.",
+      "id": "be6b78493faa",
+      "source": "ESG Today",
+      "categorie": "Biodiversité",
+      "titre": "Procurement is Where Nature Strategy Becomes Real",
+      "resume": "L'article souligne l'importance de l'intégration des enjeux de biodiversité dans les stratégies d'achat des entreprises, un sujet qui pourrait influencer les attentes des clients de GSF en matière de reporting ESG et de durabilité.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/entreprise-a-mission-barometre-2026-developpement-strategique",
+      "url": "https://www.esgtoday.com/procurement-is-where-nature-strategy-becomes-real/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-is-where-nature-strategy-becomes-real",
       "date": "2026-03-24"
     },
     {
@@ -39,7 +39,7 @@
       "source": "EFRAG",
       "categorie": "Climat",
       "titre": "EFRAG launches a call for expression of interest on voluntary sustainability reporting by non-SME companies outside the scope of the CSRD",
-      "resume": "L'EFRAG lance un appel à manifestation d'intérêt pour tester un standard de reporting volontaire ESG pour les entreprises non-PME hors champ CSRD, ce qui pourrait influencer les exigences clients de GSF en matière de reporting extra-financier.",
+      "resume": "L'EFRAG lance un appel à manifestation d'intérêt pour tester un standard de reporting extra-financier volontaire pour les entreprises non-PME hors champ CSRD, ce qui pourrait influencer les futures exigences de reporting ESG pour GSF ou ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-launches-a-call-for-expression-of-interest-on-voluntary-sustainability-reporting-by-nonsme",
@@ -50,7 +50,7 @@
       "source": "EFRAG",
       "categorie": "Énergie",
       "titre": "EFRAG Welcomes a New Friend of EFRAG - Sustainability Reporting: Synesgy",
-      "resume": "L'adhésion de Synesgy à EFRAG renforce l'écosystème des outils de reporting ESG, ce qui pourrait influencer les standards ESRS (CSRD) et les solutions de reporting extra-financier pour GSF.",
+      "resume": "L'article annonce l'adhésion de Synesgy (plateforme de données ESG) comme 'Friend of EFRAG', renforçant son engagement dans les normes ESRS de la CSRD. Cela peut impacter les outils de reporting extra-financier de GSF via des partenariats ou des solutions intégrées.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-welcomes-a-new-friend-of-efrag-sustainability-reporting-synesgy",
@@ -61,21 +61,10 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Interdiction des publicités aériennes : le juge reconnaît un objectif d'intérêt général lié à l'environnement",
-      "resume": "L'article confirme la légitimité des mesures environnementales restrictives en France, renforçant le cadre réglementaire applicable aux activités des entreprises, y compris celles de services comme GSF.",
+      "resume": "L'article confirme la légitimité environnementale de l'interdiction des publicités aériennes, renforçant les politiques publiques de décarbonation. Cela pourrait influencer les attentes clients de GSF en matière de réduction des impacts indirects liés à la communication ou aux déplacements.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/publicites-par-avion-interdiction-objectif-interet-general-responsabilite-etat-indemnisation-47727.php4#xtor=RSS-6",
-      "date": "2026-03-23"
-    },
-    {
-      "id": "39dc7f8ea671",
-      "source": "France Stratégie",
-      "categorie": "Énergie",
-      "titre": "Chef(fe) de projet « énergie et climat » pour le département Environnement",
-      "resume": "L'article annonce un recrutement pour un poste de chef(fe) de projet 'énergie et climat' au sein d'une institution publique, ce qui peut influencer les politiques climatiques et énergétiques françaises, impactant indirectement les obligations et attentes des entreprises comme GSF en matière de reporting et décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.strategie-plan.gouv.fr/offres-demploi/cheffe-de-projet-energie-et-climat-pour-le-departement-environnement",
       "date": "2026-03-23"
     },
     {
@@ -83,7 +72,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "HotRiver ou comment puiser la chaleur renouvelable dans les fleuves",
-      "resume": "Technologie de récupération de chaleur renouvelable dans les fleuves, potentiellement applicable aux sites clients de GSF pour réduire leur consommation énergétique et leurs émissions scope 2.",
+      "resume": "Cette technologie de récupération de chaleur renouvelable dans les fleuves pourrait offrir une solution alternative pour réduire l'empreinte carbone des sites clients de GSF (bureaux, hôpitaux, etc.) en remplaçant des systèmes de chauffage fossiles, alignée sur les enjeux de décarbonation et d'efficacité énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/hotriver-ou-comment-puiser-la-chaleur-renouvelable-dans-les-fleuves-418260/",
@@ -94,7 +83,7 @@
       "source": "ESG Today",
       "categorie": "Biodiversité",
       "titre": "Cocoon Raises $15 Million to Scale Low-Carbon Building Materials",
-      "resume": "L'article aborde les matériaux de construction bas-carbone, un enjeu indirect pour GSF via la performance énergétique des bâtiments tertiaires (DPE tertiaire) et les attentes clients en matière de décarbonation des prestations.",
+      "resume": "L'article aborde les matériaux de construction bas-carbone, un enjeu indirect pour GSF via ses clients tertiaires (bureaux, hôpitaux, etc.) soumis à des exigences carbone croissantes (DPE tertiaire, CSRD).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/cocoon-raises-15-million-to-scale-low-carbon-building-materials/?utm_source=rss&utm_medium=rss&utm_campaign=cocoon-raises-15-million-to-scale-low-carbon-building-materials",
@@ -847,7 +836,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucune mesure ou texte publié dans le Journal Officiel du 24 mars 2026 n'est directement pertinent pour un Responsable Environnement/Climat d'une grande entreprise de services, ces textes relevant principalement de domaines administratifs, sociaux, sanitaires ou techniques spécifiques.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour GSF dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1189,5 +1178,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi listés, seul le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations aux réglementations européennes en matière environnementale et énergétique, impactant les obligations RSE, le reporting extra-financier et les stratégies bas-carbone des entreprises."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations aux réglementations européennes en matière environnementale et énergétique, susceptibles d’impacter les obligations RSE, le reporting extra-financier ou les stratégies bas-carbone des entreprises."
 }
