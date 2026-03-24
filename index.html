@@ -698,7 +698,18 @@ function renderAll(){
 function renderFeed(){
   const items=getFilteredItems(),prio=items.filter(i=>i.criticite>=2),veille=items.filter(i=>i.criticite<2);
   const twEl=document.getElementById('feed-typewriter');
-  if(twEl){const h=new Date().getHours();const next=h<9?'9h':h<14?'14h':'demain à 9h';const nb=D.pipeline_meta?.llm_calls||items.length;typewriter(twEl,[`Nous sommes le ${new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'})}`,`${nb} article${nb>1?'s':''} analysé${nb>1?'s':''}`,`Prochaine vérification à ${next}`]);}
+  if(twEl){
+    const h=new Date().getHours(),next=h<9?'9h':h<14?'14h':'demain à 9h';
+    const np=prio.length;
+    const pjlItems=(D.pjl_autres||[]).flatMap(g=>g.items||[]);
+    const pjlAujourd=(pjlItems.filter(i=>i.date===D.date)).length;
+    const joRet=D.stats?.jo_retenus??0;
+    const t1=np>0?`${np} signal${np>1?'s':''} prioritaire${np>1?'s':''}`:'Tout est calme';
+    const t2=pjlAujourd>0?`${pjlAujourd} PJL déposé${pjlAujourd>1?'s':''} aujourd'hui`:'Aucun nouveau PJL';
+    const t3=joRet>0?`${joRet} texte${joRet>1?'s':''} JO pertinent${joRet>1?'s':''}`:'Aucun texte JO retenu';
+    const t4=`Prochaine vérification à ${next}`;
+    typewriter(twEl,[t1,t2,t3,t4]);
+  }
   const list=document.getElementById('feed-list');
   if(!items.length){list.innerHTML=`<div class="empty-state">Aucun résultat</div>`;return;}
   function cardHtml(item){
