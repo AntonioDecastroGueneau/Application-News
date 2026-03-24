@@ -311,6 +311,37 @@ RSS_SOURCES = [
             'CSRD', 'RSE', 'décarbonation', 'renouvelable', 'déchets', 'REP',
         ],
     },
+    # ── Google News — flux thématiques larges, filtrage LLM ──────────────
+    {
+        'name': 'Google News — CSRD',
+        'url': 'https://news.google.com/rss/search?q=CSRD+OR+%22reporting+durabilit%C3%A9%22+OR+%22reporting+extra-financier%22+OR+ESRS+OR+DPEF&hl=fr&gl=FR&ceid=FR:fr',
+        'categorie': 'Réglementation',
+    },
+    {
+        'name': 'Google News — Climat',
+        'url': 'https://news.google.com/rss/search?q=changement+climatique+r%C3%A9glementation+OR+%22transition+%C3%A9cologique%22+OR+%22politique+climatique%22+France&hl=fr&gl=FR&ceid=FR:fr',
+        'categorie': 'Climat',
+    },
+    {
+        'name': 'Google News — Décrets Environnement',
+        'url': 'https://news.google.com/rss/search?q=%22d%C3%A9cret%22+OR+%22arr%C3%AAt%C3%A9%22+environnement+OR+%22obligation+environnementale%22+France&hl=fr&gl=FR&ceid=FR:fr',
+        'categorie': 'Réglementation',
+    },
+    {
+        'name': 'Google News — Biodiversité',
+        'url': 'https://news.google.com/rss/search?q=biodiversit%C3%A9+r%C3%A9glementation+OR+%22perte+de+biodiversit%C3%A9%22+OR+%22Nature+Restoration%22+OR+EUDR&hl=fr&gl=FR&ceid=FR:fr',
+        'categorie': 'Biodiversité',
+    },
+    {
+        'name': 'Google News — Bilan Carbone',
+        'url': 'https://news.google.com/rss/search?q=%22bilan+carbone%22+OR+%22bilan+GES%22+OR+SBTi+OR+%22GHG+Protocol%22+OR+%22scope+3%22+entreprises&hl=fr&gl=FR&ceid=FR:fr',
+        'categorie': 'Climat',
+    },
+    {
+        'name': 'Google News — Déchets',
+        'url': 'https://news.google.com/rss/search?q=d%C3%A9chets+r%C3%A9glementation+OR+%22responsabilit%C3%A9+%C3%A9largie%22+OR+%22filière+REP%22+OR+%22économie+circulaire%22+France&hl=fr&gl=FR&ceid=FR:fr',
+        'categorie': 'Déchets',
+    },
 ]
 
 
