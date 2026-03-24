@@ -1,7 +1,7 @@
 """
-Static configuration for the GSF pipeline.
+Static configuration for the ABC pipeline.
 
-Dynamic values like paths and "today" are handled in `gsf_pipeline.main`.
+Dynamic values like paths and "today" are handled in `abc_pipeline.main`.
 """
 
 # ─────────────────────────────────────────────
@@ -36,11 +36,11 @@ TIMEOUT = 30
 
 
 # ─────────────────────────────────────────────
-# GSF context injected into prompts
+# ABC context injected into prompts
 # ─────────────────────────────────────────────
 
-GSF_CONTEXT = """
-GSF est un prestataire multiservices (propreté, maintenance, FM) qui intervient sur les
+ABC_CONTEXT = """
+ABC est un prestataire multiservices (propreté, maintenance, FM) qui intervient sur les
 sites de ses clients — il n'est PAS exploitant ICPE.
 
 Enjeux environnement / climat / carbone :
@@ -58,8 +58,8 @@ Risques indirects et chaîne de valeur :
   sur empreinte, réduction déchets, éco-efficacité des prestations
 """.strip()
 
-GSF_CONTEXT_SHORT = (
-    "GSF : prestataire propreté/FM, intervient chez ses clients (non exploitant ICPE). "
+ABC_CONTEXT_SHORT = (
+    "ABC : prestataire propreté/FM, intervient chez ses clients (non exploitant ICPE). "
     "Enjeux : BGES/plan climat, flotte véhicules (scope 1), énergie, déchets prestations, "
     "CSRD/reporting, ISO 14001. "
     "Risques indirects : aléas climatiques sur 3 000+ sites clients, "

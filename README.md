@@ -22,7 +22,7 @@ The pipeline aggregates, filters, and analyzes regulatory and environmental news
 GitHub Actions (cron 09:00 + 14:00 Paris)
         │
         ▼
-gsf_pipeline/
+abc_pipeline/
 ├── main.py              # Orchestrator
 ├── sources/
 │   ├── jorf.py          # JORF tar.gz download + XML parsing
@@ -79,7 +79,7 @@ Single-page app (`index.html`) deployed to GitHub Pages. No build step, no frame
 
 ## Configuration
 
-All sources, keywords, LLM models, and timeouts are in `gsf_pipeline/config.py`.
+All sources, keywords, LLM models, and timeouts are in `abc_pipeline/config.py`.
 
 **Adding an RSS source:**
 ```python
@@ -107,7 +107,7 @@ export MISTRAL_API_KEY=...
 export SUPABASE_URL=...
 export SUPABASE_ANON_KEY=...
 
-python -m gsf_pipeline.main
+python -m abc_pipeline.main
 ```
 
 **GitHub Actions secrets required:** `GROQ_API_KEY`, `MISTRAL_API_KEY`, `SUPABASE_URL`, `SUPABASE_ANON_KEY`.

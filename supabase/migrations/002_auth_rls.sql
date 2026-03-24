@@ -1,5 +1,5 @@
 -- ═══════════════════════════════════════════════════════════════
--- Veille GSF — RLS sécurisées avec Supabase Auth
+-- Veille ABC — RLS sécurisées avec Supabase Auth
 -- Remplace les policies permissives de la migration 001
 -- À exécuter APRÈS 001_legislative_tracking.sql
 -- ═══════════════════════════════════════════════════════════════

@@ -1,5 +1,5 @@
 -- ═══════════════════════════════════════════════════════════════
--- Veille GSF — Suivi Législatif
+-- Veille ABC — Suivi Législatif
 -- À exécuter dans le SQL Editor du dashboard Supabase
 -- ═══════════════════════════════════════════════════════════════
 
@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS legislative_dossiers (
   stade_index   INTEGER     DEFAULT 0,
   -- Statut défini par l'utilisateur
   statut        TEXT        CHECK (statut IN ('critique', 'a_surveiller', 'pour_info')) DEFAULT 'a_surveiller',
-  resume_gsf    TEXT,
+  resume_ABC    TEXT,
   pourquoi      TEXT,
   score         INTEGER     CHECK (score BETWEEN 1 AND 3) DEFAULT 2,
   date_depot    DATE,
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS dossier_comments (
   id            UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
   dossier_id    UUID        NOT NULL REFERENCES legislative_dossiers(id) ON DELETE CASCADE,
   content       TEXT        NOT NULL,
-  auteur        TEXT        DEFAULT 'GSF',
+  auteur        TEXT        DEFAULT 'ABC',
   created_at    TIMESTAMPTZ DEFAULT NOW()
 );
 
@@ -65,7 +65,7 @@ CREATE OR REPLACE TRIGGER trg_legislative_dossiers_updated_at
   FOR EACH ROW EXECUTE FUNCTION update_updated_at();
 
 -- ─── RLS : accès public (clé anon) ──────────────────────────────
--- L'application est un outil interne GSF, pas d'auth utilisateur.
+-- L'application est un outil interne ABC, pas d'auth utilisateur.
 -- La clé anon suffit avec des policies permissives.
 
 ALTER TABLE legislative_dossiers ENABLE ROW LEVEL SECURITY;

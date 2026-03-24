@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \":*)",
+      "Bash(python -m py_compile abc_pipeline/crawl.py abc_pipeline/sources/rss.py abc_pipeline/sources/jorf.py)",
+      "Bash(python -m py_compile abc_pipeline/config.py abc_pipeline/filters.py abc_pipeline/llm.py)",
+      "Bash(python -m py_compile abc_pipeline/config.py)",
+      "Bash(python -m py_compile abc_pipeline/sources/parlement.py)",
+      "WebFetch(domain:antoniodecastrogueneau.github.io)"
+    ]
+  }
+}

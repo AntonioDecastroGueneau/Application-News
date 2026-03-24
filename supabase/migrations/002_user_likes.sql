@@ -1,5 +1,5 @@
 -- ═══════════════════════════════════════════════════════════════
--- Veille GSF — Favoris persistants
+-- Veille ABC — Favoris persistants
 -- À exécuter dans le SQL Editor du dashboard Supabase
 -- ═══════════════════════════════════════════════════════════════
 

@@ -9,8 +9,8 @@ from mistralai.client import Mistral
 
 from .filters import reglements_match
 from .config import (
-    GSF_CONTEXT,
-    GSF_CONTEXT_SHORT,
+    ABC_CONTEXT,
+    ABC_CONTEXT_SHORT,
     GROQ_MAX_RETRY,
     GROQ_MODEL_ENRICH,
     GROQ_MODEL_FILTER,
@@ -182,32 +182,32 @@ def _safe_score(val) -> int:
 # ─────────────────────────────────────────────
 
 def groq_analyse_jorf(titre: str, contenu: str) -> dict:
-    system = 'Tu es expert climat et RSE conseillant le Responsable Environnement de GSF. JSON uniquement.'
+    system = 'Tu es expert climat et RSE conseillant le Responsable Environnement de ABC. JSON uniquement.'
     prompt = (
-        f"{GSF_CONTEXT_SHORT}\n\n"
+        f"{ABC_CONTEXT_SHORT}\n\n"
         "Ce texte du Journal Officiel a passé un premier filtre par mots-clés.\n"
-        "Détermine s'il est VRAIMENT pertinent pour le Responsable Environnement / Climat de GSF.\n\n"
-        "PERTINENT si le texte crée ou modifie une obligation s'appliquant DIRECTEMENT à GSF :\n"
+        "Détermine s'il est VRAIMENT pertinent pour le Responsable Environnement / Climat de ABC.\n\n"
+        "PERTINENT si le texte crée ou modifie une obligation s'appliquant DIRECTEMENT à ABC :\n"
         "  - Obligations BGES, bilan GES, plan climat pour grandes entreprises de services\n"
         "  - CSRD / reporting extra-financier / taxonomie verte\n"
         "  - Réglementation déchets : nouvelles filières REP, tri, traçabilité\n"
         "  - Réglementation énergie : efficacité énergétique, DPE tertiaire, renouvelables\n"
         "  - Mobilité et flotte : ZFE, véhicules électriques, réglementation transport\n"
-        "  - Arrêtés CatNat, PPR, risques naturels (risques sur sites clients GSF)\n"
+        "  - Arrêtés CatNat, PPR, risques naturels (risques sur sites clients ABC)\n"
         "  - Loi ou décret structurant la politique climatique (SNBC, PNACC, loi énergie-climat)\n\n"
         "REJETER IMPÉRATIVEMENT :\n"
-        "  - Réglementation ICPE, SEVESO, biocides, REACH, amiante (GSF n'est pas exploitant)\n"
+        "  - Réglementation ICPE, SEVESO, biocides, REACH, amiante (ABC n'est pas exploitant)\n"
         "  - Nominations, délégations de signature, textes purement administratifs\n"
         "  - Conventions collectives hors branche propreté\n"
         "  - Réglementation sectorielle sans rapport : agriculture, pêche, défense, santé humaine\n\n"
-        "RÈGLE : si le lien avec GSF est indirect ou nécessite plusieurs déductions → NON PERTINENT.\n\n"
+        "RÈGLE : si le lien avec ABC est indirect ou nécessite plusieurs déductions → NON PERTINENT.\n\n"
         "Score (si pertinent) :\n"
         "  1 = information de veille\n"
         "  2 = évolution réglementaire à anticiper\n"
         "  3 = obligation immédiate ou risque direct\n\n"
         f"TITRE: {titre}\n"
         f"CONTENU: {contenu[:500]}\n\n"
-        'JSON: {"pertinent": true/false, "resume": "ce que ça change pour GSF en 1 phrase (vide si non pertinent)", '
+        'JSON: {"pertinent": true/false, "resume": "ce que ça change pour ABC en 1 phrase (vide si non pertinent)", '
         '"pourquoi": "", "score": 1}'
     )
 
@@ -222,14 +222,14 @@ def groq_analyse_jorf(titre: str, contenu: str) -> dict:
         return result
 
     enrich_prompt = (
-        f"{GSF_CONTEXT}\n\n"
+        f"{ABC_CONTEXT}\n\n"
         f"Texte JO retenu (score {score}/3) : {titre}\n"
         f"Résumé : {result.get('resume','')}\n\n"
-        "En 1-2 phrases précises, explique POURQUOI c'est un signal stratégique important pour GSF : "
+        "En 1-2 phrases précises, explique POURQUOI c'est un signal stratégique important pour ABC : "
         "quelle obligation concrète, quel délai, quel risque ou quelle opportunité.\n"
         'JSON: {"pourquoi": "..."}'
     )
-    raw2 = call_groq(enrich_prompt, 'Expert RSE GSF. JSON uniquement.', max_tokens=150, model=GROQ_MODEL_ENRICH)
+    raw2 = call_groq(enrich_prompt, 'Expert RSE ABC. JSON uniquement.', max_tokens=150, model=GROQ_MODEL_ENRICH)
     enrich = extract_json(raw2)
     if enrich.get('pourquoi'):
         result['pourquoi'] = enrich['pourquoi']
@@ -245,12 +245,12 @@ def groq_analyse_jorf(titre: str, contenu: str) -> dict:
 def groq_analyse_rss(titre: str, contenu: str) -> dict:
     if kw := reglements_match(titre):
         log.info(f"RSS signal prioritaire auto ({kw}): {titre[:80]}")
-        return {'pertinent': True, 'score': 3, 'resume': f'Signal réglementaire prioritaire ({kw}).', 'pourquoi': ''}
-    system = 'Tu es analyste climat et RSE pour GSF. JSON valide uniquement.'
+        return {'pertinent': True, 'score': 3, 'resume': titre[:200], 'pourquoi': f'Mention de {kw}.'}
+    system = 'Tu es analyste climat et RSE pour ABC. JSON valide uniquement.'
     prompt = (
-        f"{GSF_CONTEXT_SHORT}\n\n"
-        "Évalue cet article : est-il pertinent pour le Responsable Environnement / Climat de GSF ?\n\n"
-        "PERTINENT si le sujet concerne directement GSF :\n"
+        f"{ABC_CONTEXT_SHORT}\n\n"
+        "Évalue cet article : est-il pertinent pour le Responsable Environnement / Climat de ABC?\n\n"
+        "PERTINENT si le sujet concerne directement ABC :\n"
         "- Politique climatique FR/UE : SNBC, PNACC, loi énergie-climat, trajectoires nationales\n"
         "- Décarbonation entreprises : objectifs net zéro, scope 1/2/3, bilan GES, BGES\n"
         "- Reporting ESG : CSRD, ESRS, taxonomie verte, reporting extra-financier\n"
@@ -259,7 +259,7 @@ def groq_analyse_rss(titre: str, contenu: str) -> dict:
         "- Mobilité durable : ZFE, électrification flottes, véhicules propres\n"
         "- Risques climatiques opérationnels en France ou UE affectant les entreprises de services\n\n"
         "NON PERTINENT (exclure complètement) :\n"
-        "- ICPE/SEVESO/REACH (GSF non exploitant), élections, géopolitique pure\n"
+        "- ICPE/SEVESO/REACH (ABC non exploitant), élections, géopolitique pure\n"
         "- Agriculture/pêche/sylviculture, immobilier résidentiel, finance de marché\n"
         "- Catastrophes naturelles à l'étranger sans lien réglementaire FR/UE\n"
         "- Faits divers, sport, défense, santé humaine sans angle entreprise\n"
@@ -267,12 +267,12 @@ def groq_analyse_rss(titre: str, contenu: str) -> dict:
         "Score 1 = article intéressant à lire pour rester informé, même sans implication directe immédiate.\n\n"
         "Score (exigeant pour 2/3 — score 1 est le filet de sécurité) :\n"
         "  1 = tendance, contexte ou signal à connaître — va dans 'À consulter'\n"
-        "  2 = évolution réglementaire ou marché qui impose une action identifiable à GSF dans 12 mois\n"
+        "  2 = évolution réglementaire ou marché qui impose une action identifiable à ABC dans 12 mois\n"
         "  3 = obligation légale imminente, risque direct ou opportunité stratégique claire\n"
-        "Score 2/3 uniquement si l'article mentionne explicitement un sujet opérationnel pour GSF.\n\n"
+        "Score 2/3 uniquement si l'article mentionne explicitement un sujet opérationnel pour ABC.\n\n"
         f"TITRE: {titre}\n"
         f"CONTENU: {contenu[:600]}\n\n"
-        'JSON: {"pertinent": true/false, "resume": "1-2 phrases sur ce que ça change pour GSF (vide si non pertinent)", "pourquoi": "", "score": 1}'
+        'JSON: {"pertinent": true/false, "resume": "1-2 phrases sur ce que ça change pour ABC (vide si non pertinent)", "pourquoi": "", "score": 1}'
     )
 
     raw = call_groq(prompt, system, max_tokens=300, model=GROQ_MODEL_FILTER)
@@ -286,14 +286,14 @@ def groq_analyse_rss(titre: str, contenu: str) -> dict:
         return result
 
     enrich_prompt = (
-        f"{GSF_CONTEXT}\n\n"
+        f"{ABC_CONTEXT}\n\n"
         f"Article retenu (score {score}/3) : {titre}\n"
         f"Résumé : {result.get('resume','')}\n\n"
-        "En 1-2 phrases précises, explique POURQUOI c'est un signal stratégique important pour GSF : "
+        "En 1-2 phrases précises, explique POURQUOI c'est un signal stratégique important pour ABC : "
         "quelle implication concrète, quel délai d'action, quel risque ou quelle opportunité.\n"
         'JSON: {"pourquoi": "..."}'
     )
-    raw2 = call_groq(enrich_prompt, 'Expert RSE GSF. JSON uniquement.', max_tokens=150, model=GROQ_MODEL_ENRICH)
+    raw2 = call_groq(enrich_prompt, 'Expert RSE ABC. JSON uniquement.', max_tokens=150, model=GROQ_MODEL_ENRICH)
     enrich = extract_json(raw2)
     if enrich.get('pourquoi'):
         result['pourquoi'] = enrich['pourquoi']
@@ -360,7 +360,7 @@ def groq_briefing_jorf(articles: list, today_str: str) -> str:
             'non pertinent', 'pas de lien', 'sans lien', 'n\'est identifiable')
     if briefing and any(n in briefing.lower() for n in _NEG):
         briefing = ''
-    return briefing or "Aucun texte réglementaire significatif pour GSF dans ce JO."
+    return briefing or "Aucun texte réglementaire significatif pour ABC dans ce JO."
 
 
 # ─────────────────────────────────────────────
@@ -368,36 +368,36 @@ def groq_briefing_jorf(articles: list, today_str: str) -> str:
 # ─────────────────────────────────────────────
 
 def groq_analyse_pjl(titre: str, description: str) -> dict:
-    system = 'Tu es conseiller RSE senior pour GSF. JSON valide uniquement.'
+    system = 'Tu es conseiller RSE senior pour ABC. JSON valide uniquement.'
     has_content = len(description) > len(titre) + 50
     content_note = (
         "Le texte du PJL est fourni ci-dessous — base ton analyse UNIQUEMENT sur ce contenu.\n"
         if has_content else
         "ATTENTION : seul le titre est disponible, pas le texte complet. "
-        "Si le titre ne mentionne pas explicitement un sujet GSF, répondre pertinent=false.\n"
+        "Si le titre ne mentionne pas explicitement un sujet ABC, répondre pertinent=false.\n"
     )
     prompt = (
-        f"{GSF_CONTEXT_SHORT}\n\n"
-        "Évalue ce projet de loi gouvernemental pour le Responsable Environnement / Climat de GSF.\n\n"
+        f"{ABC_CONTEXT_SHORT}\n\n"
+        "Évalue ce projet de loi gouvernemental pour le Responsable Environnement / Climat de ABC.\n\n"
         f"{content_note}\n"
-        "PERTINENT si le texte crée ou modifie des obligations s'appliquant à GSF :\n"
+        "PERTINENT si le texte crée ou modifie des obligations s'appliquant à ABC :\n"
         "- Obligations BGES, bilan GES, plan climat pour grandes entreprises\n"
         "- CSRD, taxonomie verte, reporting extra-financier\n"
         "- Réglementation déchets : REP, tri, traçabilité, éco-organismes\n"
         "- Énergie & bâtiment : efficacité énergétique, DPE tertiaire, renouvelables\n"
         "- Mobilité : ZFE, électrification flottes, véhicules propres\n"
         "- Politique climatique structurante : SNBC, PNACC, loi énergie-climat\n\n"
-        "NON PERTINENT (exclure) : ICPE, SEVESO, biocides, REACH (GSF non exploitant), "
+        "NON PERTINENT (exclure) : ICPE, SEVESO, biocides, REACH (ABC non exploitant), "
         "agriculture, défense, santé humaine, textes sans rapport avec le climat/énergie/déchets/RSE.\n"
         "EN CAS DE DOUTE sur la pertinence : pertinent=true avec score=1. "
-        "Ne pas inférer d'obligations GSF non mentionnées dans le texte.\n\n"
-        "Score d'urgence pour GSF :\n"
+        "Ne pas inférer d'obligations ABC non mentionnées dans le texte.\n\n"
+        "Score d'urgence pour ABC :\n"
         "  1 = à connaître, horizon > 18 mois\n"
         "  2 = à anticiper, impact probable dans 6-18 mois\n"
         "  3 = impact direct imminent, action requise\n\n"
         f"TITRE: {titre}\n"
         f"TEXTE: {description[:2500]}\n\n"
-        'JSON: {"pertinent": true/false, "resume": "ce que ce PJL change pour GSF en 1-2 phrases, basé uniquement sur le texte (vide si non pertinent)", '
+        'JSON: {"pertinent": true/false, "resume": "ce que ce PJL change pour ABC en 1-2 phrases, basé uniquement sur le texte (vide si non pertinent)", '
         '"pourquoi": "", "score": 1, "horizon": "estimation entrée en vigueur ex: fin 2026"}'
     )
 
@@ -412,17 +412,17 @@ def groq_analyse_pjl(titre: str, description: str) -> dict:
         return result
 
     enrich_prompt = (
-        f"{GSF_CONTEXT}\n\n"
+        f"{ABC_CONTEXT}\n\n"
         f"PJL retenu (score {score}/3) : {titre}\n"
         f"Résumé : {result.get('resume','')}\n"
         f"Horizon estimé : {result.get('horizon','')}\n"
         f"Extrait du texte : {description[:1000]}\n\n"
         "En 1-2 phrases BASÉES SUR LE TEXTE FOURNI, explique pourquoi c'est un signal "
-        "stratégique pour GSF : quelle obligation concrète, quel délai, quel risque opérationnel. "
+        "stratégique pour ABC : quelle obligation concrète, quel délai, quel risque opérationnel. "
         "Ne pas inventer d'obligations non mentionnées dans le texte.\n"
         'JSON: {"pourquoi": "..."}'
     )
-    raw2 = call_groq(enrich_prompt, 'Expert RSE GSF. JSON uniquement.', max_tokens=150, model=GROQ_MODEL_ENRICH)
+    raw2 = call_groq(enrich_prompt, 'Expert RSE ABC. JSON uniquement.', max_tokens=150, model=GROQ_MODEL_ENRICH)
     enrich = extract_json(raw2)
     if enrich.get('pourquoi'):
         result['pourquoi'] = enrich['pourquoi']

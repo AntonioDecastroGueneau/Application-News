@@ -49,7 +49,7 @@ def _scrape_an_listing(source: dict, today_str: str) -> list:
 
     entries = []
     try:
-        resp = requests.get(source['url'], timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
+        resp = requests.get(source['url'], timeout=TIMEOUT, headers={'User-Agent': 'ABC-Veille/2.0'})
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'html.parser')
 
@@ -172,7 +172,7 @@ def _scrape_deposit_date(url_dossier: str) -> Optional[str]:
     from bs4 import BeautifulSoup
 
     try:
-        resp = requests.get(url_dossier, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
+        resp = requests.get(url_dossier, timeout=TIMEOUT, headers={'User-Agent': 'ABC-Veille/2.0'})
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'html.parser')
 
@@ -214,7 +214,7 @@ def _crawl_pjl_content(url_dossier: str, url_doc: str = '') -> str:
 
     if url_dossier:
         try:
-            resp = requests.get(url_dossier, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
+            resp = requests.get(url_dossier, timeout=TIMEOUT, headers={'User-Agent': 'ABC-Veille/2.0'})
             resp.raise_for_status()
             soup = BeautifulSoup(resp.text, 'html.parser')
 
@@ -235,7 +235,7 @@ def _crawl_pjl_content(url_dossier: str, url_doc: str = '') -> str:
     # Try Senate page first (has exposé des motifs)
     if senat_url:
         try:
-            resp_s = requests.get(senat_url, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
+            resp_s = requests.get(senat_url, timeout=TIMEOUT, headers={'User-Agent': 'ABC-Veille/2.0'})
             resp_s.raise_for_status()
             # Fix encoding: senat.fr sometimes sends latin-1 with UTF-8 declaration
             enc = resp_s.encoding or 'utf-8'
@@ -254,7 +254,7 @@ def _crawl_pjl_content(url_dossier: str, url_doc: str = '') -> str:
     # Try AN document URL (bill deposited at AN first)
     if url_doc:
         try:
-            resp_doc = requests.get(url_doc, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
+            resp_doc = requests.get(url_doc, timeout=TIMEOUT, headers={'User-Agent': 'ABC-Veille/2.0'})
             resp_doc.raise_for_status()
             from bs4 import BeautifulSoup as _BS2
             soup_doc = _BS2(resp_doc.text, 'html.parser')
@@ -303,7 +303,7 @@ def _scrape_dossier_stade(url_dossier: str) -> str:
     from bs4 import BeautifulSoup
 
     try:
-        resp = requests.get(url_dossier, timeout=TIMEOUT, headers={'User-Agent': 'GSF-Veille/2.0'})
+        resp = requests.get(url_dossier, timeout=TIMEOUT, headers={'User-Agent': 'ABC-Veille/2.0'})
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'html.parser')
 
@@ -392,7 +392,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
                     'url_an':      url_an,
                     'url_dossier': row.get('url_dossier', ''),
                     'source_rss':  row.get('source', 'pipeline'),
-                    'resume_gsf':  row.get('resume_gsf', ''),
+                    'resume_abc':  row.get('resume_abc', ''),
                     'pourquoi':    row.get('pourquoi', ''),
                     'score':       row.get('score', 2),
                     'horizon':     row.get('horizon', ''),
@@ -423,7 +423,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
                     'url_an':      url_an,
                     'url_dossier': row.get('url_dossier', ''),
                     'source_rss':  'manuel',
-                    'resume_gsf':  row.get('resume_gsf', ''),
+                    'resume_abc':  row.get('resume_abc', ''),
                     'pourquoi':    row.get('pourquoi', ''),
                     'score':       row.get('score', 2),
                     'horizon':     row.get('horizon', ''),
@@ -498,14 +498,14 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
                         sync.upsert_dossier(fiche)
                         sync.record_stage_change(fiche, ancien_stade, stade_actuel)
 
-            # Re-analyse if resume_gsf is missing (e.g. after a data reset)
-            if not fiche.get('resume_gsf') and groq_used < PARLEMENT_MAX_GROQ:
+            # Re-analyse if resume_abc is missing (e.g. after a data reset)
+            if not fiche.get('resume_abc') and groq_used < PARLEMENT_MAX_GROQ:
                 url_doc = entry.get('url_doc', '')
                 content = _crawl_pjl_content(url_dossier, url_doc) if (url_dossier or url_doc) else ''
                 analysis = groq_analyse_pjl(titre, content or titre)
                 groq_used += 1
                 if analysis.get('pertinent'):
-                    fiche['resume_gsf'] = analysis.get('resume', '')
+                    fiche['resume_abc'] = analysis.get('resume', '')
                     fiche['pourquoi'] = analysis.get('pourquoi', '')
                     fiche['score'] = int(analysis.get('score', 1))
                     fiche['horizon'] = analysis.get('horizon', '')
@@ -555,7 +555,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
             'url_an': entry['url'],
             'url_dossier': entry.get('url_dossier', ''),
             'source_rss': entry['source'],
-            'resume_gsf': analysis.get('resume', ''),
+            'resume_abc': analysis.get('resume', ''),
             'pourquoi': analysis.get('pourquoi', ''),
             'score': int(analysis.get('score', 1)),
             'horizon': analysis.get('horizon', ''),
@@ -627,12 +627,12 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         f"{rejected_skipped} skippés (cache rejet)"
     )
 
-    # Re-analyse all fiches loaded from Supabase that have no resume_gsf
+    # Re-analyse all fiches loaded from Supabase that have no resume_abc
     # (handles cases where the entry is no longer in today's RSS feed)
     # Uses its own quota (5 max) independent of the new-PJL quota
     orphan_groq = 0
     for fiche_id, fiche in fiches.items():
-        if fiche.get('resume_gsf') or fiche.get('manuel'):
+        if fiche.get('resume_abc') or fiche.get('manuel'):
             continue
         if orphan_groq >= 5:
             break
@@ -642,7 +642,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         analysis = groq_analyse_pjl(titre, content or titre)
         orphan_groq += 1
         if analysis.get('pertinent'):
-            fiche['resume_gsf'] = analysis.get('resume', '')
+            fiche['resume_abc'] = analysis.get('resume', '')
             fiche['pourquoi'] = analysis.get('pourquoi', '')
             fiche['score'] = int(analysis.get('score', 1))
             fiche['horizon'] = analysis.get('horizon', '')

@@ -1,4 +1,4 @@
-name: Veille Environnementale GSF
+name: Veille Environnementale ABC
 
 on:
   schedule:
@@ -41,7 +41,7 @@ jobs:
           MISTRAL_API_KEY:   ${{ secrets.MISTRAL_API_KEY }}
           SUPABASE_URL:      ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
-        run: python -m gsf_pipeline.main
+        run: python -m abc_pipeline.main
 
       # ── 5. Récupération de la branche gh-pages ───────────────────
       - name: Checkout gh-pages

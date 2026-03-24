@@ -1,5 +1,5 @@
 """
-Supabase sync for legislative dossiers (Veille GSF).
+Supabase sync for legislative dossiers (Veille ABC).
 
 Bidirectional bridge between:
   - parlement_fiches.json  → pipeline source of truth for scraping state
@@ -131,7 +131,7 @@ class SupabaseSync:
             'url_dossier': fiche.get('url_dossier', ''),
             'stade':       fiche.get('stade', ''),
             'stade_index': fiche.get('stade_index', 0),
-            'resume_gsf':  fiche.get('resume_gsf', ''),
+            'resume_abc':  fiche.get('resume_abc', ''),
             'pourquoi':    fiche.get('pourquoi', ''),
             'score':       int(fiche.get('score') or 1),
             'date_depot':  fiche.get('date_depot') or None,

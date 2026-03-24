@@ -26,14 +26,14 @@ def _setup_logging(log_path: Path):
 def main() -> int:
     today_str = datetime.now().strftime('%Y-%m-%d')
 
-    # The package lives in `NEWS/gsf_pipeline`, so the workspace root is parents[1].
+    # The package lives in `NEWS/abc_pipeline`, so the workspace root is parents[1].
     script_dir = Path(__file__).resolve().parents[1]
     log_path = script_dir / 'pipeline.log'
     _setup_logging(log_path)
     log = logging.getLogger(__name__)
 
     log.info('=' * 60)
-    log.info(f'Pipeline GSF Veille Environnementale — {today_str}')
+    log.info(f'Pipeline ABC Veille Environnementale — {today_str}')
     log.info(f'Modèle LLM : {GROQ_MODEL} via Groq API')
     log.info('=' * 60)
 
@@ -96,6 +96,7 @@ def main() -> int:
     pjl_briefing = ''
     try:
         pjl_fiches, pjl_autres, pjl_briefing = fetch_parlement(script_dir, today_str)
+        pjl_fiches = pjl_fiches[:7]  # cap — fiches accumulate from Supabase
         source_counts['Parlement'] = len(pjl_fiches)
         if len(pjl_fiches) == 0:
             log.warning("WARNING: SOURCE VIDE — Parlement")
@@ -106,16 +107,20 @@ def main() -> int:
         meta_errors.append(f"Parlement fatal : {e}")
         source_counts['Parlement'] = 0
 
-    # Dedup + sort by criticite
-    seen = set()
+    # Dedup by id then by normalized title (catches Google News duplicates)
+    seen_ids = set()
+    seen_titles = set()
     unique = []
     for item in sorted(
         items,
         key=lambda x: (x.get('date', '2000-01-01'), x.get('criticite', 1)),
         reverse=True,
     ):
-        if item['id'] not in seen:
-            seen.add(item['id'])
+        norm = ' '.join(item.get('titre', '').lower().split())[:80]
+        if item['id'] not in seen_ids and norm not in seen_titles:
+            seen_ids.add(item['id'])
+            if norm:
+                seen_titles.add(norm)
             unique.append(item)
 
     elapsed = round((datetime.now() - start).total_seconds())

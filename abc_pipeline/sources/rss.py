@@ -158,7 +158,7 @@ def fetch_rss_source(source: dict, today_str: str):
 
             analysis = groq_analyse_rss(titre, contenu)
             if analysis.get('pertinent') is False:
-                log.debug(f"Non pertinent GSF, exclu : {titre[:60]}")
+                log.debug(f"Non pertinent ABC, exclu : {titre[:60]}")
                 continue
 
             score = int(analysis.get('score', 1))

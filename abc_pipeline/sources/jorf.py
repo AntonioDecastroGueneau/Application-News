@@ -83,7 +83,7 @@ def parse_jorf_xml(content: bytes, today_str: str):
 
 
 def fetch_jorf(today_str: str):
-    """Fetch and analyze daily JORF texts for GSF relevance."""
+    """Fetch and analyze daily JORF texts for ABC relevance."""
     log.info("=== JORF ===")
     items, autres, total_analysed, briefing = [], [], 0, []
 

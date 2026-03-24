@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
   ═══════════════════════════════════════════════════════════════════════
-  Veille Environnementale GSF — UI v2
+  Veille Environnementale ABC — UI v2
   ─────────────────────────────────────────────────────────────────────
   AUDIT SUMMARY & KEY DESIGN DECISIONS
 
@@ -31,7 +31,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veille Environnementale — GSF</title>
+<title>Veille Environnementale — ABC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" rel="stylesheet">
@@ -233,21 +233,15 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .feed-consulter-items .card:hover { background: var(--surface3); }
 .empty-state { padding: 48px 20px; text-align: center; font-size: 13px; color: var(--muted); }
 .feed-empty-prio { display: flex; align-items: center; justify-content: center; flex: 1; min-height: 0; background: var(--surface2); border-radius: 12px; }
-.src-stack-outer { padding: 10px 0 4px; display: flex; flex-direction: column; gap: 8px; }
-.src-stack-label { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); padding: 0 2px; }
-.src-stack-wrap { position: relative; height: 52px; transition: height .35s cubic-bezier(.4,0,.2,1); }
-.src-stack-wrap.open { height: auto; }
-.src-stack-card { background: var(--surface-lowest); border: 1px solid rgba(193,200,194,0.28); border-radius: 12px; padding: 9px 12px; display: flex; align-items: center; gap: 10px; transition: transform .35s cubic-bezier(.68,-.55,.27,1.55), opacity .3s, top .35s cubic-bezier(.4,0,.2,1); position: absolute; width: 100%; box-sizing: border-box; top: calc(var(--idx) * 6px); transform: scale(calc(1 - var(--idx) * 0.04)); z-index: calc(10 - var(--idx)); opacity: calc(1 - var(--idx) * 0.18); }
-.src-stack-wrap.open .src-stack-card { position: relative; top: 0; transform: none; opacity: 1; margin-bottom: 6px; z-index: 1; }
-.src-stack-wrap.open .src-stack-card:last-child { margin-bottom: 0; }
-.src-stack-card[data-extra] { display: none; }
-.src-stack-wrap.open .src-stack-card[data-extra] { display: flex; }
-.src-stack-avatar { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #fff; flex-shrink: 0; }
-.src-stack-info { flex: 1; min-width: 0; }
-.src-stack-name { font-size: 12px; font-weight: 500; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.src-stack-count { font-family: var(--mono); font-size: 10px; color: var(--muted2); }
-.src-stack-btn { background: var(--surface-lowest); border: 1px solid rgba(193,200,194,0.35); border-radius: 20px; padding: 4px 14px; font-size: 11px; font-weight: 600; color: var(--text2); cursor: pointer; align-self: center; transition: background .15s, box-shadow .15s; }
-.src-stack-btn:hover { background: var(--surface2); box-shadow: 0 2px 6px rgba(21,27,44,0.07); }
+/* Sources marquee */
+.src-marquee-outer { padding: 10px 0 4px; }
+.src-marquee-label { font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); padding: 0 2px 6px; }
+.src-marquee { overflow: hidden; width: 100%; -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%); mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%); }
+.src-marquee__inner { display: flex; width: max-content; animation: src-marquee-scroll 20s linear infinite; }
+.src-marquee__inner:hover { animation-play-state: paused; }
+.src-marquee__group { display: flex; gap: 0; }
+.src-marquee__group span { margin: 0 6px; white-space: nowrap; background: var(--primary-container); color: var(--on-primary-container); padding: 3px 12px 3px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; letter-spacing: .01em; }
+@keyframes src-marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 .feed-empty-prio-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; max-width: 200px; text-align: center; }
 .feed-empty-prio-icon { position: relative; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; }
 .feed-empty-prio-ring { position: absolute; inset: 0; border-radius: 50%; background: var(--primary-container); animation: empty-pulse 3s ease-in-out infinite; }
@@ -488,7 +482,7 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 <div id="layout">
   <div id="sidebar">
     <div class="sb-header">
-      <div class="sb-brand"><div class="sb-brand-dot"></div>GSF</div>
+      <div class="sb-brand"><div class="sb-brand-dot"></div>ABC</div>
       <div class="sb-title">Veille Environnementale</div>
       <div class="sb-date" id="hdr-date">—</div>
     </div>
@@ -617,8 +611,8 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
         </select>
       </div>
       <div class="form-group">
-        <label class="form-label">Résumé GSF</label>
-        <textarea class="form-textarea" id="form-resume" rows="3" placeholder="Résumé de ce dossier pour GSF…"></textarea>
+        <label class="form-label">Résumé ABC</label>
+        <textarea class="form-textarea" id="form-resume" rows="3" placeholder="Résumé de ce dossier pour ABC…"></textarea>
       </div>
       <div class="form-group">
         <label class="form-label">Pourquoi c'est important</label>
@@ -644,7 +638,7 @@ function typewriter(el,texts,speed=48,del=28,wait=2800){
   }
   clearTimeout(_twTimer);el.textContent='';_twTimer=setTimeout(tick,700);
 }
-let likes=JSON.parse(localStorage.getItem('gsf_likes')||'[]'); // cache local, remplacé par Supabase au chargement
+let likes=JSON.parse(localStorage.getItem('abc_likes')||'[]'); // cache local, remplacé par Supabase au chargement
 let srcFilters={jorf:true,presse:true};
 let mapgl=null;
 
@@ -747,20 +741,25 @@ function renderFeed(){
         </div>
       </div></div>`;}
   // Build stacked sources card
-  const SRC_COLORS=['#012d1d','#0051d5','#d97706','#059669','#7c3aed','#0891b2','#dc2626','#65a30d'];
-  function srcColor(n){let h=0;for(const c of n)h=(h*31+c.charCodeAt(0))&0xff;return SRC_COLORS[h%SRC_COLORS.length];}
-  const srcCounts={};
-  (D.items||[]).forEach(i=>{if(i.source)srcCounts[i.source]=(srcCounts[i.source]||0)+1;});
-  if((D.stats?.jo_retenus||0)>0)srcCounts['JORF']=(srcCounts['JORF']||0)+(D.stats.jo_retenus);
-  if((D.stats?.depts_restriction||0)>0)srcCounts['VigiEau']=D.stats.depts_restriction;
-  const srcEntries=Object.entries(srcCounts).sort((a,b)=>b[1]-a[1]);
-  const sourcesStackHtml=srcEntries.length&&prio.length?`<div class="src-stack-outer"><div class="src-stack-label">Sources consultées</div><div class="src-stack-wrap" id="src-stack-wrap">${srcEntries.map(([name,count],i)=>`<div class="src-stack-card" style="--idx:${Math.min(i,9)}"${i>=3?' data-extra':''}><div class="src-stack-avatar" style="background:${srcColor(name)}">${escHtml(name[0].toUpperCase())}</div><div class="src-stack-info"><div class="src-stack-name">${escHtml(name)}</div><div class="src-stack-count">${count} signal${count>1?'s':''}</div></div></div>`).join('')}</div>${srcEntries.length>3?`<button class="src-stack-btn" onclick="const w=document.getElementById('src-stack-wrap');w.classList.toggle('open');this.textContent=w.classList.contains('open')?'R\u00e9duire \u25b2':'Voir toutes (${srcEntries.length}) \u25be">Voir toutes (${srcEntries.length}) \u25be</button>`:''}</div>`:'';
+  // Collect all consulted sources (not just those with items)
+  const allSrcNames = new Set();
+  (D.items||[]).forEach(i=>{if(i.source)allSrcNames.add(i.source);});
+  if((D.stats?.jo_retenus||0)>0)allSrcNames.add('JORF');
+  if((D.stats?.jo_analyses||0)>0)allSrcNames.add('JORF');
+  (D.pipeline_meta?.sources?Object.keys(D.pipeline_meta.sources):[]).forEach(s=>allSrcNames.add(s));
+  const srcNames=[...allSrcNames].filter(s=>s&&s!=='VigiEau');
+  function buildMarquee(names){
+    const items=names.map(n=>`<span>${escHtml(n)}</span>`).join('');
+    // duplicate for seamless loop
+    return `<div class="src-marquee"><div class="src-marquee__inner"><div class="src-marquee__group">${items}</div><div class="src-marquee__group" aria-hidden="true">${items}</div></div></div>`;
+  }
+  const sourcesMarqueeHtml=srcNames.length?`<div class="src-marquee-outer"><div class="src-marquee-label">Sources consultées</div>${buildMarquee(srcNames)}</div>`:'';
 
   list.style.gridTemplateColumns='55fr 45fr';
   let html=`<div class="feed-col-prio">`;
   if(prio.length)html+=`<div class="feed-section-hd prio"><span class="feed-section-lbl">Signaux prioritaires</span><span class="feed-section-badge">${prio.length}</span></div>`+prio.map(cardHtml).join('');
   else html+=`<div class="feed-empty-prio"><div class="feed-empty-prio-inner"><div class="feed-empty-prio-icon"><div class="feed-empty-prio-ring"></div><span class="material-symbols-outlined">sensors</span></div><div class="feed-empty-prio-title">Tout est calme pour le moment</div><div class="feed-empty-prio-sub">Aucun signal prioritaire détecté.</div></div></div>`;
-  html+=sourcesStackHtml+`</div>`;
+  html+=sourcesMarqueeHtml+`</div>`;
   if(veille.length)html+=`<div class="feed-col-consulter"><div class="feed-consulter-hd"><span class="feed-consulter-lbl">À consulter</span><span class="feed-section-badge" style="margin-left:auto">${veille.length}</span></div><div class="feed-consulter-items">${veille.map(cardHtmlCompact).join('')}</div></div>`;
   list.innerHTML=html;
 }
@@ -843,7 +842,7 @@ function renderJO(){
   const statsEl=document.getElementById('jo-stats'),groupEl=document.getElementById('jo-groups');
   if(!groupEl)return;
   const nbT=D?.stats?.jo_analyses||0,nbG=D?.stats?.jo_retenus||0;
-  if(statsEl)statsEl.innerHTML=[[nbT,'Textes analysés',false],[nbG,'Pertinents GSF',true],[items.length,'Dans ce JO',false]].map(([v,l,a])=>`<div class="jo-stat ${a&&v>0?'accent':''}"><div class="jo-stat-val">${v}</div><div class="jo-stat-lbl">${l}</div></div>`).join('');
+  if(statsEl)statsEl.innerHTML=[[nbT,'Textes analysés',false],[nbG,'Pertinents ABC',true],[items.length,'Dans ce JO',false]].map(([v,l,a])=>`<div class="jo-stat ${a&&v>0?'accent':''}"><div class="jo-stat-val">${v}</div><div class="jo-stat-lbl">${l}</div></div>`).join('');
 
   // Briefing exécutif
   const _br=D?.briefing_jorf;
@@ -859,14 +858,14 @@ function renderJO(){
     <div style="font-size:13px;color:var(--text2);line-height:1.6">${escHtml(briefing)}</div>
   </div>`:'';
 
-  // Section signaux GSF (jo_retenus) — en haut, bien visible
-  let joGsfHtml = '';
+  // Section signaux ABC (jo_retenus) — en haut, bien visible
+  let joAbcHtml = '';
   if(joRetenus.length){
     const filtered=joRetenus.filter(it=>!search||(it.titre||'').toLowerCase().includes(search));
     if(filtered.length){
-      joGsfHtml=`<div style="margin-bottom:16px">
+      joAbcHtml=`<div style="margin-bottom:16px">
         <div class="feed-section-hd prio" style="border-radius:6px 6px 0 0;position:static">
-          <span class="feed-section-lbl">Signaux GSF — textes à impact direct</span>
+          <span class="feed-section-lbl">Signaux ABC — textes à impact direct</span>
           <span class="feed-section-badge">${filtered.length}</span>
         </div>
         ${filtered.map(item=>{
@@ -888,12 +887,12 @@ function renderJO(){
     }
   }
 
-  if(!items.length){groupEl.innerHTML=joGsfHtml+briefingHtml+'<div class="jo-empty">Aucun autre texte JO pour cette date</div>';return;}
+  if(!items.length){groupEl.innerHTML=joAbcHtml+briefingHtml+'<div class="jo-empty">Aucun autre texte JO pour cette date</div>';return;}
   const groups={};
   items.forEach(item=>{const nat=(item.nature||'AUTRE').toUpperCase(),label=JO_NATURES[nat]||nat||'Autre';if(!groups[label])groups[label]=[];if(!search||(item.titre||'').toLowerCase().includes(search))groups[label].push(item);});
   const total=Object.values(groups).reduce((s,g)=>s+g.length,0);
-  if(!total){groupEl.innerHTML=joGsfHtml+briefingHtml+'<div class="jo-empty">Aucun résultat</div>';return;}
-  groupEl.innerHTML=joGsfHtml+briefingHtml+Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([label,its])=>`<div class="jo-theme-group open"><div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')"><span class="jo-theme-name">${escHtml(label)}</span><span class="jo-theme-count">${its.length}</span><span class="jo-chevron">▶</span></div><div class="jo-items">${its.map(item=>`<div class="jo-item"><div class="jo-item-nature">${escHtml(item.nature||label)}</div><div class="jo-item-titre">${escHtml(item.titre)}</div>${item.url?`<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`:'<span style="font-size:10px;color:var(--muted2)">Pas de lien</span>'}</div>`).join('')}</div></div>`).join('');
+  if(!total){groupEl.innerHTML=joAbcHtml+briefingHtml+'<div class="jo-empty">Aucun résultat</div>';return;}
+  groupEl.innerHTML=joAbcHtml+briefingHtml+Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([label,its])=>`<div class="jo-theme-group open"><div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')"><span class="jo-theme-name">${escHtml(label)}</span><span class="jo-theme-count">${its.length}</span><span class="jo-chevron">▶</span></div><div class="jo-items">${its.map(item=>`<div class="jo-item"><div class="jo-item-nature">${escHtml(item.nature||label)}</div><div class="jo-item-titre">${escHtml(item.titre)}</div>${item.url?`<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`:'<span style="font-size:10px;color:var(--muted2)">Pas de lien</span>'}</div>`).join('')}</div></div>`).join('');
 }
 // STADES_ORDRE used in parlement + drawer progress bars
 const STADES_ORDRE=['Dépôt','Commission','Première lecture à l\'Assemblée nationale','Première lecture au Sénat','Commission mixte paritaire','Deuxième lecture au Sénat','Deuxième lecture à l\'Assemblée nationale','Texte définitivement adopté','Promulgation'];
@@ -920,7 +919,7 @@ function renderParlement(){
   let html='';
   if(fiches.length){
     html+=`<div class="feed-section-hd prio" style="border-radius:6px 6px 0 0;position:static">
-      <span class="feed-section-lbl">Signaux GSF — PJL à suivre</span>
+      <span class="feed-section-lbl">Signaux ABC — PJL à suivre</span>
       <span class="feed-section-badge">${fiches.length}</span>
     </div>`;
     const fichesSorted=[...fiches].sort((a,b)=>(b.date_depot||'').localeCompare(a.date_depot||''));
@@ -940,7 +939,7 @@ function renderParlement(){
             <span class="parl-score-badge parl-score${sc}">${SCORE_LABEL[sc]||'Veille'}</span>
           </div>
         </div>
-        ${(f.pourquoi||f.resume_gsf)?`<div class="parl-pourquoi">${escHtml(f.pourquoi||f.resume_gsf)}</div>`:''}
+        ${(f.pourquoi||f.resume_abc)?`<div class="parl-pourquoi">${escHtml(f.pourquoi||f.resume_abc)}</div>`:''}
         <div class="parl-progress">
           <div class="parl-progress-label">
             <span class="parl-stade-badge">${escHtml(f.stade||'Dépôt')}</span>
@@ -1069,7 +1068,7 @@ function renderSuivi(){
         <span class="crit-badge ${bl}">${sl}</span>
       </div>
       ${avt?`<div style="margin-bottom:6px"><span class="suivi-avt-badge">↑ ${escHtml(avt.nouveau_stade)} — ${formatDate(avt.created_at?.slice(0,10))}</span></div>`:''}
-      ${d.resume_gsf?`<div class="suivi-item-resume">${escHtml(d.resume_gsf)}</div>`:''}
+      ${d.resume_abc?`<div class="suivi-item-resume">${escHtml(d.resume_abc)}</div>`:''}
       <div class="suivi-item-meta">
         ${d.stade?`<span>${escHtml(d.stade)}</span>`:''}
         ${d.url_an||d.url_dossier?`<span>Avec URL</span>`:'<span style="color:var(--muted2)">Sans URL — scraping inactif</span>'}
@@ -1123,7 +1122,7 @@ async function openDossierDrawer(id){
   const idx=STADES_ORDRE.indexOf(d.stade);
   const pct=idx<0?0:Math.round((idx/(STADES_ORDRE.length-1))*100);
   document.getElementById('drawer-body').innerHTML=`
-    ${(d.pourquoi||d.resume_gsf)?`<div><div class="drawer-section-title">Pourquoi GSF</div><div class="parl-pourquoi">${escHtml(d.pourquoi||d.resume_gsf)}</div></div>`:''}
+    ${(d.pourquoi||d.resume_abc)?`<div><div class="drawer-section-title">Pourquoi ABC</div><div class="parl-pourquoi">${escHtml(d.pourquoi||d.resume_abc)}</div></div>`:''}
     ${d.stade?`<div><div class="parl-progress"><div class="parl-progress-label"><span class="parl-stade-badge">${escHtml(d.stade)}</span><span>${pct}%</span></div><div class="parl-progress-track"><div class="parl-progress-bar" style="width:${pct}%"></div></div></div></div>`:''}
     <div>
       <div class="drawer-section-title">Commentaires</div>
@@ -1153,7 +1152,7 @@ function renderDrawerComments(comments){
   if(!comments.length){el.innerHTML='<div style="font-size:12px;color:var(--muted);padding:6px 0">Aucun commentaire</div>';return;}
   el.innerHTML=comments.map(c=>`<div class="comment-item" id="comment-${c.id}">
     <div class="comment-meta">
-      <span class="comment-auteur">${escHtml(c.auteur||'GSF')}</span>
+      <span class="comment-auteur">${escHtml(c.auteur||'ABC')}</span>
       <span class="comment-date">${formatDate(c.created_at?.slice(0,10))}</span>
       <span class="comment-actions">
         <button onclick="startEditComment('${c.id}','${escHtml(c.dossier_id)}')" title="Modifier" style="background:none;border:none;cursor:pointer;color:var(--muted);font-size:11px;padding:0 4px">✎</button>
@@ -1261,7 +1260,7 @@ async function saveDossier(){
     url_an:urlAN,
     url_dossier:urlAN,
     statut:document.getElementById('form-statut')?.value||'a_surveiller',
-    resume_gsf:(document.getElementById('form-resume')?.value||'').trim()||null,
+    resume_abc:(document.getElementById('form-resume')?.value||'').trim()||null,
     pourquoi:(document.getElementById('form-pourquoi')?.value||'').trim()||null,
     source:'manuel',
   };
@@ -1278,7 +1277,7 @@ async function saveDossier(){
 }
 
 // ── Likes / Favoris ───────────────────────────────────────────────────
-function _likesLocalSave(){localStorage.setItem('gsf_likes',JSON.stringify(likes));}
+function _likesLocalSave(){localStorage.setItem('abc_likes',JSON.stringify(likes));}
 function updateLikesBadge(){
   const badge=document.getElementById('nav-likes-badge');
   const count=document.getElementById('likes-count');
@@ -1365,7 +1364,7 @@ function switchView(view){
 function formatDate(iso){if(!iso)return'—';const[y,m,d]=iso.split('-');const M=['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];return `${parseInt(d)} ${M[parseInt(m)-1]} ${y}`;}
 function escHtml(str){return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2500);}
-function getSessionToken(){let t=localStorage.getItem('gsf_session');if(!t){t=crypto.randomUUID();localStorage.setItem('gsf_session',t);}return t;}
+function getSessionToken(){let t=localStorage.getItem('abc_session');if(!t){t=crypto.randomUUID();localStorage.setItem('abc_session',t);}return t;}
 init();
 </script>
 </body>

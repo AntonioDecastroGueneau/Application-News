@@ -1,6 +1,6 @@
 -- ═══════════════════════════════════════════════════════════════
--- Veille GSF — Retour aux RLS permissives (anon key)
--- Annule la migration 002 — outil interne GSF, pas d'auth requise
+-- Veille ABC — Retour aux RLS permissives (anon key)
+-- Annule la migration 002 — outil interne ABC, pas d'auth requise
 -- ═══════════════════════════════════════════════════════════════
 
 -- ─── Supprimer les policies auth de la migration 002 ────────────
