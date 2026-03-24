@@ -75,12 +75,12 @@ GSF_CONTEXT_SHORT = (
 
 REGLEMENTS_PRIORITAIRES = [
     'CSRD', 'CSDDD', 'CS3D', 'SPASER', 'EUDR', 'CBAM', 'MACF',
-    'ISSB', 'BGES', 'BEGES', 'DPEF', 'ZFE', 'DPE',
+    'ISSB', 'BGES', 'BEGES', 'DPEF', 'ZFE',
     'ISO 14001', 'PPR', 'PNACC', 'SNBC',
     'Loi Énergie-Climat', 'Loi Energie-Climat',
     'Décret Tertiaire', 'Decret Tertiaire',
-    'Loi DDADUE', 'Omnibus', 'ESRS', 'SFDR', 'NFRD', 'ESG',
-    'REP', 'EPR', 'SBTi', 'ESPR',
+    'Loi DDADUE', 'Omnibus', 'ESRS', 'SFDR', 'NFRD',
+    'SBTi', 'ESPR',
     'Loi PACTE', 'Loi Devoir de Vigilance', 'Devoir de Vigilance',
     'Loi Climat et Résilience', 'Loi Climat Résilience',
     'Loi AGEC', 'Loi EGAlim', 'EGAlim',
