@@ -235,6 +235,7 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .feed-consulter-items .card { background: transparent; }
 .feed-consulter-items .card:hover { background: var(--surface3); }
 .empty-state { padding: 48px 20px; text-align: center; font-size: 13px; color: var(--muted); }
+.feed-empty-prio { padding: 32px 20px; font-size: 12px; color: var(--muted2); text-align: center; }
 
 /* ── Map / Carte view ────────────────────────────────────────────────── */
 #carte-view { position: relative; }
@@ -710,9 +711,11 @@ function renderFeed(){
         <span class="crit-badge crit${item.criticite}">${cl}</span>
         ${item.url?`<a class="card-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Lire →</a>`:''}
       </div></div>`;}
-  list.style.gridTemplateColumns=prio.length&&veille.length?'55fr 45fr':'1fr';
-  let html='';
-  if(prio.length)html+=`<div class="feed-col-prio"><div class="feed-section-hd prio"><span class="feed-section-lbl">Signaux prioritaires</span><span class="feed-section-badge">${prio.length}</span></div>`+prio.map(cardHtml).join('')+`</div>`;
+  list.style.gridTemplateColumns='55fr 45fr';
+  let html=`<div class="feed-col-prio">`;
+  if(prio.length)html+=`<div class="feed-section-hd prio"><span class="feed-section-lbl">Signaux prioritaires</span><span class="feed-section-badge">${prio.length}</span></div>`+prio.map(cardHtml).join('');
+  else html+=`<div class="feed-empty-prio">Aucun signal prioritaire aujourd'hui</div>`;
+  html+=`</div>`;
   if(veille.length)html+=`<div class="feed-col-consulter"><div class="feed-consulter-hd"><span class="feed-consulter-lbl">À consulter</span><span class="feed-section-badge" style="margin-left:auto">${veille.length}</span></div><div class="feed-consulter-items">${veille.map(cardHtml).join('')}</div></div>`;
   list.innerHTML=html;
 }
@@ -875,7 +878,8 @@ function renderParlement(){
       <span class="feed-section-lbl">Signaux GSF — PJL à suivre</span>
       <span class="feed-section-badge">${fiches.length}</span>
     </div>`;
-    html+=fiches.map(f=>{
+    const fichesSorted=[...fiches].sort((a,b)=>(b.date_depot||'').localeCompare(a.date_depot||''));
+    html+=fichesSorted.map(f=>{
       const idx=STADES_ORDRE.indexOf(f.stade);
       const pct=idx<0?0:Math.round((idx/(STADES_ORDRE.length-1))*100);
       const sc=f.score||1;
