@@ -68,7 +68,6 @@ def main() -> int:
     try:
         rss_items = fetch_rss(today_str)
         items.extend(rss_items)
-        stats['articles_presse'] = len(rss_items)
         source_counts['RSS'] = len(rss_items)
         if len(rss_items) == 0:
             log.warning("WARNING: SOURCE VIDE — RSS")
@@ -77,7 +76,6 @@ def main() -> int:
         log.error(f"RSS fatal : {e}")
         errors.append('RSS')
         meta_errors.append(f"RSS fatal : {e}")
-        stats['articles_presse'] = 0
         source_counts['RSS'] = 0
 
     # 3. VigiEau
@@ -98,8 +96,6 @@ def main() -> int:
     pjl_briefing = ''
     try:
         pjl_fiches, pjl_autres, pjl_briefing = fetch_parlement(script_dir, today_str)
-        stats['pjl_suivis'] = len(pjl_fiches)
-        stats['pjl_avancements'] = sum(1 for f in pjl_fiches if f.get('nouveau_stade'))
         source_counts['Parlement'] = len(pjl_fiches)
         if len(pjl_fiches) == 0:
             log.warning("WARNING: SOURCE VIDE — Parlement")
@@ -108,7 +104,6 @@ def main() -> int:
         log.error(f"Parlement fatal : {e}")
         errors.append('Parlement')
         meta_errors.append(f"Parlement fatal : {e}")
-        stats.update({'pjl_suivis': 0, 'pjl_avancements': 0})
         source_counts['Parlement'] = 0
 
     # Dedup + sort by criticite
@@ -122,9 +117,6 @@ def main() -> int:
         if item['id'] not in seen:
             seen.add(item['id'])
             unique.append(item)
-
-    for i, item in enumerate(unique):
-        item['top5'] = i < 5
 
     elapsed = round((datetime.now() - start).total_seconds())
     llm_stats = get_llm_stats()

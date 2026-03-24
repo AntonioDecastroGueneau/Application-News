@@ -25,9 +25,6 @@ def fetch_vigieau():
                 'dept_code': dept.get('code', ''),
                 'dept_nom': dept.get('nom', ''),
                 'niveau': niv,
-                'niveauSup': dept.get('niveauGraviteSupMax'),
-                'niveauSou': dept.get('niveauGraviteSouMax'),
-                'niveauAep': dept.get('niveauGraviteAepMax'),
             })
         restrictions.sort(key=lambda x: NIVEAUX_ORDRE.get(x['niveau'], 0), reverse=True)
         log.info(f"VigiEau : {len(restrictions)} départements en restriction")

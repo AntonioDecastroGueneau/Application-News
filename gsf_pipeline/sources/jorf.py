@@ -135,10 +135,8 @@ def fetch_jorf(today_str: str):
             # Tous les non-keyword vont directement dans autres
             for art in non_keyword:
                 autres.append({
-                    'nor': art.get('nor', ''),
                     'titre': art['titre'],
                     'nature': art.get('contenu', '').split(' — ')[0],
-                    'ministere': art.get('contenu', '').split(' — ')[1] if ' — ' in art.get('contenu', '') else '',
                     'url': art.get('url', ''),
                     'date': art.get('date', today_str),
                 })
@@ -171,12 +169,8 @@ def fetch_jorf(today_str: str):
 
                     if analysis.get('pertinent') is False:
                         autres.append({
-                            'nor': art.get('nor', ''),
                             'titre': art['titre'],
                             'nature': art.get('contenu', '').split(' — ')[0],
-                            'ministere': (
-                                art.get('contenu', '').split(' — ')[1] if ' — ' in art.get('contenu', '') else ''
-                            ),
                             'url': art.get('url', ''),
                             'date': art.get('date', today_str),
                         })
@@ -196,7 +190,6 @@ def fetch_jorf(today_str: str):
                         'resume': analysis.get('resume') or art['titre'],
                         'pourquoi': pourquoi,
                         'criticite': score,
-                        'impact_gsf': True,
                         'url': art.get('url', ''),
                         'date': today_str,
                     })

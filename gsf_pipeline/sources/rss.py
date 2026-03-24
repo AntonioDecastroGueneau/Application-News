@@ -173,7 +173,6 @@ def fetch_rss_source(source: dict, today_str: str):
                 'resume': analysis.get('resume') or titre,
                 'pourquoi': pourquoi,
                 'criticite': score,
-                'impact_gsf': score >= 2,
                 'url': url,
                 'date': article_date,
             })
@@ -205,7 +204,6 @@ def fetch_rss_source(source: dict, today_str: str):
                                 'resume': analysis.get('resume') or 'Source consultée via fallback.',
                                 'pourquoi': '',
                                 'criticite': 1,
-                                'impact_gsf': False,
                                 'url': fallback_url,
                                 'date': today_str,
                             })
@@ -261,7 +259,6 @@ def fetch_rss_source(source: dict, today_str: str):
                                 'resume': analysis.get('resume') or titre_art,
                                 'pourquoi': pourquoi,
                                 'criticite': score,
-                                'impact_gsf': score >= 2,
                                 'url': link['url'],
                                 'date': today_str,
                             })
