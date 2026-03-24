@@ -1,7 +1,7 @@
 {
   "date": "2026-03-24",
-  "generated_at": "21:02",
-  "elapsed_seconds": 140,
+  "generated_at": "21:10",
+  "elapsed_seconds": 163,
   "errors": [],
   "stats": {
     "jo_analyses": 12,
@@ -9,10 +9,10 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-03-24T21:02:21",
+    "run_at": "2026-03-24T21:10:43",
     "sources": {
       "JORF": 0,
-      "RSS": 11,
+      "RSS": 10,
       "VigiEau": 3,
       "Parlement": 0
     },
@@ -20,7 +20,7 @@
       "SOURCE VIDE — JORF : 0 textes retenus",
       "SOURCE VIDE — Parlement : 0 fiches"
     ],
-    "llm_calls": 53,
+    "llm_calls": 52,
     "llm_seconds": 53.5
   },
   "items": [
@@ -47,36 +47,25 @@
       "date": "2026-03-24"
     },
     {
-      "id": "388f8f0bf9e5",
-      "source": "EFRAG",
-      "categorie": "Déchets",
-      "titre": "EFRAG SRB Online Meeting 25 March 2026",
-      "resume": "L'article concerne une réunion de l'EFRAG sur les normes de reporting de durabilité (CSRD/ESRS), essentielle pour préparer le reporting extra-financier d'ABC conformément aux exigences réglementaires européennes.",
-      "pourquoi": "L'EFRAG (European Financial Reporting Advisory Group) est l'organisme clé pour l'élaboration des normes ESRS (European Sustainability Reporting Standards) sous la CSRD. ABC, en tant qu'entreprise soumise à la CSRD (selon sa taille et son secteur), doit suivre ces évolutions pour garantir la conformité de son reporting ESG et anticiper les attentes des parties prenantes. La réunion du 25 mars 2026 pourrait aborder des clarifications ou mises à jour sur les indicateurs de reporting, impactant directement la méthodologie de collecte de données d'ABC (scope 1/2/3, déchets, énergie, etc.).",
-      "criticite": 2,
-      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
-      "date": "2026-03-24"
-    },
-    {
-      "id": "77c9b98be4bd",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Dans l'Eure, le syndicat SERPN mise sur l'IA pour rénover son réseau d'eau",
-      "resume": "L'article illustre une innovation technologique (IA, jumeaux numériques) appliquée à la gestion patrimoniale, un domaine connexe aux enjeux de performance énergétique et de maintenance des infrastructures tertiaires ou industrielles des clients d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/retour-experience-syndicat-eau-SERPN-Leakmited-47724.php4#xtor=RSS-6",
-      "date": "2026-03-24"
-    },
-    {
       "id": "2c4265cb4f59",
       "source": "Novethic",
       "categorie": "Déchets",
       "titre": "Les entreprises à mission, un modèle qui résiste au backlash",
-      "resume": "L'article aborde le modèle des entreprises à mission, qui pourrait inspirer ABC pour renforcer sa stratégie RSE et son engagement climatique, notamment dans le cadre de la CSRD et de l'ISO 14001.",
+      "resume": "L'article aborde le modèle des entreprises à mission, pertinent pour ABC dans le cadre de sa démarche RSE et de son alignement avec les attentes clients en matière de responsabilité sociétale, bien que sans obligation réglementaire directe.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/entreprise-a-mission-barometre-2026-developpement-strategique",
+      "date": "2026-03-24"
+    },
+    {
+      "id": "6993765b1d17",
+      "source": "GreenUnivers",
+      "categorie": "Biodiversité",
+      "titre": "Bercy clarifie l’écosystème de la batterie avec « France Batterie »",
+      "resume": "L'article annonce la création de 'France Batterie', une structure dédiée à la filière batterie en France avec un objectif de 100-120 GWh de production d'ici 2030. Cela pourrait influencer les choix de mobilité durable d'ABC (électrification de la flotte, véhicules propres) et ses partenariats clients dans les secteurs industriels ou énergétiques.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/bercy-clarifie-lecosysteme-de-la-batterie-avec-france-batterie-419136/",
       "date": "2026-03-24"
     },
     {
@@ -84,21 +73,10 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Sébastien Lecornu fait appel aux certificats d’économies d’énergie comme arme anti-crise",
-      "resume": "Le gouvernement français renforce l'utilisation des Certificats d'Économies d'Énergie (CEE) pour accélérer l'électrification des usages, ce qui pourrait impacter les stratégies énergétiques des entreprises comme ABC dans leur gestion des sites clients.",
+      "resume": "Le gouvernement français renforce l'utilisation des Certificats d'Économies d'Énergie (CEE) pour accélérer l'électrification des usages, ce qui pourrait impacter les stratégies d'efficacité énergétique des entreprises de services comme ABC, notamment via des incitations financières ou des obligations réglementaires.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/sebastien-lecornu-fait-appel-aux-certificats-deconomies-denergie-comme-arme-anti-crise-419137/",
-      "date": "2026-03-24"
-    },
-    {
-      "id": "e74343e334fb",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "L’Espagne confirme sa confiance dans les renouvelables",
-      "resume": "L'article illustre une tendance européenne renforçant les investissements dans les énergies renouvelables, ce qui pourrait influencer les exigences carbone des clients d'ABC (notamment industriels ou énergétiques) et les inciter à accélérer leur décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/03/lespagne-confirme-sa-confiance-dans-les-renouvelables-419032/",
       "date": "2026-03-24"
     },
     {
@@ -106,7 +84,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Les incertitudes s’accumulent sur le financement du réseau électrique",
-      "resume": "L'article souligne les besoins massifs d'investissement dans les réseaux électriques français (200 Mds€ sur 15 ans), ce qui pourrait impacter les coûts énergétiques et les obligations de décarbonation des clients d'ABC (industrie, santé, nucléaire) via des tarifs ou des exigences renforcées.",
+      "resume": "L'article souligne les besoins massifs d'investissement dans les réseaux électriques français (200 Mds€ sur 15 ans), ce qui pourrait impacter les coûts énergétiques et la disponibilité des infrastructures pour les sites clients d'ABC, notamment dans un contexte d'électrification accrue des usages.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/les-incertitudes-saccumulent-sur-le-financement-du-reseau-electrique-418902/",
@@ -117,7 +95,7 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "Zevero Raises $7 Million to Scale Carbon Accounting and Management Platform Across New Markets",
-      "resume": "L'article présente une solution de comptabilité carbone (Zevero) qui pourrait être pertinente pour ABC dans le cadre de son reporting CSRD/ESRS ou de la gestion de ses émissions scope 1/2/3, notamment pour la flotte de véhicules et les déchets.",
+      "resume": "Zevero propose une solution de comptabilité carbone et gestion des émissions (scope 1/2/3) qui pourrait être utile pour ABC dans le cadre de son reporting CSRD/ESRS ou de la décarbonation de sa flotte et de ses activités.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets/?utm_source=rss&utm_medium=rss&utm_campaign=zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets",
@@ -128,10 +106,21 @@
       "source": "ESG Today",
       "categorie": "Biodiversité",
       "titre": "Procurement is Where Nature Strategy Becomes Real",
-      "resume": "L'article souligne l'importance d'intégrer les enjeux de biodiversité dans les stratégies d'achat des entreprises, un levier clé pour ABC qui doit aligner sa politique d'approvisionnement (produits de nettoyage, équipements, etc.) avec ses objectifs RSE et climatiques.",
+      "resume": "L'article souligne que la stratégie nature des entreprises est souvent déconnectée des décisions d'achat, alors que les achats représentent la majorité de leur impact et risque liés à la nature. Pour ABC, cela implique d'intégrer les enjeux de biodiversité dans sa politique d'achat (produits de nettoyage, équipements, etc.) pour aligner sa stratégie RSE avec ses dépenses réelles.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/procurement-is-where-nature-strategy-becomes-real/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-is-where-nature-strategy-becomes-real",
+      "date": "2026-03-24"
+    },
+    {
+      "id": "388f8f0bf9e5",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG SRB Online Meeting 25 March 2026",
+      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting de durabilité (ESRS), pertinente pour ABC dans le cadre de la préparation à la CSRD et au reporting extra-financier.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
       "date": "2026-03-24"
     },
     {
@@ -139,7 +128,7 @@
       "source": "EFRAG",
       "categorie": "Énergie",
       "titre": "EFRAG Welcomes a New Friend of EFRAG - Sustainability Reporting: Synesgy",
-      "resume": "L'adhésion de Synesgy à EFRAG renforce l'écosystème des outils de reporting ESG, ce qui pourrait influencer les méthodes de collecte de données pour la CSRD/ESRS chez ABC, notamment pour le reporting extra-financier et la traçabilité des données.",
+      "resume": "L'adhésion de Synesgy à EFRAG renforce l'écosystème des outils de reporting ESG, ce qui peut impacter la préparation de ABC au reporting CSRD/ESRS via des solutions digitales ou des partenariats.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-welcomes-a-new-friend-of-efrag-sustainability-reporting-synesgy",
@@ -798,5 +787,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles majeures, potentiellement impactantes pour les obligations RSE et le reporting extra-financier des entreprises. Aucun texte adopté ne semble directement lié à des enjeux climatiques ou environnementaux spécifiques pour les grandes entreprises de services."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des mesures environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises, notamment en matière de reporting extra-financier et de transition énergétique. Aucun autre texte ne traite directement de climat, énergie ou déchets, mais la loi de finances pour 2026 (n°2247) et le projet de lutte contre la vie chère dans les outre-mer (n°2046) pourraient influencer les politiques sociales et fiscales des entreprises."
 }
