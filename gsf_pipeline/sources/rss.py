@@ -215,6 +215,8 @@ def fetch_rss_source(source: dict, today_str: str):
                     for link in article_links:
                         try:
                             titre_art = link['titre']
+                            # Extract date from raw title BEFORE cleaning (AEF embeds date at end)
+                            title_dt = _date_from_text(titre_art)
                             # Clean navigation prefixes/suffixes (e.g. AEF: "À LA UNEVrai titre12/03/2026...")
                             titre_art = re.sub(r'^(À LA UNE|INTERVIEW|ANALYSE|TRIBUNE|REPORTAGE|EXCLUSIF)\s*', '', titre_art, flags=re.IGNORECASE).strip()
                             titre_art = re.sub(r'\s*\d{1,2}/\d{2}/\d{4}.*$', '', titre_art).strip()
@@ -222,10 +224,15 @@ def fetch_rss_source(source: dict, today_str: str):
                             titre_art = re.sub(r'\s*-\s*Dépêche\s+n°\s*\d+.*$', '', titre_art, flags=re.IGNORECASE).strip()
                             if not titre_art or len(titre_art) < 15:
                                 continue
-                            # Filtre date dans le titre (ex: Carbone 4 "Guidelines2 April 2020")
-                            title_dt = _date_from_text(titre_art)
+                            # If no date in raw title, try cleaned title (e.g. Carbone 4 "Guidelines2 April 2020")
+                            if title_dt is None:
+                                title_dt = _date_from_text(titre_art)
                             if title_dt and title_dt < fallback_cutoff:
                                 log.debug(f"Fallback date titre trop ancienne ({title_dt.date()}), exclu : {titre_art[:60]}")
+                                continue
+                            # Sources like AEF always embed the date — if absent, article is likely stale/nav
+                            if title_dt is None and source.get('require_date_in_title'):
+                                log.debug(f"Fallback sans date détectable, exclu : {titre_art[:60]}")
                                 continue
 
                             contenu = crawl_article(link['url']) or ''
