@@ -1,7 +1,7 @@
 {
   "date": "2026-03-24",
-  "generated_at": "14:14",
-  "elapsed_seconds": 222,
+  "generated_at": "14:23",
+  "elapsed_seconds": 194,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
@@ -9,18 +9,18 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-03-24T14:14:44",
+    "run_at": "2026-03-24T14:23:40",
     "sources": {
       "JORF": 0,
-      "RSS": 8,
+      "RSS": 10,
       "VigiEau": 3,
       "Parlement": 11
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 57,
-    "llm_seconds": 66.4
+    "llm_calls": 58,
+    "llm_seconds": 59.9
   },
   "items": [
     {
@@ -64,8 +64,8 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SRB Online Meeting 25 March 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting de durabilité (ESRS), pertinente pour la préparation de la CSRD et du reporting extra-financier de GSF.",
-      "pourquoi": "Le sujet concerne directement le reporting ESG (CSRD/ESRS), un enjeu clé pour GSF dans le cadre de ses obligations réglementaires et de ses engagements RSE. Bien que l'article ne mentionne pas explicitement GSF, il traite d'un cadre réglementaire impactant directement la stratégie de reporting de l'entreprise.",
+      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting ESG (CSRD/ESRS), pertinente pour GSF dans le cadre de ses obligations de reporting extra-financier (CSRD) et de conformité aux exigences clients.",
+      "pourquoi": "L'EFRAG est l'organisme européen clé pour l'élaboration des normes ESRS (European Sustainability Reporting Standards) applicables dans le cadre de la CSRD. GSF, en tant qu'entreprise soumise à la CSRD (selon sa taille et son secteur), doit suivre ces évolutions pour adapter ses processus de reporting ESG et répondre aux attentes de ses clients (notamment dans les secteurs nucléaire, santé et industrie).",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
       "date": "2026-03-24"
@@ -75,7 +75,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Les incertitudes s’accumulent sur le financement du réseau électrique",
-      "resume": "L'article souligne les besoins massifs d'investissement dans les réseaux électriques français pour accompagner l'électrification des usages, ce qui pourrait impacter les coûts énergétiques et les stratégies de décarbonation des entreprises comme GSF, notamment via l'électrification de sa flotte ou l'adaptation des sites clients.",
+      "resume": "L'article met en lumière les investissements massifs nécessaires pour moderniser et renforcer le réseau électrique français, ce qui pourrait impacter les coûts énergétiques et les stratégies de décarbonation des entreprises comme GSF, notamment via l'électrification des flottes et des sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/les-incertitudes-saccumulent-sur-le-financement-du-reseau-electrique-418902/",
@@ -95,11 +95,23 @@
       "image_url": "https://www.esgtoday.com/wp-content/uploads/2026/03/Zevero2.jpg"
     },
     {
+      "id": "be6b78493faa",
+      "source": "ESG Today",
+      "categorie": "Biodiversité",
+      "titre": "Procurement is Where Nature Strategy Becomes Real",
+      "resume": "L'article souligne l'importance de l'intégration des enjeux de biodiversité dans les stratégies d'achat des entreprises, ce qui pourrait influencer les exigences des clients de GSF en matière de reporting ESG et de durabilité des prestations.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/procurement-is-where-nature-strategy-becomes-real/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-is-where-nature-strategy-becomes-real",
+      "date": "2026-03-24",
+      "image_url": "https://www.esgtoday.com/wp-content/uploads/2026/03/Natcap-Leape.jpg"
+    },
+    {
       "id": "0098d72265b8",
       "source": "EFRAG",
       "categorie": "Énergie",
       "titre": "EFRAG Welcomes a New Friend of EFRAG - Sustainability Reporting: Synesgy",
-      "resume": "L'adhésion de Synesgy à EFRAG renforce l'écosystème des outils de reporting ESG, ce qui pourrait influencer les méthodes de collecte de données pour la CSRD/ESRS chez GSF.",
+      "resume": "Synesgy rejoint EFRAG comme partenaire pour le reporting de durabilité, renforçant l'alignement avec les ESRS (normes CSRD) que GSF devra appliquer dans son reporting extra-financier.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-welcomes-a-new-friend-of-efrag-sustainability-reporting-synesgy",
@@ -110,10 +122,22 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "HotRiver ou comment puiser la chaleur renouvelable dans les fleuves",
-      "resume": "L'article présente une solution innovante de récupération de chaleur renouvelable dans les fleuves, potentiellement applicable aux bâtiments tertiaires ou industriels où GSF intervient, offrant une alternative bas-carbone pour le chauffage.",
+      "resume": "L'article présente une solution innovante de récupération de chaleur renouvelable dans les fleuves, potentiellement applicable pour réduire l'empreinte carbone des sites clients de GSF (bureaux, hôpitaux, etc.) en substituant des systèmes de chauffage fossiles.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/hotriver-ou-comment-puiser-la-chaleur-renouvelable-dans-les-fleuves-418260/",
+      "date": "2026-03-23",
+      "image_url": ""
+    },
+    {
+      "id": "837d3f9e31ad",
+      "source": "Le Monde Planète",
+      "categorie": "Déchets",
+      "titre": "Flambée des carburants : le gouvernement fait pression sur les raffineurs et annonce des mesures de soutien indirectes pour la pêche, l’agriculture et les transports",
+      "resume": "L'article aborde indirectement la hausse des coûts énergétiques (carburants) qui impacte les coûts opérationnels de GSF, notamment sa flotte de véhicules (scope 1). Les mesures de soutien aux secteurs dépendants des carburants pourraient influencer les politiques clients en matière de décarbonation et de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/economie/article/2026/03/23/flambee-des-carburants-le-gouvernement-met-la-pression-sur-les-raffineurs-et-annonce-des-mesures-de-soutien-indirectes-pour-la-peche-et-les-transports_6673986_3234.html",
       "date": "2026-03-23",
       "image_url": ""
     }
@@ -1047,17 +1071,11 @@
       "pourquoi": "",
       "score": 3,
       "horizon": "",
-      "nouveau_stade": true,
+      "nouveau_stade": false,
       "manuel": false,
-      "historique": [
-        {
-          "date": "2026-03-24",
-          "stade": "Première lecture à l'Assemblée nationale",
-          "event": "Avancement : Dépôt → Première lecture à l'Assemblée nationale"
-        }
-      ],
+      "historique": [],
       "created_at": "2026-03-24T13:58:43.884605+00:00",
-      "updated_at": "2026-03-24",
+      "updated_at": "2026-03-24T14:13:19.909508+00:00",
       "supabase_id": "2cc6c8b1-a2e8-4391-8398-dd3a883f0ffa",
       "statut": "a_surveiller"
     },
@@ -1422,5 +1440,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l'UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises, notamment en matière de reporting extra-financier et de transition énergétique. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux majeurs pour une grande entreprise de services."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises, notamment en matière de reporting extra-financier et de transition écologique. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux majeurs pour les grandes entreprises de services."
 }
