@@ -479,8 +479,8 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
       <div class="nav-item active" data-view="feed" onclick="switchView('feed')"><span class="material-symbols-outlined nav-icon">feed</span>Feed</div>
       <div class="nav-item" data-view="carte" onclick="switchView('carte')"><span class="material-symbols-outlined nav-icon">water_drop</span>Carte Eau</div>
       <div class="nav-item" data-view="jo" onclick="switchView('jo')"><span class="material-symbols-outlined nav-icon">gavel</span>JO / DILA</div>
-      <div class="nav-item" data-view="likes" onclick="switchView('likes')"><span class="material-symbols-outlined nav-icon">bookmark</span>Favoris <span id="nav-likes-badge" style="margin-left:auto;font-size:9px;font-family:var(--mono);background:rgba(245,158,11,.15);color:#f59e0b;padding:1px 6px;border-radius:10px;display:none"></span></div>
-      <div class="nav-item" data-view="parlement" onclick="switchView('parlement')"><span class="material-symbols-outlined nav-icon">folder_open</span>Dossiers <span id="nav-parl-badge" style="margin-left:auto;font-size:9px;font-family:var(--mono);background:rgba(37,99,235,.15);color:var(--blue);padding:1px 6px;border-radius:10px;display:none"></span></div>
+      <div class="nav-item" data-view="likes" onclick="switchView('likes')"><span class="material-symbols-outlined nav-icon">bookmark</span>Favoris <span id="nav-likes-badge" style="margin-left:auto;font-size:9px;font-family:var(--mono);background:rgba(255,255,255,0.2);color:#ffffff;padding:1px 6px;border-radius:10px;display:none"></span></div>
+      <div class="nav-item" data-view="parlement" onclick="switchView('parlement')"><span class="material-symbols-outlined nav-icon">folder_open</span>Dossiers <span id="nav-parl-badge" style="margin-left:auto;font-size:9px;font-family:var(--mono);background:rgba(255,255,255,0.2);color:#ffffff;padding:1px 6px;border-radius:10px;display:none"></span></div>
     </div>
     <div class="sb-stats">
       <div class="sb-stats-grid">
@@ -919,12 +919,11 @@ function renderParlement(){
   }
 
   if(autres.length){
-    html+=`<div class="feed-consulter-hd" onclick="toggleConsulter(this)" style="border-radius:6px 6px 0 0">
+    html+=`<div class="feed-consulter-hd" style="border-radius:6px 6px 0 0">
       <span class="feed-consulter-lbl">À consulter — activité parlementaire du jour</span>
       <span class="feed-section-badge" style="margin-left:auto">${nbAutres} textes</span>
-      <span class="feed-chevron">▶</span>
     </div>
-    <div class="feed-consulter-items" style="display:none;border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px">`;
+    <div class="feed-consulter-items" style="border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px">`;
     autres.forEach(group=>{
       const items=group.items||[];
       html+=`<div class="jo-theme-group">
