@@ -717,10 +717,9 @@ function renderFeed(){
         <span class="crit-badge crit${item.criticite}">${cl}</span>
         ${item.url?`<a class="card-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Lire →</a>`:''}
       </div></div>`;}
-  list.style.gridTemplateColumns=prio.length?'55fr 45fr':'1fr';
-  let html=`<div class="feed-col-prio">`;
-  if(prio.length)html+=`<div class="feed-section-hd prio"><span class="feed-section-lbl">Signaux prioritaires</span><span class="feed-section-badge">${prio.length}</span></div>`+prio.map(cardHtml).join('');
-  html+=`</div>`;
+  list.style.gridTemplateColumns=prio.length&&veille.length?'55fr 45fr':'1fr';
+  let html='';
+  if(prio.length)html+=`<div class="feed-col-prio"><div class="feed-section-hd prio"><span class="feed-section-lbl">Signaux prioritaires</span><span class="feed-section-badge">${prio.length}</span></div>`+prio.map(cardHtml).join('')+`</div>`;
   if(veille.length)html+=`<div class="feed-col-consulter"><div class="feed-consulter-hd"><span class="feed-consulter-lbl">À consulter</span><span class="feed-section-badge" style="margin-left:auto">${veille.length}</span></div><div class="feed-consulter-items">${veille.map(cardHtml).join('')}</div></div>`;
   list.innerHTML=html;
 }
