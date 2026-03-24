@@ -471,8 +471,6 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
       <div class="sb-brand"><div class="sb-brand-dot"></div>GSF</div>
       <div class="sb-title">Veille Environnementale</div>
       <div class="sb-date" id="hdr-date">—</div>
-      <div id="hdr-status" class="sb-status">CHARGEMENT</div>
-      <div id="hdr-pipeline-badge" style="display:none"></div>
     </div>
     <div class="sb-nav">
       <div class="sb-section-lbl">Navigation</div>
@@ -658,7 +656,6 @@ async function init(){
     loadLikesFromSupa();
   }catch(e){
     document.getElementById('loading').style.display='none';
-    const s=document.getElementById('hdr-status');s.textContent='ERREUR';s.className='sb-status err';
     showToast('Impossible de charger les données');console.error(e);
   }
 }
@@ -667,10 +664,6 @@ function renderAll(){
   if(!D)return;
   const s=D.stats||{};
   document.getElementById('hdr-date').textContent=formatDate(D.date)+' — '+D.generated_at;
-  const se=document.getElementById('hdr-status');
-  se.textContent=D.errors?.length?'PARTIEL':'OK';se.className='sb-status'+(D.errors?.length?' err':'');
-  const badge=document.getElementById('hdr-pipeline-badge');
-  if(badge){const errs=D.pipeline_meta?.errors;if(errs?.length){const tip=errs.join('\n');badge.innerHTML=`<span class="pipeline-error-badge" title="${escHtml(tip)}">⚠ ${errs.length} source(s) en erreur</span>`;badge.style.display='block';}else{badge.style.display='none';}}
   const joRet=s.jo_retenus??0,prio=(D.items||[]).filter(i=>i.criticite>=2).length;
   document.getElementById('stat-jo-retenus').textContent=joRet;
   document.getElementById('stat-jo-retenus').className='stat-val'+(joRet===0?' zero':' accent');
