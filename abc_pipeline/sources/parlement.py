@@ -23,6 +23,42 @@ from ..supabase_sync import SupabaseSync
 log = logging.getLogger(__name__)
 
 
+def _is_pjl_non_environmental(titre: str) -> bool:
+    """
+    Pre-filter: reject PJLs with keywords indicating they are NOT environmental/climate/energy/RSE.
+    Returns True if PJL should be REJECTED (non-environmental).
+    """
+    titre_lower = titre.lower()
+    exclude_keywords = [
+        # Fiscalité, impôts
+        r'\bfiscal', r'\bimpôt', r'\bdouble\s+imposition', r'\bCSGI?\b',
+        # Justice pénale, extradition
+        r'\bextradition', r'\bjustice\b', r'\bpénal', r'\bcours?\s+pénale?',
+        r'\bréadmission', r'\bcriminalité', r'\bpolice\b',
+        # Diplomatie, accords internationaux génériques
+        r'\baccord\s+(?!.*(?:clima|énergi|déch|carbone|environnement|RSE|CSRD|durabilité))',  # accord NOT followed by climate/energy terms
+        r'\bconvention\s+(?!.*(?:climat|énergi|environnement|carbone))',  # convention NOT followed by env/climate terms
+        # Sécurité sociale, retraite
+        r'\bsécurité\s+social', r'\bretraite\b', r'\bpension',
+        # Affaires culturelles, restitution
+        r'\bculturel', r'\brestitution\s+de\s+biens', r'\bpatrimoine',
+        # Commerce, douanes (générique)
+        r'\bcommerce\s+(?!durabilité|carbon)', r'\bdouane(?!.*carbone)', r'\btrarifaire',
+        # Agriculture (générique, sauf si trajectoire transition)
+        r'\bagriculture\b(?!.*transition|durabilité)',
+        # Défense, armement, sécurité militaire
+        r'\bdéfense\b', r'\barmement', r'\bmilitaire',
+        # Transport public (hors intérêt RSE)
+        r'\btransport\s+public(?!.*véhicule|électrifi)',
+    ]
+    
+    for keyword in exclude_keywords:
+        if re.search(keyword, titre_lower):
+            return True  # Reject this PJL
+    
+    return False  # Keep for analysis
+
+
 def _detect_stade_rss(titre: str, description: str = '') -> str:
     texte = (titre + ' ' + (description or '')).lower()
     for stade, patterns in STADE_PATTERNS:
@@ -501,18 +537,19 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
 
             # Re-analyse if resume_abc is missing (e.g. after a data reset)
             if not fiche.get('resume_abc') and groq_used < PARLEMENT_MAX_GROQ:
-                url_doc = entry.get('url_doc', '')
-                content = _crawl_pjl_content(url_dossier, url_doc) if (url_dossier or url_doc) else ''
-                analysis = groq_analyse_pjl(titre, content or titre)
-                groq_used += 1
-                if analysis.get('pertinent'):
-                    fiche['resume_abc'] = analysis.get('resume', '')
-                    fiche['pourquoi'] = analysis.get('pourquoi', '')
-                    fiche['score'] = int(analysis.get('score', 1))
-                    fiche['horizon'] = analysis.get('horizon', '')
-                    if sync.ready:
-                        sync.upsert_dossier(fiche)
-                    log.info(f"Parlement re-analyse : {titre[:50]}")
+                if not _is_pjl_non_environmental(titre):
+                    url_doc = entry.get('url_doc', '')
+                    content = _crawl_pjl_content(url_dossier, url_doc) if (url_dossier or url_doc) else ''
+                    analysis = groq_analyse_pjl(titre, content or titre)
+                    groq_used += 1
+                    if analysis.get('pertinent'):
+                        fiche['resume_abc'] = analysis.get('resume', '')
+                        fiche['pourquoi'] = analysis.get('pourquoi', '')
+                        fiche['score'] = int(analysis.get('score', 1))
+                        fiche['horizon'] = analysis.get('horizon', '')
+                        if sync.ready:
+                            sync.upsert_dossier(fiche)
+                        log.info(f"Parlement re-analyse : {titre[:50]}")
             continue
 
         # Filter 1: keyword_match
@@ -532,7 +569,12 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
             cache_hits += 1
             cache_skipped += 1
         else:
-            # Filter 4: Groq quota for new PJLs
+            # Filter 4: Pre-filter non-environmental PJLs
+            if _is_pjl_non_environmental(titre):
+                groq_skipped += 1
+                continue
+
+            # Filter 5: Groq quota for new PJLs
             if groq_used >= PARLEMENT_MAX_GROQ:
                 groq_skipped += 1
                 continue
@@ -655,6 +697,9 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         if orphan_groq >= 5:
             break
         titre = fiche.get('titre', '')
+        # Pre-filter non-environmental PJLs
+        if _is_pjl_non_environmental(titre):
+            continue
         url_dossier = fiche.get('url_dossier', '')
         content = _crawl_pjl_content(url_dossier) if url_dossier else ''
         analysis = groq_analyse_pjl(titre, content or titre)
