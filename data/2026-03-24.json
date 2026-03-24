@@ -1,26 +1,26 @@
 {
   "date": "2026-03-24",
-  "generated_at": "15:55",
-  "elapsed_seconds": 156,
+  "generated_at": "20:43",
+  "elapsed_seconds": 165,
   "errors": [],
   "stats": {
-    "jo_analyses": 16,
+    "jo_analyses": 12,
     "jo_retenus": 0,
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-03-24T15:55:23",
+    "run_at": "2026-03-24T20:43:05",
     "sources": {
       "JORF": 0,
-      "RSS": 8,
+      "RSS": 11,
       "VigiEau": 3,
       "Parlement": 7
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 52,
-    "llm_seconds": 52.2
+    "llm_calls": 53,
+    "llm_seconds": 55.8
   },
   "items": [
     {
@@ -46,11 +46,55 @@
       "date": "2026-03-24"
     },
     {
+      "id": "388f8f0bf9e5",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG SRB Online Meeting 25 March 2026",
+      "resume": "L'article concerne une réunion de l'EFRAG sur les normes de reporting de durabilité (CSRD/ESRS), essentielle pour préparer le reporting extra-financier d'ABC conformément aux exigences réglementaires européennes.",
+      "pourquoi": "ABC est concerné par le reporting CSRD/ESRS (scope 3 inclus) et doit suivre les évolutions des normes EFRAG pour son reporting RSE. La réunion du 25 mars 2026 pourrait apporter des clarifications sur les attentes en matière de données environnementales (énergie, déchets, mobilité) et de traçabilité des émissions.",
+      "criticite": 2,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
+      "date": "2026-03-24"
+    },
+    {
+      "id": "6993765b1d17",
+      "source": "GreenUnivers",
+      "categorie": "Biodiversité",
+      "titre": "Bercy clarifie l’écosystème de la batterie avec « France Batterie »",
+      "resume": "L'article annonce la création de 'France Batterie', une structure publique-privée pour structurer la filière batterie en France d'ici 2030, ce qui pourrait influencer les stratégies clients d'ABC (nucléaire, santé, industrie) dans leur transition énergétique et leur reporting CSRD.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/bercy-clarifie-lecosysteme-de-la-batterie-avec-france-batterie-419136/",
+      "date": "2026-03-24"
+    },
+    {
+      "id": "1d66663e724e",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Sébastien Lecornu fait appel aux certificats d’économies d’énergie comme arme anti-crise",
+      "resume": "Le gouvernement français renforce l'utilisation des Certificats d'Économies d'Énergie (CEE) pour accélérer l'électrification des usages, ce qui pourrait impacter les stratégies d'efficacité énergétique des entreprises comme ABC dans le cadre de leurs obligations de reporting (CSRD) ou de leurs plans d'action climat.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/sebastien-lecornu-fait-appel-aux-certificats-deconomies-denergie-comme-arme-anti-crise-419137/",
+      "date": "2026-03-24"
+    },
+    {
+      "id": "2bf1d3e9aa99",
+      "source": "GreenUnivers",
+      "categorie": "Biodiversité",
+      "titre": "Le fonds Icon prend les rênes d’Enoé",
+      "resume": "Le changement de direction chez Enoé, producteur de centrales photovoltaïques détenu à 51% par le fonds Icon, pourrait influencer les dynamiques du marché des énergies renouvelables en France, un secteur pertinent pour ABC dans le cadre de sa stratégie énergétique et de son reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/le-fonds-icon-prend-les-renes-denoe-419140/",
+      "date": "2026-03-24"
+    },
+    {
       "id": "e74343e334fb",
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "L’Espagne confirme sa confiance dans les renouvelables",
-      "resume": "L'article illustre la tendance européenne de renforcement des énergies renouvelables face aux crises énergétiques, un contexte à surveiller pour les clients d'ABC (nucléaire, santé, industrie) et leurs exigences carbone.",
+      "resume": "L'article souligne l'engagement renforcé de l'Espagne en faveur des énergies renouvelables, ce qui pourrait influencer les politiques énergétiques européennes et indirectement les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/lespagne-confirme-sa-confiance-dans-les-renouvelables-419032/",
@@ -61,7 +105,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Les incertitudes s’accumulent sur le financement du réseau électrique",
-      "resume": "L'article souligne l'ampleur des investissements nécessaires pour moderniser et renforcer le réseau électrique français, ce qui pourrait impacter les coûts énergétiques et les stratégies de décarbonation des entreprises comme ABC, notamment via l'électrification des flottes et des sites clients.",
+      "resume": "L'article souligne l'ampleur des investissements nécessaires pour moderniser et renforcer le réseau électrique français, ce qui pourrait impacter indirectement les coûts énergétiques et les stratégies de décarbonation des entreprises comme ABC, notamment via des tarifs ou des incitations pour l'électrification des flottes ou des sites.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/les-incertitudes-saccumulent-sur-le-financement-du-reseau-electrique-418902/",
@@ -72,7 +116,7 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "Zevero Raises $7 Million to Scale Carbon Accounting and Management Platform Across New Markets",
-      "resume": "Zevero propose une solution de comptabilité carbone et gestion des émissions (scope 1/2/3) qui pourrait être utile pour ABC dans le cadre de son reporting CSRD/ESRS ou de la décarbonation de sa flotte et de ses activités.",
+      "resume": "Zevero propose une solution de comptabilité carbone pour mesurer, suivre et réduire les émissions, utile pour ABC dans le cadre de ses obligations CSRD/reporting ESG et de sa stratégie de décarbonation (scope 1/2/3).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets/?utm_source=rss&utm_medium=rss&utm_campaign=zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets",
@@ -83,21 +127,10 @@
       "source": "ESG Today",
       "categorie": "Biodiversité",
       "titre": "Procurement is Where Nature Strategy Becomes Real",
-      "resume": "L'article souligne que les stratégies nature des entreprises sont souvent déconnectées des décisions d'achat, alors que les biens et services achetés représentent la majorité des impacts et risques liés à la nature. Pour ABC, cela implique de mieux intégrer les enjeux biodiversité dans sa politique d'achats et de prestations.",
+      "resume": "L'article souligne que les stratégies nature des entreprises sont souvent déconnectées des décisions d'achat, alors que les achats représentent la majorité de leur impact et risque liés à la nature. Pour ABC, cela implique d'intégrer les enjeux biodiversité dans sa politique d'achat (produits, services, fournisseurs) pour aligner sa stratégie RSE avec ses dépenses réelles.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/procurement-is-where-nature-strategy-becomes-real/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-is-where-nature-strategy-becomes-real",
-      "date": "2026-03-24"
-    },
-    {
-      "id": "388f8f0bf9e5",
-      "source": "EFRAG",
-      "categorie": "Déchets",
-      "titre": "EFRAG SRB Online Meeting 25 March 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG sur les normes de reporting de durabilité (ESRS) qui impactera directement les exigences de reporting extra-financier (CSRD) pour ABC, notamment pour la collecte de données sur les scopes 1, 2 et 3.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
       "date": "2026-03-24"
     },
     {
@@ -105,7 +138,7 @@
       "source": "EFRAG",
       "categorie": "Énergie",
       "titre": "EFRAG Welcomes a New Friend of EFRAG - Sustainability Reporting: Synesgy",
-      "resume": "Synesgy rejoint EFRAG comme partenaire pour soutenir les ESRS (normes de reporting CSRD), ce qui impacte indirectement ABC via les exigences de reporting extra-financier de ses clients et la préparation à la CSRD.",
+      "resume": "L'adhésion de Synesgy à EFRAG renforce l'écosystème des outils de reporting extra-financier en Europe, ce qui pourrait influencer les exigences de reporting CSRD/ESRS pour ABC et ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-welcomes-a-new-friend-of-efrag-sustainability-reporting-synesgy",
@@ -130,6 +163,48 @@
     }
   ],
   "jo_autres": [
+    {
+      "titre": "Arrêté du 23 mars 2026 portant application du 5 de l'article 38 du code des douanes",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711591",
+      "date": "2026-03-24"
+    },
+    {
+      "titre": "Arrêté du 20 mars 2026 modifiant la liste des spécialités pharmaceutiques agréées à l'usage des collectivités et divers services publics",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711499",
+      "date": "2026-03-24"
+    },
+    {
+      "titre": "Arrêté du 20 mars 2026 modifiant la liste des spécialités pharmaceutiques remboursables aux assurés sociaux",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711512",
+      "date": "2026-03-24"
+    },
+    {
+      "titre": "Arrêté du 20 mars 2026 modifiant la liste des spécialités pharmaceutiques agréées à l'usage des collectivités et divers services publics",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711525",
+      "date": "2026-03-24"
+    },
+    {
+      "titre": "Arrêté du 23 mars 2026 modifiant la liste des spécialités pharmaceutiques remboursables aux assurés sociaux",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711543",
+      "date": "2026-03-24"
+    },
+    {
+      "titre": "Arrêté du 23 mars 2026 modifiant la liste des spécialités pharmaceutiques agréées à l'usage des collectivités et divers services publics",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711552",
+      "date": "2026-03-24"
+    },
+    {
+      "titre": "Arrêté du 23 mars 2026 portant ouverture de crédits de fonds de concours",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711616",
+      "date": "2026-03-24"
+    },
     {
       "titre": "Arrêté du 19 mars 2026 modifiant la liste des spécialités pharmaceutiques remboursables aux assurés sociaux",
       "nature": "ARRETE",
@@ -197,52 +272,16 @@
       "date": "2026-03-24"
     },
     {
-      "titre": "Arrêté du 20 mars 2026 modifiant la liste des spécialités pharmaceutiques agréées à l'usage des collectivités et divers services publics",
+      "titre": "Arrêté du 12 mars 2026 modifiant la liste des spécialités pharmaceutiques remboursables aux assurés sociaux",
       "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711499",
-      "date": "2026-03-24"
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053679323",
+      "date": "2026-03-17"
     },
     {
-      "titre": "Arrêté du 20 mars 2026 modifiant la liste des spécialités pharmaceutiques remboursables aux assurés sociaux",
+      "titre": "Arrêté du 12 mars 2026 modifiant la liste des spécialités pharmaceutiques agréées à l'usage des collectivités et divers services publics",
       "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711512",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 20 mars 2026 modifiant la liste des spécialités pharmaceutiques agréées à l'usage des collectivités et divers services publics",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711525",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 23 mars 2026 modifiant la liste des spécialités pharmaceutiques remboursables aux assurés sociaux",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711543",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 23 mars 2026 modifiant la liste des spécialités pharmaceutiques agréées à l'usage des collectivités et divers services publics",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711552",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 23 mars 2026 portant application du 5 de l'article 38 du code des douanes",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711591",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 23 mars 2026 portant ouverture de crédits de fonds de concours",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711616",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Décision du 23 mars 2026 modifiant la décision du 12 novembre 2024 portant délégation de signature (direction générale de la police nationale)",
-      "nature": "DECISION",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711255",
-      "date": "2026-03-24"
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053679334",
+      "date": "2026-03-17"
     },
     {
       "titre": "Arrêté du 19 mars 2026 modifiant l'arrêté du 30 avril 2007 portant application des dispositions du décret n° 2007-640 du 30 avril 2007 fixant les conditions et les modalités de règlement des frais occasionnés par les changements de résidence des militaires",
@@ -254,6 +293,12 @@
       "titre": "Arrêté du 19 mars 2026 modifiant l'arrêté du 5 mai 2022 relatif aux distances utilisées pour les formules des voies aériennes et maritimes applicables aux changements de résidence hors métropole",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711273",
+      "date": "2026-03-24"
+    },
+    {
+      "titre": "Décision du 23 mars 2026 modifiant la décision du 12 novembre 2024 portant délégation de signature (direction générale de la police nationale)",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711255",
       "date": "2026-03-24"
     },
     {
@@ -305,300 +350,6 @@
       "date": "2026-03-24"
     },
     {
-      "titre": "Arrêté du 17 mars 2026 portant nomination dans le corps des assistants de service social des administrations de l'Etat au sein du ministère des armées organisé au titre de l'année 2026",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711695",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 17 mars 2026 portant nomination dans le corps des assistants de service social des administrations de l'Etat au sein du ministère des armées organisé au titre de l'année 2026",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711697",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711702",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711704",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711706",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711708",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711710",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711712",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711714",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711716",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711718",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711720",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711722",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711724",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711726",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711728",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711730",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711732",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711734",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711736",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711738",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711740",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711742",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711744",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711746",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711748",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711750",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711752",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711754",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711756",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711758",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711760",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711762",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711764",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711766",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 28 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711768",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 29 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711770",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 29 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711772",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 29 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711774",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 29 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711776",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 29 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711778",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 29 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711780",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 29 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711782",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 29 janvier 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711784",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 30 janvier 2026 portant changement de corps sur liste d'aptitude (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711786",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 30 janvier 2026 portant changement de corps sur liste d'aptitude (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711788",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 2 février 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711790",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 2 février 2026 portant promotion de grade (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711792",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 17 février 2026 portant changement de corps sur liste d'aptitude (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711794",
-      "date": "2026-03-24"
-    },
-    {
       "titre": "Arrêté du 16 mars 2026 portant nomination sur un emploi des services d'inspection générale ou de contrôle (inspection générale des affaires sociales)",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711796",
@@ -617,30 +368,6 @@
       "date": "2026-03-24"
     },
     {
-      "titre": "Arrêté du 18 décembre 2025 portant admission à la retraite (ingénieurs des ponts, des eaux et des forêts)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711824",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 17 mars 2026 portant admission à la retraite (ingénieurs des ponts, des eaux et des forêts)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711826",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 18 mars 2026 portant admission à la retraite (ingénieurs des ponts, des eaux et des forêts)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711828",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 13 mars 2026 portant admission à la retraite (agents diplomatiques et consulaires)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711831",
-      "date": "2026-03-24"
-    },
-    {
       "titre": "Arrêté du 19 mars 2026 modifiant l'arrêté du 5 mars 2026 portant désignation des anciens auditeurs de la sixième promotion du collège des hautes études de l'Académie diplomatique (cycle 2025, promotion Romain Gary)",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711833",
@@ -653,63 +380,9 @@
       "date": "2026-03-24"
     },
     {
-      "titre": "Arrêté du 12 mars 2026 portant nomination au conseil d'administration de l'Agence nationale de la recherche",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711854",
-      "date": "2026-03-24"
-    },
-    {
       "titre": "Arrêté du 17 mars 2026 portant cessation de fonctions au cabinet du ministre des transports",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711857",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Groupes politiques",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711923",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Commissions et organes de contrôle",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711925",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Documents et publications",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711927",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Commissions / organes temporaires",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711930",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Délégations parlementaires",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711932",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Documents déposés",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711934",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Documents publiés",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711936",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Rapports au parlement",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711938",
       "date": "2026-03-24"
     },
     {
@@ -725,40 +398,10 @@
       "date": "2026-03-24"
     },
     {
-      "titre": "Avis relatif aux prix de spécialités pharmaceutiques",
-      "nature": "AVIS",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711956",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Avis relatif à la décision de l'Union nationale des caisses d'assurance maladie portant fixation du taux de participation de l'assuré applicable à des spécialités pharmaceutiques",
-      "nature": "AVIS",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711958",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Avis relatif aux prix de spécialités pharmaceutiques",
-      "nature": "AVIS",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711960",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Avis relatif aux prix de spécialités pharmaceutiques",
-      "nature": "AVIS",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711962",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Avis relatif aux décisions de l'Union nationale des caisses d'assurance maladie portant fixation des taux de participation de l'assuré applicables à des spécialités pharmaceutiques",
-      "nature": "AVIS",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711964",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Demandes de changement de nom (Accès protégé textes 121 à 145)",
-      "nature": "ANNONCES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711971",
-      "date": "2026-03-24"
+      "titre": "Décret n° 2026-193 du 18 mars 2026 modifiant le décret n° 2019-1088 du 25 octobre 2019 relatif au système d'information et de communication de l'Etat et à la direction interministérielle du numérique",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053700822",
+      "date": "2026-03-19"
     },
     {
       "titre": "Arrêté du 23 mars 2026 portant ouverture de crédits d'attributions de produits",
@@ -803,21 +446,9 @@
       "date": "2026-03-24"
     },
     {
-      "titre": "Arrêté du 18 mars 2026 portant attribution du titre de peintre des armées, spécialité peintre de l'air et de l'espace",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711699",
-      "date": "2026-03-24"
-    },
-    {
       "titre": "Arrêté du 23 mars 2026 portant cessation de fonctions au cabinet du ministre des petites et moyennes entreprises, du commerce, de l'artisanat, du tourisme et du pouvoir d'achat",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711814",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Arrêté du 20 janvier 2026 portant inscription sur une liste d'aptitude (conservateurs territoriaux du patrimoine)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711844",
       "date": "2026-03-24"
     },
     {
@@ -842,18 +473,6 @@
       "titre": "Recommandations en urgence du 3 février 2026 relatives au pôle de psychiatrie du groupe hospitalier Sud Ile-de-France à Melun (Seine-et-Marne)",
       "nature": "RECOMMANDATION",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711911",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Avis relatif à la tarification du pied à restitution d'énergie de classe I TROY PLUS visé à l'article L. 165-1 du code de la sécurité sociale",
-      "nature": "AVIS",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711966",
-      "date": "2026-03-24"
-    },
-    {
-      "titre": "Avis relatif à la tarification du pied à restitution d'énergie de classe III SYNERGY X3 LP visé à l'article L. 165-1 du code de la sécurité sociale",
-      "nature": "AVIS",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053711968",
       "date": "2026-03-24"
     }
   ],
@@ -1326,5 +945,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale, énergétique et agricole est le plus pertinent pour un Responsable Environnement/Climat, avec des implications potentielles sur la réglementation climatique, la transition énergétique et les normes environnementales. Aucun autre texte ne semble directement lié aux enjeux RSE majeurs (climat, énergie, déchets) ou au reporting extra-financier."
+  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale, énergétique et agricole est le plus pertinent pour un Responsable Environnement/Climat, avec des implications sur la transition écologique, la réglementation des déchets et le reporting RSE. Aucun autre texte ne traite directement de ces enjeux."
 }
