@@ -66,7 +66,7 @@ def main() -> int:
 
     # 2. RSS / Presse
     try:
-        rss_items = fetch_rss(today_str)
+        rss_items = fetch_rss(today_str, script_dir)
         items.extend(rss_items)
         source_counts['RSS'] = len(rss_items)
         if len(rss_items) == 0:

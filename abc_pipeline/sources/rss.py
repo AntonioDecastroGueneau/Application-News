@@ -1,9 +1,11 @@
 import html
+import json
 import logging
 import re
 import time
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
+from pathlib import Path
 
 import feedparser
 import requests
@@ -50,7 +52,7 @@ def _date_from_text(text: str):
     return None
 
 
-def fetch_rss_source(source: dict, today_str: str):
+def fetch_rss_source(source: dict, today_str: str, seen_urls: dict = None, new_seen: dict = None):
     items = []
     name = source['name']
 
@@ -212,6 +214,9 @@ def fetch_rss_source(source: dict, today_str: str):
                     fallback_cutoff = (now - timedelta(days=3)).replace(hour=18, minute=0, second=0, microsecond=0) if now.weekday() == 0 else now - timedelta(hours=24)
                     for link in article_links:
                         try:
+                            if seen_urls is not None and link['url'] in seen_urls:
+                                log.debug(f"Fallback déjà vu, ignoré : {link['url']}")
+                                continue
                             titre_art = link['titre']
                             # Extract date from raw title BEFORE cleaning (AEF embeds date at end)
                             title_dt = _date_from_text(titre_art)
@@ -254,6 +259,10 @@ def fetch_rss_source(source: dict, today_str: str):
                             # Use date extracted from article HTML if available, else today
                             article_date = get_crawled_date(link['url']) or today_str
 
+                            # Mark URL as seen
+                            if new_seen is not None:
+                                new_seen[link['url']] = today_str
+
                             items.append({
                                 'id': make_id(name, titre_art),
                                 'source': name,
@@ -275,14 +284,40 @@ def fetch_rss_source(source: dict, today_str: str):
     return items
 
 
-def fetch_rss(today_str: str):
+def fetch_rss(today_str: str, script_dir: Path = None):
     log.info("=== RSS ===")
+
+    # ── Cache des URLs déjà vus pour les sources fallback_crawl ──────────
+    seen_cache: dict = {}
+    seen_path: Path | None = None
+    if script_dir:
+        seen_path = script_dir / 'data' / 'rss_seen.json'
+        if seen_path.exists():
+            try:
+                seen_cache = json.loads(seen_path.read_text(encoding='utf-8'))
+            except Exception:
+                seen_cache = {}
+        # Purge entries older than 30 days
+        cutoff = (datetime.now() - timedelta(days=30)).strftime('%Y-%m-%d')
+        seen_cache = {url: d for url, d in seen_cache.items() if d >= cutoff}
+
+    new_seen: dict = {}
+
     all_items = []
     for source in RSS_SOURCES:
-        items = fetch_rss_source(source, today_str)
+        is_fallback = bool(source.get('fallback_crawl'))
+        items = fetch_rss_source(source, today_str, seen_urls=seen_cache if is_fallback else None, new_seen=new_seen if is_fallback else None)
         if not items:
             log.warning(f"SOURCE VIDE : {source['name']} — 0 articles retenus")
         all_items.extend(items)
         log.info(f"RSS {source['name']} : {len(items)} retenus")
+
+    # Save updated seen cache
+    if seen_path is not None and new_seen:
+        seen_cache.update(new_seen)
+        seen_path.parent.mkdir(parents=True, exist_ok=True)
+        seen_path.write_text(json.dumps(seen_cache, ensure_ascii=False, indent=2), encoding='utf-8')
+        log.info(f"RSS seen cache : {len(new_seen)} nouvelle(s) URL(s) ajoutée(s), total {len(seen_cache)}")
+
     return all_items
 
