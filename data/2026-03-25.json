@@ -1,7 +1,7 @@
 {
   "date": "2026-03-25",
-  "generated_at": "07:48",
-  "elapsed_seconds": 137,
+  "generated_at": "14:22",
+  "elapsed_seconds": 154,
   "errors": [],
   "stats": {
     "jo_analyses": 14,
@@ -9,10 +9,10 @@
     "depts_restriction": 0
   },
   "pipeline_meta": {
-    "run_at": "2026-03-25T07:48:07",
+    "run_at": "2026-03-25T14:22:28",
     "sources": {
       "JORF": 0,
-      "RSS": 10,
+      "RSS": 8,
       "VigiEau": 0,
       "Parlement": 1
     },
@@ -20,7 +20,7 @@
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 50,
-    "llm_seconds": 49.1
+    "llm_seconds": 61.5
   },
   "items": [
     {
@@ -35,14 +35,36 @@
       "date": "2026-03-25"
     },
     {
-      "id": "2ab7ab37d41b",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Climat : en 2050, la chaleur devrait provoquer dix fois plus de morts dans les pays pauvres que dans les pays riches",
-      "resume": "L'article souligne les inégalités d'adaptation face aux risques climatiques, un enjeu indirect pour ABC via les aléas climatiques sur ses 3 000+ sites clients et les exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "id": "80e0471ad9c1",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Déchets : le tarif de la redevance peut être modulé en cas de différence de situation",
+      "resume": "L'article confirme la modulation possible des tarifs de redevance des déchets, ce qui pourrait impacter les coûts de gestion des déchets pour ABC et ses clients, notamment dans le cadre des obligations REP et de la traçabilité des flux.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/03/25/climat-en-2050-la-chaleur-devrait-provoquer-dix-fois-plus-de-morts-dans-les-pays-pauvres-que-dans-les-pays-riches_6674144_3244.html",
+      "url": "https://www.actu-environnement.com/ae/news/dechets-tarif-redevance-difference-situation-47743.php4#xtor=RSS-6",
+      "date": "2026-03-25"
+    },
+    {
+      "id": "1ab63e61fdf1",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "Brookfield, La Caisse Acquire Clean Energy Platform Boralex for $6.5 Billion",
+      "resume": "Achat d'une plateforme d'énergie renouvelable par Brookfield et La Caisse peut influencer les stratégies d'ABC en matière d'énergie et de mobilité durable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/brookfield-la-caisse-acquire-clean-energy-platform-boralex-for-6-5-billion/?utm_source=rss&utm_medium=rss&utm_campaign=brookfield-la-caisse-acquire-clean-energy-platform-boralex-for-6-5-billion",
+      "date": "2026-03-25"
+    },
+    {
+      "id": "9360635e957a",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "EFRAG to Engage with Large Companies on Voluntary Sustainability Reporting",
+      "resume": "L'EFRAG lance une consultation sur le reporting volontaire de durabilité pour les grandes entreprises, ce qui pourrait influencer les exigences de reporting ESG (CSRD/ESRS) pour ABC dans le cadre de ses obligations clients (nucléaire, santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/efrag-to-engage-with-large-companies-on-voluntary-sustainability-reporting-standard/?utm_source=rss&utm_medium=rss&utm_campaign=efrag-to-engage-with-large-companies-on-voluntary-sustainability-reporting-standard",
       "date": "2026-03-25"
     },
     {
@@ -50,7 +72,7 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SRB Online Meeting 25 March 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting de durabilité (ESRS), cruciales pour la conformité CSRD de ABC et ses clients.",
+      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting ESG (CSRD/ESRS), pertinente pour préparer le reporting extra-financier de ABC dans le cadre de la CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
@@ -61,21 +83,21 @@
       "source": "EFRAG",
       "categorie": "Énergie",
       "titre": "EFRAG Welcomes a New Friend of EFRAG - Sustainability Reporting: Synesgy",
-      "resume": "L'adhésion de Synesgy à EFRAG renforce l'écosystème des outils de reporting ESG, ce qui pourrait influencer les exigences de reporting extra-financier (CSRD/ESRS) pour ABC et ses clients, notamment dans le cadre de la décarbonation et de la traçabilité des données.",
+      "resume": "L'adhésion de Synesgy à EFRAG renforce l'écosystème des outils de reporting ESG, ce qui pourrait influencer les exigences en matière de données et de traçabilité pour les entreprises comme ABC dans le cadre de la CSRD/ESRS.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-welcomes-a-new-friend-of-efrag-sustainability-reporting-synesgy",
       "date": "2026-03-25"
     },
     {
-      "id": "7061b84710cb",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "CSRD 2026, de l'ambition à la simplification : quelles entreprises restent concernées ?",
-      "resume": "CSRD 2026, de l'ambition à la simplification : quelles entreprises restent concernées ?",
-      "pourquoi": "Mention de CSRD.",
-      "criticite": 3,
-      "url": "https://www.actu-environnement.com/ae/news/CSRD-2026-ambition-simplification-entreprises-concernees-47718.php4#xtor=RSS-6",
+      "id": "3f5e3f0fade3",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Les incertitudes s’accumulent sur le financement du réseau électrique",
+      "resume": "L'article souligne l'ampleur des investissements nécessaires pour moderniser le réseau électrique français, ce qui pourrait impacter les coûts énergétiques et la disponibilité de l'électricité pour les sites clients d'ABC, notamment dans un contexte d'électrification accrue des activités.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/les-incertitudes-saccumulent-sur-le-financement-du-reseau-electrique-418902/",
       "date": "2026-03-24"
     },
     {
@@ -83,54 +105,10 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Sébastien Lecornu fait appel aux certificats d’économies d’énergie comme arme anti-crise",
-      "resume": "Le gouvernement français renforce l'utilisation des Certificats d'Économies d'Énergie (CEE) pour accélérer l'électrification des usages, ce qui pourrait impacter les stratégies énergétiques des entreprises comme ABC, notamment via des incitations à la rénovation énergétique ou à l'adoption de solutions bas-carbone.",
+      "resume": "L'article souligne l'optimisation des Certificats d'Économies d'Énergie (CEE) pour accélérer l'électrification des usages, ce qui pourrait impacter les stratégies énergétiques des entreprises comme ABC dans leur gestion des sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/sebastien-lecornu-fait-appel-aux-certificats-deconomies-denergie-comme-arme-anti-crise-419137/",
-      "date": "2026-03-24"
-    },
-    {
-      "id": "e74343e334fb",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "L’Espagne confirme sa confiance dans les renouvelables",
-      "resume": "L'article souligne l'accélération des investissements espagnols dans les énergies renouvelables, un contexte qui pourrait influencer les exigences carbone des clients industriels d'ABC (notamment en Europe) et renforcer les attentes en matière de décarbonation des prestations de services.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/03/lespagne-confirme-sa-confiance-dans-les-renouvelables-419032/",
-      "date": "2026-03-24"
-    },
-    {
-      "id": "3f5e3f0fade3",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Les incertitudes s’accumulent sur le financement du réseau électrique",
-      "resume": "L'article souligne l'ampleur des investissements nécessaires dans les réseaux électriques français pour accompagner l'électrification des usages, ce qui impacte indirectement ABC via la disponibilité et le coût de l'énergie pour ses clients (notamment tertiaires) et ses propres besoins énergétiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/03/les-incertitudes-saccumulent-sur-le-financement-du-reseau-electrique-418902/",
-      "date": "2026-03-24"
-    },
-    {
-      "id": "64e59b40e4c7",
-      "source": "ESG Today",
-      "categorie": "Climat",
-      "titre": "Zevero Raises $7 Million to Scale Carbon Accounting and Management Platform Across New Markets",
-      "resume": "Zevero propose une solution de comptabilité carbone pour mesurer, suivre et réduire les émissions, utile pour ABC dans le cadre de ses obligations de reporting (CSRD, BGES) et de décarbonation de sa flotte ou de ses prestations.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets/?utm_source=rss&utm_medium=rss&utm_campaign=zevero-raises-7-million-to-scale-carbon-management-platform-across-new-markets",
-      "date": "2026-03-24"
-    },
-    {
-      "id": "be6b78493faa",
-      "source": "ESG Today",
-      "categorie": "Biodiversité",
-      "titre": "Procurement is Where Nature Strategy Becomes Real",
-      "resume": "L'article souligne l'importance d'intégrer les enjeux de biodiversité dans les stratégies d'achat des entreprises, un levier clé pour ABC qui doit évaluer l'impact environnemental de sa chaîne d'approvisionnement (produits de nettoyage, équipements, etc.) dans son reporting ESG et sa démarche ISO 14001.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/procurement-is-where-nature-strategy-becomes-real/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-is-where-nature-strategy-becomes-real",
       "date": "2026-03-24"
     }
   ],
@@ -756,7 +734,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés et avis du JO du 25/03/2026 n'abordent pas directement des enjeux environnementaux ou climatiques majeurs pour une grande entreprise de services, à l'exception de l'avis sur la pêche de loisir du thon rouge (12), qui pourrait impacter des politiques RSE liées à la biodiversité ou à la durabilité des ressources halieutiques.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1104,5 +1082,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le seul texte directement pertinent pour un Responsable Environnement/Climat, avec des implications potentielles sur la réglementation climatique, la transition énergétique et les obligations de reporting. Aucun autre texte adopté ou projet de loi ne traite explicitement de sujets RSE, déchets ou reporting extra-financier."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises en matière de reporting extra-financier, de décarbonation et de gestion des déchets. Aucun autre texte ne semble directement lié aux enjeux climatiques ou environnementaux pour une entreprise de services."
 }
