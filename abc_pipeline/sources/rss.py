@@ -9,7 +9,7 @@ import feedparser
 import requests
 
 from ..config import RSS_SOURCES, TIMEOUT
-from ..crawl import crawl_article, crawl_article_links, crawl_article_links_filtered
+from ..crawl import crawl_article, crawl_article_links, crawl_article_links_filtered, get_crawled_date
 from ..filters import categorise, keyword_match, make_id
 from ..llm import groq_analyse_rss
 
@@ -251,6 +251,9 @@ def fetch_rss_source(source: dict, today_str: str):
                             score = int(analysis.get('score') or 1)
                             pourquoi = analysis.get('pourquoi', '') if score >= 2 else ''
 
+                            # Use date extracted from article HTML if available, else today
+                            article_date = get_crawled_date(link['url']) or today_str
+
                             items.append({
                                 'id': make_id(name, titre_art),
                                 'source': name,
@@ -260,7 +263,7 @@ def fetch_rss_source(source: dict, today_str: str):
                                 'pourquoi': pourquoi,
                                 'criticite': score,
                                 'url': link['url'],
-                                'date': today_str,
+                                'date': article_date,
                             })
 
                         except Exception as e_art:
