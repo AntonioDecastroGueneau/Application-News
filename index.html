@@ -858,9 +858,20 @@ function renderMap(){
 }
 
 const JO_NATURES={ARRETE:'Arrêté',DECRET:'Décret',ORDONNANCE:'Ordonnance',LOI:'Loi',CIRCULAIRE:'Circulaire',AVIS:'Avis',DECISION:'Décision'};
+function _demotedJoKey(){return `gsf_demoted_jo_${currentDate}`;}
+function _getDemotedJo(){return new Set(JSON.parse(localStorage.getItem(_demotedJoKey())||'[]'));}
+function demoteJO(itemId){
+  const s=_getDemotedJo();s.add(itemId);
+  localStorage.setItem(_demotedJoKey(),JSON.stringify([...s]));
+  renderJO();showToast('Texte renvoyé dans la liste');
+}
+
 function renderJO(){
+  const demoted=_getDemotedJo();
+  const allRetenus=D?.jo_retenus||[];
+  const joRetenus=allRetenus.filter(it=>!demoted.has(it.id));
+  const demotedItems=allRetenus.filter(it=>demoted.has(it.id));
   const items=D?.jo_autres||[],search=(document.getElementById('jo-search')?.value||'').toLowerCase();
-  const joRetenus=D?.jo_retenus||[];
   const statsEl=document.getElementById('jo-stats'),groupEl=document.getElementById('jo-groups');
   if(!groupEl)return;
   const nbT=D?.stats?.jo_analyses||0,nbG=D?.stats?.jo_retenus||0;
@@ -902,6 +913,7 @@ function renderJO(){
             <div class="card-right">
               <span class="crit-badge crit${item.criticite}">${cl}</span>
               ${item.url?`<a class="card-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`:''}
+              <button onclick="event.stopPropagation();demoteJO('${item.id}')" title="Pas si prioritaire" style="background:none;border:none;cursor:pointer;color:var(--muted2);padding:2px;line-height:1;transition:color .15s" onmouseover="this.style.color='var(--orange)'" onmouseout="this.style.color='var(--muted2)'"><span class="material-symbols-outlined" style="font-size:16px">low_priority</span></button>
             </div>
           </div>`;
         }).join('')}
@@ -909,9 +921,9 @@ function renderJO(){
     }
   }
 
-  if(!items.length){groupEl.innerHTML=joAbcHtml+briefingHtml+'<div class="jo-empty">Aucun autre texte JO pour cette date</div>';return;}
+  if(!items.length&&!demotedItems.length){groupEl.innerHTML=joAbcHtml+briefingHtml+'<div class="jo-empty">Aucun autre texte JO pour cette date</div>';return;}
   const groups={};
-  items.forEach(item=>{const nat=(item.nature||'AUTRE').toUpperCase(),label=JO_NATURES[nat]||nat||'Autre';if(!groups[label])groups[label]=[];if(!search||(item.titre||'').toLowerCase().includes(search))groups[label].push(item);});
+  [...items,...demotedItems].forEach(item=>{const nat=(item.nature||'AUTRE').toUpperCase(),label=JO_NATURES[nat]||nat||'Autre';if(!groups[label])groups[label]=[];if(!search||(item.titre||'').toLowerCase().includes(search))groups[label].push(item);});
   const total=Object.values(groups).reduce((s,g)=>s+g.length,0);
   if(!total){groupEl.innerHTML=joAbcHtml+briefingHtml+'<div class="jo-empty">Aucun résultat</div>';return;}
   groupEl.innerHTML=joAbcHtml+briefingHtml+Object.entries(groups).sort(([a],[b])=>a.localeCompare(b)).map(([label,its])=>`<div class="jo-theme-group open"><div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')"><span class="jo-theme-name">${escHtml(label)}</span><span class="jo-theme-count">${its.length}</span><span class="jo-chevron">▶</span></div><div class="jo-items">${its.map(item=>`<div class="jo-item"><div class="jo-item-nature">${escHtml(item.nature||label)}</div><div class="jo-item-titre">${escHtml(item.titre)}</div>${item.url?`<a class="jo-item-link" href="${escHtml(item.url)}" target="_blank" rel="noopener">Légifrance →</a>`:'<span style="font-size:10px;color:var(--muted2)">Pas de lien</span>'}</div>`).join('')}</div></div>`).join('');

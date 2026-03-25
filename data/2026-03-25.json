@@ -1,24 +1,26 @@
 {
   "date": "2026-03-25",
-  "generated_at": "14:55",
-  "elapsed_seconds": 160,
+  "generated_at": "16:01",
+  "elapsed_seconds": 141,
   "errors": [],
   "stats": {
     "jo_analyses": 14,
-    "jo_retenus": 1,
-    "depts_restriction": 0
+    "jo_retenus": 0,
+    "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-03-25T14:55:27",
+    "run_at": "2026-03-25T16:01:38",
     "sources": {
-      "JORF": 1,
-      "RSS": 11,
-      "VigiEau": 0,
+      "JORF": 0,
+      "RSS": 9,
+      "VigiEau": 3,
       "Parlement": 1
     },
-    "errors": [],
-    "llm_calls": 54,
-    "llm_seconds": 70.2
+    "errors": [
+      "SOURCE VIDE — JORF : 0 textes retenus"
+    ],
+    "llm_calls": 51,
+    "llm_seconds": 57.6
   },
   "items": [
     {
@@ -26,7 +28,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Dorémi démontre les performances énergétiques des rénovations complètes",
-      "resume": "L'article illustre l'impact des rénovations énergétiques complètes sur les économies d'énergie, un enjeu potentiel pour les bâtiments tertiaires des clients d'ABC (DPE tertiaire, efficacité énergétique).",
+      "resume": "L'article illustre l'importance des rénovations énergétiques performantes pour réduire la consommation d'énergie, un enjeu potentiellement pertinent pour les bâtiments tertiaires des clients d'ABC (ex : sites industriels, santé, nucléaire) dans le cadre de leurs obligations d'efficacité énergétique (DPE tertiaire, SNBC).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/etude-experimentation-consommations-energie-renovations-completes-maisons-doremi-47745.php4#xtor=RSS-6",
@@ -37,21 +39,10 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Déchets : le tarif de la redevance peut être modulé en cas de différence de situation",
-      "resume": "L'article confirme la possibilité de modulation des tarifs de redevance déchets selon les situations, ce qui impacte les coûts de gestion des déchets pour ABC et ses clients, notamment dans le cadre des REP et de la traçabilité.",
+      "resume": "L'article confirme la possibilité de moduler les tarifs de la redevance d'enlèvement des ordures ménagères (REOM) en fonction des situations locales, ce qui pourrait impacter les coûts de gestion des déchets pour ABC et ses clients dans le cadre des obligations REP et de la CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/dechets-tarif-redevance-difference-situation-47743.php4#xtor=RSS-6",
-      "date": "2026-03-25"
-    },
-    {
-      "id": "1159417a1d6f",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "La chaleur provoquée par le dérèglement climatique devrait provoquer dix fois plus de morts dans les pays pauvres que dans les pays riches en 2050",
-      "resume": "L'article souligne l'inégalité des impacts climatiques entre pays riches et pauvres, mais n'a pas d'impact direct ou opérationnel identifié pour ABC dans ses activités de propreté/FM ou ses enjeux RSE.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/03/25/climat-en-2050-la-chaleur-devrait-provoquer-dix-fois-plus-de-morts-dans-les-pays-pauvres-que-dans-les-pays-riches_6674144_3244.html",
       "date": "2026-03-25"
     },
     {
@@ -59,7 +50,7 @@
       "source": "ESG Today",
       "categorie": "Déchets",
       "titre": "EFRAG to Engage with Large Companies on Voluntary Sustainability Reporting",
-      "resume": "L'EFRAG lance une consultation pour renforcer le reporting volontaire de durabilité des grandes entreprises, ce qui pourrait influencer les exigences futures en matière de reporting ESG (CSRD/ESRS) pour ABC.",
+      "resume": "EFRAG lance une consultation sur le reporting volontaire de durabilité pour les grandes entreprises, ce qui pourrait influencer les exigences CSRD/ESRS pour ABC dans le cadre de son reporting extra-financier.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/efrag-to-engage-with-large-companies-on-voluntary-sustainability-reporting-standard/?utm_source=rss&utm_medium=rss&utm_campaign=efrag-to-engage-with-large-companies-on-voluntary-sustainability-reporting-standard",
@@ -70,7 +61,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Déchets",
       "titre": "Protection du climat : l'Allemagne veut plus d'éoliennes, de voitures électriques et de forêts mixtes - Les Echos",
-      "resume": "L'article souligne les ambitions climatiques de l'Allemagne en matière d'éolien, de mobilité électrique et de gestion forestière, ce qui pourrait influencer les exigences carbone des clients industriels ou énergétiques d'ABC en France via des chaînes d'approvisionnement ou des standards sectoriels.",
+      "resume": "L'article illustre la dynamique européenne en faveur de la décarbonation (éolien, véhicules électriques), un contexte à surveiller pour les clients d'ABC (nucléaire, santé, industrie) et leurs exigences carbone.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQb0drUTlQMjZQck9jc2JyZnZrRWtSOXl6N3dCNEMwU2FJT0ZuQXRNbnNmNmlUQkxRdklEaFRFRnJEQkk5YWZKV25zRFZTUDRZcGtyTjd1Uk91bzFyR29WM2U0dG9OU1NDVVM4VFZKWko0dUhjWmpUR1k3MWpzLTJnX2dFVHhJNWkyUW5vMTZHWGx6RHB0S1ljRUJJMk5PU2dybUdqZjk2OEZYcXFqSnVJUFhndU1zYjgtcUhQVVZxNjhoN25QM1FZM3k2d1BEaEhCbDhXLTN1M0Q?oc=5",
@@ -88,36 +79,14 @@
       "date": "2026-03-24"
     },
     {
-      "id": "388f8f0bf9e5",
-      "source": "EFRAG",
-      "categorie": "Déchets",
-      "titre": "EFRAG SRB Online Meeting 25 March 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting ESG (ESRS) le 25 mars 2026, cruciale pour préparer la conformité CSRD/ESRS d'ABC dans son reporting extra-financier.",
-      "pourquoi": "L'EFRAG est l'organisme clé pour l'élaboration des normes ESRS sous la CSRD, directement impactant le reporting ESG d'ABC. La réunion pourrait aborder des évolutions réglementaires ou interprétations pratiques des ESRS, pertinentes pour la préparation du reporting 2026 (premier exercice CSRD pour les grandes entreprises).",
-      "criticite": 2,
-      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
-      "date": "2026-03-24"
-    },
-    {
       "id": "3f5e3f0fade3",
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Les incertitudes s’accumulent sur le financement du réseau électrique",
-      "resume": "L'article souligne l'ampleur des investissements nécessaires dans les réseaux électriques en France, ce qui pourrait impacter les coûts énergétiques et les stratégies de décarbonation des clients d'ABC (notamment tertiaire et industrie), ainsi que la planification de leur propre transition énergétique.",
+      "resume": "L'article souligne les investissements massifs nécessaires pour moderniser le réseau électrique français, ce qui pourrait impacter les coûts énergétiques et la disponibilité de l'électricité pour les sites clients d'ABC, notamment dans un contexte d'électrification accrue des activités.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/les-incertitudes-saccumulent-sur-le-financement-du-reseau-electrique-418902/",
-      "date": "2026-03-24"
-    },
-    {
-      "id": "6993765b1d17",
-      "source": "GreenUnivers",
-      "categorie": "Biodiversité",
-      "titre": "Bercy clarifie l’écosystème de la batterie avec « France Batterie »",
-      "resume": "L'initiative 'France Batterie' vise à structurer la filière batteries en France, avec un impact potentiel sur les véhicules électriques et les équipements de propreté, mais sans obligation directe pour ABC dans l'immédiat.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/03/bercy-clarifie-lecosysteme-de-la-batterie-avec-france-batterie-419136/",
       "date": "2026-03-24"
     },
     {
@@ -125,10 +94,21 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Sébastien Lecornu fait appel aux certificats d’économies d’énergie comme arme anti-crise",
-      "resume": "Le gouvernement français renforce l'utilisation des Certificats d'Économies d'Énergie (CEE) pour accélérer l'électrification des usages, ce qui pourrait impacter les stratégies d'efficacité énergétique des clients d'ABC et leurs obligations en matière de décarbonation.",
+      "resume": "Le gouvernement français renforce l'utilisation des Certificats d'Économies d'Énergie (CEE) pour accélérer l'électrification des usages, ce qui pourrait impacter les stratégies énergétiques des entreprises comme ABC dans leur gestion des sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/sebastien-lecornu-fait-appel-aux-certificats-deconomies-denergie-comme-arme-anti-crise-419137/",
+      "date": "2026-03-24"
+    },
+    {
+      "id": "388f8f0bf9e5",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG SRB Online Meeting 25 March 2026",
+      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting de durabilité (ESRS), essentielle pour préparer la conformité CSRD de ABC dans le cadre de son reporting extra-financier.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-25-march-2026-1",
       "date": "2026-03-24"
     },
     {
@@ -136,14 +116,30 @@
       "source": "EFRAG",
       "categorie": "Énergie",
       "titre": "EFRAG Welcomes a New Friend of EFRAG - Sustainability Reporting: Synesgy",
-      "resume": "L'adhésion de Synesgy à EFRAG renforce l'écosystème des outils de reporting ESG, ce qui pourrait influencer les méthodes de collecte de données pour la CSRD/ESRS chez ABC.",
+      "resume": "L'adhésion de Synesgy à EFRAG renforce l'écosystème des outils de reporting ESG, ce qui pourrait influencer les méthodes de collecte de données pour le reporting CSRD/ESRS d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-welcomes-a-new-friend-of-efrag-sustainability-reporting-synesgy",
       "date": "2026-03-17"
     }
   ],
-  "restrictions_eau": [],
+  "restrictions_eau": [
+    {
+      "dept_code": "66",
+      "dept_nom": "Pyrénées-Orientales",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "972",
+      "dept_nom": "Martinique",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "11",
+      "dept_nom": "Aude",
+      "niveau": "alerte_renforcee"
+    }
+  ],
   "jo_autres": [
     {
       "titre": "Arrêté du 23 mars 2026 portant création de huit zones interdites temporaires pour la protection d'installations spécifiques de la défense, en Guyane française, dans la région d'information de vol de Cayenne",
@@ -698,6 +694,12 @@
       "date": "2026-03-25"
     },
     {
+      "titre": "Arrêté du 17 mars 2026 modifiant l'arrêté du 22 janvier 2015 définissant les caractéristiques et les conditions d'utilisation des véhicules autres que les autocars et les autobus, destinés à des usages de tourisme et de loisirs",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053714235",
+      "date": "2026-03-25"
+    },
+    {
       "titre": "Arrêté du 19 mars 2026 portant nomination à la commission scientifique des collections du patrimoine mobilier du ministère des armées",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053714325",
@@ -758,20 +760,8 @@
       "date": "2026-03-25"
     }
   ],
-  "jo_retenus": [
-    {
-      "id": "7b529d7e94a9",
-      "source": "JORF",
-      "categorie": "Énergie",
-      "titre": "Arrêté du 17 mars 2026 modifiant l'arrêté du 22 janvier 2015 définissant les caractéristiques et les conditions d'utilisation des véhicules autres que les autocars et les autobus, destinés à des usages de tourisme et de loisirs",
-      "resume": "Modification des caractéristiques et conditions d'utilisation des véhicules de tourisme et de loisirs, impactant potentiellement la flotte de véhicules de ABC",
-      "pourquoi": "L'arrêté modifie les caractéristiques et conditions d'utilisation des véhicules de tourisme et de loisirs, ce qui peut avoir un impact sur la flotte de véhicules de ABC, notamment en ce qui concerne les exigences de zonage à faibles émissions (ZFE) et les véhicules électriques.",
-      "criticite": 2,
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053714235",
-      "date": "2026-03-25"
-    }
-  ],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "jo_retenus": [],
+  "briefing_jorf": "Aucun des textes publiés ne traite directement de sujets environnementaux ou climatiques pertinents pour un Responsable Environnement/Climat d'une grande entreprise de services. Les arrêtés et avis concernent principalement des modifications sectorielles (agriculture, IA, tourisme, pêche) ou des décisions administratives (radiations, suppressions d'offices).",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1119,5 +1109,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le seul texte directement pertinent pour un Responsable Environnement/Climat, avec des implications potentielles sur la réglementation climatique, la transition énergétique et les obligations de reporting RSE. Aucun autre texte adopté ou en discussion ne traite spécifiquement de ces enjeux."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises en matière de reporting extra-financier, d’économie circulaire ou de transition énergétique. Aucun autre texte ne semble directement lié aux enjeux climatiques ou environnementaux pour une entreprise de services."
 }
