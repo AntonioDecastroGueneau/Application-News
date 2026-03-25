@@ -701,11 +701,10 @@ function renderFeed(){
   if(twEl){
     const h=new Date().getHours(),next=h<9?'9h':h<14?'14h':'demain à 9h';
     const np=prio.length;
-    const pjlItems=(D.pjl_autres||[]).flatMap(g=>g.items||[]);
-    const pjlAujourd=(pjlItems.filter(i=>i.date===D.date)).length;
+    const pjlSuivis=(D.pjl_fiches||[]).length;
     const joRet=D.stats?.jo_retenus??0;
     const t1=np>0?`${np} signal${np>1?'s':''} prioritaire${np>1?'s':''}`:'Tout est calme';
-    const t2=pjlAujourd>0?`${pjlAujourd} PJL déposé${pjlAujourd>1?'s':''} aujourd'hui`:'Aucun nouveau PJL';
+    const t2=pjlSuivis>0?`${pjlSuivis} PJL à suivre`:'Aucun PJL suivi';
     const t3=joRet>0?`${joRet} texte${joRet>1?'s':''} JO pertinent${joRet>1?'s':''}`:'Aucun texte JO retenu';
     const t4=`Prochaine vérification à ${next}`;
     typewriter(twEl,[t1,t2,t3,t4]);
