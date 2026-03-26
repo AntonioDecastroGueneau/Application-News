@@ -96,9 +96,19 @@ def _scrape_an_listing(source: dict, today_str: str) -> list:
             titre = h3.get_text(strip=True)
             if not titre or len(titre) < 10:
                 continue
-            # Skip generic adopted-text labels (e.g. "Texte adopté N° 248")
-            if re.match(r'^Texte adopté\s+N°\s*\d+$', titre, re.IGNORECASE):
-                continue
+            # Pour les textes adoptés : "Texte adopté N° 248" est le numéro, pas le titre.
+            # Chercher le vrai titre de la loi dans les éléments p/span du même item.
+            if re.match(r'^Texte adopté\s+N°\s*\d+', titre, re.IGNORECASE):
+                subtitle = None
+                for tag in item.find_all(['p', 'span', 'div']):
+                    txt = tag.get_text(strip=True)
+                    if txt and len(txt) > 15 and not re.match(r'^Texte adopté', txt, re.IGNORECASE) and not re.match(r'^\d', txt):
+                        subtitle = txt
+                        break
+                if subtitle:
+                    titre = subtitle
+                else:
+                    continue  # pas de titre réel trouvé, on skip
 
             date_str = today_str
             date_el = item.find(string=re.compile(r'Mis en ligne|mis en ligne', re.I))
