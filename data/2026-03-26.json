@@ -1,7 +1,7 @@
 {
   "date": "2026-03-26",
-  "generated_at": "07:57",
-  "elapsed_seconds": 149,
+  "generated_at": "09:06",
+  "elapsed_seconds": 178,
   "errors": [],
   "stats": {
     "jo_analyses": 27,
@@ -9,10 +9,10 @@
     "depts_restriction": 0
   },
   "pipeline_meta": {
-    "run_at": "2026-03-26T07:57:40",
+    "run_at": "2026-03-26T09:06:08",
     "sources": {
       "JORF": 0,
-      "RSS": 6,
+      "RSS": 5,
       "VigiEau": 0,
       "Parlement": 1
     },
@@ -20,7 +20,7 @@
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 59,
-    "llm_seconds": 56.1
+    "llm_seconds": 65.1
   },
   "items": [
     {
@@ -28,32 +28,32 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Autoconsommation : les surplus de 100 000 contrats bientôt sans acheteur public",
-      "resume": "L'article souligne une évolution réglementaire sur le rachat des surplus d'autoconsommation, pouvant impacter les stratégies énergétiques des clients d'ABC (tertiaire, industrie) et leurs exigences en matière de décarbonation.",
+      "resume": "L'article met en lumière un risque réglementaire et économique sur le rachat des surplus d'autoconsommation, ce qui pourrait impacter les clients d'ABC (notamment industriels ou tertiaires) dans leur stratégie énergétique et leur reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/autoconsommation-les-surplus-de-100-000-contrats-bientot-sans-acheteur-public-419278/",
       "date": "2026-03-26"
     },
     {
-      "id": "80e0471ad9c1",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Déchets : le tarif de la redevance peut être modulé en cas de différence de situation",
-      "resume": "L'article confirme la possibilité pour les collectivités de moduler les tarifs de la redevance d'enlèvement des ordures ménagères (REOM) en fonction des situations locales, ce qui pourrait impacter les coûts de gestion des déchets pour ABC et ses clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/dechets-tarif-redevance-difference-situation-47743.php4#xtor=RSS-6",
-      "date": "2026-03-25"
-    },
-    {
       "id": "a4e3ab451923",
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Le financement de la recharge est renforcé",
-      "resume": "Le renforcement des primes Advenir pour la recharge électrique dans le résidentiel collectif pourrait influencer les stratégies de mobilité durable des clients d'ABC (notamment ceux en ZFE ou engagés dans la décarbonation de leurs flottes).",
+      "resume": "Le renforcement des primes Advenir pour la recharge électrique dans le résidentiel collectif pourrait influencer les stratégies de mobilité durable d'ABC, notamment pour électrifier sa flotte de véhicules ou proposer des solutions de recharge à ses clients.",
+      "pourquoi": "L'article aborde la mobilité durable (électrification des flottes) et les incitations financières publiques (primes Advenir), ce qui impacte directement les enjeux de décarbonation de la flotte de véhicules d'ABC (scope 1) et les attentes clients en matière de mobilité propre.",
+      "criticite": 2,
+      "url": "https://www.greenunivers.com/2026/03/le-financement-de-la-recharge-est-renforce-419240/",
+      "date": "2026-03-25"
+    },
+    {
+      "id": "80e0471ad9c1",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Déchets : le tarif de la redevance peut être modulé en cas de différence de situation",
+      "resume": "L'article confirme la possibilité pour les collectivités de moduler les tarifs de redevance d'enlèvement des ordures ménagères en fonction des situations, ce qui peut impacter les coûts de gestion des déchets pour ABC et ses clients.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/03/le-financement-de-la-recharge-est-renforce-419240/",
+      "url": "https://www.actu-environnement.com/ae/news/dechets-tarif-redevance-difference-situation-47743.php4#xtor=RSS-6",
       "date": "2026-03-25"
     },
     {
@@ -61,7 +61,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "EDF met sa filiale hydrogène Hynamics sur le marché",
-      "resume": "L'article signale une opportunité stratégique pour ABC dans le domaine de l'hydrogène, un levier potentiel pour décarboner sa flotte de véhicules ou ses prestations de mobilité durable, en lien avec les enjeux de décarbonation et de reporting ESG.",
+      "resume": "L'ouverture du capital de Hynamics par EDF pourrait influencer le marché de l'hydrogène en France, un secteur en développement qui pourrait impacter les stratégies de décarbonation des clients d'ABC (notamment industriels ou tertiaires) et leurs exigences en matière de mobilité durable ou d'énergie renouvelable.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/edf-met-sa-filiale-hydrogene-hynamics-sur-le-marche-419245/",
@@ -72,22 +72,11 @@
       "source": "ESG Today",
       "categorie": "Déchets",
       "titre": "EFRAG to Engage with Large Companies on Voluntary Sustainability Reporting",
-      "resume": "EFRAG lance une consultation sur le reporting volontaire de durabilité pour les grandes entreprises, ce qui pourrait influencer les exigences de reporting ESG (CSRD/ESRS) pour ABC dans le cadre de ses clients.",
+      "resume": "EFRAG lance une consultation pour renforcer le reporting extra-financier des grandes entreprises, ce qui impacte indirectement ABC via les exigences clients (CSRD/ESRS) et la pression sur les fournisseurs pour des données ESG robustes.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/efrag-to-engage-with-large-companies-on-voluntary-sustainability-reporting-standard/?utm_source=rss&utm_medium=rss&utm_campaign=efrag-to-engage-with-large-companies-on-voluntary-sustainability-reporting-standard",
       "date": "2026-03-25"
-    },
-    {
-      "id": "9e9d4b4bb3ec",
-      "source": "EFRAG",
-      "categorie": "Climat",
-      "titre": "EFRAG launches a call for expression of interest on voluntary sustainability reporting by non-SME companies outside the scope of the CSRD",
-      "resume": "EFRAG launches a call for expression of interest on voluntary sustainability reporting by non-SME companies outside the scope of the CSRD",
-      "pourquoi": "Mention de CSRD.",
-      "criticite": 3,
-      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-launches-a-call-for-expression-of-interest-on-voluntary-sustainability-reporting-by-nonsme",
-      "date": "2026-03-24"
     }
   ],
   "restrictions_eau": [],
@@ -1144,5 +1133,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises, notamment en matière de reporting extra-financier et de transition énergétique. Aucun autre texte ne traite directement de sujets climatiques ou environnementaux majeurs pour une entreprise de services."
+  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le seul texte directement pertinent pour un Responsable Environnement/Climat, avec des impacts potentiels sur la réglementation climatique, la transition énergétique et les obligations de reporting RSE. Aucun autre texte adopté ou en discussion ne semble directement lié aux enjeux environnementaux ou à la RSE."
 }
