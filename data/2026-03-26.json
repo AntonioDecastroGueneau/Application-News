@@ -1,7 +1,7 @@
 {
   "date": "2026-03-26",
-  "generated_at": "14:32",
-  "elapsed_seconds": 374,
+  "generated_at": "15:14",
+  "elapsed_seconds": 161,
   "errors": [],
   "stats": {
     "jo_analyses": 27,
@@ -9,26 +9,59 @@
     "depts_restriction": 0
   },
   "pipeline_meta": {
-    "run_at": "2026-03-26T14:32:35",
+    "run_at": "2026-03-26T15:14:46",
     "sources": {
       "JORF": 0,
-      "RSS": 5,
+      "RSS": 10,
       "VigiEau": 0,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 48,
-    "llm_seconds": 49.4
+    "llm_calls": 55,
+    "llm_seconds": 66.7
   },
   "items": [
+    {
+      "id": "fa472cfe9ddb",
+      "source": "Actu-Environnement",
+      "categorie": "Environnement",
+      "titre": "Le chiffre du jour : 5,2 milliards d’euros",
+      "resume": "L'article met en lumière l'augmentation des coûts liés aux aléas climatiques en France (5,2 milliards d'euros en 2025), ce qui représente un risque opérationnel indirect pour ABC via ses 3 000+ sites clients, notamment en termes de continuité de service et d'adaptation des prestations.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/dit-aujourdhui/1790.html#xtor=RSS-6",
+      "date": "2026-03-26"
+    },
+    {
+      "id": "6d5c0b980598",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Après l’éolien et le solaire, la finance « cherche de nouvelles idées » [Global Summit, Berlin]",
+      "resume": "L'article souligne la recherche de nouvelles opportunités d'investissement dans le secteur énergétique par la finance, au-delà des énergies renouvelables classiques (éolien, solaire), ce qui pourrait influencer les stratégies clients d'ABC dans les années à venir.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/apres-leolien-et-le-solaire-la-finance-cherche-de-nouvelles-idees-global-summit-berlin-419264/",
+      "date": "2026-03-26"
+    },
+    {
+      "id": "373e6d67d3d1",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Autoconsommation : les surplus de 100 000 contrats bientôt sans acheteur public",
+      "resume": "L'article souligne un risque réglementaire sur la valorisation des surplus d'autoconsommation électrique, pouvant impacter les stratégies d'efficacité énergétique et de décarbonation des clients d'ABC (notamment tertiaire et industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/autoconsommation-les-surplus-de-100-000-contrats-bientot-sans-acheteur-public-419278/",
+      "date": "2026-03-26"
+    },
     {
       "id": "a63e09aa6bc1",
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Dan Jorgensen, commissaire européen à l’énergie : « Il est envisageable de plafonner le prix du gaz »",
-      "resume": "L'article aborde une proposition européenne de plafonnement du prix du gaz, un sujet indirectement lié à la volatilité des coûts énergétiques pour ABC et ses clients, mais sans impact réglementaire ou opérationnel direct pour le prestataire.",
+      "resume": "L'article aborde une proposition européenne de plafonnement du prix du gaz, un enjeu énergétique indirect pour ABC via l'impact sur les coûts de ses prestations et la volatilité des budgets clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/03/26/dan-jorgensen-commissaire-europeen-a-l-energie-il-est-envisageable-de-plafonner-le-prix-du-gaz_6674340_3234.html",
@@ -39,7 +72,7 @@
       "source": "Le Monde Planète",
       "categorie": "Déchets",
       "titre": "PFAS : un rapport scientifique très attendu recommande une large restriction par l’UE",
-      "resume": "Les restrictions potentielles sur les PFAS pourraient impacter les produits de nettoyage utilisés par ABC et ses clients, nécessitant une veille sur les alternatives et leur conformité réglementaire.",
+      "resume": "Les PFAS pourraient impacter les déchets des prestations de propreté (produits chimiques utilisés) et les exigences clients en matière de substances dangereuses, nécessitant une veille sur les restrictions réglementaires et l'adaptation des pratiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/sante/article/2026/03/26/pfas-un-rapport-scientifique-tres-attendu-recommande-une-large-restriction-par-l-union-europeenne_6674337_1651302.html",
@@ -50,7 +83,7 @@
       "source": "ESG Today",
       "categorie": "Déchets",
       "titre": "Watershed Launches AI-Powered Sustainability Reporting Tools",
-      "resume": "L'article présente un outil d'IA pour le reporting ESG (CSRD/ESRS), utile pour ABC pour automatiser et fiabiliser son reporting extra-financier et répondre aux exigences des clients (nucléaire, santé, industrie).",
+      "resume": "L'article présente un outil d'IA pour le reporting ESG (CSRD/ESRS), utile pour ABC pour automatiser et fiabiliser son reporting extra-financier et répondre aux exigences clients en matière de transparence carbone.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/watershed-launches-ai-powered-sustainability-reporting-tools/?utm_source=rss&utm_medium=rss&utm_campaign=watershed-launches-ai-powered-sustainability-reporting-tools",
@@ -61,7 +94,7 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "Germany Adopts Climate Action Plan to Slash Emissions, Fossil Fuel Consumption",
-      "resume": "L'adoption du nouveau plan climatique allemand pourrait influencer les exigences carbone des clients industriels européens d'ABC, notamment via des normes plus strictes sur les scopes 1/2/3.",
+      "resume": "L'Allemagne renforce ses objectifs climatiques nationaux, ce qui pourrait influencer les exigences carbone des clients industriels ou nucléaires d'ABC en France via des chaînes d'approvisionnement ou des normes sectorielles.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/germany-adopts-climate-action-plan-to-slash-emissions-fossil-fuel-consumption/?utm_source=rss&utm_medium=rss&utm_campaign=germany-adopts-climate-action-plan-to-slash-emissions-fossil-fuel-consumption",
@@ -72,11 +105,33 @@
       "source": "Les Echos Environnement",
       "categorie": "Déchets",
       "titre": "« Nous vivons la fin d'une RSE incantatoire, pas la fin de l'ambition » : vers une durabilité plus concrète et transversale au sein des entreprises - Les Echos",
-      "resume": "L'article souligne le passage d'une RSE symbolique à une approche concrète et transversale, ce qui implique pour ABC d'aligner ses actions (BGES, flotte, déchets, reporting CSRD) sur des résultats mesurables pour répondre aux exigences clients et réglementaires.",
+      "resume": "L'article souligne le passage d'une RSE symbolique à une approche concrète et intégrée, ce qui pourrait impacter la stratégie ESG d'ABC en renforçant l'alignement avec les attentes clients (nucléaire, santé, industrie) et les exigences réglementaires (CSRD, ISO 14001).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxOelNnYVFDQXk1RllLb013V0t3NDJuck9Ed0FrckpVVFFJSGdIQzVxdGRTY0FNUy04RjVhTDllR2JpV1BBdHU1UzFYdU9aNkxVX1VoSGZDU1ktX2xhTEttTXpFZzBUOXZXVHBKaTFqOW02dWwxLXJPZ3I1UkFOLWc0OFY4YUktclBMcXRiSVpvaXR3ZWtFLXJ6THFqYzM2RWhyU2kzMEx6d3lyZHJSMzgxa05yS0cwZkJoTzU0dWdBOUZlbGdkV1ZVZXFNQTd3VGpCbTQ1Y1RTTXBUcU44MXhpSDh3SlRZaWVMWGFiUkE0SHZKRXd0THk4OE54bWZCWE9kRktOcTVJdTJqd2dZeVVQVlJ1X1lRTlFkOV95ZWFKc1ZncEJDS3M5b1Z0WEdhQQ?oc=5",
       "date": "2026-03-26"
+    },
+    {
+      "id": "a4e3ab451923",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Le financement de la recharge est renforcé",
+      "resume": "Le renforcement des primes du programme Advenir pour la recharge électrique dans le résidentiel collectif pourrait influencer les stratégies de mobilité durable d'ABC, notamment pour l'électrification de sa flotte de véhicules ou les déplacements de ses équipes chez les clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/le-financement-de-la-recharge-est-renforce-419240/",
+      "date": "2026-03-25"
+    },
+    {
+      "id": "389d0ea0e5ce",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "EDF met sa filiale hydrogène Hynamics sur le marché",
+      "resume": "L'article concerne la cession de Hynamics, filiale hydrogène d'EDF, ce qui pourrait impacter les stratégies clients d'ABC dans le secteur de la mobilité durable ou des énergies renouvelables, notamment pour les sites industriels ou tertiaires.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/edf-met-sa-filiale-hydrogene-hynamics-sur-le-marche-419245/",
+      "date": "2026-03-25"
     }
   ],
   "restrictions_eau": [],
@@ -1133,5 +1188,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le seul texte directement pertinent pour un Responsable Environnement/Climat, avec des implications potentielles sur la réglementation climatique, la transition énergétique et les obligations de reporting RSE. Aucun autre texte ne traite explicitement de ces enjeux."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l'UE) pourrait inclure des mesures environnementales et énergétiques significatives, notamment sur la transition écologique et la réglementation des déchets. Aucun autre texte ne semble directement lié aux enjeux climatiques, énergétiques ou RSE pour une entreprise de services."
 }
