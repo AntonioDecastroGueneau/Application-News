@@ -1001,7 +1001,8 @@ function renderParlement(){
     <div class="feed-consulter-items" style="border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px">`;
     autres.forEach(group=>{
       const items=[...group.items||[]].sort((a,b)=>(b.date||'').localeCompare(a.date||''));
-      html+=`<div class="jo-theme-group">
+      const isAdopt=group.source==='AN Textes adoptés';
+      html+=`<div class="jo-theme-group${isAdopt?' open':''}">
         <div class="jo-theme-header" onclick="this.parentElement.classList.toggle('open')">
           <span class="jo-theme-name">${escHtml(group.source)}</span>
           <span class="jo-theme-count">${items.length}</span>
