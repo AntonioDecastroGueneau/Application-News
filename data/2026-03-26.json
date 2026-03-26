@@ -1,7 +1,7 @@
 {
   "date": "2026-03-26",
-  "generated_at": "09:06",
-  "elapsed_seconds": 178,
+  "generated_at": "14:32",
+  "elapsed_seconds": 374,
   "errors": [],
   "stats": {
     "jo_analyses": 27,
@@ -9,7 +9,7 @@
     "depts_restriction": 0
   },
   "pipeline_meta": {
-    "run_at": "2026-03-26T09:06:08",
+    "run_at": "2026-03-26T14:32:35",
     "sources": {
       "JORF": 0,
       "RSS": 5,
@@ -19,64 +19,64 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 59,
-    "llm_seconds": 65.1
+    "llm_calls": 48,
+    "llm_seconds": 49.4
   },
   "items": [
     {
-      "id": "373e6d67d3d1",
-      "source": "GreenUnivers",
+      "id": "a63e09aa6bc1",
+      "source": "Le Monde Planète",
       "categorie": "Énergie",
-      "titre": "Autoconsommation : les surplus de 100 000 contrats bientôt sans acheteur public",
-      "resume": "L'article met en lumière un risque réglementaire et économique sur le rachat des surplus d'autoconsommation, ce qui pourrait impacter les clients d'ABC (notamment industriels ou tertiaires) dans leur stratégie énergétique et leur reporting ESG.",
+      "titre": "Dan Jorgensen, commissaire européen à l’énergie : « Il est envisageable de plafonner le prix du gaz »",
+      "resume": "L'article aborde une proposition européenne de plafonnement du prix du gaz, un sujet indirectement lié à la volatilité des coûts énergétiques pour ABC et ses clients, mais sans impact réglementaire ou opérationnel direct pour le prestataire.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/03/autoconsommation-les-surplus-de-100-000-contrats-bientot-sans-acheteur-public-419278/",
+      "url": "https://www.lemonde.fr/economie/article/2026/03/26/dan-jorgensen-commissaire-europeen-a-l-energie-il-est-envisageable-de-plafonner-le-prix-du-gaz_6674340_3234.html",
       "date": "2026-03-26"
     },
     {
-      "id": "a4e3ab451923",
-      "source": "GreenUnivers",
+      "id": "f7d40d21e5a5",
+      "source": "Le Monde Planète",
       "categorie": "Déchets",
-      "titre": "Le financement de la recharge est renforcé",
-      "resume": "Le renforcement des primes Advenir pour la recharge électrique dans le résidentiel collectif pourrait influencer les stratégies de mobilité durable d'ABC, notamment pour électrifier sa flotte de véhicules ou proposer des solutions de recharge à ses clients.",
-      "pourquoi": "L'article aborde la mobilité durable (électrification des flottes) et les incitations financières publiques (primes Advenir), ce qui impacte directement les enjeux de décarbonation de la flotte de véhicules d'ABC (scope 1) et les attentes clients en matière de mobilité propre.",
-      "criticite": 2,
-      "url": "https://www.greenunivers.com/2026/03/le-financement-de-la-recharge-est-renforce-419240/",
-      "date": "2026-03-25"
-    },
-    {
-      "id": "80e0471ad9c1",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Déchets : le tarif de la redevance peut être modulé en cas de différence de situation",
-      "resume": "L'article confirme la possibilité pour les collectivités de moduler les tarifs de redevance d'enlèvement des ordures ménagères en fonction des situations, ce qui peut impacter les coûts de gestion des déchets pour ABC et ses clients.",
+      "titre": "PFAS : un rapport scientifique très attendu recommande une large restriction par l’UE",
+      "resume": "Les restrictions potentielles sur les PFAS pourraient impacter les produits de nettoyage utilisés par ABC et ses clients, nécessitant une veille sur les alternatives et leur conformité réglementaire.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/dechets-tarif-redevance-difference-situation-47743.php4#xtor=RSS-6",
-      "date": "2026-03-25"
+      "url": "https://www.lemonde.fr/sante/article/2026/03/26/pfas-un-rapport-scientifique-tres-attendu-recommande-une-large-restriction-par-l-union-europeenne_6674337_1651302.html",
+      "date": "2026-03-26"
     },
     {
-      "id": "389d0ea0e5ce",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "EDF met sa filiale hydrogène Hynamics sur le marché",
-      "resume": "L'ouverture du capital de Hynamics par EDF pourrait influencer le marché de l'hydrogène en France, un secteur en développement qui pourrait impacter les stratégies de décarbonation des clients d'ABC (notamment industriels ou tertiaires) et leurs exigences en matière de mobilité durable ou d'énergie renouvelable.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/03/edf-met-sa-filiale-hydrogene-hynamics-sur-le-marche-419245/",
-      "date": "2026-03-25"
-    },
-    {
-      "id": "9360635e957a",
+      "id": "42e7090bc5a8",
       "source": "ESG Today",
       "categorie": "Déchets",
-      "titre": "EFRAG to Engage with Large Companies on Voluntary Sustainability Reporting",
-      "resume": "EFRAG lance une consultation pour renforcer le reporting extra-financier des grandes entreprises, ce qui impacte indirectement ABC via les exigences clients (CSRD/ESRS) et la pression sur les fournisseurs pour des données ESG robustes.",
+      "titre": "Watershed Launches AI-Powered Sustainability Reporting Tools",
+      "resume": "L'article présente un outil d'IA pour le reporting ESG (CSRD/ESRS), utile pour ABC pour automatiser et fiabiliser son reporting extra-financier et répondre aux exigences des clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.esgtoday.com/efrag-to-engage-with-large-companies-on-voluntary-sustainability-reporting-standard/?utm_source=rss&utm_medium=rss&utm_campaign=efrag-to-engage-with-large-companies-on-voluntary-sustainability-reporting-standard",
-      "date": "2026-03-25"
+      "url": "https://www.esgtoday.com/watershed-launches-ai-powered-sustainability-reporting-tools/?utm_source=rss&utm_medium=rss&utm_campaign=watershed-launches-ai-powered-sustainability-reporting-tools",
+      "date": "2026-03-26"
+    },
+    {
+      "id": "12f0d9919da5",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "Germany Adopts Climate Action Plan to Slash Emissions, Fossil Fuel Consumption",
+      "resume": "L'adoption du nouveau plan climatique allemand pourrait influencer les exigences carbone des clients industriels européens d'ABC, notamment via des normes plus strictes sur les scopes 1/2/3.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/germany-adopts-climate-action-plan-to-slash-emissions-fossil-fuel-consumption/?utm_source=rss&utm_medium=rss&utm_campaign=germany-adopts-climate-action-plan-to-slash-emissions-fossil-fuel-consumption",
+      "date": "2026-03-26"
+    },
+    {
+      "id": "5ba1fe8be6ef",
+      "source": "Les Echos Environnement",
+      "categorie": "Déchets",
+      "titre": "« Nous vivons la fin d'une RSE incantatoire, pas la fin de l'ambition » : vers une durabilité plus concrète et transversale au sein des entreprises - Les Echos",
+      "resume": "L'article souligne le passage d'une RSE symbolique à une approche concrète et transversale, ce qui implique pour ABC d'aligner ses actions (BGES, flotte, déchets, reporting CSRD) sur des résultats mesurables pour répondre aux exigences clients et réglementaires.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxOelNnYVFDQXk1RllLb013V0t3NDJuck9Ed0FrckpVVFFJSGdIQzVxdGRTY0FNUy04RjVhTDllR2JpV1BBdHU1UzFYdU9aNkxVX1VoSGZDU1ktX2xhTEttTXpFZzBUOXZXVHBKaTFqOW02dWwxLXJPZ3I1UkFOLWc0OFY4YUktclBMcXRiSVpvaXR3ZWtFLXJ6THFqYzM2RWhyU2kzMEx6d3lyZHJSMzgxa05yS0cwZkJoTzU0dWdBOUZlbGdkV1ZVZXFNQTd3VGpCbTQ1Y1RTTXBUcU44MXhpSDh3SlRZaWVMWGFiUkE0SHZKRXd0THk4OE54bWZCWE9kRktOcTVJdTJqd2dZeVVQVlJ1X1lRTlFkOV95ZWFKc1ZncEJDS3M5b1Z0WEdhQQ?oc=5",
+      "date": "2026-03-26"
     }
   ],
   "restrictions_eau": [],
@@ -1133,5 +1133,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le seul texte directement pertinent pour un Responsable Environnement/Climat, avec des impacts potentiels sur la réglementation climatique, la transition énergétique et les obligations de reporting RSE. Aucun autre texte adopté ou en discussion ne semble directement lié aux enjeux environnementaux ou à la RSE."
+  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le seul texte directement pertinent pour un Responsable Environnement/Climat, avec des implications potentielles sur la réglementation climatique, la transition énergétique et les obligations de reporting RSE. Aucun autre texte ne traite explicitement de ces enjeux."
 }
