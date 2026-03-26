@@ -97,16 +97,17 @@ def _scrape_an_listing(source: dict, today_str: str) -> list:
             if not titre or len(titre) < 10:
                 continue
             # Pour les textes adoptés : "Texte adopté N° 248" est le numéro, pas le titre.
-            # Chercher le vrai titre de la loi dans les éléments p/span du même item.
+            # Le vrai titre est dans un <p> de l'item, préfixé par " - ".
             if re.match(r'^Texte adopté\s+N°\s*\d+', titre, re.IGNORECASE):
-                subtitle = None
-                for tag in item.find_all(['p', 'span', 'div']):
-                    txt = tag.get_text(strip=True)
-                    if txt and len(txt) > 15 and not re.match(r'^Texte adopté', txt, re.IGNORECASE) and not re.match(r'^\d', txt):
-                        subtitle = txt
-                        break
-                if subtitle:
-                    titre = subtitle
+                p = item.find('p')
+                if p:
+                    raw = p.get_text(strip=True).lstrip('- ').strip()
+                    # Supprimer la date finale " le 12 décembre 2025"
+                    raw = re.sub(r'\s+le\s+\d{1,2}\s+\w+\s+\d{4}\s*$', '', raw, flags=re.IGNORECASE).strip()
+                    if raw and len(raw) > 10:
+                        titre = raw
+                    else:
+                        continue
                 else:
                     continue  # pas de titre réel trouvé, on skip
 
