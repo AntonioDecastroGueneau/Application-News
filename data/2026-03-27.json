@@ -1,7 +1,7 @@
 {
   "date": "2026-03-27",
-  "generated_at": "07:57",
-  "elapsed_seconds": 218,
+  "generated_at": "14:15",
+  "elapsed_seconds": 147,
   "errors": [],
   "stats": {
     "jo_analyses": 21,
@@ -9,7 +9,7 @@
     "depts_restriction": 0
   },
   "pipeline_meta": {
-    "run_at": "2026-03-27T07:57:37",
+    "run_at": "2026-03-27T14:15:49",
     "sources": {
       "JORF": 0,
       "RSS": 12,
@@ -19,19 +19,74 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 52,
-    "llm_seconds": 56.0
+    "llm_calls": 53,
+    "llm_seconds": 59.5
   },
   "items": [
     {
-      "id": "e1c40b18c733",
-      "source": "Contexte Environnement",
-      "categorie": "Biodiversité",
-      "titre": "PFAS : entre réduction de la pollution et coût d’une interdiction, l’Echa cherche l’équilibre",
-      "resume": "Les restrictions potentielles sur les PFAS pourraient impacter les produits de nettoyage utilisés par ABC et ses clients, nécessitant une adaptation des pratiques et une traçabilité renforcée des substances chimiques.",
+      "id": "0e81cee99469",
+      "source": "Reporterre",
+      "categorie": "Eau",
+      "titre": "« Une prouesse » : le train de nuit Paris-Berlin est relancé",
+      "resume": "Le retour du train de nuit Paris-Berlin pourrait offrir une alternative de mobilité durable pour les déplacements professionnels, réduisant potentiellement l'empreinte carbone de la flotte de véhicules d'ABC.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.contexte.com/fr/article/environnement/pfas-entre-reduction-de-la-pollution-et-cout-dune-interdiction-lecha-cherche-lequilibre_259613?source=rss",
+      "url": "https://reporterre.net/Une-prouesse-le-train-de-nuit-Paris-Berlin-est-relance",
+      "date": "2026-03-27"
+    },
+    {
+      "id": "14ce6439b845",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "TotalEnergies lâche ses objectifs de neutralité carbone et le Scope3",
+      "resume": "L'article illustre une tendance de recul des engagements climatiques chez un acteur majeur du secteur énergétique, ce qui pourrait influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) dans leurs politiques RSE.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/environnement/climat/totalenergies-lache-ses-objectifs-de-neutralite-carbone-et-le-scope3",
+      "date": "2026-03-27"
+    },
+    {
+      "id": "12405b10ac64",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’agenda de la transition énergétique",
+      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.) en France, offrant une veille sur les tendances et innovations du secteur qui pourraient influencer les stratégies clients ou partenaires d'ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/lagenda-de-la-transition-energetique-278-419528/",
+      "date": "2026-03-27"
+    },
+    {
+      "id": "57eb7e5e227b",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Biométhane : la France piégée par ses tarifs d’achat [Global Summit, Berlin]",
+      "resume": "L'article souligne les défis des tarifs d'achat du biométhane en France, limitant son potentiel de décarbonation du transport et de l'électricité, ce qui pourrait impacter indirectement les stratégies de mobilité durable et d'énergie des clients d'ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/03/biomethane-la-france-piegee-par-ses-tarifs-dachat-global-summit-berlin-419422/",
+      "date": "2026-03-27"
+    },
+    {
+      "id": "0b8e1c473f35",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Guerre en Iran : coup de frein ou accélérateur de la transition énergétique en Europe ?",
+      "resume": "L'article aborde indirectement les enjeux de transition énergétique et d'électrification des flottes, pertinents pour ABC dans le cadre de sa stratégie de décarbonation et de mobilité durable, mais sans lien direct avec une obligation réglementaire ou opérationnelle immédiate.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/03/27/guerre-en-iran-frein-ou-accelerateur-de-la-transition-energetique-en-europe_6674466_3244.html",
+      "date": "2026-03-27"
+    },
+    {
+      "id": "ccacaa5e95c1",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "Radisson Sets Goal to Reach 100 Net Zero Hotels by 2030",
+      "resume": "L'article illustre une tendance sectorielle forte (hôtellerie) vers des objectifs net zéro ambitieux, pouvant influencer les exigences carbone des clients d'ABC dans les secteurs santé, industrie ou nucléaire via des chaînes d'approvisionnement ou des partenariats.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/radisson-sets-goal-to-reach-100-net-zero-hotels-by-2030/?utm_source=rss&utm_medium=rss&utm_campaign=radisson-sets-goal-to-reach-100-net-zero-hotels-by-2030",
       "date": "2026-03-27"
     },
     {
@@ -39,21 +94,10 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Restriction des PFAS en Europe : la proposition manque de garde-fous",
-      "resume": "La proposition de restriction des PFAS en Europe pourrait impacter les produits de nettoyage utilisés par ABC, nécessitant une adaptation de ses prestations et une veille sur les alternatives conformes aux nouvelles réglementations.",
-      "pourquoi": "Les PFAS sont des substances chimiques persistantes souvent présentes dans les produits de nettoyage et les équipements de protection utilisés par les prestataires de propreté. Leur restriction pourrait contraindre ABC à revoir ses approvisionnements et ses pratiques, avec un impact potentiel sur ses clients (exigences réglementaires accrues).",
-      "criticite": 2,
+      "resume": "La proposition de restriction des PFAS en Europe pourrait impacter les produits de nettoyage utilisés par ABC dans ses prestations de propreté, nécessitant une adaptation des formulations ou des alternatives moins polluantes.",
+      "pourquoi": "",
+      "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/comite-evaluation-risque-agence-europenne-produits-chimiques-proposition-restriction-pfas-47755.php4#xtor=RSS-6",
-      "date": "2026-03-26"
-    },
-    {
-      "id": "48f86fd08e53",
-      "source": "Reporterre",
-      "categorie": "Déchets",
-      "titre": "PFAS : un rapport préconise « une restriction large » à l'échelle européenne",
-      "resume": "Les restrictions potentielles sur les PFAS pourraient impacter les produits de nettoyage utilisés par ABC et ses clients, nécessitant une adaptation des formulations et une traçabilité renforcée des produits chimiques.",
-      "pourquoi": "Les PFAS sont des substances chimiques persistantes utilisées dans certains produits de nettoyage et équipements de propreté. Leur restriction large à l'échelle européenne pourrait entraîner des obligations de substitution, une modification des gammes de produits proposés par ABC, et des exigences accrues en matière de reporting sur les substances dangereuses dans le cadre de la CSRD et de l'ISO 14001.",
-      "criticite": 2,
-      "url": "https://reporterre.net/PFAS-un-rapport-preconise-une-restriction-large-a-l-echelle-europeenne",
       "date": "2026-03-26"
     },
     {
@@ -61,7 +105,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Technologies bas carbone : une croissance significative, menacée par les tensions géopolitiques",
-      "resume": "L'article met en lumière la dépendance aux technologies bas carbone dominées par la Chine, ce qui pourrait impacter la transition énergétique d'ABC et ses clients, notamment dans la décarbonation de sa flotte et ses investissements en énergies renouvelables.",
+      "resume": "L'article souligne la croissance des technologies bas carbone, dominée par la Chine, ce qui peut impacter les choix d'ABC en matière de décarbonation de sa flotte et de ses prestations (scope 1/3).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/technologies-propres-bas-carbone-climat-economie-mondiale-investissements-47752.php4#xtor=RSS-6",
@@ -72,21 +116,10 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "La Commission européenne lance une nouvelle stratégie de lutte contre les feux de forêt",
-      "resume": "La stratégie européenne contre les feux de forêt pourrait impacter la gestion des risques climatiques sur les sites clients d'ABC, notamment en termes de prévention et d'adaptation des prestations de propreté/FM.",
+      "resume": "La stratégie européenne contre les feux de forêt pourrait impacter la gestion des risques climatiques pour les sites clients d'ABC (3 000+ sites), notamment via des exigences accrues en matière de prévention et d'adaptation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/feux-incendies-foret-strategie-lutte-commission-europeenne-47754.php4#xtor=RSS-6",
-      "date": "2026-03-26"
-    },
-    {
-      "id": "fa472cfe9ddb",
-      "source": "Actu-Environnement",
-      "categorie": "Environnement",
-      "titre": "Le chiffre du jour : 5,2 milliards d’euros",
-      "resume": "L'article souligne le coût croissant des aléas climatiques en France (5,2 Md€ en 2025), un risque indirect majeur pour ABC qui intervient sur 3 000+ sites clients, impactant potentiellement la continuité des prestations et les exigences clients en matière de résilience.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/dit-aujourdhui/1790.html#xtor=RSS-6",
       "date": "2026-03-26"
     },
     {
@@ -94,7 +127,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Les échos de Time to Change [1ere journée]",
-      "resume": "L'article aborde des tendances et signaux de la transition énergétique et écologique portés par des investisseurs et entrepreneurs, offrant un contexte utile pour anticiper les attentes clients et réglementaires en matière de décarbonation et d'ESG.",
+      "resume": "Cet article couvre des tendances et signaux sur la transition énergétique et écologique, notamment via des investisseurs et entrepreneurs, ce qui peut influencer les attentes des clients d'ABC en matière de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/les-echos-de-time-to-change-1ere-journee-419212/",
@@ -105,32 +138,10 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Les opérateurs de recharge en quête de rentabilité",
-      "resume": "L'article aborde la rentabilité des opérateurs de recharge pour véhicules électriques, un enjeu indirect pour ABC via la décarbonation de sa flotte et les attentes clients en mobilité durable.",
+      "resume": "L'article aborde la densification du réseau de recharge pour véhicules électriques, un enjeu lié à la mobilité durable et à l'électrification des flottes, qui impacte indirectement les obligations de décarbonation et les attentes clients d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/les-operateurs-de-recharge-en-quete-de-rentabilite-419420/",
-      "date": "2026-03-26"
-    },
-    {
-      "id": "42e7090bc5a8",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "Watershed Launches AI-Powered Sustainability Reporting Tools",
-      "resume": "L'article présente des outils d'IA pour le reporting ESG (CSRD/ESRS), utile pour ABC afin d'optimiser son reporting extra-financier et répondre aux exigences clients en matière de transparence carbone.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/watershed-launches-ai-powered-sustainability-reporting-tools/?utm_source=rss&utm_medium=rss&utm_campaign=watershed-launches-ai-powered-sustainability-reporting-tools",
-      "date": "2026-03-26"
-    },
-    {
-      "id": "12f0d9919da5",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "Germany Adopts Climate Action Plan to Slash Emissions, Fossil Fuel Consumption",
-      "resume": "L'Allemagne renforce ses objectifs climatiques avec un plan de réduction des émissions et de la consommation d'énergies fossiles, ce qui pourrait influencer les exigences carbone des clients industriels ou énergétiques d'ABC en France ou en Europe.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/germany-adopts-climate-action-plan-to-slash-emissions-fossil-fuel-consumption/?utm_source=rss&utm_medium=rss&utm_campaign=germany-adopts-climate-action-plan-to-slash-emissions-fossil-fuel-consumption",
       "date": "2026-03-26"
     },
     {
@@ -138,21 +149,10 @@
       "source": "Les Echos Environnement",
       "categorie": "Climat",
       "titre": "TotalEnergies ne sera pas en mesure d'atteindre son objectif de neutralité carbone en 2050 - Les Echos",
-      "resume": "Cet article illustre les défis de décarbonation des grands groupes énergétiques, un signal fort pour les clients d'ABC (nucléaire, santé, industrie) qui pourraient revoir leurs exigences carbone et leurs partenariats avec des prestataires comme ABC.",
+      "resume": "L'article souligne l'échec d'un acteur majeur de l'énergie à atteindre ses objectifs climatiques, ce qui peut influencer les attentes des clients d'ABC en matière de décarbonation et de reporting ESG, notamment dans les secteurs nucléaire, santé et industrie.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOaTI3cmhoNEh2cXhZdUpkSG9sOTZaSUxLajJpV3hITF9aanNFSl9wZW5OTjlsbFlhWndsUXNfdGtqMGJlWFcweUxNRDg0cHpTb2lIMXhGaExnaS1OV0UtSnBNeU5ILURfMFZhR1daWXZvU3lnMFFVNUF5VlRmNVgxZkFvWnE0QVpUOVE3Qm45alN3YXo4cGZtbHR6RVpWWTBhX0FOdDJvNTlDc2JXSERvRWJTcXF5U1pkbzRVQUJoV3EzUlhVSXNlOWgyQnZfRlc1NTBWdVBQeWV6T3g0WXU2aWUzRXdlXzd1aGdMbW54Nk9PYkp3?oc=5",
-      "date": "2026-03-26"
-    },
-    {
-      "id": "5ba1fe8be6ef",
-      "source": "Les Echos Environnement",
-      "categorie": "Déchets",
-      "titre": "« Nous vivons la fin d'une RSE incantatoire, pas la fin de l'ambition » : vers une durabilité plus concrète et transversale au sein des entreprises - Les Echos",
-      "resume": "L'article souligne le passage d'une RSE symbolique à une approche concrète et transversale, ce qui implique pour ABC d'aligner ses actions (BGES, flotte, déchets, reporting CSRD) sur des résultats mesurables pour répondre aux attentes clients et réglementaires.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxOelNnYVFDQXk1RllLb013V0t3NDJuck9Ed0FrckpVVFFJSGdIQzVxdGRTY0FNUy04RjVhTDllR2JpV1BBdHU1UzFYdU9aNkxVX1VoSGZDU1ktX2xhTEttTXpFZzBUOXZXVHBKaTFqOW02dWwxLXJPZ3I1UkFOLWc0OFY4YUktclBMcXRiSVpvaXR3ZWtFLXJ6THFqYzM2RWhyU2kzMEx6d3lyZHJSMzgxa05yS0cwZkJoTzU0dWdBOUZlbGdkV1ZVZXFNQTd3VGpCbTQ1Y1RTTXBUcU44MXhpSDh3SlRZaWVMWGFiUkE0SHZKRXd0THk4OE54bWZCWE9kRktOcTVJdTJqd2dZeVVQVlJ1X1lRTlFkOV95ZWFKc1ZncEJDS3M5b1Z0WEdhQQ?oc=5",
       "date": "2026-03-26"
     }
   ],
@@ -760,7 +760,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Les arrêtés pertinents pour un Responsable Environnement/Climat concernent principalement la certification environnementale (n°1), la gestion des eaux souterraines (n°5), la valorisation du domaine public fluvial (n°14) et les servitudes électromagnétiques (n°12-13), ainsi que des modifications réglementaires sur les pneumatiques (n°3) et les produits phytosanitaires (n°4).",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -956,6 +956,12 @@
       "source": "AN Textes adoptés",
       "items": [
         {
+          "titre": "Texte adopté N° 257",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/condamner_atteintes_droits_fondamentaux_personnes_migrantes_Tunisie",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/condamner_atteintes_droits_fondamentaux_personnes_migrantes_Tunisie",
+          "date": "2025-12-23"
+        },
+        {
           "titre": "Texte adopté N° 252",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_renforcer_la_place_des_agriculteurs_dans_amenagement_du_territoire_et_securiser_activites_agricoles_face_au_changement_climatique_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_renforcer_la_place_des_agriculteurs_dans_amenagement_du_territoire_et_securiser_activites_agricoles_face_au_changement_climatique_17e",
@@ -1104,15 +1110,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reparer_prejudices_transplantation_mineurs_la_reunion_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reparer_prejudices_transplantation_mineurs_la_reunion_17e",
           "date": "2026-03-27"
-        },
-        {
-          "titre": "Texte adopté N° 221",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/gestion_patrimoine_immobilier_etat_17e",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/gestion_patrimoine_immobilier_etat_17e",
-          "date": "2025-09-16"
         }
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le seul texte directement pertinent pour un Responsable Environnement/Climat, avec des implications potentielles sur la réglementation climatique, la transition énergétique et les obligations de reporting RSE. Aucun autre texte adopté ou en discussion ne semble directement lié aux enjeux environnementaux ou climatiques pour une entreprise de services."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) pourrait inclure des mesures environnementales et énergétiques significatives, notamment sur la transition écologique et la réglementation des déchets. Aucun autre texte ne semble directement lié aux enjeux climatiques, énergétiques ou de reporting RSE pour une entreprise de services."
 }
