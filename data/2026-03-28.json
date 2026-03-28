@@ -1,7 +1,7 @@
 {
   "date": "2026-03-28",
-  "generated_at": "07:40",
-  "elapsed_seconds": 139,
+  "generated_at": "13:55",
+  "elapsed_seconds": 121,
   "errors": [],
   "stats": {
     "jo_analyses": 15,
@@ -9,7 +9,7 @@
     "depts_restriction": 0
   },
   "pipeline_meta": {
-    "run_at": "2026-03-28T07:40:40",
+    "run_at": "2026-03-28T13:55:06",
     "sources": {
       "JORF": 0,
       "RSS": 10,
@@ -19,19 +19,41 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 48,
-    "llm_seconds": 45.8
+    "llm_calls": 39,
+    "llm_seconds": 37.5
   },
   "items": [
+    {
+      "id": "b0b052e5c2d3",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Le coût du réchauffement climatique détaillé pour la première fois par émetteur, du billet d’avion aux géants pétroliers",
+      "resume": "L'article met en lumière la responsabilité climatique des entreprises et des individus, avec une méthodologie de calcul des dommages économiques liés aux émissions. Cela renforce l'importance de la transparence et de la réduction des émissions pour ABC, notamment dans le cadre de son reporting ESG (CSRD) et de sa stratégie de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/03/28/le-cout-du-rechauffement-climatique-detaille-pour-la-premiere-fois-par-emetteur-du-billet-d-avion-aux-geants-petroliers_6675036_3244.html",
+      "date": "2026-03-28"
+    },
     {
       "id": "5cb89f5b7bc8",
       "source": "Le Monde Planète",
       "categorie": "Environnement",
       "titre": "Choc pétrolier : « Le verdissement de l’économie européenne sert aussi un objectif de sécurité »",
-      "resume": "L'article souligne l'accélération de la transition énergétique européenne comme réponse aux chocs pétroliers, ce qui pourrait impacter les politiques clients d'ABC (nucléaire, santé, industrie) et leurs exigences en matière de décarbonation des prestataires.",
+      "resume": "L'article souligne l'accélération de la transition énergétique européenne comme réponse aux chocs pétroliers, ce qui pourrait influencer les politiques clients d'ABC (nucléaire, santé, industrie) et leurs exigences en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/03/28/choc-petrolier-le-verdissement-de-l-economie-europeenne-sert-aussi-un-objectif-de-securite_6674953_3232.html",
+      "date": "2026-03-28"
+    },
+    {
+      "id": "5e195a6a2024",
+      "source": "Les Echos Environnement",
+      "categorie": "Environnement",
+      "titre": "Envolée des prix du pétrole et du gaz : « Le conflit iranien joue contre le climat, pas pour lui » - Les Echos",
+      "resume": "L'article souligne l'impact du conflit iranien sur la hausse des prix des énergies fossiles, ce qui pourrait influencer les coûts opérationnels d'ABC (flotte véhicules, énergie) et les stratégies de décarbonation à moyen terme.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVU1fTWZHckZLZXY0ZEEzZXRfOGYyVWdBOU80bUdQUGtUZURHN1hhNDZReFdwOXBwOW4xRUZoLUlHSk1IaUxiNEJ6NWgzenVRY2NyeGlNME9fMjVVR0dFakNKc2RVSzlsWmFGRi1ZNEFNd2c1czI4eF9ZSFRXbVFUV01jdGItZkN3dnhMNnFIeVZ2WVE4WWZPMGpjbTVHQzVtRE5rR0NOeTkzQUNqSDlRVmc4YXpwbDFQSUZ2R2tsX25zbk03R1JlSU5Ecy1EQTRFTnhhS2NxLU5YNjA?oc=5",
       "date": "2026-03-28"
     },
     {
@@ -39,7 +61,7 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "REP pneumatiques : le soutien au rechapage peut entrer en vigueur",
-      "resume": "La REP pneumatiques pourrait impacter les obligations de traçabilité et de gestion des déchets pour ABC, notamment via la filière de recyclage des pneus usagés utilisés dans ses prestations de nettoyage ou de maintenance.",
+      "resume": "La REP (Responsabilité Élargie du Producteur) pour les pneumatiques inclut désormais un soutien financier au rechapage, ce qui pourrait influencer les coûts et la gestion des déchets liés aux pneus de la flotte de véhicules d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/arrete-rechapage-pneu-soutien-financier-black-star-47762.php4#xtor=RSS-6",
@@ -50,21 +72,10 @@
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "La Chine domine sans partage le marché des énergies renouvelables",
-      "resume": "La domination chinoise sur les chaînes d'approvisionnement des énergies renouvelables expose ABC à des risques de dépendance sur les équipements (flotte véhicules, outils de prestation) et pourrait impacter les coûts ou la disponibilité des solutions bas-carbone.",
+      "resume": "L'article met en lumière la dépendance critique de l'Europe (et donc de ABC) aux chaînes d'approvisionnement chinoises pour les équipements de décarbonation (panneaux solaires, batteries, etc.), soulignant un risque stratégique pour la transition énergétique des clients d'ABC et la résilience de ses propres solutions.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/La-Chine-domine-sans-partage-le-marche-des-energies-renouvelables",
-      "date": "2026-03-27"
-    },
-    {
-      "id": "14ce6439b845",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "TotalEnergies lâche ses objectifs de neutralité carbone et le Scope3",
-      "resume": "L'article illustre une tendance de recul des engagements climatiques chez un acteur majeur du secteur énergétique, ce qui pourrait influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et impacter indirectement sa stratégie de décarbonation et son reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/environnement/climat/totalenergies-lache-ses-objectifs-de-neutralite-carbone-et-le-scope3",
       "date": "2026-03-27"
     },
     {
@@ -72,32 +83,32 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Les documents de la semaine",
-      "resume": "Cet article hebdomadaire compile des documents clés sur la transition énergétique, utiles pour suivre les évolutions réglementaires et stratégiques pertinentes pour le reporting ESG (CSRD, ESRS), la décarbonation (scope 1/2/3) et les risques climatiques opérationnels de ABC.",
+      "resume": "Synthèse hebdomadaire de documents clés pour la transition énergétique, incluant textes réglementaires, études et analyses pertinentes pour le suivi des enjeux climatiques et RSE d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/les-documents-de-la-semaine-381215/",
       "date": "2026-03-27"
     },
     {
-      "id": "12405b10ac64",
+      "id": "552a4c9142aa",
       "source": "GreenUnivers",
       "categorie": "Climat",
-      "titre": "L’agenda de la transition énergétique",
-      "resume": "Cet article recense des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.), offrant à ABC une veille sur les tendances et acteurs clés du secteur pour anticiper les évolutions réglementaires ou marché.",
+      "titre": "Les échos de Time to Change [2e journée]",
+      "resume": "Cet article relate des échanges sur la transition énergétique et écologique lors d'un forum dédié aux investisseurs et entrepreneurs, offrant un contexte sur les tendances et dynamiques du secteur. Il peut éclairer les stratégies de décarbonation et d'innovation d'ABC dans un environnement concurrentiel.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/03/lagenda-de-la-transition-energetique-278-419528/",
+      "url": "https://www.greenunivers.com/2026/03/les-echos-de-time-to-change-2e-journee-2-419510/",
       "date": "2026-03-27"
     },
     {
-      "id": "57eb7e5e227b",
+      "id": "5741da4c0678",
       "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Biométhane : la France piégée par ses tarifs d’achat [Global Summit, Berlin]",
-      "resume": "L'article aborde le biométhane comme solution de décarbonation du transport, un enjeu indirect pour ABC via sa flotte de véhicules (scope 1) et les attentes carbone de ses clients industriels ou nucléaires.",
+      "categorie": "Énergie",
+      "titre": "BlackRock cherche un acheteur pour Renner Energies dans un marché tendu",
+      "resume": "L'article signale une opportunité stratégique potentielle pour ABC dans le secteur des énergies renouvelables en France, avec un acteur (Renner Energies) en vente dans un marché tendu, pouvant influencer les choix énergétiques des clients ou des partenaires.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/03/biomethane-la-france-piegee-par-ses-tarifs-dachat-global-summit-berlin-419422/",
+      "url": "https://www.greenunivers.com/2026/03/blackrock-cherche-un-acheteur-pour-renner-energies-dans-un-marche-tendu-419589/",
       "date": "2026-03-27"
     },
     {
@@ -105,21 +116,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Pourquoi soigner la planète est bon pour la santé",
-      "resume": "L'article souligne les bénéfices sanitaires de la transition écologique, un angle indirect mais utile pour sensibiliser les parties prenantes d'ABC (clients, équipes) aux enjeux climatiques et renforcer la légitimité des actions RSE.",
+      "resume": "L'article souligne les bénéfices sanitaires de la transition écologique, un argument potentiel pour renforcer la stratégie RSE d'ABC auprès de ses clients (secteurs santé, industrie) et justifier des investissements dans la décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/03/27/pourquoi-soigner-la-planete-est-bon-pour-la-sante_6674675_3232.html",
-      "date": "2026-03-27"
-    },
-    {
-      "id": "ccacaa5e95c1",
-      "source": "ESG Today",
-      "categorie": "Climat",
-      "titre": "Radisson Sets Goal to Reach 100 Net Zero Hotels by 2030",
-      "resume": "Cet article illustre une tendance forte dans le secteur hôtelier (client potentiel d'ABC) vers des objectifs net zéro ambitieux, avec des exigences en matière d'énergies renouvelables et de réduction des déchets, pouvant influencer les attentes carbone des clients d'ABC dans les années à venir.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/radisson-sets-goal-to-reach-100-net-zero-hotels-by-2030/?utm_source=rss&utm_medium=rss&utm_campaign=radisson-sets-goal-to-reach-100-net-zero-hotels-by-2030",
       "date": "2026-03-27"
     },
     {
@@ -127,7 +127,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Énergie",
       "titre": "TotalEnergies signe un partenariat avec EDF pour l'approvisionnement en électricité bas carbone de ses sites de raffinage & chimie en France - Les Echos",
-      "resume": "Cet article illustre la tendance croissante des grands industriels à sécuriser des approvisionnements en électricité bas carbone, ce qui pourrait influencer les exigences clients d'ABC (nucléaire, industrie) en matière de décarbonation et de reporting ESG.",
+      "resume": "L'article illustre une tendance de décarbonation des sites industriels via des partenariats d'approvisionnement en électricité bas carbone, ce qui peut influencer les attentes des clients d'ABC en matière de reporting ESG et de réduction des émissions scope 2.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxQR2pmalRsRUxCTHhZaFJUbGFKU1pSOGQtUzdxV0RWdmp2cmstRTVxODhwVWZhMTQ5aUFSLUc3RGttXzN5aGNMOURhMGNTVHVwMXpIbWdvMVZDbThkajlqanlSOXlkYUJwYzgzd0ZHbE0zdkxZNC03Rm8wY2l3MjdhQ0pGS1JkQWdJR2ZheFRYWHcxdDhRdUJaandRR2NpZVJhMFhoYVdJVDZ2QTZLWnMwWVZjVG5uUG1IVWlObnZJWHprWnNvNENFX2FPR0NiQXZvNHBsSEFrX1dBS0FENzNRaEIwQ090VnJqOFlLLWZyYVAxZlUwemk4RnJEU2pIVUdaNXY4NldQS1NoejhZdjNKaGRoNmRIRVp2ZmJPUlgyeGRkdkF4eXRIdnFKUTZ4VjNSdi1UMQ?oc=5",
@@ -582,7 +582,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement l'arrêté du 25 mars 2026 modifiant le cahier des charges des éco-organismes de la filière TLC (textiles, chaussures, linge de maison), renforçant potentiellement les obligations de recyclage et de responsabilité élargie des producteurs (REP). Aucun autre texte ne semble directement lié aux enjeux climatiques ou environnementaux.",
+  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement la modification du cahier des charges des éco-organismes pour la filière TLC (textiles, chaussures, linge de maison) via l'arrêté du 25 mars 2026, qui impacte les obligations de recyclage et de responsabilité élargie des producteurs. Aucun autre texte ne traite directement de sujets environnementaux ou climatiques.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -936,5 +936,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le plus pertinent pour un Responsable Environnement/Climat, car il pourrait intégrer des normes européennes renforcées en matière de transition écologique, d’énergies renouvelables ou de reporting extra-financier. Aucun autre texte ne semble directement lié aux enjeux climatiques ou RSE parmi les projets de loi listés."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l'UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises, notamment en matière de reporting extra-financier et de transition énergétique. Aucun autre texte ne semble directement lié aux enjeux climatiques ou environnementaux pour une entreprise de services."
 }
