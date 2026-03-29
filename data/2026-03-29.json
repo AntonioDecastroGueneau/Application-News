@@ -1,7 +1,7 @@
 {
   "date": "2026-03-29",
-  "generated_at": "07:48",
-  "elapsed_seconds": 168,
+  "generated_at": "13:57",
+  "elapsed_seconds": 128,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,41 +9,30 @@
     "depts_restriction": 0
   },
   "pipeline_meta": {
-    "run_at": "2026-03-29T07:48:16",
+    "run_at": "2026-03-29T13:57:01",
     "sources": {
       "JORF": 0,
-      "RSS": 2,
+      "RSS": 1,
       "VigiEau": 0,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 21,
-    "llm_seconds": 17.6
+    "llm_calls": 22,
+    "llm_seconds": 18.3
   },
   "items": [
     {
-      "id": "b0b052e5c2d3",
-      "source": "Le Monde Planète",
+      "id": "f671436cb09b",
+      "source": "ESG Today",
       "categorie": "Climat",
-      "titre": "Le coût du réchauffement climatique détaillé pour la première fois par émetteur, du billet d’avion aux géants pétroliers",
-      "resume": "L'article met en lumière la responsabilité climatique des entreprises et des individus, ce qui peut influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et renforcer l'importance de la décarbonation de sa flotte et de ses prestations.",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article couvre des actualités ESG/CSRD et climatiques (Allemagne, EFRAG, reporting) pertinentes pour le contexte réglementaire et stratégique d'ABC, mais sans obligation directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/03/28/le-cout-du-rechauffement-climatique-detaille-pour-la-premiere-fois-par-emetteur-du-billet-d-avion-aux-geants-petroliers_6675036_3244.html",
-      "date": "2026-03-28"
-    },
-    {
-      "id": "5e195a6a2024",
-      "source": "Les Echos Environnement",
-      "categorie": "Environnement",
-      "titre": "Envolée des prix du pétrole et du gaz : « Le conflit iranien joue contre le climat, pas pour lui » - Les Echos",
-      "resume": "L'article souligne l'impact des tensions géopolitiques sur les prix de l'énergie, ce qui peut influencer les coûts opérationnels de la flotte de véhicules d'ABC et les stratégies de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVU1fTWZHckZLZXY0ZEEzZXRfOGYyVWdBOU80bUdQUGtUZURHN1hhNDZReFdwOXBwOW4xRUZoLUlHSk1IaUxiNEJ6NWgzenVRY2NyeGlNME9fMjVVR0dFakNKc2RVSzlsWmFGRi1ZNEFNd2c1czI4eF9ZSFRXbVFUV01jdGItZkN3dnhMNnFIeVZ2WVE4WWZPMGpjbTVHQzVtRE5rR0NOeTkzQUNqSDlRVmc4YXpwbDFQSUZ2R2tsX25zbk03R1JlSU5Ecy1EQTRFTnhhS2NxLU5YNjA?oc=5",
-      "date": "2026-03-28"
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-254/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-254",
+      "date": "2026-03-29"
     }
   ],
   "restrictions_eau": [],
@@ -740,5 +729,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le plus pertinent pour un Responsable Environnement/Climat, car il intègre des dispositions clés pour la transition écologique (énergies renouvelables, économie circulaire, etc.). Aucun autre texte ne semble directement lié aux enjeux climatiques ou RSE parmi ceux listés."
+  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale, énergétique et agricole est le plus pertinent pour un Responsable Environnement/Climat, car il intègre des dispositions clés pour la transition écologique (énergies renouvelables, économie circulaire, adaptation climatique). Aucun autre texte ne traite directement de ces enjeux."
 }
