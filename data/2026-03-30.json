@@ -1,7 +1,7 @@
 {
   "date": "2026-03-30",
-  "generated_at": "08:18",
-  "elapsed_seconds": 132,
+  "generated_at": "12:41",
+  "elapsed_seconds": 141,
   "errors": [],
   "stats": {
     "jo_analyses": 9,
@@ -9,48 +9,70 @@
     "depts_restriction": 0
   },
   "pipeline_meta": {
-    "run_at": "2026-03-30T08:18:44",
+    "run_at": "2026-03-30T12:41:35",
     "sources": {
       "JORF": 0,
-      "RSS": 3,
+      "RSS": 5,
       "VigiEau": 0,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 29,
-    "llm_seconds": 43.6
+    "llm_calls": 39,
+    "llm_seconds": 44.5
   },
   "items": [
+    {
+      "id": "9550e7b28c01",
+      "source": "ESG Today",
+      "categorie": "Énergie",
+      "titre": "GRI Releases Proposed Pollution Disclosure Standards",
+      "resume": "Les nouvelles normes GRI sur la pollution pourraient influencer les exigences de reporting ESG des clients d'ABC, notamment dans les secteurs nucléaire, santé ou industrie, et impacter indirectement les attentes en matière de transparence sur les déchets et émissions des prestations de propreté.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/gri-releases-proposed-pollution-disclosure-standards/?utm_source=rss&utm_medium=rss&utm_campaign=gri-releases-proposed-pollution-disclosure-standards",
+      "date": "2026-03-30"
+    },
+    {
+      "id": "945a5bcd6df2",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "The Drivers for Supply Chain Decarbonization are Changing… But What Matters is Impact",
+      "resume": "L'article aborde les nouvelles motivations pour la décarbonation des chaînes d'approvisionnement, un enjeu clé pour ABC dans le cadre de ses obligations de reporting (CSRD) et de réduction de ses émissions scope 3 liées aux prestations de propreté.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/the-drivers-for-supply-chain-decarbonization-are-changing-but-what-matters-is-impact/?utm_source=rss&utm_medium=rss&utm_campaign=the-drivers-for-supply-chain-decarbonization-are-changing-but-what-matters-is-impact",
+      "date": "2026-03-30"
+    },
+    {
+      "id": "664f4f93a252",
+      "source": "Les Echos Environnement",
+      "categorie": "Énergie",
+      "titre": "Souveraineté énergétique : « La leçon chinoise et le pari européen des hubs énergétiques bas carbone - Les Echos",
+      "resume": "L'article aborde la stratégie européenne des hubs énergétiques bas carbone, un sujet qui pourrait influencer les politiques clients d'ABC (nucléaire, industrie) et leurs exigences en matière de décarbonation, sans impact direct immédiat sur les activités de l'entreprise.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQdmJOMXlHSjZReTVZNzRudTdPMnFiVld2Q3YxYkY3bXhhYzEzTklzZDRLVGlScXVndmVuVnpzcGJZY2tYQmc3Qlh3dGJNc3VhSWZ3ck9Fei1GR0RHOGhsZDB0S1JHZnNHWnlPVFhIeGpiSXpUTDFIM0x5OEdVSTFrSk8wMjl0SmoxZVV1WjlwUjNpSmVvNHdHVWhBTTVKaXdwYzQ0b093M1JuRGVYMmEwWDhva0hJNUFjQm5semhGbW92MUh3dDJTakdnaUdDWE82ckhsVDRDZWF3OGlQMkRveVdn?oc=5",
+      "date": "2026-03-30"
+    },
     {
       "id": "f671436cb09b",
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article couvre des évolutions ESG et climatiques (climat, reporting, décarbonation) qui, bien que non directement réglementaires pour ABC, fournissent un contexte utile pour anticiper les attentes clients et les tendances marché en matière de durabilité.",
+      "resume": "L'article couvre des actualités ESG transverses (climat, reporting, mobilité) qui peuvent influencer les attentes clients d'ABC en matière de décarbonation et de reporting extra-financier, sans obligation directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-254/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-254",
       "date": "2026-03-29"
     },
     {
-      "id": "b0b052e5c2d3",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Le coût du réchauffement climatique détaillé pour la première fois par émetteur, du billet d’avion aux géants pétroliers",
-      "resume": "L'étude met en lumière la responsabilité climatique des entreprises et des individus, renforçant l'importance de la transparence et de la réduction des émissions pour ABC, notamment dans le cadre de la CSRD et du reporting extra-financier.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/03/28/le-cout-du-rechauffement-climatique-detaille-pour-la-premiere-fois-par-emetteur-du-billet-d-avion-aux-geants-petroliers_6675036_3244.html",
-      "date": "2026-03-28"
-    },
-    {
       "id": "5e195a6a2024",
       "source": "Les Echos Environnement",
       "categorie": "Environnement",
       "titre": "Envolée des prix du pétrole et du gaz : « Le conflit iranien joue contre le climat, pas pour lui » - Les Echos",
-      "resume": "L'article souligne l'impact du conflit iranien sur les prix de l'énergie, pouvant influencer les coûts opérationnels de la flotte de véhicules d'ABC et les budgets énergétiques des sites clients, sans obligation directe immédiate.",
+      "resume": "L'article souligne l'impact négatif des tensions géopolitiques (conflit iranien) sur les prix de l'énergie fossile, ce qui pourrait retarder la transition énergétique et complexifier la décarbonation des flottes de véhicules d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOVU1fTWZHckZLZXY0ZEEzZXRfOGYyVWdBOU80bUdQUGtUZURHN1hhNDZReFdwOXBwOW4xRUZoLUlHSk1IaUxiNEJ6NWgzenVRY2NyeGlNME9fMjVVR0dFakNKc2RVSzlsWmFGRi1ZNEFNd2c1czI4eF9ZSFRXbVFUV01jdGItZkN3dnhMNnFIeVZ2WVE4WWZPMGpjbTVHQzVtRE5rR0NOeTkzQUNqSDlRVmc4YXpwbDFQSUZ2R2tsX25zbk03R1JlSU5Ecy1EQTRFTnhhS2NxLU5YNjA?oc=5",
@@ -685,5 +707,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le seul texte directement pertinent pour un Responsable Environnement/Climat, avec des implications potentielles sur les normes climatiques, la transition énergétique et les obligations de reporting RSE. Aucun autre texte adopté ou en discussion ne traite spécifiquement de sujets environnementaux, de déchets ou de RSE."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations de reporting RSE, la gestion des déchets et les stratégies bas-carbone des entreprises. Aucun texte adopté ne semble directement lié à des enjeux climatiques ou environnementaux majeurs pour les grandes entreprises de services."
 }
