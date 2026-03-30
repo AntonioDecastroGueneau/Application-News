@@ -3,7 +3,7 @@ name: Veille Environnementale ABC
 on:
   schedule:
     - cron: '0 7  * * *'   # 09:00 Paris (UTC+2)
-    - cron: '0 13 * * *'   # 14:00 Paris
+    - cron: '0 12 * * *'   # 13:00 Paris
 
   workflow_dispatch:         # déclenchement manuel depuis l'onglet Actions
 
