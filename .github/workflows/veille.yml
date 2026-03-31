@@ -34,6 +34,9 @@ jobs:
           pip install --upgrade pip
           pip install --no-cache-dir -r requirements.txt
 
+      - name: Install Playwright Chromium
+        run: playwright install chromium --with-deps
+
       # ── 4. Restauration du cache PJL depuis gh-pages ─────────────
       #    pjl_cache.json persiste entre les runs via gh-pages.
       #    Doit être fait AVANT le pipeline pour que le cache soit lisible.

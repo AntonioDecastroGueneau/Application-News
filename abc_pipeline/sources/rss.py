@@ -11,7 +11,7 @@ import feedparser
 import requests
 
 from ..config import RSS_SOURCES, TIMEOUT
-from ..crawl import crawl_article, crawl_article_links, crawl_article_links_filtered, get_crawled_date
+from ..crawl import crawl_article, crawl_article_links, crawl_article_links_filtered, crawl_playwright_links, get_crawled_date
 from ..filters import categorise, keyword_match, make_id
 from ..llm import groq_analyse_rss
 
@@ -55,6 +55,69 @@ def _date_from_text(text: str):
 def fetch_rss_source(source: dict, today_str: str, seen_urls: dict = None, new_seen: dict = None):
     items = []
     name = source['name']
+
+    # ── Route Playwright : sources JS-rendered (ex: Google News publication) ──
+    if source.get('playwright_crawl'):
+        playwright_url = source['playwright_crawl']
+        log.info(f"Playwright → {playwright_url}")
+        try:
+            article_links = crawl_playwright_links(playwright_url, max_links=15)
+            log.info(f"Playwright {name} : {len(article_links)} liens extraits")
+            now = datetime.now()
+            fallback_cutoff = (
+                (now - timedelta(days=3)).replace(hour=18, minute=0, second=0, microsecond=0)
+                if now.weekday() == 0
+                else now - timedelta(hours=24)
+            )
+            for link in article_links:
+                try:
+                    if seen_urls is not None and link['url'] in seen_urls:
+                        continue
+                    titre_art = link['titre']
+                    title_dt = _date_from_text(titre_art)
+                    titre_art = re.sub(r'\s*\d{1,2}/\d{2}/\d{4}.*$', '', titre_art).strip()
+                    if not titre_art or len(titre_art) < 10:
+                        continue
+                    if title_dt and title_dt < fallback_cutoff:
+                        log.debug(f"Playwright date titre trop ancienne ({title_dt.date()}), exclu : {titre_art[:60]}")
+                        continue
+
+                    contenu = crawl_article(link['url']) or ''
+                    txt = titre_art + ' ' + contenu
+
+                    if source.get('require_keywords'):
+                        if not any(k.lower() in txt.lower() for k in source['require_keywords']):
+                            continue
+                    if not keyword_match(txt):
+                        continue
+
+                    analysis = groq_analyse_rss(titre_art, contenu)
+                    if analysis.get('pertinent') is False:
+                        continue
+
+                    score = int(analysis.get('score') or 1)
+                    pourquoi = analysis.get('pourquoi', '') if score >= 2 else ''
+                    article_date = get_crawled_date(link['url']) or today_str
+
+                    if new_seen is not None:
+                        new_seen[link['url']] = today_str
+
+                    items.append({
+                        'id': make_id(name, titre_art),
+                        'source': name,
+                        'categorie': categorise(txt),
+                        'titre': titre_art,
+                        'resume': analysis.get('resume') or titre_art,
+                        'pourquoi': pourquoi,
+                        'criticite': score,
+                        'url': link['url'],
+                        'date': article_date,
+                    })
+                except Exception as e_art:
+                    log.debug(f"Playwright article {link['url']} : {e_art}")
+        except Exception as e:
+            log.warning(f"Playwright {name} error : {e}")
+        return items
 
     try:
         try:
@@ -317,7 +380,7 @@ def fetch_rss(today_str: str, script_dir: Path = None):
 
     all_items = []
     for source in RSS_SOURCES:
-        is_fallback = bool(source.get('fallback_crawl'))
+        is_fallback = bool(source.get('fallback_crawl') or source.get('playwright_crawl'))
         items = fetch_rss_source(source, today_str, seen_urls=seen_cache if is_fallback else None, new_seen=new_seen if is_fallback else None)
         if not items:
             log.warning(f"SOURCE VIDE : {source['name']} — 0 articles retenus")

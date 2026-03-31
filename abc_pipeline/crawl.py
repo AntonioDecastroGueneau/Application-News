@@ -142,6 +142,60 @@ def crawl_article_links(listing_url: str, base_url: str, max_links: int = 5) -> 
         return []
 
 
+def crawl_playwright_links(url: str, max_links: int = 15) -> list:
+    """
+    Use Playwright (headless Chromium) to scrape a JS-rendered page and extract article links.
+    Returns a list of dicts: {titre, url}.
+    Used exclusively for sources that cannot be scraped with requests (e.g. Google News publications).
+    """
+    try:
+        from urllib.parse import urljoin
+        from playwright.sync_api import sync_playwright
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page(
+                user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+                           '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            )
+            page.goto(url, timeout=30000, wait_until='networkidle')
+            try:
+                page.wait_for_selector('article', timeout=15000)
+            except Exception:
+                pass
+
+            links = []
+            seen = set()
+            articles = page.query_selector_all('article')
+            for art in articles:
+                # Title: prefer h3/h4 heading inside the article block
+                heading = art.query_selector('h3, h4')
+                titre = heading.inner_text().strip() if heading else ''
+                # Link: first <a> with an href
+                a_tag = art.query_selector('a[href]')
+                if not a_tag:
+                    continue
+                if not titre:
+                    titre = a_tag.inner_text().strip()
+                href = a_tag.get_attribute('href') or ''
+                if not titre or len(titre) < 10 or not href:
+                    continue
+                full_url = urljoin(url, href)
+                if full_url in seen:
+                    continue
+                seen.add(full_url)
+                links.append({'titre': titre[:200], 'url': full_url})
+                if len(links) >= max_links:
+                    break
+
+            browser.close()
+            return links
+
+    except Exception as e:
+        log.debug(f"crawl_playwright_links error {url}: {e}")
+        return []
+
+
 def crawl_article_links_filtered(listing_url: str, base_url: str, url_contains: str, max_links: int = 8) -> list:
     """Like crawl_article_links but only keeps links whose URL contains `url_contains`."""
     try:
