@@ -60,7 +60,16 @@ jobs:
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: python -m abc_pipeline.main
 
-      # ── 6. Copie des fichiers générés vers gh-pages ──────────────
+      # ── 6. Export CSV restrictions eau par mail ──────────────────
+      - name: Send water restrictions CSV
+        env:
+          SUPABASE_URL:      ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          CSV_API:           ${{ secrets.CSV_API }}
+          CSV_MAIL_TO:       ${{ secrets.CSV_MAIL_TO }}
+        run: python scripts/send_eau_csv.py
+
+      # ── 7. Copie des fichiers générés vers gh-pages ──────────────
       - name: Copy generated files to gh-pages
         run: |
           # Créer le dossier data s'il n'existe pas
