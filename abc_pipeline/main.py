@@ -7,7 +7,7 @@ from .output import write_output
 from .sources.jorf import fetch_jorf
 from .sources.parlement import fetch_parlement
 from .sources.rss import fetch_rss
-from .sources.vigieau import fetch_vigieau
+from .sources.vigieau import fetch_vigieau, fetch_vigieau_zones
 from .config import GROQ_MODEL
 from .llm import get_llm_stats
 
@@ -83,6 +83,13 @@ def main() -> int:
         restrictions = fetch_vigieau()
         stats['depts_restriction'] = len(restrictions)
         source_counts['VigiEau'] = len(restrictions)
+        # Supabase: zone-level sync for persistence and change tracking
+        try:
+            from .supabase_sync import SupabaseSync
+            zones = fetch_vigieau_zones()
+            SupabaseSync().sync_water_restrictions(zones)
+        except Exception as e_sync:
+            log.warning(f"VigiEau Supabase sync skipped : {e_sync}")
     except Exception as e:
         log.error(f"VigiEau fatal : {e}")
         errors.append('VigiEau')

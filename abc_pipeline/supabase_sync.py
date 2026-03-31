@@ -189,6 +189,59 @@ class SupabaseSync:
             log.warning(f"Supabase record_stage_change: {e}")
             return False
 
+    def sync_water_restrictions(self, zones: list) -> int:
+        """
+        Upsert active water restriction zones into Supabase.
+
+        Only writes rows where the niveau has changed (new zone or level change).
+        Unchanged zones are skipped entirely — preserves est_nouveau and date_maj.
+        est_nouveau stays True until the level changes again (sticky flag).
+
+        Returns number of rows inserted/updated.
+        """
+        if not self._ready or not zones:
+            return 0
+        from datetime import datetime, timezone
+        try:
+            existing = (
+                self._client.table('restrictions_eau')
+                .select('code_zone,niveau_actuel')
+                .execute()
+            )
+            current = {r['code_zone']: r['niveau_actuel'] for r in (existing.data or [])}
+
+            to_upsert = []
+            now_iso = datetime.now(timezone.utc).isoformat()
+            for z in zones:
+                code = z.get('code_zone', '')
+                if not code:
+                    continue
+                # Skip if level is unchanged — preserves est_nouveau from the last change
+                if current.get(code) == z['niveau_actuel']:
+                    continue
+                to_upsert.append({
+                    'code_zone':    code,
+                    'type_eau':     z['type_eau'],
+                    'nom_zone':     z.get('nom_zone', ''),
+                    'departement':  z.get('departement', ''),
+                    'niveau_actuel': z['niveau_actuel'],
+                    'date_maj':     now_iso,
+                    'url_arrete':   z.get('url_arrete', ''),
+                    'est_nouveau':  True,
+                })
+
+            if to_upsert:
+                self._client.table('restrictions_eau').upsert(
+                    to_upsert, on_conflict='code_zone'
+                ).execute()
+
+            log.info(f"Supabase water sync: {len(to_upsert)}/{len(zones)} zone(s) mise(s) à jour")
+            return len(to_upsert)
+
+        except Exception as e:
+            log.warning(f"Supabase sync_water_restrictions: {e}")
+            return 0
+
     def record_creation(self, fiche: dict) -> bool:
         """Log a 'created' event when a new PJL is first discovered."""
         if not self._ready:
