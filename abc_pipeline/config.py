@@ -10,7 +10,7 @@ Dynamic values like paths and "today" are handled in `abc_pipeline.main`.
 
 JORF_BASE_URL = 'https://echanges.dila.gouv.fr/OPENDATA/JORF/'
 VIGIEAU_DEPTS_URL = 'https://api.vigieau.gouv.fr/api/departements'
-VIGIEAU_RESTRICTIONS_URL = 'https://api.vigieau.gouv.fr/api/restrictions'
+VIGIEAU_PMTILES_URL = 'https://regleau.s3.gra.perf.cloud.ovh.net/pmtiles/zones_arretes_en_vigueur.pmtiles'
 
 
 # ─────────────────────────────────────────────
