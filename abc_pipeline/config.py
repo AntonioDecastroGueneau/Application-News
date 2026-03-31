@@ -282,11 +282,8 @@ RSS_SOURCES = [
     },
     {
         'name': 'AEF Développement Durable',
-        'url': 'https://invalid-no-rss',
+        'url': 'https://news.google.com/rss/search?q=site:aefinfo.fr&hl=fr&gl=FR&ceid=FR:fr',
         'categorie': 'Réglementation',
-        'fallback_crawl': 'https://www.aefinfo.fr/developpement-durable',
-        'article_url_contains': '/depeche/',
-        'require_date_in_title': True,  # AEF always embeds date in anchor text; no date = nav/stale
         'require_keywords': [
             'climat', 'énergie', 'carbone', 'transition', 'environnement',
             'CSRD', 'RSE', 'décarbonation', 'renouvelable', 'déchets', 'REP',
