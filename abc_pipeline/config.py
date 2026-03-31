@@ -311,6 +311,28 @@ RSS_SOURCES = [
             'CSRD', 'RSE', 'décarbonation', 'renouvelable', 'déchets', 'REP',
         ],
     },
+    {
+        'name': 'Actuel HSE',
+        'url': 'https://www.actuel-hse.fr/rss-all',
+        'categorie': 'Réglementation',
+        'require_keywords': [
+            'climat', 'énergie', 'carbone', 'transition', 'environnement',
+            'CSRD', 'RSE', 'décarbonation', 'renouvelable', 'déchets', 'REP',
+            'ISO 14001', 'bilan GES', 'BGES', 'émissions', 'pollution',
+            'biodiversité', 'eau', 'sécheresse', 'inondation',
+        ],
+    },
+    {
+        'name': 'Fédération de la Propreté',
+        'url': 'https://www.federation-proprete.com/feed/',
+        'categorie': 'Presse',
+        'require_keywords': [
+            'climat', 'énergie', 'carbone', 'transition', 'environnement',
+            'CSRD', 'RSE', 'décarbonation', 'renouvelable', 'déchets', 'REP',
+            'ISO 14001', 'bilan GES', 'BGES', 'émissions', 'pollution',
+            'véhicule électrique', 'flotte', 'mobilité', 'développement durable',
+        ],
+    },
 ]
 
 
