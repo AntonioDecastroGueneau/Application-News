@@ -1,7 +1,7 @@
 {
   "date": "2026-03-31",
-  "generated_at": "09:26",
-  "elapsed_seconds": 226,
+  "generated_at": "12:18",
+  "elapsed_seconds": 227,
   "errors": [],
   "stats": {
     "jo_analyses": 22,
@@ -9,29 +9,51 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-03-31T09:26:14",
+    "run_at": "2026-03-31T12:18:16",
     "sources": {
       "JORF": 0,
-      "RSS": 18,
+      "RSS": 14,
       "VigiEau": 3,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 68,
-    "llm_seconds": 82.9
+    "llm_calls": 63,
+    "llm_seconds": 73.8
   },
   "items": [
+    {
+      "id": "4be44d7dfa28",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "La phrase du jour : \"La France réitère sa demande, à l’Union européenne, de suspendre l'application du mécanisme d'ajustement carbone aux frontières (MACF) sur les engrais.\"",
+      "resume": "La phrase du jour : \"La France réitère sa demande, à l’Union européenne, de suspendre l'application du mécanisme d'ajustement carbone aux frontières (MACF) sur les engrais.\"",
+      "pourquoi": "Mention de MACF.",
+      "criticite": 3,
+      "url": "https://www.actu-environnement.com/dit-aujourdhui/1793.html#xtor=RSS-6",
+      "date": "2026-03-31"
+    },
     {
       "id": "7fa9960f1611",
       "source": "Novethic",
       "categorie": "Énergie",
       "titre": "Séquestration du carbone dans les sols : la nouvelle obsession des multinationales pour verdir leur bilan",
-      "resume": "La séquestration carbone dans les sols émerge comme une nouvelle solution de crédits carbone pour les entreprises, mais son pertinence pour ABC reste limitée car non directement liée à ses activités de propreté/FM ou à ses enjeux réglementaires immédiats (BGES, CSRD, flotte véhicules, etc.).",
+      "resume": "La séquestration carbone dans les sols émerge comme une nouvelle solution de crédits carbone pour les entreprises, mais son intégration dans les bilans GES (scope 3) et les stratégies de décarbonation reste incertaine et controversée pour ABC, prestataire de services sans activité agricole ou foncière directe.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/climat/sequestration-carbone-sols-credits-compensation-lacunes-derives-multinationales",
+      "date": "2026-03-31"
+    },
+    {
+      "id": "a9be0110a66a",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "TotalEnergies Says it Can’t Formulate Net Zero Targets as 1.5°C is “Out of Reach”",
+      "resume": "L'article souligne l'incapacité d'un acteur majeur de l'énergie à aligner ses objectifs Net Zero sur l'Accord de Paris, ce qui peut impacter les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et renforcer les pressions réglementaires sur la décarbonation des prestataires de services.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/totalenergies-says-it-cant-formulate-net-zero-targets-as-1-5c-is-out-of-reach/?utm_source=rss&utm_medium=rss&utm_campaign=totalenergies-says-it-cant-formulate-net-zero-targets-as-1-5c-is-out-of-reach",
       "date": "2026-03-31"
     },
     {
@@ -39,7 +61,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "3,4 Md€ d’aides à la décarbonation déjà versées : la Cour des comptes juge qu’il faut accélérer",
-      "resume": "L'article souligne l'accélération des aides publiques à la décarbonation en France, ce qui pourrait influencer les attentes des clients d'ABC (notamment industriels) en matière de transition écologique et de reporting carbone.",
+      "resume": "L'article souligne l'accélération des aides publiques à la décarbonation en France, ce qui pourrait influencer les subventions disponibles pour les entreprises comme ABC engagées dans des projets de transition écologique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/34-mdeu-daides-la-decarbonation-deja-versees-la-cour-des-comptes-juge-quil-faut-accelerer",
@@ -50,21 +72,10 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Bercy lance «France Batterie»",
-      "resume": "Le lancement de 'France Batterie' par Bercy pourrait impacter la stratégie de décarbonation de la flotte de véhicules d'ABC, notamment via des aides financières pour l'électrification ou des obligations réglementaires futures.",
+      "resume": "Le lancement de 'France Batterie' par Bercy pourrait influencer les politiques publiques de décarbonation et d'électrification des flottes, un enjeu direct pour ABC dans le cadre de sa gestion de flotte de véhicules (scope 1).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/bercy-lance-france-batterie",
-      "date": "2026-03-31"
-    },
-    {
-      "id": "88319bfaf42e",
-      "source": "Actuel HSE",
-      "categorie": "Climat",
-      "titre": "Loi JOP 2030 : un plan d'actions de réduction des déchets et du plastique à usage unique est attendu",
-      "resume": "La Loi JOP 2030 impose aux organisateurs d'événements sportifs (dont les Jeux Olympiques 2030) de réduire les déchets et le plastique à usage unique, ce qui pourrait influencer les exigences clients d'ABC en matière de gestion des déchets et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/loi-jop-2030-un-plan-dactions-de-reduction-des-dechets-et-du-plastique-usage-unique-est-2",
       "date": "2026-03-31"
     },
     {
@@ -72,7 +83,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Casser les silos entre HSE et ESG : le prochain chantier des entreprises engagées",
-      "resume": "L'article souligne l'importance de l'intégration des fonctions HSE (Hygiène, Sécurité, Environnement) et ESG pour ABC, afin d'aligner les stratégies de développement durable et de reporting (CSRD, ISO 14001) avec les enjeux opérationnels comme le BGES et la décarbonation.",
+      "resume": "L'article souligne l'importance de l'intégration des enjeux HSE (Hygiène, Sécurité, Environnement) et ESG (Environnement, Social, Gouvernance) pour une stratégie RSE cohérente, ce qui peut renforcer la crédibilité des engagements climatiques et environnementaux d'ABC auprès de ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/casser-les-silos-entre-hse-et-esg-le-prochain-chantier-des-entreprises-engagees",
@@ -83,8 +94,8 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SR TEG Online Meeting 31 March 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG SR TEG en mars 2026, qui travaille sur les normes de reporting de durabilité (ESRS) liées à la CSRD. Cela impacte directement le reporting ESG d'ABC, notamment pour la collecte de données et la conformité aux exigences réglementaires.",
-      "pourquoi": "EFRAG SR TEG est l'organisme européen en charge de l'élaboration des normes ESRS (European Sustainability Reporting Standards) applicables dans le cadre de la CSRD. Ces normes concernent directement le reporting extra-financier d'ABC, qui doit se préparer à ces exigences pour ses clients et ses propres obligations. La réunion pourrait apporter des précisions sur les attentes en matière de données ESG, de traçabilité et de méthodologie, essentielles pour ABC dans le cadre de sa stratégie RSE et de son reporting CSRD.",
+      "resume": "L'article annonce une réunion de l'EFRAG SR TEG sur les normes de reporting de durabilité (CSRD/ESRS), ce qui impacte directement les obligations de reporting extra-financier d'ABC pour ses clients et sa propre conformité CSRD.",
+      "pourquoi": "EFRAG (European Financial Reporting Advisory Group) est l'organisme européen chargé d'élaborer les normes de reporting de durabilité (ESRS) applicables dans le cadre de la CSRD. Cette réunion pourrait influencer les exigences de reporting ESG pour ABC, notamment en matière de données carbone (scope 1/2/3), de déchets et d'énergie, et donc impacter ses processus internes et ses livrables clients.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-sr-teg-online-meeting-31-march-2026",
       "date": "2026-03-30"
@@ -94,7 +105,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Aujourd'hui, l'énergie est devenu un sujet budgétaire pour les communes",
-      "resume": "L'article souligne l'urgence pour les communes de réduire leurs dépenses énergétiques, avec une opportunité pour le solaire comme solution. ABC, prestataire de services, pourrait voir ses clients (collectivités locales) accélérer leurs projets d'efficacité énergétique ou d'énergies renouvelables, impactant potentiellement les contrats de FM/propreté (ex : gestion des déchets liés aux installations solaires).",
+      "resume": "L'article souligne l'importance croissante de l'efficacité énergétique et des énergies renouvelables (solaire) pour les collectivités locales, ce qui peut impacter les politiques clients d'ABC en matière de transition énergétique et de reporting extra-financier.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/entretien-Enerplan-Richar-Loyen-solaire-communes-47770.php4#xtor=RSS-6",
@@ -105,32 +116,10 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "REP PMCB : collectivités et artisans veulent le maintien de la reprise gratuite des petits volumes de déchets",
-      "resume": "La REP PMCB pourrait impacter la gestion des déchets des prestations de propreté de ABC, notamment pour les petits volumes (<3m³), avec un risque de coûts supplémentaires si la reprise gratuite est supprimée.",
+      "resume": "La REP PMCB pourrait impacter les obligations de traçabilité et de gestion des déchets pour ABC dans le cadre de ses prestations de propreté, notamment si les volumes de déchets de ses clients (non exploitants ICPE) sont concernés par les nouvelles règles de reprise gratuite.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/collectivite-artisans-maintien-collecte-gratuite-petits-volumes-47771.php4#xtor=RSS-6",
-      "date": "2026-03-30"
-    },
-    {
-      "id": "4305ef60652f",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "REP textile : le soutien au tri fixé à 268 euros par tonne en 2026",
-      "resume": "L'arrêté augmente le soutien financier pour le tri des déchets textiles à 268 €/tonne en 2026, ce qui pourrait impacter les coûts et la gestion des déchets pour ABC si ses clients intègrent cette filière REP dans leurs prestations.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/revalorisation-soutien-tri-rep-tlc-textiles-47766.php4#xtor=RSS-6",
-      "date": "2026-03-30"
-    },
-    {
-      "id": "060996259dea",
-      "source": "Reporterre",
-      "categorie": "Eau",
-      "titre": "Écoles, gymnases, églises... Pour développer les renouvelables, le Royaume-Uni mise sur les projets citoyens",
-      "resume": "L'article illustre une tendance européenne de projets citoyens pour les énergies renouvelables, un contexte à surveiller pour anticiper d'éventuelles attentes clients ou évolutions réglementaires similaires en France.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Ecoles-gymnases-eglises-Pour-developper-les-renouvelables-le-Royaume-Uni-mise-sur-les",
       "date": "2026-03-30"
     },
     {
@@ -138,21 +127,10 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Chaleur fatale : redressé, Enogia se lance sur le marché  des machines puissantes",
-      "resume": "L'article met en lumière une technologie (ORC) permettant de valoriser la chaleur fatale en électricité, une opportunité pour ABC d'explorer des solutions de décarbonation de ses activités ou de ses clients, notamment dans le cadre de la gestion énergétique des sites tertiaires.",
+      "resume": "L'article aborde la valorisation de la chaleur fatale, une opportunité potentielle pour ABC d'optimiser l'efficacité énergétique de ses sites clients (tertiaires/industriels) via des solutions comme celles proposées par Enogia, réduisant ainsi leur empreinte carbone (scope 2).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/chaleur-fatale-redresse-enogia-se-lance-sur-le-marche-des-machines-puissantes-419708/",
-      "date": "2026-03-30"
-    },
-    {
-      "id": "16f8c4c55969",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Une usine de carburants à base de bois prévue en Normandie",
-      "resume": "L'article illustre une tendance de décarbonation industrielle via des carburants synthétiques, pouvant influencer les attentes clients d'ABC en matière de réduction d'émissions indirectes (scope 3) et de mobilité durable.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/03/une-usine-de-carburants-a-base-de-bois-prevue-en-normandie-419625/",
       "date": "2026-03-30"
     },
     {
@@ -160,21 +138,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Jean Jouzel, paléoclimatologue : « Il n’y a pas de secteur d’activité qui puisse dire que le réchauffement n’est pas son affaire »",
-      "resume": "Cet article souligne l'importance universelle de l'engagement climatique pour tous les secteurs, renforçant la légitimité des actions RSE d'ABC auprès de ses clients et parties prenantes.",
+      "resume": "Cet article souligne l'importance universelle de l'engagement climatique pour tous les secteurs, y compris les services comme ABC, en insistant sur la nécessité d'agir face au réchauffement. Il rappelle que les entreprises de propreté/FM ne peuvent ignorer leur responsabilité dans la transition écologique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/campus/article/2026/03/30/jean-jouzel-paleoclimatologue-il-n-y-a-pas-de-secteur-d-activite-qui-puisse-dire-que-le-rechauffement-n-est-pas-son-affaire_6675464_4401467.html",
-      "date": "2026-03-30"
-    },
-    {
-      "id": "904a26e6cd50",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "Nasdaq, Adyen Buy First-Ever Carbon Credits Aligned with EU’s New Standard",
-      "resume": "Cet article annonce la première transaction de crédits carbone alignés sur le nouveau standard de l'UE, ce qui pourrait impacter les stratégies de compensation carbone des entreprises, y compris celles du secteur de la propreté/FM comme ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/nasdaq-adyen-buy-first-ever-carbon-credits-aligned-with-eus-new-standard/?utm_source=rss&utm_medium=rss&utm_campaign=nasdaq-adyen-buy-first-ever-carbon-credits-aligned-with-eus-new-standard",
       "date": "2026-03-30"
     },
     {
@@ -182,21 +149,10 @@
       "source": "ESG Today",
       "categorie": "Énergie",
       "titre": "GRI Releases Proposed Pollution Disclosure Standards",
-      "resume": "Le GRI propose de nouvelles normes de reporting sur la pollution (air, sol, incidents critiques), pouvant impacter les exigences de reporting ESG des clients d'ABC (CSRD/ESRS) et nécessiter une adaptation des données collectées sur les prestations.",
+      "resume": "Le GRI propose de nouvelles normes de reporting sur la pollution (air, sol, incidents critiques), ce qui pourrait impacter le reporting extra-financier d'ABC, notamment dans le cadre de la CSRD/ESRS.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/gri-releases-proposed-pollution-disclosure-standards/?utm_source=rss&utm_medium=rss&utm_campaign=gri-releases-proposed-pollution-disclosure-standards",
-      "date": "2026-03-30"
-    },
-    {
-      "id": "664f4f93a252",
-      "source": "Les Echos Environnement",
-      "categorie": "Énergie",
-      "titre": "Souveraineté énergétique : « La leçon chinoise et le pari européen des hubs énergétiques bas carbone - Les Echos",
-      "resume": "L'article aborde la stratégie européenne de hubs énergétiques bas carbone, un modèle pouvant inspirer des initiatives similaires en France pour renforcer la résilience énergétique des entreprises, notamment dans un contexte de décarbonation des flottes et des sites clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQdmJOMXlHSjZReTVZNzRudTdPMnFiVld2Q3YxYkY3bXhhYzEzTklzZDRLVGlScXVndmVuVnpzcGJZY2tYQmc3Qlh3dGJNc3VhSWZ3ck9Fei1GR0RHOGhsZDB0S1JHZnNHWnlPVFhIeGpiSXpUTDFIM0x5OEdVSTFrSk8wMjl0SmoxZVV1WjlwUjNpSmVvNHdHVWhBTTVKaXdwYzQ0b093M1JuRGVYMmEwWDhva0hJNUFjQm5semhGbW92MUh3dDJTakdnaUdDWE82ckhsVDRDZWF3OGlQMkRveVdn?oc=5",
       "date": "2026-03-30"
     },
     {
@@ -204,7 +160,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Environnement",
       "titre": "« Toutes les mesures sont soumises à révision en même temps » : l'Europe tentée par un nouvel assouplissement de ses objectifs climatiques - Les Echos",
-      "resume": "L'article évoque un possible assouplissement des objectifs climatiques européens, ce qui pourrait impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et les réglementations sectorielles en matière de reporting ESG et de décarbonation.",
+      "resume": "L'article évoque un possible assouplissement des objectifs climatiques européens, ce qui pourrait influencer les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et les attentes en matière de reporting ESG (CSRD/ESRS).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOampiYW8wQU0yeWVTbWxjVzNTQUV3b2w3UU5pT2ZkV3FvVm5qNDc2aWpnRndqX2N1MXZjemE1TVVfR3Vfd2JJM21TcVQ1SDN0TnJJbTN1bHNjT3o1OFdVZU9VUkdDVllVMEYxS1UwMXNmbzdYUzN6V2o4YTk0ZS1NYVFDQ2VPV3lZa2tZMmlrMV9PRU9zclFKaGhNWFUyQUZqR0k3QkFmaFRjMDc4d1lxeWV2d1hUMDdTaVdyS3V3dlRJQUh0bS04dUh5N2pIWDRJRjA0a21ZVDU3VTNlQjFrQ3R3Z3pITVBiRDVfRUxrdzJIazI1TDdiNXpvSE54YUktaHBRRy0wVQ?oc=5",
@@ -215,7 +171,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Déchets",
       "titre": "Logistique durable : des entrepôts qui allient innovation et respect de la nature - Les Echos",
-      "resume": "L'article aborde la logistique durable et les innovations dans les entrepôts, ce qui peut inspirer des pratiques similaires pour ABC dans la gestion de ses sites clients (efficacité énergétique, gestion des déchets, mobilité des équipes).",
+      "resume": "L'article aborde la logistique durable et l'innovation dans les entrepôts, un sujet indirectement lié à la gestion des déchets et à l'efficacité énergétique des sites clients d'ABC, mais sans obligation réglementaire ou action immédiate identifiable pour l'entreprise.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOc3AxRkNLUm1SejVFbGNJcG1Xc2lLXzNLbEV2c1BNZlpCTW00Q0ZCdEtDZGFLaEpUbFVSYTl3UEhiX0l3VWc1dlFydW5Zb1ZkYjdPSlNCYm1Da20xZV9kUWFqRmtiT2xhUVI3MnBpVHJ0emVySUJKcnhveS0ybDN4RF9ISkhaV0hTbDhpendrcmlHQ0JyYUFBVVZwV1F5SWx2TVduYTM0akY2elZsWVN6WXZXSFpOZHIwZFB1UTVEa1VPcWtQ?oc=5",
@@ -932,7 +888,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés relatifs à la pêche du bar (Dicentrarchus labrax) dans les zones CIEM VII et VIII (Nord et golfe de Gascogne) pourraient impacter les chaînes d'approvisionnement en produits de la mer, nécessitant une vigilance sur la durabilité des ressources halieutiques. Les modifications des dispositifs des certificats d'économies d'énergie (bonifications industrielles et indépendance des organismes d'inspection) renforcent les exigences RSE en matière d'efficacité énergétique et de transparence des audits.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1128,6 +1084,12 @@
       "source": "AN Textes adoptés",
       "items": [
         {
+          "titre": "Texte adopté N° 259",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52230",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52230",
+          "date": "2025-05-19"
+        },
+        {
           "titre": "Texte adopté N° 256",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interdire_sucres_ajoutes_nourrissons_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interdire_sucres_ajoutes_nourrissons_17e",
@@ -1276,15 +1238,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/Turquie_etat_droit2",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/Turquie_etat_droit2",
           "date": "2025-04-04"
-        },
-        {
-          "titre": "Texte adopté N° 226",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interet_des_enfants_17",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interet_des_enfants_17",
-          "date": "2025-03-11"
         }
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le plus pertinent pour un Responsable Environnement/Climat, car il intègre des dispositions clés pour la transition écologique (énergies renouvelables, économie circulaire, etc.). Aucun autre texte ne semble directement lié aux enjeux climatiques, énergétiques ou RSE pour une entreprise de services."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l'UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises, notamment en matière de reporting extra-financier et de transition énergétique. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou à la RSE, mais la vigilance sur les futurs décrets d'application de ces projets de loi est recommandée."
 }
