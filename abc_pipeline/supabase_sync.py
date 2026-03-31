@@ -191,15 +191,16 @@ class SupabaseSync:
 
     def sync_water_restrictions(self, zones: list) -> int:
         """
-        Upsert active water restriction zones into Supabase.
+        Sync active restriction zones to Supabase.
 
-        Only writes rows where the niveau has changed (new zone or level change).
-        Unchanged zones are skipped entirely — preserves est_nouveau and date_maj.
-        est_nouveau stays True until the level changes again (sticky flag).
+        First run  : inserts all zones.
+        Next runs  : upserts changed zones (level changed → est_nouveau=True),
+                     deletes zones that disappeared from PMTiles (lifted restrictions).
+        Unchanged zones are left untouched — preserves est_nouveau and date_maj.
 
-        Returns number of rows inserted/updated.
+        Returns number of rows inserted/updated/deleted.
         """
-        if not self._ready or not zones:
+        if not self._ready:
             return 0
         from datetime import datetime, timezone
         try:
@@ -209,25 +210,26 @@ class SupabaseSync:
                 .execute()
             )
             current = {r['code_zone']: r['niveau_actuel'] for r in (existing.data or [])}
+            incoming_codes = {z['code_zone'] for z in zones if z.get('code_zone')}
 
-            to_upsert = []
             now_iso = datetime.now(timezone.utc).isoformat()
+            to_upsert = []
             for z in zones:
                 code = z.get('code_zone', '')
                 if not code:
                     continue
-                # Skip if level is unchanged — preserves est_nouveau from the last change
+                # Skip unchanged zones — preserves est_nouveau / date_maj
                 if current.get(code) == z['niveau_actuel']:
                     continue
                 to_upsert.append({
-                    'code_zone':    code,
-                    'type_eau':     z['type_eau'],
-                    'nom_zone':     z.get('nom_zone', ''),
-                    'departement':  z.get('departement', ''),
+                    'code_zone':     code,
+                    'type_eau':      z['type_eau'],
+                    'nom_zone':      z.get('nom_zone', ''),
+                    'departement':   z.get('departement', ''),
                     'niveau_actuel': z['niveau_actuel'],
-                    'date_maj':     now_iso,
-                    'url_arrete':   z.get('url_arrete', ''),
-                    'est_nouveau':  True,
+                    'date_maj':      now_iso,
+                    'url_arrete':    z.get('url_arrete', ''),
+                    'est_nouveau':   True,
                 })
 
             if to_upsert:
@@ -235,8 +237,15 @@ class SupabaseSync:
                     to_upsert, on_conflict='code_zone'
                 ).execute()
 
-            log.info(f"Supabase water sync: {len(to_upsert)}/{len(zones)} zone(s) mise(s) à jour")
-            return len(to_upsert)
+            # Delete zones no longer in PMTiles (restriction lifted)
+            stale = [code for code in current if code not in incoming_codes]
+            if stale:
+                self._client.table('restrictions_eau').delete().in_('code_zone', stale).execute()
+                log.info(f"Supabase water sync: {len(stale)} zone(s) supprimée(s) (levée)")
+
+            total = len(to_upsert) + len(stale)
+            log.info(f"Supabase water sync: {len(to_upsert)} upsert, {len(stale)} delete — {len(zones)} zones actives")
+            return total
 
         except Exception as e:
             log.warning(f"Supabase sync_water_restrictions: {e}")
