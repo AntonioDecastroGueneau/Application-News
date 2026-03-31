@@ -4,6 +4,7 @@ import requests
 
 from ..config import (
     NIVEAUX_ORDRE,
+    DEPT_NOMS,
     VIGIEAU_DEPTS_URL,
     VIGIEAU_PMTILES_URL,
     TIMEOUT,
@@ -13,24 +14,30 @@ log = logging.getLogger(__name__)
 
 
 def fetch_vigieau():
+    """
+    Return dept-level restriction summaries for the sidebar and JSON output.
+    Derived from PMTiles zones (same source as the map) — the REST API is seasonal.
+    One entry per dept, keeping the highest severity level found across zones.
+    """
     log.info("=== VigiEau ===")
-    restrictions = []
-    try:
-        resp = requests.get(VIGIEAU_DEPTS_URL, timeout=TIMEOUT)
-        resp.raise_for_status()
-        for dept in resp.json():
-            niv = dept.get('niveauGraviteMax')
-            if not niv:
-                continue
-            restrictions.append({
-                'dept_code': dept.get('code', ''),
-                'dept_nom': dept.get('nom', ''),
-                'niveau': niv,
-            })
-        restrictions.sort(key=lambda x: NIVEAUX_ORDRE.get(x['niveau'], 0), reverse=True)
-        log.info(f"VigiEau : {len(restrictions)} départements en restriction")
-    except Exception as e:
-        log.error(f"VigiEau fatal : {e}", exc_info=True)
+    zones = fetch_vigieau_zones()
+    if not zones:
+        log.warning("VigiEau : aucune zone trouvée via PMTiles")
+        return []
+
+    # Aggregate to dept level: keep highest niveau per dept
+    dept_max: dict = {}
+    for z in zones:
+        dept = z.get('departement', '')
+        if not dept:
+            continue
+        niveau = z.get('niveau_actuel', '')
+        order = NIVEAUX_ORDRE.get(niveau, 0)
+        if order > NIVEAUX_ORDRE.get(dept_max.get(dept, {}).get('niveau', ''), 0):
+            dept_max[dept] = {'dept_code': dept, 'dept_nom': DEPT_NOMS.get(dept, dept), 'niveau': niveau}
+
+    restrictions = sorted(dept_max.values(), key=lambda x: NIVEAUX_ORDRE.get(x['niveau'], 0), reverse=True)
+    log.info(f"VigiEau : {len(restrictions)} départements en restriction")
     return restrictions
 
 
