@@ -314,7 +314,8 @@ RSS_SOURCES = [
         'name': 'Actuel HSE',
         'url': 'https://invalid-no-rss',
         'categorie': 'Réglementation',
-        'fallback_crawl': 'https://www.actuel-hse.fr/',
+        'fallback_crawl': 'https://www.actuel-hse.fr/?edition_date={today}',
+        'article_url_contains': '/content/',
         'require_keywords': [
             'climat', 'énergie', 'carbone', 'transition', 'environnement',
             'CSRD', 'RSE', 'décarbonation', 'renouvelable', 'déchets', 'REP',

@@ -246,7 +246,7 @@ def fetch_rss_source(source: dict, today_str: str, seen_urls: dict = None, new_s
         log.warning(f"RSS {name} error : {e}")
 
         if source.get('fallback_crawl'):
-            fallback_url = source['fallback_crawl']
+            fallback_url = source['fallback_crawl'].replace('{today}', today_str)
             base_url = '/'.join(fallback_url.split('/')[:3])
             try:
                 log.info(f"Fallback → {fallback_url}")

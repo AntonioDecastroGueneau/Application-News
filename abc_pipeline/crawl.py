@@ -62,7 +62,10 @@ def crawl_article(url: str) -> str:
     try:
         from bs4 import BeautifulSoup
 
-        resp = requests.get(url, timeout=TIMEOUT, headers={'User-Agent': 'ABC-Veille/2.0'})
+        resp = requests.get(url, timeout=TIMEOUT, headers={
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept-Language': 'fr-FR,fr;q=0.9',
+        })
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'html.parser')
 
@@ -94,7 +97,7 @@ def crawl_article_links(listing_url: str, base_url: str, max_links: int = 5) -> 
     try:
         from bs4 import BeautifulSoup
 
-        resp = requests.get(listing_url, timeout=TIMEOUT, headers={'User-Agent': 'ABC-Veille/2.0'})
+        resp = requests.get(listing_url, timeout=TIMEOUT, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', 'Accept-Language': 'fr-FR,fr;q=0.9'})
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'html.parser')
 
@@ -200,7 +203,7 @@ def crawl_article_links_filtered(listing_url: str, base_url: str, url_contains: 
     """Like crawl_article_links but only keeps links whose URL contains `url_contains`."""
     try:
         from bs4 import BeautifulSoup
-        resp = requests.get(listing_url, timeout=TIMEOUT, headers={'User-Agent': 'ABC-Veille/2.0'})
+        resp = requests.get(listing_url, timeout=TIMEOUT, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36', 'Accept-Language': 'fr-FR,fr;q=0.9'})
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, 'html.parser')
         links = []
