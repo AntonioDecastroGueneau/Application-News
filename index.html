@@ -1052,7 +1052,60 @@ function renderMapEncart(){
   let html=`<div style="font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--muted);margin-bottom:6px">RESTRICTIONS ACTIVES</div>`;
   html+=`<div style="font-size:20px;font-weight:600;font-family:var(--mono);color:var(--text);margin-bottom:8px">${restr.length} <span style="font-size:11px;font-weight:400;color:var(--muted)">départements</span></div>`;
   ordre.forEach(n=>{if(counts[n]){const col=NIVEAU_COLOR[n]||'#94a3b8';html+=`<div style="display:flex;align-items:center;gap:6px;font-size:11px;margin-bottom:3px"><span style="width:8px;height:8px;border-radius:50%;background:${col};flex-shrink:0"></span><span style="flex:1;color:var(--text2)">${NIVEAU_LABEL[n]||n}</span><span style="font-weight:600;font-family:var(--mono);color:var(--text)">${counts[n]}</span></div>`;}});
+  // Placeholder for async Supabase alerts (injected by loadWaterAlerts)
+  html+=`<div id="water-alerts-slot" style="margin-top:6px"></div>`;
+  html+=`<button onclick="exportEauCSV()" style="margin-top:8px;width:100%;padding:4px 0;font-size:10px;font-family:var(--mono);background:transparent;border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--muted);cursor:pointer">↓ Export CSV</button>`;
   el.innerHTML=html;
+  loadWaterAlerts();
+}
+
+async function loadWaterAlerts(){
+  const slot=document.getElementById('water-alerts-slot');
+  if(!slot||!getSupa)return;
+  try{
+    const{data,error}=await getSupa()
+      .from('restrictions_eau')
+      .select('code_zone,nom_zone,departement,type_eau,niveau_actuel,url_arrete,date_maj')
+      .eq('est_nouveau',true)
+      .order('date_maj',{ascending:false})
+      .limit(5);
+    if(error||!data?.length){slot.innerHTML='';return;}
+    const TYPE_LABEL={AEP:'Eau potable',SUP:'Eaux de surface',SOU:'Eaux souterraines'};
+    let html=`<div style="font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--muted);margin-bottom:4px;margin-top:4px;border-top:1px solid var(--border);padding-top:6px">CHANGEMENTS RÉCENTS</div>`;
+    data.forEach(z=>{
+      const col=NIVEAU_COLOR[z.niveau_actuel]||'#94a3b8';
+      // VigiEau deep-link to the situation for this zone
+      const vigieauUrl=`https://vigieau.gouv.fr/situation?profil&typeEau=${encodeURIComponent(z.type_eau)}&adresse=${encodeURIComponent(z.nom_zone)}+${encodeURIComponent(z.departement||'')}`;
+      html+=`<div style="display:flex;align-items:flex-start;gap:5px;font-size:10px;margin-bottom:4px">
+        <span style="margin-top:2px">⚠️</span>
+        <div style="flex:1;min-width:0">
+          <a href="${escHtml(vigieauUrl)}" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block" title="${escHtml(z.nom_zone)}">${escHtml(z.nom_zone||z.code_zone)}</a>
+          <span style="color:${col}">${escHtml(z.niveau_actuel)}</span><span style="color:var(--muted)"> · ${TYPE_LABEL[z.type_eau]||z.type_eau}</span>
+        </div>
+      </div>`;
+    });
+    slot.innerHTML=html;
+  }catch(e){slot.innerHTML='';}
+}
+
+async function exportEauCSV(){
+  if(!getSupa)return;
+  try{
+    const{data,error}=await getSupa()
+      .from('restrictions_eau')
+      .select('code_zone,type_eau,nom_zone,departement,niveau_actuel,date_maj,url_arrete,est_nouveau')
+      .order('departement')
+      .order('niveau_actuel');
+    if(error||!data?.length){showToast('Aucune donnée à exporter');return;}
+    const cols=['code_zone','type_eau','nom_zone','departement','niveau_actuel','date_maj','url_arrete','est_nouveau'];
+    const rows=[cols.join(';'),...data.map(r=>cols.map(c=>`"${String(r[c]??'').replace(/"/g,'""')}"`).join(';'))];
+    const blob=new Blob(['\uFEFF'+rows.join('\n')],{type:'text/csv;charset=utf-8'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download=`restrictions_eau_${new Date().toISOString().slice(0,10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }catch(e){showToast('Export échoué : '+e.message);}
 }
 
 // ── Suivi : chargement ────────────────────────────────────────────────

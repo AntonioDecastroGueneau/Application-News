@@ -1,7 +1,7 @@
 {
   "date": "2026-03-31",
-  "generated_at": "07:26",
-  "elapsed_seconds": 166,
+  "generated_at": "08:51",
+  "elapsed_seconds": 206,
   "errors": [],
   "stats": {
     "jo_analyses": 22,
@@ -9,18 +9,18 @@
     "depts_restriction": 0
   },
   "pipeline_meta": {
-    "run_at": "2026-03-31T07:26:40",
+    "run_at": "2026-03-31T08:51:06",
     "sources": {
       "JORF": 0,
-      "RSS": 13,
+      "RSS": 12,
       "VigiEau": 0,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 60,
-    "llm_seconds": 71.2
+    "llm_calls": 59,
+    "llm_seconds": 75.7
   },
   "items": [
     {
@@ -28,7 +28,7 @@
       "source": "Novethic",
       "categorie": "Énergie",
       "titre": "Séquestration du carbone dans les sols : la nouvelle obsession des multinationales pour verdir leur bilan",
-      "resume": "La séquestration carbone dans les sols émerge comme une nouvelle solution de crédits carbone, mais son pertinence pour ABC reste limitée car non directement liée à ses enjeux opérationnels (scope 1/2/3, flotte, déchets, CSRD).",
+      "resume": "La séquestration carbone dans les sols émerge comme une nouvelle solution de crédits carbone pour les entreprises, mais son intégration dans les stratégies de décarbonation (scope 3) et les bilans GES reste à clarifier pour ABC, notamment dans le cadre de la CSRD et des attentes clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/climat/sequestration-carbone-sols-credits-compensation-lacunes-derives-multinationales",
@@ -39,8 +39,8 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SR TEG Online Meeting 31 March 2026",
-      "resume": "L'article concerne une réunion de l'EFRAG sur le reporting de durabilité (CSRD/ESRS), clé pour le reporting extra-financier d'ABC dans le cadre de la CSRD.",
-      "pourquoi": "EFRAG est l'organisme européen en charge de l'élaboration des normes ESRS (European Sustainability Reporting Standards) sous la CSRD, directement applicable à ABC pour son reporting ESG. La réunion du 31 mars 2026 pourrait aborder des évolutions réglementaires ou interprétations des normes qui impactent la méthodologie de reporting d'ABC (ex : données scope 3, traçabilité déchets, etc.).",
+      "resume": "L'article concerne une réunion de l'EFRAG sur le reporting de durabilité (CSRD/ESRS), clé pour le reporting extra-financier d'ABC dans le cadre de ses obligations CSRD.",
+      "pourquoi": "EFRAG est l'organisme européen en charge de l'élaboration des normes ESRS (European Sustainability Reporting Standards) sous la CSRD. ABC, en tant qu'entreprise devant se conformer à la CSRD (reporting ESG obligatoire), doit suivre les évolutions des ESRS pour préparer son reporting extra-financier. La réunion du 31 mars 2026 pourrait aborder des clarifications ou évolutions des normes ESRS applicables à ABC.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-sr-teg-online-meeting-31-march-2026",
       "date": "2026-03-30"
@@ -50,7 +50,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Aujourd'hui, l'énergie est devenu un sujet budgétaire pour les communes",
-      "resume": "L'article souligne l'enjeu budgétaire de l'énergie pour les communes, mettant en avant le solaire comme solution. Pour ABC, cela peut impacter les clients (collectivités locales) et leurs exigences en matière de décarbonation des prestations de propreté/FM.",
+      "resume": "L'article souligne l'enjeu budgétaire croissant de l'énergie pour les collectivités locales, avec une opportunité pour le solaire comme solution. Pour ABC, cela peut impacter les clients (collectivités) et leurs exigences en matière de décarbonation des prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/entretien-Enerplan-Richar-Loyen-solaire-communes-47770.php4#xtor=RSS-6",
@@ -61,7 +61,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "REP PMCB : collectivités et artisans veulent le maintien de la reprise gratuite des petits volumes de déchets",
-      "resume": "La REP PMCB pourrait impacter les obligations de traçabilité et de gestion des déchets des prestations de propreté/FM d'ABC, notamment si les petits volumes de déchets (<3m³) ne sont plus repris gratuitement, augmentant potentiellement les coûts ou complexifiant la logistique.",
+      "resume": "La REP PMCB pourrait impacter les obligations de traçabilité et de gestion des déchets pour ABC, notamment si les volumes de déchets générés chez les clients (non ICPE) sont concernés par les règles de reprise gratuite.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/collectivite-artisans-maintien-collecte-gratuite-petits-volumes-47771.php4#xtor=RSS-6",
@@ -72,7 +72,7 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Chaleur fatale : redressé, Enogia se lance sur le marché  des machines puissantes",
-      "resume": "L'article aborde une technologie de valorisation de la chaleur fatale en électricité, potentiellement applicable aux sites clients d'ABC pour réduire leur empreinte carbone (scope 2) et améliorer leur efficacité énergétique.",
+      "resume": "L'article aborde la valorisation de la chaleur fatale via des solutions technologiques (modules ORC), une opportunité potentielle pour ABC d'optimiser l'efficacité énergétique de ses prestations chez les clients tertiaires ou industriels.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/chaleur-fatale-redresse-enogia-se-lance-sur-le-marche-des-machines-puissantes-419708/",
@@ -83,7 +83,7 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Une usine de carburants à base de bois prévue en Normandie",
-      "resume": "L'article aborde la production de carburants synthétiques à partir de biomasse en Normandie, ce qui pourrait impacter les enjeux de décarbonation et de mobilité durable pour ABC, notamment en lien avec la flotte de véhicules et les attentes carbone des clients.",
+      "resume": "L'article illustre une tendance de décarbonation industrielle via les carburants synthétiques, potentiellement impactant les exigences carbone des clients d'ABC (industrie, énergie) et les attentes en matière de reporting ESG (scope 3).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/une-usine-de-carburants-a-base-de-bois-prevue-en-normandie-419625/",
@@ -94,7 +94,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Jean Jouzel, paléoclimatologue : « Il n’y a pas de secteur d’activité qui puisse dire que le réchauffement n’est pas son affaire »",
-      "resume": "Cet article souligne l'importance universelle de l'engagement climatique pour tous les secteurs, y compris les services comme ABC, renforçant la légitimité de leurs actions RSE et de décarbonation.",
+      "resume": "Cet article souligne l'importance universelle de l'engagement climatique pour tous les secteurs, y compris les services comme ABC, en insistant sur la nécessité d'agir face au réchauffement. Il rappelle que les enjeux climatiques sont transversaux et impactent directement les entreprises, leurs clients et leurs stratégies.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/campus/article/2026/03/30/jean-jouzel-paleoclimatologue-il-n-y-a-pas-de-secteur-d-activite-qui-puisse-dire-que-le-rechauffement-n-est-pas-son-affaire_6675464_4401467.html",
@@ -105,7 +105,7 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "Nasdaq, Adyen Buy First-Ever Carbon Credits Aligned with EU’s New Standard",
-      "resume": "Cet article annonce la première transaction publique de crédits carbone alignés sur le nouveau standard de l'UE, un sujet à suivre pour anticiper les évolutions du marché des compensations carbone et leur intégration dans les stratégies de décarbonation des entreprises.",
+      "resume": "Cet article annonce la première transaction de crédits carbone alignés sur le nouveau standard européen, ce qui pourrait impacter les stratégies de compensation carbone des entreprises comme ABC dans le cadre de leurs objectifs de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/nasdaq-adyen-buy-first-ever-carbon-credits-aligned-with-eus-new-standard/?utm_source=rss&utm_medium=rss&utm_campaign=nasdaq-adyen-buy-first-ever-carbon-credits-aligned-with-eus-new-standard",
@@ -116,21 +116,10 @@
       "source": "ESG Today",
       "categorie": "Énergie",
       "titre": "GRI Releases Proposed Pollution Disclosure Standards",
-      "resume": "Les nouvelles normes GRI sur la pollution pourraient influencer les exigences de reporting ESG des clients d'ABC, notamment dans les secteurs nucléaire, santé et industrie, impactant indirectement les obligations de transparence carbone et de gestion des déchets de l'entreprise.",
+      "resume": "Les nouvelles normes de reporting GRI sur la pollution pourraient influencer les exigences de reporting ESG des clients d'ABC, notamment dans les secteurs nucléaire, santé et industrie, impactant indirectement les obligations de transparence de l'entreprise.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/gri-releases-proposed-pollution-disclosure-standards/?utm_source=rss&utm_medium=rss&utm_campaign=gri-releases-proposed-pollution-disclosure-standards",
-      "date": "2026-03-30"
-    },
-    {
-      "id": "945a5bcd6df2",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "The Drivers for Supply Chain Decarbonization are Changing… But What Matters is Impact",
-      "resume": "L'article souligne l'évolution des motivations pour la décarbonation des chaînes d'approvisionnement, un enjeu clé pour ABC dans le cadre de ses obligations CSRD et de la pression carbone de ses clients (nucléaire, santé, industrie).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/the-drivers-for-supply-chain-decarbonization-are-changing-but-what-matters-is-impact/?utm_source=rss&utm_medium=rss&utm_campaign=the-drivers-for-supply-chain-decarbonization-are-changing-but-what-matters-is-impact",
       "date": "2026-03-30"
     },
     {
@@ -138,7 +127,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Énergie",
       "titre": "Souveraineté énergétique : « La leçon chinoise et le pari européen des hubs énergétiques bas carbone - Les Echos",
-      "resume": "L'article aborde la stratégie européenne des hubs énergétiques bas carbone, un enjeu indirect pour ABC via les exigences carbone de ses clients industriels et nucléaires, ainsi que les risques climatiques sur ses sites d'intervention.",
+      "resume": "L'article aborde la stratégie européenne des hubs énergétiques bas carbone, un sujet connexe aux enjeux de décarbonation et d'efficacité énergétique des entreprises, mais sans lien direct avec les obligations réglementaires ou opérationnelles immédiates d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQdmJOMXlHSjZReTVZNzRudTdPMnFiVld2Q3YxYkY3bXhhYzEzTklzZDRLVGlScXVndmVuVnpzcGJZY2tYQmc3Qlh3dGJNc3VhSWZ3ck9Fei1GR0RHOGhsZDB0S1JHZnNHWnlPVFhIeGpiSXpUTDFIM0x5OEdVSTFrSk8wMjl0SmoxZVV1WjlwUjNpSmVvNHdHVWhBTTVKaXdwYzQ0b093M1JuRGVYMmEwWDhva0hJNUFjQm5semhGbW92MUh3dDJTakdnaUdDWE82ckhsVDRDZWF3OGlQMkRveVdn?oc=5",
@@ -149,7 +138,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Environnement",
       "titre": "« Toutes les mesures sont soumises à révision en même temps » : l'Europe tentée par un nouvel assouplissement de ses objectifs climatiques - Les Echos",
-      "resume": "L'article évoque un possible assouplissement des objectifs climatiques européens, ce qui pourrait impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et influencer les trajectoires de décarbonation des entreprises, notamment via la CSRD et les reporting ESG.",
+      "resume": "L'article évoque un possible assouplissement des objectifs climatiques européens, ce qui pourrait impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et les attentes en matière de reporting ESG (CSRD/ESRS).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOampiYW8wQU0yeWVTbWxjVzNTQUV3b2w3UU5pT2ZkV3FvVm5qNDc2aWpnRndqX2N1MXZjemE1TVVfR3Vfd2JJM21TcVQ1SDN0TnJJbTN1bHNjT3o1OFdVZU9VUkdDVllVMEYxS1UwMXNmbzdYUzN6V2o4YTk0ZS1NYVFDQ2VPV3lZa2tZMmlrMV9PRU9zclFKaGhNWFUyQUZqR0k3QkFmaFRjMDc4d1lxeWV2d1hUMDdTaVdyS3V3dlRJQUh0bS04dUh5N2pIWDRJRjA0a21ZVDU3VTNlQjFrQ3R3Z3pITVBiRDVfRUxrdzJIazI1TDdiNXpvSE54YUktaHBRRy0wVQ?oc=5",
@@ -160,7 +149,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Déchets",
       "titre": "Logistique durable : des entrepôts qui allient innovation et respect de la nature - Les Echos",
-      "resume": "L'article aborde la logistique durable et les entrepôts innovants, un sujet indirectement lié à la gestion des déchets et à l'efficacité énergétique des sites clients d'ABC, sans imposer d'action immédiate.",
+      "resume": "L'article aborde la logistique durable et les entrepôts innovants, ce qui peut inspirer des pistes pour optimiser les flux logistiques et réduire l'empreinte carbone des prestations de propreté/FM d'ABC, notamment via des solutions énergétiques ou organisationnelles.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOc3AxRkNLUm1SejVFbGNJcG1Xc2lLXzNLbEV2c1BNZlpCTW00Q0ZCdEtDZGFLaEpUbFVSYTl3UEhiX0l3VWc1dlFydW5Zb1ZkYjdPSlNCYm1Da20xZV9kUWFqRmtiT2xhUVI3MnBpVHJ0emVySUJKcnhveS0ybDN4RF9ISkhaV0hTbDhpendrcmlHQ0JyYUFBVVZwV1F5SWx2TVduYTM0akY2elZsWVN6WXZXSFpOZHIwZFB1UTVEa1VPcWtQ?oc=5",
@@ -861,7 +850,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés relatifs à la pêche du bar (Dicentrarchus labrax) dans les zones CIEM VII et VIII (Nord et golfe de Gascogne) sont pertinents pour la RSE, car ils encadrent une activité économique impactant les écosystèmes marins et la biodiversité, nécessitant une vigilance accrue sur les pratiques durables et la conformité des chaînes d'approvisionnement. Aucun autre texte ne semble directement lié aux enjeux environnementaux ou climatiques pour une entreprise de services.",
+  "briefing_jorf": "Les arrêtés relatifs à la pêche du bar (Dicentrarchus labrax) dans les zones CIEM VII et VIII (Nord et golfe de Gascogne) sont pertinents pour la RSE, car ils encadrent une activité économique impactant les écosystèmes marins et la biodiversité, nécessitant une vigilance sur la durabilité des pratiques. Aucun autre texte ne semble directement lié aux enjeux environnementaux ou climatiques d'une entreprise de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1215,5 +1204,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le seul texte directement pertinent pour un Responsable Environnement/Climat, avec des implications potentielles sur la réglementation climatique, la transition énergétique et les obligations de reporting ESG. Aucun autre texte adopté ou en discussion ne traite explicitement de sujets RSE, déchets ou reporting extra-financier."
+  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le plus pertinent pour un Responsable Environnement/Climat, car il intègre des dispositions clés pour la transition écologique et la conformité réglementaire. Aucun autre texte ne traite directement de sujets RSE, climat ou énergie, bien que certains accords internationaux (ex : n°2054 sur la double imposition) puissent avoir des implications indirectes sur les stratégies fiscales des entreprises."
 }
