@@ -684,10 +684,12 @@ function renderAll(){
   document.getElementById('stat-jo-analyses').textContent=s.jo_analyses??'—';
   document.getElementById('stat-depts').textContent=s.depts_restriction??'—';
   const restr=D.restrictions_eau||[],eauEl=document.getElementById('sidebar-eau');
-  const crises=restr.filter(r=>r.niveau==='crise'||normalizeNiveau(r.niveau)==='alerte renforcée');
-  eauEl.innerHTML=crises.length?crises.slice(0,4).map(r=>{const col=NIVEAU_COLOR[normalizeNiveau(r.niveau)]||'#dc2626';
-    return `<div class="eau-alert-item" style="background:${col}18;border:1px solid ${col}30"><span style="width:6px;height:6px;border-radius:50%;background:${col};flex-shrink:0;display:inline-block"></span><span style="color:#e8ecf2;font-size:11px">${r.dept_nom} (${r.dept_code})</span></div>`;}
-  ).join(''):`<div style="font-size:11px;color:var(--sb-muted);padding:4px 0">Aucune alerte majeure</div>`;
+  const ordre=['crise','alerte renforcée','alerte','vigilance'];
+  const counts={};restr.forEach(r=>{const n=normalizeNiveau(r.niveau);counts[n]=(counts[n]||0)+1;});
+  const hasAny=ordre.some(n=>counts[n]);
+  eauEl.innerHTML=hasAny
+    ?ordre.filter(n=>counts[n]).map(n=>{const col=NIVEAU_COLOR[n]||'#94a3b8';return`<div class="eau-alert-item" style="background:${col}18;border:1px solid ${col}30"><span style="width:6px;height:6px;border-radius:50%;background:${col};flex-shrink:0;display:inline-block"></span><span style="color:#e8ecf2;font-size:11px">${NIVEAU_LABEL[n]||n}</span><span style="margin-left:auto;font-family:var(--mono);font-size:11px;font-weight:600;color:${col}">${counts[n]}</span></div>`;}).join('')
+    :`<div style="font-size:11px;color:var(--sb-muted);padding:4px 0">Aucune restriction active</div>`;
   renderFeed();
   if(currentView==='carte'){renderMap();renderMapEncart();}
   if(currentView==='jo')renderJO();
@@ -1063,24 +1065,44 @@ async function loadWaterAlerts(){
   const slot=document.getElementById('water-alerts-slot');
   if(!slot||!getSupa)return;
   try{
-    const{data,error}=await getSupa()
-      .from('restrictions_eau')
-      .select('code_zone,nom_zone,departement,type_eau,niveau_actuel,url_arrete,date_maj')
-      .eq('est_nouveau',true)
-      .order('date_maj',{ascending:false})
-      .limit(5);
-    if(error||!data?.length){slot.innerHTML='';return;}
+    const since=new Date(Date.now()-24*60*60*1000).toISOString();
+    const[{data:changed},{data:added},{data:ended}]=await Promise.all([
+      getSupa().from('restrictions_eau_events').select('code_zone,nom_zone,departement,type_eau,niveau_avant,niveau_apres,created_at').eq('event_type','changed').gte('created_at',since).order('created_at',{ascending:false}).limit(5),
+      getSupa().from('restrictions_eau_events').select('code_zone,nom_zone,departement,type_eau,niveau_apres,created_at').eq('event_type','added').gte('created_at',since).order('created_at',{ascending:false}).limit(5),
+      getSupa().from('restrictions_eau_events').select('code_zone,nom_zone,departement,type_eau,niveau_avant,created_at').eq('event_type','ended').gte('created_at',since).order('created_at',{ascending:false}).limit(5),
+    ]);
+    if(!changed?.length&&!added?.length&&!ended?.length){slot.innerHTML='';return;}
     const TYPE_LABEL={AEP:'Eau potable',SUP:'Eaux de surface',SOU:'Eaux souterraines'};
-    let html=`<div style="font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--muted);margin-bottom:4px;margin-top:4px;border-top:1px solid var(--border);padding-top:6px">CHANGEMENTS RÉCENTS</div>`;
-    data.forEach(z=>{
-      const col=NIVEAU_COLOR[z.niveau_actuel]||'#94a3b8';
-      // VigiEau deep-link to the situation for this zone
-      const vigieauUrl=`https://vigieau.gouv.fr/situation?profil&typeEau=${encodeURIComponent(z.type_eau)}&adresse=${encodeURIComponent(z.nom_zone)}+${encodeURIComponent(z.departement||'')}`;
-      html+=`<div style="display:flex;align-items:flex-start;gap:5px;font-size:10px;margin-bottom:4px">
-        <span style="margin-top:2px">⚠️</span>
+    let html=`<div style="font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--muted);margin-bottom:4px;margin-top:4px;border-top:1px solid var(--border);padding-top:6px">ÉVÉNEMENTS DU JOUR</div>`;
+    (changed||[]).forEach(e=>{
+      const colAvant=NIVEAU_COLOR[e.niveau_avant]||'#94a3b8';
+      const colApres=NIVEAU_COLOR[e.niveau_apres]||'#94a3b8';
+      const vigieauUrl=`https://vigieau.gouv.fr/situation?profil&typeEau=${encodeURIComponent(e.type_eau)}&adresse=${encodeURIComponent(e.nom_zone)}+${encodeURIComponent(e.departement||'')}`;
+      html+=`<div style="display:flex;align-items:flex-start;gap:5px;font-size:10px;margin-bottom:5px">
+        <span style="margin-top:1px">⚠️</span>
         <div style="flex:1;min-width:0">
-          <a href="${escHtml(vigieauUrl)}" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block" title="${escHtml(z.nom_zone)}">${escHtml(z.nom_zone||z.code_zone)}</a>
-          <span style="color:${col}">${escHtml(z.niveau_actuel)}</span><span style="color:var(--muted)"> · ${TYPE_LABEL[z.type_eau]||z.type_eau}</span>
+          <a href="${escHtml(vigieauUrl)}" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;font-weight:500;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escHtml(e.nom_zone||e.code_zone)}</a>
+          <span style="color:${colAvant}">${escHtml(e.niveau_avant)}</span><span style="color:var(--muted)"> → </span><span style="color:${colApres}">${escHtml(e.niveau_apres)}</span><span style="color:var(--muted)"> · ${TYPE_LABEL[e.type_eau]||e.type_eau}</span>
+        </div>
+      </div>`;
+    });
+    (added||[]).forEach(e=>{
+      const col=NIVEAU_COLOR[e.niveau_apres]||'#94a3b8';
+      const vigieauUrl=`https://vigieau.gouv.fr/situation?profil&typeEau=${encodeURIComponent(e.type_eau)}&adresse=${encodeURIComponent(e.nom_zone)}+${encodeURIComponent(e.departement||'')}`;
+      html+=`<div style="display:flex;align-items:flex-start;gap:5px;font-size:10px;margin-bottom:5px">
+        <span style="margin-top:1px">🆕</span>
+        <div style="flex:1;min-width:0">
+          <a href="${escHtml(vigieauUrl)}" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;font-weight:500;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escHtml(e.nom_zone||e.code_zone)}</a>
+          <span style="color:${col}">${escHtml(e.niveau_apres)}</span><span style="color:var(--muted)"> · ${TYPE_LABEL[e.type_eau]||e.type_eau} · Nouvel arrêté</span>
+        </div>
+      </div>`;
+    });
+    (ended||[]).forEach(e=>{
+      html+=`<div style="display:flex;align-items:flex-start;gap:5px;font-size:10px;margin-bottom:5px">
+        <span style="margin-top:1px">✅</span>
+        <div style="flex:1;min-width:0">
+          <span style="color:var(--text);font-weight:500">${escHtml(e.nom_zone||e.code_zone)}</span>
+          <span style="color:var(--muted);display:block">Arrêté levé · était <span style="color:${NIVEAU_COLOR[e.niveau_avant]||'#94a3b8'}">${escHtml(e.niveau_avant)}</span></span>
         </div>
       </div>`;
     });
