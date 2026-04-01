@@ -1,7 +1,7 @@
 {
   "date": "2026-04-01",
-  "generated_at": "07:46",
-  "elapsed_seconds": 214,
+  "generated_at": "08:47",
+  "elapsed_seconds": 201,
   "errors": [],
   "stats": {
     "jo_analyses": 20,
@@ -9,7 +9,7 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-04-01T07:46:10",
+    "run_at": "2026-04-01T08:47:04",
     "sources": {
       "JORF": 0,
       "RSS": 16,
@@ -19,19 +19,19 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 67,
-    "llm_seconds": 73.7
+    "llm_calls": 68,
+    "llm_seconds": 70.6
   },
   "items": [
     {
-      "id": "602a7cc5958a",
-      "source": "Actuel HSE",
-      "categorie": "ICPE",
-      "titre": "Filière REP des pneumatiques : soutien financier au rechapage de pneus des véhicules légers",
-      "resume": "La filière REP des pneumatiques introduit une obligation de soutien financier (minimum 6 €/pneu) pour le rechapage, ce qui pourrait impacter les coûts et pratiques de gestion des pneus de la flotte véhicules d'ABC, notamment en termes de durabilité et de conformité réglementaire.",
-      "pourquoi": "L'article concerne la réglementation déchets (REP) et la gestion des pneus, un poste clé pour la flotte véhicules d'ABC (scope 1). Bien que l'obligation soit indirecte (via les éco-organismes), elle influence les coûts et pratiques de maintenance des véhicules, avec un impact potentiel sur la stratégie de décarbonation et de reporting ESG de l'entreprise.",
+      "id": "896217104a3b",
+      "source": "Le Monde Planète",
+      "categorie": "Énergie",
+      "titre": "Le gouvernement entend accélérer l’électrification et une sortie progressive des hydrocarbures",
+      "resume": "Le plan gouvernemental pourrait impacter la flotte de véhicules d'ABC en accélérant l'électrification des flottes professionnelles, avec des opportunités de subventions ou de surplus fiscaux pour les entreprises engagées dans cette transition.",
+      "pourquoi": "L'article traite de l'électrification des flottes professionnelles, un sujet directement lié à la flotte de véhicules d'ABC (scope 1) et à la mobilité durable. Bien que les détails opérationnels ne soient pas précisés, cette accélération pourrait influencer les stratégies de décarbonation d'ABC dans les 12 mois.",
       "criticite": 2,
-      "url": "https://www.actuel-hse.fr/content/filiere-rep-des-pneumatiques-soutien-financier-au-rechapage-de-pneus-des-vehicules-legers-2",
+      "url": "https://www.lemonde.fr/energies/article/2026/04/01/le-gouvernement-entend-accelerer-l-electrification-et-une-sortie-progressive-des-hydrocarbures_6675813_1653054.html",
       "date": "2026-04-01"
     },
     {
@@ -39,7 +39,7 @@
       "source": "Min. Transition Écologique",
       "categorie": "Climat",
       "titre": "Mieux accompagner les territoires",
-      "resume": "L'article aborde les dispositifs de transition écologique territoriale (Fonds vert) qui pourraient influencer les politiques locales et les appels d'offres des clients d'ABC, notamment via des exigences accrues en matière de décarbonation et d'efficacité énergétique.",
+      "resume": "L'article aborde les dispositifs de transition écologique territoriale (Fonds vert) qui pourraient influencer les politiques locales et les appels d'offres des clients d'ABC, notamment via des exigences accrues en matière de durabilité et de reporting environnemental.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.ecologie.gouv.fr/nos-actions/mieux-accompagner-territoires",
@@ -50,7 +50,7 @@
       "source": "Min. Transition Écologique",
       "categorie": "Climat",
       "titre": "Mieux transporter et se déplacer",
-      "resume": "L'article aborde les ambitions de France 2030 en matière de transition écologique des transports, incluant la décarbonation des flottes et la mobilité durable, directement alignés sur les enjeux de flotte véhicules (scope 1) et mobilité propre d'ABC.",
+      "resume": "L'article aborde la transition écologique dans les transports, un enjeu clé pour la flotte de véhicules d'ABC (scope 1) et les attentes clients en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.ecologie.gouv.fr/nos-actions/mieux-transporter-se-deplacer",
@@ -61,21 +61,10 @@
       "source": "Min. Transition Écologique",
       "categorie": "Climat",
       "titre": "Mieux produire et consommer",
-      "resume": "L'article aborde des thématiques liées à l'économie circulaire et à la réduction des déchets, pertinentes pour le reporting CSRD et la gestion des déchets des prestations de propreté/FM d'ABC. Il peut servir de contexte pour anticiper les évolutions réglementaires sur la traçabilité et l'éco-conception.",
+      "resume": "L'article aborde des thématiques liées à l'économie circulaire et à la réduction des déchets, pertinentes pour le reporting ESG et la gestion des déchets de prestations de ABC, bien que sans obligation réglementaire directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.ecologie.gouv.fr/nos-actions/mieux-produire-consommer",
-      "date": "2026-04-01"
-    },
-    {
-      "id": "896217104a3b",
-      "source": "Le Monde Planète",
-      "categorie": "Énergie",
-      "titre": "Le gouvernement entend accélérer l’électrification et une sortie progressive des hydrocarbures",
-      "resume": "Le plan gouvernemental vise à accélérer l'électrification des flottes, ce qui pourrait impacter la stratégie de décarbonation de la flotte de véhicules d'ABC (scope 1) et ses engagements net zéro.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/energies/article/2026/04/01/le-gouvernement-entend-accelerer-l-electrification-et-une-sortie-progressive-des-hydrocarbures_6675813_1653054.html",
       "date": "2026-04-01"
     },
     {
@@ -83,10 +72,21 @@
       "source": "ESG Today",
       "categorie": "Biodiversité",
       "titre": "Emerald AI Raises $25 Million to Align Data Center Energy Use with Grid Capacity",
-      "resume": "L'article aborde l'optimisation énergétique des data centers, un enjeu indirect pour ABC via la gestion de l'énergie de ses clients (nucléaire, santé, industrie) et la CSRD/reporting ESG.",
+      "resume": "L'article aborde l'optimisation énergétique des data centers via l'IA, un enjeu indirect pour ABC via la gestion énergétique de ses clients (nucléaire, santé, industrie) et leur reporting ESG (scope 2).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/emerald-ai-raises-25-million-to-align-data-center-energy-use-with-grid-capacity/?utm_source=rss&utm_medium=rss&utm_campaign=emerald-ai-raises-25-million-to-align-data-center-energy-use-with-grid-capacity",
+      "date": "2026-04-01"
+    },
+    {
+      "id": "602a7cc5958a",
+      "source": "Actuel HSE",
+      "categorie": "ICPE",
+      "titre": "Filière REP des pneumatiques : soutien financier au rechapage de pneus des véhicules légers",
+      "resume": "L'article introduit une obligation de soutien financier au rechapage des pneus (6 €/pneu) pour les éco-organismes agréés dans le cadre de la filière REP des pneumatiques, ce qui pourrait impacter les coûts et la gestion des déchets liés à la flotte de véhicules d'ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/filiere-rep-des-pneumatiques-soutien-financier-au-rechapage-de-pneus-des-vehicules-legers-2",
       "date": "2026-04-01"
     },
     {
@@ -94,7 +94,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Casser les silos entre HSE et ESG : le prochain chantier des entreprises engagées",
-      "resume": "L'article souligne l'importance de l'intégration entre HSE (Hygiène, Sécurité, Environnement) et ESG pour renforcer la cohérence des stratégies RSE, ce qui peut améliorer la gestion des enjeux climatiques et réglementaires d'ABC, notamment pour son reporting CSRD et sa conformité ISO 14001.",
+      "resume": "L'article souligne l'importance de l'intégration entre HSE (Hygiène, Sécurité, Environnement) et ESG pour une stratégie cohérente de développement durable, ce qui peut aider ABC à structurer son approche globale en matière de RSE et de reporting.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/casser-les-silos-entre-hse-et-esg-le-prochain-chantier-des-entreprises-engagees",
@@ -105,7 +105,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Industries : un nouvel arrêté crée une bonification des CEE",
-      "resume": "L'arrêté crée une bonification des Certificats d'Économies d'Énergie (CEE) pour certains secteurs industriels, ce qui pourrait influencer les stratégies énergétiques des clients d'ABC dans le cadre de leurs plans de décarbonation ou de reporting ESG.",
+      "resume": "L'arrêté crée une bonification des Certificats d'Économies d'Énergie (CEE) pour certains secteurs industriels, ce qui pourrait influencer les stratégies d'efficacité énergétique des clients d'ABC, notamment dans les secteurs nucléaires, santé ou industrie.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/arrete-bonification-industries-cee-macf-aluminium-acier-ciment-engrais-47779.php4#xtor=RSS-6",
@@ -116,7 +116,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Recyclage chimique : Carbios maintient son objectif de construction de l'usine de Longlaville",
-      "resume": "Le recyclage chimique des plastiques pourrait influencer les exigences clients d'ABC en matière de gestion des déchets et de circularité, notamment dans le cadre des rapports CSRD/ESRS ou des politiques RSE des donneurs d'ordre.",
+      "resume": "Le recyclage chimique pourrait influencer les filières de gestion des déchets des clients d'ABC, notamment dans le cadre des obligations REP ou de la décarbonation des prestations de propreté. Cela pourrait impacter indirectement les stratégies de reporting ESG et de gestion des déchets de l'entreprise.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/carbios-maintient-projet-longlaville-recyclage-chimique-pet-47775.php4#xtor=RSS-6",
@@ -138,7 +138,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "GreenYellow bientôt prêt pour de nouvelles acquisitions",
-      "resume": "L'article signale une stratégie d'acquisitions ciblées dans les énergies renouvelables et l'efficacité énergétique par GreenYellow, acteur clé du secteur, ce qui pourrait influencer les attentes clients d'ABC en matière de décarbonation et de solutions énergétiques.",
+      "resume": "L'article signale une stratégie d'acquisitions ciblées par GreenYellow dans les énergies renouvelables et l'efficacité énergétique, ce qui pourrait influencer les attentes clients d'ABC en matière de décarbonation et de services énergétiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/greenyellow-bientot-pret-pour-de-nouvelles-acquisitions-419845/",
@@ -149,7 +149,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Plan d’électrification : le gouvernement prépare un AMI pompes à chaleur",
-      "resume": "L'article annonce un AMI (Appel à Manifestations d'Intérêt) sur les pompes à chaleur, lié au plan d'électrification du gouvernement, qui pourrait influencer les politiques énergétiques des clients d'ABC (secteur tertiaire) et les inciter à accélérer leur transition vers des solutions bas carbone.",
+      "resume": "L'article annonce un Appel à Manifestation d'Intérêt (AMI) sur les pompes à chaleur, lié au plan d'électrification du gouvernement, ce qui pourrait influencer les choix énergétiques des clients d'ABC (tertiaire, industrie) et leurs exigences en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/plan-delectrification-le-gouvernement-prepare-un-ami-pompes-a-chaleur-419837/",
@@ -160,7 +160,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Autoconsommation collective : la justice maintient l’exonération d’accise",
-      "resume": "L'article confirme le maintien de l'exonération d'accise pour l'électricité renouvelable en autoconsommation collective (<1 MW), ce qui pourrait influencer les choix énergétiques d'ABC pour ses sites ou flottes (ex : recharge véhicules électriques).",
+      "resume": "L'article confirme le maintien de l'exonération d'accise pour l'électricité renouvelable en autoconsommation collective (<1 MW), ce qui pourrait influencer les choix énergétiques d'ABC pour ses sites clients (ex : optimisation des coûts énergétiques via des installations solaires partagées).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/autoconsommation-collective-la-justice-maintient-lexoneration-daccise-419838/",
@@ -171,7 +171,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Electricité renouvelable : Bercy a fixé les prochains appels d’offres",
-      "resume": "L'article annonce des appels d'offres pour l'éolien et le solaire, ce qui peut influencer les choix énergétiques des clients d'ABC (secteurs tertiaire/industrie) et leurs exigences en matière de décarbonation, notamment pour les contrats de propreté/FM.",
+      "resume": "L'article annonce des appels d'offres publics pour l'éolien et le solaire, ce qui pourrait influencer les coûts et l'accès à l'électricité renouvelable pour ABC, notamment dans le cadre de sa stratégie énergétique et de son reporting CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/03/electricite-renouvelable-bercy-a-fixe-les-prochains-appels-doffres-419796/",
@@ -182,7 +182,7 @@
       "source": "ESG Today",
       "categorie": "Déchets",
       "titre": "Novisto Acquires Carbon Accounting Software Provider Minimum",
-      "resume": "L'acquisition de Minimum par Novisto renforce l'offre de logiciels de comptabilité carbone, ce qui pourrait influencer les solutions de reporting ESG (CSRD/ESRS) utilisées par ABC pour ses clients, notamment dans le cadre de la décarbonation et du bilan GES.",
+      "resume": "L'acquisition de Minimum par Novisto renforce l'offre de logiciels de comptabilité carbone, ce qui pourrait impacter les solutions de reporting ESG/CSRD utilisées par ABC pour ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/novisto-acquires-carbon-accounting-software-provider-minimum/?utm_source=rss&utm_medium=rss&utm_campaign=novisto-acquires-carbon-accounting-software-provider-minimum",
@@ -193,7 +193,7 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "TotalEnergies Says it Can’t Formulate Net Zero Targets as 1.5°C is “Out of Reach”",
-      "resume": "L'article illustre les tensions entre les objectifs climatiques ambitieux (1,5°C) et les réalités industrielles, un signal à surveiller pour les entreprises comme ABC dans leur stratégie de décarbonation et de reporting ESG.",
+      "resume": "L'article illustre un signal fort sur la difficulté à aligner les objectifs net zéro avec les trajectoires 1.5°C, ce qui pourrait impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et influencer leurs politiques de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/totalenergies-says-it-cant-formulate-net-zero-targets-as-1-5c-is-out-of-reach/?utm_source=rss&utm_medium=rss&utm_campaign=totalenergies-says-it-cant-formulate-net-zero-targets-as-1-5c-is-out-of-reach",
@@ -928,7 +928,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Le décret n°2026-235 classant la forêt de Montmorency en forêt de protection et l'arrêté du 30 mars 2026 sur les coûts du projet Cigéo (stockage géologique des déchets radioactifs) sont les seuls textes directement pertinents pour un Responsable Environnement/Climat, car ils impactent respectivement la préservation des écosystèmes et la gestion des déchets nucléaires.",
+  "briefing_jorf": "Le décret n°2026-235 classant la forêt de Montmorency en forêt de protection et l'arrêté du 30 mars 2026 sur les coûts de gestion des déchets radioactifs (Cigéo) sont les seuls textes directement pertinents pour un Responsable Environnement/Climat, car ils impactent respectivement la préservation des écosystèmes et la gestion des déchets nucléaires.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1276,5 +1276,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Aucun des projets de loi listés ne traite directement de sujets environnementaux, climatiques, énergétiques ou de RSE majeurs pour une grande entreprise de services. Le projet n°1 (adaptation au droit de l'UE) pourrait inclure des mesures indirectes, mais sans précision dans la liste fournie."
+  "pjl_briefing": "Le projet de loi n°2518 portant adaptation au droit de l’UE en matière environnementale et énergétique est le plus pertinent pour un Responsable Environnement/Climat, car il intègre des dispositions clés pour la transition écologique (énergie, climat, déchets). Aucun autre texte ne traite directement de ces enjeux dans cette liste."
 }
