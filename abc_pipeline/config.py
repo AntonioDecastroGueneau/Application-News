@@ -165,9 +165,10 @@ RSS_SOURCES = [
     },
     {
         'name': 'Min. Transition Écologique',
-        'url': 'https://www.ecologie.gouv.fr/rss-actualites.xml',
+        'url': 'https://invalid-no-rss',
         'categorie': 'Réglementation',
         'fallback_crawl': 'https://www.ecologie.gouv.fr/actualites',
+        'article_url_contains': '/actualites/',
     },
     {
         'name': 'ADEME',
