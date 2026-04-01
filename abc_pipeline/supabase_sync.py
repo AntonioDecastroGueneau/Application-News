@@ -206,57 +206,86 @@ class SupabaseSync:
         try:
             existing = (
                 self._client.table('restrictions_eau')
-                .select('code_zone,niveau_actuel')
+                .select('code_zone,niveau_actuel,nom_zone,departement,type_eau')
                 .execute()
             )
-            current = {r['code_zone']: r['niveau_actuel'] for r in (existing.data or [])}
+            current = {r['code_zone']: r for r in (existing.data or [])}
             incoming_codes = {z['code_zone'] for z in zones if z.get('code_zone')}
+            zones_by_code = {z['code_zone']: z for z in zones if z.get('code_zone')}
 
             now_iso = datetime.now(timezone.utc).isoformat()
             to_upsert = []
+            events = []
+
             for z in zones:
                 code = z.get('code_zone', '')
                 if not code:
                     continue
-                # Skip unchanged zones — preserves est_nouveau / date_maj
-                if current.get(code) == z['niveau_actuel']:
+                prev = current.get(code)
+                if prev and prev['niveau_actuel'] == z['niveau_actuel']:
                     continue
+                # New zone or level change
+                niveau_precedent = prev['niveau_actuel'] if prev else None
                 to_upsert.append({
-                    'code_zone':     code,
-                    'type_eau':      z['type_eau'],
-                    'nom_zone':      z.get('nom_zone', ''),
-                    'departement':   z.get('departement', ''),
-                    'niveau_actuel': z['niveau_actuel'],
-                    'date_maj':      now_iso,
-                    'url_arrete':    z.get('url_arrete', ''),
-                    'est_nouveau':   True,
+                    'code_zone':       code,
+                    'type_eau':        z['type_eau'],
+                    'nom_zone':        z.get('nom_zone', ''),
+                    'departement':     z.get('departement', ''),
+                    'niveau_actuel':   z['niveau_actuel'],
+                    'niveau_precedent': niveau_precedent,
+                    'date_maj':        now_iso,
+                    'url_arrete':      z.get('url_arrete', ''),
+                    'est_nouveau':     True,
                 })
+                if niveau_precedent:
+                    events.append({
+                        'code_zone':   code,
+                        'nom_zone':    z.get('nom_zone', ''),
+                        'departement': z.get('departement', ''),
+                        'type_eau':    z['type_eau'],
+                        'event_type':  'changed',
+                        'niveau_avant': niveau_precedent,
+                        'niveau_apres': z['niveau_actuel'],
+                        'created_at':  now_iso,
+                    })
 
             if to_upsert:
                 self._client.table('restrictions_eau').upsert(
                     to_upsert, on_conflict='code_zone'
                 ).execute()
 
-            # Reset est_nouveau=False for zones that haven't changed this run
+            # Reset est_nouveau=False for unchanged zones
             unchanged = [
-                code for code in current
-                if code in incoming_codes and current[code] == next(
-                    (z['niveau_actuel'] for z in zones if z['code_zone'] == code), None
-                )
+                code for code, row in current.items()
+                if code in incoming_codes and row['niveau_actuel'] == zones_by_code[code]['niveau_actuel']
             ]
             if unchanged:
                 self._client.table('restrictions_eau').update(
                     {'est_nouveau': False}
                 ).in_('code_zone', unchanged).eq('est_nouveau', True).execute()
 
-            # Delete zones no longer in PMTiles (restriction lifted)
+            # Delete lifted zones + log 'ended' events
             stale = [code for code in current if code not in incoming_codes]
             if stale:
+                for code in stale:
+                    row = current[code]
+                    events.append({
+                        'code_zone':   code,
+                        'nom_zone':    row.get('nom_zone', ''),
+                        'departement': row.get('departement', ''),
+                        'type_eau':    row.get('type_eau', ''),
+                        'event_type':  'ended',
+                        'niveau_avant': row['niveau_actuel'],
+                        'niveau_apres': None,
+                        'created_at':  now_iso,
+                    })
                 self._client.table('restrictions_eau').delete().in_('code_zone', stale).execute()
-                log.info(f"Supabase water sync: {len(stale)} zone(s) supprimée(s) (levée)")
+
+            if events:
+                self._client.table('restrictions_eau_events').insert(events).execute()
 
             total = len(to_upsert) + len(stale)
-            log.info(f"Supabase water sync: {len(to_upsert)} upsert, {len(stale)} delete, {len(unchanged)} inchangées — {len(zones)} zones actives")
+            log.info(f"Supabase water sync: {len(to_upsert)} upsert, {len(stale)} levées, {len(unchanged)} inchangées, {len(events)} events")
             return total
 
         except Exception as e:
