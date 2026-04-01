@@ -1066,11 +1066,12 @@ async function loadWaterAlerts(){
   if(!slot||!getSupa)return;
   try{
     const since=new Date(Date.now()-24*60*60*1000).toISOString();
-    const[{data:changed},{data:ended}]=await Promise.all([
+    const[{data:changed},{data:added},{data:ended}]=await Promise.all([
       getSupa().from('restrictions_eau_events').select('code_zone,nom_zone,departement,type_eau,niveau_avant,niveau_apres,created_at').eq('event_type','changed').gte('created_at',since).order('created_at',{ascending:false}).limit(5),
+      getSupa().from('restrictions_eau_events').select('code_zone,nom_zone,departement,type_eau,niveau_apres,created_at').eq('event_type','added').gte('created_at',since).order('created_at',{ascending:false}).limit(5),
       getSupa().from('restrictions_eau_events').select('code_zone,nom_zone,departement,type_eau,niveau_avant,created_at').eq('event_type','ended').gte('created_at',since).order('created_at',{ascending:false}).limit(5),
     ]);
-    if(!changed?.length&&!ended?.length){slot.innerHTML='';return;}
+    if(!changed?.length&&!added?.length&&!ended?.length){slot.innerHTML='';return;}
     const TYPE_LABEL={AEP:'Eau potable',SUP:'Eaux de surface',SOU:'Eaux souterraines'};
     let html=`<div style="font-size:10px;font-weight:600;letter-spacing:.06em;color:var(--muted);margin-bottom:4px;margin-top:4px;border-top:1px solid var(--border);padding-top:6px">ÉVÉNEMENTS DU JOUR</div>`;
     (changed||[]).forEach(e=>{
@@ -1082,6 +1083,17 @@ async function loadWaterAlerts(){
         <div style="flex:1;min-width:0">
           <a href="${escHtml(vigieauUrl)}" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;font-weight:500;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escHtml(e.nom_zone||e.code_zone)}</a>
           <span style="color:${colAvant}">${escHtml(e.niveau_avant)}</span><span style="color:var(--muted)"> → </span><span style="color:${colApres}">${escHtml(e.niveau_apres)}</span><span style="color:var(--muted)"> · ${TYPE_LABEL[e.type_eau]||e.type_eau}</span>
+        </div>
+      </div>`;
+    });
+    (added||[]).forEach(e=>{
+      const col=NIVEAU_COLOR[e.niveau_apres]||'#94a3b8';
+      const vigieauUrl=`https://vigieau.gouv.fr/situation?profil&typeEau=${encodeURIComponent(e.type_eau)}&adresse=${encodeURIComponent(e.nom_zone)}+${encodeURIComponent(e.departement||'')}`;
+      html+=`<div style="display:flex;align-items:flex-start;gap:5px;font-size:10px;margin-bottom:5px">
+        <span style="margin-top:1px">🆕</span>
+        <div style="flex:1;min-width:0">
+          <a href="${escHtml(vigieauUrl)}" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;font-weight:500;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escHtml(e.nom_zone||e.code_zone)}</a>
+          <span style="color:${col}">${escHtml(e.niveau_apres)}</span><span style="color:var(--muted)"> · ${TYPE_LABEL[e.type_eau]||e.type_eau} · Nouvel arrêté</span>
         </div>
       </div>`;
     });

@@ -237,17 +237,16 @@ class SupabaseSync:
                     'url_arrete':      z.get('url_arrete', ''),
                     'est_nouveau':     True,
                 })
-                if niveau_precedent:
-                    events.append({
-                        'code_zone':   code,
-                        'nom_zone':    z.get('nom_zone', ''),
-                        'departement': z.get('departement', ''),
-                        'type_eau':    z['type_eau'],
-                        'event_type':  'changed',
-                        'niveau_avant': niveau_precedent,
-                        'niveau_apres': z['niveau_actuel'],
-                        'created_at':  now_iso,
-                    })
+                events.append({
+                    'code_zone':   code,
+                    'nom_zone':    z.get('nom_zone', ''),
+                    'departement': z.get('departement', ''),
+                    'type_eau':    z['type_eau'],
+                    'event_type':  'changed' if niveau_precedent else 'added',
+                    'niveau_avant': niveau_precedent,
+                    'niveau_apres': z['niveau_actuel'],
+                    'created_at':  now_iso,
+                })
 
             if to_upsert:
                 self._client.table('restrictions_eau').upsert(
