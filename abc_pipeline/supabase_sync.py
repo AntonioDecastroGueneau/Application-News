@@ -237,6 +237,18 @@ class SupabaseSync:
                     to_upsert, on_conflict='code_zone'
                 ).execute()
 
+            # Reset est_nouveau=False for zones that haven't changed this run
+            unchanged = [
+                code for code in current
+                if code in incoming_codes and current[code] == next(
+                    (z['niveau_actuel'] for z in zones if z['code_zone'] == code), None
+                )
+            ]
+            if unchanged:
+                self._client.table('restrictions_eau').update(
+                    {'est_nouveau': False}
+                ).in_('code_zone', unchanged).eq('est_nouveau', True).execute()
+
             # Delete zones no longer in PMTiles (restriction lifted)
             stale = [code for code in current if code not in incoming_codes]
             if stale:
@@ -244,7 +256,7 @@ class SupabaseSync:
                 log.info(f"Supabase water sync: {len(stale)} zone(s) supprimée(s) (levée)")
 
             total = len(to_upsert) + len(stale)
-            log.info(f"Supabase water sync: {len(to_upsert)} upsert, {len(stale)} delete — {len(zones)} zones actives")
+            log.info(f"Supabase water sync: {len(to_upsert)} upsert, {len(stale)} delete, {len(unchanged)} inchangées — {len(zones)} zones actives")
             return total
 
         except Exception as e:
