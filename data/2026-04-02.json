@@ -1,7 +1,7 @@
 {
   "date": "2026-04-02",
-  "generated_at": "07:03",
-  "elapsed_seconds": 275,
+  "generated_at": "12:09",
+  "elapsed_seconds": 252,
   "errors": [],
   "stats": {
     "jo_analyses": 22,
@@ -9,18 +9,18 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-04-02T07:03:56",
+    "run_at": "2026-04-02T12:09:30",
     "sources": {
       "JORF": 0,
-      "RSS": 16,
+      "RSS": 12,
       "VigiEau": 3,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 69,
-    "llm_seconds": 112.1
+    "llm_calls": 72,
+    "llm_seconds": 103.5
   },
   "items": [
     {
@@ -28,7 +28,7 @@
       "source": "Reporterre",
       "categorie": "Énergie",
       "titre": "Grâce aux renouvelables, l'Espagne évite la hausse du prix de l'électricité",
-      "resume": "L'article illustre l'impact stratégique des énergies renouvelables sur la stabilité des prix de l'électricité, un enjeu indirect pour ABC via ses clients (secteurs énergie, industrie, santé) et sa propre consommation énergétique tertiaire.",
+      "resume": "L'article illustre l'impact stratégique des énergies renouvelables sur la stabilité des prix de l'électricité, un enjeu indirect pour ABC dans le cadre de la décarbonation de sa flotte et de ses sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Grace-aux-renouvelables-l-Espagne-evite-la-hausse-du-prix-de-l-electricite",
@@ -39,10 +39,21 @@
       "source": "Min. Transition Écologique",
       "categorie": "Climat",
       "titre": "Économies d’énergie : le vrai du faux pour avoir les bons réflexes",
-      "resume": "L'article aborde les bonnes pratiques d'économies d'énergie, un enjeu clé pour ABC dans le cadre de la réduction de son empreinte carbone (scope 2) et de la conformité aux réglementations énergétiques (DPE tertiaire, loi énergie-climat).",
+      "resume": "L'article aborde les bonnes pratiques d'économies d'énergie, un enjeu clé pour ABC dans le cadre de sa politique de décarbonation (scope 2) et de conformité aux réglementations énergétiques (DPE tertiaire, loi énergie-climat).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.ecologie.gouv.fr/actualites/economies-denergie-vrai-du-faux-avoir-bons-reflexes",
+      "date": "2026-04-02"
+    },
+    {
+      "id": "3e7fdb3326b2",
+      "source": "Min. Transition Écologique",
+      "categorie": "Climat",
+      "titre": "6 idées reçues sur le tri et le recyclage des emballages en plastique",
+      "resume": "L'article aborde le tri et le recyclage des emballages en plastique, un enjeu lié à la gestion des déchets des prestations de propreté de ABC, impactant son reporting ESG et sa conformité aux réglementations REP.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.ecologie.gouv.fr/actualites/6-idees-recues-tri-recyclage-emballages-plastique",
       "date": "2026-04-02"
     },
     {
@@ -50,21 +61,10 @@
       "source": "Min. Transition Écologique",
       "categorie": "Climat",
       "titre": "Climat : la trajectoire de réchauffement inscrite dans le code de l'environnement",
-      "resume": "L'intégration de la TRACC dans le code de l'environnement formalise les objectifs climatiques nationaux, renforçant le cadre réglementaire pour les entreprises comme ABC dans leur reporting et adaptation aux risques climatiques.",
+      "resume": "La TRACC (Trajectoire de réchauffement de référence pour l’adaptation au changement climatique) intégrée au code de l’environnement en 2026 renforce le cadre réglementaire français sur l’adaptation climatique, impactant indirectement les stratégies de résilience des entreprises comme ABC, notamment via les exigences clients en matière de gestion des risques climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.ecologie.gouv.fr/actualites/climat-trajectoire-rechauffement-inscrite-code-lenvironnement",
-      "date": "2026-04-02"
-    },
-    {
-      "id": "e40bc5bc0f08",
-      "source": "Actuel HSE",
-      "categorie": "Climat",
-      "titre": "La Cour des comptes européenne alerte sur la lenteur du Fonds pour l'innovation",
-      "resume": "Le Fonds pour l'innovation de l'UE, bien que dédié à la décarbonation, montre des retards dans l'allocation de ses ressources, ce qui pourrait impacter les opportunités de financement pour les projets de transition énergétique des entreprises comme ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/la-cour-des-comptes-europeenne-alerte-sur-la-lenteur-du-fonds-pour-linnovation-2",
       "date": "2026-04-02"
     },
     {
@@ -72,7 +72,7 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Dix solutions de l'AIE pour faire face à la crise énergétique",
-      "resume": "L'article propose des solutions de l'AIE pour la crise énergétique, pertinentes pour la décarbonation de la flotte véhicules (scope 1) et l'efficacité énergétique des sites clients d'ABC, mais sans obligation réglementaire directe.",
+      "resume": "L'article propose des solutions de l'AIE pour la crise énergétique, pertinentes pour évaluer des leviers de décarbonation ou d'efficacité énergétique dans les prestations de propreté/FM d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/dix-solutions-de-laie-pour-faire-face-la-crise-energetique",
@@ -83,40 +83,18 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Casser les silos entre HSE et ESG : le prochain chantier des entreprises engagées",
-      "resume": "L'article souligne l'importance de l'intégration des fonctions HSE (Hygiène, Sécurité, Environnement) et ESG pour ABC, notamment dans le cadre de sa stratégie climat (BGES, CSRD) et de la gestion des risques opérationnels liés aux aléas climatiques.",
+      "resume": "L'article souligne l'importance de l'intégration entre HSE (Hygiène, Sécurité, Environnement) et ESG pour les entreprises, ce qui peut renforcer la cohérence des stratégies RSE d'ABC, notamment dans le cadre de la CSRD et de l'ISO 14001.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/casser-les-silos-entre-hse-et-esg-le-prochain-chantier-des-entreprises-engagees",
       "date": "2026-04-02"
     },
     {
-      "id": "21eb4b05e586",
-      "source": "Le Monde Planète",
-      "categorie": "Eau",
-      "titre": "Simplification de la vie économique : le gouvernement au secours des ZFE pour mieux sauver son projet de loi",
-      "resume": "Simplification de la vie économique : le gouvernement au secours des ZFE pour mieux sauver son projet de loi",
-      "pourquoi": "Mention de ZFE.",
-      "criticite": 3,
-      "url": "https://www.lemonde.fr/politique/article/2026/04/01/simplification-de-la-vie-economique-le-gouvernement-au-secours-des-zfe-pour-mieux-sauver-son-projet-de-loi_6675886_823448.html",
-      "date": "2026-04-01"
-    },
-    {
-      "id": "0ba403600c84",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Les excédents fiscaux sur les carburants fléchés vers l’électrification ?",
-      "resume": "L'article évoque une accélération des mesures d'électrification des flottes, ce qui pourrait impacter la stratégie de décarbonation de la flotte de véhicules d'ABC (scope 1) et ses obligations réglementaires en matière de mobilité durable.",
-      "pourquoi": "Le sujet touche directement à la mobilité durable et à l'électrification des flottes, un enjeu clé pour ABC dans le cadre de sa stratégie de décarbonation (scope 1) et de conformité aux réglementations ZFE et autres mesures d'électrification. Bien que l'article ne mentionne pas explicitement les obligations légales pour les entreprises de services, il signale une tendance forte qui pourrait se traduire par des mesures concrètes dans les 12 mois.",
-      "criticite": 2,
-      "url": "https://www.greenunivers.com/2026/04/les-excedents-fiscaux-sur-les-carburants-fleches-vers-lelectrification-419982/",
-      "date": "2026-04-01"
-    },
-    {
       "id": "6f07f4e23199",
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Le bas-carbone en bonne place dans l'appel à projets « premières usines »",
-      "resume": "L'article illustre l'engagement de l'État français en faveur de la décarbonation industrielle via des financements publics, un contexte à surveiller pour anticiper les attentes clients d'ABC en matière de transition bas-carbone.",
+      "resume": "L'article met en lumière des financements publics pour des innovations bas-carbone, un contexte qui pourrait influencer les exigences clients d'ABC en matière de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/laureat-appel-projet-premieres-usines-innovations-bas-carbone-47784.php4#xtor=RSS-6",
@@ -127,10 +105,21 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "La Commission européenne assouplit le marché du carbone",
-      "resume": "L'assouplissement du marché du carbone européen pourrait influencer les coûts des quotas d'émissions (scope 1) pour les entreprises, mais sans impact direct immédiat sur les activités de services de propreté/FM d'ABC.",
+      "resume": "L'assouplissement du marché du carbone (EU ETS) pourrait influencer les coûts des quotas d'émissions pour les entreprises industrielles clientes d'ABC, mais n'a pas d'impact direct sur ses activités de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/marche-quota-carbone-reserve-commisson-cbam-industrie-47783.php4#xtor=RSS-6",
+      "date": "2026-04-01"
+    },
+    {
+      "id": "0ba403600c84",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Les excédents fiscaux sur les carburants fléchés vers l’électrification ?",
+      "resume": "L'article évoque une accélération des mesures d'électrification des flottes, ce qui pourrait impacter la stratégie de décarbonation de la flotte véhicules d'ABC (scope 1) et ses obligations réglementaires en matière de mobilité durable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/04/les-excedents-fiscaux-sur-les-carburants-fleches-vers-lelectrification-419982/",
       "date": "2026-04-01"
     },
     {
@@ -138,7 +127,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "D’importantes levées de fonds dans les cleantech en mars",
-      "resume": "L'article signale une dynamique positive des levées de fonds dans les cleantech en France, reflétant un contexte favorable pour les solutions de décarbonation et d'efficacité énergétique, pouvant impacter les attentes clients d'ABC en matière de services durables.",
+      "resume": "L'article signale une dynamique de levées de fonds dans les cleantech, reflétant un marché en croissance pour les solutions de décarbonation et d'efficacité énergétique, ce qui pourrait influencer les attentes clients d'ABC en matière de services durables.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/dimportantes-levees-de-fonds-dans-les-cleantech-en-mars-419839/",
@@ -149,43 +138,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Carburant : le SP95 franchit la barre des 2 euros le litre, le débat sur les recettes fiscales s’enflamme",
-      "resume": "L'article aborde la hausse des prix des carburants et son impact sur les coûts de la flotte de véhicules d'ABC, sans proposer de solution directe mais signalant une pression fiscale accrue sur les carburants fossiles.",
+      "resume": "L'article souligne la hausse des coûts des carburants, impactant directement la flotte de véhicules d'ABC (scope 1) et ses coûts opérationnels. Il mentionne aussi des recettes fiscales dédiées à la décarbonation, un enjeu stratégique pour la transition énergétique de l'entreprise.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/04/01/carburant-le-sp95-franchit-la-barre-des-2-euros-le-litre-le-debat-sur-les-recettes-fiscales-s-enflamme_6675937_3234.html",
-      "date": "2026-04-01"
-    },
-    {
-      "id": "0c07e436e58e",
-      "source": "Le Monde Planète",
-      "categorie": "Émissions",
-      "titre": "Comment faire face dès maintenant à la crise pétrolière ?",
-      "resume": "L'article aborde la crise pétrolière dans le contexte de la transition climatique, un enjeu indirect mais stratégique pour ABC via la décarbonation de sa flotte de véhicules (scope 1) et les attentes clients en matière de durabilité.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/chaleur-humaine/article/2026/04/01/comment-faire-face-des-maintenant-a-la-crise-petroliere_6675871_6125299.html",
-      "date": "2026-04-01"
-    },
-    {
-      "id": "dd1a81bf6c7d",
-      "source": "Les Echos Environnement",
-      "categorie": "Eau",
-      "titre": "Pleins feux sur l'éolien en mer, made in France : le gouvernement dévoile son nouveau cap sur les énergies renouvelables - Les Echos",
-      "resume": "L'article annonce une accélération des projets d'éolien en mer en France, ce qui pourrait influencer les politiques énergétiques des clients d'ABC (ex : industrie, tertiaire) et leurs exigences en matière de décarbonation, sans impact direct immédiat sur les activités de l'entreprise.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxPc3ktdjgyamJUQWx1aFhpcl9Jd0VkWGJmLXA1SjN5OWt0ZkRtM0lRdE9NQzhFd2RWZ0hfY0x6dWVNRnlYWFljQ3VCN0dHYjFKV0s4SU9Dc3ItaXZOWHNzbmFyTTFrU3BqSDFEcmY3am1yekRpc01uOUs4ZFc4UDgxd0JUM2VMcTNscjA4TVJWZmxfbnZlMWNoTmpwc19VSUJTNEpGNzVmeExIemhxSE5DNFRiV3ZYaHBBaDktNVEtSEV0ektmdXJReWwxcy0tMFdfQk5NbHZ2ZXhFRzJrbjA5VFFFMDFnOXdWcUZMcFJfSkV1MXVEVkNpVmJVZm5namJNWkw4TnNoVDN3QWRXVmhTXy1wbzVpM25K?oc=5",
-      "date": "2026-04-01"
-    },
-    {
-      "id": "fae9e29fd855",
-      "source": "Les Echos Environnement",
-      "categorie": "Énergie",
-      "titre": "Marché carbone : Bruxelles renforce son « pare-chocs » contre la volatilité des prix - Les Echos",
-      "resume": "L'article traite du renforcement du marché carbone européen (EU ETS), qui pourrait influencer les coûts énergétiques et les stratégies de décarbonation des entreprises, y compris celles du secteur de la propreté/FM comme ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNaXZOVDNuRlJsZzFVLXQ1U0hsSksxWmZJZEpxZktrU0ZLQXpKem5pWW96aUdlalRnbHh6eUFxazBnRjJPV0NRNjlqYWZselNGMFJ4akQ3RkZhbVlfejJGb0EtWld5U3NmZTJaOGE3OWI0MXllOWd1akxTSTdoMEQxRWJYWEVHMmZqNi1oX1VQeXAwc0VsQXQxNVNOZjFWRHdvSDZBc2Z5OGpENW5nNFhpRzkwcERZZFRoajN2YVRHRTJJa3ZZMUxYbEFlaG90c2RVMlY1RDlJR1ZxSk4tUWM4QzRzUWpzUQ?oc=5",
       "date": "2026-04-01"
     },
     {
@@ -193,7 +149,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Déchets",
       "titre": "« On arrivait à saturation » : Suez augmente ses capacités dans les déchets dangereux en Ile-de-France - Les Echos",
-      "resume": "L'article souligne la saturation des capacités de traitement des déchets dangereux en Île-de-France, ce qui pourrait impacter la gestion des déchets des clients d'ABC et leurs obligations réglementaires (REP, traçabilité).",
+      "resume": "L'augmentation des capacités de traitement des déchets dangereux par Suez en Île-de-France pourrait impacter la traçabilité et la gestion des déchets pour ABC, notamment dans le cadre des obligations REP et de la réglementation déchets.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPQTMxMF8yU084Z05Sd0lNTGlyVS0wNVJRV18waHlyaFhfd0tPbWF6VzRENGpRQ2U3ZlJCX3B5d0FHYS1GdkhtWmlmTWZMczlxU1FJazlVZG1EdjRpZ2tncEtGd0QyVEJuSnBVTEtLNWhtN1k3cXJXSTdyeHhPN3g3YVR0YTFMcU5fd0ZxUDdfeVdWZGFGMllMVXpuc0dUaGNSTDRybmozNXgyTjc1M0Q3YmVZZThLRXF4UUJ4d3ZxSjEtcDhocFRmeDAtLUtDTzB4OHNzTFZtMzZWWE5aVlNPdENxSW1tN2l0R2g1UUJ1ZV85TF96SzBRcTU4X3UzUQ?oc=5",
@@ -1178,6 +1134,12 @@
       "source": "AN Textes adoptés",
       "items": [
         {
+          "titre": "Texte adopté N° 261",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fonds_social_euro_plus_banques_alimentaires",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fonds_social_euro_plus_banques_alimentaires",
+          "date": "2026-02-10"
+        },
+        {
           "titre": "Texte adopté N° 259",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52230",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52230",
@@ -1320,15 +1282,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/soutenir_danemark_groenland_oeuvrer_cooperation_defense",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/soutenir_danemark_groenland_oeuvrer_cooperation_defense",
           "date": "2025-03-25"
-        },
-        {
-          "titre": "Texte adopté N° 229",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/prisonniers_armeniens_liberation",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/prisonniers_armeniens_liberation",
-          "date": "2025-12-19"
         }
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles qui pourraient impacter les obligations RSE des entreprises, notamment en matière de reporting extra-financier et de transition écologique. Aucun autre texte ne semble directement lié aux enjeux climatiques ou environnementaux pour une entreprise de services."
+  "pjl_briefing": "Le projet de loi n°2518 (adaptation au droit de l’UE) pourrait inclure des mesures environnementales et énergétiques significatives, notamment sur la transposition de directives européennes en matière de climat et de transition énergétique. Aucun autre texte ne semble directement lié aux enjeux environnementaux, déchets ou reporting RSE pour une entreprise de services."
 }
