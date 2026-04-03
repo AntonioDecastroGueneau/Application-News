@@ -1,7 +1,7 @@
 {
   "date": "2026-04-03",
-  "generated_at": "08:05",
-  "elapsed_seconds": 220,
+  "generated_at": "12:02",
+  "elapsed_seconds": 235,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
@@ -9,18 +9,18 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-04-03T08:05:40",
+    "run_at": "2026-04-03T12:02:28",
     "sources": {
       "JORF": 0,
-      "RSS": 16,
+      "RSS": 14,
       "VigiEau": 3,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 65,
-    "llm_seconds": 80.4
+    "llm_calls": 59,
+    "llm_seconds": 98.4
   },
   "items": [
     {
@@ -39,7 +39,7 @@
       "source": "Actu-Environnement",
       "categorie": "Environnement",
       "titre": "Politiques climatiques dans les territoires : le HCC appelle à une meilleure mise en oeuvre",
-      "resume": "Le rapport du HCC souligne l'insuffisance des progrès des collectivités territoriales en matière de politiques climatiques, ce qui pourrait impacter indirectement les exigences carbone des clients d'ABC (secteurs nucléaires, santé, industrie) et renforcer les attentes en matière de reporting ESG et de décarbonation des prestataires.",
+      "resume": "Le rapport du HCC souligne les insuffisances des collectivités territoriales dans la mise en œuvre des politiques climatiques, ce qui pourrait impacter indirectement les exigences carbone des clients d'ABC (secteurs nucléaire, santé, industrie) via des réglementations locales renforcées.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/politiques-climatiques-territoires-hcc-meilleure-mise-oeuvre-47786.php4#xtor=RSS-6",
@@ -50,54 +50,10 @@
       "source": "Novethic",
       "categorie": "Énergie",
       "titre": "Crédits biodiversité : l'intégrité, condition clé pour éviter les dérives (2/3)",
-      "resume": "Les crédits biodiversité pourraient devenir un levier pour compenser les impacts environnementaux de l'activité d'ABC, notamment via des projets de restauration écologique liés à ses prestations de propreté/FM. Une intégrité insuffisante des crédits pourrait exposer ABC à des risques de réputation ou de non-conformité avec les attentes clients (nucléaire, santé, industrie).",
+      "resume": "Les crédits biodiversité pourraient devenir un enjeu pour les entreprises de services comme ABC dans le cadre de la CSRD/ESRS, notamment pour répondre aux exigences de reporting extra-financier et aux attentes clients en matière de compensation écologique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/biodiversite/credits-biodiversite-lintegrite-condition-cle-pour-eviter-les-derives-2-3",
-      "date": "2026-04-03"
-    },
-    {
-      "id": "e05b8613c999",
-      "source": "Min. Transition Écologique",
-      "categorie": "Climat",
-      "titre": "Économies d’énergie : le vrai du faux pour avoir les bons réflexes",
-      "resume": "L'article aborde les bonnes pratiques d'économies d'énergie, un enjeu clé pour ABC dans le cadre de sa politique de décarbonation (scope 2) et de conformité aux réglementations énergétiques (DPE tertiaire, loi énergie-climat).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.ecologie.gouv.fr/actualites/economies-denergie-vrai-du-faux-avoir-bons-reflexes",
-      "date": "2026-04-03"
-    },
-    {
-      "id": "3e7fdb3326b2",
-      "source": "Min. Transition Écologique",
-      "categorie": "Climat",
-      "titre": "6 idées reçues sur le tri et le recyclage des emballages en plastique",
-      "resume": "L'article aborde le tri et le recyclage des emballages en plastique, un enjeu lié à la gestion des déchets des prestations de propreté de ABC, impactant potentiellement son reporting CSRD/ESRS et sa conformité aux réglementations REP.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.ecologie.gouv.fr/actualites/6-idees-recues-tri-recyclage-emballages-plastique",
-      "date": "2026-04-03"
-    },
-    {
-      "id": "019c1e3f0bdd",
-      "source": "Min. Transition Écologique",
-      "categorie": "Climat",
-      "titre": "Réouverture du guichet MaPrimeRénov’",
-      "resume": "La réouverture de MaPrimeRénov’ pourrait impacter indirectement ABC via les exigences carbone de ses clients (secteurs nucléaire, santé, industrie) en renforçant la demande de rénovation énergétique des bâtiments tertiaires, mais sans obligation directe pour le prestataire.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.ecologie.gouv.fr/actualites/reouverture-du-guichet-maprimerenov",
-      "date": "2026-04-03"
-    },
-    {
-      "id": "1b1f8ad1f5d8",
-      "source": "Min. Transition Écologique",
-      "categorie": "Climat",
-      "titre": "Climat : la trajectoire de réchauffement inscrite dans le code de l'environnement",
-      "resume": "L'intégration de la TRACC dans le code de l'environnement formalise la trajectoire de réchauffement de référence pour l'adaptation climatique en France, ce qui peut influencer les exigences clients d'ABC (nucléaire, santé, industrie) en matière de résilience climatique et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.ecologie.gouv.fr/actualites/climat-trajectoire-rechauffement-inscrite-code-lenvironnement",
       "date": "2026-04-03"
     },
     {
@@ -105,7 +61,7 @@
       "source": "Haut Conseil pour le Climat",
       "categorie": "Environnement",
       "titre": "Le Haut conseil pour le climat publie un rapport sur les politiques climatiques dans les territoires",
-      "resume": "Le rapport du Haut conseil pour le climat souligne l'exposition accrue des territoires aux impacts climatiques, ce qui peut impacter les sites clients d'ABC (ex : perturbations des prestations de propreté/FM, risques opérationnels indirects).",
+      "resume": "Le rapport du Haut conseil pour le climat souligne l'exposition accrue des territoires aux impacts climatiques, ce qui peut impacter les sites clients d'ABC (risques opérationnels indirects) et renforcer les exigences en matière de résilience et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.hautconseilclimat.fr/actualites/le-haut-conseil-pour-le-climat-publie-un-rapport-sur-les-politiques-climatiques-dans-les-territoires/",
@@ -116,10 +72,21 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Le Haut Conseil pour le climat appelle les collectivités locales à plus d’ambition en faveur de la transition écologique",
-      "resume": "L'article souligne l'importance de l'adaptation climatique pour les collectivités locales, ce qui peut impacter indirectement ABC via ses 3 000+ sites clients exposés aux aléas climatiques, renforçant les exigences en résilience et reporting ESG.",
+      "resume": "L'article souligne l'importance de l'adaptation climatique pour les collectivités locales, ce qui peut impacter indirectement ABC via les exigences de ses clients (ex : collectivités, industriels) en matière de résilience climatique et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/04/03/le-haut-conseil-pour-le-climat-appelle-les-collectivites-locales-a-plus-d-ambition-en-faveur-de-la-transition-ecologique_6676315_3244.html",
+      "date": "2026-04-03"
+    },
+    {
+      "id": "f4ec4ea07154",
+      "source": "EFRAG",
+      "categorie": "Énergie",
+      "titre": "EFRAG finds limited interest in a voluntary template for SMEs and startups on the European Single Access Point",
+      "resume": "L'article aborde l'absence d'intérêt pour un modèle volontaire de reporting ESG pour les PME et startups via l'ESAP, ce qui pourrait influencer les futures exigences de reporting extra-financier en Europe, notamment pour les clients d'ABC soumis à la CSRD.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-finds-limited-interest-in-a-voluntary-template-for-smes-and-startups-on-the-european-single",
       "date": "2026-04-03"
     },
     {
@@ -127,7 +94,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Casser les silos entre HSE et ESG : le prochain chantier des entreprises engagées",
-      "resume": "L'article souligne l'importance de l'intégration des fonctions HSE et ESG pour une stratégie RSE cohérente, ce qui peut renforcer la crédibilité du reporting extra-financier d'ABC (CSRD/ESRS) et améliorer la gestion des enjeux climatiques et environnementaux.",
+      "resume": "L'article souligne l'importance de l'intégration des fonctions HSE (Hygiène, Sécurité, Environnement) et ESG pour ABC, notamment dans le cadre de sa démarche ISO 14001 et de son reporting CSRD, afin d'améliorer la cohérence de sa stratégie RSE.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/casser-les-silos-entre-hse-et-esg-le-prochain-chantier-des-entreprises-engagees",
@@ -138,7 +105,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Énergies renouvelables : les détails des prochains appels d'offres enfin connus",
-      "resume": "L'article annonce les modalités des appels d'offres pour l'éolien et le photovoltaïque, ce qui pourrait influencer les choix énergétiques des clients d'ABC (secteurs nucléaire, santé, industrie) dans leur trajectoire de décarbonation et leur reporting CSRD.",
+      "resume": "L'article annonce les modalités des appels d'offres pour les énergies renouvelables (éolien et photovoltaïque) en France, ce qui peut influencer les stratégies énergétiques des clients d'ABC (ex : tertiaire, industrie) et leurs exigences en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/appel-offres-eolien-en-mer-terrestre-photovoltaique-repowering-autoconsommation-nzia-47785.php4#xtor=RSS-6",
@@ -149,7 +116,7 @@
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "Rouler en Zoé quand on habite à la campagne ? Notre journaliste fait le bilan",
-      "resume": "L'article illustre les défis de la mobilité électrique en zone rurale, un enjeu pertinent pour la flotte de véhicules d'ABC (scope 1) et la transition énergétique des entreprises de services.",
+      "resume": "L'article illustre un retour d'expérience concret sur l'électrification d'une flotte automobile en zone rurale, un enjeu stratégique pour ABC compte tenu de ses 3 000+ sites clients et de ses obligations de décarbonation (scope 1).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Rouler-en-Zoe-quand-on-habite-a-la-campagne-Notre-journaliste-fait-le-bilan",
@@ -160,7 +127,7 @@
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "TotalEnergies : la fin de l'ambiguïté climatique",
-      "resume": "L'article illustre la stratégie de transition énergétique d'un acteur majeur du secteur, ce qui peut servir de benchmark pour ABC dans l'alignement de sa propre politique climatique et de sa communication RSE, notamment sur les enjeux de décarbonation et de reporting ESG.",
+      "resume": "L'article illustre la stratégie de transition énergétique d'un acteur majeur du secteur, reflétant les attentes clients et réglementaires en matière de décarbonation, ce qui peut influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) dans leurs politiques RSE.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/transition-energetique/totalenergies-la-fin-de-lambiguite-climatique",
@@ -171,7 +138,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Le calendrier des appels d’offres pour l’électricité renouvelable",
-      "resume": "L'article informe sur les appels d'offres publics pour l'électricité renouvelable en France, ce qui pourrait influencer les choix énergétiques des clients d'ABC (secteurs nucléaire, santé, industrie) et leurs exigences en matière de décarbonation, sans impact direct immédiat sur les activités de l'entreprise.",
+      "resume": "L'article informe sur les appels d'offres publics pour l'électricité renouvelable, ce qui peut impacter les coûts énergétiques et les stratégies d'approvisionnement d'ABC, notamment pour ses sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/le-calendrier-des-appels-doffres-pour-lelectricite-renouvelable-420116/",
@@ -182,7 +149,7 @@
       "source": "GreenUnivers",
       "categorie": "Biodiversité",
       "titre": "Arkolia veut accélérer vers le commerce de l’électricité et la flexibilité",
-      "resume": "L'article aborde la stratégie d'Arkolia dans le commerce de l'électricité et la flexibilité énergétique, ce qui pourrait impacter indirectement ABC via les exigences carbone de ses clients industriels (C&I) en matière de décarbonation et d'approvisionnement en énergies renouvelables.",
+      "resume": "L'article aborde la stratégie d'Arkolia dans le commerce d'électricité et la flexibilité énergétique, un sujet connexe aux enjeux énergétiques et de décarbonation des entreprises (scope 2), mais sans lien direct avec les activités opérationnelles ou réglementaires immédiates d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/arkolia-veut-accelerer-vers-le-commerce-de-lelectricite-et-la-flexibilite-420066/",
@@ -193,11 +160,22 @@
       "source": "ESG Today",
       "categorie": "Énergie",
       "titre": "EU Commission Launches First of Planned ETS Carbon Market Reforms Amid Industry Pressure",
-      "resume": "L'article aborde une réforme du marché carbone européen (EU ETS) qui pourrait impacter indirectement les coûts énergétiques et les exigences carbone des clients d'ABC, notamment dans les secteurs industriel, nucléaire ou santé.",
+      "resume": "L'article annonce une réforme du marché carbone européen (EU ETS) qui pourrait impacter indirectement les coûts énergétiques et carbone des prestataires de services comme ABC, notamment via la hausse des prix des quotas d'émissions.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/eu-commission-launches-first-of-planned-ets-reforms-amid-industry-pressure/?utm_source=rss&utm_medium=rss&utm_campaign=eu-commission-launches-first-of-planned-ets-reforms-amid-industry-pressure",
       "date": "2026-04-02"
+    },
+    {
+      "id": "96e96983b0f9",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG SRB Online Meeting 7 April 2026",
+      "resume": "L'article annonce une réunion de l'EFRAG SRB en avril 2026 sur les normes de reporting ESG (CSRD/ESRS), essentielles pour le reporting extra-financier d'ABC dans le cadre de ses obligations CSRD et ISO 14001.",
+      "pourquoi": "EFRAG SRB est l'organisme européen en charge des normes ESRS (European Sustainability Reporting Standards) qui encadrent le reporting ESG sous la CSRD. ABC, en tant qu'entreprise soumise à ces obligations, doit suivre les évolutions de ces normes pour adapter ses processus de reporting et de collecte de données.",
+      "criticite": 2,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-7-april-2026",
+      "date": "2026-04-01"
     }
   ],
   "restrictions_eau": [
@@ -1318,5 +1296,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, trois sont particulièrement significatifs pour un Responsable Environnement/Climat : le projet n°2518 (adaptation au droit de l’UE en matière environnementale et énergétique), le projet n°2242 (loi de financement de la sécurité sociale pour 2026, potentiellement lié aux taxes carbone ou écologiques), et le projet n°2046 (lutte contre la vie chère dans les outre-mer, pouvant inclure des mesures sur l’énergie et les déchets). Aucun texte adopté ne semble directement lié à ces enjeux."
+  "pjl_briefing": "Parmi les projets de loi identifiés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le projet n°2518 (adaptation au droit de l’UE en matière environnementale et énergétique) et le projet n°2046 (lutte contre la vie chère dans les outre-mer, potentiellement lié à des enjeux de transition écologique et d’accès aux services essentiels). Aucun texte adopté ne semble directement lié aux priorités RSE ou climat pour une entreprise de services."
 }
