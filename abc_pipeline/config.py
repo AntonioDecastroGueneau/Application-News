@@ -164,13 +164,6 @@ RSS_SOURCES = [
         'fallback_crawl': 'https://www.novethic.fr/',
     },
     {
-        'name': 'Min. Transition Écologique',
-        'url': 'https://invalid-no-rss',
-        'categorie': 'Réglementation',
-        'fallback_crawl': 'https://www.ecologie.gouv.fr/actualites',
-        'article_url_contains': '/actualites/',
-    },
-    {
         'name': 'ADEME',
         'url': 'https://www.ademe.fr/feed/',
         'categorie': 'Climat',
