@@ -783,9 +783,9 @@ function renderFeed(){
 
   list.style.gridTemplateColumns='55fr 45fr';
   let html=`<div class="feed-col-prio">`;
-  if(prio.length)html+=`<div class="feed-section-hd prio"><span class="feed-section-lbl">Signaux prioritaires</span><span class="feed-section-badge">${prio.length}</span></div>`+prio.map(cardHtml).join('');
+  if(prio.length){html+=`<div class="feed-section-hd prio"><span class="feed-section-lbl">Signaux prioritaires</span><span class="feed-section-badge">${prio.length}</span></div>`+prio.map(cardHtml).join('')+sourcesLinksHtml;}
   else html+=`<div class="feed-empty-prio"><div class="feed-empty-prio-inner"><div class="feed-empty-prio-icon"><div class="feed-empty-prio-ring"></div><span class="material-symbols-outlined">sensors</span></div><div class="feed-empty-prio-title">Tout est calme pour le moment</div><div class="feed-empty-prio-sub">Aucun signal prioritaire détecté.</div></div></div>`;
-  html+=sourcesLinksHtml+`</div>`;
+  html+=`</div>`;
   if(veille.length)html+=`<div class="feed-col-consulter"><div class="feed-consulter-hd"><span class="feed-consulter-lbl">À consulter</span><span class="feed-section-badge" style="margin-left:auto">${veille.length}</span></div><div class="feed-consulter-items">${veille.map(cardHtmlCompact).join('')}</div></div>`;
   list.innerHTML=html;
 }
