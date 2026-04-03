@@ -528,7 +528,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
                     if analysis.get('pertinent'):
                         fiche['resume_abc'] = analysis.get('resume', '')
                         fiche['pourquoi'] = analysis.get('pourquoi', '')
-                        fiche['score'] = int(analysis.get('score', 1))
+                        fiche['score'] = int(analysis.get('score') or 1)
                         fiche['horizon'] = analysis.get('horizon', '')
                         if sync.ready:
                             sync.upsert_dossier(fiche)
@@ -576,7 +576,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
                 'titre': titre,
                 'analyse_date': today_str,
                 'pertinent': analysis.get('pertinent', False),
-                'score': int(analysis.get('score', 1)),
+                'score': int(analysis.get('score') or 1),
                 'resume': analysis.get('resume', ''),
                 'pourquoi': analysis.get('pourquoi', ''),
                 'horizon': analysis.get('horizon', ''),
@@ -659,7 +659,7 @@ def fetch_parlement(script_dir, today_str: str) -> Tuple[list, list, str]:
         if analysis.get('pertinent'):
             fiche['resume_abc'] = analysis.get('resume', '')
             fiche['pourquoi'] = analysis.get('pourquoi', '')
-            fiche['score'] = int(analysis.get('score', 1))
+            fiche['score'] = int(analysis.get('score') or 1)
             fiche['horizon'] = analysis.get('horizon', '')
             if sync.ready:
                 sync.upsert_dossier(fiche)
