@@ -1,7 +1,7 @@
 {
   "date": "2026-04-04",
-  "generated_at": "06:49",
-  "elapsed_seconds": 199,
+  "generated_at": "11:54",
+  "elapsed_seconds": 187,
   "errors": [],
   "stats": {
     "jo_analyses": 18,
@@ -9,18 +9,18 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-04-04T06:49:20",
+    "run_at": "2026-04-04T11:54:32",
     "sources": {
       "JORF": 0,
-      "RSS": 10,
+      "RSS": 8,
       "VigiEau": 3,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 61,
-    "llm_seconds": 72.9
+    "llm_calls": 51,
+    "llm_seconds": 57.9
   },
   "items": [
     {
@@ -28,18 +28,29 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Casser les silos entre HSE et ESG : le prochain chantier des entreprises engagées",
-      "resume": "L'article souligne l'importance de l'intégration des fonctions HSE (Hygiène, Sécurité, Environnement) et ESG (Environnement, Social, Gouvernance) pour une stratégie RSE cohérente, ce qui peut renforcer la crédibilité des engagements climatiques et environnementaux d'ABC auprès de ses clients et parties prenantes.",
+      "resume": "L'article souligne l'importance de l'intégration des fonctions HSE et ESG pour une stratégie RSE cohérente, ce qui peut aider ABC à structurer son approche globale en matière de décarbonation, reporting et gestion des risques climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/casser-les-silos-entre-hse-et-esg-le-prochain-chantier-des-entreprises-engagees",
       "date": "2026-04-04"
     },
     {
+      "id": "ec39826b0f10",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Le potentiel des CEE pour soutenir le plan d’électrification",
+      "resume": "Les CEE pourraient financer des actions d'électrification de la flotte de véhicules d'ABC, réduisant ainsi les émissions de scope 1. L'article souligne aussi les risques de fraude à anticiper dans le cadre des démarches de décarbonation.",
+      "pourquoi": "L'électrification de la flotte est un enjeu direct pour ABC (scope 1, mobilité durable). Les CEE sont un levier de financement potentiel pour des investissements en véhicules propres, aligné sur les trajectoires de décarbonation et les exigences clients (nucléaire, santé, industrie).",
+      "criticite": 2,
+      "url": "https://www.greenunivers.com/2026/04/le-potentiel-des-cee-pour-soutenir-le-plan-delectrification-420012/",
+      "date": "2026-04-03"
+    },
+    {
       "id": "716813dee0c2",
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Le marché de la régulation et de la GTB se porte bien",
-      "resume": "L'article souligne la croissance du marché de la GTB (Gestion Technique du Bâtiment) liée aux exigences réglementaires de rénovation du parc tertiaire, ce qui pourrait impacter les clients d'ABC en termes d'efficacité énergétique et de reporting DPE tertiaire.",
+      "resume": "L'article souligne la croissance du marché de la GTB (Gestion Technique du Bâtiment) liée aux exigences réglementaires de rénovation tertiaire, ce qui pourrait impacter les sites clients d'ABC (non exploitants ICPE) dans leur gestion énergétique et leur reporting.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/syndicat-ACR-bilan-marche-regulation-genie-climatique-GTB-renovation-parc-tertiaire-Bacs-47793.php4#xtor=RSS-6",
@@ -50,7 +61,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Consigne pour recyclage : la Commission laisse peu d'espoir à la France",
-      "resume": "La Commission européenne restreint les dérogations pour la consigne des bouteilles en plastique et cannettes, ce qui pourrait impacter les obligations de tri et de recyclage des déchets des prestations de propreté de ABC chez ses clients.",
+      "resume": "La Commission européenne restreint les dérogations pour la consigne des bouteilles en plastique et cannettes, ce qui pourrait impacter les obligations de tri et de recyclage des déchets générés par les prestations de propreté de ABC chez ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/position-commission-consigne-recyclage-bouteille-cannette-47792.php4#xtor=RSS-6",
@@ -61,32 +72,10 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Bercy enterre les tarifs garantis pour maximiser l’autoconsommation photovoltaïque",
-      "resume": "L'article annonce la suppression des tarifs garantis pour l'autoconsommation photovoltaïque, ce qui pourrait impacter les stratégies énergétiques des clients d'ABC (notamment tertiaires) et leurs projets d'installation solaire, influençant ainsi les prestations de FM et la gestion énergétique des sites.",
+      "resume": "L'article annonce la suppression des tarifs garantis pour l'autoconsommation photovoltaïque en France, ce qui pourrait impacter les stratégies énergétiques des entreprises comme ABC en matière de transition vers les énergies renouvelables.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/bercy-enterre-les-tarifs-garantis-pour-maximiser-lautoconsommation-photovoltaique-420273/",
-      "date": "2026-04-03"
-    },
-    {
-      "id": "12405b10ac64",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "L’agenda de la transition énergétique",
-      "resume": "L'article liste des événements professionnels sur la transition énergétique (énergies renouvelables, mobilité électrique, hydrogène) qui pourraient être utiles pour identifier des opportunités ou des tendances à suivre par ABC dans le cadre de sa stratégie climat et RSE.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/lagenda-de-la-transition-energetique-278-419528/",
-      "date": "2026-04-03"
-    },
-    {
-      "id": "ec39826b0f10",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "Le potentiel des CEE pour soutenir le plan d’électrification",
-      "resume": "Les CEE pourraient financer des actions d'électrification de la flotte de véhicules d'ABC, réduisant ainsi les émissions scope 1 et soutenant la transition énergétique des prestations de propreté.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/le-potentiel-des-cee-pour-soutenir-le-plan-delectrification-420012/",
       "date": "2026-04-03"
     },
     {
@@ -94,21 +83,10 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Le petit photovoltaïque, l’autoconsommation, les CEE au prochain CSE",
-      "resume": "L'article aborde des évolutions réglementaires potentielles sur l'autoconsommation photovoltaïque et les CEE, qui pourraient impacter les stratégies énergétiques des entreprises de services comme ABC, notamment en matière de réduction de leur empreinte carbone et de maîtrise des coûts énergétiques.",
+      "resume": "L'article aborde une potentielle réduction du soutien public au petit photovoltaïque et à l'autoconsommation, ainsi que des évolutions sur les Certificats d'Économies d'Énergie (CEE), ce qui pourrait impacter les stratégies énergétiques des entreprises comme ABC dans le cadre de leur transition bas-carbone.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/le-petit-photovoltaique-lautoconsommation-les-cee-au-prochain-cse-420160/",
-      "date": "2026-04-03"
-    },
-    {
-      "id": "05c7b2557080",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Les documents de la semaine",
-      "resume": "Cet article hebdomadaire compile des documents clés liés à la transition énergétique, utiles pour suivre les évolutions réglementaires et les bonnes pratiques en matière de décarbonation, reporting ESG et mobilité durable, pertinentes pour le Responsable Environnement/Climat de ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/les-documents-de-la-semaine-381215/",
       "date": "2026-04-03"
     },
     {
@@ -116,7 +94,7 @@
       "source": "Le Monde Planète",
       "categorie": "Déchets",
       "titre": "Hausse des prix des carburants : le gouvernement lance un « prêt flash » à 3,80 % pour soutenir la trésorerie des TPE et PME",
-      "resume": "Ce prêt flash à taux réduit pourrait soutenir la trésorerie d'ABC en cas de hausse des coûts carburant, mais ne cible pas directement les prestataires de propreté/FM. Aucun impact opérationnel ou réglementaire direct identifié.",
+      "resume": "Le prêt flash à taux réduit pourrait soutenir la trésorerie des entreprises de propreté/FM confrontées à la hausse des coûts énergétiques, mais ne cible pas directement leur secteur ni leurs enjeux de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/04/04/hausse-des-prix-des-carburants-le-gouvernement-lance-un-pret-flash-a-3-80-pour-soutenir-la-tresorerie-des-tpe-et-pme_6676416_3234.html",
@@ -127,8 +105,8 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SRB Online Meeting 7 April 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG SRB sur les normes de reporting ESG (CSRD/ESRS), ce qui impacte directement les obligations de reporting extra-financier d'ABC pour ses clients et ses propres engagements.",
-      "pourquoi": "Le reporting ESG (CSRD/ESRS) est un enjeu majeur pour ABC, notamment pour répondre aux exigences de ses clients (nucléaire, santé, industrie) et pour son propre reporting extra-financier. La CSRD impose des obligations strictes en matière de transparence sur les impacts environnementaux, sociaux et de gouvernance, ce qui concerne directement la stratégie RSE et le reporting d'ABC.",
+      "resume": "L'article annonce une réunion de l'EFRAG SRB sur les normes de reporting ESG (CSRD/ESRS), ce qui impacte directement les obligations de reporting extra-financier d'ABC pour ses clients et ses propres engagements CSRD.",
+      "pourquoi": "EFRAG (European Financial Reporting Advisory Group) est l'organisme clé pour l'élaboration des normes ESRS sous la CSRD, qui s'appliquent à ABC en tant qu'entreprise soumise au reporting extra-financier (scope 3 inclus). Les évolutions des ESRS peuvent influencer les exigences de reporting des clients d'ABC et donc ses propres pratiques.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-7-april-2026",
       "date": "2026-04-01"
@@ -1162,5 +1140,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi n°2518** (adaptation au droit de l’UE en matière environnementale, énergétique et économique) est directement pertinent pour un Responsable Environnement/Climat, car il pourrait inclure des mesures liées à la transition énergétique, la réglementation des déchets ou le reporting extra-financier. Les autres textes concernent principalement des sujets fiscaux, sociaux, institutionnels ou de coopération internationale, sans impact direct sur les enjeux climatiques ou RSE."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet n°2518 (adaptation au droit de l’UE) inclut des mesures environnementales, énergétiques et agricoles, tandis que le n°2046 (lutte contre la vie chère dans les outre-mer) pourrait impacter les politiques RSE locales. Aucun texte ne traite directement des déchets ou du reporting extra-financier, mais la transposition des directives européennes (n°2518) pourrait renforcer les obligations en matière de transition écologique et de transparence."
 }
