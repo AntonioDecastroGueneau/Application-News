@@ -1,7 +1,7 @@
 {
   "date": "2026-04-05",
-  "generated_at": "06:56",
-  "elapsed_seconds": 160,
+  "generated_at": "11:58",
+  "elapsed_seconds": 365,
   "errors": [],
   "stats": {
     "jo_analyses": 6,
@@ -9,26 +9,37 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-04-05T06:56:43",
+    "run_at": "2026-04-05T11:58:16",
     "sources": {
       "JORF": 0,
-      "RSS": 3,
+      "RSS": 4,
       "VigiEau": 3,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 22,
-    "llm_seconds": 23.2
+    "llm_calls": 25,
+    "llm_seconds": 31.3
   },
   "items": [
+    {
+      "id": "f671436cb09b",
+      "source": "ESG Today",
+      "categorie": "Eau",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article couvre des évolutions réglementaires et marché en ESG (ETS, reporting GRI, mobilité hydrogène) et des initiatives sectorielles (Nestlé, TotalEnergies) qui impactent indirectement les enjeux carbone, reporting et mobilité durable d'ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-255/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-255",
+      "date": "2026-04-05"
+    },
     {
       "id": "211fc0a75a84",
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Casser les silos entre HSE et ESG : le prochain chantier des entreprises engagées",
-      "resume": "L'article souligne l'importance de l'intégration des fonctions HSE et ESG pour une stratégie RSE cohérente, ce qui peut renforcer la crédibilité du reporting ESG de ABC (CSRD/ESRS) et optimiser la gestion des enjeux environnementaux et climatiques.",
+      "resume": "L'article souligne l'importance de l'intégration entre HSE (Hygiène, Sécurité, Environnement) et ESG pour ABC, notamment dans le cadre de sa démarche ISO 14001, de son reporting CSRD et de sa stratégie climat (BGES/plan climat).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/casser-les-silos-entre-hse-et-esg-le-prochain-chantier-des-entreprises-engagees",
@@ -39,7 +50,7 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Prix du carburant : l’Allemagne, l’Espagne, l’Italie, le Portugal et l’Autriche appellent à taxer les profits exceptionnels des groupes énergétiques",
-      "resume": "L'article souligne une potentielle taxation des profits des groupes énergétiques en Europe, ce qui pourrait impacter les coûts des carburants et donc la flotte de véhicules d'ABC (scope 1).",
+      "resume": "L'article aborde une proposition de taxation des profits exceptionnels des groupes énergétiques en Europe, ce qui pourrait impacter les coûts des carburants et donc la flotte de véhicules d'ABC, un enjeu direct pour son scope 1 (émissions liées aux carburants).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/04/04/prix-du-carburant-l-allemagne-l-espagne-l-italie-le-portugal-et-l-autriche-appellent-a-taxer-les-profits-exceptionnels-des-groupes-energetiques_6676671_3234.html",
@@ -50,9 +61,9 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SRB Online Meeting 7 April 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG SRB sur le reporting de durabilité, pertinente pour préparer la conformité CSRD/ESRS d'ABC, mais sans obligation immédiate ou action opérationnelle directe.",
-      "pourquoi": "",
-      "criticite": 1,
+      "resume": "L'article annonce une réunion de l'EFRAG SRB sur les normes de reporting ESG (CSRD/ESRS), essentielles pour le reporting extra-financier d'ABC dans le cadre de la CSRD.",
+      "pourquoi": "L'EFRAG (European Financial Reporting Advisory Group) est l'organisme clé pour l'élaboration des normes ESRS (European Sustainability Reporting Standards) sous la CSRD. ABC, en tant qu'entreprise soumise à la CSRD (selon sa taille et son secteur), doit suivre ces évolutions pour son reporting ESG et sa conformité réglementaire. La réunion du 7 avril 2026 pourrait aborder des clarifications ou des mises à jour sur les exigences de reporting, impactant directement les processus internes d'ABC.",
+      "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-7-april-2026",
       "date": "2026-04-01"
     }
@@ -383,7 +394,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des arrêtés publiés ne présente de lien direct avec les enjeux environnementaux ou climatiques pour une grande entreprise de services. Les textes concernent des mesures administratives ou réglementaires sans impact environnemental identifié.",
+  "briefing_jorf": "Aucun des arrêtés publiés ne présente de lien direct avec les enjeux environnementaux ou climatiques pour une grande entreprise de services, bien que la suppression de zones réglementées aériennes puisse indirectement influencer les activités logistiques ou aériennes.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -737,5 +748,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, trois sont particulièrement pertinents pour un Responsable Environnement/Climat : le projet n°2518 (adaptation au droit de l’UE en matière environnementale et énergétique), le projet n°2046 (lutte contre la vie chère dans les outre-mer, potentiellement lié à des enjeux de transition écologique locale) et le projet n°1641 (organisation des JO 2030, avec des implications en termes d’empreinte carbone et de durabilité). Aucun texte adopté ne semble directement lié aux enjeux climatiques ou RSE."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet n°2518 (adaptation au droit de l’UE en matière environnementale et énergétique) et le projet n°2046 (lutte contre la vie chère dans les outre-mer) pourraient impacter les politiques RSE, notamment sur les enjeux de transition énergétique et d’adaptation climatique. Aucun texte adopté ne semble directement lié aux priorités environnementales ou climatiques."
 }
