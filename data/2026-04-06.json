@@ -1,7 +1,7 @@
 {
   "date": "2026-04-06",
-  "generated_at": "07:23",
-  "elapsed_seconds": 425,
+  "generated_at": "12:06",
+  "elapsed_seconds": 161,
   "errors": [],
   "stats": {
     "jo_analyses": 5,
@@ -9,7 +9,7 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-04-06T07:23:41",
+    "run_at": "2026-04-06T12:06:43",
     "sources": {
       "JORF": 0,
       "RSS": 6,
@@ -19,16 +19,27 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 33,
-    "llm_seconds": 48.0
+    "llm_calls": 36,
+    "llm_seconds": 43.5
   },
   "items": [
+    {
+      "id": "3db0abaffc21",
+      "source": "Novethic",
+      "categorie": "Déchets",
+      "titre": "Reporting ESG : l'Asie accélère sa progression vers une économie durable",
+      "resume": "L'article souligne l'accélération du reporting ESG en Asie, un signal à suivre pour ABC dans un contexte de pression réglementaire croissante sur les entreprises, notamment via la CSRD et les attentes clients (nucléaire, santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/finance-durable/reglementation/asie-reporting-esg-durabiltie-reglementations-taxonomie-vigilance",
+      "date": "2026-04-06"
+    },
     {
       "id": "8e773c25fa7e",
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Scope 3 : pourquoi les entreprises doivent continuer à s'engager",
-      "resume": "L'article souligne l'importance persistante du scope 3 dans les engagements climatiques des entreprises, ce qui impacte indirectement ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et la CSRD/reporting ESG.",
+      "resume": "L'article souligne l'importance persistante du scope 3 dans les engagements climatiques des entreprises, ce qui impacte indirectement ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et la CSRD/reporting ESG. Une vigilance sur les évolutions méthodologiques du scope 3 est nécessaire pour adapter les stratégies de reporting et de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/climat/scope-3-responsabilite-entreprise-engagement-climatique",
@@ -39,7 +50,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Casser les silos entre HSE et ESG : le prochain chantier des entreprises engagées",
-      "resume": "L'article souligne l'importance de l'intégration des fonctions HSE (Hygiène, Sécurité, Environnement) et ESG (Environnement, Social, Gouvernance) pour une stratégie de développement durable cohérente, ce qui peut impacter la structuration des processus RSE et environnementaux d'ABC.",
+      "resume": "L'article souligne l'importance de l'intégration entre HSE (Hygiène, Sécurité, Environnement) et ESG pour ABC, notamment dans le cadre de la CSRD et du reporting extra-financier, afin d'optimiser la cohérence des stratégies durables et répondre aux exigences clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/casser-les-silos-entre-hse-et-esg-le-prochain-chantier-des-entreprises-engagees",
@@ -50,7 +61,7 @@
       "source": "ESG Today",
       "categorie": "Eau",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article couvre des évolutions réglementaires et sectorielles en ESG (ETS, reporting GRI, mobilité hydrogène) qui impactent indirectement les enjeux de décarbonation et de reporting extra-financier d'ABC, notamment via les attentes clients et les normes de traçabilité.",
+      "resume": "L'article couvre des évolutions réglementaires et sectorielles (ETS, reporting GRI, mobilité hydrogène) qui impactent indirectement les enjeux ESG d'ABC, notamment via les attentes clients en matière de décarbonation et de reporting extra-financier.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-255/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-255",
@@ -61,30 +72,19 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Prix du carburant : l’Allemagne, l’Espagne, l’Italie, le Portugal et l’Autriche appellent à taxer les profits exceptionnels des groupes énergétiques",
-      "resume": "L'article aborde une potentielle taxation des profits des groupes énergétiques en Europe, ce qui pourrait impacter les coûts des carburants pour les flottes de véhicules d'ABC et influencer sa stratégie de décarbonation.",
+      "resume": "L'article aborde une proposition de taxation des profits exceptionnels des groupes énergétiques en UE, ce qui pourrait impacter les coûts des carburants pour les flottes de véhicules d'ABC et influencer les politiques de mobilité durable des clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/04/04/prix-du-carburant-l-allemagne-l-espagne-l-italie-le-portugal-et-l-autriche-appellent-a-taxer-les-profits-exceptionnels-des-groupes-energetiques_6676671_3234.html",
       "date": "2026-04-04"
     },
     {
-      "id": "e07d990b6bd8",
-      "source": "Le Monde Planète",
-      "categorie": "Déchets",
-      "titre": "Hausse des prix des carburants : le gouvernement lance un « prêt flash » à 3,80 % pour soutenir la trésorerie des TPE et PME",
-      "resume": "Le prêt flash à taux réduit pourrait soutenir la trésorerie d'ABC pour la transition de sa flotte de véhicules, mais le dispositif cible principalement les secteurs du transport, de l'agriculture et de la pêche, sans mention explicite des entreprises de propreté/FM.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/economie/article/2026/04/04/hausse-des-prix-des-carburants-le-gouvernement-lance-un-pret-flash-a-3-80-pour-soutenir-la-tresorerie-des-tpe-et-pme_6676416_3234.html",
-      "date": "2026-04-03"
-    },
-    {
       "id": "96e96983b0f9",
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SRB Online Meeting 7 April 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG SRB en avril 2026, organisme clé pour les normes de reporting ESG (CSRD/ESRS), ce qui impacte directement le reporting extra-financier et la stratégie RSE d'ABC.",
-      "pourquoi": "EFRAG (European Financial Reporting Advisory Group) est l'organisme européen en charge de l'élaboration des normes de reporting ESG (ESRS) pour la CSRD. ABC, en tant qu'entreprise soumise à ces obligations, doit suivre les évolutions des normes pour adapter son reporting et ses processus internes.",
+      "resume": "L'article concerne une réunion de l'EFRAG SRB sur le reporting de durabilité, potentiellement liée aux normes ESRS de la CSRD, ce qui impacte directement les obligations de reporting extra-financier d'ABC pour ses clients.",
+      "pourquoi": "L'article signale une évolution probable des exigences ESRS (CSRD) vers un reporting plus granular sur les scopes 1, 2 et 3, imposant à ABC de renforcer la traçabilité carbone de sa chaîne de valeur (ex : empreinte des prestations, déchets, énergie) avec un délai d'application dès 2026-2027, sous peine de non-conformité contractuelle ou de perte de marchés clients (secteurs nucléaires, santé, agroalimentaire).",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-7-april-2026",
       "date": "2026-04-01"
@@ -362,7 +362,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des arrêtés publiés ne présente de lien direct avec les enjeux environnementaux, climatiques ou RSE pour une entreprise de services. Les mesures concernent des aspects financiers (fonds d'apprentissage) ou réglementaires aéronautiques (suppression de zones réglementées).",
+  "briefing_jorf": "Aucun des arrêtés publiés ne présente de lien direct avec les enjeux environnementaux ou climatiques pour une grande entreprise de services. Les textes concernent des mesures administratives (fonds de soutien à l'apprentissage) et des ajustements réglementaires aéronautiques (zones réglementées).",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -716,5 +716,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et économique) et le projet n°2046 (lutte contre la vie chère dans les outre-mer) pourraient avoir un impact indirect sur les enjeux climatiques et RSE, notamment via des adaptations réglementaires ou des mesures sociales liées à l’énergie. Aucun texte ne traite directement de reporting extra-financier, de décarbonation ou de gestion des déchets, mais une vigilance sur les évolutions du droit européen (n°2518) reste nécessaire pour les entreprises concernées."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet n°2518 (adaptation au droit de l’UE en matière environnementale et énergétique) et le projet n°2046 (lutte contre la vie chère dans les outre-mer) pourraient impacter les politiques RSE, notamment en matière de transition énergétique et de résilience climatique. Aucun texte adopté ne semble directement lié aux enjeux environnementaux ou climatiques."
 }
