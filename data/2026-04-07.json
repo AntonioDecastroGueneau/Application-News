@@ -1,7 +1,7 @@
 {
   "date": "2026-04-07",
-  "generated_at": "07:06",
-  "elapsed_seconds": 171,
+  "generated_at": "12:10",
+  "elapsed_seconds": 170,
   "errors": [],
   "stats": {
     "jo_analyses": 5,
@@ -9,40 +9,62 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-04-07T07:06:00",
+    "run_at": "2026-04-07T12:10:19",
     "sources": {
       "JORF": 0,
-      "RSS": 5,
+      "RSS": 6,
       "VigiEau": 3,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 32,
-    "llm_seconds": 44.9
+    "llm_calls": 31,
+    "llm_seconds": 43.6
   },
   "items": [
-    {
-      "id": "9ef2d4c7a753",
-      "source": "Actuel HSE",
-      "categorie": "ICPE",
-      "titre": "Quels sont les impacts des transports sur l'environnement en France en 2025 ?",
-      "resume": "L'article aborde l'empreinte carbone des transports en France, un enjeu clé pour la flotte de véhicules d'ABC (scope 1) et les exigences carbone de ses clients (nucléaire, santé, industrie).",
-      "pourquoi": "L'article souligne l'urgence de décarboner les transports en France d'ici 2030 (loi LOM, ZFE, bonus écologique), ce qui impose à ABC d'accélérer l'électrification de sa flotte (scope 1) et de répondre aux exigences carbone de ses clients industriels (nucléaire, santé) sous peine de perte de contrats ou de pénalités contractuelles dès 2026-2027.",
-      "criticite": 2,
-      "url": "https://www.actuel-hse.fr/content/quels-sont-les-impacts-des-transports-sur-lenvironnement-en-france-en-2025-2",
-      "date": "2026-04-07"
-    },
     {
       "id": "91d4a006988a",
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Les « éco-innovations » des entreprises, bonnes pour la planète et pour l’emploi",
-      "resume": "L'article souligne l'impact positif des éco-innovations sur l'emploi, un signal à suivre pour ABC dans le cadre de sa transition écologique et de sa stratégie RSE, notamment pour justifier des investissements dans des solutions durables.",
+      "resume": "L'article aborde les éco-innovations comme levier de création d'emplois, un sujet indirectement lié à la transition écologique des entreprises de services comme ABC, notamment via la décarbonation de la flotte ou des prestations.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/emploi/article/2026/04/07/les-eco-innovations-des-entreprises-bonnes-pour-la-planete-et-pour-l-emploi_6677833_1698637.html",
+      "date": "2026-04-07"
+    },
+    {
+      "id": "338ef8841161",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "AWS Launches Solution Enabling Users to Track Carbon Footprint of Cloud Usage",
+      "resume": "L'article présente un outil d'AWS pour suivre l'empreinte carbone des usages cloud, ce qui peut intéresser ABC dans le cadre de la mesure de son scope 3 (services numériques) et de son reporting ESG (CSRD/ESRS).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/aws-launches-solution-enabling-users-to-track-carbon-footprint-of-cloud-usage/?utm_source=rss&utm_medium=rss&utm_campaign=aws-launches-solution-enabling-users-to-track-carbon-footprint-of-cloud-usage",
+      "date": "2026-04-07"
+    },
+    {
+      "id": "b26659a56397",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "Save the Date: 25 Years of EFRAG – Leading the Next Era of Corporate Reporting",
+      "resume": "L'article annonce un événement en 2026 sur l'évolution du reporting corporate par EFRAG, acteur clé pour la CSRD/ESRS qui impacte directement le reporting ESG d'ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/save-the-date-25-years-of-efrag-leading-the-next-era-of-corporate-reporting",
+      "date": "2026-04-07"
+    },
+    {
+      "id": "9ef2d4c7a753",
+      "source": "Actuel HSE",
+      "categorie": "ICPE",
+      "titre": "Quels sont les impacts des transports sur l'environnement en France en 2025 ?",
+      "resume": "L'article aborde l'empreinte carbone et les émissions des transports en France, un enjeu clé pour ABC qui gère une flotte de véhicules (scope 1) et doit répondre aux exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/quels-sont-les-impacts-des-transports-sur-lenvironnement-en-france-en-2025-2",
       "date": "2026-04-07"
     },
     {
@@ -50,30 +72,19 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Casser les silos entre HSE et ESG : le prochain chantier des entreprises engagées",
-      "resume": "L'article souligne l'importance de l'intégration des fonctions HSE (Hygiène, Sécurité, Environnement) et ESG pour une stratégie globale de développement durable, ce qui peut renforcer la cohérence des actions RSE et environnementales d'ABC.",
+      "resume": "L'article souligne l'importance de l'intégration des fonctions HSE et ESG pour une stratégie cohérente, ce qui peut renforcer la crédibilité du reporting extra-financier d'ABC (CSRD/ESRS) et améliorer la gestion des risques climatiques et environnementaux.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/casser-les-silos-entre-hse-et-esg-le-prochain-chantier-des-entreprises-engagees",
       "date": "2026-04-07"
     },
     {
-      "id": "3db0abaffc21",
-      "source": "Novethic",
-      "categorie": "Déchets",
-      "titre": "Reporting ESG : l'Asie accélère sa progression vers une économie durable",
-      "resume": "L'article souligne l'accélération du reporting ESG en Asie, un contexte à surveiller pour ABC dans le cadre de ses clients internationaux ou de ses propres enjeux de reporting extra-financier (CSRD/ESRS).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/finance-durable/reglementation/asie-reporting-esg-durabiltie-reglementations-taxonomie-vigilance",
-      "date": "2026-04-06"
-    },
-    {
       "id": "96e96983b0f9",
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SRB Online Meeting 7 April 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG SRB sur le reporting ESG, pertinente pour ABC dans le cadre de la préparation à la CSRD et aux normes ESRS.",
-      "pourquoi": "EFRAG SRB est l'organisme européen en charge de l'élaboration des normes de reporting extra-financier (ESRS) pour la CSRD. ABC, en tant qu'entreprise soumise à ces obligations, doit suivre les évolutions des standards pour son reporting ESG et son alignement avec les exigences réglementaires.",
+      "resume": "L'article annonce une réunion de l'EFRAG SRB en avril 2026 sur les normes de reporting ESG (CSRD/ESRS), pertinente pour ABC dans le cadre de sa conformité CSRD et de son reporting extra-financier.",
+      "pourquoi": "L'EFRAG SRB est l'organisme européen en charge de l'élaboration des normes ESRS (European Sustainability Reporting Standards) applicables dans le cadre de la CSRD. ABC, en tant qu'entreprise soumise à la CSRD (selon sa taille et son secteur), doit suivre ces évolutions pour adapter son reporting ESG et ses processus de collecte de données. La réunion pourrait aborder des clarifications ou des mises à jour sur les exigences de reporting, impactant directement la stratégie RSE et les processus internes d'ABC.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-7-april-2026",
       "date": "2026-04-01"
@@ -351,7 +362,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des arrêtés publiés ne présente de mesure directement liée à la Responsabilité Sociétale des Entreprises (RSE), à l'environnement ou au climat pour une entreprise de services. Les textes concernent des ajustements administratifs (fonds de soutien à l'apprentissage) et des modifications de zones aériennes réglementées sans impact environnemental ou climatique notable.",
+  "briefing_jorf": "Aucun des arrêtés publiés ne présente de lien direct avec les enjeux environnementaux, climatiques ou RSE pour une grande entreprise de services. Les textes concernent des mesures administratives (fonds de soutien à l'apprentissage) et des ajustements réglementaires aéronautiques (zones réglementées).",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -705,5 +716,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables, le n°2518 (adaptation au droit de l’UE) inclut des mesures environnementales et énergétiques, tandis que le n°2046 (lutte contre la vie chère dans les outre-mer) pourrait impacter les politiques RSE locales. Aucun texte ne traite directement des déchets ou du reporting RSE, mais la transposition de directives européennes (n°2518) pourrait renforcer les obligations en matière de durabilité."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le projet n°2609 (habilitation de l’assemblée de Martinique en matière d’énergie, d’eau et d’assainissement) et le projet n°2518 (adaptation au droit de l’UE en matière environnementale et énergétique) présentent un intérêt direct pour un Responsable Environnement/Climat, en lien avec la décentralisation des compétences et l’alignement réglementaire européen. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou RSE."
 }
