@@ -1,7 +1,7 @@
 {
   "date": "2026-04-08",
-  "generated_at": "07:09",
-  "elapsed_seconds": 244,
+  "generated_at": "12:18",
+  "elapsed_seconds": 626,
   "errors": [],
   "stats": {
     "jo_analyses": 20,
@@ -9,48 +9,103 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-04-08T07:09:47",
+    "run_at": "2026-04-08T12:18:06",
     "sources": {
       "JORF": 0,
-      "RSS": 12,
+      "RSS": 15,
       "VigiEau": 3,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 62,
-    "llm_seconds": 114.2
+    "llm_calls": 67,
+    "llm_seconds": 75.4
   },
   "items": [
+    {
+      "id": "0cbd82606c43",
+      "source": "Politico Energy EU",
+      "categorie": "Climat",
+      "titre": "Climat : les émissions de CO2 diminuent mais la France s’éloigne encore de ses objectifs",
+      "resume": "La France s'éloigne encore de ses objectifs climatiques, ce qui pourrait influencer les exigences des clients d'ABC.",
+      "pourquoi": "C'est un signal stratégique important pour ABC car il implique une augmentation des exigences des clients en matière de réduction d'émissions de CO2, ce qui pourrait impacter la résilience opérationnelle et les contrats de l'entreprise dans un délai court à moyen terme (2025-2030).",
+      "criticite": 2,
+      "url": "https://www.politico.eu/article/climat-les-emissions-de-co2-diminuent-mais-la-france-seloigne-encore-de-ses-objectifs/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "date": "2026-04-08"
+    },
+    {
+      "id": "89c07e27ebc7",
+      "source": "The Guardian Environment",
+      "categorie": "Déchets",
+      "titre": "UK opening new oil and gas fields would imperil global climate goals, experts say",
+      "resume": "L'ouverture de nouveaux champs pétroliers et gaziers en mer du Nord pourrait avoir un impact négatif sur les objectifs climatiques internationaux, ce qui pourrait affecter les exigences carbone des clients d'ABC.",
+      "pourquoi": "L’article signale une potentielle divergence entre les politiques énergétiques locales (UK) et les objectifs climatiques internationaux, ce qui pourrait renforcer les exigences carbone des clients d’ABC (ex : secteurs nucléaire, santé, agroalimentaire) en matière de réduction des émissions Scope 3, imposant à ABC d’accélérer sa transition bas-carbone (électrification flotte, optimisation énergétique des prestations) sous 12-24 mois pour éviter des risques contractuels ou de perte de marchés.",
+      "criticite": 2,
+      "url": "https://www.theguardian.com/environment/2026/apr/08/uk-new-oil-gas-fields-north-sea-global-climate-goals",
+      "date": "2026-04-08"
+    },
+    {
+      "id": "b214df48507d",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Emballages en plastique jetables : Zero Waste détaille comment les réduire dans la commande publique",
+      "resume": "L'article aborde la réduction des emballages plastiques jetables dans la commande publique, un enjeu lié aux déchets et à la réglementation REP (Responsabilité Élargie du Producteur) qui pourrait impacter les prestations de propreté de ABC chez ses clients publics ou sensibles à ces normes.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/retour-expercience-reduction-plastique-jetable-commande-publique-bordeaux-nantes-lyon-47804.php4#xtor=RSS-6",
+      "date": "2026-04-08"
+    },
+    {
+      "id": "09957d5f3527",
+      "source": "Reporterre",
+      "categorie": "Eau",
+      "titre": "Jusqu'à 31 °C en avril : les fortes chaleurs font un retour précoce en France",
+      "resume": "L'article souligne l'intensification des vagues de chaleur précoces en France, un phénomène climatique qui pourrait impacter la planification des interventions de nettoyage et la gestion des ressources (eau, énergie) pour ABC, notamment sur ses 3 000+ sites clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Jusqu-a-31-oC-en-avril-les-fortes-chaleurs-font-un-retour-precoce-en-France",
+      "date": "2026-04-08"
+    },
     {
       "id": "b12dc61ccc29",
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Gaz à effet de serre : en France, une baisse trop lente pour atteindre les objectifs de 2030",
-      "resume": "La baisse insuffisante des émissions de GES en France (-1,5% en 2025) alerte sur le non-respect des objectifs SNBC-3, ce qui pourrait renforcer les exigences réglementaires et contractuelles pour ABC (clients industriels, santé, nucléaire) en matière de décarbonation et de reporting ESG.",
+      "resume": "L'article souligne l'insuffisance de la baisse des émissions GES en France (-1,5% en 2025 vs objectifs SNBC 3), ce qui pourrait renforcer les exigences réglementaires et clients pour ABC en matière de décarbonation (scope 1/3) et de reporting CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Gaz-a-effet-de-serre-en-France-une-baisse-trop-lente-pour-atteindre-les-objectifs-de-2030",
       "date": "2026-04-08"
     },
     {
-      "id": "d9367a02c4a6",
-      "source": "GreenUnivers",
+      "id": "04ea55128e0d",
+      "source": "Le Monde Planète",
       "categorie": "Eau",
-      "titre": "La Climate tech à l’épreuve du passage à l’échelle [Time to Change]",
-      "resume": "L'article aborde l'investissement dans la climate tech, un secteur clé pour la décarbonation des entreprises, notamment via des solutions technologiques adaptées aux enjeux de transition énergétique et de reporting ESG (CSRD/ESRS).",
+      "titre": "Dans le bâtiment, l’angoisse des artisans face à l’envolée du prix des matériaux et du carburant",
+      "resume": "L'article souligne l'impact des hausses des coûts des matériaux et du carburant sur les entreprises du bâtiment, ce qui peut indirectement affecter ABC via ses clients (secteur tertiaire/industrie) et ses propres coûts logistiques (flotte de véhicules).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/la-climate-tech-a-lepreuve-du-passage-a-lechelle-time-to-change-420317/",
+      "url": "https://www.lemonde.fr/economie/article/2026/04/08/dans-le-batiment-l-angoisse-des-artisans-face-a-l-envolee-du-prix-des-materiaux-et-du-carburant_6678238_3234.html",
       "date": "2026-04-08"
     },
     {
-      "id": "d9f7dbc252fb",
+      "id": "dfe9dfd84a1f",
       "source": "Le Monde Planète",
       "categorie": "Énergie",
-      "titre": "EDF lance un plan de 240 millions d’euros pour accélérer la transition électrique des ménages modestes et des petites entreprises",
-      "resume": "Ce plan d'EDF pourrait influencer les attentes des clients d'ABC (notamment dans les secteurs santé, industrie ou nucléaire) en matière de décarbonation des bâtiments via des solutions comme les pompes à chaleur, impactant indirectement les prestations de propreté/FM et les enjeux de reporting ESG.",
+      "titre": "Le retour du charbon, symptôme d’une transition inachevée",
+      "resume": "La transition énergétique est inachevée, ce qui souligne l'importance pour ABC de se concentrer sur la décarbonation et le déploiement d'énergies décarbonées.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/idees/article/2026/04/08/le-retour-du-charbon-symptome-d-une-transition-inachevee_6678234_3232.html",
+      "date": "2026-04-08"
+    },
+    {
+      "id": "011a5f3225a0",
+      "source": "Le Monde Planète",
+      "categorie": "Énergie",
+      "titre": "EDF lance un plan de 240 millions d’euros pour accélérer le passage à l’électrique des ménages modestes et des petites entreprises",
+      "resume": "Ce plan d'EDF pourrait influencer les attentes clients d'ABC en matière de décarbonation des bâtiments tertiaires (pompes à chaleur) et accélérer la demande en services liés à l'efficacité énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/04/08/edf-lance-un-plan-de-240-millions-d-euros-pour-accelerer-la-transition-electrique-des-menages-modestes-et-des-petites-entreprises_6678208_3234.html",
@@ -61,7 +116,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Casser les silos entre HSE et ESG : le prochain chantier des entreprises engagées",
-      "resume": "L'article souligne l'importance de l'intégration des fonctions HSE (Hygiène, Sécurité, Environnement) et ESG (Environnement, Social, Gouvernance) pour une stratégie globale de développement durable, ce qui peut renforcer la cohérence des actions RSE et environnementales d'ABC.",
+      "resume": "L'article souligne l'importance de l'intégration des fonctions HSE (Hygiène, Sécurité, Environnement) et ESG pour ABC, afin d'aligner ses stratégies de développement durable avec ses enjeux opérationnels (BGES, CSRD, ISO 14001) et ses risques climatiques indirects.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/casser-les-silos-entre-hse-et-esg-le-prochain-chantier-des-entreprises-engagees",
@@ -72,21 +127,21 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "REP PMCB : Mathieu Lefèvre lance les dernières consultations sur le projet de refondation",
-      "resume": "La refonte de la REP PMCB (Produits et Matériaux de Construction du Bâtiment) impacte indirectement ABC via la gestion des déchets de ses prestations de propreté/FM, notamment sur les chantiers clients (tri, traçabilité, coûts).",
+      "resume": "La refonte de la REP PMCB (Produits et Matériaux de Construction du Bâtiment) impacte indirectement ABC via la gestion des déchets de ses prestations de nettoyage (scope 3) et la traçabilité des déchets sur ses sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/consultation-rep-pmcb-enveloppe-reprise-petits-volumes-depots-sauvages-47802.php4#xtor=RSS-6",
       "date": "2026-04-07"
     },
     {
-      "id": "aa5559956bbe",
+      "id": "f337fd3cc3e5",
       "source": "Actu-Environnement",
       "categorie": "Énergie",
-      "titre": "Règlement Emballages : Bruxelles présente sa lecture du texte",
-      "resume": "Le règlement Emballages de l'UE impacte indirectement ABC via la gestion des déchets de ses prestations (scope 3) et les exigences clients en matière de recyclabilité et d'emballages interdits (REP, traçabilité).",
+      "titre": "Éolien terrestre : le cahier des charges pour le prochain appel d'offres est publié",
+      "resume": "Le cahier des charges pour l'éolien terrestre a été publié, ce qui peut avoir un impact sur l'énergie et les émissions de gaz à effet de serre de ABC.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/orientation-commission-europeenne-reglement-emballages-47795.php4#xtor=RSS-6",
+      "url": "https://www.actu-environnement.com/ae/news/appel-offres-eolien-terrestre-2026-cahier-charges-47796.php4#xtor=RSS-6",
       "date": "2026-04-07"
     },
     {
@@ -94,7 +149,7 @@
       "source": "Reporterre",
       "categorie": "Énergie",
       "titre": "La crise énergétique pourrait accélérer les renouvelables... et le nucléaire",
-      "resume": "L'article souligne une accélération potentielle des énergies renouvelables et nucléaires en réponse à la crise énergétique, ce qui pourrait influencer les stratégies clients d'ABC (nucléaire, santé, industrie) et leurs exigences en matière de décarbonation et de reporting ESG.",
+      "resume": "L'article souligne une accélération potentielle des énergies renouvelables et du nucléaire en réponse à la crise énergétique, ce qui pourrait influencer les stratégies clients d'ABC (secteurs nucléaire, industrie) et leurs exigences en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/La-crise-energetique-pourrait-accelerer-le",
@@ -105,21 +160,10 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Les premiers leviers envisagés pour électrifier l’industrie",
-      "resume": "L'article aborde l'électrification de l'industrie, un levier clé pour la décarbonation des scopes 1 et 2, mais sans mention explicite des entreprises de services comme ABC. Il reste pertinent pour suivre les tendances réglementaires et technologiques influençant les clients industriels d'ABC.",
+      "resume": "Le rapport du député Raphaël Schellenberger identifie des leviers pour électrifier l'industrie, ce qui pourrait influencer les exigences carbone des clients d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/les-premiers-leviers-envisages-pour-electrifier-lindustrie-420376/",
-      "date": "2026-04-07"
-    },
-    {
-      "id": "39eb9e58a712",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Pourquoi la géothermie reste en retard [Time to change]",
-      "resume": "La géothermie, bien que soutenue par des aides publiques et une technologie mature, reste peu déployée en France. Cela pourrait impacter indirectement ABC via les exigences carbone de ses clients (industrie, santé) cherchant des solutions énergétiques renouvelables pour leurs sites.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/pourquoi-la-geothermie-reste-en-retard-time-to-change-420368/",
       "date": "2026-04-07"
     },
     {
@@ -127,7 +171,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Réseaux de chaleur : Levallois-Perret veut « sortir de la dépendance à la CPCU »",
-      "resume": "L'article illustre une tendance de décarbonation des réseaux de chaleur via des solutions locales (géothermie, récupération de calories) qui pourrait inspirer ABC pour proposer des services similaires à ses clients tertiaires ou industriels.",
+      "resume": "Levallois-Perret développe un réseau de chaleur durable en utilisant la géothermie et le recyclage de calories perdues, ce qui pourrait inspirer ABC pour ses propres solutions énergétiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/reseaux-de-chaleur-levallois-perret-veut-sortir-de-la-dependance-a-la-cpcu-420334/",
@@ -138,21 +182,10 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "Apave Launches New Sustainability Services Platform",
-      "resume": "Apave lance une plateforme dédiée à la durabilité (Apave Impact), susceptible d'influencer les attentes clients en matière de services ESG pour les prestataires de propreté/FM comme ABC.",
+      "resume": "Apave lance une plateforme de services axée sur la durabilité, ce qui pourrait intéresser ABC en tant que prestataire de services de propreté et FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/apave-launches-new-sustainability-services-platform/?utm_source=rss&utm_medium=rss&utm_campaign=apave-launches-new-sustainability-services-platform",
-      "date": "2026-04-07"
-    },
-    {
-      "id": "338ef8841161",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "AWS Launches Solution Enabling Users to Track Carbon Footprint of Cloud Usage",
-      "resume": "AWS propose un outil pour mesurer l'empreinte carbone des usages cloud, ce qui peut impacter le scope 3 d'ABC si ses clients (notamment industriels ou tertiaires) externalisent des services informatiques vers AWS.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/aws-launches-solution-enabling-users-to-track-carbon-footprint-of-cloud-usage/?utm_source=rss&utm_medium=rss&utm_campaign=aws-launches-solution-enabling-users-to-track-carbon-footprint-of-cloud-usage",
       "date": "2026-04-07"
     }
   ],
@@ -906,6 +939,12 @@
           "date": "2025-05-19"
         },
         {
+          "titre": "Texte adopté N° 258",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53690",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53690",
+          "date": "2026-01-30"
+        },
+        {
           "titre": "Texte adopté N° 256",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interdire_sucres_ajoutes_nourrissons_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interdire_sucres_ajoutes_nourrissons_17e",
@@ -942,9 +981,21 @@
           "date": "2026-02-04"
         },
         {
+          "titre": "Texte adopté N° 251",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_sortie_indivision_successorale",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_sortie_indivision_successorale",
+          "date": "2025-01-21"
+        },
+        {
           "titre": "Texte adopté N° 250",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/effectivite_droits_voisins_presse",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/effectivite_droits_voisins_presse",
+          "date": "2025-01-21"
+        },
+        {
+          "titre": "Texte adopté N° 249",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/statut_personnel_sante_services_incendie_secours",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/statut_personnel_sante_services_incendie_secours",
           "date": "2025-01-21"
         },
         {
@@ -1036,21 +1087,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/rejeter_accord_douane_commerce_UE_Etats_Unis",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/rejeter_accord_douane_commerce_UE_Etats_Unis",
           "date": "2025-07-30"
-        },
-        {
-          "titre": "Texte adopté N° 230",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/lutte_VIH_SIDA_UE",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/lutte_VIH_SIDA_UE",
-          "date": "2025-03-13"
-        },
-        {
-          "titre": "Texte adopté N° 231",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/soutenir_danemark_groenland_oeuvrer_cooperation_defense",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/soutenir_danemark_groenland_oeuvrer_cooperation_defense",
-          "date": "2025-03-25"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet n°2518 (adaptation au droit de l’UE en matière environnementale et énergétique) et le projet n°2046 (lutte contre la vie chère dans les outre-mer) pourraient impacter les politiques RSE et énergétiques. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux majeurs pour une grande entreprise de services."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet n°2518 (adaptation au droit de l’UE) inclut des dispositions environnementales, énergétiques et agricoles, tandis que le projet n°2046 (lutte contre la vie chère dans les outre-mer) pourrait impacter les politiques énergétiques locales. Aucun texte ne traite directement de reporting RSE ou de déchets, mais la transposition de directives européennes (n°2518) pourrait renforcer les obligations en matière de durabilité."
 }
