@@ -1,7 +1,7 @@
 {
   "date": "2026-04-09",
-  "generated_at": "07:12",
-  "elapsed_seconds": 205,
+  "generated_at": "12:20",
+  "elapsed_seconds": 673,
   "errors": [],
   "stats": {
     "jo_analyses": 14,
@@ -9,40 +9,51 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-04-09T07:12:49",
+    "run_at": "2026-04-09T12:20:25",
     "sources": {
       "JORF": 0,
-      "RSS": 17,
+      "RSS": 12,
       "VigiEau": 3,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 54,
-    "llm_seconds": 85.5
+    "llm_calls": 60,
+    "llm_seconds": 24.0
   },
   "items": [
     {
-      "id": "804ae1995cbd",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "Plume lève 3,3 M€ pour son IA au service du renouvelable",
-      "resume": "Plume développe une solution d'IA pour optimiser les énergies renouvelables, ce qui pourrait intéresser ABC pour des partenariats ou des outils d'analyse énergétique dans le cadre de sa stratégie climat et de son reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/plume-leve-33-me-pour-son-ia-au-service-du-renouvelable-420540/",
+      "id": "56119835a83f",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "Vers une réforme du marché carbone européen en juillet 2026 ?",
+      "resume": "Réforme du marché carbone européen en juillet 2026 : impacts potentiels sur la flotte de véhicules et les émissions de gaz à effet de serre de ABC",
+      "pourquoi": "La réforme du marché carbone européen en juillet 2026 constitue un signal stratégique important pour ABC car elle pourrait impacter directement la flotte de véhicules et les émissions de gaz à effet de serre de l'entreprise, nécessitant une adaptation rapide de sa stratégie de réduction des émissions pour maintenir sa compétitivité et répondre aux exigences réglementaires.",
+      "criticite": 2,
+      "url": "https://www.actuel-hse.fr/content/vers-une-reforme-du-marche-carbone-europeen-en-juillet-2026-2",
       "date": "2026-04-09"
     },
     {
-      "id": "000d7254e376",
-      "source": "Le Monde Planète",
-      "categorie": "Déchets",
-      "titre": "Pour recruter de jeunes diplômés, les entreprises polluantes changent de discours",
-      "resume": "L'article souligne l'évolution des stratégies de communication des entreprises polluantes pour attirer les jeunes talents, ce qui peut impacter la marque employeur et la perception RSE d'ABC dans un contexte concurrentiel.",
+      "id": "142f306298bb",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Tout n’est pas perdu pour retrouver de la souveraineté [Time to Change]",
+      "resume": "L'article discute de la souveraineté économique européenne et française en 2030, ce qui peut avoir des implications pour les entreprises françaises comme ABC dans le contexte de la transition écologique.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/campus/article/2026/04/09/pour-recruter-de-jeunes-diplomes-les-entreprises-polluantes-changent-de-discours_6678551_4401467.html",
+      "url": "https://www.greenunivers.com/2026/04/tout-nest-pas-perdu-pour-retrouver-de-la-souverainete-time-to-change-420504/",
+      "date": "2026-04-09"
+    },
+    {
+      "id": "89a050a7a80c",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "GHG Protocol Outlines Proposed Changes to Scope 3 Reporting Standard",
+      "resume": "Propositions de changements pour le reporting des émissions de gaz à effet de serre (GES) au-delà de la portée 1 (scope 3)",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/ghg-protocol-outlines-proposed-changes-to-scope-3-reporting-standard/?utm_source=rss&utm_medium=rss&utm_campaign=ghg-protocol-outlines-proposed-changes-to-scope-3-reporting-standard",
       "date": "2026-04-09"
     },
     {
@@ -50,21 +61,32 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "Beyond Mitigation: What can Ongoing Emissions Responsibility fund?",
-      "resume": "L'article aborde la responsabilité des entreprises dans la gestion des émissions résiduelles après la mise en place de mesures de réduction, un sujet pertinent pour ABC dans le cadre de sa stratégie de décarbonation et de reporting CSRD.",
+      "resume": "L'article discute de la responsabilité des émissions continues et de la création d'un fonds pour les responsabiliser.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/beyond-mitigation-what-can-ongoing-emissions-responsibility-fund/?utm_source=rss&utm_medium=rss&utm_campaign=beyond-mitigation-what-can-ongoing-emissions-responsibility-fund",
       "date": "2026-04-09"
     },
     {
-      "id": "56119835a83f",
-      "source": "Actuel HSE",
-      "categorie": "Climat",
-      "titre": "Vers une réforme du marché carbone européen en juillet 2026 ?",
-      "resume": "La réforme du marché carbone européen (EU ETS) prévue pour juillet 2026 pourrait impacter les coûts énergétiques et les obligations de reporting carbone des entreprises, y compris celles du secteur de la propreté/FM comme ABC.",
+      "id": "a20f55704d66",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG calls for Industry Voices to Shape Europe’s Response to SASB Consultation",
+      "resume": "Consultation SASB et impact sur les entreprises européennes, notamment les secteurs d'activité d'ABC",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/vers-une-reforme-du-marche-carbone-europeen-en-juillet-2026-2",
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-calls-for-industry-voices-to-shape-europes-response-to-sasb-consultation",
+      "date": "2026-04-09"
+    },
+    {
+      "id": "3d6ec69f5cc6",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "L’éco-anxiété : un enjeu pour les entreprises ?",
+      "resume": "L'article discute de l'éco-anxiété et de ses implications pour les entreprises, mais n'est pas directement lié à ABC. Cependant, il peut être intéressant de suivre ce sujet pour comprendre les attentes des clients et les tendances du marché.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/leco-anxiete-un-enjeu-pour-les-entreprises-0",
       "date": "2026-04-09"
     },
     {
@@ -72,21 +94,32 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Certificats d'économies d'énergie : évolution de la bonification pour les projets industriels de décarbonation",
-      "resume": "L'article annonce une évolution des bonifications des Certificats d'Économies d'Énergie (CEE) pour les projets industriels de décarbonation, ce qui pourrait impacter les stratégies de financement des actions de réduction des émissions de ABC, notamment via des projets d'efficacité énergétique ou de transition énergétique.",
+      "resume": "L'évolution de la bonification pour les projets industriels de décarbonation peut influencer les certificats d'économies d'énergie pour ABC, prestataire de services de propreté et FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/certificats-deconomies-denergie-evolution-de-la-bonification-pour-les-projets-industriels-3",
       "date": "2026-04-09"
     },
     {
-      "id": "50e461633a5a",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "L'exécutif confirme la baisse du Fonds vert pour 2026",
-      "resume": "La baisse du Fonds vert en 2026 pourrait impacter les aides disponibles pour les projets de transition écologique des collectivités et entreprises locales, potentiellement affectant les financements indirects pour les clients d'ABC ou ses propres initiatives.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/circulaire-prefets-gestion-2026-fonds-vert-dotations-Etat-investissement-transition-ecologique-47808.php4#xtor=RSS-6",
+      "id": "b67353898727",
+      "source": "Novethic",
+      "categorie": "Énergie",
+      "titre": "Guerre, carburants, électrification : de la transition climatique à la transition de crise",
+      "resume": "L'annonce d'EDF pour accélérer l'électrification de la France, notamment pour les ménages modestes et les petites entreprises, peut avoir un impact sur la flotte de véhicules de ABC et ses obligations en matière de décarbonation.",
+      "pourquoi": "C'est un signal stratégique important pour ABC car l'accélération de l'électrification de la France peut accélérer la transition de sa flotte de véhicules vers des véhicules électriques, réduisant ainsi ses émissions de gaz à effet de serre et répondant aux exigences croissantes des clients en matière de décarbonation, avec un délai d'action à court et moyen terme pour mettre en place les plans d'électrification et de réduction des émissions.",
+      "criticite": 2,
+      "url": "https://www.novethic.fr/environnement/transition-energetique/guerre-carburants-electrification-de-la-transition-climatique-a-la-transition-de-crise",
+      "date": "2026-04-08"
+    },
+    {
+      "id": "1a94e57956a1",
+      "source": "Le Monde Planète",
+      "categorie": "Énergie",
+      "titre": "Le prix de référence du gaz va augmenter pour des millions de ménages dès le 1ᵉʳ mai, sur fond de guerre au Moyen-Orient",
+      "resume": "L'augmentation du prix du gaz pourrait avoir un impact indirect sur les coûts d'énergie des clients d'ABC, ce qui pourrait influencer les stratégies d'énergie de la société.",
+      "pourquoi": "C'est un signal stratégique important pour ABC car l'augmentation du prix du gaz pourrait impacter les coûts d'énergie des clients, influençant ainsi les stratégies d'énergie de la société, nécessitant une adaptation rapide pour maintenir la compétitivité et la résilience opérationnelle.",
+      "criticite": 2,
+      "url": "https://www.lemonde.fr/economie/article/2026/04/08/le-prix-de-reference-du-gaz-va-augmenter-pour-des-millions-de-menages-des-le-1-mai-sur-fond-de-guerre-au-moyen-orient_6678283_3234.html",
       "date": "2026-04-08"
     },
     {
@@ -94,21 +127,10 @@
       "source": "Actu-Environnement",
       "categorie": "Biodiversité",
       "titre": "Le chiffre du jour : -1,5 %",
-      "resume": "L'article signale une baisse de 1,5 % des émissions de GES en France en 2025 selon le Citepa, un indicateur macroéconomique à suivre pour contextualiser les trajectoires nationales et les exigences clients en matière de décarbonation.",
+      "resume": "La baisse des émissions de gaz à effet de serre de la France en 2025 peut influencer les exigences carbone des clients d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/dit-aujourdhui/1795.html#xtor=RSS-6",
-      "date": "2026-04-08"
-    },
-    {
-      "id": "b214df48507d",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Emballages en plastique jetables : Zero Waste détaille comment les réduire dans la commande publique",
-      "resume": "L'article aborde la réduction des emballages plastiques jetables dans la commande publique, ce qui peut impacter les déchets générés par les prestations de propreté de ABC chez ses clients publics (collectivités).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/retour-expercience-reduction-plastique-jetable-commande-publique-bordeaux-nantes-lyon-47804.php4#xtor=RSS-6",
       "date": "2026-04-08"
     },
     {
@@ -116,43 +138,10 @@
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "EDF veut électrifier à tout-va pour renflouer ses caisses",
-      "resume": "L'article souligne l'accélération des politiques d'électrification en France, avec des incitations financières (ex. prime pour pompes à chaleur), ce qui peut impacter les stratégies clients d'ABC en matière de mobilité durable et d'efficacité énergétique.",
+      "resume": "EDF lance un plan d'aide à l'électrification avec une prime pour l'achat de pompes à chaleur, ce qui pourrait influencer les choix d'énergie des clients d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/EDF-veut-electrifier-a-tout-va-pour-renflouer-ses-caisses",
-      "date": "2026-04-08"
-    },
-    {
-      "id": "09957d5f3527",
-      "source": "Reporterre",
-      "categorie": "Eau",
-      "titre": "Jusqu'à 31 °C en avril : les fortes chaleurs font un retour précoce en France",
-      "resume": "L'article souligne l'accélération des aléas climatiques en France (vagues de chaleur précoces), un risque opérationnel pour ABC dont les activités de propreté/FM sont déployées sur 3 000+ sites clients, exposés à des perturbations climatiques accrues.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Jusqu-a-31-oC-en-avril-les-fortes-chaleurs-font-un-retour-precoce-en-France",
-      "date": "2026-04-08"
-    },
-    {
-      "id": "b67353898727",
-      "source": "Novethic",
-      "categorie": "Énergie",
-      "titre": "Guerre, carburants, électrification : de la transition climatique à la transition de crise",
-      "resume": "L'article souligne l'accélération des politiques d'électrification en France, notamment via des aides ciblées (ex : plan EDF de 240M€), ce qui pourrait impacter les obligations de décarbonation des flottes de véhicules d'ABC (scope 1) et les attentes clients en matière de mobilité durable.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/environnement/transition-energetique/guerre-carburants-electrification-de-la-transition-climatique-a-la-transition-de-crise",
-      "date": "2026-04-08"
-    },
-    {
-      "id": "e89c0657ee84",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "Tempêtes, canicules, inondations : la SNCF peut-elle suivre le rythme de la crise climatique ?",
-      "resume": "L'article illustre l'impact concret des aléas climatiques sur les infrastructures de transport, un risque indirect pour ABC via ses 3 000+ sites clients et leurs exigences en résilience climatique.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/environnement/climat/resilience-rail-sncf-defi-crise-climatique",
       "date": "2026-04-08"
     },
     {
@@ -160,54 +149,10 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Appel d’offres solaire : les « petits » projets sur bâtiment profitent d’un sursis",
-      "resume": "L'article souligne un appel d'offres solaire simplifié qui pourrait impacter la compétitivité des petits projets photovoltaïques sur bâtiments, un enjeu potentiel pour les sites clients d'ABC (tertiaire, industrie) dans leur transition énergétique.",
+      "resume": "L'appel d'offres solaire simplifié pourrait affecter la compétitivité des projets photovoltaïques sur bâtiment pour ABC, mais un sursis est prévu pour les petits projets.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/appel-doffres-solaire-les-petits-projets-sur-batiment-profitent-dun-sursis-420408/",
-      "date": "2026-04-08"
-    },
-    {
-      "id": "ed60c95e2738",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Le dialogue actionnarial résiste au backlash anti-ESG [Time to Change]",
-      "resume": "L'article souligne la résilience du dialogue actionnarial ESG malgré un contexte politique défavorable aux États-Unis, ce qui peut influencer les attentes des investisseurs et clients d'ABC en matière de reporting extra-financier et de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/le-dialogue-actionnarial-resiste-au-backlask-anti-esg-time-to-change-420358/",
-      "date": "2026-04-08"
-    },
-    {
-      "id": "04ea55128e0d",
-      "source": "Le Monde Planète",
-      "categorie": "Eau",
-      "titre": "Dans le bâtiment, l’angoisse des artisans face à l’envolée du prix des matériaux et du carburant",
-      "resume": "L'article met en lumière l'impact des hausses des coûts des matériaux et du carburant sur les entreprises du bâtiment, ce qui peut indirectement affecter ABC via ses clients (secteur tertiaire) et ses propres coûts logistiques (flotte de véhicules).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/economie/article/2026/04/08/dans-le-batiment-l-angoisse-des-artisans-face-a-l-envolee-du-prix-des-materiaux-et-du-carburant_6678238_3234.html",
-      "date": "2026-04-08"
-    },
-    {
-      "id": "b1538b78a014",
-      "source": "The Guardian Environment",
-      "categorie": "Énergie",
-      "titre": "Britain breaks solar energy record twice as UK’s biggest solar farm gets approval",
-      "resume": "L'article illustre la montée en puissance des énergies renouvelables (solaire) dans le mix énergétique britannique, un signal sur l'évolution des attentes clients et des réglementations en Europe, sans impact direct immédiat pour ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/environment/2026/apr/08/britain-breaks-solar-energy-record-twice-uk-biggest-solar-farm-springwell-approval",
-      "date": "2026-04-08"
-    },
-    {
-      "id": "23e3ff8ea97f",
-      "source": "The Guardian Environment",
-      "categorie": "Environnement",
-      "titre": "‘Non-survivable’: heatwaves are already breaching human limits, with worse to come, study finds",
-      "resume": "L'article souligne l'aggravation des vagues de chaleur en Europe, posant un risque opérationnel pour ABC (3 000+ sites clients) via des perturbations potentielles des prestations et des exigences accrues en adaptation climatique pour ses clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/environment/2026/apr/08/extreme-weather-heatwaves-breaching-human-survival-limits-study-finds",
       "date": "2026-04-08"
     }
   ],
@@ -927,7 +872,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "L'ordonnance n°2026-255 transpose une directive européenne renforçant les exigences en matière de risques environnementaux, sociaux et de gouvernance (ESG) pour les acteurs financiers, tandis que la décision n°2026/37/CENTRE DE DONNEES GOOGLE/1 concerne un projet de centre de données dont l'impact énergétique et climatique devra être évalué dans le cadre de la concertation.",
+  "briefing_jorf": "L'ordonnance n° 2026-255 du 8 avril 2026 relative à la transposition de la directive (UE) 2024/1619 concerne les risques environnementaux, sociaux et de gouvernance, ce qui pourrait avoir un impact sur les pratiques environnementales des grandes entreprises de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1277,15 +1222,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reaffirmer_ambition_climatique_France_europeen",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reaffirmer_ambition_climatique_France_europeen",
           "date": "2025-10-23"
-        },
-        {
-          "titre": "Texte adopté N° 233",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/rejeter_accord_douane_commerce_UE_Etats_Unis",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/rejeter_accord_douane_commerce_UE_Etats_Unis",
-          "date": "2025-07-30"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique et de santé (N° 2518)** pourrait inclure des mesures clés pour la transition écologique, tandis que le **projet de loi de finances pour 2026 (N° 2247)** et le **projet de loi de financement de la sécurité sociale (N° 2242)** pourraient influencer les financements publics dédiés à la RSE et à l’énergie. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux."
+  "pjl_briefing": "Aucune information pertinente n'est disponible dans la liste des activités parlementaires du 2026-04-09 pour un Responsable Environnement/Climat d'une grande entreprise de services. Cependant, le projet de loi portant diverses dispositions d'adaptation au droit de l'Union européenne en matière économique, financière, environnementale, énergétique, d'information, de transport, de santé, d'agriculture et de pêche (N° 2518) pourrait être pertinent pour les questions environnementales et énergétiques."
 }
