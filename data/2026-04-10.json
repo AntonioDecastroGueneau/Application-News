@@ -1,7 +1,7 @@
 {
   "date": "2026-04-10",
-  "generated_at": "07:17",
-  "elapsed_seconds": 195,
+  "generated_at": "12:08",
+  "elapsed_seconds": 203,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
@@ -9,26 +9,70 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-04-10T07:17:35",
+    "run_at": "2026-04-10T12:08:27",
     "sources": {
       "JORF": 0,
-      "RSS": 12,
+      "RSS": 15,
       "VigiEau": 3,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 59,
-    "llm_seconds": 62.0
+    "llm_calls": 65,
+    "llm_seconds": 76.9
   },
   "items": [
+    {
+      "id": "3364193000c0",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "PFAS dans les boues : une campagne de mesure se prépare",
+      "resume": "Renforcement de la surveillance des PFAS dans les boues issues des stations d'épuration, avec risques de restrictions d'épandage pouvant impacter la gestion des déchets des sites clients d'ABC (notamment en termes de traçabilité et de conformité réglementaire).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/projet-circulaire-mesure-PFAS-boues-epuration-step-47822.php4#xtor=RSS-6",
+      "date": "2026-04-10"
+    },
+    {
+      "id": "d4ceca336f36",
+      "source": "I4CE",
+      "categorie": "Eau",
+      "titre": "La France a un plan de réindustrialisation verte. Mais a-t-elle les moyens de ses ambitions ?",
+      "resume": "L'article aborde la réindustrialisation verte en France via France 2030, un plan qui pourrait influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et les attentes en matière de décarbonation des prestataires de services.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.i4ce.org/france-plan-reindustrialisation-verte-moyens-ambitions-climat/",
+      "date": "2026-04-10"
+    },
+    {
+      "id": "3256093714a5",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Infrastructures : les actifs durables sous la loupe [Time to Change]",
+      "resume": "L'article aborde les infrastructures durables (mobilité électrique, BESS, data centers) qui pourraient influencer les stratégies clients d'ABC en matière de décarbonation et de reporting ESG, notamment via la CSRD et les trajectoires nationales.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/04/infrastructures-les-actifs-durables-sous-la-loupe-time-to-change-420696/",
+      "date": "2026-04-10"
+    },
+    {
+      "id": "05c7b2557080",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Les documents de la semaine",
+      "resume": "Cet article hebdomadaire compile des documents clés sur la transition énergétique (réglementations, études, analyses) qui pourraient inclure des évolutions pertinentes pour ABC, notamment sur la CSRD, la décarbonation des flottes ou les risques climatiques opérationnels.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/04/les-documents-de-la-semaine-381215/",
+      "date": "2026-04-10"
+    },
     {
       "id": "a169ce0a2d44",
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "IA : sept bonnes pratiques pour limiter son empreinte carbone",
-      "resume": "L'article aborde l'optimisation énergétique de l'IA, une technologie de plus en plus utilisée par les entreprises, y compris dans les services comme ceux d'ABC. Cela peut impacter indirectement la stratégie RSE et le bilan carbone de l'entreprise.",
+      "resume": "L'article aborde l'empreinte carbone de l'IA, une technologie de plus en plus utilisée par les entreprises, y compris dans les services comme ceux d'ABC. Bien que non directement lié aux enjeux réglementaires ou opérationnels immédiats d'ABC, cela peut impacter indirectement la stratégie numérique et énergétique de l'entreprise.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/pixels/article/2026/04/10/ia-sept-bonnes-pratiques-pour-limiter-son-empreinte-carbone_6678765_4408996.html",
@@ -39,7 +83,7 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Les premiers prototypes pour pomper le CO₂ de l’air voient le jour en France, entre promesses et incertitudes",
-      "resume": "Technologie émergente de capture directe du CO₂ (DAC) en France, encore immature mais à surveiller pour les stratégies de décarbonation des entreprises et les futurs cadres réglementaires (scope 3).",
+      "resume": "L'article aborde les technologies de capture directe du CO₂ (DAC), une solution émergente pour compenser les émissions résiduelles, potentiellement utile pour ABC dans le cadre de sa stratégie de décarbonation (scope 1/2/3) ou de reporting CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/04/10/les-premiers-prototypes-pour-pomper-le-co-de-l-air-voient-le-jour-en-france-entre-promesses-et-incertitudes_6678758_3244.html",
@@ -50,7 +94,7 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Le chiffre : 33 Mds €",
-      "resume": "L'article aborde les enjeux réglementaires liés aux déchets et aux émissions polluantes (plomb, diisocyanates, particules fines), ainsi que des mesures de sensibilisation en entreprise, ce qui impacte indirectement les obligations de reporting et de gestion des déchets pour ABC.",
+      "resume": "L'article aborde les enjeux réglementaires liés aux déchets et aux émissions polluantes (VLEP, particules fines), qui pourraient impacter indirectement les obligations de traçabilité et de gestion des déchets pour ABC dans le cadre de son reporting ESG et de sa conformité réglementaire.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/le-chiffre-33-mds-eu",
@@ -61,29 +105,18 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Seulement 14 % des villes dans le monde respectent la valeur guide annuelle de l'OMS pour les particules fines PM2,5",
-      "resume": "L'article souligne l'écart entre les normes de qualité de l'air (PM2.5) et la réalité urbaine, ce qui pourrait impacter les exigences clients d'ABC en matière de propreté et de qualité de l'air dans les bâtiments tertiaires.",
+      "resume": "L'article souligne l'écart entre les seuils de particules fines PM2,5 recommandés par l'OMS et la réalité dans 86% des villes mondiales, ce qui pourrait influencer les exigences réglementaires ou contractuelles des clients d'ABC en matière de qualité de l'air et de propreté des sites.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/seulement-14-des-villes-dans-le-monde-respectent-la-valeur-guide-annuelle-de-loms-pour-les-2",
       "date": "2026-04-10"
     },
     {
-      "id": "89a050a7a80c",
-      "source": "ESG Today",
-      "categorie": "Climat",
-      "titre": "GHG Protocol Outlines Proposed Changes to Scope 3 Reporting Standard",
-      "resume": "Le GHG Protocol propose des modifications potentielles à la norme de reporting Scope 3, qui impacte directement le reporting carbone des entreprises comme ABC (clients, chaîne de valeur).",
-      "pourquoi": "Le Scope 3 est un enjeu majeur pour ABC, notamment pour répondre aux exigences CSRD/ESRS et aux attentes clients (nucléaire, santé, industrie) en matière de décarbonation. Les modifications pourraient influencer la méthodologie de calcul des émissions indirectes (déchets, énergie, mobilité des prestations).",
-      "criticite": 2,
-      "url": "https://www.esgtoday.com/ghg-protocol-outlines-proposed-changes-to-scope-3-reporting-standard/?utm_source=rss&utm_medium=rss&utm_campaign=ghg-protocol-outlines-proposed-changes-to-scope-3-reporting-standard",
-      "date": "2026-04-09"
-    },
-    {
       "id": "9864b7eed58a",
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Gaz verts : la filière appelle à accompagner la dynamique actuelle",
-      "resume": "L'article souligne l'importance des gaz renouvelables et bas carbone, avec un appel à la publication rapide de la trajectoire des certificats de production de biogaz par le gouvernement. Cela pourrait influencer les choix énergétiques d'ABC dans le cadre de sa transition bas carbone, notamment pour ses sites clients ou sa flotte.",
+      "resume": "L'article souligne l'importance des gaz renouvelables et bas carbone, un sujet indirectement lié à la décarbonation des flottes de véhicules et à la transition énergétique des clients d'ABC, notamment dans les secteurs nucléaire, santé et industrie.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/gaz-renouvelables-carbone-biogaz-methanisation-methane-47817.php4#xtor=RSS-6",
@@ -94,7 +127,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Quatre associations demandent une loi pour sortir de la dépendance aux énergies fossiles",
-      "resume": "L'article souligne l'urgence de réduire la dépendance aux énergies fossiles en France, ce qui pourrait impacter les politiques énergétiques des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et influencer leurs exigences carbone.",
+      "resume": "L'article souligne l'urgence politique et sociale de réduire la dépendance aux énergies fossiles en France, ce qui pourrait influencer les réglementations futures sur l'efficacité énergétique et les énergies renouvelables, impactant potentiellement les stratégies énergétiques des clients d'ABC et leurs exigences en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/propositions-associations-Cler-RAC-Transport-environnement-Caritas-France-aides-menages-energies-fossiles-47816.php4#xtor=RSS-6",
@@ -105,7 +138,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Greentech : une dynamique française freinée par le manque de capitaux",
-      "resume": "L'article souligne le défi de financement de la transition bas carbone en France, ce qui pourrait impacter les investissements des clients d'ABC dans des solutions durables, notamment pour la décarbonation de leurs flottes ou sites.",
+      "resume": "L'article souligne le manque de capitaux pour la greentech en France, ce qui pourrait impacter les investissements nécessaires à la décarbonation des activités d'ABC (flotte, énergie, etc.) et ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/innovation-bas-carbone-position-France-HCSP-47818.php4#xtor=RSS-6",
@@ -116,7 +149,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Electricité renouvelable : le rapport Lévy-Tuot concentre le soutien public sur les grands projets",
-      "resume": "Le rapport Lévy-Tuot pourrait influencer les politiques publiques de soutien aux énergies renouvelables, impactant potentiellement les coûts énergétiques des prestataires comme ABC et leurs clients industriels ou tertiaires.",
+      "resume": "Le rapport Lévy-Tuot pourrait influencer les politiques publiques de soutien aux énergies renouvelables, impactant potentiellement les coûts et l'accès à l'électricité verte pour les entreprises comme ABC, notamment dans le cadre de leur stratégie énergétique et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/le-rapport-levy-tuot-concentre-le-soutien-public-sur-les-grands-projets-enr-420749/",
@@ -127,7 +160,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Le rapport Lévy-Tuot, une vision industrielle de l’électricité renouvelable",
-      "resume": "Le rapport Lévy-Tuot propose une vision industrielle pour réduire les coûts de l'électricité renouvelable, ce qui pourrait influencer les stratégies énergétiques des clients d'ABC (secteurs nucléaire, santé, industrie) et leurs exigences en matière de décarbonation.",
+      "resume": "Le rapport Lévy-Tuot propose une vision industrielle pour réduire les coûts de l'électricité renouvelable en France, ce qui pourrait influencer les stratégies énergétiques des entreprises, y compris celles du secteur de la propreté/FM comme ABC, notamment en matière de transition énergétique et de coûts opérationnels.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/le-rapport-levy-tuot-une-vision-industrielle-de-lelectricite-renouvelable-420657/",
@@ -138,7 +171,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "La baisse des aides accentue la vigilance sur le coût des EnR [Time to Change]",
-      "resume": "L'article souligne la hausse des coûts des énergies renouvelables (EnR) due à la réduction des aides publiques, ce qui pourrait impacter les stratégies énergétiques des clients d'ABC (tertiaire, industrie) et leurs exigences en matière de décarbonation.",
+      "resume": "L'article souligne la hausse des coûts des énergies renouvelables (EnR) due à la réduction des aides publiques, ce qui pourrait impacter les stratégies énergétiques des entreprises comme ABC, notamment dans le cadre de leur transition vers des sources moins carbonées.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/la-baisse-des-aides-accentue-la-vigilance-sur-le-cout-des-enr-time-to-change-420629/",
@@ -149,7 +182,7 @@
       "source": "ESG Today",
       "categorie": "Déchets",
       "titre": "Ara Partners Invests $500 Million in Waste Upcycling Solutions Provider Sedron",
-      "resume": "L'investissement d'Ara Partners dans Sedron (solutions de valorisation des déchets) pourrait influencer les attentes des clients d'ABC en matière de gestion des déchets et d'économie circulaire, sans impact direct immédiat sur ses activités.",
+      "resume": "L'investissement d'Ara Partners dans Sedron, spécialisé dans le recyclage et l'upcycling des déchets, pourrait influencer les attentes des clients d'ABC en matière de gestion des déchets et de décarbonation, notamment via des solutions innovantes pour réduire l'impact environnemental des prestations de propreté.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/ara-partners-invests-500-million-in-waste-upscaling-solutions-provider-sedron/?utm_source=rss&utm_medium=rss&utm_campaign=ara-partners-invests-500-million-in-waste-upscaling-solutions-provider-sedron",
@@ -1104,6 +1137,12 @@
       "source": "AN Textes adoptés",
       "items": [
         {
+          "titre": "Texte adopté N° 270",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51987",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51987",
+          "date": "2025-04-25"
+        },
+        {
           "titre": "Texte adopté N° 261",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fonds_social_euro_plus_banques_alimentaires",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fonds_social_euro_plus_banques_alimentaires",
@@ -1252,15 +1291,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/relancer_investissements_secteur_hydroelectricite_contribuer_transition_energetique_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/relancer_investissements_secteur_hydroelectricite_contribuer_transition_energetique_17e",
           "date": "2026-01-13"
-        },
-        {
-          "titre": "Texte adopté N° 234",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reaffirmer_ambition_climatique_France_europeen",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reaffirmer_ambition_climatique_France_europeen",
-          "date": "2025-10-23"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) et le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518) pourraient impacter les politiques agricoles et réglementaires liées à la transition écologique. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) et le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518) pourraient impacter les politiques RSE, notamment via des mesures sur l’agriculture durable, la transition énergétique ou la régulation des déchets. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux dans cette liste."
 }
