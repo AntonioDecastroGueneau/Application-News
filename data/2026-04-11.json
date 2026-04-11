@@ -1,7 +1,7 @@
 {
   "date": "2026-04-11",
-  "generated_at": "06:51",
-  "elapsed_seconds": 216,
+  "generated_at": "11:55",
+  "elapsed_seconds": 158,
   "errors": [],
   "stats": {
     "jo_analyses": 11,
@@ -9,84 +9,62 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-04-11T06:51:27",
+    "run_at": "2026-04-11T11:55:03",
     "sources": {
       "JORF": 0,
-      "RSS": 10,
+      "RSS": 5,
       "VigiEau": 3,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 51,
-    "llm_seconds": 62.6
+    "llm_calls": 37,
+    "llm_seconds": 39.6
   },
   "items": [
+    {
+      "id": "4a91fd7e67f0",
+      "source": "Reporterre",
+      "categorie": "Énergie",
+      "titre": "Le gouvernement mise sur la fée électricité dans un aveuglement total",
+      "resume": "L'article aborde la stratégie française d'électrification massive (bâtiments, mobilité) via le plan gouvernemental, ce qui impacte indirectement ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et la décarbonation de sa flotte de véhicules (scope 1).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Le-gouvernement-mise-sur-la-fee-electricite-dans-un-aveuglement-total",
+      "date": "2026-04-11"
+    },
     {
       "id": "96dd79faafa7",
       "source": "Le Monde Planète",
       "categorie": "Environnement",
       "titre": "Six livres et cinq podcasts pour comprendre la crise énergétique qui vient",
-      "resume": "L'article propose des ressources pour comprendre la transition climatique et énergétique, utile pour sensibiliser les équipes d'ABC aux enjeux énergétiques et climatiques dans le cadre de leur activité de prestataire de services.",
+      "resume": "L'article propose des ressources pour comprendre la crise énergétique, un contexte utile pour anticiper les évolutions réglementaires et les attentes clients en matière de transition énergétique pour ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/chaleur-humaine/article/2026/04/11/six-livres-et-cinq-podcasts-pour-comprendre-la-crise-energetique-qui-vient_6679329_6125299.html",
       "date": "2026-04-11"
     },
     {
-      "id": "93676d14fdd3",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Sébastien Lecornu veut « remplacer le pétrole et le gaz par l’électricité »",
-      "resume": "Le plan d'électrification national du gouvernement pourrait impacter la stratégie de décarbonation de la flotte de véhicules d'ABC, avec des implications potentielles sur les objectifs scope 1 et la mobilité durable.",
-      "pourquoi": "L'article aborde une politique climatique nationale (électrification des usages énergétiques) qui influence directement la réglementation et les incitations pour les flottes de véhicules professionnels, un enjeu clé pour ABC (scope 1, mobilité durable, ZFE).",
-      "criticite": 2,
-      "url": "https://www.greenunivers.com/2026/04/sebastien-lecornu-veut-remplacer-le-petrole-et-le-gaz-par-lelectricite-420904/",
-      "date": "2026-04-10"
-    },
-    {
       "id": "51915d90c61d",
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Soutien aux ENR du duo Lévy–Tuot : entre levée des contraintes et évolution du modèle",
-      "resume": "Le rapport Lévy-Tuot pourrait influencer les politiques énergétiques françaises, impactant indirectement les stratégies de décarbonation et d'approvisionnement en énergies renouvelables des entreprises comme ABC, notamment via des ajustements réglementaires ou des incitations pour les ENR.",
+      "resume": "Le rapport Lévy-Tuot pourrait influencer les politiques énergétiques françaises et européennes, impactant indirectement les stratégies de décarbonation et d'approvisionnement en énergies renouvelables des entreprises comme ABC, notamment via des ajustements réglementaires ou des évolutions du modèle économique des ENR.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/rapport-mission-levy-tuot-financement-energie-renouvelable-47826.php4#xtor=RSS-6",
       "date": "2026-04-10"
     },
     {
-      "id": "3364193000c0",
-      "source": "Actu-Environnement",
+      "id": "93676d14fdd3",
+      "source": "GreenUnivers",
       "categorie": "Déchets",
-      "titre": "PFAS dans les boues : une campagne de mesure se prépare",
-      "resume": "Renforcement de la surveillance des PFAS dans les boues issues des stations d'épuration, avec risques de restrictions d'épandage pouvant impacter la gestion des déchets des prestations de propreté/FM d'ABC chez ses clients.",
+      "titre": "Sébastien Lecornu veut « remplacer le pétrole et le gaz par l’électricité »",
+      "resume": "Le plan d'électrification national du gouvernement pourrait impacter la stratégie de décarbonation de la flotte de véhicules d'ABC (scope 1) et ses choix énergétiques pour ses sites, avec des obligations potentielles d'électrification ou d'adaptation aux nouvelles infrastructures électriques.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/projet-circulaire-mesure-PFAS-boues-epuration-step-47822.php4#xtor=RSS-6",
-      "date": "2026-04-10"
-    },
-    {
-      "id": "5615766340b8",
-      "source": "Reporterre",
-      "categorie": "Eau",
-      "titre": "Le chauffage au bois est une source majeure de pollution, selon l'Anses",
-      "resume": "L'article met en lumière l'impact environnemental du chauffage au bois, une source majeure de pollution en France, ce qui pourrait influencer les politiques énergétiques des clients d'ABC (secteurs santé, industrie, etc.) et leurs exigences en matière de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Le-chauffage-au-bois-est-une-source-majeure-de-pollution-selon-l-Anses",
-      "date": "2026-04-10"
-    },
-    {
-      "id": "d4ceca336f36",
-      "source": "I4CE",
-      "categorie": "Eau",
-      "titre": "La France a un plan de réindustrialisation verte. Mais a-t-elle les moyens de ses ambitions ?",
-      "resume": "L'article aborde la stratégie nationale de réindustrialisation verte (France 2030) qui pourrait influencer les attentes clients d'ABC en matière de décarbonation et de reporting ESG, notamment via des exigences accrues en scope 1/2/3 et CSRD.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.i4ce.org/france-plan-reindustrialisation-verte-moyens-ambitions-climat/",
+      "url": "https://www.greenunivers.com/2026/04/sebastien-lecornu-veut-remplacer-le-petrole-et-le-gaz-par-lelectricite-420904/",
       "date": "2026-04-10"
     },
     {
@@ -94,43 +72,10 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Electricité renouvelable : la CRE prête à enquêter sur les rentabilités excessives",
-      "resume": "L'article aborde la régulation des coûts de l'électricité renouvelable en France, ce qui pourrait impacter les stratégies énergétiques des entreprises comme ABC dans le cadre de leur transition bas-carbone et de leur reporting ESG.",
+      "resume": "L'article aborde la régulation des coûts de l'électricité renouvelable en France, un sujet indirectement lié à la stratégie énergétique d'ABC via son impact sur les prix de l'énergie et les obligations de reporting ESG (scope 2).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/electricite-renouvelable-la-cre-prete-a-enqueter-sur-les-rentabilites-excessives-420802/",
-      "date": "2026-04-10"
-    },
-    {
-      "id": "f5627fc73796",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "L’UE à l’heure du tournant énergétique souverain [Time to Change]",
-      "resume": "L'article aborde le tournant énergétique souverain de l'UE, un contexte macro-économique influençant les politiques industrielles et énergétiques qui pourraient impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et les trajectoires de décarbonation des entreprises.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/lue-a-lheure-du-tournant-energetique-souverain-time-to-change-420473/",
-      "date": "2026-04-10"
-    },
-    {
-      "id": "3256093714a5",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Infrastructures : les actifs durables sous la loupe [Time to Change]",
-      "resume": "L'article aborde les infrastructures durables (mobilité électrique, BESS, data centers) qui pourraient influencer les stratégies clients d'ABC en matière de décarbonation et de reporting ESG, notamment via des opportunités de services associés (ex : gestion de flottes électriques ou efficacité énergétique des bâtiments).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/infrastructures-les-actifs-durables-sous-la-loupe-time-to-change-420696/",
-      "date": "2026-04-10"
-    },
-    {
-      "id": "05c7b2557080",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Les documents de la semaine",
-      "resume": "Cet article hebdomadaire compile des documents clés sur la transition énergétique (réglementations, études, analyses) qui peuvent inclure des évolutions pertinentes pour ABC, notamment sur la CSRD, la décarbonation des flottes ou les risques climatiques opérationnels.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/les-documents-de-la-semaine-381215/",
       "date": "2026-04-10"
     }
   ],
@@ -742,7 +687,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés 3, 4, 5 et 10 sont significatifs : l'arrêté 3 liste les usages phytopharmaceutiques autorisés, les arrêtés 4 et 5 concernent l'extension de permis miniers (lithium, terres rares, hydrogène natif) impactant les ressources stratégiques, et l'arrêté 10 étend un accord sur les services nautiques pouvant influencer les pratiques environnementales du secteur.",
+  "briefing_jorf": "Les arrêtés 3, 4, 5 et 10 sont significatifs : l'arrêté 3 liste les usages phytopharmaceutiques réglementés, l'arrêté 4 prolonge un permis minier controversé (lithium, terres rares), l'arrêté 5 accorde un nouveau permis d'exploration d'hydrogène natif et d'hélium, et l'avis 10 étend un accord collectif dans les services nautiques, potentiellement impactant pour les engagements RSE en matière de décarbonation et de transition énergétique.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1096,5 +1041,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Le projet de loi n°2518 (transposition de directives européennes) pourrait inclure des mesures impactant les obligations de reporting extra-financier (CSRD), la gestion des déchets (directives DEEE, emballages) ou la transition énergétique. Aucun texte ne cible directement le climat ou l'énergie, mais les projets de loi sur la souveraineté agricole (n°2632) et les finances (n°2247) pourraient influencer les politiques RSE sectorielles. Les textes adoptés (n°252 à 270) ne mentionnent pas de mesures environnementales majeures."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale et énergétique (N°2518) est le plus pertinent, car il pourrait intégrer des normes européennes renforcées en matière de transition écologique, d'économie circulaire ou de reporting extra-financier. Le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) pourrait aussi impacter les pratiques agricoles durables et les chaînes d'approvisionnement des entreprises. Aucun texte adopté ne semble directement lié à ces enjeux."
 }
