@@ -1,7 +1,7 @@
 {
   "date": "2026-04-12",
-  "generated_at": "07:05",
-  "elapsed_seconds": 176,
+  "generated_at": "11:58",
+  "elapsed_seconds": 200,
   "errors": [],
   "stats": {
     "jo_analyses": 15,
@@ -9,10 +9,10 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-04-12T07:05:36",
+    "run_at": "2026-04-12T11:58:32",
     "sources": {
       "JORF": 0,
-      "RSS": 1,
+      "RSS": 2,
       "VigiEau": 3,
       "Parlement": 1
     },
@@ -20,19 +20,30 @@
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 31,
-    "llm_seconds": 31.1
+    "llm_seconds": 72.8
   },
   "items": [
     {
-      "id": "4a91fd7e67f0",
-      "source": "Reporterre",
-      "categorie": "Énergie",
-      "titre": "Le gouvernement mise sur la fée électricité dans un aveuglement total",
-      "resume": "L'article aborde la stratégie française d'électrification massive (bâtiment, mobilité) sans détailler les implications pour les prestataires de services comme ABC, mais signale une accélération des mesures pouvant impacter les flottes de véhicules et les besoins clients en décarbonation.",
+      "id": "f671436cb09b",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article couvre des évolutions majeures du GHG Protocol sur le scope 3 et des initiatives de reporting durable (Suisse, Canada) qui pourraient influencer les exigences clients d'ABC en matière de décarbonation et de reporting ESG.",
+      "pourquoi": "L'évolution du GHG Protocol sur le scope 3 (notamment la clarification des méthodologies de calcul et l'intégration des exigences clients) impose à ABC une refonte de sa chaîne de valeur carbone pour répondre aux attentes croissantes des clients (ex : nucléaire, santé) en matière de traçabilité et de réduction des émissions indirectes, avec un délai d'action immédiat (2024-2025) pour éviter des risques contractuels ou de perte de marchés, tout en saisissant l'opportunité de se positionner comme partenaire bas-carbone différenciant.",
+      "criticite": 2,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-256/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-256",
+      "date": "2026-04-12"
+    },
+    {
+      "id": "58206486b319",
+      "source": "Le Monde Planète",
+      "categorie": "Déchets",
+      "titre": "Data centers : « Limiter les impacts spatiaux, énergétiques et environnementaux des grandes fermes de données est fondamental »",
+      "resume": "L'article souligne l'enjeu de régulation des data centers, infrastructures énergivores et impactantes, ce qui pourrait influencer les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé ou industrie) en matière de reporting ESG et de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://reporterre.net/Le-gouvernement-mise-sur-la-fee-electricite-dans-un-aveuglement-total",
-      "date": "2026-04-11"
+      "url": "https://www.lemonde.fr/idees/article/2026/04/12/data-centers-limiter-les-impacts-spatiaux-energetiques-et-environnementaux-des-grandes-fermes-de-donnees-est-fondamental_6679547_3232.html",
+      "date": "2026-04-12"
     }
   ],
   "restrictions_eau": [
@@ -865,5 +876,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale, énergétique et agricole (N°2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition écologique, aux énergies renouvelables et à la souveraineté alimentaire. Aucun autre texte adopté ou projet ne semble aborder des enjeux RSE, climat ou déchets de manière significative."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques RSE, notamment via des mesures sur l’agriculture durable, l’énergie ou la gestion des déchets. Aucun texte adopté ne semble directement lié à des enjeux climatiques ou environnementaux majeurs."
 }
