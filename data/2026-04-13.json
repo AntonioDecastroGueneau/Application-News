@@ -1,7 +1,7 @@
 {
   "date": "2026-04-13",
-  "generated_at": "07:54",
-  "elapsed_seconds": 467,
+  "generated_at": "12:17",
+  "elapsed_seconds": 214,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,18 +9,18 @@
     "depts_restriction": 3
   },
   "pipeline_meta": {
-    "run_at": "2026-04-13T07:54:24",
+    "run_at": "2026-04-13T12:17:58",
     "sources": {
       "JORF": 0,
-      "RSS": 5,
+      "RSS": 10,
       "VigiEau": 3,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 38,
-    "llm_seconds": 90.2
+    "llm_calls": 46,
+    "llm_seconds": 55.8
   },
   "items": [
     {
@@ -46,25 +46,80 @@
       "date": "2026-04-13"
     },
     {
-      "id": "f671436cb09b",
-      "source": "ESG Today",
+      "id": "11f28fa0b233",
+      "source": "Actu-Environnement",
       "categorie": "Climat",
-      "titre": "ESG Today: Week in Review",
-      "resume": "Propositions de changements pour le reporting Scope 3 et nouvelle loi de reporting de durabilité et de diligence dans les affaires en Suisse",
-      "pourquoi": "Les changements proposés pour le reporting Scope 3 et la nouvelle loi de reporting de durabilité et de diligence en Suisse peuvent avoir un impact sur les exigences de reporting ESG de ABC et ses clients",
+      "titre": "Collecte des déchets : Oleo100, le biocarburant qui décarbone déjà les flottes",
+      "resume": "L'article présente Oleo100, un biocarburant 100% végétal permettant de décarboner les flottes de véhicules de collecte des déchets sans modification technique, offrant une solution immédiate pour réduire l'empreinte carbone de la flotte d'ABC (scope 1).",
+      "pourquoi": "Le sujet touche directement à la décarbonation des flottes de véhicules (scope 1), un enjeu clé pour ABC, bien que l'article se concentre sur la collecte des déchets. La solution proposée (biocarburant) est une piste concrète pour réduire les émissions de la flotte, alignée sur les objectifs de décarbonation et les attentes clients en matière de reporting ESG (CSRD, bilan GES).",
       "criticite": 2,
-      "url": "https://www.esgtoday.com/esg-today-week-in-review-256/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-256",
-      "date": "2026-04-12"
+      "url": "https://www.actu-environnement.com/ae/pdt/oleo100-biocarburant-camion-collecte-dechets-bennes-origine-vegetale-saipol-1464.php4#xtor=RSS-6",
+      "date": "2026-04-13"
+    },
+    {
+      "id": "254ac39a584c",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Déchets : Bordeaux métropole lance une consultation pour le traitement des ordures ménagères",
+      "resume": "La consultation publique de Bordeaux Métropole sur la gestion des déchets (UVE et centre de tri) pourrait influencer les exigences réglementaires et contractuelles des clients d'ABC en matière de traitement des déchets, notamment via des évolutions dans les filières REP ou les critères de traçabilité.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/pdt/bordeaux-metropole-consultation-concession-uve-centre-tri-dechets-begles-cenon-1466.php4#xtor=RSS-6",
+      "date": "2026-04-13"
+    },
+    {
+      "id": "4e1bd9a9409a",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "RTE et Enedis vont tester un portail d’activation des flexibilités locales",
+      "resume": "Le déploiement d'un portail d'activation des flexibilités locales par RTE et Enedis pourrait impacter la gestion énergétique des sites clients d'ABC, notamment via l'intégration de véhicules électriques et de batteries dans les réseaux électriques locaux.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/04/rte-et-enedis-vont-tester-un-portail-dactivation-des-flexibilites-locales-420709/",
+      "date": "2026-04-13"
+    },
+    {
+      "id": "de9477502b21",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "Microsoft Pauses Carbon Removal Purchases: Reports",
+      "resume": "Microsoft suspend ses achats de crédits carbone de séquestration, ce qui pourrait impacter les stratégies de compensation carbone des clients d'ABC et leur reporting CSRD/ESRS.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/microsoft-pauses-carbon-removal-purchases-reports/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-pauses-carbon-removal-purchases-reports",
+      "date": "2026-04-13"
+    },
+    {
+      "id": "ec659fa3cb0b",
+      "source": "The Guardian Environment",
+      "categorie": "Biodiversité",
+      "titre": "Are we heading for ‘super El Nino’ – and what could we expect?",
+      "resume": "L'article souligne le risque d'un 'super El Niño' en 2024, pouvant intensifier les aléas climatiques (canicules, inondations) affectant les 3 000+ sites clients d'ABC, avec des impacts potentiels sur la continuité des prestations et les exigences carbone des clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/environment/2026/apr/13/el-nino-explainer",
+      "date": "2026-04-13"
     },
     {
       "id": "58206486b319",
       "source": "Le Monde Planète",
       "categorie": "Déchets",
       "titre": "Data centers : « Limiter les impacts spatiaux, énergétiques et environnementaux des grandes fermes de données est fondamental »",
-      "resume": "L'article souligne l'enjeu de régulation des data centers, infrastructures énergivores et impactantes, ce qui peut influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et leurs attentes en matière de reporting ESG (CSRD/ESRS).",
+      "resume": "L'article souligne l'enjeu de régulation des data centers, infrastructures énergivores et impactantes, qui pourrait influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) dans leurs politiques de décarbonation et reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/04/12/data-centers-limiter-les-impacts-spatiaux-energetiques-et-environnementaux-des-grandes-fermes-de-donnees-est-fondamental_6679547_3232.html",
+      "date": "2026-04-12"
+    },
+    {
+      "id": "f671436cb09b",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article aborde des évolutions majeures du GHG Protocol sur le reporting Scope 3 et des initiatives de taxonomie durable (Suisse, Canada), pertinentes pour le reporting CSRD/ESRS d'ABC et la gestion de ses émissions indirectes (scope 3).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-256/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-256",
       "date": "2026-04-12"
     },
     {
@@ -72,7 +127,7 @@
       "source": "Reporterre",
       "categorie": "Énergie",
       "titre": "Le gouvernement mise sur la fée électricité dans un aveuglement total",
-      "resume": "Le gouvernement prévoit de finir avec les chaudières à gaz et de promouvoir les voitures électriques, ce qui pourrait avoir un impact sur la flotte de véhicules de ABC.",
+      "resume": "Le plan d'électrification du gouvernement impacte indirectement la stratégie de décarbonation de la flotte de véhicules d'ABC (scope 1) et les exigences carbone de ses clients (nucléaire, santé, industrie), nécessitant une adaptation des plans de transition énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Le-gouvernement-mise-sur-la-fee-electricite-dans-un-aveuglement-total",
@@ -849,5 +904,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi listés, seul le projet n°2518 (adaptation au droit de l'UE en matière environnementale, énergétique et agricole) présente un intérêt direct pour un Responsable Environnement/Climat, notamment via son volet énergétique et climatique. Aucun autre texte ne semble aborder spécifiquement les enjeux environnementaux ou RSE de manière significative pour une grande entreprise de services."
+  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) et le n°2632 (protection et souveraineté agricoles) présentent un intérêt direct pour un Responsable Environnement/Climat, notamment via les enjeux de décarbonation, d'adaptation climatique et de transition agricole durable. Aucun texte adopté n'est explicitement lié à des mesures environnementales ou climatiques."
 }
