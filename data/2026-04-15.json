@@ -1,7 +1,7 @@
 {
   "date": "2026-04-15",
-  "generated_at": "07:19",
-  "elapsed_seconds": 170,
+  "generated_at": "12:14",
+  "elapsed_seconds": 210,
   "errors": [],
   "stats": {
     "jo_analyses": 23,
@@ -9,20 +9,86 @@
     "depts_restriction": 4
   },
   "pipeline_meta": {
-    "run_at": "2026-04-15T07:19:55",
+    "run_at": "2026-04-15T12:14:10",
     "sources": {
       "JORF": 0,
-      "RSS": 8,
+      "RSS": 13,
       "VigiEau": 4,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 58,
-    "llm_seconds": 56.5
+    "llm_calls": 73,
+    "llm_seconds": 74.4
   },
   "items": [
+    {
+      "id": "b4dc7a4e0f8c",
+      "source": "Reporterre",
+      "categorie": "Émissions",
+      "titre": "ZFE : la fin des zones à faibles émissions votée par l'Assemblée nationale",
+      "resume": "ZFE : la fin des zones à faibles émissions votée par l'Assemblée nationale",
+      "pourquoi": "Mention de ZFE.",
+      "criticite": 3,
+      "url": "https://reporterre.net/ZFE-la-fin-des-zones-a-faibles-emissions-votee-par-l-Assemblee-nationale",
+      "date": "2026-04-15"
+    },
+    {
+      "id": "81b9d044fe5a",
+      "source": "Le Monde Planète",
+      "categorie": "Eau",
+      "titre": "ZFE : près de 3 millions de véhicules parmi les plus polluants seront remis en circulation avec l’abandon du dispositif",
+      "resume": "ZFE : près de 3 millions de véhicules parmi les plus polluants seront remis en circulation avec l’abandon du dispositif",
+      "pourquoi": "Mention de ZFE.",
+      "criticite": 3,
+      "url": "https://www.lemonde.fr/les-decodeurs/article/2026/04/15/zfe-pres-de-3-millions-de-vehicules-parmi-les-plus-polluants-seront-remis-en-circulation-avec-l-abandon-du-dispositif_6590597_4355771.html",
+      "date": "2026-04-15"
+    },
+    {
+      "id": "639dd51cbf1d",
+      "source": "Le Monde Planète",
+      "categorie": "Eau",
+      "titre": "ZFE : les députés rejettent un amendement de compromis et adoptent leur suppression",
+      "resume": "ZFE : les députés rejettent un amendement de compromis et adoptent leur suppression",
+      "pourquoi": "Mention de ZFE.",
+      "criticite": 3,
+      "url": "https://www.lemonde.fr/planete/article/2026/04/15/les-zones-a-faibles-emission-enterrees-par-l-assemblee-nationale_6680164_3244.html",
+      "date": "2026-04-15"
+    },
+    {
+      "id": "c5c306be94f4",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "Une instruction oriente les préfets pour la mise en oeuvre de la directive qualité de l'air",
+      "resume": "L'instruction des préfets sur la directive qualité de l'air pourrait impacter les ZFE et les exigences de mobilité durable pour les flottes de véhicules d'ABC, notamment dans les zones urbaines où opèrent ses clients.",
+      "pourquoi": "La directive qualité de l'air influence les politiques locales (ZFE, restrictions de circulation) qui peuvent contraindre les entreprises comme ABC à adapter leur flotte de véhicules (électrification, véhicules propres) pour répondre aux exigences de leurs clients ou aux réglementations locales. Bien que non directement lié à la CSRD ou au BGES, cela impacte un enjeu clé pour ABC : la décarbonation de sa flotte (scope 1).",
+      "criticite": 2,
+      "url": "https://www.actuel-hse.fr/content/une-instruction-oriente-les-prefets-pour-la-mise-en-oeuvre-de-la-directive-qualite-de-lair-2",
+      "date": "2026-04-15"
+    },
+    {
+      "id": "a1213d8f98c1",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "EFRAG Appoints Kerstin Lopatta as New Chair of Sustainability Reporting Board",
+      "resume": "L'article annonce la nomination de Kerstin Lopatta à la tête du conseil de reporting de durabilité de l'EFRAG, acteur clé pour la mise en œuvre de la CSRD et des ESRS en Europe, impactant directement le reporting extra-financier d'ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/efrag-appoints-kerstin-lopatta-as-new-chair-of-sustainability-reporting-board/?utm_source=rss&utm_medium=rss&utm_campaign=efrag-appoints-kerstin-lopatta-as-new-chair-of-sustainability-reporting-board",
+      "date": "2026-04-15"
+    },
+    {
+      "id": "f1b94b290e76",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "Décarbonation industrielle : 10 Mds € d’ici 2030, 30 Mds € supplémentaires à horizon 2050",
+      "resume": "L'article souligne l'ampleur des investissements publics pour la décarbonation industrielle en France, ce qui pourrait impacter indirectement ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et les opportunités de services alignés sur ces transitions.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/decarbonation-industrielle-10-mds-eu-dici-2030-30-mds-eu-supplementaires-horizon-2050",
+      "date": "2026-04-15"
+    },
     {
       "id": "a6fab6186f59",
       "source": "Novethic",
@@ -46,25 +112,25 @@
       "date": "2026-04-14"
     },
     {
-      "id": "cb423fc92b24",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "Installations de traitement des déchets : un projet d'arrêté transpose la directive IED 2",
-      "resume": "Le projet d'arrêté transpose la directive IED 2 pour les installations de traitement des déchets, ce qui pourrait impacter les exigences de traçabilité et de performance environnementale des prestataires comme ABC dans le cadre de leurs obligations de reporting (CSRD/ESRS) et de gestion des déchets.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/projet-arrete-transposition-directive-ied-incineration-dechets-47838.php4#xtor=RSS-6",
-      "date": "2026-04-14"
-    },
-    {
       "id": "60394b373132",
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Le plan d’électrification bouscule l’équilibre des CEE",
-      "resume": "Le plan d'électrification du gouvernement pourrait impacter les Certificats d'Économies d'Énergie (CEE) utilisés par ABC pour financer des projets de décarbonation, notamment liés à la flotte de véhicules ou à l'efficacité énergétique des sites clients.",
+      "resume": "L'électrification des flottes de véhicules (scope 1) pourrait être impactée par la réforme des CEE, un mécanisme de financement clé pour les entreprises comme ABC. Une évolution réglementaire à surveiller pour anticiper les coûts et opportunités liés à la décarbonation de la mobilité.",
+      "pourquoi": "L'article aborde directement la mobilité durable (électrification des flottes) et les Certificats d'Économies d'Énergie (CEE), un levier financier potentiel pour ABC dans le cadre de sa transition énergétique. Bien que non une obligation immédiate, cette réforme pourrait influencer les stratégies de décarbonation de la flotte (scope 1) et les budgets alloués.",
+      "criticite": 2,
+      "url": "https://www.greenunivers.com/2026/04/le-plan-delectrification-bouscule-lequilibre-des-cee-421098/",
+      "date": "2026-04-14"
+    },
+    {
+      "id": "1582fa523a22",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Petites toitures solaires : « des choses sont négociables » sur les surplus [Daniel Bour]",
+      "resume": "L'article aborde une évolution réglementaire sur le tarif de rachat des surplus solaires, susceptible d'impacter les clients d'ABC (secteurs tertiaire/industrie) dans leur stratégie énergétique et reporting ESG (scope 2).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/le-plan-delectrification-bouscule-lequilibre-des-cee-421098/",
+      "url": "https://www.greenunivers.com/2026/04/petites-toitures-solaires-des-choses-sont-negociables-sur-les-surplus-daniel-bour-421108/",
       "date": "2026-04-14"
     },
     {
@@ -72,21 +138,10 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Electrification : le tertiaire pratiquement absent du GT sur le bâtiment",
-      "resume": "L'article souligne l'absence du secteur tertiaire dans les groupes de travail sur l'électrification des bâtiments, ce qui pourrait impacter les obligations futures en matière de décarbonation pour les entreprises de services comme ABC.",
+      "resume": "L'article souligne l'absence de représentation significative du secteur tertiaire (dont les activités de propreté/FM) dans les groupes de travail gouvernementaux sur l'électrification des bâtiments, ce qui pourrait impacter les futures réglementations et opportunités d'électrification pour ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/electrification-le-tertiaire-pratiquement-absent-du-gt-sur-le-batiment-document-421060/",
-      "date": "2026-04-14"
-    },
-    {
-      "id": "eef8dca42c81",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "Makersite Acquires Product Carbon Footprint Platform SiGREEN from Siemens",
-      "resume": "L'acquisition de SiGREEN par Makersite renforce les outils de calcul d'empreinte carbone des produits, utile pour ABC dans le cadre de son reporting CSRD/ESRS et de l'analyse de ses scopes 1/2/3 (notamment déchets et énergie des prestations).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/makersite-acquires-product-carbon-footprint-platform-sigreen-from-siemens/?utm_source=rss&utm_medium=rss&utm_campaign=makersite-acquires-product-carbon-footprint-platform-sigreen-from-siemens",
       "date": "2026-04-14"
     },
     {
@@ -94,7 +149,7 @@
       "source": "The Guardian Environment",
       "categorie": "Biodiversité",
       "titre": "Are we heading for ‘super El Niño’ – and what could we expect?",
-      "resume": "L'article alerte sur un risque de 'super El Niño' pouvant amplifier les aléas climatiques en France/UE, impactant potentiellement les 3 000+ sites clients d'ABC et leurs exigences carbone (nucléaire, santé, industrie).",
+      "resume": "L'émergence d'un 'super El Niño' pourrait intensifier les aléas climatiques (canicules, inondations) affectant les 3 000+ sites clients d'ABC, augmentant les risques opérationnels et perturbant les prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.theguardian.com/environment/2026/apr/13/el-nino-explainer",
@@ -105,9 +160,9 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SR TEG Online Meeting 16 April 2026",
-      "resume": "L'article concerne une réunion de l'EFRAG sur le reporting de durabilité (CSRD/ESRS), un sujet clé pour le reporting ESG de ABC et ses clients, notamment dans le cadre de la CSRD.",
-      "pourquoi": "EFRAG est l'organisme européen en charge de l'élaboration des normes ESRS (European Sustainability Reporting Standards) applicables dans le cadre de la CSRD. Bien que l'article ne détaille pas les sujets abordés, il signale une évolution réglementaire majeure pour le reporting extra-financier des entreprises, y compris celles du secteur propreté/FM comme ABC. Cela impacte directement les obligations de reporting ESG de ABC et ses clients (notamment dans les secteurs nucléaire, santé, industrie).",
-      "criticite": 2,
+      "resume": "L'article concerne les travaux de l'EFRAG sur les normes de reporting de durabilité (ESRS), qui impactent directement les obligations de reporting ESG des entreprises, dont ABC, dans le cadre de la CSRD.",
+      "pourquoi": "",
+      "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-sr-teg-online-meeting-16-april-2026",
       "date": "2026-04-13"
     }
@@ -1183,15 +1238,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/enseignement_education_alimentation_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/enseignement_education_alimentation_17e",
           "date": "2025-11-18"
-        },
-        {
-          "titre": "Texte adopté N° 240",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/extension-possibilite_preemption_baux_commerciaux_mairies_societes_civiles_immobilieres_17e",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/extension-possibilite_preemption_baux_commerciaux_mairies_societes_civiles_immobilieres_17e",
-          "date": "2025-03-18"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) et le n°2632 (protection et souveraineté agricoles) présentent un intérêt direct pour un Responsable Environnement/Climat, notamment via les enjeux de décarbonation, d’adaptation climatique et de résilience des filières. Aucun texte adopté ne semble directement lié aux priorités RSE ou reporting extra-financier."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) et le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518) pourraient impacter les politiques RSE, notamment via des mesures sur l’agriculture durable, l’énergie, l’eau et l’assainissement. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux majeurs pour une grande entreprise de services."
 }
