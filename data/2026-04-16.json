@@ -1,7 +1,7 @@
 {
   "date": "2026-04-16",
-  "generated_at": "07:21",
-  "elapsed_seconds": 224,
+  "generated_at": "12:18",
+  "elapsed_seconds": 234,
   "errors": [],
   "stats": {
     "jo_analyses": 11,
@@ -9,27 +9,71 @@
     "depts_restriction": 6
   },
   "pipeline_meta": {
-    "run_at": "2026-04-16T07:21:41",
+    "run_at": "2026-04-16T12:18:01",
     "sources": {
       "JORF": 1,
-      "RSS": 19,
+      "RSS": 18,
       "VigiEau": 6,
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 63,
-    "llm_seconds": 91.1
+    "llm_calls": 58,
+    "llm_seconds": 80.3
   },
   "items": [
     {
-      "id": "7b2b487cbc3a",
-      "source": "Le Monde Planète",
-      "categorie": "Énergie",
-      "titre": "« Nos démocraties doivent rompre leur pacte implicite avec le pétrole »",
-      "resume": "L'article souligne l'accélération des politiques publiques vers l'électrification des véhicules, ce qui pourrait impacter les obligations de décarbonation de la flotte d'ABC (scope 1) et les attentes clients en matière de mobilité durable.",
+      "id": "111ace5fc88b",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Management environnemental : la version 2026 de la norme ISO 14001 est publiée",
+      "resume": "Management environnemental : la version 2026 de la norme ISO 14001 est publiée",
+      "pourquoi": "Mention de ISO 14001.",
+      "criticite": 3,
+      "url": "https://www.actu-environnement.com/ae/news/management-environnemental-norme-iso-14001-2026-publication-47855.php4#xtor=RSS-6",
+      "date": "2026-04-16"
+    },
+    {
+      "id": "6b64262bf2b2",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Transport de CO2 : un intérêt manifeste dans le Nord Est, selon Natran",
+      "resume": "L'article souligne l'émergence d'infrastructures de transport de CO2, un levier potentiel pour la décarbonation des activités industrielles et tertiaires, pouvant impacter les stratégies clients d'ABC dans leur transition bas-carbone.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/04/16/nos-democraties-doivent-rompre-leur-pacte-implicite-avec-le-petrole_6680462_3232.html",
+      "url": "https://www.actu-environnement.com/ae/news/CCUS-transport-CO2-carboduc-natran-nord-est-47857.php4#xtor=RSS-6",
+      "date": "2026-04-16"
+    },
+    {
+      "id": "a3dac6673cb4",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "La troisième programmation pluriannuelle de l'énergie : des questions de méthode et de fond",
+      "resume": "La PPE 3 (2026) fixe les orientations énergétiques nationales, influençant les politiques clients d'ABC (ex : décarbonation tertiaire, efficacité énergétique des bâtiments) et les attentes en matière de reporting ESG (CSRD).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/ppe-3-questions-methode-fond-47836.php4#xtor=RSS-6",
+      "date": "2026-04-16"
+    },
+    {
+      "id": "971e0b360e7e",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "Sustainability Reporting is Built on Imperfect Data – And That’s Okay",
+      "resume": "L'article aborde les défis des données imparfaites dans le reporting ESG, un enjeu clé pour ABC dans le cadre de la CSRD et des ESRS, mais sans mentionner d'action opérationnelle directe.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/sustainability-reporting-is-built-on-imperfect-data-and-thats-okay/?utm_source=rss&utm_medium=rss&utm_campaign=sustainability-reporting-is-built-on-imperfect-data-and-thats-okay",
+      "date": "2026-04-16"
+    },
+    {
+      "id": "75c4176d564e",
+      "source": "EFRAG",
+      "categorie": "Climat",
+      "titre": "Last Call : Express your interest in voluntary sustainability reporting",
+      "resume": "L'article annonce une consultation publique d'EFRAG sur un futur standard de reporting volontaire pour les entreprises non-SME hors CSRD, ce qui pourrait influencer les pratiques de reporting extra-financier d'ABC à moyen terme.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/last-call-express-your-interest-in-voluntary-sustainability-reporting",
       "date": "2026-04-16"
     },
     {
@@ -37,7 +81,7 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "[Technos vertes] Batteries Lithium-ion : des usages à contraindre, une production à relocaliser",
-      "resume": "L'article souligne les contraintes réglementaires et les enjeux de relocalisation de la production des batteries lithium-ion, ce qui impacte indirectement la stratégie de décarbonation de la flotte de véhicules d'ABC et ses engagements en matière de mobilité durable.",
+      "resume": "L'article aborde les enjeux de décarbonation liés aux batteries lithium-ion, pertinents pour la flotte de véhicules d'ABC (scope 1) et les exigences carbone des clients. Il signale une possible contrainte réglementaire future sur les usages et une relocalisation de la production, impactant potentiellement les coûts et la stratégie d'électrification.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/technos-vertes-batteries-lithium-ion-des-usages-contraindre-une-production-relocaliser",
@@ -55,17 +99,6 @@
       "date": "2026-04-15"
     },
     {
-      "id": "b4dc7a4e0f8c",
-      "source": "Reporterre",
-      "categorie": "Émissions",
-      "titre": "ZFE : la fin des zones à faibles émissions votée par l'Assemblée nationale",
-      "resume": "ZFE : la fin des zones à faibles émissions votée par l'Assemblée nationale",
-      "pourquoi": "Mention de ZFE.",
-      "criticite": 3,
-      "url": "https://reporterre.net/ZFE-la-fin-des-zones-a-faibles-emissions-votee-par-l-Assemblee-nationale",
-      "date": "2026-04-15"
-    },
-    {
       "id": "d215371ba7a1",
       "source": "Le Monde Planète",
       "categorie": "Émissions",
@@ -77,25 +110,25 @@
       "date": "2026-04-15"
     },
     {
-      "id": "81b9d044fe5a",
+      "id": "d611fafc0ba9",
       "source": "Le Monde Planète",
-      "categorie": "Eau",
-      "titre": "ZFE : près de 3 millions de véhicules parmi les plus polluants seront remis en circulation avec l’abandon du dispositif",
-      "resume": "ZFE : près de 3 millions de véhicules parmi les plus polluants seront remis en circulation avec l’abandon du dispositif",
+      "categorie": "Émissions",
+      "titre": "Le Parlement entérine l’adoption de la loi de « simplification » et la suppression des ZFE (zones à faibles émissions)",
+      "resume": "Le Parlement entérine l’adoption de la loi de « simplification » et la suppression des ZFE (zones à faibles émissions)",
       "pourquoi": "Mention de ZFE.",
       "criticite": 3,
-      "url": "https://www.lemonde.fr/les-decodeurs/article/2026/04/15/zfe-pres-de-3-millions-de-vehicules-parmi-les-plus-polluants-seront-remis-en-circulation-avec-l-abandon-du-dispositif_6590597_4355771.html",
+      "url": "https://www.lemonde.fr/politique/article/2026/04/15/le-parlement-enterine-l-adoption-de-la-loi-de-simplification-et-la-suppression-des-zones-a-faibles-emissions_6680320_823448.html",
       "date": "2026-04-15"
     },
     {
-      "id": "32b2fdb065b2",
-      "source": "Le Monde Planète",
-      "categorie": "Émissions",
-      "titre": "Le Parlement entérine l’adoption de la loi de « simplification » et la suppression des zones à faibles émissions",
-      "resume": "La loi de 'simplification' supprime les Zones à Faibles Émissions (ZFE) en France, ce qui pourrait impacter les obligations de mobilité durable pour les flottes de véhicules d'ABC et ses clients, notamment en termes d'électrification ou d'accès aux zones urbaines.",
-      "pourquoi": "Le sujet touche directement à la mobilité durable (scope 1 des émissions), un enjeu clé pour ABC avec sa flotte de véhicules et les exigences carbone de ses clients (nucléaire, santé, industrie). La suppression des ZFE pourrait réduire les contraintes réglementaires pour ABC, mais aussi limiter les incitations à la décarbonation de sa flotte.",
+      "id": "786255caa729",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Electrification : les premières mesures attendues dans l’industrie",
+      "resume": "L'article souligne l'objectif d'électrification accrue de l'industrie française d'ici 2030, ce qui pourrait influencer les attentes clients d'ABC en matière de décarbonation de leur flotte de véhicules et de leurs prestations de propreté.",
+      "pourquoi": "L'électrification des flottes de véhicules (scope 1) et la transition énergétique des clients industriels sont des enjeux directs pour ABC, notamment dans le cadre de la CSRD et des exigences carbone des clients (nucléaire, santé, industrie). L'article alerte sur une évolution réglementaire et marché à surveiller pour anticiper les demandes clients.",
       "criticite": 2,
-      "url": "https://www.lemonde.fr/politique/article/2026/04/15/le-parlement-enterine-l-adoption-de-la-loi-de-simplification-et-la-suppression-des-zones-a-faibles-emissions_6680320_823448.html",
+      "url": "https://www.greenunivers.com/2026/04/electrification-les-premieres-mesures-annoncees-dans-lindustrie-421271/",
       "date": "2026-04-15"
     },
     {
@@ -103,7 +136,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Déchets : la Cour des comptes défend une nouvelle fois la tarification incitative",
-      "resume": "La tarification incitative des déchets pourrait impacter les coûts et la gestion des déchets pour ABC, notamment via une meilleure répartition des charges entre acteurs. Cela pourrait influencer les pratiques de tri et de reporting des déchets pour les prestations réalisées chez les clients.",
+      "resume": "La tarification incitative des déchets pourrait impacter les coûts et la gestion des déchets pour ABC, notamment via les REP ou les exigences clients en matière de reporting extra-financier (CSRD).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/rapport-cour-comptes-tarification-incitative-47848.php4#xtor=RSS-6",
@@ -114,7 +147,7 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "IA, data centers et semi-conducteurs au menu de Veolia pour les prochaines années",
-      "resume": "Veolia cible les centres de données et semi-conducteurs comme nouveaux marchés, secteurs à forte consommation d'eau et d'énergie, ce qui pourrait impacter indirectement les enjeux de décarbonation et d'efficacité énergétique des clients d'ABC (nucléaire, santé, industrie).",
+      "resume": "Veolia cible les marchés des data centers et semi-conducteurs, secteurs très énergivores, ce qui pourrait impacter indirectement les enjeux de décarbonation et d'efficacité énergétique des clients d'ABC (ex : industrie, santé).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/ia-data-centers-semi-conducteurs-au-menu-de-veolia-pour-les-prochaines-annees-47849.php4#xtor=RSS-6",
@@ -125,32 +158,21 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Qualité de l'air en Île-de-France : la pollution repart légèrement à la hausse",
-      "resume": "L'article signale une hausse de la pollution atmosphérique en Île-de-France, ce qui pourrait impacter les exigences réglementaires locales (ZFE) et les attentes clients en matière de qualité de l'air, notamment pour les prestations de propreté/FM.",
+      "resume": "L'article signale une légère hausse de la pollution de l'air en Île-de-France en 2025, ce qui pourrait impacter les exigences clients (nucléaire, santé, industrie) en matière de qualité de l'air et de décarbonation des prestations.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/qualite-air-idf-bilan-2025-pollution-en-hausse-47850.php4#xtor=RSS-6",
       "date": "2026-04-15"
     },
     {
-      "id": "c9963403e562",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "Après le greenhushing, les entreprises engagées adoptent le \"codage climatique\"",
-      "resume": "L'article aborde une tendance communicationnelle sur la transition bas-carbone qui pourrait influencer les stratégies de reporting ESG d'ABC, notamment en lien avec la CSRD et les attentes clients en matière de transparence carbone.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/apres-le-greenhushing-les-entreprises-engagees-adoptent-le-codage-climatique",
-      "date": "2026-04-15"
-    },
-    {
-      "id": "786255caa729",
+      "id": "b53d0984e20c",
       "source": "GreenUnivers",
       "categorie": "Énergie",
-      "titre": "Electrification : les premières mesures attendues dans l’industrie",
-      "resume": "L'article souligne l'objectif d'électrification de l'industrie française (37% à 47% d'électricité d'ici 2030), ce qui pourrait impacter les clients d'ABC (nucléaire, santé, industrie) et leurs exigences en matière de décarbonation, notamment pour les flottes de véhicules et les prestations de propreté.",
+      "titre": "EDPR rejoint l’UFE pour peser sur les dossiers européens",
+      "resume": "L'adhésion d'EDPR à l'UFE pourrait influencer les politiques énergétiques européennes, notamment sur les renouvelables, mais n'a pas d'impact direct immédiat sur les enjeux opérationnels d'ABC (flotte, déchets, BGES).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/electrification-les-premieres-mesures-annoncees-dans-lindustrie-421271/",
+      "url": "https://www.greenunivers.com/2026/04/edpr-rejoint-lufe-pour-peser-sur-les-dossiers-europeens-421296/",
       "date": "2026-04-15"
     },
     {
@@ -158,21 +180,10 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "L’Ademe se propose en aide au plan d’électrification pour rappeler son utilité",
-      "resume": "L'Ademe propose son soutien pour accélérer l'électrification des flottes, un enjeu direct pour ABC dans le cadre de la décarbonation de sa flotte de véhicules (scope 1) et des attentes clients en matière de mobilité durable.",
+      "resume": "L'article souligne le rôle potentiel de l'ADEME dans l'accompagnement des plans d'électrification des flottes, ce qui pourrait impacter la stratégie de décarbonation de la flotte véhicules d'ABC (scope 1) via des subventions ou aides techniques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/lademe-se-propose-en-aide-au-plan-delectrification-pour-rappeler-son-utilite-421274/",
-      "date": "2026-04-15"
-    },
-    {
-      "id": "80f675d1b6d1",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "Pourquoi Technique solaire devient Mexens",
-      "resume": "L'article illustre une tendance de diversification énergétique (solaire, éolien, méthanisation) qui pourrait influencer les attentes des clients d'ABC en matière de mix énergétique et de décarbonation des prestations.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/pourquoi-technique-solaire-devient-mexens-421293/",
       "date": "2026-04-15"
     },
     {
@@ -180,21 +191,10 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Modulation des EnR électriques : le réseau prime sur le marché",
-      "resume": "L'article aborde la modulation des énergies renouvelables électriques, un sujet qui pourrait impacter les coûts énergétiques et les stratégies d'approvisionnement d'ABC, notamment dans le cadre de son reporting ESG et de sa politique de décarbonation.",
+      "resume": "L'article aborde la modulation des énergies renouvelables électriques, un sujet qui pourrait influencer les stratégies énergétiques des clients d'ABC (tertiaire, industrie) et indirectement leurs exigences en matière de décarbonation des prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/modulation-des-enr-electriques-le-reseau-prime-sur-le-marche-421149/",
-      "date": "2026-04-15"
-    },
-    {
-      "id": "f6763aec1787",
-      "source": "Le Monde Planète",
-      "categorie": "Déchets",
-      "titre": "Prix des carburants à La Réunion : le conseil régional cible les pétroliers locaux « profiteurs de guerre » et consent à une nouvelle aide",
-      "resume": "L'article illustre une mesure locale de soutien aux entreprises face à la hausse des coûts énergétiques, signalant une tendance à l'intervention publique sur les prix des carburants qui pourrait influencer les politiques de mobilité durable en France métropolitaine.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/politique/article/2026/04/15/prix-des-carburants-a-la-reunion-le-conseil-regional-cible-les-petroliers-locaux-profiteurs-de-guerre-et-consent-a-une-nouvelle-aide_6680249_823448.html",
       "date": "2026-04-15"
     },
     {
@@ -202,21 +202,10 @@
       "source": "ESG Today",
       "categorie": "Déchets",
       "titre": "Henkel Unveils New 2030 Climate, Circularity, Supply Chain Sustainability Targets",
-      "resume": "Henkel annonce de nouveaux objectifs 2030 en climat, économie circulaire et chaîne d'approvisionnement, illustrant les attentes croissantes des clients industriels en matière de décarbonation et de durabilité, pertinentes pour ABC dans le cadre de son reporting CSRD et de ses engagements clients.",
+      "resume": "Henkel annonce des cibles 2030 ambitieuses en climat, circularité et chaîne d'approvisionnement, illustrant les exigences carbone croissantes des clients industriels (scope 3) qui pourraient influencer les attentes des clients d'ABC dans le secteur santé/industrie.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/henkel-unveils-new-2030-climate-circularity-supply-chain-sustainability-targets/?utm_source=rss&utm_medium=rss&utm_campaign=henkel-unveils-new-2030-climate-circularity-supply-chain-sustainability-targets",
-      "date": "2026-04-15"
-    },
-    {
-      "id": "a1213d8f98c1",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "EFRAG Appoints Kerstin Lopatta as New Chair of Sustainability Reporting Board",
-      "resume": "L'article annonce la nomination de Kerstin Lopatta à la tête du conseil de reporting de durabilité de l'EFRAG, acteur clé pour la mise en œuvre de la CSRD et des normes ESRS en Europe.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/efrag-appoints-kerstin-lopatta-as-new-chair-of-sustainability-reporting-board/?utm_source=rss&utm_medium=rss&utm_campaign=efrag-appoints-kerstin-lopatta-as-new-chair-of-sustainability-reporting-board",
       "date": "2026-04-15"
     },
     {
@@ -224,8 +213,8 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SR TEG Online Meeting 16 April 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG SR TEG sur les normes de reporting de durabilité (ESRS), pertinente pour préparer la conformité CSRD de ABC et anticiper les exigences ESG des clients.",
-      "pourquoi": "L'EFRAG est l'organisme européen chargé de développer les normes ESRS (European Sustainability Reporting Standards) sous la CSRD. ABC, en tant que prestataire de services avec des enjeux de reporting ESG (CSRD, ISO 14001) et des clients soumis à des exigences carbone, doit suivre ces évolutions pour adapter ses processus de collecte de données et son reporting extra-financier. La réunion du 16 avril 2026 pourrait aborder des clarifications ou mises à jour sur les ESRS, impactant directement la préparation de ABC pour les exercices 2026 et suivants.",
+      "resume": "L'article annonce une réunion de l'EFRAG SR TEG sur les normes de reporting de durabilité (ESRS), pertinente pour préparer la conformité CSRD/ESRS d'ABC dans son reporting extra-financier.",
+      "pourquoi": "L'EFRAG SR TEG travaille sur les normes ESRS (European Sustainability Reporting Standards) qui sont directement liées à la CSRD, un enjeu majeur pour ABC dans son reporting ESG et sa conformité réglementaire. Bien que l'article ne détaille pas les sujets abordés, il signale une évolution réglementaire à suivre pour anticiper les exigences de reporting.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-sr-teg-online-meeting-16-april-2026",
       "date": "2026-04-13"
@@ -937,14 +926,14 @@
       "source": "JORF",
       "categorie": "Déchets",
       "titre": "Arrêté du 15 avril 2026 modifiant l'arrêté du 14 décembre 2023 fixant la liste des versions de voitures particulières électriques ayant atteint le score environnemental minimal conditionnant l'éligibilité à certaines aides à l'achat ou à la location de véhicules peu polluants",
-      "resume": "Mise à jour des critères d'éligibilité aux aides pour véhicules électriques, impactant potentiellement la flotte de véhicules d'ABC.",
-      "pourquoi": "ABC est concerné par la réglementation sur la flotte de véhicules (scope 1), notamment pour les aides à l'achat/location de véhicules électriques. La modification des critères d'éligibilité peut influencer les choix d'investissement de l'entreprise.",
-      "criticite": 2,
+      "resume": "Mise à jour des critères d'éligibilité aux aides pour les véhicules électriques, impactant potentiellement la flotte de véhicules d'ABC si elle utilise des véhicules éligibles.",
+      "pourquoi": "",
+      "criticite": 1,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053900988",
       "date": "2026-04-16"
     }
   ],
-  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement l'évolution des aides à l'innovation dans le cadre du Plan France 2030 (volet « Fonds Métaux critiques »), la mise à jour des critères d'éligibilité aux aides pour les véhicules électriques via le score environnemental minimal, et des modifications organisationnelles au sein des ministères chargés de la transition écologique.",
+  "briefing_jorf": "Les textes 1 et 5 sont pertinents : le premier crée un nouveau programme dans le cadre des certificats d'économies d'énergie, tandis que le second modifie la liste des véhicules électriques éligibles aux aides, impactant les critères d'achat ou de location pour les entreprises. Les autres textes ne concernent pas directement la RSE ou le climat.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1292,5 +1281,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) et le n°2632 (protection et souveraineté agricoles) présentent un intérêt direct pour un Responsable Environnement/Climat, notamment via les enjeux de décarbonation, d’adaptation climatique et de transition agroécologique."
+  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) et le n°2632 (protection et souveraineté agricoles) présentent un intérêt direct pour un Responsable Environnement/Climat, notamment via l'adaptation aux normes européennes en transition écologique et gestion des ressources."
 }
