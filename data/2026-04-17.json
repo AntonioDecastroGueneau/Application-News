@@ -1,7 +1,7 @@
 {
   "date": "2026-04-17",
-  "generated_at": "07:21",
-  "elapsed_seconds": 223,
+  "generated_at": "12:14",
+  "elapsed_seconds": 273,
   "errors": [],
   "stats": {
     "jo_analyses": 26,
@@ -9,52 +9,52 @@
     "depts_restriction": 6
   },
   "pipeline_meta": {
-    "run_at": "2026-04-17T07:21:31",
+    "run_at": "2026-04-17T12:14:04",
     "sources": {
       "JORF": 0,
-      "RSS": 14,
+      "RSS": 12,
       "VigiEau": 6,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 75,
-    "llm_seconds": 78.8
+    "llm_calls": 73,
+    "llm_seconds": 81.4
   },
   "items": [
+    {
+      "id": "225872f9b7f9",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Trente-deux acteurs appellent à accélérer la rénovation énergétique des bâtiments publics",
+      "resume": "L'article souligne l'importance de la rénovation énergétique des bâtiments publics, un enjeu qui pourrait influencer les exigences des clients d'ABC (secteurs santé, industrie, etc.) en matière de performance énergétique des sites tertiaires, sans imposer d'action directe immédiate.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/trente-deux-acteurs-batiment-energie-renovation-energetique-ecoles-batiments-publics-maires-47871.php4#xtor=RSS-6",
+      "date": "2026-04-17"
+    },
+    {
+      "id": "6ed7c445251d",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’agenda de la semaine",
+      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.) qui pourraient influencer les tendances du marché et les attentes clients d'ABC en matière de décarbonation et d'innovation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/04/lagenda-de-la-semaine-420352/",
+      "date": "2026-04-17"
+    },
     {
       "id": "14dbb7ba811f",
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Pour Bpifrance, la transition écologique «c’est d’abord du business»",
-      "resume": "L'article souligne l'opportunité stratégique pour les PME/ETI de s'engager dans la transition écologique, avec un soutien financier et conseil accru via Bpifrance, ce qui pourrait influencer les attentes clients d'ABC en matière de décarbonation et de reporting ESG.",
+      "resume": "L'article souligne l'importance croissante de la transition écologique comme levier business pour les PME/ETI, avec un accent sur le financement et l'accompagnement par Bpifrance. Cela pourrait influencer les attentes clients d'ABC en matière de services durables et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/pour-bpifrance-la-transition-ecologique-cest-dabord-du-business",
       "date": "2026-04-17"
-    },
-    {
-      "id": "900c95dbdf54",
-      "source": "Actuel HSE",
-      "categorie": "Climat",
-      "titre": "CMRD 6 : les eurodéputés ménagent l'industrie pour le cobalt mais durcissent le texte en commission",
-      "resume": "Le texte évoque la réglementation CMRD 6 (produits chimiques) qui pourrait impacter indirectement les chaînes d'approvisionnement des clients d'ABC (ex : secteurs santé, industrie) via des contraintes sur le cobalt, un métal présent dans certains équipements de propreté ou véhicules.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/cmrd-6-les-eurodeputes-menagent-lindustrie-pour-le-cobalt-mais-durcissent-le-texte-en",
-      "date": "2026-04-17"
-    },
-    {
-      "id": "111ace5fc88b",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "Management environnemental : la version 2026 de la norme ISO 14001 est publiée",
-      "resume": "Management environnemental : la version 2026 de la norme ISO 14001 est publiée",
-      "pourquoi": "Mention de ISO 14001.",
-      "criticite": 3,
-      "url": "https://www.actu-environnement.com/ae/news/management-environnemental-norme-iso-14001-2026-publication-47855.php4#xtor=RSS-6",
-      "date": "2026-04-16"
     },
     {
       "id": "9f64315c6ce8",
@@ -72,9 +72,9 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Soutien aux ENR : les pistes de la CRE pour réduire la facture",
-      "resume": "La CRE propose 25 recommandations pour optimiser les soutiens publics aux énergies renouvelables, ce qui pourrait influencer les choix énergétiques de ABC et ses clients.",
-      "pourquoi": "La CRE est une instance réglementaire qui influence les politiques énergétiques en France, et ses recommandations pourraient avoir un impact sur les choix énergétiques de ABC et ses clients.",
-      "criticite": 2,
+      "resume": "La CRE propose des recommandations pour optimiser les soutiens publics aux énergies renouvelables, ce qui pourrait influencer les coûts énergétiques des sites clients d'ABC et leur stratégie de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/cout-enr-soutien-public-cre-appels-offres-raccordement-eolien-ppa-47864.php4#xtor=RSS-6",
       "date": "2026-04-16"
     },
@@ -83,7 +83,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "La phrase du jour : \"Il est hors de question de suspendre le dispositif des CEE\"",
-      "resume": "Le dispositif des CEE (Certificats d'Économies d'Énergie) reste maintenu, ce qui impacte indirectement les entreprises comme ABC via les incitations financières pour les actions d'efficacité énergétique et de décarbonation, notamment dans le cadre des audits énergétiques et des plans d'action climat.",
+      "resume": "Le dispositif des CEE finance des projets d'efficacité énergétique en France. ABC pourrait indirectement en bénéficier via des aides pour ses clients (ex : rénovation énergétique des bâtiments tertiaires) ou ses propres actions (ex : optimisation énergétique des sites).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/dit-aujourdhui/1798.html#xtor=RSS-6",
@@ -94,32 +94,10 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "ENR : Boralex lance un fonds de dotation pour financer des actions durables dans les territoires",
-      "resume": "L'article aborde un fonds de dotation lié aux énergies renouvelables (ENR) financé par des développeurs, mais n'a pas d'impact direct ou opérationnel immédiat pour ABC, sauf en termes de veille sur les dispositifs de financement de la transition énergétique.",
+      "resume": "Le fonds de dotation Boralex pourrait inspirer des partenariats locaux pour ABC dans le cadre de projets d'énergies renouvelables ou de biodiversité, mais n'a pas d'impact direct réglementaire ou opérationnel immédiat.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/energies-renouvelables-developpement-territoires-fonds-dotation-boralex-47862.php4#xtor=RSS-6",
-      "date": "2026-04-16"
-    },
-    {
-      "id": "6b64262bf2b2",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "Transport de CO2 : un intérêt manifeste dans le Nord Est, selon Natran",
-      "resume": "L'article souligne l'émergence d'infrastructures de transport de CO2, un sujet lié à la décarbonation des activités industrielles et tertiaires, potentiellement pertinent pour les clients d'ABC dans le cadre de leurs engagements net zéro et de leur reporting ESG (scope 3).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/CCUS-transport-CO2-carboduc-natran-nord-est-47857.php4#xtor=RSS-6",
-      "date": "2026-04-16"
-    },
-    {
-      "id": "a3dac6673cb4",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "La troisième programmation pluriannuelle de l'énergie : des questions de méthode et de fond",
-      "resume": "La PPE 3 (2026) fixe les orientations énergétiques nationales, impactant indirectement les objectifs de décarbonation des entreprises et les exigences clients d'ABC en matière de transition énergétique et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/ppe-3-questions-methode-fond-47836.php4#xtor=RSS-6",
       "date": "2026-04-16"
     },
     {
@@ -127,7 +105,7 @@
       "source": "Reporterre",
       "categorie": "Énergie",
       "titre": "Malgré la flambée du pétrole, le plastique reste omniprésent sur les fruits et légumes",
-      "resume": "L'article met en lumière la persistance des emballages plastiques dans la distribution alimentaire, un enjeu lié à la réglementation REP (Responsabilité Élargie du Producteur) et aux attentes clients en matière de durabilité, pouvant impacter les prestations de propreté/FM d'ABC chez ses clients (ex : gestion des déchets, tri sélectif).",
+      "resume": "L'article illustre la persistance des emballages plastiques dans la grande distribution, un enjeu lié aux déchets et à la réglementation REP (Responsabilité Élargie du Producteur) qui pourrait impacter les clients d'ABC (secteur agroalimentaire, distribution) et leurs exigences en matière de durabilité.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Malgre-la-flambee-du-petrole-le-plastique-reste-omnipresent-sur-les-fruits-et-legumes",
@@ -138,32 +116,21 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "EDF attaque les soutiens publics aux petites toitures solaires",
-      "resume": "L'article aborde les tensions autour des aides publiques pour les petites installations solaires, un sujet lié à la transition énergétique et aux politiques de décarbonation en France, sans impact direct immédiat sur les activités d'ABC mais utile pour suivre les évolutions réglementaires et marché.",
+      "resume": "L'article aborde les tensions autour des politiques de soutien aux énergies renouvelables en France, ce qui peut impacter les stratégies énergétiques des clients d'ABC (notamment tertiaires) et leurs exigences en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/edf-sattaque-aux-soutiens-publics-pour-les-petites-toitures-solaires-421486/",
       "date": "2026-04-16"
     },
     {
-      "id": "d0ca98f9b50c",
+      "id": "b097897be1cd",
       "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "Electrification : les mesures préconisées par le GT numérique",
-      "resume": "L'article discute de l'électrification de l'économie et des mesures préconisées par le GT numérique, ce qui pourrait avoir un impact sur la flotte de véhicules de ABC et ses besoins en énergie.",
+      "categorie": "Eau",
+      "titre": "Un nouveau service système bientôt accessible aux centrales EnR",
+      "resume": "L'article aborde la gestion des excédents d'électricité par RTE via un service de réserve, ce qui pourrait impacter les coûts énergétiques et les opportunités de décarbonation pour les entreprises comme ABC, notamment dans le cadre de leur reporting ESG et de leur stratégie de transition énergétique.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/electrification-les-mesures-preconisees-par-le-gt-numerique-421411/",
-      "date": "2026-04-16"
-    },
-    {
-      "id": "971e0b360e7e",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "Sustainability Reporting is Built on Imperfect Data – And That’s Okay",
-      "resume": "L'article aborde la gestion des données imparfaites dans le reporting ESG, un enjeu clé pour ABC dans le cadre de la CSRD et des ESRS, mais sans obligation immédiate d'action.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/sustainability-reporting-is-built-on-imperfect-data-and-thats-okay/?utm_source=rss&utm_medium=rss&utm_campaign=sustainability-reporting-is-built-on-imperfect-data-and-thats-okay",
+      "url": "https://www.greenunivers.com/2026/04/un-nouveau-service-systeme-bientot-accessible-aux-centrales-enr-421458/",
       "date": "2026-04-16"
     },
     {
@@ -171,10 +138,21 @@
       "source": "Les Echos Environnement",
       "categorie": "Énergie",
       "titre": "« Nous voulons qu'il y ait une prise de conscience » : le lobby des renouvelables met ses emplois dans la balance - Les Echos",
-      "resume": "L'article souligne l'importance stratégique des énergies renouvelables pour les entreprises du secteur, ce qui peut influencer les attentes clients d'ABC en matière de décarbonation et de reporting ESG.",
+      "resume": "L'article souligne l'importance stratégique des énergies renouvelables pour les entreprises du secteur, ce qui peut influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et les inciter à accélérer leur transition énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNejVPYy1PZ1NPd3pVczVONGc4SzJlU2xFZjFwZHh1UjBWMURVVXl4YzJ0YnZRLVozV3g4UmhXaEVESFJiaUdSWGY2OFFSb2VYWEtjZ0ZXVk9fWDBpNzBmekc3a3JhQTd1d21ad3RXUk1XZm4xT0ozbHBkSHBSQ1dLZmFJNElzRk5sM1hPdndGMG1aVG1YWWtLd3ZUTmxXTzY5V2puZUQ4dmQwck5lR1p2VTRUdmVURjFvekY3bVVOazlhVmVsUWxiMFpnWDZuYXJGdkhlZ0htT01nZVNuXzdya3FuUnVLSVFzbkdBNUJHd3BrZzZPb2NjeFI0SVBmV2Y4VVFwT2Y5ZWVaREU?oc=5",
+      "date": "2026-04-16"
+    },
+    {
+      "id": "ce897633130a",
+      "source": "Les Echos Environnement",
+      "categorie": "Déchets",
+      "titre": "Energie : une industrie traditionnelle repassée de l'ombre à la lumière - Les Echos",
+      "resume": "L'article met en lumière le regain d'intérêt pour l'industrie traditionnelle, notamment dans le contexte énergétique actuel, ce qui pourrait influencer les attentes des clients d'ABC en matière de décarbonation et de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNME1aMUh3U3BMa1BTRk1wMm9lU2lXeXRkNGh5LW1ZeWxFRk8tVENLVW5vTVpmbTB2QlFrNlBnZWJVOHhXdjhFblVhSVpFbzNQVjVvRnlsdE9sZ25JUnBKWEdjLWM4SGM5U1lZQXNQdFE0WjJIcVR4eWhwWExxenN3anItbU5tV19CaUdZLTAxODV6c09EVTlWZzI3Ukl2RzJWVU9UWGpwa2x5WXRWS1ZDQjJkTk85YmpqcVJZOUl4X184RHdYRDN6eg?oc=5",
       "date": "2026-04-16"
     }
   ],
@@ -1293,5 +1271,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) et le projet de loi portant diverses dispositions d’adaptation au droit de l’UE en matière environnementale (N°2518) pourraient impacter les politiques RSE, notamment en matière de transition écologique et de résilience des filières. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518) pourrait inclure des mesures clés pour la transition écologique, tandis que le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) pourrait impacter les politiques de durabilité des filières agroalimentaires. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux."
 }
