@@ -1,7 +1,7 @@
 {
   "date": "2026-04-18",
-  "generated_at": "07:00",
-  "elapsed_seconds": 273,
+  "generated_at": "11:59",
+  "elapsed_seconds": 177,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,7 +9,7 @@
     "depts_restriction": 7
   },
   "pipeline_meta": {
-    "run_at": "2026-04-18T07:00:28",
+    "run_at": "2026-04-18T11:59:51",
     "sources": {
       "JORF": 0,
       "RSS": 6,
@@ -19,41 +19,41 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 49,
-    "llm_seconds": 61.5
+    "llm_calls": 41,
+    "llm_seconds": 41.4
   },
   "items": [
-    {
-      "id": "cfb39647dcd4",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Des bornes de recharge électrique généralisées sur les grands axes",
-      "resume": "L'article souligne l'extension massive des bornes de recharge électrique sur les grands axes en France d'ici 2035, ce qui impacte directement la stratégie de décarbonation de la flotte de véhicules d'ABC et ses obligations en matière de mobilité durable.",
-      "pourquoi": "Le sujet concerne directement la flotte de véhicules d'ABC (scope 1), un enjeu clé pour sa politique de décarbonation et son alignement avec les objectifs climatiques (SNBC, loi énergie-climat). La généralisation des bornes de recharge rapide facilite l'électrification des véhicules professionnels, un levier stratégique pour réduire les émissions et répondre aux exigences carbone des clients (nucléaire, santé, industrie).",
-      "criticite": 2,
-      "url": "https://www.greenunivers.com/2026/04/des-bornes-de-recharge-electrique-generalisees-sur-les-grands-axes-421650/",
-      "date": "2026-04-17"
-    },
     {
       "id": "82f38f18ea3a",
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Les énergies renouvelables ont représenté près de 428 000 emplois en France en 2024",
-      "resume": "L'article met en lumière l'importance des énergies renouvelables en France, avec près de 428 000 emplois en 2024, ce qui peut influencer les stratégies clients d'ABC (ex : secteurs industriels ou tertiaires engagés dans la transition énergétique).",
+      "resume": "L'article met en lumière l'importance des énergies renouvelables en France, avec 428 000 emplois en 2024, ce qui peut influencer les choix énergétiques des clients d'ABC et leurs exigences en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/etude-emplois-energies-renouvelables-SER-47875.php4#xtor=RSS-6",
       "date": "2026-04-17"
     },
     {
-      "id": "225872f9b7f9",
+      "id": "227a60402c6b",
       "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Trente-deux acteurs appellent à accélérer la rénovation énergétique des bâtiments publics",
-      "resume": "L'article souligne l'importance de la rénovation énergétique des bâtiments publics, un enjeu qui pourrait impacter indirectement ABC via les exigences carbone de ses clients (secteurs santé, industrie, nucléaire) et les réglementations futures sur l'efficacité énergétique des bâtiments tertiaires.",
+      "categorie": "Énergie",
+      "titre": "ETS : appliquer à l'incinération le coût du carbone ne favorisera pas l'enfouissement",
+      "resume": "L'inclusion de l'incinération dans le système d'échange de quotas d'émission (ETS) pourrait impacter les coûts et la gestion des déchets pour ABC, notamment via une hausse des tarifs des prestations de traitement des déchets pour ses clients.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/trente-deux-acteurs-batiment-energie-renovation-energetique-ecoles-batiments-publics-maires-47871.php4#xtor=RSS-6",
+      "url": "https://www.actu-environnement.com/ae/news/etude-prix-carbone-ets-incineration-enfouissement-47874.php4#xtor=RSS-6",
+      "date": "2026-04-17"
+    },
+    {
+      "id": "cfb39647dcd4",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Des bornes de recharge électrique généralisées sur les grands axes",
+      "resume": "L'article annonce un objectif de 22 000 bornes de recharge rapide sur les grands axes d'ici 2035, ce qui impacte directement la stratégie de mobilité durable d'ABC, notamment pour l'électrification de sa flotte de véhicules (scope 1).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/04/des-bornes-de-recharge-electrique-generalisees-sur-les-grands-axes-421650/",
       "date": "2026-04-17"
     },
     {
@@ -61,7 +61,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Les documents de la semaine",
-      "resume": "Cet article hebdomadaire compile des documents clés sur la transition énergétique (réglementations, études, analyses) qui pourraient inclure des évolutions pertinentes pour le reporting ESG, la décarbonation ou les risques climatiques d'ABC, même si le contenu exact n'est pas précisé.",
+      "resume": "Cet article hebdomadaire compile des documents clés sur la transition énergétique (réglementations, études, analyses) qui peuvent inclure des évolutions pertinentes pour le reporting ESG (CSRD/ESRS), la décarbonation (scope 1/3) ou les risques climatiques opérationnels de ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/les-documents-de-la-semaine-381215/",
@@ -72,7 +72,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Solaire, stockage : la taille des parcs progresse sur le réseau de distribution",
-      "resume": "L'article souligne la tendance à l'augmentation de la taille des parcs solaires et de stockage sur le réseau de distribution, ce qui pourrait influencer les stratégies énergétiques des clients d'ABC (ex : tertiaire, industrie) et leurs exigences en matière de décarbonation.",
+      "resume": "L'article souligne la tendance à l'augmentation de la taille des parcs solaires et de stockage sur le réseau de distribution, ce qui peut impacter indirectement ABC via les exigences carbone de ses clients industriels ou tertiaires en matière d'approvisionnement énergétique renouvelable.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/solaire-stockage-la-taille-des-parcs-progresse-sur-le-reseau-de-distribution-421595/",
@@ -83,7 +83,7 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Electrification : les industriels défendent le statu quo sur la fiscalité",
-      "resume": "L'article aborde les positions des industriels sur la fiscalité liée à l'électrification, un sujet indirectement lié à la transition énergétique et à la décarbonation des flottes de véhicules pour ABC, sans obligation immédiate mais à suivre pour anticiper les évolutions réglementaires.",
+      "resume": "L'article aborde la position des industriels sur la fiscalité liée à l'électrification, un sujet qui pourrait impacter indirectement les politiques de mobilité durable et les exigences carbone des clients d'ABC, notamment dans les secteurs nucléaire, santé et industrie.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/electrification-les-industriels-defendent-le-statu-quo-sur-la-fiscalite-421564/",
@@ -664,7 +664,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "L'arrêté relatif au découpage des zones administratives de surveillance de la qualité de l'air ambiant (1) est le seul texte directement pertinent pour un Responsable Environnement/Climat, car il impacte les obligations de surveillance et de reporting des émissions atmosphériques des entreprises.",
+  "briefing_jorf": "L'arrêté relatif au découpage des zones administratives de surveillance de la qualité de l'air ambiant (1) est le seul texte directement pertinent pour un Responsable Environnement/Climat, car il impacte les obligations de surveillance et de reporting en matière de pollution atmosphérique pour les entreprises concernées.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -698,6 +698,12 @@
     {
       "source": "AN Projets de loi",
       "items": [
+        {
+          "titre": "Projet de loi organique relatif au renforcement des juridictions criminelles - N° 2682",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53942",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53942",
+          "date": "2026-03-18"
+        },
         {
           "titre": "Projet de loi actualisant la programmation militaire pour les années 2024 à 2030 et portant diverses dispositions intéressant la défense - N° 2630",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PJL_actualisation_loi_programmation_militaire_annees_2024_2030_diverses_dispositions_defense",
@@ -847,12 +853,6 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52354",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52354",
           "date": "2025-06-19"
-        },
-        {
-          "titre": "Projet de loi relatif à la régulation de l'enseignement supérieur privé - N° 1762",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_regulation_enseignement_superieur_prive",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_regulation_enseignement_superieur_prive",
-          "date": "2025-07-31"
         }
       ]
     },
@@ -1000,5 +1000,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) et le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518) pourraient impacter les politiques RSE, notamment sur les enjeux agricoles, énergétiques et de reporting extra-financier. Aucun texte adopté ne semble directement lié aux priorités climatiques ou environnementales dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des normes européennes en matière d'énergie, d'environnement et de climat. Aucun autre texte ne semble aborder spécifiquement ces enjeux de manière significative."
 }
