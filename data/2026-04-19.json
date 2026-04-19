@@ -1,7 +1,7 @@
 {
   "date": "2026-04-19",
-  "generated_at": "07:08",
-  "elapsed_seconds": 157,
+  "generated_at": "11:59",
+  "elapsed_seconds": 140,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,21 +9,32 @@
     "depts_restriction": 7
   },
   "pipeline_meta": {
-    "run_at": "2026-04-19T07:08:30",
+    "run_at": "2026-04-19T11:59:41",
     "sources": {
       "JORF": 0,
-      "RSS": 0,
+      "RSS": 1,
       "VigiEau": 7,
       "Parlement": 1
     },
     "errors": [
-      "SOURCE VIDE — JORF : 0 textes retenus",
-      "SOURCE VIDE — RSS : 0 articles retenus"
+      "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 27,
-    "llm_seconds": 24.9
+    "llm_calls": 28,
+    "llm_seconds": 35.8
   },
-  "items": [],
+  "items": [
+    {
+      "id": "f671436cb09b",
+      "source": "ESG Today",
+      "categorie": "Énergie",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article mentionne des initiatives de décarbonation (achats de crédits carbone) qui peuvent inspirer des stratégies similaires pour ABC, bien que sans lien direct avec ses obligations réglementaires immédiates.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-257/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-257",
+      "date": "2026-04-19"
+    }
+  ],
   "restrictions_eau": [
     {
       "dept_code": "66",
@@ -760,5 +771,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) et le n°2632 (protection et souveraineté agricoles) présentent un intérêt direct pour un Responsable Environnement/Climat, notamment via des mesures liées à la transition écologique, aux énergies renouvelables ou à la résilience des systèmes agricoles face au changement climatique."
+  "pjl_briefing": "Parmi les projets de loi listés, seul le projet n°2632 (loi d’urgence pour la protection et la souveraineté agricoles) et le projet n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) présentent un intérêt direct pour un Responsable Environnement/Climat, notamment sur les enjeux de souveraineté alimentaire, de transition énergétique et d’adaptation au droit européen en matière de durabilité."
 }
