@@ -1,7 +1,7 @@
 {
   "date": "2026-04-20",
-  "generated_at": "07:51",
-  "elapsed_seconds": 162,
+  "generated_at": "12:48",
+  "elapsed_seconds": 211,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,29 +9,29 @@
     "depts_restriction": 7
   },
   "pipeline_meta": {
-    "run_at": "2026-04-20T07:51:44",
+    "run_at": "2026-04-20T12:48:56",
     "sources": {
       "JORF": 0,
-      "RSS": 4,
+      "RSS": 7,
       "VigiEau": 7,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 40,
-    "llm_seconds": 47.6
+    "llm_calls": 49,
+    "llm_seconds": 61.1
   },
   "items": [
     {
-      "id": "3325a2559aca",
-      "source": "Reporterre",
+      "id": "a43049d6329d",
+      "source": "GreenUnivers",
       "categorie": "Énergie",
-      "titre": "Déchets du bâtiment : la fin de la reprise gratuite fait craindre une explosion des dépôts sauvages",
-      "resume": "La suppression de la reprise gratuite des déchets du bâtiment pourrait impacter les coûts et la logistique des prestations de propreté/FM d'ABC, notamment via une augmentation des dépôts sauvages chez les clients (3 000+ sites).",
-      "pourquoi": "L'article aborde la réglementation déchets (REP) et ses impacts opérationnels sur les entreprises de services comme ABC, avec un risque de hausse des coûts et de complexité pour la gestion des déchets sur les sites clients. Bien que non directement lié à la CSRD ou aux scopes 1/2/3, il concerne un enjeu clé pour ABC : la traçabilité et la gestion des déchets dans le cadre de ses prestations.",
+      "titre": "Carburants alternatifs : la future taxe « Iricc » reste incertaine",
+      "resume": "L'incertitude autour de la taxe Iricc pourrait impacter la stratégie de décarbonation de la flotte de véhicules d'ABC, notamment en cas de report ou de modification des incitations financières pour les carburants alternatifs.",
+      "pourquoi": "L'article aborde directement la réglementation sur les carburants alternatifs et les incitations fiscales (scope 1 lié à la flotte de véhicules d'ABC), avec une échéance proche (1er janvier). Bien que l'incertitude politique soit mentionnée, cela reste un sujet opérationnel pour ABC en termes de planification énergétique et de reporting carbone.",
       "criticite": 2,
-      "url": "https://reporterre.net/Dechets-du-batiment-la-fin-de-la-reprise-gratuite-fait-craindre-une-explosion-des-depots",
+      "url": "https://www.greenunivers.com/2026/04/convoitee-par-les-carburants-alternatifs-la-taxe-iricc-reste-incertaine-421446/",
       "date": "2026-04-20"
     },
     {
@@ -39,21 +39,54 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "KEY 2026 à Rimini confirme son rôle de hub mondial de la transition énergétique",
-      "resume": "L'article met en lumière l'importance croissante des événements internationaux sur la transition énergétique, ce qui peut influencer les attentes des clients d'ABC en matière de décarbonation et de reporting ESG, sans imposer d'action directe immédiate.",
+      "resume": "Cet événement confirme l'accélération des solutions de transition énergétique et de décarbonation en Europe, ce qui pourrait influencer les attentes clients d'ABC (nucléaire, santé, industrie) en matière de services bas-carbone.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/pdt/key-2026-rimini-italie-hub-mondial-transition-energetique-1462.php4#xtor=RSS-6",
       "date": "2026-04-20"
     },
     {
-      "id": "a43049d6329d",
-      "source": "GreenUnivers",
+      "id": "3325a2559aca",
+      "source": "Reporterre",
       "categorie": "Énergie",
-      "titre": "Carburants alternatifs : la future taxe « Iricc » reste incertaine",
-      "resume": "L'article aborde l'incertitude autour de la taxe Iricc, qui pourrait impacter la stratégie de décarbonation de la flotte de véhicules d'ABC (scope 1) et les coûts opérationnels liés aux carburants alternatifs.",
+      "titre": "Déchets du bâtiment : la fin de la reprise gratuite fait craindre une explosion des dépôts sauvages",
+      "resume": "L'article impacte indirectement ABC via la gestion des déchets de ses prestations de propreté/FM chez les clients, notamment en cas de suppression de la reprise gratuite des déchets du bâtiment, pouvant entraîner des coûts supplémentaires ou des risques de dépôts sauvages.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/convoitee-par-les-carburants-alternatifs-la-taxe-iricc-reste-incertaine-421446/",
+      "url": "https://reporterre.net/Dechets-du-batiment-la-fin-de-la-reprise-gratuite-fait-craindre-une-explosion-des-depots",
+      "date": "2026-04-20"
+    },
+    {
+      "id": "d409a3046d0a",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Condor Energy scrute avec l’IA les coûts des entreprises énergivores",
+      "resume": "L'article présente une solution d'IA pour optimiser les coûts énergétiques des entreprises énergivores, ce qui pourrait intéresser ABC dans le cadre de la décarbonation de ses activités et de la gestion énergétique de ses sites clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/04/condor-energy-scrute-avec-lia-les-couts-des-entreprises-energivores-421552/",
+      "date": "2026-04-20"
+    },
+    {
+      "id": "54f34b084d57",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "Apple Avoids Over 26 Million Tons of Emissions Through Use of Clean Energy in Supply Chain",
+      "resume": "Cet article illustre une tendance forte des grands donneurs d'ordre (comme Apple) à exiger des engagements carbone ambitieux de leurs fournisseurs, ce qui impacte indirectement ABC via ses clients industriels ou technologiques.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/apple-avoids-over-26-million-tons-of-emissions-through-use-of-clean-energy-in-supply-chain/?utm_source=rss&utm_medium=rss&utm_campaign=apple-avoids-over-26-million-tons-of-emissions-through-use-of-clean-energy-in-supply-chain",
+      "date": "2026-04-20"
+    },
+    {
+      "id": "3480f3f43c15",
+      "source": "The Guardian Environment",
+      "categorie": "Déchets",
+      "titre": "Electric car sales soar 51% in mainland Europe as Iran war drives up fuel prices",
+      "resume": "L'article souligne l'accélération de l'électrification des flottes en Europe, un enjeu direct pour ABC qui doit adapter sa stratégie de mobilité durable (scope 1) et répondre aux exigences carbone de ses clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/environment/2026/apr/20/electric-car-ev-sales-mainland-europe-petrol-prices-iran-war",
       "date": "2026-04-20"
     },
     {
@@ -61,7 +94,7 @@
       "source": "ESG Today",
       "categorie": "Énergie",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article mentionne des initiatives de décarbonation (achats de crédits carbone) qui pourraient influencer les attentes des clients d'ABC en matière de reporting ESG et de réduction d'émissions, notamment via la CSRD.",
+      "resume": "L'article mentionne des initiatives de décarbonation (achats de crédits carbone) qui pourraient inspirer des stratégies similaires pour ABC, notamment dans le cadre de sa politique climat ou de son reporting ESG (CSRD/ESRS).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-257/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-257",
@@ -372,7 +405,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Aucun des textes publiés ne présente de mesure directement pertinente pour un Responsable Environnement/Climat d'une grande entreprise de services, les arrêtés et décrets étant principalement liés à des domaines judiciaires, médicaux, sociaux ou nucléaires.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -406,6 +439,12 @@
     {
       "source": "AN Projets de loi",
       "items": [
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord de partenariat et de coopération renforcé&#13;entre l'Union européenne et ses Etats membres, d'une part, et la République kirghize, d'autre part - N° 2691",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53844",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53844",
+          "date": "2026-02-25"
+        },
         {
           "titre": "Projet de loi organique relatif au renforcement des juridictions criminelles - N° 2682",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53942",
@@ -708,5 +747,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) et le n°2632 (protection et souveraineté agricoles) présentent un intérêt direct pour un Responsable Environnement/Climat, notamment sur les enjeux de transition écologique et de résilience des filières. Aucun texte adopté ne semble directement lié aux priorités RSE ou reporting environnemental."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le projet n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) présente un intérêt direct pour un Responsable Environnement/Climat, notamment pour les obligations de reporting et d'adaptation aux normes européennes en matière de durabilité et de transition écologique."
 }
