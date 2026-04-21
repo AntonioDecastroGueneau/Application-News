@@ -1,6 +1,6 @@
 {
   "date": "2026-04-21",
-  "generated_at": "07:24",
+  "generated_at": "12:17",
   "elapsed_seconds": 231,
   "errors": [],
   "stats": {
@@ -9,18 +9,18 @@
     "depts_restriction": 7
   },
   "pipeline_meta": {
-    "run_at": "2026-04-21T07:24:18",
+    "run_at": "2026-04-21T12:17:04",
     "sources": {
       "JORF": 0,
-      "RSS": 18,
+      "RSS": 17,
       "VigiEau": 7,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 48,
-    "llm_seconds": 85.4
+    "llm_calls": 52,
+    "llm_seconds": 118.6
   },
   "items": [
     {
@@ -28,18 +28,29 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SRB Online Meeting 21 April 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG SRB sur le reporting de durabilité, pertinente pour préparer la conformité CSRD/ESRS d'ABC dans le cadre de ses obligations de reporting extra-financier.",
-      "pourquoi": "EFRAG SRB est l'organisme européen en charge de l'élaboration des normes de reporting de durabilité (ESRS) pour la CSRD. ABC, en tant qu'entreprise devant se conformer à la CSRD, doit suivre les évolutions des normes ESRS pour anticiper ses obligations de reporting ESG (scope 1/2/3, déchets, énergie, etc.).",
+      "resume": "L'article annonce une réunion de l'EFRAG SRB sur le reporting de durabilité, clé pour préparer la conformité CSRD/ESRS d'ABC dans son reporting extra-financier.",
+      "pourquoi": "Le sujet concerne directement le reporting ESG (CSRD/ESRS) qui impacte directement ABC dans son obligation de reporting extra-financier et sa stratégie de conformité réglementaire. Bien que l'article soit un simple annonce de réunion, il signale une évolution réglementaire majeure pour ABC.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-21-april-2026",
       "date": "2026-04-21"
     },
     {
-      "id": "b953789bfcd8",
+      "id": "1948a1e70801",
+      "source": "Actu-Environnement",
+      "categorie": "Environnement",
+      "titre": "Transports : malgré la demande, voyager en train en Europe reste un casse-tête pour les Français",
+      "resume": "L'article met en lumière les difficultés logistiques et opérationnelles liées à la mobilité durable en Europe, un enjeu indirect pour ABC dans la gestion de ses déplacements professionnels et la transition de sa flotte de véhicules.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/transports-voyages-train-difficultes-france-europe-47885.php4#xtor=RSS-6",
+      "date": "2026-04-21"
+    },
+    {
+      "id": "6603586afe7d",
       "source": "Reporterre",
       "categorie": "Eau",
-      "titre": "Panneaux solaires au sol : nos chiffres inédits sur les forêts et terres agricoles sacrifiées",
-      "resume": "L'article met en lumière l'impact environnemental des installations photovoltaïques au sol sur les forêts et terres agricoles, un enjeu indirect pour ABC via ses clients (secteurs énergie, industrie, santé) soumis à des exigences carbone croissantes et à des risques de réputation liés à leur chaîne de valeur.",
+      "titre": "Panneaux solaires au sol : les forêts et terres agricoles sacrifiées",
+      "resume": "L'article aborde l'impact environnemental des panneaux solaires au sol sur les forêts et terres agricoles, un sujet indirectement lié aux enjeux de décarbonation et de reporting ESG de ABC, notamment via la CSRD et les attentes clients en matière de durabilité.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Panneaux-solaires-au-sol-nos-chiffres-inedits-sur-les-forets-et-terres-agricoles",
@@ -50,7 +61,7 @@
       "source": "Contexte Environnement",
       "categorie": "ICPE",
       "titre": "Sur la restriction PFAS, l’Echa a mobilisé « cinq à dix fois plus de personnes que sur un autre dossier »",
-      "resume": "La restriction des PFAS pourrait impacter les produits de nettoyage utilisés par ABC dans ses prestations de propreté, nécessitant une adaptation des formulations ou des fournisseurs pour se conformer aux futures réglementations européennes.",
+      "resume": "Les restrictions potentielles sur les PFAS pourraient impacter les produits de nettoyage utilisés par ABC dans ses prestations de propreté, nécessitant une adaptation des formulations et une traçabilité renforcée des substances chimiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.contexte.com/fr/article/environnement/sur-la-restriction-pfas-lecha-a-mobilise-cinq-a-dix-fois-plus-de-personnes-que-sur-un-autre-dossier_261801?source=rss",
@@ -61,7 +72,7 @@
       "source": "Le Monde Planète",
       "categorie": "Environnement",
       "titre": "Action climatique : cinq ans de renoncements ?",
-      "resume": "L'article interroge l'évolution de l'action climatique en France sur 5 ans, offrant un contexte utile pour évaluer la stratégie climatique d'ABC face aux attentes réglementaires et clients (CSRD, BGES, décarbonation).",
+      "resume": "L'article interroge l'évolution de l'action climatique en France sur 5 ans, offrant un contexte utile pour évaluer la trajectoire des politiques climatiques (SNBC, PNACC) et leurs impacts potentiels sur les obligations de reporting (CSRD) et la décarbonation des entreprises comme ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/podcasts/article/2026/04/21/action-climatique-cinq-ans-de-renoncements_6681949_5463015.html",
@@ -72,7 +83,7 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Les énergies renouvelables ont produit plus d’électricité que le charbon en 2025, une première",
-      "resume": "L'article souligne la transition énergétique en cours vers les renouvelables, un contexte favorable pour ABC dans le cadre de sa stratégie de décarbonation (scope 2) et de reporting CSRD/ESRS, bien que sans obligation directe immédiate.",
+      "resume": "L'article illustre la progression des énergies renouvelables en Europe, un contexte favorable pour ABC qui pourrait intégrer davantage de solutions bas-carbone dans ses prestations (énergie, mobilité) ou répondre à des exigences clients en décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/04/21/en-2025-l-electricite-produite-a-partir-d-energies-renouvelables-a-depasse-pour-la-premiere-fois-celle-produite-avec-le-charbon_6681912_3244.html",
@@ -83,7 +94,7 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "GES, polluants, déchets : un recul global en France, mais des limites persistantes",
-      "resume": "L'article confirme une tendance nationale de réduction des émissions GES et de l'empreinte carbone, mais souligne des limites persistantes dans les transports, un secteur clé pour ABC (flotte de véhicules). Cela peut impacter les objectifs de décarbonation de la flotte et les exigences clients en matière de mobilité durable.",
+      "resume": "L'article confirme une tendance nationale de réduction des GES et de l'empreinte carbone, mais souligne des limites persistantes, notamment dans les transports, ce qui peut impacter les enjeux de décarbonation de la flotte de véhicules d'ABC et ses engagements scope 1.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/ges-polluants-dechets-un-recul-global-en-france-mais-des-limites-persistantes",
@@ -116,7 +127,7 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Le chiffre du jour : -3 %",
-      "resume": "L'article illustre la tendance de décarbonation de l'UE, un contexte utile pour positionner ABC face aux exigences carbone croissantes de ses clients (nucléaire, santé, industrie) et aux attentes en matière de reporting ESG.",
+      "resume": "L'article confirme la tendance de décarbonation de l'UE (-40% depuis 1990), un contexte utile pour positionner ABC dans un marché en transition et anticiper les exigences clients en matière de reporting carbone.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/dit-aujourdhui/1800.html#xtor=RSS-6",
@@ -127,7 +138,7 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Stockage illégal de déchets : le préfet peut imposer la remise en état au propriétaire du site",
-      "resume": "L'article aborde la responsabilité du propriétaire d'un site en cas de stockage illégal de déchets, ce qui pourrait impacter les obligations de traçabilité et de gestion des déchets pour ABC dans le cadre de ses prestations chez ses clients.",
+      "resume": "L'article confirme l'élargissement des responsabilités des propriétaires de sites en cas de stockage illégal de déchets, ce qui pourrait impacter ABC dans le cadre de la gestion des déchets de ses prestations chez les clients (scope 3).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/stockage-illegal-dechets-mise-en-demeure-remise-en-etat-proprietaire-site-47884.php4#xtor=RSS-6",
@@ -138,7 +149,7 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Les textes encadrant la redevance PFAS sont en consultation",
-      "resume": "La redevance PFAS pourrait impacter les coûts de gestion des déchets pour ABC si ses clients ou ses propres activités sont concernés par ces polluants persistants, nécessitant une veille sur les obligations de traçabilité et de traitement.",
+      "resume": "La redevance PFAS pourrait impacter les coûts de gestion des déchets pour ABC, notamment si ses clients ou ses propres activités sont concernés par ces polluants persistants. Une vigilance sur les projets de décret et d'arrêté est nécessaire pour anticiper les obligations futures.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/consultation-texte-redevance-ICPE-pollution-PFAS-47881.php4#xtor=RSS-6",
@@ -149,7 +160,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "La nouvelle stratégie d’Effy en période d’incertitude politique",
-      "resume": "Effy recentre sa stratégie sur les entreprises et l'industrie, renforçant son offre liée aux CEE et à la rénovation énergétique, ce qui pourrait impacter les clients d'ABC dans le cadre de leurs obligations de décarbonation et de reporting ESG.",
+      "resume": "Effy recentre sa stratégie sur les entreprises et l'industrie, incluant des services liés à la rénovation énergétique et aux CEE, ce qui pourrait impacter indirectement les enjeux de décarbonation et d'efficacité énergétique des clients d'ABC dans le cadre de leurs obligations CSRD ou BGES.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/la-nouvelle-strategie-deffy-en-periode-dincertitude-politique-421734/",
@@ -160,7 +171,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Les batteries auront un faible impact sur les prix bas de l’électricité [Etude]",
-      "resume": "L'étude de l'Ofate souligne que les batteries ont un impact limité sur la réduction des heures à prix bas/négatifs de l'électricité en France et en Allemagne d'ici 2030, ce qui peut influencer les stratégies énergétiques des entreprises et leurs coûts opérationnels.",
+      "resume": "L'étude de l'Ofate souligne que les batteries ne suffiront pas à résoudre les périodes de prix bas/négatifs de l'électricité en France et Allemagne d'ici 2030, ce qui impacte indirectement la stratégie énergétique des entreprises comme ABC dans leur transition vers des énergies renouvelables.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/les-batteries-auront-un-faible-impact-sur-les-prix-bas-de-lelectricite-etude-421751/",
@@ -171,7 +182,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Réchauffement climatique : pourquoi des scientifiques appellent à oublier l’objectif de limitation à + 1,5 °C",
-      "resume": "L'article aborde un débat sur la révision de l'objectif de +1,5°C de l'Accord de Paris, ce qui pourrait influencer les politiques climatiques futures et les attentes des parties prenantes d'ABC en matière de reporting ESG et de trajectoires de décarbonation.",
+      "resume": "L'article aborde un débat sur la révision de l'objectif de +1,5°C de l'Accord de Paris, ce qui pourrait influencer les politiques climatiques françaises et européennes (SNBC, PNACC) et donc les exigences réglementaires et clients pour ABC en matière de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/04/20/rechauffement-climatique-pourquoi-des-scientifiques-appellent-a-oublier-l-objectif-de-limitation-a-1-5-c_6681745_3244.html",
@@ -182,21 +193,10 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Le prix des carburants ne « baissera pas de sitôt », selon Michel-Edouard Leclerc, qui estime que la crise énergétique durera « au moins six mois »",
-      "resume": "L'article souligne la persistance des prix élevés des carburants, impactant directement les coûts opérationnels de la flotte de véhicules d'ABC (scope 1). Une hausse durable des prix pourrait accélérer la transition vers des véhicules propres ou des alternatives énergétiques.",
+      "resume": "L'article souligne la persistance des prix élevés des carburants, impactant directement les coûts opérationnels de la flotte de véhicules d'ABC (scope 1) et la compétitivité des prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/04/20/le-prix-des-carburants-ne-baissera-pas-de-sitot-selon-michel-edouard-leclerc-qui-estime-que-la-crise-energetique-durera-au-moins-six-mois_6681741_3234.html",
-      "date": "2026-04-20"
-    },
-    {
-      "id": "ac8efc667510",
-      "source": "ESG Today",
-      "categorie": "Énergie",
-      "titre": "Renewable Metals Raises $12 Million to Scale Battery Recycling Platform",
-      "resume": "L'article illustre une tendance forte de décarbonation des chaînes de valeur via le recyclage des batteries, ce qui pourrait impacter indirectement ABC via les exigences carbone de ses clients industriels ou énergétiques (nucléaire, santé) dans le cadre de leurs plans de décarbonation (scope 3).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/renewable-metals-raises-12-million-to-scale-battery-recycling-platform/?utm_source=rss&utm_medium=rss&utm_campaign=renewable-metals-raises-12-million-to-scale-battery-recycling-platform",
       "date": "2026-04-20"
     },
     {
@@ -204,21 +204,10 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "Heineken Appoints Simon Henzell-Thomas as New Global Sustainability Director",
-      "resume": "L'article annonce une nomination stratégique en durabilité chez Heineken, illustrant l'importance croissante des enjeux climatiques dans les secteurs industriels et de services, ce qui peut influencer les attentes des clients d'ABC en matière de reporting ESG et de décarbonation.",
+      "resume": "L'article illustre l'importance stratégique de la fonction 'Sustainability Director' dans une grande entreprise, reflétant une tendance sectorielle vers l'intégration renforcée des enjeux climatiques et RSE au plus haut niveau décisionnel.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/heineken-appoints-simon-henzell-thomas-as-new-global-sustainability-director/?utm_source=rss&utm_medium=rss&utm_campaign=heineken-appoints-simon-henzell-thomas-as-new-global-sustainability-director",
-      "date": "2026-04-20"
-    },
-    {
-      "id": "54f34b084d57",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "Apple Avoids Over 26 Million Tons of Emissions Through Use of Clean Energy in Supply Chain",
-      "resume": "L'article illustre l'engagement des grands donneurs d'ordre (comme Apple) dans la décarbonation de leur chaîne de valeur, ce qui peut influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et renforcer la pression sur les prestataires de services comme ABC pour aligner leurs pratiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/apple-avoids-over-26-million-tons-of-emissions-through-use-of-clean-energy-in-supply-chain/?utm_source=rss&utm_medium=rss&utm_campaign=apple-avoids-over-26-million-tons-of-emissions-through-use-of-clean-energy-in-supply-chain",
       "date": "2026-04-20"
     }
   ],
@@ -490,7 +479,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des deux textes publiés au Journal Officiel le 21 avril 2026 n'est directement pertinent pour un Responsable Environnement/Climat d'une grande entreprise de services, car ils concernent respectivement des péages autoroutiers et une cession de parts sociales dans un office de greffier.",
+  "briefing_jorf": "Aucun des deux textes publiés au Journal Officiel du 21 avril 2026 n'a de pertinence directe pour un Responsable Environnement/Climat d'une grande entreprise de services, car ils concernent respectivement des péages routiers et une cession de parts sociales dans un office de greffier.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -832,5 +821,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet de loi n°2518 (transposition de directives européennes) pourrait inclure des mesures liées à l'économie circulaire, l'énergie ou la biodiversité, tandis que le projet n°2632 (protection et souveraineté agricoles) pourrait impacter les politiques de transition écologique et les pratiques durables. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) présente un intérêt direct pour un Responsable Environnement/Climat. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou RSE."
 }
