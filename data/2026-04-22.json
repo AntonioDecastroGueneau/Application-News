@@ -1,0 +1,1454 @@
+{
+  "date": "2026-04-22",
+  "generated_at": "07:23",
+  "elapsed_seconds": 231,
+  "errors": [],
+  "stats": {
+    "jo_analyses": 21,
+    "jo_retenus": 0,
+    "depts_restriction": 7
+  },
+  "pipeline_meta": {
+    "run_at": "2026-04-22T07:23:03",
+    "sources": {
+      "JORF": 0,
+      "RSS": 12,
+      "VigiEau": 7,
+      "Parlement": 1
+    },
+    "errors": [
+      "SOURCE VIDE — JORF : 0 textes retenus"
+    ],
+    "llm_calls": 66,
+    "llm_seconds": 79.2
+  },
+  "items": [
+    {
+      "id": "b72680a19b30",
+      "source": "Actuel HSE",
+      "categorie": "Déchets",
+      "titre": "CLP et cosmétiques :  un avis sénatorial pointe des risques par rapport à Omnibus VI",
+      "resume": "CLP et cosmétiques :  un avis sénatorial pointe des risques par rapport à Omnibus VI",
+      "pourquoi": "Mention de Omnibus.",
+      "criticite": 3,
+      "url": "https://www.actuel-hse.fr/content/clp-et-cosmetiques-un-avis-senatorial-pointe-des-risques-par-rapport-omnibus-vi",
+      "date": "2026-04-22"
+    },
+    {
+      "id": "d9a770992d9e",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "Watershed Launches New AI Agents to Clean “Messy” Sustainability Data",
+      "resume": "L'article présente une solution technologique (IA) pour améliorer la qualité des données de durabilité, ce qui pourrait faciliter le reporting ESG (CSRD/ESRS) et la gestion des données carbone pour ABC, notamment dans le cadre de la décarbonation et du bilan GES.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/watershed-launches-new-ai-agents-to-clean-messy-sustainability-data/?utm_source=rss&utm_medium=rss&utm_campaign=watershed-launches-new-ai-agents-to-clean-messy-sustainability-data",
+      "date": "2026-04-22"
+    },
+    {
+      "id": "76c131c7748a",
+      "source": "Actuel HSE",
+      "categorie": "Déchets",
+      "titre": "La Cour des comptes dresse un bilan de la LOM",
+      "resume": "La Cour des comptes évalue la mise en œuvre de la Loi d'Orientation des Mobilités (LOM) de 2019, qui inclut des mesures clés pour la mobilité durable (électrification des flottes, ZFE, etc.), avec des retards persistants pouvant impacter les obligations réglementaires d'ABC en matière de décarbonation de sa flotte (scope 1).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/la-cour-des-comptes-dresse-un-bilan-de-la-lom-2",
+      "date": "2026-04-22"
+    },
+    {
+      "id": "25706bcf35fa",
+      "source": "Actuel HSE",
+      "categorie": "Déchets",
+      "titre": "Une proposition de loi veut rendre obligatoire la commission environnement du CSE",
+      "resume": "La proposition de loi pourrait imposer une commission environnement obligatoire au CSE, renforçant l'intégration des enjeux climatiques dans les négociations sociales chez ABC, notamment pour les sites clients où l'entreprise intervient.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/une-proposition-de-loi-veut-rendre-obligatoire-la-commission-environnement-du-cse-0",
+      "date": "2026-04-22"
+    },
+    {
+      "id": "e1ae6af0f8aa",
+      "source": "Actuel HSE",
+      "categorie": "Déchets",
+      "titre": "La Commission relance sa Plateforme des parties prenantes pour le zéro pollution",
+      "resume": "La relance de la Plateforme des parties prenantes pour le zéro pollution par la Commission européenne pourrait influencer les exigences réglementaires en matière de pollution et de qualité de l'air, impactant indirectement les obligations de reporting ESG et les pratiques environnementales des entreprises de services comme ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/la-commission-relance-sa-plateforme-des-parties-prenantes-pour-le-zero-pollution-2",
+      "date": "2026-04-22"
+    },
+    {
+      "id": "35304a919626",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Réemploi et recyclage : les avantages de la consigne mixte selon Reloop",
+      "resume": "La consigne mixte pourrait influencer les pratiques de gestion des déchets des clients d'ABC (notamment en santé ou industrie) en renforçant le réemploi et le recyclage, impactant potentiellement les flux de déchets des prestations de propreté/FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/etude-reloop-consigne-recyclage-reemploi-47887.php4#xtor=RSS-6",
+      "date": "2026-04-21"
+    },
+    {
+      "id": "1948a1e70801",
+      "source": "Actu-Environnement",
+      "categorie": "Environnement",
+      "titre": "Transports : malgré la demande, voyager en train en Europe reste un casse-tête pour les Français",
+      "resume": "L'article souligne les difficultés logistiques et d'accessibilité du train en Europe, un enjeu indirect pour ABC dans le cadre de sa politique de mobilité durable et de décarbonation de sa flotte (scope 1).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/transports-voyages-train-difficultes-france-europe-47885.php4#xtor=RSS-6",
+      "date": "2026-04-21"
+    },
+    {
+      "id": "96b5a6c3d5b4",
+      "source": "Reporterre",
+      "categorie": "Énergie",
+      "titre": "En 2025, les énergies renouvelables ont produit plus d'électricité que le charbon",
+      "resume": "L'article souligne la progression des énergies renouvelables dans le mix électrique mondial, un signal positif pour la transition énergétique mais sans impact direct immédiat sur les activités d'ABC (prestataire propreté/FM).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/En-2025-les-energies-renouvelables-ont-produit-plus-d-electricite-que-le-charbon",
+      "date": "2026-04-21"
+    },
+    {
+      "id": "15ab1d12f733",
+      "source": "Novethic",
+      "categorie": "Énergie",
+      "titre": "Pour la première fois, les renouvelables ont produit plus d’électricité que le charbon",
+      "resume": "L'article souligne une transition majeure vers les énergies renouvelables dans le mix électrique mondial, ce qui pourrait influencer les exigences clients d'ABC (notamment industriels ou énergétiques) en matière de décarbonation et de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/environnement/transition-energetique/pour-premiere-fois-renouvelables-produit-plus-electricite-que-charbon",
+      "date": "2026-04-21"
+    },
+    {
+      "id": "0b744b28ccd3",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Décarbonation : face à la crise, le coût de l’inaction monte pour l’industrie",
+      "resume": "L'article souligne l'augmentation des coûts liés à l'inaction climatique pour l'industrie, ce qui pourrait impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et renforcer les pressions sur la décarbonation de sa flotte et de ses prestations.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/04/decarbonation-face-a-la-crise-le-cout-de-linaction-monte-pour-lindustrie-421900/",
+      "date": "2026-04-21"
+    },
+    {
+      "id": "4d629156e150",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Gaz : le tarif réseau de GRDF en forte hausse",
+      "resume": "La hausse du tarif réseau GRDF (+5,87%) impacte indirectement les coûts énergétiques des clients d'ABC, notamment dans les secteurs tertiaire et industriel où le gaz est utilisé pour le chauffage ou les process.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/04/gaz-le-tarif-reseau-de-grdf-en-forte-hausse-421908/",
+      "date": "2026-04-21"
+    },
+    {
+      "id": "7d172b8ecac3",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "Most Businesses Maintaining Climate Action, but Reframing Messaging on Net Zero: Survey",
+      "resume": "L'article souligne une tendance des entreprises à recentrer leur communication sur la résilience climatique plutôt que sur des objectifs net zéro ambitieux, ce qui pourrait influencer les attentes des clients d'ABC en matière de reporting ESG et de gestion des risques.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/most-businesses-maintaining-climate-action-but-reframing-messaging-on-net-zero-survey/?utm_source=rss&utm_medium=rss&utm_campaign=most-businesses-maintaining-climate-action-but-reframing-messaging-on-net-zero-survey",
+      "date": "2026-04-21"
+    }
+  ],
+  "restrictions_eau": [
+    {
+      "dept_code": "66",
+      "dept_nom": "Pyrénées-Orientales",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "01",
+      "dept_nom": "Ain",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "11",
+      "dept_nom": "Aude",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "17",
+      "dept_nom": "Charente-Maritime",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "79",
+      "dept_nom": "Deux-Sèvres",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "16",
+      "dept_nom": "Charente",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "44",
+      "dept_nom": "Loire-Atlantique",
+      "niveau": "vigilance"
+    }
+  ],
+  "jo_autres": [
+    {
+      "titre": "Arrêté du 15 avril 2026 modifiant la liste des spécialités pharmaceutiques prises en charge au titre de l'article L. 162-18-1 du code de la sécurité sociale",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925618",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 16 avril 2026 modifiant l'arrêté du 10 avril 2019 relatif à la généralisation du tableau de bord de la performance dans le secteur médico-social",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925641",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 fixant la liste des établissements de santé qui démarrent en facturation individuelle des prestations de soins hospitaliers aux caisses d'assurance maladie obligatoire, ainsi que le périmètre de facturation concerné par la facturation individuelle pour chacun de ces établissements de santé",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925666",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 7 avril 2026 portant création d'une zone interdite temporaire dans la région de Villers-Bretonneux (Somme), identifiée ZIT ANZAC Day, dans la région d'information de vol de Paris",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925815",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 fixant la date et les modalités d'inscription aux examens de capacité professionnelle pour l'exercice de la profession de transporteur public routier et de commissionnaire de transport",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925829",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décision n° 2026-TO-05 du 10 février 2026 rectifiant la décision n° 2025-TO-15 du 14 octobre 2025 portant reconduction de l'autorisation délivrée à l'association Los Estuflaïres, Groupe d'Animation Caylusien, pour l'exploitation d'un service de radio de catégorie A par voie hertzienne terrestre en modulation de fréquence dénommé CFM Cordes, CFM Caylus, CFM Montauban",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926445",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Avis modifiant l'avis de vacance d'emplois de directeur d'établissements sanitaires, sociaux et médico-sociaux",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926613",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 13 avril 2026 portant délégation de signature (cabinet du ministre délégué auprès du ministre de l'intérieur)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925371",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 autorisant au titre de l'année 2026 l'ouverture de l'examen professionnel pour l'accès au grade de brigadier-chef de police (SUEP) défini au 2° de l'article 15-1 du décret n° 2004-1439 du 23 décembre 2004 modifié portant statut particulier du corps d'encadrement et d'application de la police nationale",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925378",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 autorisant au titre de l'année 2026 l'ouverture de l'examen professionnel pour l'accès au grade de brigadier-chef de police (classique) défini au 1° de l'article 15-1 du décret n° 2004-1439 du 23 décembre 2004 modifié portant statut particulier du corps d'encadrement et d'application de la police nationale",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925396",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 20 avril 2026 portant interdiction de déplacement des supporters du club de football de l'Olympique Gymnaste Club de Nice lors de la rencontre du dimanche 26 avril 2026 à 20 h 45 avec l'Olympique de Marseille",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925415",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 20 avril 2026 portant interdiction de déplacement des supporters du club de football du Football Club de Nantes lors de la rencontre du dimanche 26 avril 2026 à 17 h 15 avec le Stade Rennais Football Club",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925426",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 20 avril 2026 portant interdiction de déplacement des supporters du club de football du Racing Club de Lens lors de la rencontre du vendredi 24 avril 2026 à 20 h 45 avec le Stade Brestois 29",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925437",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décision du 20 avril 2026 portant délégation de signature (direction générale de la police nationale, direction nationale de la police aux frontières)",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925448",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 20 avril 2026 modifiant l'arrêté du 10 octobre 2011 fixant les règles d'organisation, le programme et la nature des épreuves des concours de recrutement du personnel de surveillance de la direction générale de la sécurité extérieure et relatif à l'aptitude physique exigée des candidats à ces concours",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925467",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 20 avril 2026 modifiant diverses dispositions indemnitaires",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925491",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 20 avril 2026 fixant le montant dû par la Caisse nationale d'assurance vieillesse à l'AGIRC-ARRCO au titre de l'année 2024",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925503",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret n° 2026-302 du 21 avril 2026 relatif à la simplification de la procédure contentieuse en matière environnementale et à l'accélération de certains projets",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925515",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret n° 2026-303 du 21 avril 2026 portant renouvellement de classement du parc naturel régional de la Montagne de Reims (région Grand-Est)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925560",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret n° 2026-304 du 21 avril 2026 portant renouvellement de classement du parc naturel régional du Queyras (région Provence-Alpes-Côte d'Azur)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925571",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 16 avril 2026 modifiant l'arrêté du 31 juillet 2013 relatif aux conditions d'inscription sur la liste d'aptitude aux emplois d'agent de direction des organismes de sécurité sociale du régime général et de certains régimes spéciaux",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925634",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 fixant les taux de promotion pour l'année 2026 dans certains corps de la fonction publique hospitalière",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925698",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 20 avril 2026 portant renouvellement d'inscription et changement de l'exploitant au titre de l'article L. 165-1-1-1 du code de la sécurité sociale du dispositif de fermeture transcutanée de l'appendice auriculaire gauche LAMBRE de la société LIFETECH SCIENTIFIC inscrit au titre III de la liste des produits et prestations remboursables prévue à l'article L. 165-1 du code de la sécurité sociale",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925714",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 20 avril 2026 portant ouverture au titre de l'année 2026 d'une session d'examen pour l'obtention du certificat d'aptitude au professorat de l'enseignement adapté aux jeunes déficients visuels (CAEGADV)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925724",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 20 avril 2026 relatif à l'insaisissabilité d'un bien culturel",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925733",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant délégations de signature au cabinet du ministre de l'action et des comptes publics",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925740",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 21 avril 2026 modifiant l'arrêté du 14 avril 2026 portant délégation de signature (direction générale des finances publiques)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925749",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 modifiant l'arrêté du 3 avril 2026 portant déclaration de vacance d'emplois de maître de conférences des universités-praticien hospitalier des disciplines médicales, odontologiques et pharmaceutiques offerts à la mutation et au recrutement au titre de l'année 2026 et fixant les modalités de candidature",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925758",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 modifiant l'arrêté du 3 avril 2026 portant déclaration de vacance d'emplois de professeur des universités-praticien hospitalier des disciplines médicales, odontologiques et pharmaceutiques offerts à la mutation et au recrutement au titre de l'année 2026 et fixant les modalités de candidature",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925778",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 31 mars 2026 portant déclassement de parcelles relevant du domaine public fluvial confié à Voies navigables de France (VNF) sur le territoire de la commune d'Arques (Pas-de-Calais)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925799",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 2 avril 2026 modifiant l'arrêté du 1er octobre 2024 relatif à l'exploitation de services de transport aérien par la société easyJet Europe Airline GmbH",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925808",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 15 avril 2026 relatif aux fonctions requises pour l'accès aux emplois de chef de service technique principal, chef de service technique, chef d'unité technique, cadre supérieur technique et cadre technique de l'aviation civile",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925850",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 16 avril 2026 portant déclassement de parcelles relevant du domaine public fluvial confié à Voies navigables de France (VNF) sur le territoire de la commune de Vinneuf (Yonne)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925874",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 16 avril 2026 portant déclaration d'inutilité de parcelles relevant du domaine public fluvial confié à Voies navigables de France (VNF) sur le territoire de la commune de Saint-Quentin (Aisne)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925883",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 20 avril 2026 portant nomination (chambres régionales des comptes) - M. LOUBET DEL PAR (Philippe)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925894",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 21 avril 2026 portant nomination au conseil d'administration de la Fondation nationale des sciences politiques",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925902",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant admission à la retraite (administrateurs de l'Etat)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925906",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant admission à la retraite (administrateurs de l'Etat)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925911",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant admission à la retraite (administrateurs de l'Etat)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925916",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant admission à la retraite (administrateurs de l'Etat)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925922",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant admission à la retraite (administrateurs de l'Etat)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925927",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 21 avril 2026 relatif à la composition du cabinet du Premier ministre",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925932",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 21 avril 2026 portant nomination du directeur de cabinet de la préfète du Puy-de-Dôme - M. ROBAS (Enguerran)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925939",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 21 avril 2026 portant nomination de la sous-préfète chargée de mission auprès du préfet du Tarn - Mme DEMIGUEL (Marie-Paule)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925963",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 21 avril 2026 portant nomination de la sous-préfète de Forcalquier - Mme SIMONIN (Véronique)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925971",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 21 avril 2026 portant nomination du sous-préfet de Clamecy - M. PERRIN (Ludovic)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925979",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 21 avril 2026 portant nomination du sous-préfet chargé de mission auprès du préfet de Vaucluse - M. LELIONNAIS (Vincent)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925987",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 1er avril 2026 portant admission à la retraite",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925995",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 13 avril 2026 portant nomination au cabinet du ministre délégué auprès du ministre de l'intérieur",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925997",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 20 avril 2026 portant cessation de fonctions (directions départementales interministérielles)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926005",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 20 avril 2026 portant nomination (directions départementales interministérielles)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926011",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 20 avril 2026 portant affectation d'un officier général",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926019",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 21 avril 2026 portant cessation de fonctions et nomination de membres de la commission de déontologie des militaires",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926023",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 16 avril 2026 portant admission à la retraite (ingénieurs civils de la défense)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926031",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant admission à la retraite (ingénieurs civils de la défense)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926033",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 14 avril 2026 portant nomination du directeur général par intérim du Centre d'études et d'expertise sur les risques, l'environnement, la mobilité et l'aménagement (CEREMA)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926039",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 20 avril 2026 portant acceptation de démission et radiation des cadres (magistrature) - Mme IVANES-ABBA (Marie-Noëlle)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926051",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 20 avril 2026 portant maintien en détachement (magistrature) - Mme IMBERT (Mariannig)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926057",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 portant nomination d'un notaire salarié (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926070",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926074",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 portant nomination d'un notaire salarié (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926078",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 portant nomination d'une commissaire de justice salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926082",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 relatif à une société d'exercice libéral par actions simplifiée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926089",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 relatif à une société civile professionnelle (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926094",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 portant nomination d'un notaire salarié (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926102",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 relatif à une société d'exercice libéral à responsabilité limitée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926106",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 portant nomination d'une société d'exercice libéral à responsabilité limitée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926114",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926123",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 portant nomination d'un notaire salarié (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926127",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926131",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 10 avril 2026 portant nomination d'une société d'exercice libéral à responsabilité limitée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926135",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 10 avril 2026 relatif à une société d'exercice libéral à responsabilité limitée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926144",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 10 avril 2026 relatif à une société d'exercice libéral à responsabilité limitée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926153",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 10 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926161",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 10 avril 2026 relatif à une société civile professionnelle (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926165",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 10 avril 2026 relatif à une société civile professionnelle (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926175",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 10 avril 2026 portant admission à la retraite et maintien en fonction (magistrature)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926183",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 13 avril 2026 autorisant le transfert d'un office de notaire (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926185",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 14 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926189",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 14 avril 2026 relatif à une société civile professionnelle (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926193",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 14 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926199",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 14 avril 2026 portant nomination d'un notaire salarié (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926203",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 14 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926207",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 14 avril 2026 portant nomination d'une notaire (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926211",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 14 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926217",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 15 avril 2026 portant nomination d'un notaire salarié (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926229",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 15 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926233",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 15 avril 2026 portant nomination d'un notaire salarié (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926237",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 15 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926241",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 16 avril 2026 portant dissolution d'une société par actions simplifié et nomination d'une société d'exercice libéral à responsabilité limitée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926250",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 16 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926260",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 16 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926264",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant nomination d'une société d'exercice libéral à responsabilité limitée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926268",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926277",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926281",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant nomination d'une notaire salariée (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926285",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 14 novembre 2025 portant admission à la retraite (attachés d'administration de l'Etat)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926292",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 20 janvier 2026 portant admission à la retraite (corps des mines)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926296",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 15 avril 2026 portant admission à la retraite (ingénieurs des ponts, des eaux et des forêts)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926301",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 20 avril 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926304",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 21 avril 2026 portant nomination d'un ambassadeur extraordinaire et plénipotentiaire de la République française auprès du Saint-Siège - M. PERSONNAZ (Charles)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926310",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 16 avril 2026 portant nomination de membres du conseil d'administration de la Caisse nationale d'assurance vieillesse",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926314",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 16 avril 2026 portant nomination (agents comptables)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926317",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant nominations au cabinet du ministre de l'action et des comptes publics",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926319",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 21 avril 2026 portant nomination du délégué ministériel en charge de la lutte contre les violences dans le sport",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926328",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 9 avril 2026 portant cessation de fonctions et nomination au cabinet de la ministre des sports, de la jeunesse et de la vie associative",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926333",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 3 avril 2026 portant commissionnement d'un agent du service de surveillance du marché des véhicules et des moteurs, placé sous l'autorité du ministre des transports, en application du code de la route et notamment ses articles L. 329-5 et R. 329-2",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926342",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 8 avril 2026 portant nomination de membres associés de l'Autorité de contrôle des nuisances aéroportuaires",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926345",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Avis relatif à l'extension d'avenants et d'un accord conclus dans le cadre de la convention collective nationale du commerce de détail de l'horlogerie-bijouterie",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926349",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Avis relatif à l'extension d'un avenant à la convention collective nationale du personnel des prestataires de services dans le secteur tertiaire",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926359",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décision n° 2026-TO-01 du 10 février 2026 rectifiant la décision n° 2025-TO-08 du 14 octobre 2025 portant reconduction de l'autorisation délivrée à l'association Multi-Com pour l'exploitation d'un service de radio de catégorie A par voie hertzienne terrestre en modulation de fréquence dénommé Antenne d'Oc",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926365",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décision n° 2026-TO-02 du 10 février 2026 rectifiant la décision n° 2025-TO-14 du 14 octobre 2025 portant reconduction de l'autorisation délivrée à l'association Los Estuflaïres, Groupe d'Animation Caylusien, pour l'exploitation d'un service de radio de catégorie A par voie hertzienne terrestre en modulation de fréquence dénommé CFM Villefranche",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926385",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décision n° 2026-TO-03 du 10 février 2026 rectifiant la décision n° 2025-TO-10 du 14 octobre 2025 portant reconduction de l'autorisation délivrée à l'association Fréquence Luz, radio du pays de Lourdes et des Vallées des Gaves, pour l'exploitation d'un service de radio de catégorie A par voie hertzienne terrestre en modulation de fréquence dénommé Fréquence Luz, radio du pays de Lourdes et des Vallées",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926405",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décision n° 2026-TO-04 du 10 février 2026 rectifiant la décision n° 2025-TO-22 du 14 octobre 2025 portant reconduction de l'autorisation délivrée à l'association Radio Saint-Affrique pour l'exploitation d'un service de radio de catégorie A par voie hertzienne terrestre en modulation de fréquence dénommé Radio Saint-Affrique",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926425",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décision n° 2026-TO-06 du 10 février 2026 rectifiant la décision n° 2025-TO-19 du 14 octobre 2025 portant reconduction de l'autorisation délivrée à l'association Radio Ménergy pour l'exploitation d'un service de radio de catégorie B par voie hertzienne terrestre en modulation de fréquence dénommé Radio Ménergy",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926468",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décision n° 2025-2430 du 11 décembre 2025 proposant au ministre chargé des communications électroniques la fixation d'un tarif de location des infrastructures mises à disposition en zone blanche pour les opérateurs de téléphonie mobile au titre de l'année 2024",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926489",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Avis n° 2026-0001 du 6 janvier 2026 sur un projet d'arrêté relatif au tableau national de répartition des bandes de fréquences",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926532",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Composition de l'assemblée",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926540",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Groupes politiques",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926542",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Commissions et organes de contrôle",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926544",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Informations diverses",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926546",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Commissions / organes temporaires",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926549",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Documents publiés",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926551",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Rapports au parlement",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926553",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Commissions mixtes paritaires",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926556",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Avis de vacance d'un emploi de chef de service",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926561",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Avis modificatif de vacance d'emplois de directeur d'établissements sanitaires, sociaux et médico-sociaux",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926611",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Avis de vacance de l'emploi de directeur général de l'Agence nationale de l'habitat (ANAH)",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926620",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Avis relatif à la tarification du dispositif de fermeture transcutanée de l'appendice auriculaire gauche LAMBRE visé à l'article L. 165-1 du code de la sécurité sociale",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926640",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Demandes de changement de nom (Accès protégé textes 151 à 162)",
+      "nature": "ANNONCES",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926643",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 16 avril 2026 portant fermeture spatio-temporelle de la zone des isobathes 100 m à 500 m en mer Méditerranée pour certains navires battant pavillon français pour l'année 2026",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925582",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décision n° 2026-0002 du 6 janvier 2026 modifiant la décision n° 2022-1960 du 4 octobre 2022 fixant les conditions d'utilisation des fréquences radioélectriques dans les bandes 5 150 - 5 250 MHz, 5 250 - 5 350 MHz et 5 470 - 5 725 MHz pour la mise en œuvre des systèmes d'accès sans fil, y compris les réseaux locaux radioélectriques",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926520",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "LOI n° 2026-300 du 21 avril 2026 autorisant l'approbation de l'accord entre le Gouvernement de la République française et l'Agence spatiale européenne concernant les installations de l'Agence spatiale européenne en France (1)",
+      "nature": "LOI",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925334",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret n° 2026-301 du 21 avril 2026 portant convocation des collèges électoraux pour l'élection des sénateurs",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925339",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 16 avril 2026 pris en application de l'article R. 121-29 du code de l'énergie fixant le plafond de la compensation du coût des études relatives aux projets d'approvisionnement électrique identifiés dans la programmation pluriannuelle de l'énergie dans les zones non interconnectées",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925596",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret n° 2026-305 du 21 avril 2026 pris en application de l'article 2-1 du décret n° 59-178 du 22 janvier 1959 relatif aux attributions des ministres",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925610",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 21 avril 2026 portant cessation de fonctions de la directrice de cabinet de la préfète du Puy-de-Dôme - Mme PIRON (Margot)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925947",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décret du 21 avril 2026 portant cessation de fonctions de la directrice de cabinet du préfet de l'Aude - Mme TRIOUX (Amélie)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053925955",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 3 avril 2026 portant commissionnement d'un agent du service de surveillance du marché des véhicules et des moteurs, placé sous l'autorité de la ministre de la transition écologique, de la biodiversité et des négociations internationales sur le climat et la nature, en application du code de l'environnement et notamment ses articles L. 224-16 et R. 224-69",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926036",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant nomination au cabinet de la ministre de la transition écologique, de la biodiversité et des négociations internationales sur le climat et la nature",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926041",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Décision du 14 avril 2026 portant attribution du brevet technique à des administrateurs des affaires maritimes au titre de l'année 2025",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926048",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 15 avril 2026 relatif à la suppression d'un office de notaire (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926221",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 15 avril 2026 portant nomination d'un greffier de tribunal de commerce salarié (officiers publics ou ministériels)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926245",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 17 avril 2026 portant admission à la retraite (tribunaux administratifs et cours administratives d'appel)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926289",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 10 décembre 2025 portant admission à la retraite (ingénieurs de l'industrie et des mines)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926294",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Arrêté du 8 avril 2026 portant admission à la retraite (ingénieurs de l'industrie et des mines hors classe)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926298",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Avis relatif à l'extension d'un avenant à la convention collective nationale des industries de la maroquinerie, articles de voyages, chasse-sellerie, gainerie, bracelets en cuir (secteur cordonnerie multiservice)",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926354",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Avis de vacance d'un emploi de sous-directeur de la préparation, de l'anticipation et de la gestion des crises (administration centrale : direction générale de la sécurité civile et de la gestion des crises)",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926583",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Avis relatif à l'ouverture d'une procédure nationale d'opposition pour la demande de modification du cahier des charges de l'appellation d'origine protégée « Noix de Grenoble »",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926627",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Avis relatif à l'ouverture d'une procédure nationale d'opposition pour la demande de modification du cahier des charges de l'indication géographique protégée « Crème fraîche fluide d'Alsace »",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926631",
+      "date": "2026-04-22"
+    },
+    {
+      "titre": "Avis relatif à l'ouverture d'une procédure nationale d'opposition pour la demande de modification du cahier des charges de l'indication géographique protégée « Gruyère »",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053926635",
+      "date": "2026-04-22"
+    }
+  ],
+  "jo_retenus": [],
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "pjl_fiches": [
+    {
+      "id": "pjl-14aebd68935a",
+      "titre": "Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche",
+      "date_depot": "2026-03-24",
+      "stade": "Première lecture à l'Assemblée nationale",
+      "stade_index": 2,
+      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
+      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
+      "source_rss": "manuel",
+      "resume_abc": "Économie / finances : compléments aux règles issues de directives financières et de transparence (par exemple sur l’information extra‑financière type CSRD, la régulation de certains acteurs financiers ou de marchés), ajustements de dispositions de droit des sociétés et de droit financier pour se mettre en conformité avec le droit européen.\n\nEnvironnement / énergie : mesures pour transposer ou adapter des directives récentes en matière d’efficacité énergétique et d’énergies renouvelables, ainsi que des ajustements sur la protection de la biodiversité (dérogations « espèces protégées ») et certains dispositifs liés aux emballages et déchets",
+      "pourquoi": "Impact CSRD et efficacité énergétique",
+      "score": 2,
+      "horizon": null,
+      "nouveau_stade": false,
+      "manuel": true,
+      "historique": [
+        {
+          "date": "2026-04-22",
+          "stade": "Première lecture à l'Assemblée nationale",
+          "event": "Importé depuis UI"
+        }
+      ],
+      "created_at": "2026-04-22",
+      "updated_at": "2026-04-22",
+      "supabase_id": "2f4948e1-de90-40ba-b759-b1b8ba2b0b1f",
+      "statut": "a_surveiller"
+    }
+  ],
+  "pjl_autres": [
+    {
+      "source": "AN Projets de loi",
+      "items": [
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement du Royaume des Pays-Bas portant délimitation de la frontière entre la République française (Saint-Martin) et le Royaume des Pays-Bas (Sint Maarten) - N° 2688",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53848",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53848",
+          "date": "2026-02-25"
+        },
+        {
+          "titre": "Projet de loi sur la justice criminelle et le respect des victimes - N° 2681",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53940",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53940",
+          "date": "2026-03-18"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord de partenariat et de coopération renforcé&#13;entre l'Union européenne et ses Etats membres, d'une part, et la République kirghize, d'autre part - N° 2691",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53844",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53844",
+          "date": "2026-02-25"
+        },
+        {
+          "titre": "Projet de loi organique relatif au renforcement des juridictions criminelles - N° 2682",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53942",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53942",
+          "date": "2026-03-18"
+        },
+        {
+          "titre": "Projet de loi actualisant la programmation militaire pour les années 2024 à 2030 et portant diverses dispositions intéressant la défense - N° 2630",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PJL_actualisation_loi_programmation_militaire_annees_2024_2030_diverses_dispositions_defense",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PJL_actualisation_loi_programmation_militaire_annees_2024_2030_diverses_dispositions_defense",
+          "date": "2026-04-08"
+        },
+        {
+          "titre": "Projet de loi d’urgence pour la protection et la souveraineté agricoles - N° 2632",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_urgence_pour_protection_et_souverainete_agricoles",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_urgence_pour_protection_et_souverainete_agricoles",
+          "date": "2026-04-08"
+        },
+        {
+          "titre": "Projet de loi portant habilitation de l’assemblée de Martinique à fixer elle-même des règles applicables sur son territoire en application de l’article 73 de la Constitution en matière d’énergie, d’eau et d’assainissement - N° 2609",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53600",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53600",
+          "date": "2026-01-19"
+        },
+        {
+          "titre": "Projet de loi portant transposition de l’avenant n°3 du 25 février 2026 au protocole d’accord du 10 novembre 2023 relatif à l’assurance chômage - N° 2619",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53981",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53981",
+          "date": "2026-03-25"
+        },
+        {
+          "titre": "Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche - N° 2518",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
+          "date": "2025-11-10"
+        },
+        {
+          "titre": "Projet de loi constitutionnelle relatif à la Nouvelle-Calédonie - N° 2529",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52984",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52984",
+          "date": "2025-10-14"
+        },
+        {
+          "titre": "Projet de loi de financement de la sécurité sociale pour 2026 - N° 2242",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2026",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2026",
+          "date": "2025-10-14"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de la convention entre le Gouvernement de la République française et le Gouvernement de la République de Chypre pour l’élimination de la double imposition en matière d’impôts sur le revenu et la prévention de l’évasion et de la fraude fiscales - N° 2516",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53706",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53706",
+          "date": "2026-01-28"
+        },
+        {
+          "titre": "Projet de loi autorisant l'approbation de la Convention entre le Gouvernement de la République française et le Gouvernement de la République italienne relative à l’entretien courant et à l’exploitation de la section située en territoire français de la lign - N° 2510",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53730",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53730",
+          "date": "2026-02-04"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de la convention d’extradition entre le Gouvernement de la République française et le Gouvernement de la République de Colombie - N° 2509",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53095",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53095",
+          "date": "2025-10-29"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République de Moldavie dans le domaine de la sécurité sociale - N° 2471",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/moldavie_securite_sociale",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/moldavie_securite_sociale",
+          "date": "2026-02-11"
+        },
+        {
+          "titre": "Projet de loi relatif à l’extension des prérogatives, des moyens, de l’organisation et du contrôle des polices municipales et des gardes champêtres - N° 2464",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53096",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53096",
+          "date": "2025-10-29"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et la Communauté des Caraïbes relatif à l’adhésion au protocole sur les privilèges et immunités de la Communauté des Caraïbes du 14 janvier 1985 - N° 2414",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53235",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53235",
+          "date": "2025-11-26"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République du Kazakhstan sur la réadmission des personnes - N° 2416",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53388",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53388",
+          "date": "2025-12-17"
+        },
+        {
+          "titre": "Projet de loi relatif à la restitution de biens culturels provenant d’États qui, du fait d’une appropriation illicite, en ont été privés - N° 2408",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52635",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52635",
+          "date": "2025-07-30"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République de Moldova relatif à la coopération dans le domaine de la défense - N° 2050",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_autorisant_approbation_accord_gouvernement_moldova_defense",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_autorisant_approbation_accord_gouvernement_moldova_defense",
+          "date": "2025-10-29"
+        },
+        {
+          "titre": "Projet de loi spéciale prévue par l'article 45 de la loi organique n°2001-692 du 1er août 2001 relative aux lois de finances - N° 2269",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/loi_speciale_2026",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/loi_speciale_2026",
+          "date": "2025-12-22"
+        },
+        {
+          "titre": "Projet de loi de finances pour 2026 - N° 2247",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2026",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2026",
+          "date": "2025-10-14"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement du Monténégro relatif à la coopération dans le domaine de la défense - N° 2236",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52561",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52561",
+          "date": "2025-07-16"
+        },
+        {
+          "titre": "L’approbation de l’accord entre le Gouvernement de la République française et l’Agence spatiale européenne concernant les installations de l’Agence spatiale européenne en France - N° 2155",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/approbation_accord_Gouvernement_Agence_spatiale_europeenne_installations_France",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/approbation_accord_Gouvernement_Agence_spatiale_europeenne_installations_France",
+          "date": "2025-12-02"
+        },
+        {
+          "titre": "Projet de loi de finances de fin de gestion pour 2025 - N° 2135",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
+          "date": "2025-11-10"
+        },
+        {
+          "titre": "Projet de loi relatif à la lutte contre les fraudes sociales et fiscales - N° 2115",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52985",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52985",
+          "date": "2025-10-14"
+        },
+        {
+          "titre": "Projet de loi de lutte contre la vie chère dans les outre-mer - N° 2046",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52600",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52600",
+          "date": "2025-07-30"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de la convention entre le Gouvernement de la République française et le Gouvernement de la République de Finlande pour l’élimination de la double imposition en matière d’impôts sur le revenu et la prévention de l’évasion et de la fraude fiscales et l’approbation de l’avenant à la convention entre le Gouvernement de la République française et le Gouvernement du Royaume de Suède en vue d’éviter les doubles impositions et de prévenir l’évasion fiscale en matière d’impôts sur le revenu et sur la fortune - N° 2054",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52549",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52549",
+          "date": "2025-07-11"
+        }
+      ]
+    },
+    {
+      "source": "AN Textes adoptés",
+      "items": [
+        {
+          "titre": "Texte adopté N° 270",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51987",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51987",
+          "date": "2025-04-25"
+        },
+        {
+          "titre": "Texte adopté N° 268",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/penalisation_rave_party_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/penalisation_rave_party_17e",
+          "date": "2025-03-18"
+        },
+        {
+          "titre": "Texte adopté N° 267",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/encadrer_regroupements_pedagogiques_intercommunaux_garantir_egalite_acces_ecole_rural_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/encadrer_regroupements_pedagogiques_intercommunaux_garantir_egalite_acces_ecole_rural_17e",
+          "date": "2026-02-17"
+        },
+        {
+          "titre": "Texte adopté N° 266",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reconnaitre_politique_nationale_adaptation_changement_climatique_adapter_mecanismes_assurance_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reconnaitre_politique_nationale_adaptation_changement_climatique_adapter_mecanismes_assurance_17e",
+          "date": "2025-10-28"
+        },
+        {
+          "titre": "Texte adopté N° 265",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_prevention_cardio_neuro_vasculaire_et_anticiper_risque_sanitaire_et_social_majeur_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_prevention_cardio_neuro_vasculaire_et_anticiper_risque_sanitaire_et_social_majeur_17e",
+          "date": "2025-12-23"
+        },
+        {
+          "titre": "Texte adopté N° 264",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_millefeuille_territorial_collectivite_unique_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_millefeuille_territorial_collectivite_unique_17e",
+          "date": "2025-09-16"
+        },
+        {
+          "titre": "Texte adopté N° 261",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fonds_social_euro_plus_banques_alimentaires",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fonds_social_euro_plus_banques_alimentaires",
+          "date": "2026-02-10"
+        },
+        {
+          "titre": "Texte adopté N° 259",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52230",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52230",
+          "date": "2025-05-19"
+        },
+        {
+          "titre": "Texte adopté N° 258",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53690",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53690",
+          "date": "2026-01-30"
+        },
+        {
+          "titre": "Texte adopté N° 256",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interdire_sucres_ajoutes_nourrissons_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interdire_sucres_ajoutes_nourrissons_17e",
+          "date": "2026-02-04"
+        },
+        {
+          "titre": "Texte adopté N° 253",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51175",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51175",
+          "date": "2024-12-31"
+        },
+        {
+          "titre": "Texte adopté N° 255",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/controle_gouvernance_reponsabilite_financiere_agences_operateurs_Etat_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/controle_gouvernance_reponsabilite_financiere_agences_operateurs_Etat_17e",
+          "date": "2026-02-04"
+        },
+        {
+          "titre": "Texte adopté N° 254",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/renforcer_enseignement_defense_nationale_dans_parcours_citoyennete_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/renforcer_enseignement_defense_nationale_dans_parcours_citoyennete_17e",
+          "date": "2026-01-27"
+        },
+        {
+          "titre": "Texte adopté N° 257",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/condamner_atteintes_droits_fondamentaux_personnes_migrantes_Tunisie",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/condamner_atteintes_droits_fondamentaux_personnes_migrantes_Tunisie",
+          "date": "2025-12-23"
+        },
+        {
+          "titre": "Texte adopté N° 252",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_renforcer_la_place_des_agriculteurs_dans_amenagement_du_territoire_et_securiser_activites_agricoles_face_au_changement_climatique_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_renforcer_la_place_des_agriculteurs_dans_amenagement_du_territoire_et_securiser_activites_agricoles_face_au_changement_climatique_17e",
+          "date": "2026-02-04"
+        },
+        {
+          "titre": "Texte adopté N° 251",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_sortie_indivision_successorale",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_sortie_indivision_successorale",
+          "date": "2025-01-21"
+        },
+        {
+          "titre": "Texte adopté N° 250",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/effectivite_droits_voisins_presse",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/effectivite_droits_voisins_presse",
+          "date": "2025-01-21"
+        },
+        {
+          "titre": "Texte adopté N° 249",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/statut_personnel_sante_services_incendie_secours",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/statut_personnel_sante_services_incendie_secours",
+          "date": "2025-01-21"
+        },
+        {
+          "titre": "Texte adopté N° 248",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/allocations_chomage_travailleurs_frontaliers",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/allocations_chomage_travailleurs_frontaliers",
+          "date": "2026-04-22"
+        },
+        {
+          "titre": "Texte adopté N° 247",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/affiliation_sociale_enfants_travailleurs_frontaliers",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/affiliation_sociale_enfants_travailleurs_frontaliers",
+          "date": "2025-07-22"
+        },
+        {
+          "titre": "Texte adopté N° 246",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/teletravail-frontalier",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/teletravail-frontalier",
+          "date": "2025-07-22"
+        },
+        {
+          "titre": "Texte adopté N° 243",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fin_de_vie_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fin_de_vie_17e",
+          "date": "2025-03-11"
+        },
+        {
+          "titre": "Texte adopté N° 244",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52103",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52103",
+          "date": "2025-05-15"
+        }
+      ]
+    }
+  ],
+  "pjl_briefing": "Aucun des projets de loi ou textes adoptés listés ne traite directement de sujets environnementaux, climatiques, énergétiques ou de RSE. Les textes adoptés (N°253 à 270) ne sont pas détaillés, mais leur numérotation suggère des sujets administratifs ou législatifs classiques sans lien apparent avec les enjeux climatiques ou environnementaux."
+}
