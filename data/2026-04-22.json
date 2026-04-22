@@ -1,7 +1,7 @@
 {
   "date": "2026-04-22",
-  "generated_at": "07:23",
-  "elapsed_seconds": 231,
+  "generated_at": "12:16",
+  "elapsed_seconds": 217,
   "errors": [],
   "stats": {
     "jo_analyses": 21,
@@ -9,10 +9,10 @@
     "depts_restriction": 7
   },
   "pipeline_meta": {
-    "run_at": "2026-04-22T07:23:03",
+    "run_at": "2026-04-22T12:16:53",
     "sources": {
       "JORF": 0,
-      "RSS": 12,
+      "RSS": 13,
       "VigiEau": 7,
       "Parlement": 1
     },
@@ -20,7 +20,7 @@
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 66,
-    "llm_seconds": 79.2
+    "llm_seconds": 89.1
   },
   "items": [
     {
@@ -35,14 +35,14 @@
       "date": "2026-04-22"
     },
     {
-      "id": "d9a770992d9e",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "Watershed Launches New AI Agents to Clean “Messy” Sustainability Data",
-      "resume": "L'article présente une solution technologique (IA) pour améliorer la qualité des données de durabilité, ce qui pourrait faciliter le reporting ESG (CSRD/ESRS) et la gestion des données carbone pour ABC, notamment dans le cadre de la décarbonation et du bilan GES.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/watershed-launches-new-ai-agents-to-clean-messy-sustainability-data/?utm_source=rss&utm_medium=rss&utm_campaign=watershed-launches-new-ai-agents-to-clean-messy-sustainability-data",
+      "id": "14bb18e1ee6f",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Transition énergétique des bâtiments tertiaires : le projet Demeter livre ses résultats",
+      "resume": "Le projet Demeter propose des outils et méthodes pour accélérer la transition énergétique des bâtiments tertiaires, ce qui peut impacter les obligations de performance énergétique des sites clients d'ABC (DPE tertiaire) et leurs exigences en matière de décarbonation.",
+      "pourquoi": "Le sujet touche directement à l'efficacité énergétique des bâtiments tertiaires, un enjeu clé pour les clients d'ABC (nucléaire, santé, industrie) et donc pour leur reporting ESG (CSRD) et leurs trajectoires de décarbonation (BGES). Les résultats de Demeter pourraient influencer les réglementations ou bonnes pratiques en matière de performance énergétique des bâtiments, avec un impact indirect sur les prestations de propreté/FM d'ABC.",
+      "criticite": 2,
+      "url": "https://www.actu-environnement.com/ae/news/projet-demeter-transition-energetique-batiments-tertiaires-cstb-ademe-oid-efficacity-47895.php4#xtor=RSS-6",
       "date": "2026-04-22"
     },
     {
@@ -50,10 +50,21 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "La Cour des comptes dresse un bilan de la LOM",
-      "resume": "La Cour des comptes évalue la mise en œuvre de la Loi d'Orientation des Mobilités (LOM) de 2019, qui inclut des mesures clés pour la mobilité durable (électrification des flottes, ZFE, etc.), avec des retards persistants pouvant impacter les obligations réglementaires d'ABC en matière de décarbonation de sa flotte (scope 1).",
+      "resume": "La Cour des comptes évalue la mise en œuvre de la Loi d'Orientation des Mobilités (LOM), qui impacte les obligations de mobilité durable et les flottes de véhicules, notamment via le développement des ZFE et l'électrification des flottes, directement alignés sur les enjeux de décarbonation de la flotte d'ABC.",
+      "pourquoi": "La LOM est un texte clé pour la mobilité durable en France, avec des implications directes sur les flottes de véhicules (scope 1) et les obligations réglementaires comme les ZFE. Bien qu'ABC ne soit pas directement citée, les évolutions de ce texte influencent ses clients (nucléaire, santé, industrie) et ses propres obligations en matière de décarbonation.",
+      "criticite": 2,
+      "url": "https://www.actuel-hse.fr/content/la-cour-des-comptes-dresse-un-bilan-de-la-lom-2",
+      "date": "2026-04-22"
+    },
+    {
+      "id": "d9a770992d9e",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "Watershed Launches New AI Agents to Clean “Messy” Sustainability Data",
+      "resume": "L'article présente un outil d'IA pour nettoyer les données de durabilité, ce qui pourrait faciliter le reporting ESG (CSRD/ESRS) et la gestion des données carbone pour ABC, notamment pour ses clients soumis à des exigences carbone.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/la-cour-des-comptes-dresse-un-bilan-de-la-lom-2",
+      "url": "https://www.esgtoday.com/watershed-launches-new-ai-agents-to-clean-messy-sustainability-data/?utm_source=rss&utm_medium=rss&utm_campaign=watershed-launches-new-ai-agents-to-clean-messy-sustainability-data",
       "date": "2026-04-22"
     },
     {
@@ -61,7 +72,7 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Une proposition de loi veut rendre obligatoire la commission environnement du CSE",
-      "resume": "La proposition de loi pourrait imposer une commission environnement obligatoire au CSE, renforçant l'intégration des enjeux climatiques dans les négociations sociales chez ABC, notamment pour les sites clients où l'entreprise intervient.",
+      "resume": "La proposition de loi pourrait imposer une commission environnement obligatoire au CSE, renforçant les obligations de dialogue social sur les enjeux climatiques pour ABC dans ses sites clients, notamment pour les prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/une-proposition-de-loi-veut-rendre-obligatoire-la-commission-environnement-du-cse-0",
@@ -72,32 +83,32 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "La Commission relance sa Plateforme des parties prenantes pour le zéro pollution",
-      "resume": "La relance de la Plateforme des parties prenantes pour le zéro pollution par la Commission européenne pourrait influencer les exigences réglementaires en matière de pollution et de qualité de l'air, impactant indirectement les obligations de reporting ESG et les pratiques environnementales des entreprises de services comme ABC.",
+      "resume": "La relance de la Plateforme des parties prenantes pour le zéro pollution par la Commission européenne pourrait influencer les exigences réglementaires en matière de pollution et de qualité de l'air, impactant indirectement les prestations de propreté/FM d'ABC chez ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/la-commission-relance-sa-plateforme-des-parties-prenantes-pour-le-zero-pollution-2",
       "date": "2026-04-22"
     },
     {
+      "id": "a99281831a13",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Emballages : l'impératif de recyclabilité dope l'attrait des solutions mono-matériaux",
+      "resume": "L'article souligne l'importance croissante des emballages mono-matériaux pour répondre aux exigences de recyclabilité, ce qui pourrait impacter la gestion des déchets des prestations de propreté/FM d'ABC, notamment en termes de traçabilité et de conformité aux réglementations REP.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/attrait-solution-monomateriaux-emballages-47889.php4#xtor=RSS-6",
+      "date": "2026-04-21"
+    },
+    {
       "id": "35304a919626",
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Réemploi et recyclage : les avantages de la consigne mixte selon Reloop",
-      "resume": "La consigne mixte pourrait influencer les pratiques de gestion des déchets des clients d'ABC (notamment en santé ou industrie) en renforçant le réemploi et le recyclage, impactant potentiellement les flux de déchets des prestations de propreté/FM.",
+      "resume": "La consigne mixte pourrait influencer les pratiques de gestion des déchets des clients d'ABC (notamment dans les secteurs santé, industrie ou nucléaire) en améliorant le réemploi et le recyclage des emballages, avec des implications potentielles sur leur reporting CSRD et leur stratégie déchets.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/etude-reloop-consigne-recyclage-reemploi-47887.php4#xtor=RSS-6",
-      "date": "2026-04-21"
-    },
-    {
-      "id": "1948a1e70801",
-      "source": "Actu-Environnement",
-      "categorie": "Environnement",
-      "titre": "Transports : malgré la demande, voyager en train en Europe reste un casse-tête pour les Français",
-      "resume": "L'article souligne les difficultés logistiques et d'accessibilité du train en Europe, un enjeu indirect pour ABC dans le cadre de sa politique de mobilité durable et de décarbonation de sa flotte (scope 1).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/transports-voyages-train-difficultes-france-europe-47885.php4#xtor=RSS-6",
       "date": "2026-04-21"
     },
     {
@@ -105,7 +116,7 @@
       "source": "Reporterre",
       "categorie": "Énergie",
       "titre": "En 2025, les énergies renouvelables ont produit plus d'électricité que le charbon",
-      "resume": "L'article souligne la progression des énergies renouvelables dans le mix électrique mondial, un signal positif pour la transition énergétique mais sans impact direct immédiat sur les activités d'ABC (prestataire propreté/FM).",
+      "resume": "L'article souligne la progression des énergies renouvelables dans le mix électrique mondial, un signal positif pour les entreprises engagées dans la décarbonation, mais sans impact direct immédiat sur les activités d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/En-2025-les-energies-renouvelables-ont-produit-plus-d-electricite-que-le-charbon",
@@ -116,7 +127,7 @@
       "source": "Novethic",
       "categorie": "Énergie",
       "titre": "Pour la première fois, les renouvelables ont produit plus d’électricité que le charbon",
-      "resume": "L'article souligne une transition majeure vers les énergies renouvelables dans le mix électrique mondial, ce qui pourrait influencer les exigences clients d'ABC (notamment industriels ou énergétiques) en matière de décarbonation et de reporting ESG.",
+      "resume": "Cette évolution du mix énergétique mondial vers les renouvelables pourrait influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et accélérer la décarbonation de leur chaîne de valeur, impactant indirectement les prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/transition-energetique/pour-premiere-fois-renouvelables-produit-plus-electricite-que-charbon",
@@ -127,7 +138,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Décarbonation : face à la crise, le coût de l’inaction monte pour l’industrie",
-      "resume": "L'article souligne l'augmentation des coûts liés à l'inaction climatique pour l'industrie, ce qui pourrait impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et renforcer les pressions sur la décarbonation de sa flotte et de ses prestations.",
+      "resume": "L'article souligne l'augmentation des coûts liés à l'inaction climatique pour l'industrie, ce qui pourrait renforcer les exigences carbone des clients d'ABC (secteurs nucléaire, santé, industrie) et accélérer les attentes en matière de décarbonation des prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/decarbonation-face-a-la-crise-le-cout-de-linaction-monte-pour-lindustrie-421900/",
@@ -138,7 +149,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Gaz : le tarif réseau de GRDF en forte hausse",
-      "resume": "La hausse du tarif réseau GRDF (+5,87%) impacte indirectement les coûts énergétiques des clients d'ABC, notamment dans les secteurs tertiaire et industriel où le gaz est utilisé pour le chauffage ou les process.",
+      "resume": "Cette hausse du tarif réseau de GRDF (5,87%) pourrait impacter indirectement les coûts énergétiques des sites clients d'ABC, notamment dans les secteurs tertiaires ou industriels où le gaz est utilisé pour le chauffage ou les process.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/gaz-le-tarif-reseau-de-grdf-en-forte-hausse-421908/",
@@ -149,7 +160,7 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "Most Businesses Maintaining Climate Action, but Reframing Messaging on Net Zero: Survey",
-      "resume": "L'article souligne une tendance des entreprises à recentrer leur communication sur la résilience climatique plutôt que sur des objectifs net zéro ambitieux, ce qui pourrait influencer les attentes des clients d'ABC en matière de reporting ESG et de gestion des risques.",
+      "resume": "L'article souligne une tendance chez les entreprises à recentrer leur communication sur la résilience climatique plutôt que sur des objectifs net zéro, ce qui pourrait influencer les attentes des clients d'ABC en matière de reporting ESG et de gestion des risques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/most-businesses-maintaining-climate-action-but-reframing-messaging-on-net-zero-survey/?utm_source=rss&utm_medium=rss&utm_campaign=most-businesses-maintaining-climate-action-but-reframing-messaging-on-net-zero-survey",
@@ -1102,7 +1113,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Les textes les plus pertinents concernent la protection des écosystèmes marins (fermeture spatio-temporelle en Méditerranée) et la transition énergétique (plafond de compensation des coûts d'études pour l'approvisionnement électrique dans les zones non interconnectées), ainsi que des décisions liées aux fréquences radioélectriques pouvant impacter les infrastructures numériques durables.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1450,5 +1461,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Aucun des projets de loi ou textes adoptés listés ne traite directement de sujets environnementaux, climatiques, énergétiques ou de RSE. Les textes adoptés (N°253 à 270) ne sont pas détaillés, mais leur numérotation suggère des sujets administratifs ou législatifs classiques sans lien apparent avec les enjeux climatiques ou environnementaux."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) et le projet de loi n°2632 (protection et souveraineté agricoles) présentent un intérêt direct pour un Responsable Environnement/Climat, notamment via l'adaptation au droit européen sur les enjeux climatiques et la transition énergétique."
 }
