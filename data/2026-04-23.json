@@ -1,7 +1,7 @@
 {
   "date": "2026-04-23",
-  "generated_at": "07:24",
-  "elapsed_seconds": 231,
+  "generated_at": "12:17",
+  "elapsed_seconds": 192,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,29 +9,62 @@
     "depts_restriction": 7
   },
   "pipeline_meta": {
-    "run_at": "2026-04-23T07:24:54",
+    "run_at": "2026-04-23T12:17:46",
     "sources": {
       "JORF": 0,
-      "RSS": 13,
+      "RSS": 17,
       "VigiEau": 7,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 59,
-    "llm_seconds": 72.7
+    "llm_calls": 61,
+    "llm_seconds": 75.0
   },
   "items": [
+    {
+      "id": "37f7000b7d4f",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "ISSB Decides to Develop Non-Mandatory Nature-Related Reporting Requirements",
+      "resume": "ISSB Decides to Develop Non-Mandatory Nature-Related Reporting Requirements",
+      "pourquoi": "Mention de ISSB.",
+      "criticite": 3,
+      "url": "https://www.esgtoday.com/issb-decides-to-develop-non-mandatory-nature-related-reporting-requirements/?utm_source=rss&utm_medium=rss&utm_campaign=issb-decides-to-develop-non-mandatory-nature-related-reporting-requirements",
+      "date": "2026-04-23"
+    },
+    {
+      "id": "613d6aa78062",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Electrification : le gouvernement publie son plan et son calendrier [Document]",
+      "resume": "Le plan gouvernemental d'électrification des flottes professionnelles (incluant les véhicules de prestation de services) impacte directement ABC via sa flotte de véhicules (scope 1) et les exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "pourquoi": "L'article traite de l'électrification des flottes professionnelles, un sujet opérationnel pour ABC (scope 1, CSRD, exigences clients). Le calendrier et les mesures de soutien gouvernemental sont des éléments clés pour anticiper les obligations réglementaires et les attentes clients en matière de décarbonation.",
+      "criticite": 2,
+      "url": "https://www.greenunivers.com/2026/04/electrification-le-gouvernement-publie-son-plan-et-son-calendrier-document-422180/",
+      "date": "2026-04-23"
+    },
     {
       "id": "4c29b8fb4f2a",
       "source": "EFRAG",
       "categorie": "Climat",
       "titre": "New EFRAG Update Podcast Episode Available: March Edition",
-      "resume": "L'article mentionne des évolutions dans les normes de reporting extra-financier (IFRS 20, CSRD) qui impactent directement les obligations de reporting ESG de ABC, notamment pour la conformité CSRD/ESRS.",
-      "pourquoi": "L'article signale des évolutions des normes IFRS 20 et CSRD/ESRS qui renforcent les exigences de reporting extra-financier pour ABC, imposant une collecte et une traçabilité accrues des données carbone (scope 1, 2 et 3) d'ici 2025-2026. Cela crée une opportunité pour ABC de structurer sa démarche bas-carbone (électrification flotte, optimisation énergétique) et de répondre aux attentes clients en matière de transparence, sous peine de perdre des contrats ou de subir des pénalités réglementaires.",
+      "resume": "L'article mentionne des évolutions réglementaires liées à la CSRD (IFRS 20, reporting extra-financier) et des consultations en cours, pertinentes pour le reporting ESG d'ABC dans le cadre de ses obligations CSRD/ESRS.",
+      "pourquoi": "EFRAG est l'organisme européen de référence pour les normes de reporting extra-financier (ESRS) et les IFRS Sustainability. Les discussions sur l'IFRS 20 (lié à la CSRD) et les consultations sur la mitigation des risques impactent directement les entreprises soumises à la CSRD, comme ABC. La mention d'un report de date effective (2030) est un signal à suivre pour anticiper les échéances.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/new-efrag-update-podcast-episode-available-march-edition",
+      "date": "2026-04-23"
+    },
+    {
+      "id": "0f12e0b19ed2",
+      "source": "Reporterre",
+      "categorie": "Énergie",
+      "titre": "Voitures électriques, pompes à chaleur... Le grand plan d'électrification accouche d'une coquille vide",
+      "resume": "Le plan d'électrification français ne prévoit pas de soutien public supplémentaire pour les entreprises, ce qui pourrait impacter les coûts de transition de la flotte véhicules d'ABC (scope 1) et les exigences carbone de ses clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Voitures-electriques-pompes-a-chaleur-Le-grand-plan-d-electrification-accouche-d-une-coquille-vide",
       "date": "2026-04-23"
     },
     {
@@ -39,10 +72,32 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "L’investisseur Abenex s’attaque à la décarbonation des PME industrielles",
-      "resume": "L'article illustre une tendance croissante des investisseurs à cibler la décarbonation des PME industrielles, ce qui pourrait influencer les exigences carbone des clients d'ABC (notamment dans l'industrie) et renforcer les attentes en matière de reporting ESG et de décarbonation des prestataires.",
+      "resume": "L'article met en lumière une initiative d'investissement ciblant la décarbonation des PME industrielles, ce qui pourrait influencer les attentes des clients d'ABC en matière de transition bas-carbone et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/linvestisseur-abenex-sattaque-a-la-decarbonation-des-pme-industrielles-421910/",
+      "date": "2026-04-23"
+    },
+    {
+      "id": "8406dec7a7e2",
+      "source": "Le Monde Planète",
+      "categorie": "Énergie",
+      "titre": "Le gouvernement a présenté son plan d’électrification de l’économie : MaPrimeRénov’ ne concernera plus les rénovations qui conservent un chauffage au gaz",
+      "resume": "Le plan gouvernemental renforce les incitations à l'électrification des systèmes de chauffage, ce qui pourrait impacter les consommations énergétiques des sites clients d'ABC (tertiaire, santé, industrie) et leurs exigences en matière de décarbonation des prestations de propreté.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/economie/article/2026/04/23/le-dispositif-maprimerenov-ne-concernera-plus-les-renovations-qui-conservent-un-chauffage-au-gaz-annonce-le-gouvernement-dans-son-plan-d-electrification_6682789_3234.html",
+      "date": "2026-04-23"
+    },
+    {
+      "id": "7742a169712d",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "GM Achieves 100% Renewable Electricity Goal in U.S.",
+      "resume": "L'article illustre une tendance forte de décarbonation des entreprises industrielles via l'électricité renouvelable, un enjeu indirect pour ABC qui pourrait voir ses clients industriels (nucléaire, santé, etc.) renforcer leurs exigences carbone sur leurs prestataires.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/gm-achieves-100-renewable-energy-powered-electricity-in-u-s/?utm_source=rss&utm_medium=rss&utm_campaign=gm-achieves-100-renewable-energy-powered-electricity-in-u-s",
       "date": "2026-04-23"
     },
     {
@@ -50,7 +105,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Le port de Fos sera-t-il bientôt submergé ? La question de l’adaptation au changement climatique de la raffinerie de Lavéra",
-      "resume": "L'article aborde les risques climatiques physiques (submersion) sur un site industriel majeur en France, illustrant l'importance de l'adaptation climatique pour les entreprises, y compris celles du secteur de la propreté/FM comme ABC, dont les sites clients pourraient être exposés à des aléas similaires.",
+      "resume": "L'article aborde les risques climatiques physiques (submersion) sur un site industriel majeur en France, illustrant l'importance de l'adaptation climatique pour les entreprises de services intervenant sur des sites exposés.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/le-port-de-fos-sera-t-il-bientot-submerge-la-question-de-ladaptation-au-changement",
@@ -61,30 +116,19 @@
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Mise en œuvre des méthodes de certification des absorptions permanentes de carbone",
-      "resume": "L'article aborde la certification des absorptions permanentes de carbone, un sujet émergent qui pourrait impacter les stratégies de compensation carbone des entreprises comme ABC, notamment dans le cadre de leurs engagements net zéro ou de reporting ESG (CSRD/ESRS).",
+      "resume": "L'article aborde les méthodes de certification des absorptions permanentes de carbone, un sujet émergent qui pourrait impacter les stratégies de compensation carbone des entreprises comme ABC, notamment dans le cadre de leurs engagements net zéro ou de reporting CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/mise-en-oeuvre-des-methodes-de-certification-des-absorptions-permanentes-de-carbone-2",
       "date": "2026-04-23"
     },
     {
-      "id": "e04e732c81f8",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Recharge électrique : une stratégie nationale pour les grands axes routiers",
-      "resume": "La stratégie nationale de recharge électrique pour les grands axes routiers accélère l'électrification des flottes professionnelles, ce qui impacte directement la transition énergétique de la flotte de véhicules d'ABC (scope 1) et ses obligations en matière de mobilité durable.",
-      "pourquoi": "L'article concerne la mobilité durable, un enjeu direct pour ABC via sa flotte de véhicules (scope 1) et les exigences carbone de ses clients (nucléaire, santé, industrie). La planification des infrastructures de recharge influence les choix d'électrification des flottes professionnelles, un sujet opérationnel pour ABC.",
-      "criticite": 2,
-      "url": "https://www.actu-environnement.com/ae/news/schema-directeur-borne-recharge-vehicules-electrique-reseau-national-47899.php4#xtor=RSS-6",
-      "date": "2026-04-22"
-    },
-    {
       "id": "d31cce368b92",
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Un mois record pour les véhicules électriques neufs",
-      "resume": "L'article souligne la forte croissance des immatriculations de véhicules électriques en France, ce qui impacte directement la stratégie de décarbonation de la flotte de véhicules d'ABC (scope 1) et ses obligations réglementaires en matière de mobilité durable.",
-      "pourquoi": "Le sujet concerne directement la flotte de véhicules d'ABC (scope 1), un enjeu clé de décarbonation et de conformité réglementaire (ZFE, électrification des flottes). La croissance des immatriculations de VE en France renforce l'urgence pour ABC d'accélérer sa transition vers des véhicules propres, en lien avec les attentes clients (nucléaire, santé, industrie) et les réglementations en vigueur.",
+      "resume": "L'article souligne la forte croissance des immatriculations de véhicules électriques en France, ce qui impacte directement la stratégie de décarbonation de la flotte de véhicules d'ABC (scope 1) et les opportunités d'électrification.",
+      "pourquoi": "Le sujet concerne directement la flotte de véhicules d'ABC (scope 1) et les enjeux de décarbonation liés à la mobilité durable, notamment dans le cadre des réglementations ZFE et des objectifs de neutralité carbone. L'article fournit un contexte marché utile pour évaluer les opportunités d'électrification et les contraintes réglementaires.",
       "criticite": 2,
       "url": "https://www.greenunivers.com/2026/04/un-mois-record-pour-les-vehicules-electriques-neufs-422062/",
       "date": "2026-04-22"
@@ -94,10 +138,21 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Tri des déchets ménagers : l'Anses met en lumière une polyexposition des travailleurs",
-      "resume": "L'article souligne les risques sanitaires liés au tri des déchets pour les travailleurs, ce qui pourrait impacter les pratiques de gestion des déchets d'ABC et ses obligations en matière de santé au travail et de conformité réglementaire.",
+      "resume": "L'article met en lumière les risques sanitaires liés au tri des déchets pour les travailleurs, ce qui pourrait impacter les pratiques de gestion des déchets d'ABC et ses obligations en matière de santé au travail et de conformité réglementaire.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/tri-dechets-menagers-risques-professionnels-sanitaires-polyexposition-expertise-anses-47901.php4#xtor=RSS-6",
+      "date": "2026-04-22"
+    },
+    {
+      "id": "e04e732c81f8",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Recharge électrique : une stratégie nationale pour les grands axes routiers",
+      "resume": "La stratégie nationale de recharge électrique pour les grands axes routiers accélère l'électrification des flottes professionnelles, ce qui impacte la transition énergétique de la flotte de véhicules d'ABC (scope 1) et ses obligations en matière de mobilité durable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/schema-directeur-borne-recharge-vehicules-electrique-reseau-national-47899.php4#xtor=RSS-6",
       "date": "2026-04-22"
     },
     {
@@ -105,7 +160,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Le DPE, outil insuffisant pour diagnostiquer la vulnérabilité des bâtiments à la chaleur",
-      "resume": "L'article souligne les limites du DPE pour évaluer la vulnérabilité des bâtiments à la chaleur, un enjeu critique pour ABC dans le cadre de l'efficacité énergétique et des risques climatiques sur ses 3 000+ sites clients.",
+      "resume": "L'article souligne les limites du DPE pour évaluer la vulnérabilité des bâtiments à la chaleur, un enjeu critique pour ABC dans le cadre de la gestion des sites clients et de la résilience climatique de ses prestations.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/note-cercle-promodul-etude-inserm-canicule-paris-vegatalisation-renovation-batiments-anciens-47900.php4#xtor=RSS-6",
@@ -116,7 +171,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Le compte à rebours commence avant l'injection des premiers électrons par Eolmed",
-      "resume": "Le projet Eolmed illustre l'accélération des énergies renouvelables en France, mais n'a pas d'impact direct opérationnel ou réglementaire immédiat pour ABC, prestataire de propreté/FM non exploitant ICPE.",
+      "resume": "L'article illustre l'accélération des projets d'énergies renouvelables en France, notamment éolien flottant, mais n'a pas d'impact direct opérationnel ou réglementaire immédiat pour ABC dans ses activités de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/mise-sous-tension-des-eoliennes-flottantes-du-projet-eolmed-47898.php4#xtor=RSS-6",
@@ -127,21 +182,10 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Les données nationales de déclaration climatique de la France vont être intégrées à la Climate Data Utility",
-      "resume": "L'intégration des données climatiques des entreprises françaises dans la Climate Data Utility pourrait faciliter le reporting ESG et la conformité CSRD pour ABC, en centralisant les données nécessaires à la déclaration de ses scopes 1, 2 et 3.",
+      "resume": "L'intégration des données climatiques françaises dans la Climate Data Utility pourrait faciliter le reporting extra-financier et la conformité CSRD pour ABC, en centralisant les informations nécessaires à la traçabilité des émissions et des actions climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/donnees-nationales-declaration-climatique-france-climate-data-utillity-47897.php4#xtor=RSS-6",
-      "date": "2026-04-22"
-    },
-    {
-      "id": "14bb18e1ee6f",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "Transition énergétique des bâtiments tertiaires : le projet Demeter livre ses résultats",
-      "resume": "Le projet Demeter propose des outils et méthodes pour accélérer la transition énergétique des bâtiments tertiaires, ce qui peut intéresser ABC dans le cadre de son engagement sur l'efficacité énergétique et la décarbonation de ses prestations chez les clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/projet-demeter-transition-energetique-batiments-tertiaires-cstb-ademe-oid-efficacity-47895.php4#xtor=RSS-6",
       "date": "2026-04-22"
     },
     {
@@ -149,7 +193,7 @@
       "source": "Reporterre",
       "categorie": "Énergie",
       "titre": "Tri des déchets : les salariés largement exposés à des risques affectant leur santé",
-      "resume": "L'article met en lumière les risques sanitaires liés au tri des déchets pour les salariés, ce qui pourrait impacter les équipes d'ABC intervenant sur des sites clients (non exploitants ICPE) et renforcer les exigences en matière de santé au travail et de prévention des risques.",
+      "resume": "L'article met en lumière les risques sanitaires liés au tri des déchets pour les salariés des centres de tri, un enjeu potentiellement pertinent pour ABC dans le cadre de la gestion des déchets de ses prestations et de la santé au travail.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Tri-des-dechets-les-salaries-largement-exposes-a-des-risques-affectant-leur-sante",
@@ -160,7 +204,7 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Face à la hausse des prix de l’énergie, les préconisations de la Commission européenne restent limitées",
-      "resume": "L'article souligne la persistance des enjeux énergétiques en Europe, influençant indirectement les coûts opérationnels d'ABC via la hausse des prix de l'énergie, sans imposer d'action directe immédiate.",
+      "resume": "L'article souligne une crise énergétique prolongée en Europe, pouvant impacter les coûts opérationnels d'ABC et ceux de ses clients (notamment tertiaires ou industriels), sans proposer de mesures contraignantes pour les entreprises de services.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/04/22/face-a-la-hausse-des-prix-de-l-energie-les-preconisations-de-bruxelles-restent-limitees_6682441_3234.html",
@@ -1215,5 +1259,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques agricoles, énergétiques et de reporting RSE. Le **projet de loi de financement de la sécurité sociale pour 2026 (N°2242)** et le **projet de loi de finances pour 2026 (N°2247)** pourraient influencer les incitations fiscales et budgétaires liées à la transition écologique. Aucun texte adopté ne semble directement lié à l’environnement ou au climat."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter directement les enjeux climatiques, énergétiques ou RSE d’une entreprise de services, notamment via des mesures agricoles durables ou des transpositions de directives européennes (énergie, déchets, reporting extra-financier). Aucun texte adopté ne semble directement lié à ces thématiques."
 }
