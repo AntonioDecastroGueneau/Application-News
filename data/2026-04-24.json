@@ -1,7 +1,7 @@
 {
   "date": "2026-04-24",
-  "generated_at": "07:50",
-  "elapsed_seconds": 223,
+  "generated_at": "12:15",
+  "elapsed_seconds": 185,
   "errors": [],
   "stats": {
     "jo_analyses": 15,
@@ -9,18 +9,18 @@
     "depts_restriction": 7
   },
   "pipeline_meta": {
-    "run_at": "2026-04-24T07:50:58",
+    "run_at": "2026-04-24T12:15:57",
     "sources": {
       "JORF": 0,
-      "RSS": 16,
+      "RSS": 9,
       "VigiEau": 7,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 59,
-    "llm_seconds": 72.3
+    "llm_calls": 55,
+    "llm_seconds": 62.4
   },
   "items": [
     {
@@ -35,11 +35,22 @@
       "date": "2026-04-24"
     },
     {
+      "id": "700fc429bafc",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Face à la défaillance des filières REP, Zero Waste France préconise leur refonte",
+      "resume": "L'article souligne les lacunes persistantes des filières REP (Responsabilité Élargie du Producteur) en France, ce qui pourrait impacter la gestion des déchets des prestations de propreté/FM d'ABC et ses obligations réglementaires.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/defaillance-filieres-rep-zero-waste-france-47908.php4#xtor=RSS-6",
+      "date": "2026-04-24"
+    },
+    {
       "id": "3732b92c1a89",
       "source": "Le Monde Planète",
       "categorie": "Émissions",
       "titre": "Est-ce qu’on sait faire rouler des camions sans pétrole ?",
-      "resume": "L'article aborde la décarbonation des flottes de véhicules, un enjeu direct pour ABC via sa politique de mobilité durable et son reporting scope 1. Il peut servir de contexte pour évaluer les alternatives énergétiques (électrique, hydrogène) dans le cadre de la réglementation ZFE et des objectifs net zéro.",
+      "resume": "L'article aborde la décarbonation des flottes de véhicules, un enjeu direct pour ABC via sa politique de mobilité durable et l'électrification de sa flotte (scope 1).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/chaleur-humaine/article/2026/04/24/est-ce-qu-on-sait-faire-rouler-des-camions-sans-petrole_6683009_6125299.html",
@@ -50,51 +61,18 @@
       "source": "Les Echos Environnement",
       "categorie": "Eau",
       "titre": "Plus il fait beau, plus ça coûte cher : « Le modèle de soutien aux renouvelables est d'une perversité documentée - Les Echos",
-      "resume": "L'article critique le modèle de soutien aux énergies renouvelables en France, qui pourrait impacter les coûts énergétiques des entreprises comme ABC et influencer les stratégies de décarbonation des clients (notamment industriels et tertiaires).",
+      "resume": "L'article critique le modèle de soutien aux énergies renouvelables en France, soulignant des coûts élevés liés à la production intermittente. ABC pourrait indirectement être impacté par les évolutions tarifaires ou réglementaires sur l'énergie, influençant ses coûts opérationnels.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxObHFLUmVqek9fajBUZlZfdnV1QW5aUnF0UV9zaEtuSWdRZkpMNEI1clIxRVVrUmFZdDFja0h0emJYMk4zUEEtSzRvR2o0ZTdWQWw5U01zWXBEYlJRVWRDTXBISkREWnl4V0h5SmxzV2RIeWp3b1lQTHhRT09aaE5pR0hOdXFzWlhzVE5aMGhKSF9uVVRtR1h2Q0Q1aklKWkxNMWd1Tm5nVmFDS2NaVVlRN1ljVDJFbFhZRUpRdklSWnN3cHFnRlkwaE56c0xoQ3FPRGhjS2xWSGZJbVhPQnZYYjVGbm1RUmRZM3dQMlpPcw?oc=5",
       "date": "2026-04-24"
     },
     {
-      "id": "37f7000b7d4f",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "ISSB Decides to Develop Non-Mandatory Nature-Related Reporting Requirements",
-      "resume": "ISSB Decides to Develop Non-Mandatory Nature-Related Reporting Requirements",
-      "pourquoi": "Mention de ISSB.",
-      "criticite": 3,
-      "url": "https://www.esgtoday.com/issb-decides-to-develop-non-mandatory-nature-related-reporting-requirements/?utm_source=rss&utm_medium=rss&utm_campaign=issb-decides-to-develop-non-mandatory-nature-related-reporting-requirements",
-      "date": "2026-04-23"
-    },
-    {
-      "id": "0f12e0b19ed2",
-      "source": "Reporterre",
-      "categorie": "Énergie",
-      "titre": "Voitures électriques, pompes à chaleur... Le grand plan d'électrification accouche d'une coquille vide",
-      "resume": "Le plan d'électrification français ne prévoit pas de soutien public supplémentaire, ce qui pourrait impacter la stratégie de décarbonation de la flotte de véhicules d'ABC et ses engagements en matière de mobilité durable.",
-      "pourquoi": "L'article aborde la mobilité durable (électrification des flottes) et les politiques publiques françaises en la matière, directement liées aux enjeux de décarbonation (scope 1) et aux obligations réglementaires (ZFE, véhicules propres) pour ABC.",
-      "criticite": 2,
-      "url": "https://reporterre.net/Voitures-electriques-pompes-a-chaleur-Le-grand-plan-d-electrification-accouche-d-une-coquille-vide",
-      "date": "2026-04-23"
-    },
-    {
-      "id": "613d6aa78062",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Electrification : le gouvernement publie son plan et son calendrier [Document]",
-      "resume": "Le gouvernement français publie un plan et calendrier pour l'électrification des flottes, incluant des aides et mesures incitatives qui impactent directement la stratégie de décarbonation de la flotte de véhicules d'ABC (scope 1).",
-      "pourquoi": "L'article traite de l'électrification des flottes, un enjeu opérationnel direct pour ABC (mobilité durable, scope 1, décarbonation). Bien que le contenu ne soit pas encore détaillé, le sujet est stratégique pour l'entreprise et s'inscrit dans les obligations réglementaires et attentes clients (CSRD, trajectoires net zéro).",
-      "criticite": 2,
-      "url": "https://www.greenunivers.com/2026/04/electrification-le-gouvernement-publie-son-plan-et-son-calendrier-document-422180/",
-      "date": "2026-04-23"
-    },
-    {
       "id": "6e8f410dc1a0",
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Industrie, artisanat, agriculture : le plan d'électrification mise sur les équipements et procédés",
-      "resume": "Le plan d'électrification du gouvernement cible les équipements industriels et artisanaux, ce qui pourrait influencer les attentes clients d'ABC en matière de décarbonation des procédés de nettoyage ou de maintenance, notamment via des subventions CEE ou des incitations réglementaires.",
+      "resume": "Le plan d'électrification des équipements industriels et artisanaux pourrait influencer les choix de mobilité durable et d'équipements électriques pour ABC, notamment via les CEE, mais sans obligation directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/plan-electrification-equipement-procede-CEE-47904.php4#xtor=RSS-6",
@@ -105,7 +83,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Fonds chaleur : plus de 1 200 installations soutenues en 2025",
-      "resume": "Le Fonds chaleur soutient des installations de chaleur renouvelable, un levier potentiel pour réduire l'empreinte carbone des sites clients d'ABC (tertiaire, industrie) via des solutions énergétiques durables, mais sans obligation directe pour ABC.",
+      "resume": "Le Fonds chaleur soutient des installations de production de chaleur renouvelable, ce qui peut influencer les choix énergétiques des clients d'ABC (secteurs tertiaire, santé, industrie) et leurs exigences en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/ademe-bilan-fonds-chaleur-2025-installations-soutenues-reseaux-chaleur-biomasse-geothermie-47906.php4#xtor=RSS-6",
@@ -116,7 +94,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Plan d'électrification dans le bâtiment : le Gouvernement détaille ses mesures",
-      "resume": "Le plan d'électrification du bâtiment impose l'interdiction des chaudières à gaz (y compris PAC hybrides) dans les logements collectifs neufs à partir de 2027, ce qui pourrait influencer les exigences énergétiques des sites tertiaires clients d'ABC (ex : bureaux, hôpitaux).",
+      "resume": "Le plan d'électrification du bâtiment pourrait influencer les exigences énergétiques des clients d'ABC (secteurs tertiaire, santé, industrie) et impacter indirectement les prestations de propreté/FM via des normes plus strictes sur les équipements utilisés.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/plan-electrification-gouvernement-detail-mesures-batiments-pompes-chaleur-sortie-gaz-47903.php4#xtor=RSS-6",
@@ -127,43 +105,10 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Le chiffre du jour : 584&amp;#8239;000",
-      "resume": "L'article met en lumière l'accélération des raccordements électriques par Enedis en 2025, reflétant une dynamique de transition énergétique qui pourrait impacter les exigences clients d'ABC en matière d'efficacité énergétique et de mobilité durable (flotte électrique).",
+      "resume": "L'article met en lumière l'accélération des raccordements électriques en France, reflétant une dynamique de transition énergétique qui pourrait impacter les exigences clients d'ABC (ex : tertiaire, industrie) en matière de décarbonation et d'efficacité énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/dit-aujourdhui/1803.html#xtor=RSS-6",
-      "date": "2026-04-23"
-    },
-    {
-      "id": "93704a8da2d6",
-      "source": "Reporterre",
-      "categorie": "Eau",
-      "titre": "Les pubs pour les énergies fossiles bientôt interdites… cinq ans après la loi",
-      "resume": "Cette mesure pourrait impacter indirectement la stratégie de mobilité durable d'ABC en renforçant les contraintes sur les énergies fossiles, notamment pour sa flotte de véhicules (scope 1).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Les-pubs-pour-les-energies-fossiles-bientot-interdites-cinq-ans-apres-la-loi",
-      "date": "2026-04-23"
-    },
-    {
-      "id": "b28094c7fcde",
-      "source": "Novethic",
-      "categorie": "Émissions",
-      "titre": "A l'assemblée générale de BP, la révolte climatique inédite des investisseurs",
-      "resume": "Cet article illustre la pression croissante des investisseurs sur les stratégies climatiques des entreprises, un signal à surveiller pour ABC dans le cadre de ses engagements ESG et de ses relations avec des clients industriels ou énergétiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/finance-durable/engagement-actionnarial/ag-bp-actionnaires-defient-recul-climatique-major",
-      "date": "2026-04-23"
-    },
-    {
-      "id": "987ed69c4efc",
-      "source": "Novethic",
-      "categorie": "Énergie",
-      "titre": "Un fonds d’investissement mise sur les entreprises capables de payer leur facture carbone",
-      "resume": "L'article souligne l'importance croissante de la capacité des entreprises à payer leur facture carbone, ce qui peut influencer les exigences des investisseurs et clients d'ABC en matière de performance environnementale.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/finance-durable/tendances-de-marche/fonds-investissement-mise-entreprises-capables-payer-facture-carbone",
       "date": "2026-04-23"
     },
     {
@@ -171,32 +116,10 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Electrification : le député Raphaël Schellenberger veut sécuriser le tiers-financement",
-      "resume": "L'article aborde l'électrification des flottes industrielles via le tiers-financement, une piste pour accélérer la décarbonation des véhicules professionnels, ce qui pourrait impacter la stratégie de flotte d'ABC (scope 1).",
+      "resume": "L'article aborde l'électrification des flottes, un enjeu clé pour ABC dans le cadre de sa décarbonation (scope 1) et de la mobilité durable, avec des implications potentielles sur les politiques de financement des véhicules propres.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/electrification-le-depute-raphael-schellenberger-veut-securiser-le-tiers-financement-422241/",
-      "date": "2026-04-23"
-    },
-    {
-      "id": "8406dec7a7e2",
-      "source": "Le Monde Planète",
-      "categorie": "Énergie",
-      "titre": "Le gouvernement a présenté son plan d’électrification de l’économie : MaPrimeRénov’ ne concernera plus les rénovations qui conservent un chauffage au gaz",
-      "resume": "Le plan d'électrification de l'économie renforce les incitations pour les rénovations énergétiques sans chauffage fossile, ce qui pourrait influencer les exigences clients d'ABC en matière d'efficacité énergétique des bâtiments tertiaires où ses prestations sont réalisées.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/economie/article/2026/04/23/le-dispositif-maprimerenov-ne-concernera-plus-les-renovations-qui-conservent-un-chauffage-au-gaz-annonce-le-gouvernement-dans-son-plan-d-electrification_6682789_3234.html",
-      "date": "2026-04-23"
-    },
-    {
-      "id": "7742a169712d",
-      "source": "ESG Today",
-      "categorie": "Climat",
-      "titre": "GM Achieves 100% Renewable Electricity Goal in U.S.",
-      "resume": "L'article illustre une tendance forte de décarbonation des entreprises via l'électricité renouvelable, un enjeu clé pour les clients d'ABC (notamment industriels ou du secteur santé) qui pourraient exiger des prestataires alignés sur leurs objectifs carbone.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/gm-achieves-100-renewable-energy-powered-electricity-in-u-s/?utm_source=rss&utm_medium=rss&utm_campaign=gm-achieves-100-renewable-energy-powered-electricity-in-u-s",
       "date": "2026-04-23"
     }
   ],
@@ -894,7 +817,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés 1 et 2 concernant la création de liaisons souterraines à 225 000 volts entre MIONS et RHONA pourraient impacter les enjeux de décarbonation et de transition énergétique, nécessitant une analyse des impacts environnementaux et des opportunités de compensation carbone. Les arrêtés 9 et 10 fixant des contributions forestières pourraient influencer les stratégies de gestion durable des ressources boisées pour l'entreprise.",
+  "briefing_jorf": "Les arrêtés n°1 et 2 concernant la création de liaisons souterraines à 225 000 volts entre MIONS et RHONA pourraient impacter les enjeux de transition énergétique et d'infrastructures électriques, tandis que les arrêtés sur les cotisations forestières (n°9 et 10) concernent directement la gestion durable des forêts et la RSE. Aucun autre texte ne semble directement lié aux priorités environnementales ou climatiques d'une grande entreprise de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1102,6 +1025,12 @@
       "source": "AN Textes adoptés",
       "items": [
         {
+          "titre": "Texte adopté N° 271",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53315",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53315",
+          "date": "2025-12-04"
+        },
+        {
           "titre": "Texte adopté N° 270",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51987",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51987",
@@ -1232,15 +1161,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fin_de_vie_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fin_de_vie_17e",
           "date": "2025-03-11"
-        },
-        {
-          "titre": "Texte adopté N° 244",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52103",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52103",
-          "date": "2025-05-15"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient présenter un intérêt pour un Responsable Environnement/Climat, notamment en lien avec les enjeux agricoles durables, la transition énergétique et les normes environnementales européennes. Aucun texte adopté ne semble directement lié à des avancées significatives en matière de RSE ou de reporting climatique."
+  "pjl_briefing": "Aucun des projets de loi ou textes adoptés listés ne traite directement de sujets environnementaux, climatiques, énergétiques ou de RSE majeurs pour une grande entreprise de services. Seuls les projets N°2630 (programmation militaire 2024-2030) et N°2518 (adaptation au droit de l'UE en matière environnementale) pourraient avoir des implications indirectes, mais sans impact significatif identifié."
 }
