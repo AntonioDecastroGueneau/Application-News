@@ -1,7 +1,7 @@
 {
   "date": "2026-04-26",
-  "generated_at": "07:19",
-  "elapsed_seconds": 212,
+  "generated_at": "12:04",
+  "elapsed_seconds": 138,
   "errors": [],
   "stats": {
     "jo_analyses": 10,
@@ -9,10 +9,10 @@
     "depts_restriction": 7
   },
   "pipeline_meta": {
-    "run_at": "2026-04-26T07:19:08",
+    "run_at": "2026-04-26T12:04:23",
     "sources": {
       "JORF": 0,
-      "RSS": 2,
+      "RSS": 3,
       "VigiEau": 7,
       "Parlement": 1
     },
@@ -20,7 +20,7 @@
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 25,
-    "llm_seconds": 25.7
+    "llm_seconds": 27.1
   },
   "items": [
     {
@@ -35,11 +35,22 @@
       "date": "2026-04-26"
     },
     {
+      "id": "f671436cb09b",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article mentionne le développement par l'ISSB (IFRS Foundation) de normes de reporting non obligatoires sur la nature, un sujet connexe à la CSRD/ESRS qui pourrait influencer les futures exigences de reporting ESG pour ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-258/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-258",
+      "date": "2026-04-26"
+    },
+    {
       "id": "25706bcf35fa",
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Une proposition de loi veut rendre obligatoire la commission environnement du CSE",
-      "resume": "La proposition de loi pourrait imposer une commission environnement obligatoire au CSE, renforçant l'intégration des enjeux climatiques dans les négociations sociales chez ABC, notamment pour les sites clients concernés.",
+      "resume": "La proposition de loi pourrait imposer une commission environnement obligatoire au CSE, renforçant les obligations de dialogue social sur les enjeux climatiques pour ABC dans ses relations avec ses clients (notamment secteurs nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/une-proposition-de-loi-veut-rendre-obligatoire-la-commission-environnement-du-cse-0",
@@ -764,5 +775,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient avoir un impact direct sur les enjeux climatiques, énergétiques et de RSE pour une entreprise de services, notamment via des mesures liées à la transition agricole, à l’adaptation aux normes environnementales européennes ou à la souveraineté alimentaire. Aucun texte ne traite explicitement de reporting extra-financier ou de déchets."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques agricoles, énergétiques et de reporting RSE. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux dans cette liste."
 }
