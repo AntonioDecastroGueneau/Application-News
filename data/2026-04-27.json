@@ -1,7 +1,7 @@
 {
   "date": "2026-04-27",
-  "generated_at": "08:06",
-  "elapsed_seconds": 191,
+  "generated_at": "13:03",
+  "elapsed_seconds": 174,
   "errors": [],
   "stats": {
     "jo_analyses": 7,
@@ -9,18 +9,18 @@
     "depts_restriction": 7
   },
   "pipeline_meta": {
-    "run_at": "2026-04-27T08:06:04",
+    "run_at": "2026-04-27T13:03:00",
     "sources": {
       "JORF": 0,
-      "RSS": 5,
+      "RSS": 7,
       "VigiEau": 7,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 32,
-    "llm_seconds": 44.2
+    "llm_calls": 38,
+    "llm_seconds": 47.0
   },
   "items": [
     {
@@ -46,6 +46,28 @@
       "date": "2026-04-27"
     },
     {
+      "id": "dd1cb72e63f0",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Décarboner le chauffage dans le tertiaire : un enjeu technique... et économique",
+      "resume": "L'article aborde les solutions techniques de décarbonation du chauffage dans le tertiaire (PAC, géothermie, réseaux de chaleur), ce qui impacte indirectement ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et les enjeux de reporting ESG (CSRD, bilan GES).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/pdt/akea-energies-hellio-decarboner-chauffage-batiments-tertiaires-1469.php4#xtor=RSS-6",
+      "date": "2026-04-27"
+    },
+    {
+      "id": "ee6eae057882",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "Apple, Amazon, Schneider Electric Warn GHG Protocol that Tougher Scope 2 Reporting Rules will Slow Corporate Energy Transition",
+      "resume": "L'article aborde les modifications proposées par le GHG Protocol sur les règles de reporting Scope 2, qui pourraient impacter la méthodologie de calcul des émissions indirectes liées à l'énergie pour ABC, notamment dans le cadre de son reporting CSRD et de sa stratégie de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/apple-amazon-schneider-electric-warn-ghg-protocol-that-proposed-scope-2-accounting-changes-will-slow-corporate-energy-transition/?utm_source=rss&utm_medium=rss&utm_campaign=apple-amazon-schneider-electric-warn-ghg-protocol-that-proposed-scope-2-accounting-changes-will-slow-corporate-energy-transition",
+      "date": "2026-04-27"
+    },
+    {
       "id": "83ee22311536",
       "source": "ESG Today",
       "categorie": "Climat",
@@ -61,7 +83,7 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Une proposition de loi veut rendre obligatoire la commission environnement du CSE",
-      "resume": "La proposition de loi pourrait imposer une commission environnement obligatoire au CSE, renforçant les obligations des entreprises en matière de dialogue social sur les enjeux climatiques et environnementaux, y compris pour les prestataires de services comme ABC.",
+      "resume": "Cette proposition de loi pourrait imposer une commission environnement obligatoire au CSE, renforçant l'intégration des enjeux climatiques dans les entreprises clientes d'ABC, notamment pour les sites où le CSE est déjà présent.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/une-proposition-de-loi-veut-rendre-obligatoire-la-commission-environnement-du-cse-0",
@@ -72,7 +94,7 @@
       "source": "ESG Today",
       "categorie": "Déchets",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article mentionne le développement par l'ISSB de normes de reporting non obligatoires sur la nature, un sujet connexe aux enjeux CSRD/ESRS et reporting ESG d'ABC, mais sans obligation directe immédiate.",
+      "resume": "L'article mentionne le développement par l'ISSB de normes de reporting non obligatoires sur la nature, un sujet connexe au reporting ESG (CSRD/ESRS) qui pourrait influencer les exigences clients d'ABC en matière de transparence environnementale.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-258/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-258",
@@ -713,5 +735,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi significatifs pour un Responsable Environnement/Climat, on note : (1) le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) qui pourrait impacter les pratiques agricoles et la transition écologique, (2) le projet de loi portant diverses dispositions d’adaptation au droit de l’UE en matière environnementale (N°2518) qui pourrait renforcer les obligations de reporting et de conformité, et (3) le projet de loi de financement de la sécurité sociale pour 2026 (N°2242) susceptible d’inclure des mesures fiscales incitatives ou contraignantes pour les entreprises en matière de transition énergétique."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques agricoles, énergétiques et de reporting RSE. Le **projet de loi de financement de la sécurité sociale pour 2026 (N°2242)** et les textes adoptés pourraient influencer les financements publics liés à la transition écologique."
 }
