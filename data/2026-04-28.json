@@ -1,7 +1,7 @@
 {
   "date": "2026-04-28",
-  "generated_at": "08:06",
-  "elapsed_seconds": 188,
+  "generated_at": "13:13",
+  "elapsed_seconds": 232,
   "errors": [],
   "stats": {
     "jo_analyses": 12,
@@ -9,48 +9,114 @@
     "depts_restriction": 7
   },
   "pipeline_meta": {
-    "run_at": "2026-04-28T08:06:49",
+    "run_at": "2026-04-28T13:13:20",
     "sources": {
       "JORF": 0,
-      "RSS": 9,
+      "RSS": 15,
       "VigiEau": 7,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 38,
-    "llm_seconds": 60.3
+    "llm_calls": 52,
+    "llm_seconds": 90.7
   },
   "items": [
+    {
+      "id": "5aa55471395d",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "Management environnemental : la nouvelle version de la norme ISO 14001 est sortie",
+      "resume": "Management environnemental : la nouvelle version de la norme ISO 14001 est sortie",
+      "pourquoi": "Mention de ISO 14001.",
+      "criticite": 3,
+      "url": "https://www.actuel-hse.fr/content/management-environnemental-la-nouvelle-version-de-la-norme-iso-14001-est-sortie-2",
+      "date": "2026-04-28"
+    },
+    {
+      "id": "b91887a9f5d9",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Droits des déchets : retour sur l'année 2025",
+      "resume": "L'article aborde les évolutions réglementaires sur les déchets en 2025/2026, impactant potentiellement les obligations de traçabilité et de reporting des prestataires de propreté comme ABC, notamment via les REP et les dispositifs européens.",
+      "pourquoi": "Le sujet touche aux réglementations déchets (REP, traçabilité, éco-organismes) qui impactent directement les activités de propreté/FM d'ABC, notamment en termes de gestion des déchets clients et de reporting extra-financier (CSRD/ESRS). Les évolutions 2025/2026 sont pertinentes pour anticiper les obligations à venir.",
+      "criticite": 2,
+      "url": "https://www.actu-environnement.com/ae/news/droits-dechets-annee-2025-47827.php4#xtor=RSS-6",
+      "date": "2026-04-28"
+    },
+    {
+      "id": "235dad7cfd30",
+      "source": "Actuel HSE",
+      "categorie": "ICPE",
+      "titre": "Véhicules électriques : le gouvernement présente son schéma directeur pour atteindre 30 000 points de recharge",
+      "resume": "Le schéma directeur du gouvernement pour 30 000 points de recharge d'ici 2030-2035 accélère la transition vers la mobilité électrique, impactant directement la flotte de véhicules d'ABC (scope 1) et ses obligations de décarbonation.",
+      "pourquoi": "L'article traite de la mobilité durable (électrification des flottes) et de la réglementation associée, ce qui est directement lié aux enjeux de flotte véhicules (scope 1) et aux objectifs de décarbonation d'ABC. Bien que l'article ne mentionne pas explicitement les obligations légales pour les entreprises de services, il s'inscrit dans un contexte réglementaire et marché clair (ZFE, électrification) qui impose une action identifiable pour ABC dans les 12-24 mois.",
+      "criticite": 2,
+      "url": "https://www.actuel-hse.fr/content/vehicules-electriques-le-gouvernement-presente-son-schema-directeur-pour-atteindre-30-000",
+      "date": "2026-04-28"
+    },
+    {
+      "id": "20cb05e4fd0c",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Chaleur renouvelable : Amorce demande un engagement public plus fort",
+      "resume": "L'article souligne l'importance des réseaux de chaleur renouvelable dans la transition énergétique, un enjeu indirect pour ABC via ses clients tertiaires (santé, industrie) soumis à des exigences carbone croissantes et au DPE tertiaire.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/chaleur-renouvelable-fossiles-reseaux-prix-energie-47924.php4#xtor=RSS-6",
+      "date": "2026-04-28"
+    },
+    {
+      "id": "4d6d3858b2f2",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Recyclage du PET en boucle fermée : après les emballages, le textile !",
+      "resume": "L'article illustre une innovation technologique (dépolymérisation) pour le recyclage du polyester textile, potentiellement applicable aux déchets générés par les prestations de propreté de ABC, mais sans obligation ou opportunité directe immédiate.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/axens-ifpen-jeplan-valide-procede-recyclage-chimique-textiles-polyester-en-boucle-fermee-47916.php4#xtor=RSS-6",
+      "date": "2026-04-28"
+    },
+    {
+      "id": "a1ff1fa62f71",
+      "source": "Le Monde Planète",
+      "categorie": "Eau",
+      "titre": "Le prix du SP95-E10 à nouveau au-dessus des 2 euros le litre en moyenne",
+      "resume": "L'augmentation du prix du SP95-E10 impacte directement les coûts opérationnels de la flotte de véhicules d'ABC, notamment pour les prestations de propreté/FM réalisées chez les clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/economie-francaise/article/2026/04/28/le-prix-du-sp95-e10-a-nouveau-au-dessus-des-2-euros-le-litre-en-moyenne_6683932_1656968.html",
+      "date": "2026-04-28"
+    },
+    {
+      "id": "5f1d4ffa6b9c",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "GHG Protocol Appoints Tim Mohin as First CEO",
+      "resume": "L'article annonce la nomination du premier CEO du GHG Protocol, cadre de référence pour le reporting des émissions de GES, ce qui pourrait influencer les futures exigences de reporting (CSRD/ESRS) pour ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/ghg-protocol-appoints-tim-mohin-as-first-ceo/?utm_source=rss&utm_medium=rss&utm_campaign=ghg-protocol-appoints-tim-mohin-as-first-ceo",
+      "date": "2026-04-28"
+    },
     {
       "id": "c676522581e4",
       "source": "Les Echos Environnement",
       "categorie": "Climat",
       "titre": "Transition énergétique : pendant que l'Amérique de Trump regarde en arrière, la Chine rafle la mise - Les Echos",
-      "resume": "L'article souligne l'avance de la Chine dans la transition énergétique face aux reculs américains, ce qui pourrait influencer les dynamiques du marché des technologies vertes et des réglementations carbone en Europe, impactant indirectement les stratégies clients et fournisseurs d'ABC.",
+      "resume": "L'article souligne l'avance de la Chine dans la transition énergétique face à un recul américain, ce qui pourrait influencer les dynamiques du marché des énergies renouvelables et des technologies propres en Europe, impactant indirectement les stratégies clients et fournisseurs d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQRWt1U2g0bjBla215bkl1ZEZ5ZGlKTF9lbFZNdEV2c1B2SHFmSUlHLW1rNjZWczM4UU9LN2ktcTNiZ2RiYlNiaUNnVTRXdlNZLU1LNUtBWUp3d05sNGZTd19MSndTVU1kekc4YzB3WXpYOWIydzMzU2Z3aEU4Rk1HS1pRN2pYWkxQb2V6bHFseUtmWEVMR2lSRzVsR3ZpaEQ3N2Y2NGxyS2tHRWZSM0tuRG0xbmRRandDRVE5RUFVV09LRFRtcWtZMERrRC1TWEVTS3AwcUZQYi1vbDF3S1gxanVsRnoweDZlZnlsZg?oc=5",
       "date": "2026-04-28"
     },
     {
-      "id": "692ee83b4c97",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Les CEE mobilité électrique et l’hydrogène au menu du CSE",
-      "resume": "L'article aborde les Certificats d'Économies d'Énergie (CEE) dédiés à la mobilité électrique et à l'hydrogène, outils financiers incitatifs pour accélérer la décarbonation des flottes de véhicules. Cela pourrait impacter la stratégie de flotte d'ABC en matière d'électrification.",
-      "pourquoi": "Le sujet touche directement à la flotte de véhicules d'ABC (scope 1), un enjeu clé de sa stratégie RSE. Les CEE mobilité électrique sont un levier financier pour accélérer la transition vers des véhicules propres, aligné sur les exigences carbone des clients et les réglementations en vigueur (ex : ZFE).",
-      "criticite": 2,
-      "url": "https://www.greenunivers.com/2026/04/les-cee-mobilite-electrique-et-lhydrogene-au-menu-du-cse-422438/",
-      "date": "2026-04-27"
-    },
-    {
       "id": "cd36aa68428d",
       "source": "Actu-Environnement",
       "categorie": "Environnement",
       "titre": "Sinistralité climatique : la  Cour des comptes se penche sur la soutenabilité du régime Cat-Nat",
-      "resume": "L'article souligne l'augmentation des risques climatiques en France et leurs impacts sur les régimes d'indemnisation, ce qui pourrait influencer les exigences de prévention et d'adaptation des entreprises, y compris celles du secteur de la propreté/FM comme ABC.",
+      "resume": "L'article souligne l'augmentation des risques climatiques en France, ce qui pourrait impacter la continuité des activités de nettoyage chez les clients d'ABC et influencer leurs exigences en matière de résilience opérationnelle.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/rapport-cour-des-comptes-catnat-sinistres-catastrophes-naturelles-ccr-assureurs-47923.php4#xtor=RSS-6",
@@ -61,10 +127,21 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Flexibilité de la demande : la dynamique démarre, selon RTE",
-      "resume": "L'article aborde la flexibilité de la demande électrique en France, un enjeu lié à la décarbonation et à l'efficacité énergétique qui pourrait impacter les stratégies de consommation énergétique des sites clients d'ABC (tertiaire, industrie, santé).",
+      "resume": "L'article aborde la flexibilité de la demande électrique, un levier potentiel pour optimiser la consommation énergétique des sites clients d'ABC (tertiaire) et réduire les coûts liés à l'énergie, en phase avec les enjeux de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/barometre-flexibilite-demande-consommation-electricite-tertiaire-residentiel-47918.php4#xtor=RSS-6",
+      "date": "2026-04-27"
+    },
+    {
+      "id": "af91c369b42c",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Bennes à vêtements qui débordent : 170 000 euros d'amende contre un éco-organisme",
+      "resume": "L'article illustre l'application stricte des obligations réglementaires pour les éco-organismes (REP textile) et les risques financiers associés en cas de non-respect, ce qui peut impacter indirectement ABC via ses clients industriels ou tertiaires soumis à des exigences similaires en matière de gestion des déchets.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Bennes-a-vetements-qui-debordent-170-000-euros-d-amende-contre-un-eco-organisme",
       "date": "2026-04-27"
     },
     {
@@ -72,21 +149,21 @@
       "source": "Reporterre",
       "categorie": "Énergie",
       "titre": "Comment un décret va signer la mort de l'énergie solaire alternative",
-      "resume": "Le décret pourrait impacter indirectement les projets d'autoconsommation collective des clients d'ABC (ex : zones d'activité), mais sans obligation directe pour l'entreprise. Risque de perte d'opportunités pour les clients en matière de transition énergétique.",
+      "resume": "L'article aborde l'autoconsommation collective d'énergie solaire, un sujet indirectement lié à la stratégie énergétique et carbone d'ABC via la transition énergétique des clients et la mobilité durable (flotte véhicules).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Comment-un-decret-va-signer-la-mort-de-l-energie-solaire-alternative",
       "date": "2026-04-27"
     },
     {
-      "id": "8aa61efe6562",
-      "source": "Novethic",
+      "id": "692ee83b4c97",
+      "source": "GreenUnivers",
       "categorie": "Déchets",
-      "titre": "Saison des AG 2026 : derrière la chute des résolutions ESG, un faux recul",
-      "resume": "L'article illustre une tendance mondiale de recul des résolutions ESG en AG, ce qui pourrait influencer les exigences carbone des clients d'ABC (notamment industriels, santé ou nucléaire) et impacter indirectement les attentes en matière de reporting ESG et de décarbonation.",
+      "titre": "Les CEE mobilité électrique et l’hydrogène au menu du CSE",
+      "resume": "L'article aborde les Certificats d'Économies d'Énergie (CEE) liés à la mobilité électrique et à l'hydrogène, outils pouvant influencer les stratégies de décarbonation de la flotte de véhicules d'ABC et ses clients.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.novethic.fr/finance-durable/engagement-actionnarial/saison-ag-2026-depot-resolutions-esg-divise-deux-etats-unis",
+      "url": "https://www.greenunivers.com/2026/04/les-cee-mobilite-electrique-et-lhydrogene-au-menu-du-cse-422438/",
       "date": "2026-04-27"
     },
     {
@@ -94,7 +171,7 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Sur le marché spot, l’électricité descend dans les abysses [Marchés]",
-      "resume": "L'article souligne une baisse historique des prix spot de l'électricité en France et en Europe, pouvant impacter les coûts énergétiques des prestations de nettoyage et de FM d'ABC, notamment dans un contexte de reporting CSRD et de maîtrise des scopes 1 et 2.",
+      "resume": "L'article souligne une baisse historique des prix spot de l'électricité en France et en Europe, ce qui pourrait impacter les coûts énergétiques des prestations de nettoyage/facility management d'ABC et influencer ses stratégies d'achat d'énergie ou de transition vers des sources renouvelables.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/sur-le-marche-spot-lelectricite-descend-dans-les-abysses-marches-422461/",
@@ -105,21 +182,10 @@
       "source": "ESG Today",
       "categorie": "Déchets",
       "titre": "Schneider Electric Launches New Climate Risk Assessment and Management Solution",
-      "resume": "Solution de gestion des risques climatiques pour entreprises, utile pour évaluer les aléas climatiques sur les 3 000+ sites clients d'ABC et anticiper les exigences carbone des secteurs clients (nucléaire, santé, industrie).",
+      "resume": "Schneider Electric propose un outil d'évaluation et gestion des risques climatiques (Resource Advisor+ for Climate) qui pourrait aider ABC à anticiper les aléas climatiques sur ses 3 000+ sites clients et répondre aux exigences carbone de ses clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/schneider-electric-launches-new-climate-risk-assessment-and-management-solution/?utm_source=rss&utm_medium=rss&utm_campaign=schneider-electric-launches-new-climate-risk-assessment-and-management-solution",
-      "date": "2026-04-27"
-    },
-    {
-      "id": "ee6eae057882",
-      "source": "ESG Today",
-      "categorie": "Climat",
-      "titre": "Apple, Amazon, Schneider Electric Warn GHG Protocol that Tougher Scope 2 Reporting Rules will Slow Corporate Energy Transition",
-      "resume": "Le GHG Protocol envisage de durcir les règles de reporting Scope 2 (énergie achetée), ce qui pourrait impacter la méthodologie de calcul des émissions indirectes d'ABC liées à la consommation énergétique de ses prestations.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/apple-amazon-schneider-electric-warn-ghg-protocol-that-proposed-scope-2-accounting-changes-will-slow-corporate-energy-transition/?utm_source=rss&utm_medium=rss&utm_campaign=apple-amazon-schneider-electric-warn-ghg-protocol-that-proposed-scope-2-accounting-changes-will-slow-corporate-energy-transition",
       "date": "2026-04-27"
     }
   ],
@@ -607,7 +673,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Deux textes sont significatifs pour un Responsable Environnement/Climat : l'arrêté modifiant le classement des forêts exposées au risque d'incendie (renforçant la gestion des risques climatiques) et l'arrêté sur la répartition du quota de thon rouge (lié à la gestion durable des ressources marines). Les autres textes concernent des domaines non directement liés à l'environnement ou au climat.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -955,5 +1021,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, le plus pertinent pour un Responsable Environnement/Climat concerne le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)**, qui pourrait impacter les politiques de durabilité des entreprises via des mesures sur l’agriculture durable, la gestion des ressources et la transition écologique. Aucun texte ne traite directement des déchets, du reporting RSE ou de la stratégie climat, mais certains accords internationaux (ex : UE-Kirghizistan, N°2691) pourraient influencer les normes environnementales applicables aux entreprises."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) et le projet n°2632 (protection et souveraineté agricoles, potentiellement lié aux enjeux climatiques et alimentaires) présentent un intérêt direct pour un Responsable Environnement/Climat. Aucun texte adopté ne semble directement lié à ces enjeux."
 }
