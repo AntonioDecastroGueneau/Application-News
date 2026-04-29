@@ -1,26 +1,26 @@
 {
   "date": "2026-04-29",
-  "generated_at": "08:01",
-  "elapsed_seconds": 242,
+  "generated_at": "13:09",
+  "elapsed_seconds": 221,
   "errors": [],
   "stats": {
     "jo_analyses": 25,
     "jo_retenus": 0,
-    "depts_restriction": 7
+    "depts_restriction": 10
   },
   "pipeline_meta": {
-    "run_at": "2026-04-29T08:01:54",
+    "run_at": "2026-04-29T13:09:28",
     "sources": {
       "JORF": 0,
-      "RSS": 14,
-      "VigiEau": 7,
+      "RSS": 11,
+      "VigiEau": 10,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 66,
-    "llm_seconds": 81.8
+    "llm_calls": 67,
+    "llm_seconds": 85.4
   },
   "items": [
     {
@@ -35,11 +35,22 @@
       "date": "2026-04-29"
     },
     {
+      "id": "ee82208f17fa",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Électrifier le transport frigorifique : possible, mais coûteux !",
+      "resume": "L'électrification des flottes de véhicules frigorifiques (scope 1) est un enjeu de décarbonation pour ABC, notamment pour répondre aux exigences carbone de ses clients industriels ou de santé. Les contraintes techniques et économiques identifiées dans l'article impactent la stratégie de transition énergétique de la flotte.",
+      "pourquoi": "L'article aborde directement la décarbonation des flottes de véhicules (scope 1), un enjeu clé pour ABC dans le cadre de ses engagements BGES/plan climat et des exigences carbone de ses clients. Bien que le cas testé concerne un camion frigorifique (secteur spécifique), les enseignements sur les coûts et contraintes techniques sont transposables à la réflexion globale d'ABC sur l'électrification de sa flotte.",
+      "criticite": 2,
+      "url": "https://www.actu-environnement.com/ae/news/electrifier-transport-frigorifique-est-possible-mais-couteux-47928.php4#xtor=RSS-6",
+      "date": "2026-04-29"
+    },
+    {
       "id": "7283266719ac",
       "source": "Actu-Environnement",
       "categorie": "Environnement",
       "titre": "Climat : l'Europe se réchauffe deux fois plus vite que la moyenne mondiale",
-      "resume": "L'article souligne l'accélération du réchauffement climatique en Europe, ce qui pourrait impacter les risques opérationnels de ABC (aléas climatiques sur ses 3 000+ sites clients) et renforcer les exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "resume": "L'article souligne l'accélération du réchauffement climatique en Europe, ce qui pourrait impacter les opérations de ABC (risques opérationnels sur les sites clients) et renforcer les exigences carbone des clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/climat-Europe-chaleur-temperatures-canicule-glaciers-secheresse-47925.php4#xtor=RSS-6",
@@ -50,10 +61,21 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "L'Europe n'a jamais autant brûlé qu'en 2025, alertent les scientifiques",
-      "resume": "L'article souligne l'intensification des risques climatiques en Europe en 2025, ce qui pourrait impacter la résilience des sites clients d'ABC (aléas opérationnels, perturbations logistiques) et renforcer les exigences carbone de leurs donneurs d'ordre.",
+      "resume": "L'article souligne l'intensification des risques climatiques en Europe (feux, canicules) qui pourraient impacter la continuité des prestations de propreté/FM d'ABC sur ses 3 000+ sites clients, notamment via des aléas opérationnels ou des exigences carbone renforcées par les clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/L-Europe-n-a-jamais-autant-brule-qu-en-2025-alertent-les-scientifiques",
+      "date": "2026-04-29"
+    },
+    {
+      "id": "e7a8e4287834",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "La nouvelle vague du solaire à concentration",
+      "resume": "L'article aborde une technologie émergente (solaire à concentration) pour décarboner l'industrie, sans impact direct immédiat sur les activités d'ABC (prestataire propreté/FM).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/04/la-nouvelle-vague-du-solaire-a-concentration-422448/",
       "date": "2026-04-29"
     },
     {
@@ -61,10 +83,21 @@
       "source": "GreenUnivers",
       "categorie": "Biodiversité",
       "titre": "La sortie du chauffage au gaz est mal partie [Que Choisir]",
-      "resume": "L'article souligne les obligations croissantes de sortie du chauffage au gaz en France, ce qui pourrait impacter les clients tertiaires d'ABC (bureaux, commerces) et leurs exigences en matière de décarbonation des bâtiments, influençant indirectement les prestations de propreté/FM.",
+      "resume": "L'article souligne les obligations croissantes de sortie du chauffage au gaz en France, ce qui pourrait impacter les sites clients d'ABC (tertiaire, santé, industrie) dans leur transition énergétique, notamment via le DPE tertiaire ou les politiques de décarbonation des bâtiments.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/la-sortie-du-chauffage-au-gaz-est-mal-partie-que-choisir-422591/",
+      "date": "2026-04-29"
+    },
+    {
+      "id": "744cd38f126a",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "82% of Companies Maintaining or Accelerating Climate Goals, as Decarbonization Efforts Extend to Supply Chain: PwC",
+      "resume": "L'article souligne la tendance croissante des entreprises à maintenir ou accélérer leurs objectifs climatiques, incluant la décarbonation des chaînes de valeur, ce qui impacte indirectement ABC via les exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/82-of-companies-maintaining-or-accelerating-climate-goals-as-decarbonization-efforts-extend-to-supply-chain-pwc/?utm_source=rss&utm_medium=rss&utm_campaign=82-of-companies-maintaining-or-accelerating-climate-goals-as-decarbonization-efforts-extend-to-supply-chain-pwc",
       "date": "2026-04-29"
     },
     {
@@ -72,7 +105,7 @@
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Produits invendus : les 10 dérogations à l’interdiction de destruction",
-      "resume": "L'article aborde les dérogations à l'interdiction de destruction des produits invendus, un enjeu lié à la réglementation déchets (REP) et à la gestion des déchets de prestations pour ABC, impactant potentiellement sa chaîne de valeur et ses obligations de traçabilité.",
+      "resume": "L'article détaille les 10 dérogations à l'interdiction de destruction des produits invendus, ce qui impacte indirectement ABC via la gestion des déchets de ses clients (secteurs textile notamment) et les exigences de traçabilité associées.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/produits-invendus-les-10-derogations-linterdiction-de-destruction",
@@ -83,7 +116,7 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "La chaleur renouvelable progresse, mais pas au rythme exigé par la PPE 3",
-      "resume": "L'article souligne le retard de la France dans le développement de la chaleur renouvelable par rapport aux objectifs de la PPE 3, ce qui pourrait impacter les stratégies énergétiques des clients d'ABC (secteurs tertiaire, industrie, santé) et leurs exigences en matière de décarbonation.",
+      "resume": "L'article souligne le retard de la France dans le développement de la chaleur renouvelable par rapport aux objectifs de la PPE 3, ce qui pourrait impacter les stratégies énergétiques des clients d'ABC (notamment tertiaires) et leurs exigences en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/la-chaleur-renouvelable-progresse-mais-pas-au-rythme-exige-par-la-ppe-3",
@@ -101,84 +134,23 @@
       "date": "2026-04-28"
     },
     {
-      "id": "3d71f6a94c1d",
-      "source": "Actu-Environnement",
-      "categorie": "Émissions",
-      "titre": "Comment la convention judiciaire d'intérêt public environnementale a failli passer à la trappe",
-      "resume": "La convention judiciaire d'intérêt public (CJIP) environnementale, alternative aux poursuites pénales pour délits environnementaux, a failli être supprimée mais est maintenue. Cela renforce le cadre juridique des infractions environnementales en France, impactant indirectement les obligations de conformité des entreprises comme ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/cjipe-convention-judiciaire-interet-public-environnementale-suppression-projet-loi-fraude-cmp-47927.php4#xtor=RSS-6",
-      "date": "2026-04-28"
-    },
-    {
-      "id": "20cb05e4fd0c",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Chaleur renouvelable : Amorce demande un engagement public plus fort",
-      "resume": "L'article souligne l'importance des réseaux de chaleur renouvelable face à la hausse des prix des énergies fossiles, un enjeu indirect pour ABC dans le cadre de la décarbonation de ses activités et de celles de ses clients (industrie, santé, etc.).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/chaleur-renouvelable-fossiles-reseaux-prix-energie-47924.php4#xtor=RSS-6",
-      "date": "2026-04-28"
-    },
-    {
-      "id": "b91887a9f5d9",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Droits des déchets : retour sur l'année 2025",
-      "resume": "L'article aborde les évolutions réglementaires sur les déchets en 2025/2026, notamment les précisions sectorielles et les dispositions européennes, impactant potentiellement la gestion des déchets des prestations de propreté/FM d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/droits-dechets-annee-2025-47827.php4#xtor=RSS-6",
-      "date": "2026-04-28"
-    },
-    {
-      "id": "4d6d3858b2f2",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Recyclage du PET en boucle fermée : après les emballages, le textile !",
-      "resume": "L'article présente une innovation technologique (dépolymérisation du polyester) qui pourrait influencer les stratégies de gestion des déchets textiles des clients d'ABC, notamment dans le cadre des obligations de recyclage et de la REP textile à venir.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/axens-ifpen-jeplan-valide-procede-recyclage-chimique-textiles-polyester-en-boucle-fermee-47916.php4#xtor=RSS-6",
-      "date": "2026-04-28"
-    },
-    {
       "id": "824e61f8ef25",
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Solaire : Urbasolar décroche le premier PPA du ministère des Armées",
-      "resume": "L'article illustre l'essor des PPA (Power Purchase Agreements) dans le secteur public, un modèle que les entreprises de services comme ABC pourraient envisager pour décarboner leur consommation énergétique via des contrats d'achat d'électricité renouvelable.",
+      "resume": "Le développement des PPA (Power Purchase Agreements) par des acteurs publics comme le ministère des Armées pourrait influencer les attentes des clients d'ABC en matière d'approvisionnement énergétique bas carbone, notamment dans les secteurs nucléaire, santé et industrie.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/solaire-urbasolar-decroche-le-premier-ppa-du-ministere-des-armees-422701/",
       "date": "2026-04-28"
-    },
-    {
-      "id": "df3d59059b2e",
-      "source": "Le Monde Planète",
-      "categorie": "Eau",
-      "titre": "Le prix du SP95-E10 à nouveau au-dessus de 2 euros le litre en moyenne",
-      "resume": "L'augmentation du prix du SP95-E10 impacte directement les coûts opérationnels de la flotte de véhicules d'ABC, notamment pour les prestations de propreté et FM nécessitant des déplacements fréquents.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/economie-francaise/article/2026/04/28/le-prix-du-sp95-e10-a-nouveau-au-dessus-des-2-euros-le-litre-en-moyenne_6683932_1656968.html",
-      "date": "2026-04-28"
-    },
-    {
-      "id": "5f1d4ffa6b9c",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "GHG Protocol Appoints Tim Mohin as First CEO",
-      "resume": "L'annonce de la nomination du premier CEO du GHG Protocol pourrait influencer les futures évolutions des standards de reporting carbone (scope 1/2/3), pertinents pour le reporting CSRD/ESRS et le bilan GES d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/ghg-protocol-appoints-tim-mohin-as-first-ceo/?utm_source=rss&utm_medium=rss&utm_campaign=ghg-protocol-appoints-tim-mohin-as-first-ceo",
-      "date": "2026-04-28"
     }
   ],
   "restrictions_eau": [
+    {
+      "dept_code": "45",
+      "dept_nom": "Loiret",
+      "niveau": "crise"
+    },
     {
       "dept_code": "66",
       "dept_nom": "Pyrénées-Orientales",
@@ -195,13 +167,18 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "17",
-      "dept_nom": "Charente-Maritime",
+      "dept_code": "85",
+      "dept_nom": "Vendée",
       "niveau": "alerte"
     },
     {
       "dept_code": "79",
       "dept_nom": "Deux-Sèvres",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "17",
+      "dept_nom": "Charente-Maritime",
       "niveau": "alerte"
     },
     {
@@ -212,6 +189,11 @@
     {
       "dept_code": "44",
       "dept_nom": "Loire-Atlantique",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "86",
+      "dept_nom": "Vienne",
       "niveau": "vigilance"
     }
   ],
@@ -1088,7 +1070,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés et décisions pertinents pour un Responsable Environnement/Climat concernent principalement la gestion des ressources naturelles (pêche professionnelle en Méditerranée et crabe des neiges à Saint-Pierre-et-Miquelon), l'homologation de cahiers des charges pour des appellations d'origine contrôlée (vinicole), ainsi que des modifications réglementaires sur les pompes à chaleur et systèmes géothermiques dans les secteurs résidentiel et tertiaire, impactant potentiellement les stratégies énergétiques et d'approvisionnement durable.",
+  "briefing_jorf": "Les textes les plus pertinents concernent la gestion des ressources naturelles (pêche professionnelle en Méditerranée et crabe des neiges à Saint-Pierre-et-Miquelon) et l'homologation de cahiers des charges pour des appellations d'origine contrôlée (AOC) viticoles, ainsi que la modification des fiches d'opérations standardisées pour les pompes à chaleur et systèmes géothermiques, impactant les stratégies RSE en matière d'efficacité énergétique et de décarbonation.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1436,5 +1418,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient présenter un intérêt pour un Responsable Environnement/Climat, notamment via des mesures liées à la transition écologique, la souveraineté alimentaire ou la transposition de directives européennes en matière de durabilité."
+  "pjl_briefing": "Parmi les projets de loi notables, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les enjeux climatiques, énergétiques et de reporting RSE des entreprises. Aucun texte adopté ne semble directement lié à ces thématiques."
 }
