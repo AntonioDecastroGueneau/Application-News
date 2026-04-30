@@ -1,7 +1,7 @@
 {
   "date": "2026-04-30",
-  "generated_at": "08:10",
-  "elapsed_seconds": 572,
+  "generated_at": "13:07",
+  "elapsed_seconds": 255,
   "errors": [],
   "stats": {
     "jo_analyses": 30,
@@ -9,18 +9,18 @@
     "depts_restriction": 10
   },
   "pipeline_meta": {
-    "run_at": "2026-04-30T08:10:16",
+    "run_at": "2026-04-30T13:07:41",
     "sources": {
       "JORF": 0,
-      "RSS": 10,
+      "RSS": 14,
       "VigiEau": 10,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 74,
-    "llm_seconds": 182.4
+    "llm_calls": 79,
+    "llm_seconds": 98.9
   },
   "items": [
     {
@@ -35,14 +35,58 @@
       "date": "2026-04-30"
     },
     {
-      "id": "8e25c39a6b32",
-      "source": "Les Echos Environnement",
-      "categorie": "Eau",
-      "titre": "12 milliards d'euros d'investissements par an pour Engie, dans les énergies renouvelables, le stockage et les réseaux - Les Echos",
-      "resume": "L'article illustre la stratégie de décarbonation d'un acteur majeur du secteur de l'énergie, signalant une accélération des investissements dans les renouvelables et réseaux, ce qui pourrait influencer les attentes clients d'ABC en matière de transition énergétique.",
+      "id": "42e9bc7f61db",
+      "source": "EFRAG",
+      "categorie": "Énergie",
+      "titre": "25 Years of EFRAG: Discover the 2026 conference programme",
+      "resume": "L'article annonce la conférence 2026 d'EFRAG sur l'évolution du reporting corporate, incluant les normes ESRS de la CSRD, pertinentes pour le reporting ESG d'ABC.",
+      "pourquoi": "La conférence 2026 d'EFRAG sur les normes ESRS (CSRD) est un signal stratégique pour ABC car elle impose une mise à jour urgente des méthodologies de reporting extra-financier (scope 1, 2 et 3) d'ici 2026, avec un risque de non-conformité réglementaire et de perte de crédibilité auprès des clients exigeants (ex : nucléaire, santé), mais aussi une opportunité de valoriser sa démarche bas-carbone et sa résilience face aux aléas climatiques pour se différencier sur un marché concurrentiel.",
+      "criticite": 2,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/25-years-of-efrag-discover-the-2026-conference-programme",
+      "date": "2026-04-30"
+    },
+    {
+      "id": "02f3d7f32407",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Mécanisme d'ajustement carbone aux frontières : une ordonnance adapte la législation française",
+      "resume": "L'ordonnance adapte le droit français au Mécanisme d'Ajustement Carbone aux Frontières (MACF) de l'UE, impactant potentiellement les coûts des intrants énergétiques ou des matériaux pour les clients d'ABC (industrie, nucléaire, santé) soumis à des exigences carbone renforcées.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPdlNKS3M0NW04bWtkbDlmNGdKVnJkSnFndzJEb09wTGdfX2lTRklsaHJpVHdVNGlNTlhsRmJiQXZaS0VZODBJelRqeVhwRlZ5QXlReDcwMUU0VHpPUkdLVFlrUksyWl9yTVQ0eXBKeHZtOVVsZW80a1hyRVhqcERpcHFVTnlqc3hiYllvTXpidW9EZjRxV1p1MGJVQmdQVk9jN1QxQUhXQUN3b28yUXBxSnBmSk50RWlmckl0N1dQUDl6RzZwY1BrNWJ1UnhHbXdOWndnS3JNeGcweUNkbFQ4dXpvWmhkSFFQc3lYRWVnMGktRVVoWDRhRTVrN0JJNEd2Z08xclpfclZnR1hlZUo0by0tZ1R4SkRVZ1RZbA?oc=5",
+      "url": "https://www.actu-environnement.com/ae/news/macf-mecanisme-ajustement-carbone-aux-frontieres-cbam-ordonnance-adaptation-droit-francais-47938.php4#xtor=RSS-6",
+      "date": "2026-04-30"
+    },
+    {
+      "id": "05c7b2557080",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Les documents de la semaine",
+      "resume": "Cet article hebdomadaire compile des documents clés sur la transition énergétique (réglementations, études, analyses) qui peuvent inclure des évolutions pertinentes pour le reporting ESG (CSRD/ESRS), la décarbonation (scope 1/2/3) ou les risques climatiques opérationnels de ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/04/les-documents-de-la-semaine-381215/",
+      "date": "2026-04-30"
+    },
+    {
+      "id": "12405b10ac64",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’agenda de la transition énergétique",
+      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique) qui pourraient être utiles pour suivre les tendances sectorielles et identifier des opportunités ou partenariats pour ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/04/lagenda-de-la-semaine-2-422334/",
+      "date": "2026-04-30"
+    },
+    {
+      "id": "56a26380a59e",
+      "source": "Le Monde Planète",
+      "categorie": "Énergie",
+      "titre": "Appel à témoignages : vous roulez au diesel, vous vous chauffez au fioul ou au gaz, et vous ressentez l’impact de la hausse des prix de l’énergie ? Racontez-nous",
+      "resume": "L'article met en lumière l'impact économique des énergies fossiles sur les entreprises, ce qui peut influencer les décisions de transition énergétique des clients d'ABC et leurs exigences en matière de décarbonation des prestations de propreté/FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/economie/appel-temoignages/2026/04/30/appel-a-temoignages-vous-roulez-au-diesel-vous-vous-chauffez-au-fioul-ou-au-gaz-et-vous-ressentez-l-impact-de-la-hausse-des-prix-de-l-energie-racontez-nous_6684575_3234.html",
       "date": "2026-04-30"
     },
     {
@@ -50,7 +94,7 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "L'Anses alerte sur la polyexposition des travailleurs du secteur du tri des déchets",
-      "resume": "L'article met en lumière les risques sanitaires et environnementaux liés à la manipulation des déchets, ce qui peut impacter les pratiques de sécurité et de gestion des déchets d'ABC, notamment dans le cadre de ses obligations CSRD et ISO 14001.",
+      "resume": "L'article met en lumière les risques sanitaires et environnementaux liés à la manipulation des déchets pour les travailleurs du secteur, ce qui peut impacter les pratiques de sécurité et de gestion des déchets d'ABC, notamment en termes de conformité et de responsabilité sociale.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/lanses-alerte-sur-la-polyexposition-des-travailleurs-du-secteur-du-tri-des-dechets-0",
@@ -61,7 +105,7 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Transitions écologiques du travail : les pistes de l'Anact pour accompagner les TPE/PME",
-      "resume": "L'article aborde les transitions écologiques du travail, avec des pistes pour les TPE/PME, ce qui peut influencer les pratiques RSE et environnementales d'ABC, notamment en matière de prévention et d'accompagnement des clients.",
+      "resume": "L'article aborde les transitions écologiques du travail via l'Anact, utile pour ABC dans l'optique d'accompagner ses clients (TPE/PME) sur des enjeux RSE et d'amélioration des conditions de travail liées à l'environnement.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/les-transitions-ecologiques-du-travail-dans-les-tpe-pme-doivent-etre-accompagnees-2",
@@ -72,21 +116,10 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "CEE : de nouvelles règles de contrôle fixées pour les pompes à chaleur",
-      "resume": "L'article annonce de nouvelles règles de contrôle pour les pompes à chaleur (PAC) dans le cadre du dispositif des Certificats d'Économies d'Énergie (CEE), renforçant leur éligibilité aux aides publiques dans le plan d'électrification du gouvernement.",
+      "resume": "L'article impacte indirectement ABC via la politique publique de décarbonation des bâtiments (PAC éligibles aux CEE), mais sans obligation directe pour le prestataire de propreté/FM. Les règles de contrôle des PAC pourraient influencer les stratégies énergétiques des clients tertiaires (ex : DPE tertiaire).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/arrete-journal-officiel-controles-plusieurs-fiches-cee-pompes-chaleur-geothermie-batiments-47936.php4#xtor=RSS-6",
-      "date": "2026-04-29"
-    },
-    {
-      "id": "ee82208f17fa",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "Électrifier le transport frigorifique : possible, mais coûteux !",
-      "resume": "L'électrification des flottes de véhicules frigorifiques (scope 1) est une piste de décarbonation pour ABC, mais son déploiement reste limité et coûteux, impactant la stratégie de mobilité durable de l'entreprise.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/electrifier-transport-frigorifique-est-possible-mais-couteux-47928.php4#xtor=RSS-6",
       "date": "2026-04-29"
     },
     {
@@ -94,10 +127,21 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Octopus propose cinq ans sans facture d’électricité",
-      "resume": "Cet article illustre une tendance émergente de modèles économiques intégrant des solutions énergétiques innovantes (autoconsommation, contrats d'achat d'électricité verte) qui pourraient inspirer des clients d'ABC dans le secteur tertiaire ou résidentiel, sans impact direct immédiat sur ses activités.",
+      "resume": "L'article illustre une innovation commerciale dans le secteur de l'énergie (éco-quartier sans facture d'électricité), qui pourrait influencer les attentes des clients d'ABC en matière de solutions énergétiques durables et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/octopus-propose-5-ans-sans-facture-delectricite-422787/",
+      "date": "2026-04-29"
+    },
+    {
+      "id": "ad23dc4258a1",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Le recycleur Rosi Solar collecte 20 M€, prépare son usine en Espagne",
+      "resume": "L'article illustre une tendance forte dans le recyclage des panneaux solaires, un enjeu indirect pour ABC via la gestion des déchets de ses clients (scope 3) et les exigences CSRD en matière d'économie circulaire.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/04/le-recycleur-rosi-solar-collecte-20-me-prepare-son-usine-en-espagne-422767/",
       "date": "2026-04-29"
     },
     {
@@ -105,7 +149,7 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "PepsiCo Signs 10-Year Clean Energy Deal for Operations and Suppliers in Europe",
-      "resume": "L'article illustre une tendance croissante des grands donneurs d'ordre à exiger des engagements carbone stricts sur leurs chaînes d'approvisionnement, ce qui pourrait impacter les exigences des clients d'ABC en matière de décarbonation.",
+      "resume": "L'article illustre une tendance croissante des grands groupes à sécuriser des contrats d'énergie renouvelable sur le long terme, ce qui pourrait influencer les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et impacter indirectement ses obligations de reporting ESG (scope 3).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/pepsico-signs-10-year-clean-energy-deal-for-operations-and-suppliers-in-europe/?utm_source=rss&utm_medium=rss&utm_campaign=pepsico-signs-10-year-clean-energy-deal-for-operations-and-suppliers-in-europe",
@@ -116,21 +160,21 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "IBM Launches Solution to Embed GHG Emissions Calculations into Existing Systems",
-      "resume": "IBM propose une API (Envizi Emissions API) pour intégrer des calculs d'émissions GES (alignés GHG Protocol) dans les systèmes existants, facilitant le reporting et le suivi des scopes 1/2/3, utile pour ABC dans le cadre de la CSRD et du bilan GES.",
+      "resume": "IBM propose une solution (Envizi Emissions API) pour intégrer des calculs d'émissions GES (alignés GHG Protocol) dans les systèmes existants, facilitant le reporting et la gestion des données pour les entreprises comme ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/ibm-launches-solution-to-embed-ghg-emissions-calculations-into-existing-systems/?utm_source=rss&utm_medium=rss&utm_campaign=ibm-launches-solution-to-embed-ghg-emissions-calculations-into-existing-systems",
       "date": "2026-04-29"
     },
     {
-      "id": "744cd38f126a",
-      "source": "ESG Today",
-      "categorie": "Climat",
-      "titre": "82% of Companies Maintaining or Accelerating Climate Goals, as Decarbonization Efforts Extend to Supply Chain: PwC",
-      "resume": "L'article souligne que 82% des entreprises maintiennent ou accélèrent leurs objectifs climatiques, avec une extension des efforts de décarbonation à la chaîne de valeur, ce qui impacte indirectement les prestataires comme ABC via les exigences carbone de leurs clients (nucléaire, santé, industrie).",
+      "id": "8e25c39a6b32",
+      "source": "Les Echos Environnement",
+      "categorie": "Eau",
+      "titre": "12 milliards d'euros d'investissements par an pour Engie, dans les énergies renouvelables, le stockage et les réseaux - Les Echos",
+      "resume": "L'article illustre la dynamique du marché des énergies renouvelables et des réseaux en France, un secteur où ABC pourrait être impacté indirectement via ses clients (ex : demande accrue en services de propreté liés aux infrastructures énergétiques).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.esgtoday.com/82-of-companies-maintaining-or-accelerating-climate-goals-as-decarbonization-efforts-extend-to-supply-chain-pwc/?utm_source=rss&utm_medium=rss&utm_campaign=82-of-companies-maintaining-or-accelerating-climate-goals-as-decarbonization-efforts-extend-to-supply-chain-pwc",
+      "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPdlNKS3M0NW04bWtkbDlmNGdKVnJkSnFndzJEb09wTGdfX2lTRklsaHJpVHdVNGlNTlhsRmJiQXZaS0VZODBJelRqeVhwRlZ5QXlReDcwMUU0VHpPUkdLVFlrUksyWl9yTVQ0eXBKeHZtOVVsZW80a1hyRVhqcERpcHFVTnlqc3hiYllvTXpidW9EZjRxV1p1MGJVQmdQVk9jN1QxQUhXQUN3b28yUXBxSnBmSk50RWlmckl0N1dQUDl6RzZwY1BrNWJ1UnhHbXdOWndnS3JNeGcweUNkbFQ4dXpvWmhkSFFQc3lYRWVnMGktRVVoWDRhRTVrN0JJNEd2Z08xclpfclZnR1hlZUo0by0tZ1R4SkRVZ1RZbA?oc=5",
       "date": "2026-04-29"
     }
   ],
@@ -1047,7 +1091,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement la déclaration d'utilité publique d'une liaison électrique aérienne 400 kV (impact paysager et biodiversité), l'homologation de cahiers des charges d'AOC/AOP viticoles (enjeux de durabilité des sols et pratiques culturales), et l'adaptation du droit français au règlement UE 2023/956 sur la réduction des émissions de gaz à effet de serre (alignement réglementaire).",
+  "briefing_jorf": "Les textes les plus pertinents concernent la déclaration d'utilité publique d'une liaison électrique aérienne 400 kV (impact paysager et émissions indirectes), l'homologation de cahiers des charges d'AOC/AOP viticoles (enjeux de durabilité et de résilience climatique), et l'adaptation du droit français au règlement UE 2023/956 sur la réduction des émissions de gaz à effet de serre (mesures réglementaires clés pour les entreprises).",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1395,5 +1439,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d’adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques agricoles, énergétiques et de reporting RSE. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi identifiés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632), qui pourrait impacter les politiques agricoles et environnementales, et le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique et agricole (N°2518), susceptible d’influencer les réglementations climatiques et énergétiques. Aucun texte adopté ne semble directement lié aux enjeux environnementaux ou climatiques."
 }
