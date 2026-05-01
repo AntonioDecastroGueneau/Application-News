@@ -1,7 +1,7 @@
 {
   "date": "2026-05-01",
-  "generated_at": "08:04",
-  "elapsed_seconds": 292,
+  "generated_at": "12:15",
+  "elapsed_seconds": 224,
   "errors": [],
   "stats": {
     "jo_analyses": 28,
@@ -9,20 +9,31 @@
     "depts_restriction": 9
   },
   "pipeline_meta": {
-    "run_at": "2026-05-01T08:04:17",
+    "run_at": "2026-05-01T12:15:41",
     "sources": {
       "JORF": 0,
-      "RSS": 12,
+      "RSS": 7,
       "VigiEau": 9,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 75,
-    "llm_seconds": 143.0
+    "llm_calls": 70,
+    "llm_seconds": 76.8
   },
   "items": [
+    {
+      "id": "72d52fa4dbfa",
+      "source": "Novethic",
+      "categorie": "Biodiversité",
+      "titre": "L'ISSB abandonne le reporting obligatoire sur la nature",
+      "resume": "L'ISSB abandonne le reporting obligatoire sur la nature",
+      "pourquoi": "Mention de ISSB.",
+      "criticite": 3,
+      "url": "https://www.novethic.fr/finance-durable/reglementation/issb-reporting-nature-biodiversite-standard-abandonne",
+      "date": "2026-05-01"
+    },
     {
       "id": "5aa55471395d",
       "source": "Actuel HSE",
@@ -39,9 +50,9 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "REP PMCB (1/3) : la valorisation des inertes, des métaux, du bois et du plâtre considérée comme mature",
-      "resume": "La REP PMCB pourrait exclure certains déchets (inertes, métaux, bois, plâtre) si leur valorisation est jugée mature, ce qui pourrait impacter la gestion des déchets de prestations de propreté/FM d'ABC et ses obligations de traçabilité.",
-      "pourquoi": "La REP (Responsabilité Élargie du Producteur) PMCB (Produits et Matériaux de Construction du Bâtiment) concerne les déchets de chantiers et de bâtiments, mais les prestations de propreté/FM d'ABC peuvent générer des déchets similaires (bois, métaux, plâtre) sur les sites clients. Une exclusion de ces flux du périmètre REP pourrait modifier les obligations de tri, traçabilité et contribution financière d'ABC, notamment en termes de reporting déchets et de gestion des flux.",
-      "criticite": 2,
+      "resume": "La REP PMCB pourrait exclure certaines catégories de déchets (inertes, métaux, bois, plâtre) si leur valorisation est jugée mature, ce qui pourrait impacter la gestion des déchets de prestations de propreté/FM d'ABC chez ses clients.",
+      "pourquoi": "",
+      "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/refondation-rep-pmcb-materiaux-matures-47943.php4#xtor=RSS-6",
       "date": "2026-04-30"
     },
@@ -50,43 +61,10 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Hydrogène : des résultats encourageants pour la mise en relation de l'offre et de la demande",
-      "resume": "L'article aborde l'hydrogène comme une solution énergétique émergente, mais sans lien direct avec les enjeux opérationnels immédiats d'ABC (flotte, déchets, reporting CSRD, etc.).",
+      "resume": "L'article aborde l'hydrogène comme une solution énergétique émergente, mais sans lien direct avec les enjeux opérationnels immédiats d'ABC (flotte, déchets, reporting CSRD).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/hydrogene-offre-demande-approvisionnement-union-europenne-47942.php4#xtor=RSS-6",
-      "date": "2026-04-30"
-    },
-    {
-      "id": "3d595e52c8c4",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Climat : un sommet pour accélérer la sortie des fossiles",
-      "resume": "Cet article relate un sommet international sur la sortie des énergies fossiles, un enjeu clé pour la décarbonation des entreprises et la conformité aux politiques climatiques (SNBC, PNACC).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/climat-conference-santa-marta-transition-energetique-fossile-international-47940.php4#xtor=RSS-6",
-      "date": "2026-04-30"
-    },
-    {
-      "id": "02f3d7f32407",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Mécanisme d'ajustement carbone aux frontières : une ordonnance adapte la législation française",
-      "resume": "L'ordonnance adapte le droit français au mécanisme d'ajustement carbone aux frontières (MACF) de l'UE, impactant potentiellement les coûts des intrants ou services liés à des matériaux carbonés pour ABC, sans obligation directe immédiate.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/macf-mecanisme-ajustement-carbone-aux-frontieres-cbam-ordonnance-adaptation-droit-francais-47938.php4#xtor=RSS-6",
-      "date": "2026-04-30"
-    },
-    {
-      "id": "7404aa6213f0",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Patrick Monino prend la tête de Plenitude France",
-      "resume": "L'article annonce un changement de direction chez Plenitude France (filiale d'Eni dédiée aux énergies renouvelables), ce qui pourrait influencer les dynamiques du marché des EnR en France et potentiellement impacter les stratégies énergétiques des clients d'ABC ou ses propres approvisionnements.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/patrick-monino-prend-la-tete-de-plenitude-france-422891/",
       "date": "2026-04-30"
     },
     {
@@ -94,7 +72,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "RTE souscrit un emprunt inédit à la Caisse des dépôts pour son plan à 100 Mds€",
-      "resume": "Cet emprunt de 5 Mds€ pour RTE, acteur clé du réseau électrique français, pourrait influencer les coûts et la disponibilité de l'électricité pour les activités d'ABC, notamment en termes de décarbonation de sa flotte et de ses sites clients.",
+      "resume": "Cet emprunt de 5 Mds€ pour RTE, acteur clé du réseau électrique français, pourrait influencer les coûts et la disponibilité de l'électricité pour les entreprises, y compris celles du secteur de la propreté/FM comme ABC, notamment via des impacts sur les tarifs énergétiques ou les investissements dans les infrastructures.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/rte-souscrit-un-emprunt-inedit-a-la-caisse-des-depots-pour-son-plan-a-100-mdse-422890/",
@@ -105,32 +83,10 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Les documents de la semaine",
-      "resume": "Cette sélection hebdomadaire de documents (textes réglementaires, études, etc.) permet à ABC de rester informé des évolutions clés en transition énergétique et climat, utiles pour anticiper les obligations ou opportunités liées à ses enjeux (BGES, CSRD, flotte, déchets, etc.).",
+      "resume": "Cette newsletter hebdomadaire compile des documents réglementaires et études clés sur la transition énergétique, utile pour suivre les évolutions impactant les enjeux RSE et climat d'ABC (BGES, CSRD, mobilité durable, etc.).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/04/les-documents-de-la-semaine-381215/",
-      "date": "2026-04-30"
-    },
-    {
-      "id": "12405b10ac64",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "L’agenda de la transition énergétique",
-      "resume": "L'article recense des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, hydrogène, rénovation) qui pourraient influencer les stratégies clients d'ABC ou ses propres enjeux de décarbonation et reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/04/lagenda-de-la-semaine-2-422334/",
-      "date": "2026-04-30"
-    },
-    {
-      "id": "5b126761fef0",
-      "source": "Le Monde Planète",
-      "categorie": "Énergie",
-      "titre": "En pleine crise énergétique, une soixantaine de pays réfléchissent à une sortie des énergies fossiles, modèle « suicidaire » qui mène à « la barbarie »",
-      "resume": "L'article souligne une dynamique internationale vers la sortie des énergies fossiles, ce qui pourrait impacter les politiques clients d'ABC (nucléaire, santé, industrie) et leurs exigences carbone, ainsi que les stratégies de décarbonation de la flotte de véhicules d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/04/30/en-pleine-crise-energetique-une-soixantaine-de-pays-reflechissent-a-une-sortie-des-energies-fossiles-modele-suicidaire-qui-mene-a-la-barbarie_6684606_3244.html",
       "date": "2026-04-30"
     },
     {
@@ -138,21 +94,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Banque de France : « Il serait temps de réfléchir à la mise en place d’une différenciation entre le coût du capital pour le vert et pour le brun »",
-      "resume": "L'article aborde la proposition d'une différenciation du coût du capital entre projets verts et bruns, ce qui pourrait influencer les financements futurs des entreprises, y compris celles du secteur de la propreté/FM comme ABC, dans leur transition écologique.",
+      "resume": "L'article aborde une proposition de différenciation du coût du capital entre projets verts et bruns, ce qui pourrait influencer les financements des entreprises comme ABC dans leur transition écologique, notamment via des leviers de décarbonation ou d'investissements durables.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/04/30/banque-de-france-il-serait-temps-de-reflechir-a-la-mise-en-place-d-une-differenciation-entre-le-cout-du-capital-pour-le-vert-et-pour-le-brun_6684604_3232.html",
-      "date": "2026-04-30"
-    },
-    {
-      "id": "84cf04e0ab67",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "Kompas VC Raises €160 Million to Back Industrial Productivity and Decarbonization Startups",
-      "resume": "L'article met en lumière des opportunités d'investissement dans des startups spécialisées dans la décarbonation industrielle, ce qui pourrait intéresser ABC pour identifier des partenaires technologiques ou des solutions innovantes en lien avec ses enjeux de décarbonation (scope 1/2/3) et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/kompas-vc-raises-e160-million-to-back-industrial-productivity-and-decarbonization-startups/?utm_source=rss&utm_medium=rss&utm_campaign=kompas-vc-raises-e160-million-to-back-industrial-productivity-and-decarbonization-startups",
       "date": "2026-04-30"
     }
   ],
@@ -890,7 +835,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement : 1) la déclaration d'utilité publique d'une liaison électrique aérienne à 400 000 volts (impact paysager et biodiversité), 2) l'homologation de cahiers des charges d'AOC/AOP viticoles (enjeux de durabilité des sols et pratiques culturales), 3) l'adaptation du droit français au règlement UE 2023/956 (transition énergétique et décarbonation), et 4) la modification des critères d'éligibilité à l'aide pour la prévention des désordres liés aux sols argileux (risques climatiques et adaptation des infrastructures).",
+  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement : 1) la déclaration d'utilité publique d'une liaison électrique aérienne 400 000V (impact paysager et émissions indirectes), 2) l'homologation de cahiers des charges d'AOC/AOP viticoles (enjeux de durabilité des sols et pratiques culturales), et 3) l'adaptation du droit français au règlement UE 2023/956 sur la réduction des émissions industrielles.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1238,5 +1183,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le projet n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et agricole) et le projet n°2632 (protection et souveraineté agricoles) présentent un intérêt direct pour un Responsable Environnement/Climat, en lien avec les enjeux de transition écologique, de réglementation environnementale et de résilience des systèmes agricoles."
+  "pjl_briefing": "Parmi les projets de loi identifiés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) et le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale, énergétique et agricole (N°2518), qui pourraient impacter les politiques RSE, le reporting extra-financier et les stratégies de transition énergétique. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux."
 }
