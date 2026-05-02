@@ -1,7 +1,7 @@
 {
   "date": "2026-05-02",
-  "generated_at": "07:21",
-  "elapsed_seconds": 181,
+  "generated_at": "12:07",
+  "elapsed_seconds": 142,
   "errors": [],
   "stats": {
     "jo_analyses": 14,
@@ -9,32 +9,21 @@
     "depts_restriction": 9
   },
   "pipeline_meta": {
-    "run_at": "2026-05-02T07:21:25",
+    "run_at": "2026-05-02T12:07:45",
     "sources": {
       "JORF": 0,
-      "RSS": 1,
+      "RSS": 0,
       "VigiEau": 9,
       "Parlement": 1
     },
     "errors": [
-      "SOURCE VIDE — JORF : 0 textes retenus"
+      "SOURCE VIDE — JORF : 0 textes retenus",
+      "SOURCE VIDE — RSS : 0 articles retenus"
     ],
-    "llm_calls": 33,
-    "llm_seconds": 29.8
+    "llm_calls": 29,
+    "llm_seconds": 23.6
   },
-  "items": [
-    {
-      "id": "72d52fa4dbfa",
-      "source": "Novethic",
-      "categorie": "Biodiversité",
-      "titre": "L'ISSB abandonne le reporting obligatoire sur la nature",
-      "resume": "L'ISSB abandonne le reporting obligatoire sur la nature",
-      "pourquoi": "Mention de ISSB.",
-      "criticite": 3,
-      "url": "https://www.novethic.fr/finance-durable/reglementation/issb-reporting-nature-biodiversite-standard-abandonne",
-      "date": "2026-05-01"
-    }
-  ],
+  "items": [],
   "restrictions_eau": [
     {
       "dept_code": "45",
@@ -985,5 +974,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) et le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale, énergétique et agricole (N°2518), qui pourraient impacter les politiques RSE, le reporting extra-financier et les stratégies de décarbonation. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi listés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient présenter un intérêt pour un Responsable Environnement/Climat, notamment en lien avec les enjeux agricoles durables et la transposition de directives européennes environnementales. Aucun texte adopté ne semble directement lié aux priorités RSE ou climat."
 }
