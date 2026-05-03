@@ -1,7 +1,7 @@
 {
   "date": "2026-05-03",
-  "generated_at": "07:48",
-  "elapsed_seconds": 187,
+  "generated_at": "12:07",
+  "elapsed_seconds": 149,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,7 +9,7 @@
     "depts_restriction": 9
   },
   "pipeline_meta": {
-    "run_at": "2026-05-03T07:48:44",
+    "run_at": "2026-05-03T12:07:05",
     "sources": {
       "JORF": 0,
       "RSS": 1,
@@ -20,7 +20,7 @@
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 30,
-    "llm_seconds": 51.8
+    "llm_seconds": 31.7
   },
   "items": [
     {
@@ -28,7 +28,7 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article couvre des tendances ESG globales (objectifs climatiques, reporting, énergies renouvelables) qui influencent les attentes des clients d'ABC, notamment en matière de décarbonation et de reporting extra-financier.",
+      "resume": "L'article couvre des tendances ESG globales (objectifs climatiques, reporting, énergies renouvelables) qui influencent indirectement les exigences clients et réglementaires d'ABC, notamment via la CSRD et les attentes en décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-259/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-259",
@@ -325,7 +325,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat incluent : (1) le classement du site patrimonial remarquable d'Aubenas (Ardèche) pouvant impacter des projets d'aménagement, (2) l'appel d'offres « Grands Projets Industriels de Décarbonation 2026 » (AO GPID) offrant des opportunités de financement pour des initiatives bas-carbone, et (3) l'arrêté sur les appareils de commutation électrique fixes lié à la réglementation REP (Responsabilité Élargie du Producteur). Le décret de démantèlement de la centrale nucléaire de Fessenheim confirme la transition énergétique en cours.",
+  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement le démantèlement de la centrale nucléaire de Fessenheim (Décret n°2026-336) et l'appel d'offres « Grands Projets Industriels de Décarbonation 2026 » (AO GPID), qui impactent directement les stratégies de transition énergétique et de réduction des émissions. Les autres arrêtés et avis ne présentent pas d'enjeux environnementaux ou climatiques majeurs pour une grande entreprise de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -673,5 +673,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique (N°2518)** pourraient présenter un intérêt pour un Responsable Environnement/Climat, notamment via des mesures liées à la transition agricole ou à l'alignement avec les directives européennes en matière d'énergie et d'environnement."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seuls les projets n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) et n°2632 (protection et souveraineté agricoles) présentent un intérêt direct pour un Responsable Environnement/Climat, en lien avec les enjeux de transition écologique et de résilience des filières."
 }
