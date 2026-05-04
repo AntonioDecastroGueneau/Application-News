@@ -1,7 +1,7 @@
 {
   "date": "2026-05-04",
-  "generated_at": "08:17",
-  "elapsed_seconds": 205,
+  "generated_at": "13:08",
+  "elapsed_seconds": 175,
   "errors": [],
   "stats": {
     "jo_analyses": 12,
@@ -9,20 +9,31 @@
     "depts_restriction": 9
   },
   "pipeline_meta": {
-    "run_at": "2026-05-04T08:17:48",
+    "run_at": "2026-05-04T13:08:05",
     "sources": {
       "JORF": 0,
-      "RSS": 6,
+      "RSS": 10,
       "VigiEau": 9,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 39,
-    "llm_seconds": 53.0
+    "llm_calls": 50,
+    "llm_seconds": 57.1
   },
   "items": [
+    {
+      "id": "32a6e95b0497",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Optimisez votre reporting CSRD avec Greenly",
+      "resume": "Optimisez votre reporting CSRD avec Greenly",
+      "pourquoi": "Mention de CSRD.",
+      "criticite": 3,
+      "url": "https://www.actu-environnement.com/ae/pdt/optimisation-reporting-csrd-greenly-1470.php4#xtor=RSS-6",
+      "date": "2026-05-04"
+    },
     {
       "id": "81cbc691bb2c",
       "source": "Actuel HSE",
@@ -35,14 +46,36 @@
       "date": "2026-05-04"
     },
     {
+      "id": "e7eef5a3bc8e",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Lire notre dossier d'actu \"Électrification : le grand basculement énergétique\"",
+      "resume": "L'article aborde l'électrification des flottes comme réponse aux enjeux de décarbonation et de dépendance énergétique, un sujet clé pour la flotte de véhicules d'ABC (scope 1) et les attentes clients en matière de mobilité durable.",
+      "pourquoi": "L'électrification des flottes est un levier direct pour ABC, impactant son scope 1 (émissions véhicules) et ses obligations de reporting (CSRD, BGES). Le contexte réglementaire (ZFE, trajectoires nationales) et les exigences clients (nucléaire, santé, industrie) renforcent la pertinence stratégique.",
+      "criticite": 2,
+      "url": "https://www.actu-environnement.com/dossier-actu/plan-electrification-batiment-transport-indsutrie-PAC-126#xtor=RSS-6",
+      "date": "2026-05-04"
+    },
+    {
       "id": "5f4b0dc31313",
       "source": "Reporterre",
       "categorie": "Énergie",
       "titre": "La pompe à chaleur vaut-elle le coup ? Les 4 choses à savoir avant d'investir",
-      "resume": "L'article souligne l'accélération du déploiement des pompes à chaleur en France, avec un objectif de 1 million d'installations annuelles d'ici 2030, ce qui impacte indirectement la stratégie énergétique des clients d'ABC et leurs exigences en matière de décarbonation.",
+      "resume": "L'article aborde la stratégie gouvernementale française de déploiement massif des pompes à chaleur (PAC) d'ici 2030, un levier clé pour la décarbonation des bâtiments tertiaires, secteur où ABC intervient via ses prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/La-pompe-a-chaleur-vaut-elle-le-coup-Les-4-choses-a-savoir-avant-d-investir",
+      "date": "2026-05-04"
+    },
+    {
+      "id": "3216510fe460",
+      "source": "Novethic",
+      "categorie": "Énergie",
+      "titre": "Plan de transition : Siparex fait valider son score climat par la méthode ACT de l’Ademe",
+      "resume": "L'article illustre l'application de la méthode ACT de l'ADEME pour évaluer les plans de transition climatique, un outil pertinent pour ABC dans le cadre de ses enjeux de reporting ESG (CSRD/ESRS) et de décarbonation de ses activités.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/finance-durable/finance-verte/plan-transition-siparex-fait-valider-score-climat-methode-act-ademe",
       "date": "2026-05-04"
     },
     {
@@ -50,10 +83,21 @@
       "source": "Contexte Environnement",
       "categorie": "Climat",
       "titre": "Déchets textiles : Mathieu Lefèvre fait le pari du recyclage",
-      "resume": "La refonte de la filière de gestion des déchets textiles pourrait impacter ABC via la gestion des déchets de ses clients (textiles professionnels ou uniformes) et les exigences de recyclage dans le cadre de la REP (Responsabilité Élargie du Producteur) ou des politiques RSE des clients.",
+      "resume": "La refonte de la filière de gestion des déchets textiles pourrait impacter les obligations de tri et de traçabilité des déchets pour ABC, notamment via la REP (Responsabilité Élargie du Producteur) qui pourrait s'étendre à de nouveaux flux.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.contexte.com/fr/article/environnement/dechets-textiles-mathieu-lefevre-fait-le-pari-du-recyclage_263297?source=rss",
+      "date": "2026-05-04"
+    },
+    {
+      "id": "9b6a0ba99e94",
+      "source": "ESG Today",
+      "categorie": "Énergie",
+      "titre": "IBM Launches GHG Emissions Calculation Solution for Spreadsheet Users",
+      "resume": "IBM propose un outil de calcul des émissions GES intégré à Excel, utile pour les équipes RSE utilisant des feuilles de calcul pour leur bilan carbone, mais sans obligation directe pour ABC dans l'immédiat.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/ibm-launches-ghg-emissions-calculation-solution-for-spreadsheet-users/?utm_source=rss&utm_medium=rss&utm_campaign=ibm-launches-ghg-emissions-calculation-solution-for-spreadsheet-users",
       "date": "2026-05-04"
     },
     {
@@ -61,7 +105,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "La RE2020 pleinement opérationnelle pour les activités tertiaires spécifiques et les bâtiments industriels et artisanaux",
-      "resume": "La RE2020 étend ses exigences aux bâtiments tertiaires spécifiques et industriels/artisanaux neufs à partir du 1er mai 2026, impactant potentiellement les sites clients d'ABC (ex : locaux de propreté/FM) en termes de performance énergétique et environnementale.",
+      "resume": "La RE2020 étendue aux bâtiments tertiaires spécifiques et industriels/artisanaux impose de nouvelles exigences énergétiques et environnementales pour les constructions neuves à partir du 1er mai 2026, impactant potentiellement les sites clients d'ABC (ex : locaux de propreté/FM).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/la-re2020-pleinement-operationnelle-pour-les-activites-tertiaires-specifiques-et-les-3",
@@ -83,7 +127,7 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article synthétise des tendances ESG et réglementaires (objectifs climatiques, reporting, énergies renouvelables) qui impactent indirectement les entreprises comme ABC via les attentes clients et les normes sectorielles.",
+      "resume": "L'article couvre des tendances ESG globales, dont la persistance des objectifs climatiques des entreprises et les évolutions réglementaires en France (plan de sortie des énergies fossiles d'ici 2050), utiles pour contextualiser les enjeux de reporting et de décarbonation d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-259/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-259",
@@ -368,7 +412,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement le démantèlement de la centrale nucléaire de Fessenheim (décret n°2026-336) et l'appel d'offres « Grands Projets Industriels de Décarbonation 2026 » (AO GPID), qui impactent directement les stratégies de transition énergétique et de réduction des émissions. Les autres arrêtés et avis sont moins pertinents pour les enjeux climatiques ou environnementaux d'une grande entreprise de services.",
+  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement le démantèlement de la centrale nucléaire de Fessenheim (Décret n°2026-336) et l'appel d'offres « Grands Projets Industriels de Décarbonation 2026 » (AO GPID), qui impactent directement les stratégies de transition énergétique et de réduction des émissions.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -603,19 +647,19 @@
           "titre": "Texte adopté N° 267",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/encadrer_regroupements_pedagogiques_intercommunaux_garantir_egalite_acces_ecole_rural_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/encadrer_regroupements_pedagogiques_intercommunaux_garantir_egalite_acces_ecole_rural_17e",
-          "date": "2026-02-17"
+          "date": "2026-05-04"
         },
         {
           "titre": "Texte adopté N° 266",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reconnaitre_politique_nationale_adaptation_changement_climatique_adapter_mecanismes_assurance_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reconnaitre_politique_nationale_adaptation_changement_climatique_adapter_mecanismes_assurance_17e",
-          "date": "2025-10-28"
+          "date": "2026-05-04"
         },
         {
           "titre": "Texte adopté N° 265",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_prevention_cardio_neuro_vasculaire_et_anticiper_risque_sanitaire_et_social_majeur_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_prevention_cardio_neuro_vasculaire_et_anticiper_risque_sanitaire_et_social_majeur_17e",
-          "date": "2025-12-23"
+          "date": "2026-05-04"
         },
         {
           "titre": "Texte adopté N° 264",
@@ -639,13 +683,13 @@
           "titre": "Texte adopté N° 258",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53690",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53690",
-          "date": "2026-01-30"
+          "date": "2026-05-04"
         },
         {
           "titre": "Texte adopté N° 256",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interdire_sucres_ajoutes_nourrissons_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interdire_sucres_ajoutes_nourrissons_17e",
-          "date": "2026-02-04"
+          "date": "2026-05-04"
         },
         {
           "titre": "Texte adopté N° 253",
@@ -657,31 +701,31 @@
           "titre": "Texte adopté N° 255",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/controle_gouvernance_reponsabilite_financiere_agences_operateurs_Etat_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/controle_gouvernance_reponsabilite_financiere_agences_operateurs_Etat_17e",
-          "date": "2026-02-04"
+          "date": "2026-05-04"
         },
         {
           "titre": "Texte adopté N° 254",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/renforcer_enseignement_defense_nationale_dans_parcours_citoyennete_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/renforcer_enseignement_defense_nationale_dans_parcours_citoyennete_17e",
-          "date": "2026-01-27"
+          "date": "2026-05-04"
         },
         {
           "titre": "Texte adopté N° 257",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/condamner_atteintes_droits_fondamentaux_personnes_migrantes_Tunisie",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/condamner_atteintes_droits_fondamentaux_personnes_migrantes_Tunisie",
-          "date": "2025-12-23"
+          "date": "2026-05-04"
         },
         {
           "titre": "Texte adopté N° 252",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_renforcer_la_place_des_agriculteurs_dans_amenagement_du_territoire_et_securiser_activites_agricoles_face_au_changement_climatique_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_renforcer_la_place_des_agriculteurs_dans_amenagement_du_territoire_et_securiser_activites_agricoles_face_au_changement_climatique_17e",
-          "date": "2026-02-04"
+          "date": "2026-05-04"
         },
         {
           "titre": "Texte adopté N° 251",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_sortie_indivision_successorale",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_sortie_indivision_successorale",
-          "date": "2025-01-21"
+          "date": "2026-05-04"
         },
         {
           "titre": "Texte adopté N° 250",
@@ -722,5 +766,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le n°2632 (projet de loi d’urgence pour la protection et la souveraineté agricoles) et le n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) présentent un intérêt direct pour un Responsable Environnement/Climat. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou RSE."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques agricoles, énergétiques et de reporting RSE. Le **Projet de loi-cadre relatif au développement des transports (N°2740)** pourrait aussi influencer les stratégies de mobilité durable des entreprises."
 }
