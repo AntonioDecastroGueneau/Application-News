@@ -1,7 +1,7 @@
 {
   "date": "2026-05-05",
-  "generated_at": "07:58",
-  "elapsed_seconds": 345,
+  "generated_at": "12:50",
+  "elapsed_seconds": 331,
   "errors": [],
   "stats": {
     "jo_analyses": 11,
@@ -9,16 +9,16 @@
     "depts_restriction": 9
   },
   "pipeline_meta": {
-    "run_at": "2026-05-05T07:58:24",
+    "run_at": "2026-05-05T12:50:35",
     "sources": {
       "JORF": 1,
-      "RSS": 10,
+      "RSS": 11,
       "VigiEau": 9,
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 49,
-    "llm_seconds": 74.5
+    "llm_calls": 48,
+    "llm_seconds": 59.9
   },
   "items": [
     {
@@ -33,25 +33,47 @@
       "date": "2026-05-05"
     },
     {
+      "id": "25c875f5ac9c",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Biogaz : la trajectoire post-2028 des certificats de production est en consultation",
+      "resume": "La consultation sur la trajectoire post-2028 des certificats de production de biogaz (CPB) pourrait influencer les coûts et disponibilités énergétiques pour ABC, notamment via l'impact sur les énergies renouvelables utilisées dans ses prestations de propreté/FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/biogaz-biomethane-injecte-certificats-production-cpb-2035-gaz-prix-47954.php4#xtor=RSS-6",
+      "date": "2026-05-05"
+    },
+    {
+      "id": "c08bdd51c45a",
+      "source": "Novethic",
+      "categorie": "Eau",
+      "titre": "Comment la crise climatique affecte la productivité des salariés",
+      "resume": "L'article souligne l'impact des aléas climatiques sur la productivité des salariés, un risque indirect pour ABC qui intervient sur 3 000+ sites clients exposés à ces perturbations.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/environnement/climat/crise-climatique-evenements-extremes-productivite-salaries",
+      "date": "2026-05-05"
+    },
+    {
+      "id": "75fceb94c3f8",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Les cleantech lèvent plus de 160 M€ en avril",
+      "resume": "L'article souligne la dynamique des levées de fonds dans les cleantech en France, un secteur clé pour les solutions de décarbonation et d'efficacité énergétique, pouvant influencer les choix technologiques d'ABC pour ses clients ou sa propre transition.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/les-cleantech-levent-plus-de-160-me-en-avril-422686/",
+      "date": "2026-05-05"
+    },
+    {
       "id": "eac63c8b0498",
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "REP PMCB (2/3) : les régions chargées de dessiner le maillage des points de reprise des déchets",
-      "resume": "La refonte de la REP PMCB impacte les obligations de reprise des déchets pour les prestataires de propreté comme ABC, notamment via la gestion des déchets de chantiers et la traçabilité des flux. Les régions auront un rôle clé dans l'organisation du maillage territorial des points de reprise.",
-      "pourquoi": "La REP PMCB (Responsabilité Élargie du Producteur pour les Produits et Matériaux de Construction du Bâtiment) concerne directement les déchets générés par les activités de nettoyage et de maintenance des bâtiments (chantiers, déchets de chantier, etc.), un enjeu majeur pour ABC. La suppression de l'obligation de reprise sur chantier et par les distributeurs modifie les modalités de gestion des déchets pour les prestataires de services comme ABC, avec un impact sur les processus opérationnels et la traçabilité. Bien que non une obligation légale immédiate pour ABC, cette évolution réglementaire nécessite une adaptation des pratiques et une veille sur les modalités régionales.",
-      "criticite": 2,
-      "url": "https://www.actu-environnement.com/ae/news/refondation-pmcb-maillage-territorial-points-reprise-dechets-47946.php4#xtor=RSS-6",
-      "date": "2026-05-04"
-    },
-    {
-      "id": "3216510fe460",
-      "source": "Novethic",
-      "categorie": "Énergie",
-      "titre": "Plan de transition : Siparex fait valider son score climat par la méthode ACT de l’Ademe",
-      "resume": "L'article illustre l'application de la méthode ACT de l'ADEME pour valider des scores climat, un outil potentiellement utile pour ABC dans le cadre de son reporting CSRD/ESRS ou de la structuration de ses plans de transition climatique.",
+      "resume": "La REP PMCB (Produits et Matériaux de Construction du Bâtiment) impose désormais aux régions de définir le maillage des points de reprise des déchets, supprimant les obligations de reprise sur chantier et par les distributeurs. Cela impacte la gestion des déchets pour ABC dans le cadre de ses prestations de propreté/FM chez les clients.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.novethic.fr/finance-durable/finance-verte/plan-transition-siparex-fait-valider-score-climat-methode-act-ademe",
+      "url": "https://www.actu-environnement.com/ae/news/refondation-pmcb-maillage-territorial-points-reprise-dechets-47946.php4#xtor=RSS-6",
       "date": "2026-05-04"
     },
     {
@@ -59,7 +81,7 @@
       "source": "The Shift Project",
       "categorie": "Énergie",
       "titre": "Décider face à l’incertitude – Rencontres Académiques #4",
-      "resume": "L'article aborde la gestion de l'incertitude climatique et stratégique, un enjeu transversal pour ABC dans la définition de sa trajectoire bas-carbone et l'adaptation de ses services face aux risques climatiques sur ses 3 000+ sites clients.",
+      "resume": "L'article aborde la gestion de l'incertitude climatique et stratégique, un enjeu transversal pour ABC dans le cadre de sa politique RSE et de ses engagements net zéro, notamment via la CSRD et la gestion des risques opérationnels.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://theshiftproject.org/publications/decider-face-a-lincertitude/",
@@ -70,7 +92,7 @@
       "source": "GreenUnivers",
       "categorie": "Environnement",
       "titre": "Biogaz : les objectifs des CPB pour 2035 sont prêts pour consultation",
-      "resume": "La consultation sur la trajectoire post-2028 des CPB (certificats de production de biogaz) pourrait influencer les stratégies énergétiques des entreprises, notamment en matière de décarbonation des flottes ou de mix énergétique, mais sans obligation directe pour ABC dans l'immédiat.",
+      "resume": "Le biogaz pourrait devenir un levier de décarbonation pour la flotte de véhicules d'ABC (scope 1), mais les objectifs CPB 2035 ne sont pas encore contraignants pour les prestataires de services comme ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/biogaz-les-objectifs-des-cpb-pour-2035-sont-prets-pour-consultation-423085/",
@@ -81,10 +103,21 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Les batteries profitent d’écarts de prix de l’électricité records",
-      "resume": "L'article met en lumière l'opportunité économique liée au stockage par batterie, favorisée par les écarts de prix records de l'électricité, ce qui pourrait influencer les stratégies énergétiques et la gestion des flottes de véhicules électriques d'ABC.",
+      "resume": "L'article met en lumière l'opportunité économique liée au stockage par batterie, rendue attractive par les écarts de prix records de l'électricité, ce qui pourrait influencer les stratégies énergétiques des entreprises comme ABC dans un contexte de transition énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/les-batteries-profitent-decarts-de-prix-de-lelectricite-records-423031/",
+      "date": "2026-05-04"
+    },
+    {
+      "id": "2c209174237d",
+      "source": "GreenUnivers",
+      "categorie": "Biodiversité",
+      "titre": "Eolien en mer : Ocean Winds achève ses premiers parcs posé et flottant en France",
+      "resume": "L'article traite de l'éolien en mer, un sujet énergétique et de décarbonation, mais sans lien direct avec les enjeux opérationnels ou réglementaires immédiats d'ABC (flotte véhicules, déchets, BGES, CSRD).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/eolien-en-mer-ocean-winds-acheve-ses-premiers-parcs-pose-et-flottant-en-france-423036/",
       "date": "2026-05-04"
     },
     {
@@ -92,7 +125,7 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Colvert veut lever des fonds pour ses batteries de seconde vie",
-      "resume": "Colvert propose des solutions de stockage d'énergie (BESS) basées sur des batteries de seconde vie, une piste potentielle pour optimiser la gestion énergétique des sites clients d'ABC ou sa propre flotte de véhicules.",
+      "resume": "Colvert, acteur du stockage d'électricité par batteries de seconde vie, pourrait influencer les stratégies de décarbonation des clients d'ABC (notamment industriels ou tertiaires) en proposant des solutions de stockage durable, potentiellement alignées sur leurs objectifs carbone.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/colvert-veut-lever-des-fonds-pour-ses-batteries-de-seconde-vie-422624/",
@@ -103,32 +136,10 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Electricité : du jamais vu dans les prix négatifs [Marchés]",
-      "resume": "L'article illustre une volatilité extrême des prix de l'électricité en France, pouvant impacter les coûts énergétiques des prestations de nettoyage/facility management d'ABC, notamment via la consommation des sites clients ou de sa propre flotte.",
+      "resume": "La volatilité des prix de l'électricité (prix négatifs) impacte les coûts énergétiques des prestations de nettoyage et FM d'ABC, nécessitant une adaptation des contrats clients et une optimisation de la consommation énergétique des sites.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/electricite-du-jamais-vu-dans-les-prix-negatifs-marches-422984/",
-      "date": "2026-05-04"
-    },
-    {
-      "id": "9b6a0ba99e94",
-      "source": "ESG Today",
-      "categorie": "Énergie",
-      "titre": "IBM Launches GHG Emissions Calculation Solution for Spreadsheet Users",
-      "resume": "IBM propose un outil de calcul des émissions GES directement intégré à Excel, facilitant la gestion des données carbone pour les équipes RSE, notamment pour les entreprises en phase de structuration de leur bilan GES (scope 1/2/3).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/ibm-launches-ghg-emissions-calculation-solution-for-spreadsheet-users/?utm_source=rss&utm_medium=rss&utm_campaign=ibm-launches-ghg-emissions-calculation-solution-for-spreadsheet-users",
-      "date": "2026-05-04"
-    },
-    {
-      "id": "628c1d7e8cdb",
-      "source": "Les Echos Environnement",
-      "categorie": "Énergie",
-      "titre": "La grande muraille de l'énergie verte : l'UE tourne le dos aux onduleurs chinois - Les Echos",
-      "resume": "L'article souligne la dépendance de l'UE aux onduleurs chinois pour les énergies renouvelables, ce qui pourrait impacter les coûts et la disponibilité des équipements pour les prestataires de services comme ABC, notamment dans le cadre de la transition énergétique de ses clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxONjd4TDhaUU9FcFdvcUd0SUVrYzltT3ZFNVVBTWduNWRndXdDaEJxSUhUQUVLX25DSFNFVDNDbGY2aUhmSkZ5LXV6TGt4WXpWSzdjNm9DRkREVkhWbGFrSHlJNHE4dW9nc2k3eUtaVkM4MlRudkx5LWVsYmk4U0NGQ2ljbHlqMW1YVXY0S3A5R1FzVGtsblluOVQ4MHBjdkZsMFJtNTBfSDRRVVpEdjRvYVhPZjFqTmQ2OEx3cXpaM2R3R1BlN3NIZFcyTnNSUVFDT0V6WkI1WXNpRHlFQTYwYmNHdw?oc=5",
       "date": "2026-05-04"
     }
   ],
@@ -511,14 +522,17 @@
       "source": "JORF",
       "categorie": "Environnement",
       "titre": "Arrêté du 22 avril 2026 modifiant l'arrêté du 12 décembre 2022 relatif aux données des filières à responsabilité élargie des producteurs",
-      "resume": "Modification des obligations de traçabilité et reporting pour les filières REP, impactant potentiellement la gestion des déchets des prestations de propreté de ABC.",
-      "pourquoi": "L'arrêté impose un renforcement de la traçabilité et du reporting des déchets pour les filières REP (dont les emballages et déchets de nettoyage), avec un délai de mise en conformité sous 12 à 18 mois, exposant ABC à un risque de non-conformité réglementaire et contractuelle (perte de marchés clients exigeants) ou à une opportunité de différenciation via une gestion optimisée des déchets et une meilleure collaboration avec les éco-organismes.",
+      "resume": "Extension des obligations de traçabilité et de reporting pour les filières REP, impactant potentiellement la gestion des déchets des prestations de propreté de ABC chez ses clients.",
+      "pourquoi": {
+        "obligation_concrete": "Extension des obligations de traçabilité et de reporting pour les déchets issus des prestations de propreté (ex : emballages, produits usagés) via les filières REP, avec un délai de mise en conformité sous 12 à 18 mois.",
+        "impact_risque_opportunite": "Risque de non-conformité contractuelle et financière pour ABC si ses clients (ex : industriels, agroalimentaire) exigent une preuve de traçabilité renforcée, mais opportunité de différenciation RSE en proposant des solutions clés en main de gestion des déchets alignées sur ces nouvelles exigences."
+      },
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054026689",
       "date": "2026-05-05"
     }
   ],
-  "briefing_jorf": "Les arrêtés 2 et 3 sont significatifs : le premier modifie les limites de rejets d'effluents liquides et gazeux des centrales nucléaires de Cattenom, impactant la gestion environnementale des sites EDF ; le second actualise les données des filières REP, influençant les obligations de recyclage et de reporting des entreprises concernées.",
+  "briefing_jorf": "L'arrêté du 28 avril 2026 modifiant les limites de rejets des effluents liquides et gazeux des installations nucléaires de Cattenom (Moselle) est significatif pour un Responsable Environnement/Climat, car il impacte directement les normes de sûreté et de radioprotection applicables à un site industriel majeur comme EDF-SA.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -872,5 +886,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le n°2518 (transposition de directives européennes en matière environnementale, énergétique et agricole) et le n°2632 (protection et souveraineté agricoles) présentent un intérêt direct pour un Responsable Environnement/Climat, en lien avec les enjeux de transition écologique et de résilience des systèmes alimentaires."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique (N°2518)** pourraient présenter un intérêt pour un Responsable Environnement/Climat, notamment en lien avec les enjeux agricoles durables et la transposition de directives européennes environnementales. Aucun texte adopté ne semble directement lié aux priorités RSE ou climat."
 }
