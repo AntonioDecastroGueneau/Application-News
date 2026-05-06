@@ -1,7 +1,7 @@
 {
   "date": "2026-05-06",
-  "generated_at": "08:08",
-  "elapsed_seconds": 226,
+  "generated_at": "13:34",
+  "elapsed_seconds": 1386,
   "errors": [],
   "stats": {
     "jo_analyses": 10,
@@ -9,29 +9,51 @@
     "depts_restriction": 9
   },
   "pipeline_meta": {
-    "run_at": "2026-05-06T08:08:34",
+    "run_at": "2026-05-06T13:34:59",
     "sources": {
       "JORF": 0,
-      "RSS": 20,
+      "RSS": 19,
       "VigiEau": 9,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 54,
-    "llm_seconds": 71.0
+    "llm_calls": 52,
+    "llm_seconds": 197.1
   },
   "items": [
+    {
+      "id": "cb6e259f0583",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "EU Parliament SFDR Draft Proposes Tougher ESG Fund Labelling Rules",
+      "resume": "EU Parliament SFDR Draft Proposes Tougher ESG Fund Labelling Rules",
+      "pourquoi": "Mention de SFDR.",
+      "criticite": 3,
+      "url": "https://www.esgtoday.com/eu-parliament-sfdr-draft-proposes-tougher-esg-fund-labelling-rules/?utm_source=rss&utm_medium=rss&utm_campaign=eu-parliament-sfdr-draft-proposes-tougher-esg-fund-labelling-rules",
+      "date": "2026-05-06"
+    },
     {
       "id": "b810984f7916",
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Taxinomie européenne : la Commission publie une FAQ pour faciliter l'application des nouvelles obligations",
-      "resume": "La FAQ de la Commission européenne sur la taxonomie verte clarifie les obligations de reporting ESG pour les entreprises, ce qui impacte directement ABC dans le cadre de sa préparation à la CSRD et aux exigences clients (nucléaire, santé, industrie).",
-      "pourquoi": "La taxonomie verte est un outil clé pour le reporting extra-financier (CSRD/ESRS) et la traçabilité des activités durables, directement lié aux enjeux de reporting ESG et de décarbonation de ABC. Bien que non une obligation opérationnelle immédiate, elle influence les attentes clients et les stratégies de transparence.",
+      "resume": "La FAQ de la Commission européenne sur la taxinomie verte clarifie les obligations de reporting ESG pour les entreprises, ce qui impacte directement ABC dans le cadre de la CSRD et du reporting extra-financier.",
+      "pourquoi": "La taxinomie européenne est un outil clé pour la CSRD (Corporate Sustainability Reporting Directive) et les ESRS (European Sustainability Reporting Standards), qui concernent directement ABC pour son reporting ESG et sa conformité réglementaire. Bien que l'article ne mentionne pas explicitement les entreprises de services comme ABC, la taxinomie s'applique à toutes les entreprises soumises à la CSRD, y compris les prestataires de services comme ABC.",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/taxinomie-europeenne-la-commission-publie-une-faq-pour-faciliter-lapplication-des-2",
+      "date": "2026-05-06"
+    },
+    {
+      "id": "5801bb45346c",
+      "source": "Novethic",
+      "categorie": "Énergie",
+      "titre": "Economie de la flemme, petits formats, sachets individuels... : le tout-plastique toujours à l'honneur dans la grande distribution",
+      "resume": "L'article met en lumière l'écart entre les objectifs de la loi AGEC (2020) et la persistance des emballages plastiques à usage unique dans la grande distribution, ce qui pourrait impacter les exigences clients d'ABC en matière de réduction des déchets plastiques dans les prestations de propreté.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/emballages-grande-distribution-peine-sortir-tout-plastique",
       "date": "2026-05-06"
     },
     {
@@ -39,10 +61,21 @@
       "source": "Novethic",
       "categorie": "Déchets",
       "titre": "Les responsables RSE se réinventent en \"architectes de la transformation stratégique des entreprises\"",
-      "resume": "L'article souligne la nécessité pour les responsables RSE de se repositionner comme acteurs stratégiques, ce qui pourrait impacter la structuration des équipes environnement/climat d'ABC pour répondre aux attentes clients et réglementaires.",
+      "resume": "L'article souligne la nécessité pour les responsables RSE de se repositionner comme acteurs stratégiques de la transformation des entreprises, ce qui pourrait impacter la structuration des plans climat et CSRD chez ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/responsables-rse-architectes-transformation-strategique-entreprise",
+      "date": "2026-05-06"
+    },
+    {
+      "id": "fc391f37af3d",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Solaire au sol : l’arrivée du protectionnisme chahute l’économie des appels d’offres",
+      "resume": "L'article aborde l'impact du protectionnisme européen sur les appels d'offres solaires au sol, ce qui pourrait influencer les stratégies énergétiques des entreprises comme ABC dans le cadre de leur transition vers les énergies renouvelables.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/solaire-au-sol-larrivee-du-protectionnisme-chahute-leconomie-des-appels-doffres-423269/",
       "date": "2026-05-06"
     },
     {
@@ -50,7 +83,7 @@
       "source": "ESG Today",
       "categorie": "Biodiversité",
       "titre": "EU Approves State Plans to Compensate Companies for Carbon Pricing Costs to Keep them from Relocating",
-      "resume": "L'article aborde les compensations aux entreprises pour les coûts liés au prix du carbone dans l'UE, ce qui pourrait impacter indirectement les clients d'ABC (notamment industriels) et leurs exigences en matière de décarbonation ou de reporting.",
+      "resume": "L'article aborde des compensations pour les coûts liés au carbone dans l'UE, un sujet indirectement lié aux enjeux de décarbonation et de reporting ESG de ABC, notamment pour ses clients industriels ou énergétiquement intensifs.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/eu-approves-state-plans-to-compensate-companies-for-ets-carbon-pricing-costs-to-prevent-relocation/?utm_source=rss&utm_medium=rss&utm_campaign=eu-approves-state-plans-to-compensate-companies-for-ets-carbon-pricing-costs-to-prevent-relocation",
@@ -61,7 +94,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "La qualité de l'air s'est légèrement dégradée en Île-de-France en 2025",
-      "resume": "L'article signale une dégradation de la qualité de l'air en Île-de-France en 2025, ce qui pourrait impacter les exigences réglementaires locales (ZFE) et les attentes clients en matière de propreté urbaine, sans obligation directe immédiate pour ABC.",
+      "resume": "L'article signale une dégradation de la qualité de l'air en Île-de-France en 2025, ce qui pourrait impacter les exigences réglementaires locales (ZFE, normes environnementales) et les attentes clients d'ABC en matière de propreté et d'impact environnemental.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/la-qualite-de-lair-sest-legerement-degradee-en-ile-de-france-en-2025-2",
@@ -72,8 +105,8 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "REP PMCB (3/3) : des objectifs de collecte et de valorisation sensiblement remaniés",
-      "resume": "La REP PMCB (Produits et Matériaux de Construction du Bâtiment) pourrait impacter les déchets générés par les prestations de propreté/FM d'ABC chez ses clients, notamment via de nouveaux objectifs de collecte et de valorisation. Un mécanisme de financement est envisagé pour soutenir la création d'outils industriels en France, ce qui pourrait influencer les coûts et la logistique des déchets pour ABC.",
-      "pourquoi": "La REP PMCB concerne les déchets du bâtiment, un flux de déchets potentiellement généré par les prestations de propreté/FM d'ABC chez ses clients (ex : chantiers, rénovations). Les objectifs remaniés pourraient imposer de nouvelles obligations de tri, collecte ou valorisation, impactant directement la gestion des déchets d'ABC. Bien que non une obligation immédiate, cela relève des enjeux réglementaires déchets (REP) et pourrait nécessiter une adaptation des processus internes dans les 12-24 mois.",
+      "resume": "Les objectifs de collecte et de valorisation des déchets du bâtiment sont remaniés, avec un mécanisme de financement pour le recyclage.",
+      "pourquoi": "C'est un signal stratégique important pour ABC car il impacte directement la gestion des déchets produits lors des prestations, nécessitant une adaptation rapide de la chaîne de valeur pour répondre aux nouvelles exigences de collecte et de valorisation, avec un risque de non-conformité et une opportunité de différenciation sur le marché.",
       "criticite": 2,
       "url": "https://www.actu-environnement.com/ae/news/revision-objectifs-collecte-rercyclage-rep-pmcb-47950.php4#xtor=RSS-6",
       "date": "2026-05-05"
@@ -83,21 +116,10 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Recyclage des plastiques : les mauvais chiffres 2025 alimentent l'inquiétude des régénérateurs français",
-      "resume": "L'article souligne les défis du recyclage des plastiques en France, avec un risque de fermetures de sites en 2026, ce qui pourrait impacter la gestion des déchets des prestataires comme ABC et leurs clients, notamment via les filières REP.",
+      "resume": "La situation du recyclage des plastiques en France pourrait avoir un impact indirect sur la flotte de véhicules d'ABC et les déchets générés par ses prestations.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/chiffres-2025-srp-recyclage-plastique-crainte-arrete-impr-47962.php4#xtor=RSS-6",
-      "date": "2026-05-05"
-    },
-    {
-      "id": "25ea2871972d",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "Terres rares : un plan national pour accélérer sur la voie de la résilience",
-      "resume": "Terres rares : un plan national pour accélérer sur la voie de la résilience",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/terres-rares-minerais-strategiques-extraction-transformation-recyclage-47959.php4#xtor=RSS-6",
       "date": "2026-05-05"
     },
     {
@@ -105,7 +127,7 @@
       "source": "Actu-Environnement",
       "categorie": "Émissions",
       "titre": "Méthane : Paris pousse un levier climatique encore peu exploité",
-      "resume": "Le méthane est un enjeu climatique émergent dans les politiques publiques et les attentes clients (notamment industriels), pouvant impacter indirectement ABC via les exigences carbone de ses clients (scope 3) ou les réglementations futures sur les émissions des prestataires.",
+      "resume": "La France tente de relancer la mobilisation internationale sur le méthane, un levier climatique jugé plus accessible que le CO2, mais les émissions mondiales restent stables.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/mobilisation-G7-France-methane-climat-47958.php4#xtor=RSS-6",
@@ -116,32 +138,10 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Face aux vagues de chaleur, Santé publique France lance le réseau Chaleur-Santé-Bâti-Urbanisme",
-      "resume": "L'article souligne l'intensification des vagues de chaleur en France et leurs impacts sanitaires, ce qui pourrait influencer les exigences des clients d'ABC (secteurs santé, industrie) en matière de résilience climatique des sites et de gestion des risques opérationnels.",
+      "resume": "Les canicules s'intensifient, entraînant des effets sur la santé des employés de ABC, ce qui peut avoir un impact sur la santé et la sécurité au travail.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/chaleur-sante-publique-france-reseau-bati-urbanisme-47957.php4#xtor=RSS-6",
-      "date": "2026-05-05"
-    },
-    {
-      "id": "25c875f5ac9c",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "Biogaz : la trajectoire post-2028 des certificats de production est en consultation",
-      "resume": "La consultation sur la trajectoire post-2028 des certificats de production de biogaz (CPB) pourrait influencer les coûts énergétiques et les opportunités d'approvisionnement pour ABC, notamment dans le cadre de sa stratégie de décarbonation et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/biogaz-biomethane-injecte-certificats-production-cpb-2035-gaz-prix-47954.php4#xtor=RSS-6",
-      "date": "2026-05-05"
-    },
-    {
-      "id": "c08bdd51c45a",
-      "source": "Novethic",
-      "categorie": "Eau",
-      "titre": "Comment la crise climatique affecte la productivité des salariés",
-      "resume": "L'article souligne l'impact de la crise climatique sur la productivité des salariés, un enjeu indirect pour ABC via la performance de ses clients (nucléaire, santé, industrie) et la gestion des risques opérationnels sur ses 3 000+ sites.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/environnement/climat/crise-climatique-evenements-extremes-productivite-salaries",
       "date": "2026-05-05"
     },
     {
@@ -149,7 +149,7 @@
       "source": "GreenUnivers",
       "categorie": "Émissions",
       "titre": "Engie revend ses activités solaires résidentielles françaises",
-      "resume": "La cession des activités solaires résidentielles d'Engie à Reno.energy pourrait influencer le marché des énergies renouvelables en France, mais n'a pas d'impact direct immédiat sur les enjeux climatiques ou réglementaires d'ABC.",
+      "resume": "La vente des activités solaires résidentielles d'Engie à Reno.energy pourrait influencer le marché des solutions énergétiques durables en France, sans impact direct immédiat sur les activités de nettoyage ou de gestion de flotte de ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/engie-revend-ses-activites-solaires-residentielles-francaises-423245/",
@@ -160,7 +160,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "EDF va tester une nouvelle tarification pour décaler la consommation des ménages",
-      "resume": "Cette initiative d'EDF pourrait influencer les attentes des clients d'ABC en matière de flexibilité énergétique et de tarification dynamique, potentiellement étendue aux entreprises de services comme ABC dans le cadre de leur propre stratégie énergétique.",
+      "resume": "Cette initiative d'EDF pourrait influencer les stratégies énergétiques des clients d'ABC (secteurs nucléaire, santé, industrie) en les incitant à adapter leur consommation, impactant indirectement les prestations de propreté/FM et les enjeux de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/edf-va-tester-une-nouvelle-tarification-pour-decaler-la-consommation-des-menages-423248/",
@@ -171,7 +171,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "La SNCF conclut son ultime CPPA avec Générale du Solaire et JPEE",
-      "resume": "L'article illustre l'accélération des CPPA (contrats d'achat d'électricité renouvelable) dans les secteurs industriels et tertiaires, un modèle que les clients d'ABC (nucléaire, santé, industrie) pourraient adopter pour décarboner leur énergie, impactant indirectement les prestations de propreté/FM.",
+      "resume": "L'article illustre une tendance forte des grands groupes (ici SNCF) à sécuriser des approvisionnements en électricité renouvelable via des CPPA, un modèle qui pourrait inspirer ABC pour ses propres contrats énergétiques ou ceux de ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/la-sncf-conclut-son-ultime-cppa-avec-generale-du-solaire-et-jpee-423205/",
@@ -182,7 +182,7 @@
       "source": "GreenUnivers",
       "categorie": "Biodiversité",
       "titre": "Comment Bercy veut construire une filière d’aimants permanents",
-      "resume": "L'article aborde la stratégie française de sécurisation des matières premières critiques pour l'électrification, notamment les aimants permanents, ce qui pourrait impacter la décarbonation de la flotte de véhicules d'ABC et ses objectifs de réduction des émissions scope 1.",
+      "resume": "L'article aborde la stratégie française de décarbonation via la filière des aimants permanents, un enjeu lié à l'électrification des flottes et à la mobilité durable (scope 1), mais sans obligation directe pour ABC dans l'immédiat.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/comment-bercy-veut-construire-une-filiere-daimants-permanents-423161/",
@@ -193,21 +193,10 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Deepki étend son rayon d’action aux économies d’énergie réelles",
-      "resume": "Deepki, spécialiste des données énergétiques dans l'immobilier, étend son offre aux économies d'énergie réelles, ce qui pourrait intéresser ABC pour optimiser la performance énergétique de ses sites clients (tertiaires) et réduire leur empreinte carbone.",
+      "resume": "Deepki, spécialiste des données énergétiques dans l'immobilier, étend son offre aux économies d'énergie réelles via l'acquisition de Sobre Energie, ce qui pourrait intéresser ABC pour optimiser la performance énergétique de ses sites clients (tertiaire) et répondre aux enjeux de décarbonation et de DPE tertiaire.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/deepki-etend-son-rayon-daction-aux-economies-denergie-reelles-423143/",
-      "date": "2026-05-05"
-    },
-    {
-      "id": "75fceb94c3f8",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Les cleantech lèvent plus de 160 M€ en avril",
-      "resume": "L'article signale une dynamique de financement des cleantech en France, ce qui pourrait influencer l'accès à des solutions innovantes pour décarboner les activités d'ABC (ex : flotte véhicules, énergie, déchets).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/les-cleantech-levent-plus-de-160-me-en-avril-422686/",
       "date": "2026-05-05"
     },
     {
@@ -215,7 +204,7 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Energies renouvelables : l’Union européenne arrête de financer les onduleurs chinois",
-      "resume": "L'article impacte indirectement ABC via les risques d'approvisionnement en équipements pour la transition énergétique de ses clients (ex : installations solaires ou bornes de recharge), mais sans obligation réglementaire directe pour l'entreprise.",
+      "resume": "L'article impacte indirectement ABC via les coûts et disponibilité des équipements pour ses clients (ex : solutions énergétiques durables) et la chaîne d'approvisionnement de ses prestations de propreté/FM, sans obligation directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/05/05/energies-renouvelables-l-union-europeenne-arrete-de-financer-les-onduleurs-chinois_6685636_3234.html",
@@ -226,21 +215,21 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "Persefoni Launches Agentic AI to Help Companies Analyze Carbon Footprint",
-      "resume": "Persefoni propose un outil d'IA agentique pour analyser les émissions de carbone (scope 1/2/3), utile pour automatiser le reporting CSRD/ESRS et optimiser la gestion des données GES d'ABC.",
+      "resume": "L'article présente un outil d'IA (Persefoni Analytics Agent) pour analyser les émissions carbone, utile pour optimiser le reporting CSRD/ESRS et le bilan GES d'ABC, notamment sur les scopes 1/2/3.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/persefoni-launches-agentic-ai-to-help-companies-analyze-carbon-footprint/?utm_source=rss&utm_medium=rss&utm_campaign=persefoni-launches-agentic-ai-to-help-companies-analyze-carbon-footprint",
       "date": "2026-05-05"
     },
     {
-      "id": "52cc525384f7",
+      "id": "528075b4bb05",
       "source": "ESG Today",
-      "categorie": "Biodiversité",
-      "titre": "Barocal Raises $10 Million to Cut Data Center Cooling, Refrigeration Emissions",
-      "resume": "L'article aborde une innovation technologique dans le refroidissement des data centers, un secteur indirectement lié aux enjeux de décarbonation des clients d'ABC (nucléaire, santé, industrie) et aux risques climatiques sur leurs sites. Bien que non directement opérationnel pour ABC, cela peut influencer les attentes carbone de ses clients.",
+      "categorie": "Déchets",
+      "titre": "Germany Invests €5 Billion to Decarbonize Energy Intensive Industries",
+      "resume": "L'Allemagne investit massivement dans la décarbonation des industries énergivores, ce qui pourrait influencer les exigences carbone des clients industriels d'ABC en France et en Europe, notamment via des normes ou des attentes accrues en matière de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.esgtoday.com/barocal-raises-10-million-to-cut-data-center-cooling-refrigeration-emissions/?utm_source=rss&utm_medium=rss&utm_campaign=barocal-raises-10-million-to-cut-data-center-cooling-refrigeration-emissions",
+      "url": "https://www.esgtoday.com/germany-invests-e5-billion-to-decarbonize-energy-intensive-industries/?utm_source=rss&utm_medium=rss&utm_campaign=germany-invests-e5-billion-to-decarbonize-energy-intensive-industries",
       "date": "2026-05-05"
     }
   ],
@@ -672,7 +661,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "L'arrêté du 30 avril 2026 sur l'agrément d'un organisme coordonnateur de la filière à responsabilité élargie des producteurs (REP) de batteries est significatif pour une entreprise de services, car il impacte la gestion des déchets électroniques et la conformité réglementaire en matière de recyclage et d'économie circulaire.",
+  "briefing_jorf": "L'arrêté du 30 avril 2026 portant agrément d'un organisme coordonnateur de la filière à responsabilité élargie des producteurs de batteries est significatif pour un Responsable Environnement/Climat, car il implique des pratiques responsables dans la production de batteries.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1026,5 +1015,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale, énergétique et agricole (N°2518)** pourraient impacter les politiques RSE, notamment via des mesures sur la transition écologique, la souveraineté alimentaire ou la transposition de directives européennes (ex : Green Deal). Aucun texte adopté ne semble directement lié à des enjeux climatiques ou environnementaux majeurs."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations réglementaires européennes dans ces domaines, incluant potentiellement des normes environnementales et climatiques."
 }
