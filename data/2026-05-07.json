@@ -1,7 +1,7 @@
 {
   "date": "2026-05-07",
-  "generated_at": "08:16",
-  "elapsed_seconds": 199,
+  "generated_at": "13:18",
+  "elapsed_seconds": 243,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
@@ -9,10 +9,10 @@
     "depts_restriction": 9
   },
   "pipeline_meta": {
-    "run_at": "2026-05-07T08:16:02",
+    "run_at": "2026-05-07T13:18:26",
     "sources": {
       "JORF": 0,
-      "RSS": 14,
+      "RSS": 17,
       "VigiEau": 9,
       "Parlement": 1
     },
@@ -20,18 +20,51 @@
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 59,
-    "llm_seconds": 70.8
+    "llm_seconds": 86.8
   },
   "items": [
+    {
+      "id": "0ebb4f9e4982",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "REP huiles : un projet de cahier des charges pour assurer la gestion des contenants",
+      "resume": "L'article aborde la gestion des contenants d'huiles dans le cadre de la REP (Responsabilité Élargie du Producteur), ce qui impacte indirectement ABC via la traçabilité et la gestion des déchets de ses prestations de propreté/FM chez les clients.",
+      "pourquoi": "La REP huiles concerne les déchets générés par les prestations de propreté (ex : huiles usagées des machines de nettoyage, produits chimiques). ABC doit anticiper les évolutions réglementaires sur la traçabilité et la gestion des déchets pour ses clients, notamment dans le cadre de la CSRD et de l'ISO 14001. Le projet de cahier des charges pourrait imposer de nouvelles obligations de reporting ou de collecte pour les prestataires.",
+      "criticite": 2,
+      "url": "https://www.actu-environnement.com/ae/news/ajout-contenants-cdc-rep-huiles-47971.php4#xtor=RSS-6",
+      "date": "2026-05-07"
+    },
     {
       "id": "9c2c215b0246",
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Flottes professionnelles : après le défi d'électrifier, celui de gérer la recharge",
-      "resume": "L'article aborde la gestion de la recharge des véhicules électriques, une étape clé pour ABC dans la décarbonation de sa flotte professionnelle (scope 1), après l'électrification initiale.",
-      "pourquoi": "Le sujet concerne directement la flotte de véhicules d'ABC (scope 1) et les enjeux de décarbonation, avec une évolution réglementaire et opérationnelle à anticiper (ex : ZFE, électrification). Même si l'article est technique, il impacte une priorité stratégique pour ABC.",
+      "resume": "L'article aborde la gestion de la recharge des véhicules électriques, une étape clé pour ABC dans la décarbonation de sa flotte professionnelle (scope 1), avec des enjeux opérationnels et réglementaires à anticiper.",
+      "pourquoi": "Le sujet concerne directement la flotte de véhicules d'ABC (scope 1), un enjeu identifié dans ses priorités (décarbonation, mobilité durable, CSRD/reporting). Bien que l'article soit orienté 'gestion technique', il s'inscrit dans un contexte réglementaire et marché en évolution (ZFE, électrification) qui impacte les entreprises de services comme ABC.",
       "criticite": 2,
       "url": "https://www.actu-environnement.com/ae/news/defi-electrification-vehicules-flottes-professionnelles-recharge-47951.php4#xtor=RSS-6",
+      "date": "2026-05-07"
+    },
+    {
+      "id": "0f11de494690",
+      "source": "Novethic",
+      "categorie": "Énergie",
+      "titre": "Moody’s, Standard and poors, Fitch… les agences de notation à leur tour sous le feu des anti-ESG",
+      "resume": "L'article souligne une pression politique croissante aux États-Unis contre les agences de notation ESG, ce qui pourrait impacter la crédibilité des critères extra-financiers utilisés par les clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et influencer leurs exigences carbone.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/finance-durable/reglementation/moodys-sp-fitch-agences-notation-leur-tour-sous-feu-anti-esg",
+      "date": "2026-05-07"
+    },
+    {
+      "id": "3a41f26e41de",
+      "source": "I4CE",
+      "categorie": "Climat",
+      "titre": "Voiture électrique et logement : la transition écologique devient davantage accessible aux classes moyennes",
+      "resume": "L'article aborde l'accessibilité croissante des véhicules électriques et des solutions énergétiques pour les ménages, ce qui peut influencer les attentes clients d'ABC en matière de mobilité durable et d'efficacité énergétique dans les prestations de FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.i4ce.org/voiture-electrique-logement-transition-ecologique-accessible-classes-moyennes-presse-climat/",
       "date": "2026-05-07"
     },
     {
@@ -39,10 +72,32 @@
       "source": "I4CE",
       "categorie": "Climat",
       "titre": "Crise énergétique, évolution des aides : les ménages peuvent-ils passer à l’électrique et rénover leur logement en 2026 ?",
-      "resume": "L'article aborde les aides publiques et la transition énergétique des ménages, ce qui peut influencer les politiques clients d'ABC (ex : tertiaire, santé) et leurs exigences en matière de décarbonation des prestations.",
+      "resume": "L'article aborde l'évolution des aides publiques et des coûts énergétiques pour les ménages en 2026, ce qui pourrait influencer les politiques de rénovation énergétique des bâtiments tertiaires (clients d'ABC) et leurs exigences en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.i4ce.org/crise-energie-evolution-aides-menages-passer-electrique-renover-logement-climat/",
+      "date": "2026-05-07"
+    },
+    {
+      "id": "12405b10ac64",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’agenda de la transition énergétique",
+      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.) en France, offrant une veille sur les tendances et innovations sectorielles pertinentes pour ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/lagenda-de-la-semaine-2-422334/",
+      "date": "2026-05-07"
+    },
+    {
+      "id": "05c7b2557080",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Les documents de la semaine",
+      "resume": "Cette newsletter hebdomadaire compile les documents clés sur la transition énergétique, incluant textes réglementaires, études et analyses pertinentes pour suivre les évolutions légales et stratégiques en France/UE. Elle permet à ABC de rester informé des obligations et opportunités liées à la décarbonation, CSRD, énergie, déchets ou mobilité durable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/les-documents-de-la-semaine-381215/",
       "date": "2026-05-07"
     },
     {
@@ -50,21 +105,21 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Nelson lève 3 M€ pour optimiser la recharge des flottes",
-      "resume": "L'article souligne la croissance des flottes électriques en France et l'émergence d'acteurs spécialisés dans l'optimisation de la recharge, ce qui impacte la stratégie de décarbonation de la flotte d'ABC (scope 1) et ses relations avec les clients exigeants en matière de mobilité durable.",
+      "resume": "L'article souligne la croissance des flottes électriques en France et l'émergence de solutions comme Nelson Mobility pour optimiser leur recharge, ce qui peut impacter la stratégie de décarbonation de la flotte d'ABC et ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/nelson-leve-3-me-pour-optimiser-la-recharge-des-flottes-422684/",
       "date": "2026-05-07"
     },
     {
-      "id": "12d2ac64950e",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Voiture électrique et logement : la transition écologique devient davantage accessible aux classes moyennes",
-      "resume": "L'article souligne l'accessibilité accrue des véhicules électriques, un enjeu clé pour la décarbonation de la flotte d'ABC (scope 1), mais sans mention d'obligations réglementaires ou d'actions immédiates.",
+      "id": "d6285a0ff4c7",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "EU Releases Proposed Finalized Mandatory and Voluntary Sustainability Reporting Standards",
+      "resume": "L'article annonce de nouvelles normes européennes de reporting de durabilité (ESRS) qui pourraient influencer les exigences de reporting ESG des clients d'ABC, notamment dans le cadre de la CSRD, sans obligation directe immédiate pour l'entreprise.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/05/07/voiture-electrique-et-logement-la-transition-ecologique-devient-davantage-accessible-aux-classes-moyennes_6686489_3244.html",
+      "url": "https://www.esgtoday.com/eu-releases-proposed-finalized-mandatory-and-voluntary-sustainability-reporting-standards/?utm_source=rss&utm_medium=rss&utm_campaign=eu-releases-proposed-finalized-mandatory-and-voluntary-sustainability-reporting-standards",
       "date": "2026-05-07"
     },
     {
@@ -72,54 +127,32 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Sortie des énergies fossiles : la France publie sa feuille de route",
-      "resume": "La France publie une feuille de route pour sortir des énergies fossiles d'ici 2050, avec des échéances clés (charbon 2030, pétrole 2045, gaz 2050), impactant indirectement les stratégies de décarbonation des clients d'ABC et leurs exigences en matière de mobilité durable et d'énergie.",
+      "resume": "La France publie une feuille de route pour la sortie des énergies fossiles d'ici 2050, avec des échéances clés (charbon en 2030, pétrole en 2045, gaz en 2050), ce qui impacte les stratégies clients d'ABC (nucléaire, santé, industrie) et ses enjeux de décarbonation (flotte, énergie, reporting).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/sortie-des-energies-fossiles-la-france-publie-sa-feuille-de-route-3",
       "date": "2026-05-07"
     },
     {
-      "id": "cb6e259f0583",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "EU Parliament SFDR Draft Proposes Tougher ESG Fund Labelling Rules",
-      "resume": "EU Parliament SFDR Draft Proposes Tougher ESG Fund Labelling Rules",
-      "pourquoi": "Mention de SFDR.",
-      "criticite": 3,
-      "url": "https://www.esgtoday.com/eu-parliament-sfdr-draft-proposes-tougher-esg-fund-labelling-rules/?utm_source=rss&utm_medium=rss&utm_campaign=eu-parliament-sfdr-draft-proposes-tougher-esg-fund-labelling-rules",
-      "date": "2026-05-06"
+      "id": "4b8df15534dd",
+      "source": "Actuel HSE",
+      "categorie": "Énergie",
+      "titre": "Le chiffre : 40 %",
+      "resume": "L'article mentionne une feuille de route française sur la sortie des énergies fossiles, un sujet stratégique pour la décarbonation de la flotte de véhicules d'ABC et ses engagements climatiques.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/les-emissions-de-ges-de-lue-au-plus-bas-depuis-1990-2",
+      "date": "2026-05-07"
     },
     {
       "id": "206e41b23513",
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Solaire : le fabricant de panneaux Dualsun relocalise en Europe",
-      "resume": "L'article illustre une tendance européenne de relocalisation industrielle dans le solaire, pouvant impacter les choix énergétiques des clients d'ABC (ex : tertiaire, industrie) et leurs exigences en matière de décarbonation ou de circuits courts.",
+      "resume": "La relocalisation de la production de panneaux solaires en Europe pourrait influencer les choix énergétiques des clients d'ABC (notamment tertiaire/industrie) et leurs exigences en matière de décarbonation des prestations.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/dualsun-relocalisation-europe-panneaux-solaires-47969.php4#xtor=RSS-6",
-      "date": "2026-05-06"
-    },
-    {
-      "id": "603e48511236",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Que Choisir et No Plastic In My Sea déplorent l'omniprésence des emballages en plastique en grandes surfaces",
-      "resume": "L'article souligne l'insuffisance des efforts contre les emballages plastiques en grandes surfaces, ce qui pourrait impacter les obligations de tri et de réduction des déchets pour ABC dans le cadre de ses prestations de propreté/FM, notamment via les REP (Responsabilité Élargie du Producteur) ou les attentes clients en matière de durabilité.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/etude-emballages-plastique-supermarche-47964.php4#xtor=RSS-6",
-      "date": "2026-05-06"
-    },
-    {
-      "id": "5801bb45346c",
-      "source": "Novethic",
-      "categorie": "Énergie",
-      "titre": "Economie de la flemme, petits formats, sachets individuels... : le tout-plastique toujours à l'honneur dans la grande distribution",
-      "resume": "L'article met en lumière la persistance des emballages plastiques à usage unique dans la grande distribution, malgré la loi Agec de 2020, ce qui pourrait impacter les exigences clients d'ABC en matière de gestion des déchets et de reporting ESG (scope 3).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/emballages-grande-distribution-peine-sortir-tout-plastique",
       "date": "2026-05-06"
     },
     {
@@ -127,7 +160,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Dualsun se lance dans le « made in Europe »",
-      "resume": "Le lancement de panneaux solaires 'made in Europe' par Dualsun pourrait influencer les choix énergétiques des clients d'ABC (secteurs nucléaire, santé, industrie) en facilitant l'accès à des solutions renouvelables locales, sans impact direct immédiat sur ses activités.",
+      "resume": "L'initiative de Dualsun pourrait influencer les choix énergétiques des clients d'ABC (secteurs nucléaire, santé, industrie) en proposant des panneaux solaires 'made in Europe', alignés sur les enjeux de décarbonation et de relocalisation industrielle.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/dualsun-se-lance-dans-le-made-in-europe-423431/",
@@ -138,7 +171,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Hysetco freine sur les stations hydrogène, cherche des clients",
-      "resume": "L'article souligne les défis économiques de l'hydrogène comme solution de décarbonation pour les flottes de véhicules, un enjeu stratégique pour ABC dans le cadre de sa transition énergétique et de ses engagements scope 1.",
+      "resume": "L'article aborde la décarbonation des flottes de véhicules via l'hydrogène, une solution complémentaire aux batteries, ce qui pourrait impacter la stratégie de mobilité durable d'ABC (scope 1) en fonction des choix clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/hysetco-freine-sur-les-stations-hydrogene-cherche-des-clients-423350/",
@@ -149,32 +182,21 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Solaire au sol : l’arrivée du protectionnisme chahute l’économie des appels d’offres",
-      "resume": "L'article aborde l'impact du protectionnisme européen sur les appels d'offres solaires au sol, ce qui pourrait influencer les stratégies énergétiques des clients d'ABC (notamment industriels ou tertiaires) dans leurs choix de solutions renouvelables, sans impact direct immédiat sur les activités de nettoyage ou FM.",
+      "resume": "L'article aborde l'impact du protectionnisme européen sur les appels d'offres solaires au sol, ce qui pourrait influencer les stratégies énergétiques des clients d'ABC (notamment tertiaires ou industriels) dans leur transition vers les énergies renouvelables.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/solaire-au-sol-larrivee-du-protectionnisme-chahute-leconomie-des-appels-doffres-423269/",
       "date": "2026-05-06"
     },
     {
-      "id": "4b12fc620069",
-      "source": "ESG Today",
-      "categorie": "Biodiversité",
-      "titre": "Moment Energy Raises $40 Million to Power Data Centers, Industry with Used EV Batteries",
-      "resume": "L'article illustre une tendance émergente de réutilisation des batteries de véhicules électriques pour le stockage d'énergie, un enjeu potentiel pour la gestion de la flotte et les solutions énergétiques durables d'ABC.",
+      "id": "fd0496013bce",
+      "source": "Le Monde Planète",
+      "categorie": "Déchets",
+      "titre": "« Les Etats européens doivent adopter une convention autonome consacrant le droit à un environnement sain »",
+      "resume": "Cet article aborde une initiative européenne visant à renforcer la protection environnementale via une convention autonome, mais sans impact réglementaire ou opérationnel direct immédiat pour ABC dans ses activités de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.esgtoday.com/moment-energy-raises-40-million-to-power-data-centers-industry-with-used-ev-batteries/?utm_source=rss&utm_medium=rss&utm_campaign=moment-energy-raises-40-million-to-power-data-centers-industry-with-used-ev-batteries",
-      "date": "2026-05-06"
-    },
-    {
-      "id": "9e9f7e0cb6e6",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "Amazon Signs Deal to Deploy Energy, Emissions-Saving HVAC Technology Across Global Building Network",
-      "resume": "Cet accord entre Amazon et Transaera pour déployer des technologies de climatisation écoénergétiques pourrait inspirer des solutions similaires pour réduire l'empreinte carbone des bâtiments tertiaires, un enjeu indirect pour ABC via ses clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/amazon-signs-deal-to-deploy-energy-emissions-saving-hvac-technology-across-global-building-network/?utm_source=rss&utm_medium=rss&utm_campaign=amazon-signs-deal-to-deploy-energy-emissions-saving-hvac-technology-across-global-building-network",
+      "url": "https://www.lemonde.fr/idees/article/2026/05/06/les-etats-europeens-doivent-adopter-une-convention-autonome-consacrant-le-droit-a-un-environnement-sain_6686141_3232.html",
       "date": "2026-05-06"
     }
   ],
@@ -780,7 +802,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des arrêtés ou avis publiés ne traite directement de sujets environnementaux, climatiques ou de RSE pertinents pour un Responsable Environnement/Climat d'une grande entreprise de services. Les textes concernent principalement des nominations, des agréments techniques, des concours publics ou des modifications de cahiers des charges sectoriels (agroalimentaire, santé).",
+  "briefing_jorf": "Aucun des arrêtés ou avis publiés ne traite directement de sujets environnementaux, climatiques ou de RSE pertinents pour un Responsable Environnement/Climat d'une grande entreprise de services. Les textes concernent principalement des nominations, des agréments techniques, des modifications de cahiers des charges de produits alimentaires ou des dispositifs médicaux.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1140,5 +1162,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (transposition de directives UE en matière environnementale, énergétique et agricole) et le projet de loi n°2632 (protection et souveraineté agricoles) pourraient impacter directement les enjeux climatiques et RSE d'une entreprise de services, notamment via des obligations renforcées en matière de reporting, d'adaptation aux normes environnementales ou de gestion des ressources."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et économique) et le n°2630 (programmation militaire 2024-2030 incluant des dispositions pour la défense) pourraient impacter indirectement les enjeux climatiques et énergétiques d’une grande entreprise de services. Aucun texte adopté ne semble directement lié à la RSE ou au reporting environnemental."
 }
