@@ -1,7 +1,7 @@
 {
   "date": "2026-05-08",
-  "generated_at": "07:17",
-  "elapsed_seconds": 189,
+  "generated_at": "12:55",
+  "elapsed_seconds": 175,
   "errors": [],
   "stats": {
     "jo_analyses": 29,
@@ -9,27 +9,49 @@
     "depts_restriction": 9
   },
   "pipeline_meta": {
-    "run_at": "2026-05-08T07:17:28",
+    "run_at": "2026-05-08T12:55:17",
     "sources": {
       "JORF": 0,
-      "RSS": 8,
+      "RSS": 6,
       "VigiEau": 9,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 59,
-    "llm_seconds": 68.5
+    "llm_calls": 54,
+    "llm_seconds": 63.8
   },
   "items": [
+    {
+      "id": "3ba37f6c9e25",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG SR TEG Online Meeting 11 May 2026",
+      "resume": "L'article concerne les travaux du groupe technique EFRAG sur les normes de reporting de durabilité (ESRS), qui impactent directement les obligations de reporting extra-financier (CSRD) pour ABC, notamment pour son reporting environnemental et climatique.",
+      "pourquoi": "EFRAG est l'organisme européen en charge de l'élaboration des normes ESRS (European Sustainability Reporting Standards) applicables dans le cadre de la CSRD. Ces normes concernent directement le reporting ESG des entreprises, y compris les prestataires de services comme ABC, qui doivent intégrer des données sur leurs émissions (scope 1/2/3), leur stratégie climatique, et leur gestion des déchets. Bien que l'article ne détaille pas les évolutions spécifiques, il signale une source d'information clé pour anticiper les exigences réglementaires à venir.",
+      "criticite": 2,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-sr-teg-online-meeting-11-may-2026",
+      "date": "2026-05-08"
+    },
+    {
+      "id": "38da1bba81c9",
+      "source": "Le Monde Planète",
+      "categorie": "Environnement",
+      "titre": "Pourquoi les prix du pétrole augmentent-ils autant (et est-ce que ça va durer) ?",
+      "resume": "L'article aborde les facteurs influençant les prix du pétrole, une énergie encore utilisée par une partie de la flotte de véhicules d'ABC. Une hausse prolongée pourrait impacter les coûts opérationnels et accélérer la transition vers des alternatives (électrique, biocarburants).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/chaleur-humaine/article/2026/05/08/pourquoi-les-prix-du-petrole-augmentent-ils-autant-et-est-ce-que-ca-va-durer_6686926_6125299.html",
+      "date": "2026-05-08"
+    },
     {
       "id": "cd5626bb8ba8",
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "REP emballages professionnels : ecosystem s'allie à Citeo Pro",
-      "resume": "L'article traite de l'alliance entre éco-organismes (Citeo Pro et Ecosystem) pour la gestion des emballages professionnels dans le cadre de la REP (Responsabilité Élargie du Producteur), ce qui pourrait impacter les obligations de traçabilité et de gestion des déchets pour ABC dans le cadre de ses prestations de propreté/FM.",
-      "pourquoi": "La REP emballages professionnels est un sujet réglementaire direct pour ABC, car elle concerne la gestion des déchets générés par ses prestations (emballages de produits de nettoyage, consommables, etc.). Bien que l'article ne mentionne pas explicitement les obligations pour les prestataires de services, la REP Epro pourrait imposer des nouvelles règles de tri, traçabilité ou contribution financière à ABC dans les 12-24 mois.",
+      "resume": "L'article traite de l'alliance entre éco-organismes pour la gestion des emballages professionnels dans le cadre de la REP (Responsabilité Élargie du Producteur), ce qui pourrait impacter les obligations de traçabilité et de recyclage des déchets générés par les prestations de propreté/FM d'ABC.",
+      "pourquoi": "La REP emballages professionnels est un enjeu réglementaire direct pour ABC, car elle concerne la gestion des déchets liés aux prestations de propreté (emballages de produits d'entretien, etc.). Bien que l'article ne mentionne pas explicitement les obligations pour les prestataires de services, la REP Epro pourrait imposer des nouvelles règles de tri, traçabilité ou contribution financière pour ABC dans les 12-24 mois.",
       "criticite": 2,
       "url": "https://www.actu-environnement.com/ae/news/ecosystel-citeo-pro-partenariat-emballages-professionnels-47972.php4#xtor=RSS-6",
       "date": "2026-05-07"
@@ -39,43 +61,10 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "REP huiles : un projet de cahier des charges pour assurer la gestion des contenants",
-      "resume": "Le projet de cahier des charges REP huiles pourrait impacter la gestion des déchets des prestations de propreté de ABC, notamment via la traçabilité des contenants d'huiles usagées collectés chez les clients.",
+      "resume": "Le projet de cahier des charges pour la REP huiles pourrait impacter la gestion des déchets des prestations de propreté de ABC, notamment en clarifiant les responsabilités de collecte des contenants d'huiles usagées chez ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/ajout-contenants-cdc-rep-huiles-47971.php4#xtor=RSS-6",
-      "date": "2026-05-07"
-    },
-    {
-      "id": "3a41f26e41de",
-      "source": "I4CE",
-      "categorie": "Climat",
-      "titre": "Voiture électrique et logement : la transition écologique devient davantage accessible aux classes moyennes",
-      "resume": "L'article aborde l'accessibilité croissante des véhicules électriques et des solutions énergétiques pour les ménages, ce qui peut influencer les attentes clients d'ABC en matière de mobilité durable et d'efficacité énergétique des sites tertiaires.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.i4ce.org/voiture-electrique-logement-transition-ecologique-accessible-classes-moyennes-presse-climat/",
-      "date": "2026-05-07"
-    },
-    {
-      "id": "12405b10ac64",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "L’agenda de la transition énergétique",
-      "resume": "L'article fournit un agenda des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.), utile pour identifier des opportunités de veille ou de participation à des initiatives pertinentes pour la stratégie climat et RSE d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/lagenda-de-la-semaine-2-422334/",
-      "date": "2026-05-07"
-    },
-    {
-      "id": "05c7b2557080",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Les documents de la semaine",
-      "resume": "Cette newsletter hebdomadaire compile des documents clés (réglementations, études, analyses) liés à la transition énergétique, utile pour suivre les évolutions réglementaires et les bonnes pratiques en matière de décarbonation, reporting ESG et mobilité durable.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/les-documents-de-la-semaine-381215/",
       "date": "2026-05-07"
     },
     {
@@ -83,7 +72,7 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "Toulouse poursuit le développement de son réseau de chaleur en misant sur la géothermie",
-      "resume": "La géothermie et la biomasse pourraient devenir des alternatives énergétiques pour les sites clients d'ABC, notamment dans les territoires où ces solutions se développent (ex : Toulouse). Cela pourrait influencer les choix énergétiques des clients et potentiellement réduire l'empreinte carbone des prestations de FM.",
+      "resume": "L'article illustre une tendance croissante vers les énergies renouvelables (géothermie, biomasse) dans les réseaux de chaleur urbains, ce qui pourrait influencer les attentes des clients d'ABC en matière de décarbonation des prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/05/07/toulouse-poursuit-le-developpement-de-son-reseau-de-chaleur-en-misant-sur-la-geothermie_6686595_3244.html",
@@ -94,21 +83,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Le congé climatique, une piste pour adapter le travail aux fortes chaleurs qui fait polémique",
-      "resume": "L'article aborde l'émergence d'un congé climatique pour protéger les travailleurs exposés aux fortes chaleurs, un enjeu potentiellement impactant pour la gestion des ressources humaines et des risques opérationnels chez ABC, notamment sur ses 3 000+ sites clients.",
+      "resume": "L'article aborde l'adaptation des conditions de travail aux aléas climatiques (canicules), un risque opérationnel indirect pour ABC via ses 3 000+ sites clients, pouvant impacter la prestation de services et les exigences clients en matière de résilience.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/m-perso/article/2026/05/07/le-conge-climatique-une-piste-pour-adapter-le-travail-aux-fortes-chaleurs-qui-fait-polemique_6686574_4497916.html",
-      "date": "2026-05-07"
-    },
-    {
-      "id": "d6285a0ff4c7",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "EU Releases Proposed Finalized Mandatory and Voluntary Sustainability Reporting Standards",
-      "resume": "L'article annonce la publication de projets de normes européennes révisées sur le reporting de durabilité (CSRD/ESRS), renforçant les exigences de transparence pour les entreprises, y compris celles du secteur des services comme ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/eu-releases-proposed-finalized-mandatory-and-voluntary-sustainability-reporting-standards/?utm_source=rss&utm_medium=rss&utm_campaign=eu-releases-proposed-finalized-mandatory-and-voluntary-sustainability-reporting-standards",
       "date": "2026-05-07"
     }
   ],
@@ -1254,5 +1232,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient avoir un impact direct sur les enjeux climatiques, énergétiques et de RSE pour une entreprise de services. Le premier pourrait influencer les politiques agricoles et les chaînes d’approvisionnement durables, tandis que le second pourrait renforcer les obligations de reporting environnemental et énergétique au niveau européen."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N° 2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique (N° 2518)** pourraient présenter un intérêt pour un Responsable Environnement/Climat, notamment en lien avec les enjeux agricoles durables et les réglementations européennes environnementales et énergétiques."
 }
