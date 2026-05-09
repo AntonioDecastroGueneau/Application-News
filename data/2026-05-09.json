@@ -1,7 +1,7 @@
 {
   "date": "2026-05-09",
-  "generated_at": "07:33",
-  "elapsed_seconds": 184,
+  "generated_at": "12:11",
+  "elapsed_seconds": 187,
   "errors": [],
   "stats": {
     "jo_analyses": 25,
@@ -9,39 +9,28 @@
     "depts_restriction": 9
   },
   "pipeline_meta": {
-    "run_at": "2026-05-09T07:33:43",
+    "run_at": "2026-05-09T12:11:27",
     "sources": {
       "JORF": 0,
-      "RSS": 2,
+      "RSS": 1,
       "VigiEau": 9,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 44,
-    "llm_seconds": 42.8
+    "llm_calls": 42,
+    "llm_seconds": 47.6
   },
   "items": [
-    {
-      "id": "126b4b0f8781",
-      "source": "Actuel HSE",
-      "categorie": "Climat",
-      "titre": "PFAS : le gouvernement met en ligne de nouveaux outils d'information",
-      "resume": "Les PFAS sont des substances chimiques persistantes utilisées dans certains produits de nettoyage ou équipements de propreté, pouvant impacter la stratégie déchets et reporting ESG d'ABC via les exigences clients (nucléaire, santé, industrie) et la réglementation REP.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/pfas-le-gouvernement-met-en-ligne-de-nouveaux-outils-dinformation",
-      "date": "2026-05-09"
-    },
     {
       "id": "3ba37f6c9e25",
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SR TEG Online Meeting 11 May 2026",
-      "resume": "L'article concerne une réunion de l'EFRAG SR TEG sur le reporting de durabilité, clé pour la conformité CSRD/ESRS d'ABC, mais sans obligation immédiate ou action opérationnelle identifiée.",
-      "pourquoi": "",
-      "criticite": 1,
+      "resume": "L'article concerne les travaux du groupe technique d'EFRAG sur les normes de reporting de durabilité (CSRD/ESRS), ce qui impacte directement les obligations de reporting extra-financier d'ABC pour ses clients et ses propres engagements ESG.",
+      "pourquoi": "EFRAG est l'organisme européen en charge de l'élaboration des normes ESRS (European Sustainability Reporting Standards) applicables dans le cadre de la CSRD. Ces normes concernent directement le reporting ESG des entreprises, y compris les prestataires de services comme ABC, qui doivent répondre aux exigences de leurs clients (nucléaire, santé, industrie) en matière de transparence carbone et de durabilité. Bien que l'article ne mentionne pas explicitement ABC, il traite d'un sujet réglementaire central pour le Responsable Environnement/Climat de l'entreprise.",
+      "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-sr-teg-online-meeting-11-may-2026",
       "date": "2026-05-08"
     }
@@ -714,7 +703,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Aucun des textes publiés au Journal Officiel du 9 mai 2026 ne présente de mesure directement pertinente pour un Responsable Environnement/Climat d'une grande entreprise de services, hormis l'arrêté n°8 relatif au projet de stockage d'électricité en Corse qui pourrait impacter indirectement les enjeux énergétiques et climatiques locaux.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1074,5 +1063,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux environnementaux et énergétiques dans son champ d'application."
+  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (adaptation au droit de l'UE en matière environnementale, énergétique et agricole) et le n°2632 (protection et souveraineté agricoles) pourraient impacter directement les enjeux climatiques et environnementaux d'une grande entreprise de services. Aucun texte adopté ne semble directement lié à ces thématiques."
 }
