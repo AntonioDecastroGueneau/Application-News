@@ -1,7 +1,7 @@
 {
   "date": "2026-05-10",
-  "generated_at": "07:57",
-  "elapsed_seconds": 215,
+  "generated_at": "12:11",
+  "elapsed_seconds": 153,
   "errors": [],
   "stats": {
     "jo_analyses": 18,
@@ -9,21 +9,76 @@
     "depts_restriction": 9
   },
   "pipeline_meta": {
-    "run_at": "2026-05-10T07:57:33",
+    "run_at": "2026-05-10T12:11:03",
     "sources": {
       "JORF": 0,
-      "RSS": 0,
+      "RSS": 5,
       "VigiEau": 9,
       "Parlement": 1
     },
     "errors": [
-      "SOURCE VIDE — JORF : 0 textes retenus",
-      "SOURCE VIDE — RSS : 0 articles retenus"
+      "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 34,
-    "llm_seconds": 35.3
+    "llm_calls": 38,
+    "llm_seconds": 36.3
   },
-  "items": [],
+  "items": [
+    {
+      "id": "f671436cb09b",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article aborde les évolutions des normes de reporting ESG (CSRD/ESRS) proposées par la Commission européenne et les actions de la SEC, ce qui impacte directement les obligations de reporting extra-financier d'ABC pour ses clients.",
+      "pourquoi": "Le contenu traite des normes de reporting ESG (CSRD/ESRS) et des réglementations associées, directement liées aux obligations de reporting extra-financier d'ABC (CSRD/reporting) et à ses enjeux clients (nucléaire, santé, industrie).",
+      "criticite": 2,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-260/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-260",
+      "date": "2026-05-10"
+    },
+    {
+      "id": "8a686db2b8d6",
+      "source": "Le Monde Planète",
+      "categorie": "Énergie",
+      "titre": "Pourquoi la géothermie, solution miracle à la crise énergétique, peine à décoller : l’explication en quatre graphiques",
+      "resume": "La géothermie est une solution énergétique décarbonée sous-exploitée en France, mais son développement pourrait influencer les stratégies clients d'ABC (ex : tertiaire, industrie) en matière de décarbonation et de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/les-decodeurs/article/2026/05/10/pourquoi-la-geothermie-solution-miracle-a-la-crise-energetique-peine-a-decoller-l-explication-en-quatre-graphiques_6687704_4355770.html",
+      "date": "2026-05-10"
+    },
+    {
+      "id": "b39734489681",
+      "source": "Le Monde Planète",
+      "categorie": "Déchets",
+      "titre": "Carburant : une aide de 20 centimes par litre de gazole non routier en mai pour certaines entreprises du bâtiment et des travaux publics",
+      "resume": "Cette aide de 20 centimes/litre sur le gazole non routier (GNR) en mai pourrait réduire les coûts opérationnels d'ABC pour sa flotte de véhicules (scope 1), mais son éligibilité dépend de la taille de l'entreprise et du secteur d'activité (BTP).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/economie/article/2026/05/10/carburant-une-aide-de-20-centimes-par-litre-de-gazole-non-routier-en-mai-pour-certaines-entreprises-du-batiment-et-des-travaux-publics_6687701_3234.html",
+      "date": "2026-05-10"
+    },
+    {
+      "id": "126b4b0f8781",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "PFAS : le gouvernement met en ligne de nouveaux outils d'information",
+      "resume": "Les outils d'information sur les PFAS pourraient impacter indirectement ABC via les exigences clients en matière de substances chimiques dans les prestations de propreté, notamment dans les secteurs santé ou industrie.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/pfas-le-gouvernement-met-en-ligne-de-nouveaux-outils-dinformation",
+      "date": "2026-05-10"
+    },
+    {
+      "id": "3ba37f6c9e25",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG SR TEG Online Meeting 11 May 2026",
+      "resume": "L'article concerne les travaux du groupe technique EFRAG sur les normes de reporting extra-financier (ESRS), cruciales pour la conformité CSRD de ABC dans le cadre de son reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-sr-teg-online-meeting-11-may-2026",
+      "date": "2026-05-08"
+    }
+  ],
   "restrictions_eau": [
     {
       "dept_code": "45",
@@ -644,7 +699,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Le décret n° 2026-356 sur l'aide aux entreprises du BTP utilisant du gazole non routier et le décret n° 2026-358 sur la stratégie nationale pour la gestion durable des haies sont pertinents pour un Responsable Environnement/Climat, car ils impactent directement les pratiques industrielles et la biodiversité. Aucun autre texte ne semble directement lié aux enjeux RSE majeurs.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1004,5 +1059,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, trois sont particulièrement pertinents pour un Responsable Environnement/Climat : le projet de loi-cadre relatif au développement des transports (N°2740) pourrait impacter les politiques de mobilité durable, le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) pourrait influencer les pratiques agricoles et la gestion des ressources, et le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518) pourrait renforcer les obligations de reporting et de conformité RSE."
+  "pjl_briefing": "Parmi les projets de loi, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter directement les enjeux climatiques et environnementaux pour une entreprise de services. Aucun texte adopté ne semble directement lié à ces thématiques."
 }
