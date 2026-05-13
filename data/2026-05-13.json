@@ -1,7 +1,7 @@
 {
   "date": "2026-05-13",
-  "generated_at": "08:34",
-  "elapsed_seconds": 205,
+  "generated_at": "13:39",
+  "elapsed_seconds": 213,
   "errors": [],
   "stats": {
     "jo_analyses": 14,
@@ -9,48 +9,59 @@
     "depts_restriction": 9
   },
   "pipeline_meta": {
-    "run_at": "2026-05-13T08:34:35",
+    "run_at": "2026-05-13T13:39:25",
     "sources": {
       "JORF": 0,
-      "RSS": 12,
+      "RSS": 10,
       "VigiEau": 9,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 56,
-    "llm_seconds": 60.9
+    "llm_calls": 53,
+    "llm_seconds": 65.6
   },
   "items": [
     {
-      "id": "135d96980d17",
-      "source": "Actuel HSE",
-      "categorie": "Climat",
-      "titre": "[Bonnes pratiques]",
-      "resume": "L'article illustre des bonnes pratiques de décarbonation logistique via des certifications (ISO 50001, Ecovadis) et des programmes comme EVE, pertinentes pour inspirer la stratégie RSE d'ABC dans sa propre flotte de véhicules et ses engagements carbone.",
+      "id": "6fcaa8b71e71",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Watt Watchers décrypte les consommations hivernales de 21 000 ménages français",
+      "resume": "L'article illustre l'importance des économies d'énergie dans les bâtiments tertiaires (via l'analyse de consommations hivernales), un enjeu clé pour ABC dans le cadre de la décarbonation de ses prestations et de la conformité aux réglementations énergie/climat (ex : DPE tertiaire, SNBC).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/bonnes-pratiques",
+      "url": "https://www.actu-environnement.com/ae/news/programme-cee-watt-watchers-donnees-compteurs-communicants-consommations-energie-chauffage-47993.php4#xtor=RSS-6",
       "date": "2026-05-13"
     },
     {
-      "id": "2e3cdca72184",
-      "source": "ESG Today",
-      "categorie": "Climat",
-      "titre": "EcoVadis, Workiva Partner on Scope 3 Data Solutions",
-      "resume": "Partenariat entre EcoVadis et Workiva pour faciliter le reporting des émissions scope 3, utile pour ABC dans le cadre de la CSRD et du reporting extra-financier.",
-      "pourquoi": "Le sujet touche au reporting ESG (CSRD/ESRS) et à la gestion des données d'émissions scope 3, directement pertinent pour le Responsable Environnement/Climat d'ABC dans le cadre de ses obligations de reporting et de la décarbonation de sa chaîne de valeur.",
-      "criticite": 2,
-      "url": "https://www.esgtoday.com/ecovadis-workiva-partner-on-scope-3-data-solutions/?utm_source=rss&utm_medium=rss&utm_campaign=ecovadis-workiva-partner-on-scope-3-data-solutions",
-      "date": "2026-05-12"
+      "id": "f61a2641f296",
+      "source": "Reporterre",
+      "categorie": "Énergie",
+      "titre": "Énergie : « Aujourd'hui, on n'engage plus de politique de sobriété »",
+      "resume": "L'article souligne l'absence de politiques de sobriété énergétique malgré les crises, ce qui pourrait impacter les objectifs de décarbonation d'ABC et ses clients (notamment dans les secteurs nucléaire, santé et industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Energie-Aujourd-hui-on-n-engage-plus-de-politique-de-sobriete",
+      "date": "2026-05-13"
+    },
+    {
+      "id": "b099aee1fff4",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Les ventes de voitures à hydrogène proches du néant en Europe [SNE Research]",
+      "resume": "L'article souligne le faible développement du marché des véhicules à hydrogène en Europe, ce qui limite les opportunités pour ABC d'électrifier sa flotte avec cette technologie. Les véhicules 100% électriques et hybrides rechargeables restent les alternatives dominantes.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/les-ventes-de-voitures-a-hydrogene-se-rapprochent-du-neant-en-europe-sne-research-423841/",
+      "date": "2026-05-13"
     },
     {
       "id": "1b39f2980f42",
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Emballages : pas d'obligation de réemploi pour les films de protection et les sangles de palettes",
-      "resume": "L'article confirme l'exemption de l'obligation de réemploi pour les films de protection et sangles de palettes, réduisant ainsi les contraintes réglementaires directes sur la gestion des déchets d'emballages pour ABC dans le cadre de ses prestations de propreté/FM.",
+      "resume": "L'article confirme l'exemption de l'obligation de réemploi pour les films de protection et sangles de palettes, réduisant ainsi des contraintes potentielles sur la gestion des déchets d'emballages dans les prestations de propreté/FM d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/exemption-reemploi-films-sangles-palettes-47990.php4#xtor=RSS-6",
@@ -61,7 +72,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Système électrique : de nouvelles règles approuvées pour le réglage de tension",
-      "resume": "La CRE renforce les règles de réglage de tension du réseau électrique, ce qui pourrait impacter la stabilité énergétique des sites clients d'ABC et influencer leurs besoins en services de propreté/FM (ex : gestion des équipements sensibles).",
+      "resume": "L'article traite des nouvelles règles de la CRE pour le réglage de tension dans le système électrique français, une évolution qui pourrait impacter la stabilité énergétique des sites clients d'ABC et leurs exigences en matière de résilience énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/equilibre-reseau-electrique-reglage-tension-enr-remuneration-47989.php4#xtor=RSS-6",
@@ -72,32 +83,10 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Gestion des déchets : la FNCCR propose un guide pour mieux prendre en compte les pratiques des citoyens",
-      "resume": "L'article souligne l'importance de l'intégration des comportements citoyens dans la gestion des déchets, ce qui pourrait impacter les politiques de tri et de collecte des prestataires comme ABC, notamment dans le cadre des obligations réglementaires (REP, traçabilité).",
+      "resume": "L'article souligne l'importance de l'intégration des pratiques citoyennes dans la gestion des déchets, ce qui pourrait influencer les attentes des clients d'ABC (notamment les collectivités locales) en matière de tri et de sensibilisation, impactant potentiellement les prestations de propreté et de FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/guide-fnccr-pratiques-citoyens-gestion-dechets-47987.php4#xtor=RSS-6",
-      "date": "2026-05-12"
-    },
-    {
-      "id": "fbc2950da663",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "REP : l'Ademe disposera de données plus précises et fiables pour contrôler les éco-organismes",
-      "resume": "L'article impacte indirectement ABC via la traçabilité des déchets de ses prestations (scope 3) et les exigences de reporting ESG (CSRD/ESRS) pour ses clients, nécessitant une meilleure gestion des données déchets.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/modification-arrete-donnees-suivi-filieres-rep-ademe-47985.php4#xtor=RSS-6",
-      "date": "2026-05-12"
-    },
-    {
-      "id": "176180039b72",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "CPB, tarifs réseaux, énergies décarbonées : ce que défend la France auprès de l'UE",
-      "resume": "L'article aborde la position française sur l'électrification et les énergies décarbonées dans le cadre de la politique énergétique européenne, ce qui impacte indirectement les stratégies de décarbonation des flottes de véhicules d'ABC et les attentes clients en matière de mobilité durable.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/electrification-accelerateEU-flexibilite-stockage-cpb-nucleaire-UE-47983.php4#xtor=RSS-6",
       "date": "2026-05-12"
     },
     {
@@ -105,10 +94,21 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Valérie Pécresse prévoit 850 M€ pour l’énergie en Île-de-France",
-      "resume": "L'article annonce un plan d'investissement de 850 M€ en Île-de-France pour la transition énergétique, ce qui pourrait influencer les politiques locales de décarbonation et d'efficacité énergétique des bâtiments tertiaires, potentiellement impactant les exigences clients d'ABC en matière de reporting ESG et de performance carbone.",
+      "resume": "L'article souligne un investissement régional en énergie (850 M€) qui pourrait influencer les politiques énergétiques des clients d'ABC en Île-de-France, notamment dans les secteurs tertiaire ou industriel, sans impact direct immédiat sur les obligations légales de l'entreprise.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/valerie-pecresse-prevoit-850-me-pour-lenergie-en-ile-de-france-423758/",
+      "date": "2026-05-12"
+    },
+    {
+      "id": "010ff98b198b",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Le fabricant norvégien Morrow Batteries en faillite",
+      "resume": "La faillite de Morrow Batteries illustre les risques industriels et financiers liés à la transition énergétique, pouvant impacter la disponibilité des batteries pour l'électrification des flottes de véhicules d'ABC, un enjeu clé pour la décarbonation de son scope 1.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/le-fabricant-norvegien-morrow-batteries-en-faillite-423733/",
       "date": "2026-05-12"
     },
     {
@@ -123,36 +123,14 @@
       "date": "2026-05-12"
     },
     {
-      "id": "44eaa6a502fd",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Chauffage au gaz, expérimentation TRVE et réseaux au menu du CSE",
-      "resume": "L'article aborde les évolutions réglementaires sur le chauffage au gaz et les réseaux énergétiques, pouvant impacter les consommations énergétiques des sites clients d'ABC et leurs exigences en matière de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/chauffage-au-gaz-experimentation-trve-et-reseaux-au-menu-du-cse-423685/",
-      "date": "2026-05-12"
-    },
-    {
-      "id": "f0badc18b43c",
-      "source": "Le Monde Planète",
-      "categorie": "Déchets",
-      "titre": "Le dangereux recul de la mobilisation pour le climat",
-      "resume": "L'article souligne un recul de la mobilisation climatique en France/UE, un contexte à surveiller pour anticiper d'éventuelles évolutions réglementaires ou attentes clients en matière de décarbonation, sans impact direct immédiat.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/05/12/le-dangereux-recul-de-la-mobilisation-pour-le-climat_6688225_3232.html",
-      "date": "2026-05-12"
-    },
-    {
-      "id": "73f1647c95c9",
+      "id": "2e3cdca72184",
       "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "EU Commission Proposes Adding €4 Billion in Carbon Allowances to Industry in ETS Update",
-      "resume": "L'article aborde une mise à jour du système d'échange de quotas d'émissions (EU ETS) qui pourrait impacter indirectement les coûts carbone des entreprises clientes d'ABC via leur propre reporting scope 1 ou 2.",
+      "categorie": "Climat",
+      "titre": "EcoVadis, Workiva Partner on Scope 3 Data Solutions",
+      "resume": "Partenariat entre EcoVadis et Workiva pour faciliter la collecte et le reporting des données de scope 3, utile pour ABC dans le cadre de ses obligations CSRD et de reporting extra-financier.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.esgtoday.com/eu-commission-proposes-ets-update-adding-e4-billion-in-allowances-to-industry/?utm_source=rss&utm_medium=rss&utm_campaign=eu-commission-proposes-ets-update-adding-e4-billion-in-allowances-to-industry",
+      "url": "https://www.esgtoday.com/ecovadis-workiva-partner-on-scope-3-data-solutions/?utm_source=rss&utm_medium=rss&utm_campaign=ecovadis-workiva-partner-on-scope-3-data-solutions",
       "date": "2026-05-12"
     }
   ],
@@ -758,7 +736,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Les arrêtés FEEBAT 3 et PROFEEL 3 renforcent les dispositifs de certificats d'économies d'énergie, pertinents pour les stratégies RSE des entreprises de services. Les décisions du CERN (FCC) et de SAFRAN (4U) concernent des projets industriels majeurs à fort impact énergétique et environnemental, nécessitant une veille stratégique pour les entreprises concernées.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -972,6 +950,12 @@
       "source": "AN Textes adoptés",
       "items": [
         {
+          "titre": "Texte adopté N° 282",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/condamner_derive_illiberale_autoritaire_gouvernement_georgien_reaffirmer_soutien_destin_europeen_Georgie",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/condamner_derive_illiberale_autoritaire_gouvernement_georgien_reaffirmer_soutien_destin_europeen_Georgie",
+          "date": "2025-09-24"
+        },
+        {
           "titre": "Texte adopté N° 281",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/renforcer_parcours_inclusif_eleves_handicap",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/renforcer_parcours_inclusif_eleves_handicap",
@@ -1096,15 +1080,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/statut_personnel_sante_services_incendie_secours",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/statut_personnel_sante_services_incendie_secours",
           "date": "2025-01-21"
-        },
-        {
-          "titre": "Texte adopté N° 248",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/allocations_chomage_travailleurs_frontaliers",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/allocations_chomage_travailleurs_frontaliers",
-          "date": "2026-05-13"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques agricoles, énergétiques et de reporting RSE. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter directement les enjeux climatiques, énergétiques et RSE d’une entreprise de services, notamment via des mesures liées à la transition agricole, à l’adaptation aux normes environnementales européennes ou à la souveraineté alimentaire. Aucun texte adopté ne semble directement lié à ces thématiques."
 }
