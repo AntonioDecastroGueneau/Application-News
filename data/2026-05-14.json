@@ -1,32 +1,76 @@
 {
   "date": "2026-05-14",
-  "generated_at": "08:28",
-  "elapsed_seconds": 189,
+  "generated_at": "13:15",
+  "elapsed_seconds": 172,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
     "jo_retenus": 2,
-    "depts_restriction": 9
+    "depts_restriction": 10
   },
   "pipeline_meta": {
-    "run_at": "2026-05-14T08:28:34",
+    "run_at": "2026-05-14T13:15:34",
     "sources": {
       "JORF": 2,
       "RSS": 7,
-      "VigiEau": 9,
+      "VigiEau": 10,
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 53,
-    "llm_seconds": 58.8
+    "llm_calls": 48,
+    "llm_seconds": 54.1
   },
   "items": [
+    {
+      "id": "e0b67259dfe9",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Inondations et sécheresses : l’état de catastrophe naturelle reconnu dans 221 communes",
+      "resume": "L'article signale l'impact des aléas climatiques (inondations, sécheresses) sur 221 communes en France, ce qui peut affecter les activités de nettoyage/maintenance des 3 000+ sites clients d'ABC, notamment en termes de continuité de service ou de risques opérationnels.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/05/14/inondations-et-secheresses-l-etat-de-catastrophe-naturelle-reconnu-dans-221-communes_6689064_3244.html",
+      "date": "2026-05-14"
+    },
+    {
+      "id": "553a465e5ed8",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "Companies Anticipating $900 Billion Losses from Extreme Weather: CDP Report",
+      "resume": "L'article souligne les risques financiers liés aux aléas climatiques pour les entreprises, ce qui impacte indirectement ABC via ses 3 000+ sites clients et leurs exigences en matière de résilience climatique.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/companies-anticipating-900-billion-losses-from-extreme-weather-cdp-report/?utm_source=rss&utm_medium=rss&utm_campaign=companies-anticipating-900-billion-losses-from-extreme-weather-cdp-report",
+      "date": "2026-05-14"
+    },
+    {
+      "id": "b4ce971f3f3a",
+      "source": "Les Echos Environnement",
+      "categorie": "Énergie",
+      "titre": "« Le risque carbone est l'angle mort que la finance ne peut plus se permettre d'ignorer » - Les Echos",
+      "resume": "L'article souligne l'importance croissante du risque carbone dans les stratégies financières, ce qui peut influencer les exigences des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) en matière de décarbonation et de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZkhYMTdZWU5rUEdDcUdZcktqeFB5a25xSDBVdkdxamI5djlSbjZtOXNzaDRfOGZ6bmJKSUZDcDhEWkhuUnU5RW01RG1McEYzV0d6d25KbXowVTByaUFuQWszbzJWMDdxRF8xVEVTRFpsYW9EU05iN2U0eDMydUNRUGk1aHRlYWFTYThZZzNMMEJkXzI2RlkzUGR3QTVfdGNuVm9DaWpnM0VMMzdTR0FBRkZkdTRxZ3hKVW5Da2RJeW1uS2NRa0lyQW1BQ24ta0Jx?oc=5",
+      "date": "2026-05-14"
+    },
+    {
+      "id": "126b4b0f8781",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "PFAS : le gouvernement met en ligne de nouveaux outils d'information",
+      "resume": "Les outils d'information sur les PFAS (polluants éternels) pourraient impacter la gestion des déchets et des produits chimiques utilisés dans les prestations de propreté de ABC, notamment en termes de traçabilité et de conformité réglementaire.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/pfas-le-gouvernement-met-en-ligne-de-nouveaux-outils-dinformation",
+      "date": "2026-05-14"
+    },
     {
       "id": "350d9ed5030e",
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "CEE : les programmes Feebat et Profeel sont renouvelés",
-      "resume": "Renouvellement des programmes Feebat et Profeel éligibles aux CEE, pouvant impacter les actions d'efficacité énergétique des bâtiments tertiaires chez les clients d'ABC, mais sans obligation directe pour l'entreprise.",
+      "resume": "Les programmes Feebat et Profeel, éligibles aux CEE, sont renouvelés jusqu'en 2028. Ces dispositifs pourraient influencer les stratégies d'efficacité énergétique des bâtiments tertiaires chez les clients d'ABC, notamment dans le cadre du DPE tertiaire ou des audits énergétiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/deux-arretes-cee-programmes-feebat-profeel-renouveles-renovation-energetique-batiments-47997.php4#xtor=RSS-6",
@@ -37,32 +81,10 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "L'Assemblée nationale donne du souffle à la propulsion vélique",
-      "resume": "Le texte législatif français sur la propulsion vélique pourrait, à terme, influencer les attentes clients d'ABC en matière de décarbonation des transports logistiques ou des déplacements professionnels, mais n'a pas d'impact direct immédiat sur ses activités de propreté/FM.",
+      "resume": "L'article traite de la propulsion vélique dans le transport maritime, un sujet indirectement lié à la mobilité durable et à la décarbonation des flottes pour les entreprises de services comme ABC, mais sans impact opérationnel direct ou réglementaire immédiat.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/adoption-loi-assemblee-nationale-propulsion-velique-47994.php4#xtor=RSS-6",
-      "date": "2026-05-13"
-    },
-    {
-      "id": "6fcaa8b71e71",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Watt Watchers décrypte les consommations hivernales de 21 000 ménages français",
-      "resume": "L'article illustre l'importance de la sobriété énergétique et des CEE dans le contexte français, un signal à suivre pour ABC dans l'optimisation de ses propres consommations énergétiques et celles de ses clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/programme-cee-watt-watchers-donnees-compteurs-communicants-consommations-energie-chauffage-47993.php4#xtor=RSS-6",
-      "date": "2026-05-13"
-    },
-    {
-      "id": "f506caf0c3da",
-      "source": "Reporterre",
-      "categorie": "Énergie",
-      "titre": "« La sobriété n'est plus un bon plan de communication politique »",
-      "resume": "L'article souligne l'absence de promotion politique de la sobriété énergétique malgré les crises, ce qui pourrait impacter indirectement les stratégies de décarbonation et d'efficacité énergétique des entreprises comme ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Pour-qu-une-ampoule-s-allume-il-faut-tout-un-reseau-de-lignes-a-haute-tension-de-cables-d",
       "date": "2026-05-13"
     },
     {
@@ -70,32 +92,10 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "La transition écologique « incontournable » pour les PME, mais coûteuse",
-      "resume": "L'article souligne l'importance croissante des enjeux environnementaux pour les PME, dont ABC fait partie, avec une pression accrue sur la transition écologique malgré des coûts associés. Cela confirme la nécessité pour ABC de renforcer sa stratégie RSE et son reporting pour répondre aux attentes clients et réglementaires.",
+      "resume": "L'article souligne la perception des PME sur la transition écologique comme un enjeu incontournable, ce qui peut influencer les exigences clients d'ABC en matière de décarbonation et de reporting ESG, notamment dans le cadre de la CSRD et des trajectoires nationales (SNBC/PNACC).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/la-transition-ecologique-incontournable-pour-les-pme-mais-couteuse-423882/",
-      "date": "2026-05-13"
-    },
-    {
-      "id": "b099aee1fff4",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Les ventes de voitures à hydrogène proches du néant en Europe [SNE Research]",
-      "resume": "L'article souligne le faible développement du marché des véhicules à hydrogène en Europe, un sujet indirectement lié à la stratégie de décarbonation de la flotte d'ABC, mais sans impact réglementaire ou opérationnel immédiat.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/les-ventes-de-voitures-a-hydrogene-se-rapprochent-du-neant-en-europe-sne-research-423841/",
-      "date": "2026-05-13"
-    },
-    {
-      "id": "0c78c66c701f",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "BESS, biométhane… Green Giraffe accélère sa diversification",
-      "resume": "L'article illustre une tendance de diversification des acteurs du secteur énergétique vers des solutions de transition (BESS, biométhane), ce qui pourrait influencer les attentes clients d'ABC en matière de décarbonation et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/bess-biomethane-green-giraffe-accelere-sa-diversification-423792/",
       "date": "2026-05-13"
     }
   ],
@@ -143,6 +143,11 @@
     {
       "dept_code": "86",
       "dept_nom": "Vienne",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "34",
+      "dept_nom": "Hérault",
       "niveau": "vigilance"
     }
   ],
@@ -700,8 +705,8 @@
       "source": "JORF",
       "categorie": "Climat",
       "titre": "Arrêté du 11 mai 2026 portant reconnaissance de l'état de catastrophe naturelle",
-      "resume": "Risque accru de CatNat pour les sites clients d'ABC, impactant potentiellement les prestations et la résilience opérationnelle.",
-      "pourquoi": "L'arrêté du 11 mai 2026 impose une reconnaissance systématique des CatNat, obligeant ABC à intégrer ces risques dans sa stratégie de résilience opérationnelle (plans d'urgence, adaptation des contrats) sous 12 à 24 mois, avec un risque de perte de contrats clients non préparés et une opportunité de différenciation via des offres adaptées (ex : prestations résilientes aux aléas climatiques).",
+      "resume": "Risque accru de coûts et perturbations opérationnels liés aux aléas climatiques affectant les 3 000+ sites clients d'ABC, nécessitant une adaptation des plans de continuité d'activité et des couvertures assurantielles.",
+      "pourquoi": "L'arrêté du 11 mai 2026 impose à ABC une réévaluation urgente de sa résilience climatique (délai : 12-18 mois) via la mise à jour des plans de continuité d'activité (PCA) et des couvertures assurantielles, sous peine de rupture de contrats clients (nucléaire, santé, agroalimentaire) exigeant des preuves de maîtrise des risques climatiques dans leur chaîne de valeur.",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054100685",
       "date": "2026-05-14"
@@ -711,8 +716,8 @@
       "source": "JORF",
       "categorie": "Déchets",
       "titre": "Arrêté du 13 mai 2026 modifiant l'arrêté du 14 décembre 2023 fixant la liste des versions de voitures particulières électriques ayant atteint le score environnemental minimal conditionnant l'éligibilité à certaines aides à l'achat ou à la location de véhicules peu polluants",
-      "resume": "Mise à jour des critères d'éligibilité aux aides pour l'achat/location de véhicules électriques, impactant la stratégie de renouvellement de la flotte de véhicules d'ABC.",
-      "pourquoi": "Le texte modifie les conditions d'éligibilité aux aides pour les véhicules électriques, ce qui influence directement la politique d'acquisition de la flotte de véhicules d'ABC (scope 1 des émissions GES).",
+      "resume": "Mise à jour des critères d'éligibilité aux aides pour l'achat/location de véhicules électriques, impactant potentiellement la flotte de véhicules d'ABC.",
+      "pourquoi": "ABC est concerné par la réglementation sur la flotte de véhicules (scope 1) et les aides à l'électrification. Bien que l'arrêté cible les aides, il influence directement les choix d'investissement dans la flotte électrique de l'entreprise.",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054100864",
       "date": "2026-05-14"
@@ -1066,5 +1071,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N° 2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N° 2518)** pourraient présenter un intérêt pour un Responsable Environnement/Climat, notamment en lien avec les enjeux agricoles durables et les réglementations européennes sur l’environnement. Aucun texte adopté ne semble directement lié aux priorités RSE ou climat."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N° 2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N° 2518)** pourraient impacter directement les enjeux climatiques et environnementaux d’une entreprise de services, notamment via des mesures agricoles durables ou des obligations de reporting extra-financier renforcées. Aucun texte adopté ne semble directement lié à ces thématiques."
 }
