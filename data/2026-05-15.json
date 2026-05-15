@@ -1,7 +1,7 @@
 {
   "date": "2026-05-15",
-  "generated_at": "08:41",
-  "elapsed_seconds": 215,
+  "generated_at": "13:15",
+  "elapsed_seconds": 197,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,16 +9,16 @@
     "depts_restriction": 10
   },
   "pipeline_meta": {
-    "run_at": "2026-05-15T08:41:04",
+    "run_at": "2026-05-15T13:15:45",
     "sources": {
       "JORF": 2,
-      "RSS": 10,
+      "RSS": 9,
       "VigiEau": 10,
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 45,
-    "llm_seconds": 50.8
+    "llm_calls": 54,
+    "llm_seconds": 59.9
   },
   "items": [
     {
@@ -26,7 +26,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "REP DEEE : un spécialiste des vitrines réfrigérées agréé comme système individuel",
-      "resume": "L'agrément d'Eurocold comme système individuel REP DEEE pourrait impacter ABC si ses clients (non exploitants ICPE) externalisent la gestion de leurs déchets d'équipements électriques et électroniques, notamment dans le cadre des prestations de propreté/FM.",
+      "resume": "L'agrément d'Eurocold comme système individuel pour les DEEE (Déchets d'Équipements Électriques et Électroniques) pourrait impacter la gestion des déchets de prestations chez ABC, notamment pour les équipements réfrigérants utilisés sur les sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/deee-agrement-systeme-individuel-eurocold-47999.php4#xtor=RSS-6",
@@ -37,18 +37,40 @@
       "source": "Novethic",
       "categorie": "Énergie",
       "titre": "GRI : vers un renforcement des normes de reporting sur la pollution",
-      "resume": "Renforcement des normes GRI sur le reporting pollution, potentiellement aligné avec les exigences CSRD/ESRS pour ABC, impactant la qualité des données extra-financières à collecter.",
+      "resume": "Renforcement potentiel des normes de reporting extra-financier (GRI) sur la pollution, pouvant impacter les exigences de transparence des clients d'ABC dans le cadre de la CSRD/ESRS.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/biodiversite/gri-reporting-pollution-renforce-2026",
       "date": "2026-05-15"
     },
     {
-      "id": "efd2158c2a0c",
+      "id": "05c7b2557080",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Les documents de la semaine",
+      "resume": "Cet article hebdomadaire compile des documents clés sur la transition énergétique, incluant réglementations et études pertinentes pour le suivi des enjeux climatiques et RSE d'ABC (BGES, CSRD, mobilité durable, etc.).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/les-documents-de-la-semaine-381215/",
+      "date": "2026-05-15"
+    },
+    {
+      "id": "12405b10ac64",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’agenda de la transition énergétique",
+      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.), offrant une veille sur les tendances et innovations du secteur qui pourraient impacter les stratégies RSE et climat d'ABC à moyen terme.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/lagenda-de-la-transition-energetique-279-423918/",
+      "date": "2026-05-15"
+    },
+    {
+      "id": "f10e7fa3240c",
       "source": "Le Monde Planète",
       "categorie": "Énergie",
-      "titre": "Face à la flambée des prix de l’énergie, les Français changent leur manière de consommer avec moins de déplacements et moins de « petits plaisirs »",
-      "resume": "L'article souligne une tendance de réduction des déplacements et de sobriété énergétique chez les Français, ce qui pourrait impacter la demande en services de propreté/FM et influencer les stratégies de mobilité durable d'ABC (électrification de flotte, optimisation des tournées).",
+      "titre": "Face à la hausse des prix du carburant, les Français changent leur manière de consommer avec moins de déplacements et moins de « petits plaisirs »",
+      "resume": "L'article souligne une tendance de réduction des déplacements et de consommation énergétique chez les Français, ce qui pourrait impacter la demande en services de propreté/FM et influencer les stratégies de mobilité durable d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/05/15/moins-de-deplacements-moins-de-petits-plaisirs-face-a-la-flambee-des-prix-de-l-energie-les-francais-changent-leur-maniere-de-consommer_6689394_3234.html",
@@ -59,40 +81,29 @@
       "source": "Le Monde Planète",
       "categorie": "Environnement",
       "titre": "Les grêlons sont-ils de plus en plus gros en raison du dérèglement climatique ?",
-      "resume": "L'article souligne une augmentation de la taille des grêlons liée au dérèglement climatique, ce qui expose les 3 000+ sites clients d'ABC à des risques opérationnels accrus (dégâts matériels, perturbations de services).",
+      "resume": "L'article souligne une augmentation de la taille des grêlons liée au dérèglement climatique, ce qui pourrait impacter les sites clients d'ABC (risques de dommages matériels, perturbations opérationnelles) et nécessiter une adaptation des stratégies de résilience climatique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/05/15/les-grelons-sont-ils-de-plus-en-plus-gros-en-raison-du-dereglement-climatique_6689347_3244.html",
       "date": "2026-05-15"
     },
     {
-      "id": "126b4b0f8781",
+      "id": "3d6ec69f5cc6",
       "source": "Actuel HSE",
       "categorie": "Climat",
-      "titre": "PFAS : le gouvernement met en ligne de nouveaux outils d'information",
-      "resume": "Les outils d'information sur les PFAS pourraient impacter la gestion des déchets et des produits chimiques utilisés par ABC dans ses prestations de propreté, notamment en termes de traçabilité et de conformité réglementaire.",
+      "titre": "L’éco-anxiété : un enjeu pour les entreprises ?",
+      "resume": "L'article aborde l'éco-anxiété comme un enjeu RH et managérial, sans impact direct sur les obligations réglementaires ou opérationnelles d'ABC en matière de RSE/climat.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/pfas-le-gouvernement-met-en-ligne-de-nouveaux-outils-dinformation",
+      "url": "https://www.actuel-hse.fr/content/leco-anxiete-un-enjeu-pour-les-entreprises-0",
       "date": "2026-05-15"
-    },
-    {
-      "id": "e0b67259dfe9",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Inondations et sécheresses : l’état de catastrophe naturelle reconnu dans 221 communes",
-      "resume": "L'article signale des reconnaissances d'état de catastrophe naturelle dans 221 communes, ce qui pourrait impacter les sites clients d'ABC (risques opérationnels indirects liés aux aléas climatiques).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/05/14/inondations-et-secheresses-l-etat-de-catastrophe-naturelle-reconnu-dans-221-communes_6689064_3244.html",
-      "date": "2026-05-14"
     },
     {
       "id": "ea7f54efb815",
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "UL Solutions Launches Product Carbon Footprint Calculation Solution",
-      "resume": "UL Solutions propose un outil de calcul de l'empreinte carbone des produits (PCF), utile pour ABC dans le cadre de son reporting CSRD/ESRS et de l'évaluation des émissions scope 3 liées à ses prestations de propreté.",
+      "resume": "UL Solutions propose un outil logiciel pour calculer l'empreinte carbone des produits, utile pour renforcer la méthodologie de reporting ESG de ABC et répondre aux exigences clients en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/ul-solutions-launches-solution-to-enable-companies-to-calculate-product-carbon-footprints-from-supplier-data/?utm_source=rss&utm_medium=rss&utm_campaign=ul-solutions-launches-solution-to-enable-companies-to-calculate-product-carbon-footprints-from-supplier-data",
@@ -103,32 +114,10 @@
       "source": "ESG Today",
       "categorie": "Eau",
       "titre": "Bureau Veritas Launches New Supply Chain Emissions Engagement Solution",
-      "resume": "Solution de mesure et d'engagement des émissions de la chaîne d'approvisionnement, utile pour ABC dans le cadre du reporting CSRD/ESRS et de la gestion des scopes 1/2/3.",
+      "resume": "Cette solution de Bureau Veritas permet de mesurer et réduire les émissions de la chaîne d'approvisionnement, ce qui peut aider ABC à répondre aux exigences carbone de ses clients (scope 3) et à renforcer son reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/bureau-veritas-launches-new-supply-chain-emissions-engagement-solution/?utm_source=rss&utm_medium=rss&utm_campaign=bureau-veritas-launches-new-supply-chain-emissions-engagement-solution",
-      "date": "2026-05-14"
-    },
-    {
-      "id": "553a465e5ed8",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "Companies Anticipating $900 Billion Losses from Extreme Weather: CDP Report",
-      "resume": "L'article souligne les risques financiers liés aux aléas climatiques pour les entreprises, avec un impact potentiel de 900 milliards de dollars, ce qui peut affecter la stabilité opérationnelle et financière d'ABC sur ses 3 000+ sites clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/companies-anticipating-900-billion-losses-from-extreme-weather-cdp-report/?utm_source=rss&utm_medium=rss&utm_campaign=companies-anticipating-900-billion-losses-from-extreme-weather-cdp-report",
-      "date": "2026-05-14"
-    },
-    {
-      "id": "b4ce971f3f3a",
-      "source": "Les Echos Environnement",
-      "categorie": "Énergie",
-      "titre": "« Le risque carbone est l'angle mort que la finance ne peut plus se permettre d'ignorer » - Les Echos",
-      "resume": "L'article souligne l'importance croissante du risque carbone dans les stratégies financières, ce qui peut impacter les exigences des clients d'ABC (nucléaire, santé, industrie) en matière de décarbonation et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZkhYMTdZWU5rUEdDcUdZcktqeFB5a25xSDBVdkdxamI5djlSbjZtOXNzaDRfOGZ6bmJKSUZDcDhEWkhuUnU5RW01RG1McEYzV0d6d25KbXowVTByaUFuQWszbzJWMDdxRF8xVEVTRFpsYW9EU05iN2U0eDMydUNRUGk1aHRlYWFTYThZZzNMMEJkXzI2RlkzUGR3QTVfdGNuVm9DaWpnM0VMMzdTR0FBRkZkdTRxZ3hKVW5Da2RJeW1uS2NRa0lyQW1BQ24ta0Jx?oc=5",
       "date": "2026-05-14"
     }
   ],
@@ -576,8 +565,8 @@
       "source": "JORF",
       "categorie": "Climat",
       "titre": "Arrêté du 11 mai 2026 portant reconnaissance de l'état de catastrophe naturelle",
-      "resume": "Risque accru de sinistres liés aux catastrophes naturelles sur les 3 000+ sites clients d'ABC, impactant potentiellement les prestations et la continuité d'activité.",
-      "pourquoi": "L'arrêté du 11 mai 2026 impose à ABC une obligation de résilience opérationnelle et de couverture des risques climatiques sur ses 3 000+ sites clients, avec un délai de mise en conformité immédiat pour sécuriser les contrats et éviter des pénalités contractuelles liées aux interruptions de prestations, tout en transformant ce risque en opportunité de différenciation RSE et de fidélisation client via des solutions bas-carbone et adaptatives.",
+      "resume": "Risque accru de CatNat sur les 3 000+ sites clients ABC, impactant les obligations de continuité d'activité et les contrats de prestation.",
+      "pourquoi": "L'arrêté du 11 mai 2026 impose à ABC une obligation de continuité d'activité renforcée sur ses 3 000+ sites clients exposés aux CatNat, avec un délai immédiat pour adapter ses contrats de prestation et ses plans de résilience opérationnelle, sous peine de rupture de service et de pénalités contractuelles, tout en créant une opportunité de différenciation par une offre 'résiliente' et bas-carbone.",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054100685",
       "date": "2026-05-15"
@@ -587,14 +576,14 @@
       "source": "JORF",
       "categorie": "Déchets",
       "titre": "Arrêté du 13 mai 2026 modifiant l'arrêté du 14 décembre 2023 fixant la liste des versions de voitures particulières électriques ayant atteint le score environnemental minimal conditionnant l'éligibilité à certaines aides à l'achat ou à la location de véhicules peu polluants",
-      "resume": "Modification des critères d'éligibilité aux aides pour l'achat/location de véhicules électriques, impactant potentiellement la flotte de véhicules d'ABC.",
-      "pourquoi": "L'arrêté du 13 mai 2026 impose une mise à jour des critères d'éligibilité aux aides pour les véhicules électriques (score environnemental minimal), ce qui peut contraindre ABC à adapter sa flotte d'ici 2027-2028 pour maintenir l'accès aux subventions et éviter des coûts supplémentaires liés à l'obsolescence des véhicules non conformes, tout en renforçant sa crédibilité carbone auprès des clients exigeants.",
+      "resume": "Mise à jour des critères d'éligibilité aux aides pour l'achat/location de véhicules électriques, impactant la stratégie d'électrification de la flotte de véhicules d'ABC.",
+      "pourquoi": "L'arrêté du 13 mai 2026 impose une mise à jour des critères d'éligibilité aux aides pour les véhicules électriques, avec un délai de conformité immédiat pour les nouveaux achats/locations, risquant de bloquer l'accès aux subventions si la flotte d'ABC n'est pas alignée sur ces nouvelles normes environnementales, tout en accélérant la transition vers des véhicules à faible impact carbone pour répondre aux exigences clients et réglementaires.",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054100864",
       "date": "2026-05-15"
     }
   ],
-  "briefing_jorf": "Seuls les textes n°6 (modification des critères d'éligibilité aux aides pour véhicules électriques) et n°8 (modification du cahier des charges de l'AOP 'Huile de noix du Périgord') présentent un intérêt indirect pour un Responsable Environnement/Climat, en lien avec les politiques de mobilité durable et d'agriculture durable.",
+  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement la modification du cahier des charges de l'appellation d'origine protégée « Huile de noix du Périgord » (n°8) et la mise à jour des listes de véhicules électriques éligibles à des aides (n°6), ainsi que la reconnaissance de l'état de catastrophe naturelle (n°1) pouvant impacter les activités ou chaînes d'approvisionnement.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -808,6 +797,24 @@
       "source": "AN Textes adoptés",
       "items": [
         {
+          "titre": "Texte adopté N° 285",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_mettre_en_place_programme_de_soutien_innovation_therapeutique_contre_cancers_maladies_rares_et_orphelines_enfant_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_mettre_en_place_programme_de_soutien_innovation_therapeutique_contre_cancers_maladies_rares_et_orphelines_enfant_17e",
+          "date": "2025-10-14"
+        },
+        {
+          "titre": "Texte adopté N° 284",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/information_protection_victimes_violences_sexuelles_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/information_protection_victimes_violences_sexuelles_17e",
+          "date": "2025-09-16"
+        },
+        {
+          "titre": "Texte adopté N° 283",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_developpement_transport_maritime_propulsion_velique_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_developpement_transport_maritime_propulsion_velique_17e",
+          "date": "2025-06-04"
+        },
+        {
           "titre": "Texte adopté N° 282",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/condamner_derive_illiberale_autoritaire_gouvernement_georgien_reaffirmer_soutien_destin_europeen_Georgie",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/condamner_derive_illiberale_autoritaire_gouvernement_georgien_reaffirmer_soutien_destin_europeen_Georgie",
@@ -920,27 +927,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_renforcer_la_place_des_agriculteurs_dans_amenagement_du_territoire_et_securiser_activites_agricoles_face_au_changement_climatique_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_renforcer_la_place_des_agriculteurs_dans_amenagement_du_territoire_et_securiser_activites_agricoles_face_au_changement_climatique_17e",
           "date": "2026-02-04"
-        },
-        {
-          "titre": "Texte adopté N° 251",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_sortie_indivision_successorale",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_sortie_indivision_successorale",
-          "date": "2025-01-21"
-        },
-        {
-          "titre": "Texte adopté N° 250",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/effectivite_droits_voisins_presse",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/effectivite_droits_voisins_presse",
-          "date": "2025-01-21"
-        },
-        {
-          "titre": "Texte adopté N° 249",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/statut_personnel_sante_services_incendie_secours",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/statut_personnel_sante_services_incendie_secours",
-          "date": "2025-01-21"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques agricoles, énergétiques et de reporting RSE. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi présentés, seul le n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de santé) et le n°2632 (protection et souveraineté agricoles) pourraient impacter directement les enjeux climatiques et RSE d’une entreprise de services. Aucun texte adopté n’est spécifiquement dédié à l’environnement ou au climat."
 }
