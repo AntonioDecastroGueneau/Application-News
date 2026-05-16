@@ -1,7 +1,7 @@
 {
   "date": "2026-05-16",
-  "generated_at": "07:51",
-  "elapsed_seconds": 209,
+  "generated_at": "12:16",
+  "elapsed_seconds": 177,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,18 +9,18 @@
     "depts_restriction": 10
   },
   "pipeline_meta": {
-    "run_at": "2026-05-16T07:51:00",
+    "run_at": "2026-05-16T12:16:04",
     "sources": {
       "JORF": 0,
-      "RSS": 7,
+      "RSS": 3,
       "VigiEau": 10,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 50,
-    "llm_seconds": 55.7
+    "llm_calls": 35,
+    "llm_seconds": 37.8
   },
   "items": [
     {
@@ -28,40 +28,18 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "PFAS : le gouvernement met en ligne de nouveaux outils d'information",
-      "resume": "Les outils d'information sur les PFAS pourraient impacter la gestion des déchets et des produits chimiques utilisés par ABC dans ses prestations de propreté, nécessitant une vigilance accrue sur les substances concernées et leur traçabilité.",
+      "resume": "Les outils d'information sur les PFAS pourraient impacter les pratiques de gestion des déchets et la traçabilité des produits chimiques utilisés par ABC dans ses prestations de propreté, notamment en lien avec les exigences clients en matière de substances dangereuses.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/pfas-le-gouvernement-met-en-ligne-de-nouveaux-outils-dinformation",
       "date": "2026-05-16"
     },
     {
-      "id": "d86f73863939",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "La Commission ouvre le débat sur les référentiels du système d'échange de quotas européen",
-      "resume": "La Commission européenne ouvre le débat sur les référentiels industriels du SEQE, ce qui pourrait impacter indirectement les clients d'ABC (notamment industriels) et leurs exigences carbone, sans obligation directe pour l'entreprise.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/consultation-commission-europeenne-referentiel-quota-carbone-48000.php4#xtor=RSS-6",
-      "date": "2026-05-15"
-    },
-    {
-      "id": "8f99949ded9d",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "REP DEEE : un spécialiste des vitrines réfrigérées agréé comme système individuel",
-      "resume": "ABC pourrait envisager de collaborer avec Eurocold pour la gestion des DEEE issus de ses prestations de propreté/FM, notamment pour les équipements électriques et électroniques (ex. vitrines réfrigérées) présents chez ses clients. Cela pourrait faciliter la conformité réglementaire et optimiser la traçabilité des déchets.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/deee-agrement-systeme-individuel-eurocold-47999.php4#xtor=RSS-6",
-      "date": "2026-05-15"
-    },
-    {
       "id": "02ed7aad419f",
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "Accidents de la circulation : « Cessons de donner la priorité à la mobilité rapide »",
-      "resume": "L'article met en lumière la priorité croissante donnée aux mobilités actives et sécurisées (Vision Zéro tué) en France, ce qui pourrait influencer les politiques clients d'ABC en matière de flotte de véhicules et de déplacements professionnels.",
+      "resume": "L'article souligne l'importance de la démarche 'Vision Zéro tué' pour réduire les accidents liés aux transports motorisés, ce qui pourrait influencer les politiques de mobilité durable et les ZFE en France, impactant potentiellement la flotte de véhicules d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Accidents-de-la-circulation-cessons-de-donner-la-priorite-a-la-mobilite-rapide",
@@ -72,32 +50,10 @@
       "source": "GreenUnivers",
       "categorie": "Environnement",
       "titre": "Enertrag France se lance à son tour dans le stockage",
-      "resume": "L'article évoque le développement du stockage d'énergie en France, un secteur en croissance qui pourrait influencer les stratégies énergétiques des clients d'ABC (notamment industriels ou tertiaires) et indirectement leurs exigences en matière de services de propreté/FM.",
+      "resume": "L'article aborde le développement du stockage d'énergie en France, un secteur en croissance qui pourrait influencer les stratégies énergétiques des entreprises, y compris celles du secteur de la propreté/FM comme ABC, notamment en termes de transition énergétique et d'opportunités pour des solutions durables.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/enertrag-france-se-lance-a-son-tour-dans-le-stockage-423878/",
-      "date": "2026-05-15"
-    },
-    {
-      "id": "05c7b2557080",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Les documents de la semaine",
-      "resume": "Cet article hebdomadaire compile des documents clés sur la transition énergétique (réglementations, études, analyses) qui pourraient inclure des évolutions pertinentes pour ABC (BGES, CSRD, mobilité durable, etc.).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/les-documents-de-la-semaine-381215/",
-      "date": "2026-05-15"
-    },
-    {
-      "id": "12405b10ac64",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "L’agenda de la transition énergétique",
-      "resume": "L'article propose un agenda d'événements professionnels sur la transition énergétique (énergies renouvelables, mobilité électrique, etc.), utile pour identifier des opportunités de veille ou de participation à des forums pertinents pour ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/lagenda-de-la-transition-energetique-279-423918/",
       "date": "2026-05-15"
     }
   ],
@@ -1110,5 +1066,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations réglementaires européennes dans des domaines clés comme l’énergie et l’environnement. Aucun autre texte ne traite explicitement de sujets climatiques ou de RSE dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient présenter un intérêt pour un Responsable Environnement/Climat, notamment via des mesures liées à l’agriculture durable ou à la transposition de directives européennes environnementales."
 }
