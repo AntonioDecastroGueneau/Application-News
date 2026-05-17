@@ -1,7 +1,7 @@
 {
   "date": "2026-05-17",
-  "generated_at": "08:10",
-  "elapsed_seconds": 166,
+  "generated_at": "12:12",
+  "elapsed_seconds": 141,
   "errors": [],
   "stats": {
     "jo_analyses": 5,
@@ -9,7 +9,7 @@
     "depts_restriction": 10
   },
   "pipeline_meta": {
-    "run_at": "2026-05-17T08:10:39",
+    "run_at": "2026-05-17T12:12:19",
     "sources": {
       "JORF": 0,
       "RSS": 1,
@@ -19,19 +19,19 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 18,
-    "llm_seconds": 18.4
+    "llm_calls": 21,
+    "llm_seconds": 25.9
   },
   "items": [
     {
-      "id": "126b4b0f8781",
-      "source": "Actuel HSE",
+      "id": "f671436cb09b",
+      "source": "ESG Today",
       "categorie": "Climat",
-      "titre": "PFAS : le gouvernement met en ligne de nouveaux outils d'information",
-      "resume": "Les PFAS (polluants éternels) sont désormais mieux documentés par des outils gouvernementaux, ce qui pourrait impacter les pratiques de gestion des déchets et produits chimiques chez ABC, notamment via les exigences clients en matière de substances dangereuses.",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article couvre des tendances ESG globales (climat, reporting, risques financiers) et des partenariats sur les données Scope 3, utiles pour contextualiser les enjeux réglementaires et clients d'ABC, sans obligation directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/pfas-le-gouvernement-met-en-ligne-de-nouveaux-outils-dinformation",
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-261/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-261",
       "date": "2026-05-17"
     }
   ],
@@ -408,7 +408,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des deux avis ne mentionne de lien direct avec des enjeux environnementaux ou climatiques, malgré l'importance stratégique des postes (finances publiques et CREPS) pour la transition écologique.",
+  "briefing_jorf": "Aucun des deux avis ne mentionne de lien direct avec des enjeux environnementaux, climatiques ou de responsabilité sociétale, limitant leur pertinence pour un Responsable Environnement/Climat.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -756,5 +756,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (transposition de directives UE en matière environnementale, énergétique et économique) et le projet de loi n°2632 (protection et souveraineté agricoles) pourraient avoir un impact indirect sur les enjeux climatiques et RSE pour une entreprise de services, notamment via des adaptations réglementaires en matière d'énergie, d'eau, d'assainissement ou d'agriculture durable."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (transposition de directives européennes en matière économique, financière, environnementale, énergétique et agricole) et le projet de loi n°2632 (protection et souveraineté agricoles) pourraient avoir un impact indirect sur les enjeux climatiques et environnementaux pour une grande entreprise de services. Aucun texte ne traite directement de reporting RSE ou de gestion des déchets."
 }
