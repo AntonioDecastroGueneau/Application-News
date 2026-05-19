@@ -1,7 +1,7 @@
 {
   "date": "2026-05-19",
-  "generated_at": "08:59",
-  "elapsed_seconds": 205,
+  "generated_at": "14:16",
+  "elapsed_seconds": 466,
   "errors": [],
   "stats": {
     "jo_analyses": 7,
@@ -9,7 +9,7 @@
     "depts_restriction": 10
   },
   "pipeline_meta": {
-    "run_at": "2026-05-19T08:59:48",
+    "run_at": "2026-05-19T14:16:59",
     "sources": {
       "JORF": 1,
       "RSS": 15,
@@ -17,19 +17,74 @@
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 55,
-    "llm_seconds": 73.7
+    "llm_calls": 54,
+    "llm_seconds": 93.8
   },
   "items": [
+    {
+      "id": "7e17b52033e3",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "ISS Launches New ISSB Sustainability Reporting Solution",
+      "resume": "ISS Launches New ISSB Sustainability Reporting Solution",
+      "pourquoi": "Mention de ISSB.",
+      "criticite": 3,
+      "url": "https://www.esgtoday.com/iss-launches-new-issb-reporting-solution/?utm_source=rss&utm_medium=rss&utm_campaign=iss-launches-new-issb-reporting-solution",
+      "date": "2026-05-19"
+    },
+    {
+      "id": "87f0c6424c67",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "PFAS : les installations de traitement des déchets liquides bientôt soumises à de nouvelles obligations",
+      "resume": "L'article annonce de nouvelles obligations réglementaires pour les installations de traitement des déchets liquides concernant les PFAS, substances émergentes à surveiller pour ABC dans le cadre de la gestion des déchets de ses prestations et du reporting CSRD/ESRS.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/pfas-traitement-dechets-liquides-icpe-48016.php4#xtor=RSS-6",
+      "date": "2026-05-19"
+    },
     {
       "id": "54b9a05790a4",
       "source": "Novethic",
       "categorie": "Eau",
       "titre": "Au-delà du PIB : l'ONU appelle à un reporting mondial sur des indicateurs alternatifs",
-      "resume": "L'ONU promeut un reporting alternatif au PIB, ce qui pourrait influencer les futures exigences de reporting extra-financier (ESG/CSRD) pour les entreprises, mais sans impact direct immédiat sur les enjeux opérationnels d'ABC.",
+      "resume": "L'ONU promeut un reporting mondial alternatif au PIB, ce qui pourrait influencer les futures exigences de reporting extra-financier (ESG/CSRD) pour les entreprises comme ABC, sans impact réglementaire immédiat.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/economie-et-social/droits-humains/au-dela-du-pib-lonu-appelle-a-un-reporting-mondial-sur-des-indicateurs-alternatifs",
+      "date": "2026-05-19"
+    },
+    {
+      "id": "dfaa162e56bd",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Le fournisseur Frank Énergie se lance dans le pilotage des batteries",
+      "resume": "Frank Énergie propose désormais des solutions de pilotage de batteries, une technologie pouvant intéresser ABC pour optimiser l'autoconsommation énergétique de ses sites clients ou réduire l'empreinte carbone de sa flotte électrique.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/le-fournisseur-frank-energie-se-lance-dans-le-pilotage-des-batteries-424083/",
+      "date": "2026-05-19"
+    },
+    {
+      "id": "3475cd9f9fac",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Pourquoi le projet Carbon d’usine solaire a échoué",
+      "resume": "L'échec du projet Carbon d'usine solaire en France illustre les défis de la réindustrialisation verte et les risques réglementaires/économiques pour les acteurs engagés dans la transition énergétique, un contexte à surveiller pour ABC dans le cadre de sa stratégie énergie et reporting CSRD.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/pourquoi-le-projet-carbon-dusine-solaire-a-echoue-424086/",
+      "date": "2026-05-19"
+    },
+    {
+      "id": "20bf6905cb43",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "La foncière Inéa éprouve le réalisme de l’autoconsommation collective",
+      "resume": "L'article illustre un cas concret d'autoconsommation collective dans l'immobilier tertiaire, une solution énergétique pertinente pour réduire l'empreinte carbone des sites clients d'ABC (scope 2) et répondre aux exigences CSRD/ISO 14001.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/la-fonciere-inea-eprouve-le-realisme-de-lautoconsommation-collective-423980/",
       "date": "2026-05-19"
     },
     {
@@ -37,7 +92,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Alors que la surface bâtie continue d’augmenter dans le monde, un rapport déplore l’essoufflement de la décarbonation de la construction",
-      "resume": "L'article souligne l'insuffisance des investissements mondiaux dans la décarbonation du secteur du bâtiment, ce qui pourrait impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et renforcer les attentes en matière de performance énergétique des prestations de propreté/FM.",
+      "resume": "Le rapport souligne l'essoufflement de la décarbonation de la construction, ce qui pourrait avoir des implications pour les entreprises de services de propreté/FM comme ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/05/19/alors-que-la-surface-batie-continue-d-augmenter-dans-le-monde-un-rapport-deplore-l-essoufflement-de-la-decarbonation-de-la-construction_6691440_3234.html",
@@ -48,21 +103,10 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Pétrole, gaz : comment la France et l’Europe peuvent être indépendants",
-      "resume": "L'article souligne l'urgence de réduire la dépendance aux énergies fossiles en France et en Europe, ce qui pourrait impacter les politiques énergétiques des clients d'ABC et leurs exigences en matière de décarbonation, notamment pour les flottes de véhicules et les prestations de propreté.",
+      "resume": "La crise énergétique montre l'importance de se libérer de la dépendance aux énergies fossiles pour le climat et la souveraineté.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/podcasts/article/2026/05/19/petrole-gaz-comment-la-france-et-l-europe-peuvent-etre-independants_6691438_5463015.html",
-      "date": "2026-05-19"
-    },
-    {
-      "id": "668fd0336b2c",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "« Il existe un double besoin dans la transition écologique : des formations dans l’emploi et des formations permettant de changer d’emploi »",
-      "resume": "L'article souligne l'importance de la formation des salariés pour la transition écologique, un enjeu stratégique pour ABC dans le cadre de sa décarbonation et de l'adaptation de ses compétences aux nouvelles exigences clients (CSRD, ISO 14001, BGES).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/emploi/article/2026/05/19/il-existe-un-double-besoin-dans-la-transition-ecologique-des-formations-dans-l-emploi-et-des-formations-permettant-de-changer-d-emploi_6691426_1698637.html",
       "date": "2026-05-19"
     },
     {
@@ -70,97 +114,20 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Projet de loi «État local» : les acteurs de la transition écologique alertent sur un «démembrement» de l’Ademe",
-      "resume": "Le projet de loi pourrait réduire les moyens régionaux de l'Ademe, impactant l'accompagnement des entreprises locales (dont ABC) sur les enjeux climatiques, énergétiques et de reporting ESG.",
+      "resume": "Le projet de loi pourrait réduire l'autonomie des délégations régionales de l'Ademe, ce qui pourrait impacter l'accompagnement des entreprises comme ABC dans leur transition écologique et leur reporting ESG (CSRD, BGES).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/projet-de-loi-etat-local-les-acteurs-de-la-transition-ecologique-alertent-sur-un",
       "date": "2026-05-19"
     },
     {
-      "id": "0bbb48d88068",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Cent territoires d'électrification : les collectivités ont jusqu'au 1er juin pour candidater",
-      "resume": "L'article annonce une opportunité pour les collectivités de candidater à un programme d'électrification accélérée des flottes, ce qui pourrait impacter indirectement ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) ou via des appels d'offres futurs incluant des critères de mobilité durable.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/ouverture-selection-collectivites-electrification-territoires-48013.php4#xtor=RSS-6",
-      "date": "2026-05-18"
-    },
-    {
-      "id": "346b4b0ee3ca",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Autoconsommation : le médiateur de l'énergie appelle à se pencher sur la fin des premiers contrats d'achat",
-      "resume": "L'article aborde la fin des premiers contrats d'autoconsommation individuelle en France, un sujet lié à la transition énergétique et à l'efficacité énergétique des bâtiments, sans impact direct immédiat sur les activités de nettoyage ou de gestion de flotte de ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/protection-atuoconsommation-individuelle-fin-obligation-achat-contrats-gre-48010.php4#xtor=RSS-6",
-      "date": "2026-05-18"
-    },
-    {
-      "id": "fea1c32d345b",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Le médiateur de l'énergie alerte sur la sobriété subie par les ménages et les risques liés à l'électrification",
-      "resume": "L'article souligne les risques liés à l'électrification des flottes et à la précarité énergétique, ce qui pourrait impacter les coûts et la stratégie de mobilité durable d'ABC, notamment dans un contexte de transition énergétique et de réglementations strictes.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/prix-energie-precarite-electrification-gaz-factures-aides-48008.php4#xtor=RSS-6",
-      "date": "2026-05-18"
-    },
-    {
-      "id": "3b07695374d5",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "Fin du gaz dans la construction neuve : le projet de décret soumis au public",
-      "resume": "Le projet de décret pourrait impacter les sites clients tertiaires d'ABC (bureaux, hôpitaux, etc.) en interdisant le gaz dans les nouvelles constructions à partir de 2027, influençant les besoins en énergie des prestations de propreté/FM.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/projet-decret-consultation-publique-interdiction-gaz-appoint-hydride-batiments-neufs-RE2020-48007.php4#xtor=RSS-6",
-      "date": "2026-05-18"
-    },
-    {
-      "id": "b0ca1a67ab27",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "78 % des rivières perdent de l'oxygène, notamment à cause du réchauffement climatique",
-      "resume": "L'article souligne l'impact du réchauffement climatique sur la qualité des eaux, un risque indirect pour ABC via la dépendance de ses clients (nucléaire, santé, industrie) aux ressources en eau et leur conformité réglementaire.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/78-des-rivieres-mondiales-perdent-de-l-oxygene",
-      "date": "2026-05-18"
-    },
-    {
-      "id": "6ca9b25ed09a",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "La famille Motte rejoint les Mulliez au capital de Voltalia",
-      "resume": "Voltalia, acteur des énergies renouvelables, attire des investisseurs familiaux nordistes, ce qui pourrait renforcer son positionnement sur le marché français des ENR. Cela pourrait influencer les stratégies clients d'ABC en matière d'énergie verte ou de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/la-famille-motte-rejoint-les-mulliez-au-capital-de-voltalia-423989/",
-      "date": "2026-05-18"
-    },
-    {
-      "id": "7339bfcca64e",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "Tension persistante sur le gaz naturel, l’électricité prend 10% [Marchés]",
-      "resume": "L'article souligne une hausse des prix de l'énergie (électricité +10%) liée à des tensions géopolitiques, ce qui impacte les coûts opérationnels d'ABC, notamment pour sa flotte de véhicules et ses consommations énergétiques sur les sites clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/tension-persistante-sur-le-gaz-naturel-lelectricite-prend-10-marches-423957/",
-      "date": "2026-05-18"
-    },
-    {
       "id": "62dd1665a62e",
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "La fabrication européenne de panneaux solaires loin du compte",
-      "resume": "L'article souligne le retard de la production européenne de panneaux solaires, ce qui pourrait impacter les stratégies d'approvisionnement énergétique durable d'ABC, notamment dans le cadre de sa transition vers des énergies renouvelables pour ses propres sites ou ceux de ses clients.",
-      "pourquoi": "",
-      "criticite": 1,
+      "resume": "Les appels d'offres solaires en France incluront des critères de préférence européens, ce qui pourrait affecter la flotte de véhicules et les prestations de ABC.",
+      "pourquoi": "C'est un signal stratégique important pour ABC car l'inclusion de critères de préférence européens dans les appels d'offres solaires en France pourrait influencer la flotte de véhicules et les prestations de l'entreprise, nécessitant une adaptation rapide pour maintenir sa compétitivité et répondre aux exigences environnementales croissantes de ses clients.",
+      "criticite": 2,
       "url": "https://www.greenunivers.com/2026/05/la-fabrication-europeenne-de-panneaux-solaires-loin-du-compte-423966/",
       "date": "2026-05-18"
     },
@@ -169,10 +136,43 @@
       "source": "Le Monde Planète",
       "categorie": "Environnement",
       "titre": "Allemagne : le gouvernement rappelé à l’ordre sur sa politique climatique",
-      "resume": "L'article souligne les tensions entre les objectifs climatiques allemands et les reculs politiques, ce qui peut impacter les exigences carbone des clients industriels européens d'ABC (notamment dans le nucléaire, la santé ou l'industrie) et influencer les trajectoires de décarbonation des entreprises clientes.",
+      "resume": "Le rapport annuel du conseil d'experts sur les questions climatiques en Allemagne contredit les projections du gouvernement, ce qui pourrait avoir des implications pour la politique climatique de l'UE et par conséquent pour ABC.",
+      "pourquoi": "C'est un signal stratégique important pour ABC car cela pourrait influencer les politiques climatiques de l'UE, impactant ainsi les exigences environnementales pour les entreprises de services comme ABC, avec un délai d'action court à moyen terme pour s'adapter aux nouvelles réglementations et minimiser les risques de non-conformité.",
+      "criticite": 2,
+      "url": "https://www.lemonde.fr/international/article/2026/05/18/allemagne-le-gouvernement-rappele-a-l-ordre-sur-sa-politique-climatique_6691068_3210.html",
+      "date": "2026-05-18"
+    },
+    {
+      "id": "61f9fc5e1ad3",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Une technologie, deux objectifs : préserver la ressource en eau et décarboner la production de froid",
+      "resume": "Technologie innovante de production de froid/chaleur par compression mécanique de vapeur sous vide, utilisant l'eau comme réfrigérant, avec un double enjeu de préservation de la ressource en eau et de décarbonation. Potentiellement applicable aux sites clients d'ABC pour réduire leur empreinte carbone liée à la climatisation ou aux procédés de refroidissement.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/international/article/2026/05/18/allemagne-le-gouvernement-rappele-a-l-ordre-sur-sa-politique-climatique_6691068_3210.html",
+      "url": "https://www.actu-environnement.com/ae/news/une-technologie-pour-deux-objectifs-preserver-ressource-eau-et-decarboner-production-froid-48012.php4#xtor=RSS-6",
+      "date": "2026-05-18"
+    },
+    {
+      "id": "0bbb48d88068",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Cent territoires d'électrification : les collectivités ont jusqu'au 1er juin pour candidater",
+      "resume": "L'article annonce une opportunité pour les collectivités de candidater à un programme d'électrification accélérée, ce qui pourrait influencer les politiques locales de mobilité durable et potentiellement impacter les exigences carbone des clients d'ABC (notamment en termes de flottes de véhicules propres).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/ouverture-selection-collectivites-electrification-territoires-48013.php4#xtor=RSS-6",
+      "date": "2026-05-18"
+    },
+    {
+      "id": "a8c7fabcc62d",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "TotalEnergies étend à l’électricité son opération « pouvoir d’achat »",
+      "resume": "TotalEnergies propose un plafonnement des prix de l'électricité, ce qui pourrait influencer la flotte de véhicules de ABC",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/totalenergies-etend-a-lelectricite-son-operation-pouvoir-dachat-423951/",
       "date": "2026-05-18"
     },
     {
@@ -180,7 +180,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Climat",
       "titre": "Groupe Solstyce : L'Opérateur de Transition Énergétique qui garantit la résilience des entreprises françaises - Les Echos",
-      "resume": "L'article présente Solstyce comme un acteur de la transition énergétique, ce qui peut inspirer ABC dans sa stratégie de décarbonation (scope 1/2) et d'efficacité énergétique pour ses clients, notamment via des solutions adaptées aux bâtiments tertiaires.",
+      "resume": "L'article présente Solstyce comme un acteur de la transition énergétique, ce qui peut inspirer des pistes pour renforcer la résilience énergétique des sites clients d'ABC, notamment via des solutions d'efficacité énergétique ou de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQSEFIRGc1X1dxWHgxelZuS010VXBBczI1cG9weWJwcUdaQVctVU9aZEJZVmdoX1ZqeW4yMlpTZnVydVplMGFYZExkM2tzOGptN1lfMlFuV1pGZWN0MHMxZlM1Vm83QzEzZTdBMklvOThRbUdlTF9ndFppQmtRQXJucW54VEh6ZEtOSHNlVmFFaWd1dElGVG9kdURyM1FoSkY1SW9mU09aNDA3SUNJRkZ1OFVXVkJLTmdCaGlsd1VlZlpHNzVIcTJXWWVyOWtrVmFNTXgwSUw2TGZvU1dtTVNwbG1IaDZUeWlEQnBFbTRtalo?oc=5",
@@ -481,14 +481,14 @@
       "source": "JORF",
       "categorie": "Eau",
       "titre": "Arrêté du 18 mai 2026 modifiant les fiches d'opérations standardisées pour l'acquisition et le rétrofit de véhicules électriques (TRA-EQ-114, TRA-EQ-117, TRA-EQ-128 et TRA-EQ-129) et les niveaux de bonification associés",
-      "resume": "Modification des fiches d'opérations standardisées pour véhicules électriques et niveaux de bonification, impactant potentiellement les aides financières pour la flotte de véhicules d'ABC.",
-      "pourquoi": "Le texte concerne directement la réglementation sur les véhicules électriques et les aides associées (bonifications), ce qui impacte la stratégie de flotte de véhicules d'ABC (scope 1 des émissions GES).",
+      "resume": "Mise à jour des fiches d'opérations standardisées pour l'acquisition et le rétrofit de véhicules électriques, ce qui pourrait influencer la flotte de véhicules d'ABC",
+      "pourquoi": "C'est un signal stratégique important pour ABC car il concerne l'électrification de la flotte de véhicules, qui est un enjeu majeur pour réduire les émissions de gaz à effet de serre (GES) et répondre aux exigences réglementaires et des clients, avec un risque de non-conformité aux obligations de réduction des émissions si les délais de mise en œuvre ne sont pas respectés.",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054110613",
       "date": "2026-05-19"
     }
   ],
-  "briefing_jorf": "Les arrêtés du 18 mai 2026 modifiant les fiches d'opérations standardisées pour l'acquisition et le rétrofit de véhicules électriques (TRA-EQ-114, TRA-EQ-117, TRA-EQ-128 et TRA-EQ-129) et leurs niveaux de bonification sont pertinents pour un Responsable Environnement/Climat, car ils impactent directement les incitations financières à la transition vers une flotte de véhicules bas-carbone.",
+  "briefing_jorf": "L'arrêté du 18 mai 2026 modifie les fiches d'opérations standardisées pour l'acquisition et le rétrofit de véhicules électriques, ce qui pourrait avoir un impact sur les stratégies environnementales des entreprises. Les autres arrêtés ne semblent pas directement pertinents pour un Responsable Environnement/Climat.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -522,6 +522,12 @@
     {
       "source": "AN Projets de loi",
       "items": [
+        {
+          "titre": "Projet de loi portant transposition de l’avenant n°3 du 25 février 2026 au protocole d’accord du 10 novembre 2023 relatif à l’assurance chômage - N° 2805",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53981",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53981",
+          "date": "2026-03-25"
+        },
         {
           "titre": "Projet de loi Projet de loi-cadre relatif au développement des transports - N° 2740",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53785",
@@ -581,12 +587,6 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53600",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53600",
           "date": "2026-01-19"
-        },
-        {
-          "titre": "Projet de loi portant transposition de l’avenant n°3 du 25 février 2026 au protocole d’accord du 10 novembre 2023 relatif à l’assurance chômage - N° 2619",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53981",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53981",
-          "date": "2026-03-25"
         },
         {
           "titre": "Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche - N° 2518",
@@ -689,12 +689,6 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
           "date": "2025-11-10"
-        },
-        {
-          "titre": "Projet de loi relatif à la lutte contre les fraudes sociales et fiscales - N° 2115",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52985",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52985",
-          "date": "2025-10-14"
         }
       ]
     },
@@ -780,6 +774,12 @@
           "date": "2026-02-17"
         },
         {
+          "titre": "Texte adopté N° 263",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52985",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52985",
+          "date": "2025-10-14"
+        },
+        {
           "titre": "Texte adopté N° 266",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reconnaitre_politique_nationale_adaptation_changement_climatique_adapter_mecanismes_assurance_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reconnaitre_politique_nationale_adaptation_changement_climatique_adapter_mecanismes_assurance_17e",
@@ -836,5 +836,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi listés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N° 2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations réglementaires européennes dans ces domaines. Aucun autre texte ne semble aborder spécifiquement des enjeux climatiques, énergétiques ou de reporting RSE de manière significative."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l'économie circulaire et à la protection de l'environnement. Aucun autre texte ne mentionne explicitement des enjeux climatiques ou RSE majeurs."
 }
