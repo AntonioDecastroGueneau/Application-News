@@ -1,7 +1,7 @@
 {
   "date": "2026-05-20",
-  "generated_at": "08:54",
-  "elapsed_seconds": 216,
+  "generated_at": "14:07",
+  "elapsed_seconds": 191,
   "errors": [],
   "stats": {
     "jo_analyses": 11,
@@ -9,27 +9,60 @@
     "depts_restriction": 10
   },
   "pipeline_meta": {
-    "run_at": "2026-05-20T08:54:43",
+    "run_at": "2026-05-20T14:07:20",
     "sources": {
       "JORF": 1,
-      "RSS": 9,
+      "RSS": 6,
       "VigiEau": 10,
       "Parlement": 1
     },
     "errors": [],
     "llm_calls": 51,
-    "llm_seconds": 93.1
+    "llm_seconds": 61.8
   },
   "items": [
+    {
+      "id": "4da48cec93f6",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "CEE : le rétrofit électrique et les véhicules neufs à nouveau bonifiés",
+      "resume": "L'arrêté du 19 mai 2024 bonifie les CEE pour l'achat de véhicules électriques neufs et le rétrofit électrique, ce qui peut réduire les coûts d'acquisition de la flotte de véhicules d'ABC et accélérer sa décarbonation (scope 1).",
+      "pourquoi": "Le sujet concerne directement la flotte de véhicules d'ABC (scope 1) et la décarbonation, avec un impact potentiel sur les coûts et la stratégie de mobilité durable. Bien que non une obligation légale immédiate, cela représente une opportunité stratégique pour optimiser les investissements dans la transition énergétique de la flotte.",
+      "criticite": 2,
+      "url": "https://www.actu-environnement.com/ae/news/arrete-bonifications-vehicules-electriques-retrofit-car-autobus-camion-48021.php4#xtor=RSS-6",
+      "date": "2026-05-20"
+    },
     {
       "id": "00fd96893ba5",
       "source": "Actuel HSE",
       "categorie": "Biodiversité",
       "titre": "Filières REP : les données à transmettre à l’Ademe sont précisées et élargies",
-      "resume": "L'article précise les données à transmettre à l'ADEME dans le cadre des filières REP, incluant une nouvelle annexe sur les lingettes à usage unique, ce qui impacte la traçabilité des déchets générés par les prestations de propreté de ABC.",
-      "pourquoi": "Les filières REP concernent directement les déchets générés par les prestations de propreté (lingettes, emballages, etc.), un enjeu clé pour ABC dans le cadre de sa politique déchets et de son reporting extra-financier (CSRD/ESRS). L'élargissement des données à transmettre impose une adaptation des processus internes de traçabilité et de reporting pour les déchets.",
+      "resume": "L'article précise les données à transmettre à l'Ademe dans le cadre des filières REP, incluant une nouvelle annexe sur les lingettes à usage unique, ce qui impacte la traçabilité et la gestion des déchets pour ABC dans ses prestations de propreté.",
+      "pourquoi": "Les filières REP concernent directement les obligations de traçabilité et de reporting des déchets pour les entreprises de services comme ABC, notamment sur les déchets générés par ses prestations (lingettes, emballages, etc.). L'élargissement des données à transmettre et l'intégration de nouvelles catégories (lingettes) impose une adaptation des processus internes pour se conformer à la réglementation.",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/filieres-rep-les-donnees-transmettre-lademe-sont-precisees-et-elargies",
+      "date": "2026-05-20"
+    },
+    {
+      "id": "58a3b30ee03c",
+      "source": "Novethic",
+      "categorie": "Eau",
+      "titre": "Incendies, tempêtes, sécheresses : un coût annuel qui peut atteindre jusqu'à 57% du PIB dans certains pays",
+      "resume": "L'article souligne l'impact financier croissant des catastrophes climatiques sur les économies, ce qui peut affecter la stabilité des clients d'ABC et leurs exigences en matière de résilience climatique, influençant indirectement les prestations et le reporting RSE de l'entreprise.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/finance-durable/finance-verte/incendies-tempetes-secheresses-un-cout-annuel-qui-peut-atteindre-jusqua-57-du-pib-dans-certains-pays",
+      "date": "2026-05-20"
+    },
+    {
+      "id": "f48fda920212",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "Google Exec Confirms 2030 Carbon Free Energy Commitment Remains in Place Despite AI Buildout",
+      "resume": "L'article confirme l'engagement de Google à atteindre une énergie 100% décarbonée d'ici 2030, ce qui pourrait influencer les exigences carbone des clients industriels ou tertiaires d'ABC dans leurs chaînes de valeur.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/google-exec-confirms-2030-carbon-free-energy-commitment-remains-in-place-despite-ai-buildout/?utm_source=rss&utm_medium=rss&utm_campaign=google-exec-confirms-2030-carbon-free-energy-commitment-remains-in-place-despite-ai-buildout",
       "date": "2026-05-20"
     },
     {
@@ -37,87 +70,21 @@
       "source": "Les Echos Environnement",
       "categorie": "Climat",
       "titre": "Transition énergétique : « Nous pourrions proposer de l'électricité gratuite à nos clients, mais les règles nous en empêchent - Les Echos",
-      "resume": "L'article aborde les contraintes réglementaires françaises sur la fourniture d'électricité gratuite aux clients, ce qui pourrait impacter les stratégies énergétiques des prestataires comme ABC dans le cadre de leur offre de services.",
+      "resume": "L'article aborde les contraintes réglementaires autour de la fourniture d'électricité gratuite aux clients, un sujet qui pourrait impacter les stratégies énergétiques des entreprises de services comme ABC, notamment dans le cadre de leurs engagements en matière de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPV1IwV3FYWENycVJhT2VGcEhycmNTZ1g2cXkybThBZlBwTHBOVWlLS1JpVGt5LTg2X2haOGRRSVNRZHkxQWRDR1ltNUR4Ym0wSlpJNElYOWhlMXpBZ21sSXhLWGZaRktQZERDUU1jRkstTXdTYkZETXcyenFDakFMOFgyeDZvZ3dvR21kOUVHcWhkdk5zaGwxZ3pxVzhwX0tsNEFaUEpOU1NlUmE2LWlQa0JVaTZMLXUyalpHUmc3cFF5TVVLa19UYXljaHpUdmZNT3poNkdFX2pKSUljb040bXdYNmRLR0ZldjN4ZTFXNFRIdnpoY3JhR094N09jU1dT?oc=5",
       "date": "2026-05-20"
     },
     {
-      "id": "b05f29db52cf",
-      "source": "Actuel HSE",
-      "categorie": "Énergie",
-      "titre": "Absence de Duerp : vers une amende administrative de 4 000 € par travailleur",
-      "resume": "L'article aborde une potentielle amende administrative pour absence de DUERP (Document Unique d'Évaluation des Risques Professionnels), document obligatoire pour toute entreprise employant du personnel, incluant les aspects environnementaux et de sécurité au travail.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/absence-de-duerp-vers-une-amende-administrative-de-4-000-eu-par-travailleur",
-      "date": "2026-05-20"
-    },
-    {
-      "id": "7cf88ac95d51",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "ISS-Corporate Launches New ISSB Sustainability Reporting Solution",
-      "resume": "ISS-Corporate Launches New ISSB Sustainability Reporting Solution",
-      "pourquoi": "Mention de ISSB.",
-      "criticite": 3,
-      "url": "https://www.esgtoday.com/iss-launches-new-issb-reporting-solution/?utm_source=rss&utm_medium=rss&utm_campaign=iss-launches-new-issb-reporting-solution",
-      "date": "2026-05-19"
-    },
-    {
       "id": "854f7c381e9a",
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Recyclage des plastiques : l'exécutif acte la consigne et lance une concertation",
-      "resume": "La mesure pourrait impacter la gestion des déchets plastiques des prestations de propreté de ABC, notamment via de nouvelles obligations de tri ou de recyclage pour ses clients (scope 3).",
-      "pourquoi": "",
-      "criticite": 1,
+      "resume": "La mesure pourrait impacter la gestion des déchets plastiques des prestations d'ABC, notamment via une possible extension des obligations de tri ou de recyclage pour les entreprises de propreté/FM. Une concertation sur la consigne pourrait influencer les pratiques de collecte et de valorisation des déchets plastiques sur les sites clients.",
+      "pourquoi": "L'article traite de la réglementation déchets (REP) et du recyclage des plastiques, un enjeu direct pour ABC dans le cadre de ses prestations de propreté et de gestion des déchets pour ses clients. Bien que la mesure ne soit pas encore finalisée, elle pourrait imposer de nouvelles obligations ou opportunités en matière de tri, collecte ou valorisation des déchets plastiques, notamment via la consigne.",
+      "criticite": 2,
       "url": "https://www.actu-environnement.com/ae/news/lancement-concertation-consigne-recyclage-bouteilles-plastique-48019.php4#xtor=RSS-6",
-      "date": "2026-05-19"
-    },
-    {
-      "id": "87f0c6424c67",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "PFAS : les installations de traitement des déchets liquides bientôt soumises à de nouvelles obligations",
-      "resume": "L'article annonce de nouvelles obligations réglementaires pour les installations de traitement des déchets liquides concernant les PFAS, ce qui pourrait impacter les prestations de gestion des déchets d'ABC et ses clients, notamment dans le cadre de la CSRD et du reporting extra-financier.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/pfas-traitement-dechets-liquides-icpe-48016.php4#xtor=RSS-6",
-      "date": "2026-05-19"
-    },
-    {
-      "id": "309751f3f2f2",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Des CEE pour les panneaux solaires, les batteries, les bornes de recharge [Luciole]",
-      "resume": "L'article évoque l'extension potentielle des Certificats d'Économies d'Énergie (CEE) aux panneaux solaires, batteries et bornes de recharge, ce qui pourrait impacter les stratégies énergétiques et de mobilité durable d'ABC (flotte véhicules, sites clients).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/des-cee-pour-les-panneaux-solaires-les-batteries-les-bornes-de-recharge-luciole-424184/",
-      "date": "2026-05-19"
-    },
-    {
-      "id": "dfaa162e56bd",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "Le fournisseur Frank Énergie se lance dans le pilotage des batteries",
-      "resume": "Frank Énergie propose désormais des solutions de pilotage de batteries, une opportunité pour ABC d'envisager des partenariats ou intégration dans sa stratégie de décarbonation de la flotte ou des sites clients (scope 2).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/le-fournisseur-frank-energie-se-lance-dans-le-pilotage-des-batteries-424083/",
-      "date": "2026-05-19"
-    },
-    {
-      "id": "20bf6905cb43",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "La foncière Inéa éprouve le réalisme de l’autoconsommation collective",
-      "resume": "L'article illustre un modèle opérationnel d'autoconsommation collective dans l'immobilier tertiaire, une piste pour ABC à explorer pour réduire son empreinte carbone liée à l'énergie des sites clients ou de ses propres locaux.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/la-fonciere-inea-eprouve-le-realisme-de-lautoconsommation-collective-423980/",
       "date": "2026-05-19"
     }
   ],
@@ -685,14 +652,14 @@
       "source": "JORF",
       "categorie": "Climat",
       "titre": "LOI n° 2026-381 du 19 mai 2026 visant à soutenir les collectivités territoriales dans la prévention et la gestion des inondations (1)",
-      "resume": "Renforcement des obligations de prévention des risques d'inondation pour les collectivités, pouvant impacter la gestion des sites clients ABC (3 000+ sites) via des PPR ou plans d'action locaux.",
+      "resume": "Renforcement des obligations de prévention des risques d'inondation pour les collectivités, pouvant impacter les sites clients d'ABC via des PPR ou des restrictions d'accès.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054113360",
       "date": "2026-05-20"
     }
   ],
-  "briefing_jorf": "La loi n°2026-381 sur la prévention des inondations et le décret n°2026-382 sur le contrôle de SEMMARIS (marché d'intérêt national) sont pertinents pour un Responsable Environnement/Climat, car ils impactent respectivement la gestion des risques climatiques et l'aménagement durable des infrastructures logistiques.",
+  "briefing_jorf": "Les textes 2 (LOI sur la prévention des inondations) et 4 (dotation à l'AFD pour le développement) sont pertinents : la première renforce les obligations des collectivités en adaptation climatique, la seconde peut influencer les financements publics pour des projets durables. Les autres textes ne concernent pas directement les enjeux environnementaux ou climatiques.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1040,5 +1007,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **projet de loi-cadre relatif au développement des transports (N°2740)** et le **projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** pourraient impacter les enjeux climatiques et énergétiques. Le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** est également pertinent pour le reporting RSE et la conformité réglementaire."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques RSE, notamment via des mesures sur l’agriculture durable, l’énergie ou la gestion des déchets. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux dans cette liste."
 }
