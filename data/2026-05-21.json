@@ -1,48 +1,81 @@
 {
   "date": "2026-05-21",
-  "generated_at": "08:57",
-  "elapsed_seconds": 254,
+  "generated_at": "14:23",
+  "elapsed_seconds": 197,
   "errors": [],
   "stats": {
     "jo_analyses": 19,
     "jo_retenus": 0,
-    "depts_restriction": 10
+    "depts_restriction": 11
   },
   "pipeline_meta": {
-    "run_at": "2026-05-21T08:57:33",
+    "run_at": "2026-05-21T14:23:39",
     "sources": {
       "JORF": 0,
-      "RSS": 14,
-      "VigiEau": 10,
+      "RSS": 13,
+      "VigiEau": 11,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 62,
-    "llm_seconds": 68.7
+    "llm_calls": 61,
+    "llm_seconds": 68.5
   },
   "items": [
+    {
+      "id": "94c390e7c48c",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "SBTi Broadens Focus from Climate Target Setting to Implementation",
+      "resume": "SBTi Broadens Focus from Climate Target Setting to Implementation",
+      "pourquoi": "Mention de SBTi.",
+      "criticite": 3,
+      "url": "https://www.esgtoday.com/sbti-broadens-focus-from-climate-target-setting-to-implementation/?utm_source=rss&utm_medium=rss&utm_campaign=sbti-broadens-focus-from-climate-target-setting-to-implementation",
+      "date": "2026-05-21"
+    },
+    {
+      "id": "07f04e5dbce9",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Recyclage des plastiques : l'avance de l'Europe se réduit",
+      "resume": "L'article souligne un ralentissement de la transition vers une économie circulaire des plastiques en Europe, ce qui pourrait impacter les obligations de recyclage et la gestion des déchets pour ABC dans le cadre de ses prestations de propreté et de ses engagements CSRD/ISO 14001.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/bilan-plastiques-circulaires-recyclage-europe-plasticseurope-48028.php4#xtor=RSS-6",
+      "date": "2026-05-21"
+    },
+    {
+      "id": "40018ab5ebeb",
+      "source": "Reporterre",
+      "categorie": "Eau",
+      "titre": "« On ne devrait pas s'en réjouir » : une vague de chaleur anormale va toucher la France",
+      "resume": "L'article souligne l'augmentation des vagues de chaleur précoces en France, un phénomène climatique qui pourrait impacter l'activité d'ABC (ex. : adaptation des prestations de propreté en période de canicule, risques opérationnels sur 3 000+ sites clients).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/On-ne-devrait-pas-s-en-rejouir-une-vague-de-chaleur-anormale-va-toucher-la-France",
+      "date": "2026-05-21"
+    },
     {
       "id": "74706f52ed0a",
       "source": "The Shift Project",
       "categorie": "Climat",
       "titre": "Emploi et formation : des leviers essentiels pour décarboner",
-      "resume": "L'article souligne l'importance de l'emploi et de la formation dans la décarbonation, un enjeu stratégique pour ABC qui doit aligner ses compétences internes sur les exigences carbone de ses clients (nucléaire, santé, industrie) et anticiper les besoins futurs en compétences vertes.",
+      "resume": "L'article souligne l'importance de l'emploi et de la formation dans la décarbonation, un enjeu stratégique pour ABC qui doit aligner ses compétences internes sur les exigences carbone de ses clients (nucléaire, santé, industrie) et les réglementations (CSRD, BGES).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://theshiftproject.org/publications/emploi-et-formation-des-leviers-essentiels-pour-decarboner/",
       "date": "2026-05-21"
     },
     {
-      "id": "7e3501a5f016",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Face à la crise climatique, « il n’est pas impossible que nous ayons d’abord le chaos avant d’avoir de nouvelles normes de vie » : les extraits du livre d’entretiens « Chaleur humaine »",
-      "resume": "L'article aborde les enjeux systémiques du réchauffement climatique et les défis de transition vers de nouvelles normes, ce qui peut impacter la stratégie RSE et les risques opérationnels d'ABC sur ses 3 000+ sites clients.",
+      "id": "e795d1ccb281",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "L’écart de traitement entre électricité et chaleur renouvelables est devenu injustifiable [Kyotherm]",
+      "resume": "L'article souligne l'injustice économique actuelle entre électricité et chaleur renouvelables en France, ce qui pourrait influencer les politiques publiques et les coûts énergétiques pour les entreprises comme ABC, notamment dans le cadre de leur transition énergétique et de leur reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/05/21/face-a-la-crise-climatique-il-n-est-pas-impossible-que-nous-ayons-d-abord-le-chaos-avant-d-avoir-de-nouvelles-normes-de-vie-les-extraits-du-livre-d-entretiens-chaleur-humaine_6691830_3232.html",
+      "url": "https://www.greenunivers.com/2026/05/lecart-de-traitement-entre-electricite-et-chaleur-renouvelables-est-devenu-injustifiable-kyotherm-424399/",
       "date": "2026-05-21"
     },
     {
@@ -50,7 +83,7 @@
       "source": "ESG Today",
       "categorie": "Biodiversité",
       "titre": "Sustainability as a Driver for Growth",
-      "resume": "L'article souligne l'évolution de la durabilité comme levier de croissance et de compétitivité, ce qui peut influencer la stratégie long terme d'ABC en matière de reporting ESG et d'innovation commerciale.",
+      "resume": "L'article souligne l'évolution de la durabilité comme levier de croissance et de compétitivité, ce qui peut influencer les stratégies clients d'ABC et leurs exigences en matière de reporting ESG (CSRD/ESRS).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/sustainability-as-a-driver-for-growth/?utm_source=rss&utm_medium=rss&utm_campaign=sustainability-as-a-driver-for-growth",
@@ -61,10 +94,21 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Quand BASF explore un modèle de transition écologique",
-      "resume": "L'article illustre une approche innovante de transition écologique via l'économie de la fonctionnalité, un modèle potentiellement inspirant pour ABC dans sa réflexion sur la décarbonation de ses services et la réduction de son empreinte carbone (scope 3).",
+      "resume": "L'article illustre une approche innovante de transition écologique via l'économie de la fonctionnalité, un modèle potentiellement transférable à la prestation de services (propreté/FM) pour répondre aux exigences carbone des clients et optimiser la gestion des déchets.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/quand-basf-explore-un-modele-de-transition-ecologique",
+      "date": "2026-05-21"
+    },
+    {
+      "id": "5bc469c6d446",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "Le maintien du télétravail après la crise sanitaire aurait accru la productivité",
+      "resume": "L'article souligne l'impact positif du télétravail sur la productivité, ce qui pourrait influencer les politiques RSE d'ABC en matière de mobilité durable et d'émissions liées aux déplacements professionnels.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/le-maintien-du-teletravail-apres-la-crise-sanitaire-aurait-accru-la-productivite-3",
       "date": "2026-05-21"
     },
     {
@@ -72,7 +116,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "L'Elysée annonce un plan d'accès à l'information sur l'environnement et le climat",
-      "resume": "L'article annonce un plan gouvernemental visant à améliorer l'accès à l'information environnementale et climatique, ce qui pourrait impacter les obligations de transparence et de reporting des entreprises comme ABC dans le cadre de la CSRD ou des politiques publiques.",
+      "resume": "L'annonce d'un plan d'accès à l'information environnementale et climatique par l'Elysée pourrait renforcer les exigences en matière de transparence et de reporting pour les entreprises, notamment via des données plus accessibles pour les clients et parties prenantes d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/lelysee-annonce-un-plan-dacces-linformation-sur-lenvironnement-et-le-climat-0",
@@ -83,7 +127,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Les emballages de palettes et les sangles stabilisant les produits pendant le transport sont exemptés de réemploi",
-      "resume": "L'article confirme l'exemption de réemploi pour les emballages de palettes et sangles de transport, réduisant les obligations de gestion des déchets pour ABC dans le cadre de ses prestations de propreté/FM, mais sans impact direct sur ses enjeux réglementaires majeurs (BGES, CSRD, ISO 14001).",
+      "resume": "L'article confirme que les emballages de palettes et sangles de transport sont exemptés de réemploi, ce qui impacte la gestion des déchets de prestations pour ABC (réduction des obligations de réemploi mais maintien des exigences de traçabilité et valorisation).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/les-emballages-de-palettes-et-les-sangles-stabilisant-les-produits-pendant-le-transport-2",
@@ -101,80 +145,25 @@
       "date": "2026-05-20"
     },
     {
-      "id": "4da48cec93f6",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "CEE : le rétrofit électrique et les véhicules neufs à nouveau bonifiés",
-      "resume": "L'arrêté du 19 mai 2024 bonifie les CEE pour l'achat de véhicules électriques neufs ou en rétrofit, ce qui peut réduire les coûts d'acquisition de la flotte de véhicules d'ABC et accélérer sa transition vers des véhicules bas-carbone.",
-      "pourquoi": "L'article concerne directement la flotte de véhicules d'ABC (scope 1) et les opportunités financières liées à la décarbonation via les CEE. Bien que non une obligation immédiate, cela impacte la stratégie d'électrification de la flotte et les coûts opérationnels.",
-      "criticite": 2,
-      "url": "https://www.actu-environnement.com/ae/news/arrete-bonifications-vehicules-electriques-retrofit-car-autobus-camion-48021.php4#xtor=RSS-6",
-      "date": "2026-05-20"
-    },
-    {
-      "id": "2a4a851128c7",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Incendies, foncier, coût : les freins à la recharge des camions électriques [Assemblée nationale]",
-      "resume": "L'article met en lumière les obstacles réglementaires et opérationnels (incendies, foncier, coût) à l'électrification des flottes de camions, un enjeu clé pour ABC dans le cadre de sa décarbonation (scope 1) et des attentes de ses clients industriels.",
-      "pourquoi": "L'article aborde directement la décarbonation des flottes (scope 1), un enjeu central pour ABC avec 3 000+ sites clients et des exigences carbone croissantes (nucléaire, santé, industrie). Les freins identifiés (coût, foncier, sécurité) impactent directement la stratégie de transition énergétique de l'entreprise, notamment pour l'électrification de sa flotte de véhicules.",
-      "criticite": 2,
-      "url": "https://www.greenunivers.com/2026/05/incendies-foncier-cout-les-freins-a-la-recharge-des-camions-electriques-assemblee-nationale-424250/",
-      "date": "2026-05-20"
-    },
-    {
-      "id": "58a3b30ee03c",
-      "source": "Novethic",
-      "categorie": "Eau",
-      "titre": "Incendies, tempêtes, sécheresses : un coût annuel qui peut atteindre jusqu'à 57% du PIB dans certains pays",
-      "resume": "L'article souligne l'impact financier croissant des catastrophes climatiques sur l'économie mondiale, ce qui peut influencer les exigences en matière de résilience et de reporting ESG des clients d'ABC, notamment dans les secteurs nucléaire, santé et industrie.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/finance-durable/finance-verte/incendies-tempetes-secheresses-un-cout-annuel-qui-peut-atteindre-jusqua-57-du-pib-dans-certains-pays",
-      "date": "2026-05-20"
-    },
-    {
-      "id": "7a3c2e6068a5",
-      "source": "Le Monde Planète",
-      "categorie": "Environnement",
-      "titre": "Climat : l’ONU adopte une résolution visant à renforcer la responsabilité des Etats",
-      "resume": "L'article souligne une évolution géopolitique et juridique internationale sur la responsabilité climatique des États, pouvant influencer les exigences réglementaires et contractuelles des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) en matière de reporting ESG et de gestion des risques climatiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/05/21/climat-l-onu-adopte-une-resolution-visant-a-renforcer-la-responsabilite-des-etats_6691794_3244.html",
-      "date": "2026-05-20"
-    },
-    {
       "id": "ce92863784a1",
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "Les nappes d’eau souterraines sont largement perturbées à l’échelle mondiale, avec des quantités en recul dans 29 % des points surveillés",
-      "resume": "Les perturbations des nappes phréatiques pourraient impacter indirectement les activités de propreté/FM d'ABC via des risques d'approvisionnement en eau pour ses clients ou ses propres opérations, notamment dans les secteurs sensibles (santé, industrie).",
+      "resume": "L'article souligne la dégradation des nappes phréatiques, un risque indirect pour ABC via la disponibilité en eau de ses clients (santé, industrie) et la résilience de ses sites opérationnels, sans impact réglementaire direct immédiat.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/05/20/la-dynamique-naturelle-des-nappes-d-eau-souterraines-est-largement-perturbee-a-l-echelle-mondiale_6691747_3244.html",
       "date": "2026-05-20"
     },
     {
-      "id": "f48fda920212",
+      "id": "d8560f0ca8d6",
       "source": "ESG Today",
-      "categorie": "Climat",
-      "titre": "Google Exec Confirms 2030 Carbon Free Energy Commitment Remains in Place Despite AI Buildout",
-      "resume": "L'article confirme l'engagement de Google à atteindre une énergie 100% décarbonée d'ici 2030, ce qui peut influencer les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé ou industrie) et renforcer la pression sur les prestataires de services comme ABC pour aligner leurs propres stratégies.",
+      "categorie": "Environnement",
+      "titre": "Novata Launches Portfolio, Supply Chain Risk Monitoring Solution",
+      "resume": "Novata propose une solution de monitoring des risques liés à la chaîne d'approvisionnement, utile pour évaluer les impacts climatiques indirects sur les activités d'ABC via ses clients (ex : perturbations logistiques ou réglementaires).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.esgtoday.com/google-exec-confirms-2030-carbon-free-energy-commitment-remains-in-place-despite-ai-buildout/?utm_source=rss&utm_medium=rss&utm_campaign=google-exec-confirms-2030-carbon-free-energy-commitment-remains-in-place-despite-ai-buildout",
-      "date": "2026-05-20"
-    },
-    {
-      "id": "91c163525b65",
-      "source": "Les Echos Environnement",
-      "categorie": "Énergie",
-      "titre": "Énergies renouvelables : actualités, chiffres, analyses et vidéos - Les Echos | Page 242 - Les Echos",
-      "resume": "L'article aborde les actualités et analyses sur les énergies renouvelables, un sujet indirectement lié à la transition énergétique des clients d'ABC et à leur reporting ESG (CSRD/ESRS), sans imposer d'action immédiate pour l'entreprise.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOczVINVZTa3NIZ2tqb3NZU2dHbmhPZzl0anFTZGNoYnd2dGhvck5fMElsQm9yNzRKOGZ6TlRQVmZMRzcwWmZ4aVdBZWR2ZkVMU21lVGphLU5wbmxwU2pkNTdhakRsWXZiWXhza2JoZTAwcmlNOVYzQ0NFWnZ2VEdETHprWTJKdGxpOWFQZ1dRdFB1VDBpcXhTanlja3A?oc=5",
+      "url": "https://www.esgtoday.com/novata-launches-portfolio-supply-chain-risk-monitoring-solution/?utm_source=rss&utm_medium=rss&utm_campaign=novata-launches-portfolio-supply-chain-risk-monitoring-solution",
       "date": "2026-05-20"
     }
   ],
@@ -222,6 +211,11 @@
     {
       "dept_code": "86",
       "dept_nom": "Vienne",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "55",
+      "dept_nom": "Meuse",
       "niveau": "vigilance"
     },
     {
@@ -1079,5 +1073,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi listés, seul le projet de loi n°2518 (adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, etc.) et le projet de loi n°2632 (protection et souveraineté agricoles) pourraient présenter un intérêt indirect pour un Responsable Environnement/Climat, en raison de leur dimension réglementaire ou sectorielle liée à l’énergie, l’agriculture ou l’environnement. Aucun texte ne traite directement de reporting RSE ou de politiques climatiques ambitieuses."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux climatiques et énergétiques majeurs dans le droit français. Aucun autre texte ne semble aborder spécifiquement les thématiques environnementales ou RSE de manière significative."
 }
