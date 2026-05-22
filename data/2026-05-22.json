@@ -1,37 +1,92 @@
 {
   "date": "2026-05-22",
-  "generated_at": "08:50",
-  "elapsed_seconds": 230,
+  "generated_at": "13:45",
+  "elapsed_seconds": 193,
   "errors": [],
   "stats": {
     "jo_analyses": 17,
     "jo_retenus": 0,
-    "depts_restriction": 11
+    "depts_restriction": 12
   },
   "pipeline_meta": {
-    "run_at": "2026-05-22T08:50:36",
+    "run_at": "2026-05-22T13:45:26",
     "sources": {
       "JORF": 0,
       "RSS": 16,
-      "VigiEau": 11,
+      "VigiEau": 12,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 59,
-    "llm_seconds": 108.6
+    "llm_calls": 63,
+    "llm_seconds": 70.4
   },
   "items": [
+    {
+      "id": "cd3b3d8c3436",
+      "source": "Reporterre",
+      "categorie": "Énergie",
+      "titre": "Le Conseil constitutionnel rétablit les ZFE et le zéro artificialisation nette",
+      "resume": "Le Conseil constitutionnel rétablit les ZFE et le zéro artificialisation nette",
+      "pourquoi": "Mention de ZFE.",
+      "criticite": 3,
+      "url": "https://reporterre.net/Le-Conseil-constitutionnel-retablit-les-ZFE-et-le-zero-artificialisation-nette",
+      "date": "2026-05-22"
+    },
+    {
+      "id": "e7eef5a3bc8e",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Lire notre dossier d'actu \"Électrification : le grand basculement énergétique\"",
+      "resume": "L'article aborde l'électrification des flottes comme réponse aux tensions énergétiques, un enjeu clé pour ABC dans le cadre de la décarbonation de sa flotte de véhicules (scope 1) et des attentes clients en matière de mobilité durable.",
+      "pourquoi": "L'électrification des flottes est un sujet opérationnel direct pour ABC, lié à la réglementation (ZFE, loi énergie-climat), aux objectifs de décarbonation (scope 1) et aux exigences clients (nucléaire, santé, industrie). L'article traite d'une tendance majeure impactant la stratégie de mobilité durable de l'entreprise.",
+      "criticite": 2,
+      "url": "https://www.actu-environnement.com/dossier-actu/plan-electrification-batiment-transport-indsutrie-PAC-126#xtor=RSS-6",
+      "date": "2026-05-22"
+    },
+    {
+      "id": "3cfc05f197b2",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Plan d'électrification : la filière PAC face au défi de la confiance",
+      "resume": "L'article aborde l'électrification des équipements, un enjeu indirect pour ABC via la décarbonation de ses clients (industrie, santé) et la mobilité durable (flotte véhicules). La filière PAC impacte les besoins en énergie des sites tertiaires et industriels, influençant les exigences carbone des clients d'ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/plan-electrification-pompe-chaleur-defi-filiere-48032.php4#xtor=RSS-6",
+      "date": "2026-05-22"
+    },
     {
       "id": "da2ccd45d07d",
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "Pourquoi la France n'arrive pas à fabriquer davantage de panneaux solaires",
-      "resume": "L'article illustre les défis de la souveraineté industrielle française dans les énergies renouvelables, un enjeu stratégique pour les clients d'ABC (nucléaire, santé, industrie) qui pourraient accélérer leur transition énergétique via des solutions locales comme le solaire.",
+      "resume": "L'article illustre les défis de la décarbonation industrielle en France, notamment dans les énergies renouvelables, ce qui peut impacter les stratégies clients d'ABC (ex : transition énergétique des sites tertiaires).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Pourquoi-la-France-n-arrive-pas-a-fabriquer-plus-de-panneaux-solaires",
+      "date": "2026-05-22"
+    },
+    {
+      "id": "41fc5d11f3e7",
+      "source": "Novethic",
+      "categorie": "Énergie",
+      "titre": "L’écho des AG : BlackRock, BNP Paribas, Axa… les assemblées générales sous tension",
+      "resume": "L'article souligne la pression accrue sur les investisseurs (dont BNP Paribas et Axa) concernant leurs votes en AG sur les résolutions climatiques, ce qui peut impacter les exigences carbone des clients d'ABC (secteurs nucléaire, santé, industrie) et influencer leurs politiques RSE.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/finance-durable/engagement-actionnarial/echo-ag-blackrock-bnp-paribas-axa-equinor-dernieres-nouvelles-assemblees-generales",
+      "date": "2026-05-22"
+    },
+    {
+      "id": "2a3baa1e29cc",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "L’Elysée prépare un « Choose France » de l’électrification",
+      "resume": "L'initiative de l'Elysée vise à accélérer l'électrification en France, ce qui pourrait impacter les politiques clients d'ABC (nucléaire, santé, industrie) et les exigences en matière de décarbonation des flottes de véhicules (scope 1).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/lelysee-prepare-un-choose-france-de-lelectrification-424492/",
       "date": "2026-05-22"
     },
     {
@@ -39,7 +94,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Les documents de la semaine",
-      "resume": "Cette newsletter hebdomadaire recense les documents clés liés à la transition énergétique, offrant à ABC une veille réglementaire et stratégique sur les enjeux climatiques, énergétiques et de reporting ESG pertinents pour ses activités.",
+      "resume": "Cette newsletter hebdomadaire recense les documents clés liés à la transition énergétique, offrant une veille réglementaire et stratégique utile pour anticiper les évolutions impactant les enjeux climatiques, énergétiques et CSRD de ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/les-documents-de-la-semaine-381215/",
@@ -50,7 +105,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "L’agenda de la transition énergétique",
-      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, hydrogène) qui pourraient être utiles pour identifier des opportunités ou des tendances à suivre pour ABC, notamment sur la décarbonation de sa flotte ou ses engagements climatiques.",
+      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.) qui pourraient être utiles pour identifier des opportunités ou des tendances à suivre pour le Responsable Environnement/Climat d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/lagenda-de-la-transition-energetique-280-424554/",
@@ -61,7 +116,7 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "Est-ce qu’on sait recycler les panneaux solaires ?",
-      "resume": "L'article aborde le recyclage des panneaux solaires, un enjeu lié à la gestion des déchets et à la transition énergétique, mais sans impact direct immédiat sur les activités de propreté/FM d'ABC.",
+      "resume": "L'article aborde le recyclage des panneaux solaires, un enjeu lié à la gestion des déchets des prestations de propreté/FM (scope 3) et à la responsabilité élargie du producteur (REP) qui pourrait impacter les clients d'ABC dans les années à venir.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/chaleur-humaine/article/2026/05/22/est-ce-qu-on-sait-recycler-les-panneaux-solaires_6692231_6125299.html",
@@ -72,44 +127,22 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Des précipitations plus concentrées dans le temps affectent les ressources en eau",
-      "resume": "L'article souligne l'aggravation des épisodes de sécheresse entre les pluies intenses, ce qui pourrait impacter la disponibilité des ressources en eau pour les activités de nettoyage et de gestion des déchets chez les clients d'ABC, notamment dans les régions déjà touchées.",
+      "resume": "Les épisodes de précipitations plus intenses et concentrés dans le temps pourraient impacter la disponibilité des ressources en eau pour les sites clients d'ABC, notamment en cas de restrictions d'usage ou de besoins accrus en nettoyage industriel.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/sciences/article/2026/05/22/des-precipitations-plus-concentrees-dans-le-temps-affectent-les-ressources-en-eau_6692228_1650684.html",
       "date": "2026-05-22"
     },
     {
-      "id": "b05f29db52cf",
+      "id": "49dd7b0146f7",
       "source": "Actuel HSE",
       "categorie": "Énergie",
-      "titre": "Absence de Duerp : vers une amende administrative de 4 000 € par travailleur",
-      "resume": "L'article aborde une potentielle amende administrative pour absence de DUERP (Document Unique d'Évaluation des Risques Professionnels), un document obligatoire pour les entreprises en France. Bien que centré sur la sécurité au travail, il rappelle l'importance de la conformité réglementaire pour ABC, notamment dans le cadre de sa politique RSE et de son engagement en matière de gestion des risques.",
+      "titre": "Supermarchés : le plastique reste omniprésent dans les rayons",
+      "resume": "L'article met en lumière les lacunes des supermarchés en matière de réduction des emballages plastiques, ce qui pourrait impacter indirectement ABC via les exigences carbone et déchets de ses clients (industrie, santé) dans le cadre de la CSRD et des politiques de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/absence-de-duerp-vers-une-amende-administrative-de-4-000-eu-par-travailleur",
+      "url": "https://www.actuel-hse.fr/content/supermarches-le-plastique-reste-omnipresent-dans-les-rayons",
       "date": "2026-05-22"
-    },
-    {
-      "id": "e98f7254ee9c",
-      "source": "Le Monde Planète",
-      "categorie": "Émissions",
-      "titre": "ZFE : le Conseil constitutionnel annule la suppression des zones à faibles émissions",
-      "resume": "ZFE : le Conseil constitutionnel annule la suppression des zones à faibles émissions",
-      "pourquoi": "Mention de ZFE.",
-      "criticite": 3,
-      "url": "https://www.lemonde.fr/planete/article/2026/05/21/zfe-le-conseil-constitutionnel-annule-la-suppression-des-zones-a-faibles-emissions_6691910_3244.html",
-      "date": "2026-05-21"
-    },
-    {
-      "id": "94c390e7c48c",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "SBTi Broadens Focus from Climate Target Setting to Implementation",
-      "resume": "SBTi Broadens Focus from Climate Target Setting to Implementation",
-      "pourquoi": "Mention de SBTi.",
-      "criticite": 3,
-      "url": "https://www.esgtoday.com/sbti-broadens-focus-from-climate-target-setting-to-implementation/?utm_source=rss&utm_medium=rss&utm_campaign=sbti-broadens-focus-from-climate-target-setting-to-implementation",
-      "date": "2026-05-21"
     },
     {
       "id": "ef0fc55efec1",
@@ -127,7 +160,7 @@
       "source": "Actu-Environnement",
       "categorie": "Émissions",
       "titre": "Photovoltaïque : nouvelle baisse des soutiens en vue pour les petites installations sur bâtiment",
-      "resume": "La réforme du soutien au photovoltaïque pourrait impacter les coûts énergétiques des sites clients d'ABC (non exploitants ICPE) et influencer leurs stratégies d'autoconsommation ou de transition énergétique, sans obligation directe pour ABC.",
+      "resume": "La baisse des soutiens au photovoltaïque pour les petites installations (<100 kWc) pourrait impacter les coûts énergétiques des sites clients d'ABC, notamment ceux engagés dans des démarches de décarbonation ou de reporting ESG (CSRD).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/tarif-achat-phovoltaique-batiment-S21-baisse-aides-enr-48030.php4#xtor=RSS-6",
@@ -138,21 +171,10 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Recyclage des plastiques : l'avance de l'Europe se réduit",
-      "resume": "L'article souligne un ralentissement de la transition vers les plastiques circulaires en Europe, ce qui pourrait impacter les exigences réglementaires et clients en matière de recyclage des déchets pour ABC, notamment dans le cadre de la REP ou des engagements CSRD.",
+      "resume": "L'article souligne un ralentissement de la transition vers les plastiques circulaires en Europe, ce qui pourrait impacter les exigences clients d'ABC en matière de gestion des déchets plastiques et de reporting RSE, notamment dans le cadre de la CSRD et des stratégies de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/bilan-plastiques-circulaires-recyclage-europe-plasticseurope-48028.php4#xtor=RSS-6",
-      "date": "2026-05-21"
-    },
-    {
-      "id": "7ca8934ad743",
-      "source": "Reporterre",
-      "categorie": "Eau",
-      "titre": "Une vague de chaleur anormale va toucher la France : « On ne devrait pas s'en réjouir »",
-      "resume": "L'article souligne l'impact des aléas climatiques (vagues de chaleur précoces) sur les activités opérationnelles de ABC, notamment via les risques indirects liés à ses 3 000+ sites clients et aux exigences carbone de ces derniers.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/On-ne-devrait-pas-s-en-rejouir-une-vague-de-chaleur-anormale-va-toucher-la-France",
       "date": "2026-05-21"
     },
     {
@@ -160,21 +182,10 @@
       "source": "GreenUnivers",
       "categorie": "Biodiversité",
       "titre": "Thierry Lepercq promet une offre d’hydrogène compétitif en 2027",
-      "resume": "L'annonce d'une offre d'hydrogène compétitif en 2027 pourrait influencer les stratégies de décarbonation des clients d'ABC (notamment industriels ou tertiaires) et potentiellement leur demande en services de mobilité durable ou d'énergie bas-carbone, sans impact direct immédiat sur les activités d'ABC.",
+      "resume": "L'annonce d'une offre d'hydrogène compétitif en 2027 pourrait influencer la stratégie de décarbonation de la flotte de véhicules d'ABC (scope 1) et les choix énergétiques de ses clients, notamment dans les secteurs industriels ou tertiaires.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/thierry-lepercq-promet-une-offre-dhydrogene-competitif-en-2027-424441/",
-      "date": "2026-05-21"
-    },
-    {
-      "id": "e795d1ccb281",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "L’écart de traitement entre électricité et chaleur renouvelables est devenu injustifiable [Kyotherm]",
-      "resume": "L'article souligne l'injustice des écarts de traitement réglementaire et économique entre électricité et chaleur renouvelables en France, ce qui pourrait influencer les politiques énergétiques futures et impacter indirectement les stratégies de décarbonation des entreprises comme ABC, notamment via les coûts et l'accès aux énergies.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/lecart-de-traitement-entre-electricite-et-chaleur-renouvelables-est-devenu-injustifiable-kyotherm-424399/",
       "date": "2026-05-21"
     },
     {
@@ -182,21 +193,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "La réforme de l’Ademe jugée « pas satisfaisante en termes de bonne administration » par le Conseil d’Etat",
-      "resume": "La réforme de l'Ademe pourrait impacter les dispositifs de soutien et d'accompagnement des entreprises dans leur transition écologique, notamment via les aides à la décarbonation des flottes ou à l'efficacité énergétique des bâtiments tertiaires.",
+      "resume": "La réforme de l'ADEME pourrait impacter les dispositifs de soutien aux entreprises (ex : aides à la décarbonation, BGES, reporting ESG) dont ABC pourrait bénéficier pour ses clients ou sa propre stratégie climat.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/05/21/la-reforme-de-l-ademe-jugee-pas-satisfaisante-en-termes-de-bonne-administration-par-le-conseil-d-etat_6691928_3244.html",
-      "date": "2026-05-21"
-    },
-    {
-      "id": "d26e60154bac",
-      "source": "Le Monde Planète",
-      "categorie": "Déchets",
-      "titre": "Carburants : revivez la conférence de presse du gouvernement sur les nouvelles aides et retrouvez les différentes réactions à ces annonces",
-      "resume": "L'article annonce des aides gouvernementales pour les entreprises et travailleurs impactés par les coûts des carburants, ce qui pourrait influencer les coûts opérationnels de la flotte de véhicules d'ABC et ses stratégies de mobilité durable.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/politique/live/2026/05/21/en-direct-carburants-sebastien-lecornu-presente-de-nouvelles-aides-apres-la-hausse-des-prix-de-l-energie_6691897_823448.html",
       "date": "2026-05-21"
     }
   ],
@@ -254,6 +254,11 @@
     {
       "dept_code": "34",
       "dept_nom": "Hérault",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "2A",
+      "dept_nom": "Corse-du-Sud",
       "niveau": "vigilance"
     }
   ],
@@ -1382,5 +1387,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d’adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques agricoles, énergétiques et de reporting RSE. Le **Projet de loi-cadre relatif au développement des transports (N°2740)** pourrait également influencer les stratégies de mobilité durable et d’émissions des entreprises."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet de loi-cadre relatif au développement des transports (N°2740) et le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) pourraient impacter les politiques énergétiques et agricoles. Le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale et énergétique (N°2518) est également pertinent pour le reporting RSE et la transition écologique."
 }
