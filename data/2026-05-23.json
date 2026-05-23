@@ -1,7 +1,7 @@
 {
   "date": "2026-05-23",
-  "generated_at": "08:09",
-  "elapsed_seconds": 328,
+  "generated_at": "12:14",
+  "elapsed_seconds": 177,
   "errors": [],
   "stats": {
     "jo_analyses": 14,
@@ -9,18 +9,18 @@
     "depts_restriction": 13
   },
   "pipeline_meta": {
-    "run_at": "2026-05-23T08:09:27",
+    "run_at": "2026-05-23T12:14:38",
     "sources": {
       "JORF": 0,
-      "RSS": 8,
+      "RSS": 2,
       "VigiEau": 13,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 51,
-    "llm_seconds": 188.1
+    "llm_calls": 42,
+    "llm_seconds": 39.7
   },
   "items": [
     {
@@ -28,7 +28,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Météo : + 15 °C en quelques jours, les variations brutales de température favorisées par le réchauffement climatique",
-      "resume": "Les variations brutales de température liées au réchauffement climatique augmentent les risques opérationnels pour ABC (ex. : perturbations logistiques, adaptation des prestations de propreté/FM aux conditions météo extrêmes sur 3 000+ sites clients).",
+      "resume": "L'article souligne l'augmentation des variations brutales de température en France, un risque climatique opérationnel pouvant impacter la prestation de propreté/FM d'ABC sur ses 3 000+ sites clients (ex. : conditions météo extrêmes affectant les interventions ou la logistique).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/05/23/15-c-en-quelques-jours-les-variations-brutales-de-temperatures-favorisees-par-le-rechauffement-climatique_6692663_3244.html",
@@ -39,77 +39,11 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Absence de Duerp : vers une amende administrative de 4 000 € par travailleur",
-      "resume": "L'article aborde une potentielle amende administrative pour absence de DUERP (Document Unique d'Évaluation des Risques Professionnels), sans lien direct avec les enjeux climatiques, énergétiques ou réglementaires spécifiques à ABC (BGES, CSRD, flotte véhicules, déchets, etc.).",
+      "resume": "L'article aborde une potentielle amende administrative pour absence de DUERP (Document Unique d'Évaluation des Risques Professionnels), qui pourrait impacter les obligations réglementaires de sécurité et environnement des entreprises comme ABC, notamment en matière de gestion des risques et conformité.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/absence-de-duerp-vers-une-amende-administrative-de-4-000-eu-par-travailleur",
       "date": "2026-05-23"
-    },
-    {
-      "id": "cd3b3d8c3436",
-      "source": "Reporterre",
-      "categorie": "Énergie",
-      "titre": "Le Conseil constitutionnel rétablit les ZFE et le zéro artificialisation nette",
-      "resume": "Le Conseil constitutionnel rétablit les ZFE et le zéro artificialisation nette",
-      "pourquoi": "Mention de ZFE.",
-      "criticite": 3,
-      "url": "https://reporterre.net/Le-Conseil-constitutionnel-retablit-les-ZFE-et-le-zero-artificialisation-nette",
-      "date": "2026-05-22"
-    },
-    {
-      "id": "e7eef5a3bc8e",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Lire notre dossier d'actu \"Électrification : le grand basculement énergétique\"",
-      "resume": "L'article souligne l'urgence de l'électrification des flottes pour réduire la dépendance aux énergies fossiles, un enjeu direct pour ABC qui gère une flotte de véhicules (scope 1) et doit anticiper les réglementations ZFE et les attentes clients en décarbonation.",
-      "pourquoi": "L'électrification des flottes est un sujet opérationnel clé pour ABC (scope 1, réglementations ZFE, attentes clients en décarbonation). L'article aborde une tendance majeure qui impacte directement la stratégie de mobilité durable de l'entreprise, même si les détails réglementaires ne sont pas précisés.",
-      "criticite": 2,
-      "url": "https://www.actu-environnement.com/dossier-actu/plan-electrification-batiment-transport-indsutrie-PAC-126#xtor=RSS-6",
-      "date": "2026-05-22"
-    },
-    {
-      "id": "2a3baa1e29cc",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "L’Elysée prépare un « Choose France » de l’électrification",
-      "resume": "L'initiative de l'Elysée vise à accélérer l'électrification en France, ce qui pourrait impacter les stratégies de décarbonation des flottes de véhicules d'ABC et ses clients, notamment dans le cadre des ZFE et des objectifs de neutralité carbone.",
-      "pourquoi": "L'article aborde la mobilité durable (électrification des flottes) et les politiques publiques françaises (Choose France, plan d'électrification), directement liées aux enjeux de décarbonation et de reporting ESG d'ABC (scope 1, CSRD, ISO 14001).",
-      "criticite": 2,
-      "url": "https://www.greenunivers.com/2026/05/lelysee-prepare-un-choose-france-de-lelectrification-424492/",
-      "date": "2026-05-22"
-    },
-    {
-      "id": "3cfc05f197b2",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "Plan d'électrification : la filière PAC face au défi de la confiance",
-      "resume": "L'article aborde l'électrification des flottes et l'adaptation des infrastructures, un enjeu clé pour la décarbonation de la flotte de véhicules d'ABC (scope 1) et la mobilité durable, en lien avec les politiques publiques françaises et européennes.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/plan-electrification-pompe-chaleur-defi-filiere-48032.php4#xtor=RSS-6",
-      "date": "2026-05-22"
-    },
-    {
-      "id": "05c7b2557080",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Les documents de la semaine",
-      "resume": "Cet article hebdomadaire compile des documents clés sur la transition énergétique (réglementations, études, etc.) qui peuvent inclure des évolutions pertinentes pour le reporting ESG, la décarbonation ou la réglementation déchets de ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/les-documents-de-la-semaine-381215/",
-      "date": "2026-05-22"
-    },
-    {
-      "id": "12405b10ac64",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "L’agenda de la transition énergétique",
-      "resume": "L'article liste des événements professionnels liés à la transition énergétique (mobilité électrique, énergies renouvelables, hydrogène) qui peuvent être utiles pour identifier des opportunités ou des tendances à suivre pour ABC, notamment sur la décarbonation de sa flotte ou ses engagements climatiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/lagenda-de-la-transition-energetique-280-424554/",
-      "date": "2026-05-22"
     }
   ],
   "restrictions_eau": [
@@ -812,7 +746,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Le décret n° 2026-391 relatif à l'aide aux entreprises supportant une charge élevée de redevance sur la consommation d'eau potable pourrait impacter les stratégies de gestion de l'eau des grandes entreprises de services, tandis que le décret n° 2026-393 modifiant le code de l'énergie sur les schémas de raccordement des énergies renouvelables dans les zones non interconnectées est pertinent pour les engagements RSE en matière d'énergies décarbonées.",
+  "briefing_jorf": "Le décret n° 2026-391 relatif à l'aide aux entreprises supportant une charge élevée de redevance sur la consommation d'eau potable pourrait impacter les coûts opérationnels liés à la gestion de l'eau, tandis que le décret n° 2026-393 modifiant le code de l'énergie sur les schémas de raccordement des énergies renouvelables dans les zones non interconnectées pourrait influencer les stratégies d'approvisionnement énergétique durable.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1154,5 +1088,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et agricole) et le n°2632 (protection et souveraineté agricoles) pourraient impacter directement les enjeux climatiques et RSE d’une entreprise de services, notamment via des obligations renforcées en matière de reporting, d’adaptation aux normes européennes ou de gestion des ressources. Aucun texte adopté ne semble directement lié à ces thématiques."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et agricole) et le projet de loi n°2632 (protection et souveraineté agricoles) pourraient impacter directement les enjeux climatiques et environnementaux pour une entreprise de services. Aucun texte adopté ne semble directement lié aux priorités RSE ou reporting."
 }
