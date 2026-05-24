@@ -1,7 +1,7 @@
 {
   "date": "2026-05-24",
-  "generated_at": "08:17",
-  "elapsed_seconds": 152,
+  "generated_at": "12:42",
+  "elapsed_seconds": 135,
   "errors": [],
   "stats": {
     "jo_analyses": 7,
@@ -9,10 +9,10 @@
     "depts_restriction": 13
   },
   "pipeline_meta": {
-    "run_at": "2026-05-24T08:17:09",
+    "run_at": "2026-05-24T12:42:03",
     "sources": {
       "JORF": 0,
-      "RSS": 3,
+      "RSS": 2,
       "VigiEau": 13,
       "Parlement": 1
     },
@@ -20,7 +20,7 @@
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 26,
-    "llm_seconds": 25.3
+    "llm_seconds": 24.6
   },
   "items": [
     {
@@ -28,21 +28,10 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article couvre des tendances ESG globales (objectifs carbone, reporting, finance verte) qui peuvent influencer les attentes clients d'ABC en matière de décarbonation et de reporting extra-financier, sans obligation directe immédiate.",
+      "resume": "L'article couvre des actualités ESG transverses (objectifs climat, reporting, décarbonation) qui peuvent influencer les attentes clients d'ABC en matière de reporting extra-financier et de trajectoires bas-carbone, sans obligation directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-262/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-262",
-      "date": "2026-05-24"
-    },
-    {
-      "id": "b05f29db52cf",
-      "source": "Actuel HSE",
-      "categorie": "Énergie",
-      "titre": "Absence de Duerp : vers une amende administrative de 4 000 € par travailleur",
-      "resume": "L'article aborde une potentielle amende administrative pour absence de DUERP (Document Unique d'Évaluation des Risques Professionnels), document obligatoire pour les entreprises. Bien que centré sur la sécurité au travail, il pourrait impacter indirectement la conformité réglementaire globale d'ABC, notamment en matière de gestion des risques et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/absence-de-duerp-vers-une-amende-administrative-de-4-000-eu-par-travailleur",
       "date": "2026-05-24"
     },
     {
@@ -421,7 +410,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés du 23 mai 2026 modifiant les opérations standardisées d'économies d'énergie et les contrôles des CEE sont pertinents pour un Responsable Environnement/Climat, car ils impactent directement les dispositifs de transition énergétique et les obligations de reporting des entreprises. Aucun autre texte ne concerne directement la RSE ou le climat.",
+  "briefing_jorf": "L'arrêté du 23 mai 2026 modifiant les opérations standardisées d'économies d'énergie (arrêté du 22 décembre 2014) est pertinent pour un Responsable Environnement/Climat, car il impacte directement les dispositifs de certificats d'économies d'énergie (CEE) et les normes d'efficacité énergétique applicables aux entreprises.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -763,5 +752,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le projet n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de pêche) et le projet n°2632 (protection et souveraineté agricoles) présentent un intérêt direct pour un Responsable Environnement/Climat, en lien avec les enjeux climatiques, énergétiques et de transition écologique. Aucun texte adopté ne semble directement lié à ces thématiques."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient présenter un intérêt pour un Responsable Environnement/Climat, en lien avec des enjeux agricoles, énergétiques ou de transition écologique. Aucun texte adopté ne semble directement lié à ces thématiques."
 }
