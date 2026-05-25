@@ -1,7 +1,7 @@
 {
   "date": "2026-05-25",
-  "generated_at": "09:47",
-  "elapsed_seconds": 160,
+  "generated_at": "14:24",
+  "elapsed_seconds": 225,
   "errors": [],
   "stats": {
     "jo_analyses": 7,
@@ -9,38 +9,82 @@
     "depts_restriction": 13
   },
   "pipeline_meta": {
-    "run_at": "2026-05-25T09:47:36",
+    "run_at": "2026-05-25T14:24:19",
     "sources": {
       "JORF": 1,
-      "RSS": 5,
+      "RSS": 9,
       "VigiEau": 13,
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 36,
-    "llm_seconds": 35.5
+    "llm_calls": 48,
+    "llm_seconds": 99.6
   },
   "items": [
     {
-      "id": "4206b649f7a9",
+      "id": "40891a5e3f34",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Transferts de déchets : l'utilisation de la plateforme électronique européenne devient obligatoire",
+      "resume": "L'obligation d'utiliser la plateforme Diwass pour le suivi des transferts de déchets impacte directement la traçabilité des déchets générés par les prestations d'ABC, notamment pour les flux de déchets plastiques nécessitant un consentement préalable.",
+      "pourquoi": "ABC est concerné par la réglementation déchets (REP, traçabilité) via ses activités de propreté/FM, et doit adapter ses processus de reporting et de gestion des déchets pour se conformer à cette obligation européenne.",
+      "criticite": 2,
+      "url": "https://www.actu-environnement.com/ae/news/procedure-numerique-transfert-dechets-48041.php4#xtor=RSS-6",
+      "date": "2026-05-25"
+    },
+    {
+      "id": "9e27c10b821f",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Décarbonation de la production de chaleur : 21 projets français subventionnés par l'UE",
+      "resume": "L'article aborde la décarbonation de la production de chaleur industrielle, un enjeu indirect pour ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et les risques réglementaires liés à la transition énergétique.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/production-chaleur-decarbonation-fonds-innovation-subventions-ue-projets-francais-48040.php4#xtor=RSS-6",
+      "date": "2026-05-25"
+    },
+    {
+      "id": "a0f2311ec7ff",
       "source": "Reporterre",
       "categorie": "Climat",
-      "titre": "Canicule : records de température en mai, la vigilance jaune étendue à 18 départements",
-      "resume": "L'article souligne l'intensification des épisodes de canicule précoces en France, ce qui pourrait impacter la planification des interventions de propreté/FM chez les clients d'ABC (ex. : adaptation des horaires, gestion des risques sanitaires liés à la chaleur).",
+      "titre": "Ventilateur de plafond, rideaux thermiques... Cinq solutions simples et efficaces contre la chaleur",
+      "resume": "L'article aborde des solutions de rafraîchissement des bâtiments, un enjeu lié à l'efficacité énergétique et à l'adaptation climatique, pertinents pour les sites clients d'ABC (non exploitants ICPE) dans le cadre de la réglementation DPE tertiaire ou des plans climat.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Ventilateur-de-plafond-rideaux-thermiques-Cinq-solutions-simples-et-efficaces-contre-la",
+      "date": "2026-05-25"
+    },
+    {
+      "id": "50569e1e1d21",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Canicule : la vigilance jaune déclenchée pour la première fois en mai, la Bretagne n'est pas épargnée",
+      "resume": "L'article signale un épisode de canicule précoce en Bretagne et Pays de la Loire, zones où ABC intervient sur 3 000+ sites clients. Cela peut impacter les prestations de propreté (adaptation des horaires, risques sanitaires) et les exigences clients en matière de résilience climatique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Canicule-records-de-temperature-en-mai-la-vigilance-jaune-etendue-a-18-departements",
       "date": "2026-05-25"
     },
     {
-      "id": "b05f29db52cf",
-      "source": "Actuel HSE",
-      "categorie": "Énergie",
-      "titre": "Absence de Duerp : vers une amende administrative de 4 000 € par travailleur",
-      "resume": "L'article aborde l'obligation réglementaire du Document Unique d'Évaluation des Risques Professionnels (DUERP), dont l'absence pourrait entraîner une amende administrative de 4 000 € par travailleur. Bien que non directement lié aux enjeux climatiques ou RSE d'ABC, le DUERP est un document obligatoire pour toute entreprise employant du personnel, incluant les prestataires de propreté/FM.",
+      "id": "34d543d81b02",
+      "source": "Novethic",
+      "categorie": "Déchets",
+      "titre": "Ce que la résolution historique de l’ONU sur le climat implique pour les entreprises",
+      "resume": "La résolution de l'ONU renforce le cadre politique international sur les obligations climatiques des États, ce qui pourrait influencer les exigences réglementaires et contractuelles des clients d'ABC (nucléaire, santé, industrie) en matière de reporting ESG et de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/absence-de-duerp-vers-une-amende-administrative-de-4-000-eu-par-travailleur",
+      "url": "https://www.novethic.fr/environnement/climat/ce-que-la-resolution-historique-de-lonu-sur-le-climat-implique-pour-les-entreprises",
+      "date": "2026-05-25"
+    },
+    {
+      "id": "1b300a70abb8",
+      "source": "Le Monde Planète",
+      "categorie": "Déchets",
+      "titre": "La filière des pompes à chaleur parie sur un rebond",
+      "resume": "L'article souligne une reprise du marché des pompes à chaleur (PAC) liée à l'électrification des logements et à la hausse des prix du gaz, ce qui pourrait influencer les stratégies clients d'ABC en matière de transition énergétique et de mobilité durable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/economie/article/2026/05/25/la-filiere-des-pompes-a-chaleur-parie-sur-un-rebond_6693661_3234.html",
       "date": "2026-05-25"
     },
     {
@@ -48,7 +92,7 @@
       "source": "Le Monde Planète",
       "categorie": "Déchets",
       "titre": "Le brasseur Kronenbourg amortit le choc de la flambée des prix du carburant grâce… au train",
-      "resume": "L'article illustre une stratégie de décarbonation de la logistique via le report modal (route → rail), une piste pertinente pour ABC dans l'optimisation de sa flotte de véhicules (scope 1) et la réduction de son empreinte carbone liée aux prestations.",
+      "resume": "L'article illustre une stratégie de décarbonation et de résilience économique via le report modal (train vs routier), pertinente pour ABC dans le cadre de sa flotte de véhicules et de ses engagements BGES/plan climat.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/05/24/le-brasseur-kronenbourg-amortit-le-choc-de-la-flambee-des-prix-du-carburant-grace-au-train_6693243_3234.html",
@@ -59,7 +103,7 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article couvre des actualités ESG transversales (climat, reporting, décarbonation) qui peuvent influencer les attentes clients d'ABC en matière de reporting extra-financier et de trajectoires carbone, sans obligation directe immédiate.",
+      "resume": "L'article couvre des actualités ESG et climatiques variées (décarbonation, reporting, mobilité durable, risques climatiques) qui peuvent influencer les enjeux de reporting (CSRD/ESRS), de décarbonation (scope 1/2/3) et de mobilité durable pour ABC, bien que sans obligation directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-262/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-262",
@@ -70,7 +114,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Climat",
       "titre": "CEE : « Non, la France ne peut pas se permettre de renoncer à l'un des rares outils capables de financer la transition énergétique - Les Echos",
-      "resume": "L'article souligne l'importance des Certificats d'Économies d'Énergie (CEE) comme outil de financement de la transition énergétique en France, ce qui pourrait impacter les stratégies d'efficacité énergétique des clients d'ABC et leurs exigences en matière de prestations de propreté/FM.",
+      "resume": "Les Certificats d'Économies d'Énergie (CEE) sont un levier financier clé pour la transition énergétique en France. ABC pourrait indirectement en bénéficier via des aides pour ses propres actions de décarbonation (flotte, énergie) ou celles de ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNSE5Od2lYRUJtTHp1NU9ZdFlOYmQ1d1BiaHFhbm90NXlZTF91NXlEWFB1ZXpScnNpWDZDczI2T0ZsVXEzNjgzMGpNR194YkttS0k1WTFiQmxaUWNmSlR2bEN2UTdmY2lsUHBXLTh0RVNUMTZsUzE2aDN2RlMtcGM3Y3hPaWQ4dXphY1lDc3lYdi1qOXhQSWxVQnluUDhKZ0FjXy1VeW5ENWFKN2EyR05OOHdHSUVPUVBlZ0NzZzZYNThqUlhobUdoaFhOMTRPUWc4OUFvdTFYT0Q4dUtkNm9TZUNzaTNEd1puQ00xOHRCcWpucmk4WjkxYWZmZnJrRHZQWTlLelNqRQ?oc=5",
@@ -422,14 +466,14 @@
       "source": "JORF",
       "categorie": "Énergie",
       "titre": "Arrêté du 23 mai 2026 modifiant l'arrêté du 22 décembre 2014 définissant les opérations standardisées d'économies d'énergie et l'arrêté du 28 septembre 2021 relatif aux contrôles dans le cadre du dispositif des certificats d'économies d'énergie",
-      "resume": "Mise à jour des opérations standardisées d'économies d'énergie et des contrôles dans le cadre des certificats d'économies d'énergie (CEE), pouvant impacter les obligations énergétiques des sites clients d'ABC.",
-      "pourquoi": "Les modifications des opérations standardisées d'économies d'énergie et des contrôles CEE peuvent influencer les exigences énergétiques des sites tertiaires ou industriels où ABC intervient, notamment via le DPE tertiaire ou les obligations de réduction de consommation. ABC doit surveiller ces évolutions pour anticiper les attentes de ses clients en matière d'efficacité énergétique.",
+      "resume": "Modification des opérations standardisées d'économies d'énergie, impact potentiel sur les obligations énergétiques de ABC",
+      "pourquoi": "Cet arrêté modifie les opérations standardisées d'économies d'énergie, ce qui peut imposer à ABC de justifier de nouvelles actions de réduction de consommation énergétique dans ses prestations (ex : optimisation des locaux clients) sous 12 à 24 mois, avec un risque de perte de contrats si non-conformité ou une opportunité de différenciation via des solutions bas-carbone pour ses clients.",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054126720",
       "date": "2026-05-25"
     }
   ],
-  "briefing_jorf": "L'arrêté du 23 mai 2026 modifiant les opérations standardisées d'économies d'énergie dans le cadre des certificats d'économies d'énergie (CEE) est pertinent pour optimiser les projets de réduction de consommation énergétique de l'entreprise. Aucun autre texte ne semble directement impactant pour un Responsable Environnement/Climat.",
+  "briefing_jorf": "L'arrêté du 23 mai 2026 modifie les opérations standardisées d'économies d'énergie, ce qui pourrait avoir un impact sur les stratégies environnementales des entreprises. Le décret n° 2026-402 du 22 mai 2026 relatif aux décisions de classement des villages de vacances pourrait également avoir des implications pour les entreprises qui opèrent dans ce secteur.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -771,5 +815,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations réglementaires européennes dans ces domaines clés. Aucun autre texte ne semble aborder spécifiquement les enjeux climatiques, énergétiques ou de reporting RSE de manière significative."
+  "pjl_briefing": "Parmi les projets de loi présentés, seul le projet n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et agricole) et le projet n°2632 (protection et souveraineté agricoles) pourraient impacter directement les enjeux climatiques et RSE d’une entreprise de services. Aucun texte adopté ne semble directement lié à ces thématiques."
 }
