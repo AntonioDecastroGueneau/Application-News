@@ -1,7 +1,7 @@
 {
   "date": "2026-05-26",
-  "generated_at": "09:36",
-  "elapsed_seconds": 192,
+  "generated_at": "14:15",
+  "elapsed_seconds": 162,
   "errors": [],
   "stats": {
     "jo_analyses": 0,
@@ -9,20 +9,31 @@
     "depts_restriction": 13
   },
   "pipeline_meta": {
-    "run_at": "2026-05-26T09:36:24",
+    "run_at": "2026-05-26T14:15:50",
     "sources": {
       "JORF": 0,
-      "RSS": 12,
+      "RSS": 14,
       "VigiEau": 13,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 38,
-    "llm_seconds": 41.6
+    "llm_calls": 39,
+    "llm_seconds": 42.3
   },
   "items": [
+    {
+      "id": "6589c2ea8342",
+      "source": "Novethic",
+      "categorie": "Déchets",
+      "titre": "Omnibus automobile, émissions de CO2… le véhicule électrique slalome entre les obstacles",
+      "resume": "Omnibus automobile, émissions de CO2… le véhicule électrique slalome entre les obstacles",
+      "pourquoi": "Mention de Omnibus.",
+      "criticite": 3,
+      "url": "https://www.novethic.fr/economie-et-social/business-model-en-transition/omnibus-automobile-emissions-co2-vehicule-electrique-slalome-obstacles",
+      "date": "2026-05-26"
+    },
     {
       "id": "60948a63e94c",
       "source": "Novethic",
@@ -35,11 +46,77 @@
       "date": "2026-05-26"
     },
     {
+      "id": "27fe5225b39b",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Le risque pénal du règlement relatif aux batteries et aux déchets de batterie",
+      "resume": "Le règlement sur les batteries et déchets de batteries renforce les obligations de traçabilité et de gestion des déchets pour les entreprises, y compris les prestataires de services comme ABC, avec un risque pénal accru en cas de non-conformité.",
+      "pourquoi": "Bien qu'ABC ne soit pas directement concerné par les ICPE, ce règlement impacte les déchets générés par ses prestations (scope 3) et les obligations de traçabilité des déchets pour ses clients (notamment dans les secteurs nucléaire, santé et industrie). Le risque pénal et les exigences de reporting (CSRD) rendent ce sujet pertinent pour le Responsable Environnement/Climat.",
+      "criticite": 2,
+      "url": "https://www.actu-environnement.com/ae/news/risque-penal-reglement-batteries-dechets-48020.php4#xtor=RSS-6",
+      "date": "2026-05-26"
+    },
+    {
+      "id": "906ad939649a",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Photovoltaïque : l'Europe encore trop frileuse sur la réindustrialisation",
+      "resume": "L'article souligne les retards de l'UE dans la réindustrialisation et la souveraineté énergétique via le photovoltaïque, un contexte à surveiller pour anticiper les évolutions réglementaires ou marché impactant les stratégies énergétiques des entreprises comme ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/industrie-photovoltaique-europe-france-fabrication-nzia-iaa-production-locale-48044.php4#xtor=RSS-6",
+      "date": "2026-05-26"
+    },
+    {
+      "id": "39a87f51c1b7",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "La phrase du jour : \"Cette ligne THT est nécessaire pour donner de la visibilité aux industriels de Fos-sur-Mer\"",
+      "resume": "L'article aborde l'électrification industrielle et les infrastructures énergétiques (ligne THT) pour soutenir la décarbonation des sites industriels, ce qui pourrait impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et leur reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/dit-aujourdhui/1806.html#xtor=RSS-6",
+      "date": "2026-05-26"
+    },
+    {
+      "id": "e7eef5a3bc8e",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Lire notre dossier d'actu \"Électrification : le grand basculement énergétique\"",
+      "resume": "L'article aborde l'électrification des flottes comme réponse aux enjeux de décarbonation et de dépendance énergétique, un sujet clé pour ABC dans le cadre de sa stratégie de mobilité durable et de reporting CSRD.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/dossier-actu/plan-electrification-batiment-transport-indsutrie-PAC-126#xtor=RSS-6",
+      "date": "2026-05-26"
+    },
+    {
+      "id": "ccd0939eb683",
+      "source": "Reporterre",
+      "categorie": "Eau",
+      "titre": "Rouvrir aux voitures un tunnel dédié aux vélos, le projet à contresens d'Éric Ciotti à Nice",
+      "resume": "L'article aborde une mesure locale de mobilité durable (réouverture d'un tunnel cyclable aux voitures) qui pourrait influencer les politiques de ZFE et d'électrification des flottes en France, sans impact direct immédiat pour ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/A-Nice-Ciotti-veut-rouvrir-aux-voitures-un-tunnel-dedie-aux-velos",
+      "date": "2026-05-26"
+    },
+    {
+      "id": "c668644f3963",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Comment le réseau électrique veut se protéger des prix négatifs",
+      "resume": "L'article aborde la surabondance d'électricité en France et ses impacts sur les prix, ce qui pourrait influencer les coûts énergétiques des prestations de services de propreté/FM d'ABC et les stratégies de décarbonation liées à l'énergie.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/comment-le-reseau-electrique-veut-se-proteger-des-prix-negatifs-424663/",
+      "date": "2026-05-26"
+    },
+    {
       "id": "a0f82513b0c7",
       "source": "ESG Today",
       "categorie": "Déchets",
       "titre": "EU Commission Awards €400 Million to Industrial Heat Decarbonization Projects",
-      "resume": "L'article concerne des projets de décarbonation industrielle financés par l'UE, un enjeu stratégique pour les clients d'ABC (nucléaire, santé, industrie) qui pourraient exiger des prestations alignées sur ces trajectoires.",
+      "resume": "L'article annonce un financement européen pour des projets de décarbonation de la chaleur industrielle, un enjeu potentiel pour les clients d'ABC (secteurs nucléaire, santé, industrie) qui pourraient exiger des prestations alignées sur ces transitions.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/eu-commission-awards-e400-million-to-industrial-heat-decarbonization-projects/?utm_source=rss&utm_medium=rss&utm_campaign=eu-commission-awards-e400-million-to-industrial-heat-decarbonization-projects",
@@ -50,7 +127,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Bâtiments neufs : Bruxelles harmonise le calcul européen du potentiel de réchauffement planétaire",
-      "resume": "L'article annonce une harmonisation européenne du calcul du potentiel de réchauffement planétaire (PRP) pour les bâtiments neufs, impactant potentiellement les exigences clients d'ABC en matière de performance carbone des prestations de propreté/FM.",
+      "resume": "L'article annonce une harmonisation européenne du calcul du potentiel de réchauffement planétaire (PRP) pour les bâtiments neufs, ce qui pourrait influencer les exigences carbone des clients d'ABC (ex : industrie, santé) dans leurs appels d'offres ou reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/batiments-neufs-bruxelles-harmonise-le-calcul-europeen-du-potentiel-de-rechauffement",
@@ -61,7 +138,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "L’Anact veut adapter le travail au climat dans les zones «sentinelles»",
-      "resume": "L'article aborde l'adaptation des conditions de travail aux enjeux climatiques, notamment dans des zones identifiées comme 'sentinelles', ce qui pourrait impacter les pratiques opérationnelles de propreté/FM d'ABC chez ses clients.",
+      "resume": "L'article aborde l'adaptation des conditions de travail aux impacts climatiques, notamment dans les zones exposées à des risques accrus (ex. canicules), ce qui pourrait impacter les prestations de propreté/FM d'ABC chez ses clients (ex. sites industriels ou tertiaires).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/lanact-veut-adapter-le-travail-au-climat-dans-les-zones-sentinelles",
@@ -72,62 +149,18 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "De nouveaux engagements internationaux pour réduire les émissions de méthane",
-      "resume": "L'article aborde les engagements internationaux sur la réduction des émissions de méthane, un gaz à fort pouvoir réchauffant (28 fois le CO₂), qui pourrait impacter les secteurs industriels et tertiaires clients d'ABC via des exigences réglementaires ou contractuelles accrues en matière de reporting et de décarbonation.",
+      "resume": "L'article aborde les engagements internationaux sur la réduction des émissions de méthane, un gaz à effet de serre puissant, ce qui pourrait impacter les exigences réglementaires ou clients en matière de reporting ESG et de décarbonation pour ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/de-nouveaux-engagements-internationaux-pour-reduire-les-emissions-de-methane",
       "date": "2026-05-26"
     },
     {
-      "id": "40891a5e3f34",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "Transferts de déchets : l'utilisation de la plateforme électronique européenne devient obligatoire",
-      "resume": "L'obligation d'utiliser la plateforme Diwass pour le suivi des transferts de déchets impacte directement la traçabilité des déchets générés par les prestations de propreté de ABC, nécessitant une adaptation des processus internes de gestion des déchets.",
-      "pourquoi": "L'article concerne la réglementation déchets (REP, traçabilité) qui s'applique aux entreprises de services comme ABC, notamment pour les déchets issus de leurs prestations chez les clients. Bien que non une obligation immédiate de décarbonation ou de reporting, la gestion des déchets est un enjeu clé pour ABC (scope 3, CSRD, ISO 14001).",
-      "criticite": 2,
-      "url": "https://www.actu-environnement.com/ae/news/procedure-numerique-transfert-dechets-48041.php4#xtor=RSS-6",
-      "date": "2026-05-25"
-    },
-    {
-      "id": "9e27c10b821f",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "Décarbonation de la production de chaleur : 21 projets français subventionnés par l'UE",
-      "resume": "L'article illustre les financements européens pour la décarbonation de la chaleur industrielle, un enjeu indirect pour ABC via ses clients (nucléaire, santé, industrie) qui pourraient être incités à accélérer leur transition énergétique.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/production-chaleur-decarbonation-fonds-innovation-subventions-ue-projets-francais-48040.php4#xtor=RSS-6",
-      "date": "2026-05-25"
-    },
-    {
-      "id": "919a38a8e7a4",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Ventilateur de plafond, rideaux thermiques… Cinq solutions simples et efficaces contre la chaleur",
-      "resume": "L'article aborde des solutions de rafraîchissement (ventilation, isolation) qui pourraient influencer les exigences énergétiques des clients d'ABC en période de canicule, impactant indirectement les prestations de propreté/FM et leur performance carbone.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Ventilateur-de-plafond-rideaux-thermiques-Cinq-solutions-simples-et-efficaces-contre-la",
-      "date": "2026-05-25"
-    },
-    {
-      "id": "34d543d81b02",
-      "source": "Novethic",
-      "categorie": "Déchets",
-      "titre": "Ce que la résolution historique de l’ONU sur le climat implique pour les entreprises",
-      "resume": "La résolution de l'ONU renforce le cadre juridique international sur les obligations climatiques des États, ce qui pourrait influencer les exigences réglementaires et contractuelles des clients d'ABC (nucléaire, santé, industrie) en matière de reporting ESG et de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/environnement/climat/ce-que-la-resolution-historique-de-lonu-sur-le-climat-implique-pour-les-entreprises",
-      "date": "2026-05-25"
-    },
-    {
       "id": "a19c4282473d",
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "« Cet épisode de chaleur est un événement sans précédent », prévient le climatologue Christophe Cassou",
-      "resume": "L'article souligne l'intensification des aléas climatiques en France, ce qui expose ABC à des risques opérationnels accrus sur ses 3 000+ sites clients (perturbations des prestations, adaptation des processus de nettoyage, etc.).",
+      "resume": "Cet article souligne l'intensification des aléas climatiques en France, un risque opérationnel majeur pour ABC qui intervient sur 3 000+ sites clients, pouvant impacter la continuité des services et les exigences clients en matière de résilience.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/05/25/christophe-cassou-climatologue-cet-episode-de-chaleur-est-un-evenement-sans-precedent-il-a-de-l-ordre-d-une-chance-sur-1-000-de-survenir-dans-l-annee_6693675_3244.html",
@@ -138,21 +171,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Comment le consensus scientifique sur l’influence majeure des humains sur le climat a été établi",
-      "resume": "Cet article contextualise l'origine anthropique du changement climatique, renforçant la légitimité des enjeux climatiques pour ABC et ses clients, sans imposer d'action directe immédiate.",
+      "resume": "Cet article rappelle le consensus scientifique sur l'origine humaine du réchauffement climatique, un contexte utile pour justifier les actions de décarbonation et de reporting ESG d'ABC auprès de ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/les-decodeurs/article/2026/05/25/comment-le-consensus-scientifique-sur-l-influence-majeure-des-humains-sur-le-climat-a-ete-etabli_6693669_4355770.html",
-      "date": "2026-05-25"
-    },
-    {
-      "id": "1b300a70abb8",
-      "source": "Le Monde Planète",
-      "categorie": "Déchets",
-      "titre": "La filière des pompes à chaleur parie sur un rebond",
-      "resume": "L'article souligne une reprise du marché des pompes à chaleur, liée à l'électrification des logements et à la hausse des prix du gaz, ce qui pourrait influencer les choix énergétiques des clients d'ABC et leurs exigences en matière de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/economie/article/2026/05/25/la-filiere-des-pompes-a-chaleur-parie-sur-un-rebond_6693661_3234.html",
       "date": "2026-05-25"
     }
   ],
@@ -567,5 +589,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **projet de loi portant diverses dispositions d’adaptation au droit de l’UE en matière environnementale (N°2518)** pourraient impacter les stratégies RSE, notamment sur les enjeux agricoles durables et la transposition des directives européennes (économie circulaire, énergie, climat). Aucun texte adopté ne semble directement lié à ces priorités."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **projet de loi-cadre relatif au développement des transports (N°2740)** et le **projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** pourraient impacter les politiques énergétiques et climatiques. Le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** est également pertinent pour le reporting RSE et la conformité réglementaire."
 }
