@@ -1,7 +1,7 @@
 {
   "date": "2026-05-27",
-  "generated_at": "09:02",
-  "elapsed_seconds": 216,
+  "generated_at": "14:41",
+  "elapsed_seconds": 195,
   "errors": [],
   "stats": {
     "jo_analyses": 18,
@@ -9,7 +9,7 @@
     "depts_restriction": 13
   },
   "pipeline_meta": {
-    "run_at": "2026-05-27T09:02:09",
+    "run_at": "2026-05-27T14:41:04",
     "sources": {
       "JORF": 0,
       "RSS": 15,
@@ -20,7 +20,7 @@
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 66,
-    "llm_seconds": 66.3
+    "llm_seconds": 67.7
   },
   "items": [
     {
@@ -28,10 +28,32 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "La France favorable à la trajectoire européenne de verdissement des flottes d'entreprises",
-      "resume": "La France soutient la trajectoire européenne de décarbonation des flottes d'entreprises, ce qui pourrait impacter les obligations réglementaires d'ABC en matière de mobilité durable (électrification, véhicules propres) et ses engagements clients dans les secteurs nucléaire, santé ou industrie.",
-      "pourquoi": "L'article aborde directement la mobilité durable (flottes d'entreprises) et son alignement avec les politiques européennes, un enjeu clé pour ABC qui gère une flotte de véhicules (scope 1) et doit répondre aux exigences carbone de ses clients. Bien que non encore contraignant, ce signal politique pourrait évoluer vers des obligations réglementaires dans les 12-24 mois.",
+      "resume": "La France soutient la trajectoire européenne de verdissement des flottes d'entreprises, ce qui pourrait impacter les obligations réglementaires d'ABC en matière de décarbonation de sa flotte de véhicules (scope 1) et de reporting ESG.",
+      "pourquoi": "L'article traite de la mobilité durable et de la réglementation européenne sur les flottes d'entreprises, un enjeu direct pour ABC qui gère une flotte de véhicules. Bien que l'article ne mentionne pas explicitement les obligations pour les prestataires de services, la trajectoire européenne pourrait influencer les exigences clients (nucléaire, santé, industrie) et les réglementations nationales (ex : ZFE, électrification).",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/la-france-favorable-la-trajectoire-europeenne-de-verdissement-des-flottes-dentreprises-2",
+      "date": "2026-05-27"
+    },
+    {
+      "id": "12f2c0ba20e1",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Autopartage : un million d'utilisateurs, mais la dépendance à la voiture freine l'essor",
+      "resume": "L'autopartage est une solution de mobilité durable qui pourrait intéresser ABC pour réduire l'empreinte carbone de sa flotte de véhicules (scope 1), mais son développement est freiné par des dépendances structurelles à la voiture.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/bilan-autopartage-pratique-connue-freins-adoption-48049.php4#xtor=RSS-6",
+      "date": "2026-05-27"
+    },
+    {
+      "id": "111c79b50161",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Canicule : ces villes dont l'architecture apporte déjà des solutions à la chaleur",
+      "resume": "L'article illustre des solutions d'adaptation climatique (architecture passive, ventilation naturelle) qui pourraient inspirer ABC pour optimiser les conditions thermiques des sites clients (bureaux, hôpitaux, etc.) et réduire les besoins en climatisation, aligné sur les enjeux de décarbonation et de résilience.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Canicule-ces-villes-dont-l-architecture-apporte-deja-des-solutions-a-la-chaleur",
       "date": "2026-05-27"
     },
     {
@@ -39,21 +61,65 @@
       "source": "Novethic",
       "categorie": "Énergie",
       "titre": "EDF, Leclerc, Stellantis, GravitHy… : en pleine crise, Emmanuel Macron réunit \"l’équipe de France\" de l’électrification",
-      "resume": "L'article souligne l'accélération de la mobilité électrique en France, avec un focus sur les acteurs industriels et énergétiques, ce qui impacte indirectement ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et la transition de sa flotte de véhicules.",
+      "resume": "L'article souligne l'accélération de la politique nationale d'électrification des usages en France, ce qui pourrait impacter les exigences carbone des clients d'ABC (notamment industriels et grands groupes) et influencer les stratégies de décarbonation de la flotte de véhicules d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/transition-energetique/edf-leclerc-stellantis-gravithy-en-pleine-crise-emmanuel-macron-reunit-lequipe-de-france-de-lelectrification",
       "date": "2026-05-27"
     },
     {
-      "id": "e49633fd8b81",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Canicule : comment réduire la température chez soi, même sans climatisation",
-      "resume": "L'article aborde des solutions pour réduire la température intérieure sans climatisation, ce qui peut inspirer des bonnes pratiques pour les sites clients d'ABC (bureaux, locaux tertiaires) et limiter leur consommation énergétique, en lien avec les enjeux d'efficacité énergétique et de décarbonation.",
+      "id": "2261b47fdfe3",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Sur l’évolution du capital de NW, « tout est ouvert »  [Jean-Christophe Kerdelhué]",
+      "resume": "L'article évoque un investissement de 1,2 Md€ dans l'électrification des flottes et infrastructures de recharge, un enjeu clé pour la décarbonation de la flotte de véhicules d'ABC (scope 1) et la mobilité durable.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/des-solutions-pour-la-planete/article/2026/05/27/canicule-comment-reduire-la-temperature-chez-soi-meme-sans-climatisation_5480480_5444641.html",
+      "url": "https://www.greenunivers.com/2026/05/sur-levolution-du-capital-de-nw-tout-est-ouvert-jean-christophe-kerdelhue-424790/",
+      "date": "2026-05-27"
+    },
+    {
+      "id": "33cc0c6c50c0",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "BBR Énergie se dote d’une nouvelle usine pour le stockage d’électricité",
+      "resume": "L'article aborde le développement d'une usine de stockage d'électricité par BBR Énergie, un acteur du secteur énergétique, ce qui pourrait influencer les stratégies de décarbonation et d'approvisionnement en énergies renouvelables des entreprises clientes d'ABC, notamment dans le cadre de leur reporting ESG et de leurs objectifs de réduction des émissions scope 2.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/bbr-energie-se-dote-dune-nouvelle-usine-pour-le-stockage-delectricite-424711/",
+      "date": "2026-05-27"
+    },
+    {
+      "id": "2257545ca6ea",
+      "source": "Le Monde Planète",
+      "categorie": "Déchets",
+      "titre": "Bac pro 2026 : les chefs d’établissement « bricolent » pour organiser les épreuves malgré la chaleur",
+      "resume": "L'article met en lumière l'inadaptation des bâtiments aux vagues de chaleur, un risque climatique opérationnel pouvant impacter les sites clients d'ABC (ex : perturbation des prestations en période de canicule).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/societe/article/2026/05/27/bac-pro-2026-les-chefs-d-etablissement-bricolent-pour-organiser-les-epreuves-malgre-la-chaleur_6694205_3224.html",
+      "date": "2026-05-27"
+    },
+    {
+      "id": "22af8ce0a518",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "McDonald’s to Miss 2030 Value Chain Decarbonization Goal, Remains Committed to Net Zero by 2050",
+      "resume": "L'article illustre l'écart entre les objectifs de décarbonation des entreprises et leur réalisation effective, un enjeu critique pour ABC dans le cadre de ses engagements clients (scope 3) et de la CSRD.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/mcdonalds-to-miss-2030-value-chain-decarbonization-goal-remains-committed-to-net-zero-by-2050/?utm_source=rss&utm_medium=rss&utm_campaign=mcdonalds-to-miss-2030-value-chain-decarbonization-goal-remains-committed-to-net-zero-by-2050",
+      "date": "2026-05-27"
+    },
+    {
+      "id": "b61b325c50a8",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "IFRS, GRI Expand Collaboration to Align Sustainability Reporting Standards",
+      "resume": "L'article annonce l'alignement des normes de reporting IFRS et GRI pour les entreprises, ce qui impactera les exigences de reporting extra-financier (CSRD/ESRS) des clients d'ABC et donc ses propres obligations de transparence en tant que prestataire.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/ifrs-gri-expand-collaboration-to-align-sustainability-reporting-standards/?utm_source=rss&utm_medium=rss&utm_campaign=ifrs-gri-expand-collaboration-to-align-sustainability-reporting-standards",
       "date": "2026-05-27"
     },
     {
@@ -61,7 +127,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Consigne pour recyclage : Emmanuel Macron appelle à la concertation",
-      "resume": "L'article aborde la possible extension de la consigne pour recyclage des bouteilles en plastique en France, ce qui pourrait impacter la gestion des déchets des prestations de propreté/FM d'ABC chez ses clients, notamment via de nouvelles obligations de tri ou de collecte.",
+      "resume": "La concertation sur la consigne des bouteilles en plastique pourrait impacter les obligations de tri et de recyclage des déchets pour ABC, notamment via les REP (Responsabilité Élargie du Producteur) et les éco-organismes, avec un risque de complexification des flux de déchets sur les sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/consigne-pour-recyclage-emmanuel-macron-appelle-la-concertation-2",
@@ -79,69 +145,14 @@
       "date": "2026-05-26"
     },
     {
-      "id": "6589c2ea8342",
-      "source": "Novethic",
-      "categorie": "Déchets",
-      "titre": "Omnibus automobile, émissions de CO2… le véhicule électrique slalome entre les obstacles",
-      "resume": "Omnibus automobile, émissions de CO2… le véhicule électrique slalome entre les obstacles",
-      "pourquoi": "Mention de Omnibus.",
-      "criticite": 3,
-      "url": "https://www.novethic.fr/economie-et-social/business-model-en-transition/omnibus-automobile-emissions-co2-vehicule-electrique-slalome-obstacles",
-      "date": "2026-05-26"
-    },
-    {
       "id": "cd5c4b22a7f6",
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Électrification : Emmanuel Macron sonne la mobilisation générale",
-      "resume": "L'article annonce une mobilisation nationale pour l'électrification, incluant les flottes professionnelles, ce qui pourrait impacter la stratégie de décarbonation de la flotte véhicules d'ABC (scope 1) et ses obligations futures en matière de mobilité durable.",
-      "pourquoi": "Le sujet touche directement à la mobilité durable et à l'électrification des flottes professionnelles, un enjeu clé pour ABC dans le cadre de sa stratégie de décarbonation (scope 1) et de conformité aux futures réglementations (ZFE, obligations d'électrification).",
+      "resume": "L'article annonce une mobilisation nationale pour l'électrification, incluant la flotte de véhicules, ce qui impacte directement la stratégie de décarbonation de la flotte d'ABC (scope 1) et ses engagements net zéro.",
+      "pourquoi": "L'électrification des flottes est un levier clé pour ABC dans le cadre de sa stratégie de décarbonation (scope 1) et de conformité aux exigences carbone de ses clients (nucléaire, santé, industrie). L'initiative nationale pourrait accélérer les obligations réglementaires ou incitations pour les entreprises, notamment via des ZFE ou des aides à l'électrification.",
       "criticite": 2,
       "url": "https://www.actu-environnement.com/ae/news/evenement-equipe-france-electrification-macron-48047.php4#xtor=RSS-6",
-      "date": "2026-05-26"
-    },
-    {
-      "id": "e7eef5a3bc8e",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Lire notre dossier d'actu \"Électrification : le grand basculement énergétique\"",
-      "resume": "L'article aborde l'électrification des flottes comme réponse aux tensions énergétiques, un enjeu direct pour la flotte de véhicules d'ABC (scope 1) et les exigences carbone de ses clients.",
-      "pourquoi": "L'électrification des flottes est un sujet opérationnel pour ABC, impactant sa stratégie de décarbonation (scope 1) et ses relations clients (exigences carbone dans les secteurs nucléaire, santé, industrie). Le contexte réglementaire et marché (ZFE, électrification) est pertinent pour un Responsable Environnement/Climat.",
-      "criticite": 2,
-      "url": "https://www.actu-environnement.com/dossier-actu/plan-electrification-batiment-transport-indsutrie-PAC-126#xtor=RSS-6",
-      "date": "2026-05-26"
-    },
-    {
-      "id": "906ad939649a",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "Photovoltaïque : l'Europe encore trop frileuse sur la réindustrialisation",
-      "resume": "L'article souligne les retards de l'UE dans la réindustrialisation et la souveraineté énergétique, un contexte qui pourrait influencer les politiques énergétiques et les attentes clients en matière de décarbonation pour les prestataires de services comme ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/industrie-photovoltaique-europe-france-fabrication-nzia-iaa-production-locale-48044.php4#xtor=RSS-6",
-      "date": "2026-05-26"
-    },
-    {
-      "id": "39a87f51c1b7",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "La phrase du jour : \"Cette ligne THT est nécessaire pour donner de la visibilité aux industriels de Fos-sur-Mer\"",
-      "resume": "L'article souligne l'importance des infrastructures électriques (ligne THT) pour soutenir l'électrification industrielle, notamment dans un pôle comme Fos-sur-Mer, ce qui pourrait impacter la transition énergétique des clients d'ABC et leurs exigences en matière de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/dit-aujourdhui/1806.html#xtor=RSS-6",
-      "date": "2026-05-26"
-    },
-    {
-      "id": "c4414c96bd38",
-      "source": "Reporterre",
-      "categorie": "Eau",
-      "titre": "Jusqu'à 39 °C attendus : la vague de chaleur s'intensifie et s'étend",
-      "resume": "Cet article met en lumière l'intensification des vagues de chaleur précoces en France, un risque climatique opérationnel pouvant impacter la prestation de services de ABC sur 3 000+ sites clients (ex. : conditions de travail, adaptation des équipements, perturbations logistiques).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Jusqu-a-39-oC-attendus-la-vague-de-chaleur-s-intensifie-et-s-etend",
       "date": "2026-05-26"
     },
     {
@@ -149,10 +160,21 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Electrification : avalanche d’engagements à l’Elysée",
-      "resume": "L'article souligne l'accélération des engagements publics et privés en faveur de l'électrification des usages en France, ce qui impacte directement la stratégie de décarbonation de la flotte de véhicules d'ABC (scope 1) et les attentes clients en matière de mobilité durable.",
+      "resume": "L'article souligne l'accélération des engagements publics et privés en faveur de l'électrification des usages en France, ce qui impacte directement la stratégie de décarbonation de la flotte de véhicules d'ABC et ses obligations réglementaires en matière de mobilité durable.",
+      "pourquoi": "L'électrification des flottes est un enjeu clé pour ABC (scope 1, réglementations ZFE, trajectoires nationales de décarbonation). L'article mentionne explicitement des engagements publics et privés dans ce domaine, ce qui influence les obligations et opportunités pour l'entreprise.",
+      "criticite": 2,
+      "url": "https://www.greenunivers.com/2026/05/electrification-avalanche-dengagements-a-lelysee-424737/",
+      "date": "2026-05-26"
+    },
+    {
+      "id": "c4414c96bd38",
+      "source": "Reporterre",
+      "categorie": "Eau",
+      "titre": "Jusqu'à 39 °C attendus : la vague de chaleur s'intensifie et s'étend",
+      "resume": "L'article souligne l'intensification des vagues de chaleur précoces en France, ce qui pourrait impacter la résilience opérationnelle d'ABC sur ses 3 000+ sites clients (risques climatiques indirects) et renforcer les exigences de ses clients en matière de gestion des risques environnementaux.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/electrification-avalanche-dengagements-a-lelysee-424737/",
+      "url": "https://reporterre.net/Jusqu-a-39-oC-attendus-la-vague-de-chaleur-s-intensifie-et-s-etend",
       "date": "2026-05-26"
     },
     {
@@ -160,32 +182,10 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Espagne et France dominent l’enchère sur la chaleur industrielle",
-      "resume": "L'article met en lumière une opportunité de financement européen pour la décarbonation de la chaleur industrielle, un enjeu potentiellement aligné avec les efforts de réduction des émissions de scope 1/2 d'ABC via ses prestations de propreté/FM chez des clients industriels.",
+      "resume": "L'article met en lumière une opportunité stratégique pour ABC dans le domaine de la décarbonation de la chaleur industrielle, un enjeu lié à la transition énergétique des clients industriels (scope 3) et à la compétitivité des solutions de services.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/lespagne-et-la-france-dominent-lenchere-sur-la-chaleur-industrielle-424671/",
-      "date": "2026-05-26"
-    },
-    {
-      "id": "c668644f3963",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Comment le réseau électrique veut se protéger des prix négatifs",
-      "resume": "L'article aborde la surabondance d'électricité en France et les risques de prix négatifs, ce qui pourrait impacter les coûts énergétiques des prestations de propreté/FM d'ABC chez ses clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/comment-le-reseau-electrique-veut-se-proteger-des-prix-negatifs-424663/",
-      "date": "2026-05-26"
-    },
-    {
-      "id": "1692d60bbf34",
-      "source": "The Guardian Environment",
-      "categorie": "Déchets",
-      "titre": "Seven heat-related deaths in France as May records set in several countries",
-      "resume": "L'article souligne l'augmentation des événements climatiques extrêmes (canicules précoces) en Europe, ce qui pourrait impacter la résilience des sites clients d'ABC et leurs exigences en matière de gestion des risques climatiques opérationnels.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/world/2026/may/26/deaths-france-linked-record-high-temperatures",
       "date": "2026-05-26"
     }
   ],
@@ -991,7 +991,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucune des publications du Journal Officiel du 27 mai 2026 ne traite directement de sujets environnementaux, climatiques ou RSE pertinents pour un Responsable Environnement/Climat d'une grande entreprise de services.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1025,6 +1025,12 @@
     {
       "source": "AN Projets de loi",
       "items": [
+        {
+          "titre": "Projet de loi habilitant le Gouvernement à prendre, par ordonnances, les adaptations rendues nécessaires par l’entrée en application des règlements (UE) n°s 2024/1347, 2024/1348, 2024/1349, 2024/1350, 2024/1351, 2024/1352, 2024/1356, 2024/1358, 2024/1359 du Parlement européen et du Conseil du 14 mai 2024, et les dispositions nécessaires à la transposition de la directive (UE) 2024/1346 du Parlement européen et &#13;du Conseil du 14 mai 2024 - N° 2820",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54094",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54094",
+          "date": "2026-04-08"
+        },
         {
           "titre": "Projet de loi portant transposition de l’avenant n°3 du 25 février 2026 au protocole d’accord du 10 novembre 2023 relatif à l’assurance chômage - N° 2805",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53981",
@@ -1186,12 +1192,6 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/approbation_accord_Gouvernement_Agence_spatiale_europeenne_installations_France",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/approbation_accord_Gouvernement_Agence_spatiale_europeenne_installations_France",
           "date": "2025-12-02"
-        },
-        {
-          "titre": "Projet de loi de finances de fin de gestion pour 2025 - N° 2135",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_de_finances_de_fin_de_gestion_pour_2025",
-          "date": "2025-11-10"
         }
       ]
     },
@@ -1259,6 +1259,12 @@
           "date": "2025-05-19"
         },
         {
+          "titre": "Texte adopté N° 273",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L16N49868",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L16N49868",
+          "date": "2024-04-24"
+        },
+        {
           "titre": "Texte adopté N° 271",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53315",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53315",
@@ -1323,15 +1329,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interdire_sucres_ajoutes_nourrissons_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interdire_sucres_ajoutes_nourrissons_17e",
           "date": "2026-02-04"
-        },
-        {
-          "titre": "Texte adopté N° 253",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51175",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51175",
-          "date": "2024-12-31"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations réglementaires européennes dans les domaines clés de l'énergie, de l'environnement et des transports, impactant potentiellement les obligations de reporting RSE et les stratégies climat des entreprises."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques RSE, notamment via des mesures sur l’agriculture durable, la transition énergétique ou la gestion des déchets. Le **projet de loi-cadre relatif au développement des transports (N°2740)** pourrait aussi influencer les stratégies de mobilité bas-carbone des entreprises."
 }
