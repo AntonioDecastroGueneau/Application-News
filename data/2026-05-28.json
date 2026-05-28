@@ -1,26 +1,26 @@
 {
   "date": "2026-05-28",
-  "generated_at": "09:45",
-  "elapsed_seconds": 243,
+  "generated_at": "14:51",
+  "elapsed_seconds": 184,
   "errors": [],
   "stats": {
     "jo_analyses": 11,
     "jo_retenus": 0,
-    "depts_restriction": 14
+    "depts_restriction": 17
   },
   "pipeline_meta": {
-    "run_at": "2026-05-28T09:45:53",
+    "run_at": "2026-05-28T14:51:35",
     "sources": {
       "JORF": 0,
-      "RSS": 18,
-      "VigiEau": 14,
+      "RSS": 13,
+      "VigiEau": 17,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 59,
-    "llm_seconds": 59.5
+    "llm_calls": 53,
+    "llm_seconds": 54.8
   },
   "items": [
     {
@@ -35,14 +35,14 @@
       "date": "2026-05-28"
     },
     {
-      "id": "0a9602ba67a9",
-      "source": "Actuel HSE",
-      "categorie": "ICPE",
-      "titre": "La comptabilisation des émissions de GES des prestations de transport dispose désormais d'une méthode harmonisée",
-      "resume": "La norme EN ISO 14083 harmonise le calcul des émissions GES pour les prestations de transport, applicable à partir de décembre 2030. ABC, en tant que prestataire de services incluant des déplacements clients, devra intégrer cette méthode dans son reporting carbone (scope 3).",
-      "pourquoi": "Le sujet touche directement au reporting ESG (CSRD/ESRS) et à la comptabilisation des émissions indirectes (scope 3) liées aux prestations de transport, un enjeu clé pour ABC dans le cadre de ses obligations de décarbonation et de reporting extra-financier. La méthode harmonisée impacte les processus de calcul et de traçabilité des émissions pour les clients d'ABC.",
-      "criticite": 2,
-      "url": "https://www.actuel-hse.fr/content/la-comptabilisation-des-emissions-de-ges-des-prestations-de-transport-dispose-desormais-2",
+      "id": "440939e1c268",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Fournaise sous les toits : « La climatisation est vraiment une solution à éviter »",
+      "resume": "L'article souligne l'importance de solutions passives (isolation, végétalisation) pour limiter la dépendance à la climatisation, ce qui peut influencer les attentes clients d'ABC en matière de performance énergétique des bâtiments tertiaires.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Fournaise-sous-les-toits-La-climatisation-est-vraiment-une-solution-a-eviter",
       "date": "2026-05-28"
     },
     {
@@ -50,7 +50,7 @@
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "Températures extrêmes : l'année 2027 pourrait être « une année record »",
-      "resume": "L'article souligne une tendance aux températures records d'ici 2030, ce qui pourrait aggraver les risques climatiques opérationnels pour ABC (aléas sur 3 000+ sites clients) et renforcer les exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "resume": "L'article souligne une tendance climatique mondiale avec des températures records attendues d'ici 2030, ce qui pourrait impacter les aléas climatiques sur les sites clients d'ABC (3 000+ sites) et renforcer les exigences carbone des clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Temperatures-extremes-l-annee-2027-pourrait-etre-une-annee-record",
@@ -61,7 +61,7 @@
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Le \"congé climatique\", un nouveau droit face à l’amplification des risques météorologiques au travail",
-      "resume": "L'article aborde l'émergence d'un 'congé climatique' en réponse aux risques météorologiques accrus, ce qui pourrait impacter les obligations de sécurité et de conditions de travail des employés d'ABC intervenant sur site client.",
+      "resume": "L'article aborde l'émergence du 'congé climatique' comme réponse aux risques météorologiques accrus (canicules) pour les travailleurs, un enjeu indirect mais croissant pour ABC dans le cadre de la gestion des risques opérationnels et de la responsabilité sociale des employés.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/climat/conge-climatique-nouveau-droit-face-amplification-risques-meteorologiques-travail",
@@ -72,21 +72,10 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Le gouvernement veut confier MaPrimeRénov aux collectivités",
-      "resume": "L'article pourrait impacter indirectement ABC via une potentielle décentralisation de MaPrimeRénov, influençant les politiques locales de rénovation énergétique des bâtiments tertiaires (clients d'ABC) et leurs exigences en matière de décarbonation.",
+      "resume": "L'article pourrait impacter ABC indirectement via les exigences carbone de ses clients (secteurs nucléaire, santé, industrie) si les collectivités deviennent des acteurs clés de la rénovation énergétique, influençant les politiques locales de décarbonation et les appels d'offres.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/le-gouvernement-veut-confier-maprimerenov-aux-collectivites-424916/",
-      "date": "2026-05-28"
-    },
-    {
-      "id": "c8f9018518f7",
-      "source": "Le Monde Planète",
-      "categorie": "Déchets",
-      "titre": "« Faire du climat un fusible budgétaire, c’est jouer avec le feu »",
-      "resume": "L'article souligne les reculs politiques en matière de zones à faibles émissions (ZFE) en France, ce qui pourrait impacter les obligations réglementaires liées à la mobilité durable pour les flottes de véhicules d'ABC, notamment dans le cadre des ZFE en vigueur ou à venir.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/05/28/faire-du-climat-un-fusible-budgetaire-c-est-jouer-avec-le-feu_6694421_3232.html",
       "date": "2026-05-28"
     },
     {
@@ -94,32 +83,32 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Canicule : le gouvernement critiqué pour son manque de réaction et son impréparation aux fortes chaleurs",
-      "resume": "L'article souligne l'enjeu des aléas climatiques (canicules) en France, qui impactent directement les activités de prestation de services de ABC sur 3 000+ sites clients, avec des risques opérationnels accrus (santé des employés, perturbations logistiques).",
+      "resume": "L'article souligne l'urgence d'adaptation au changement climatique en France, un enjeu qui impacte indirectement ABC via les risques opérationnels sur ses 3 000+ sites clients et les exigences carbone croissantes de ses clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/05/28/canicule-le-gouvernement-critique-pour-son-manque-de-reaction-et-son-impreparation-face-aux-fortes-chaleurs_6694344_3244.html",
       "date": "2026-05-28"
     },
     {
-      "id": "6664ed27ce7b",
-      "source": "The Guardian Environment",
-      "categorie": "Environnement",
-      "titre": "World almost certain to endure record hot year by 2030, UN warns",
-      "resume": "L'article souligne l'accélération des aléas climatiques en Europe et dans le monde, augmentant les risques opérationnels pour les sites clients d'ABC (3 000+ sites) et renforçant les exigences carbone des secteurs clients (nucléaire, santé, industrie).",
+      "id": "ce0f17ad92a9",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "California’s SB 253 Just Made Your Carbon Data a CFO Problem",
+      "resume": "L'article souligne l'importance de la qualité et de l'auditabilité des données carbone pour les entreprises, avec un impact potentiel sur la gouvernance (CFO) et les processus de reporting, ce qui est pertinent pour ABC dans le cadre de ses obligations CSRD et de son reporting extra-financier.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.theguardian.com/environment/2026/may/28/climate-impacts-spiralling-more-record-global-heat-warns-un",
+      "url": "https://www.esgtoday.com/californias-sb-253-just-made-your-carbon-data-a-cfo-problem/?utm_source=rss&utm_medium=rss&utm_campaign=californias-sb-253-just-made-your-carbon-data-a-cfo-problem",
       "date": "2026-05-28"
     },
     {
-      "id": "bb6bae4d8d3d",
-      "source": "Les Echos Environnement",
-      "categorie": "Énergie",
-      "titre": "« Il faut un rapprochement entre start-up » : Carbonfact, spécialiste de la mesure carbone dans la mode, absorbe son rival allemand - Les Echos",
-      "resume": "L'article illustre la consolidation du marché des outils de mesure carbone (scope 3) pour les entreprises, un enjeu indirect pour ABC dans le cadre de ses obligations CSRD et de reporting extra-financier.",
+      "id": "0a9602ba67a9",
+      "source": "Actuel HSE",
+      "categorie": "ICPE",
+      "titre": "La comptabilisation des émissions de GES des prestations de transport dispose désormais d'une méthode harmonisée",
+      "resume": "La méthode harmonisée EN ISO 14083 (applicable à partir de décembre 2030) standardise le calcul des émissions GES pour les prestations de transport, ce qui impacte indirectement ABC dans son reporting scope 3 (flotte clients et sous-traitance).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPa1kwQlEtdENPUlRvX29lSkpGZlhJdU0zaS1XOVJZRHJ0b2N5aWw0TjZXMFU0VFlKQkFiS2o3MFdhaXRyQ1I4TFJWNll5QkpLYkxnRWdWSDBINTBQRi0xYzFEd2RDVjV0QXVKb1V6UzFWN185WUxXLUQtZldDUGhOOGNjV3FiVkhSMlhhR2RYXy1DQVZVTGo4aFFFSDN5Zy1HTzFiUEF3MW9PbWFfU1hWNVI3a1hKSmw4Sy14U0dMcEplX2xoZDluMi04cDVhZTlzTXhrSUoyMkFZWS1IUmV2MnhyRHRINE1pNTRyVWxDYzhNOENIbmlPanp0ZE5kMm5H?oc=5",
+      "url": "https://www.actuel-hse.fr/content/la-comptabilisation-des-emissions-de-ges-des-prestations-de-transport-dispose-desormais-2",
       "date": "2026-05-28"
     },
     {
@@ -127,32 +116,32 @@
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Chaleur au travail : le rappel du décret de 2025, et les conseils de l'INRS",
-      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures préventives pour les salariés exposés, ce qui peut impacter les conditions de travail des équipes de propreté/FM d'ABC chez ses clients, notamment en période estivale.",
+      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures préventives pour les salariés exposés à des températures élevées, ce qui peut impacter les conditions de travail des équipes de nettoyage chez les clients d'ABC, notamment dans les secteurs sensibles (industrie, santé).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-le-rappel-du-decret-de-2025-et-les-conseils-de-linrs-0",
       "date": "2026-05-28"
     },
     {
-      "id": "12f2c0ba20e1",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "Autopartage : un million d'utilisateurs, mais la dépendance à la voiture freine l'essor",
-      "resume": "L'autopartage est présenté comme une solution écologique et financière, mais son essor reste limité par la dépendance à la voiture. Cela pourrait impacter la stratégie de mobilité durable d'ABC, notamment pour la flotte de véhicules (scope 1).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/bilan-autopartage-pratique-connue-freins-adoption-48049.php4#xtor=RSS-6",
-      "date": "2026-05-27"
-    },
-    {
       "id": "ea44714462ed",
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Canicule : la France touchée par un pic de pollution à l'ozone",
-      "resume": "Les épisodes de canicule et pics de pollution à l'ozone pourraient impacter la santé des employés en extérieur et les activités de nettoyage sur les sites clients, nécessitant des adaptations opérationnelles (horaires, équipements).",
+      "resume": "Les pics de pollution à l'ozone, aggravés par les canicules précoces, pourraient impacter les activités de nettoyage en extérieur (ex. : santé des équipes, contraintes réglementaires locales) et renforcer les exigences clients en matière de qualité de l'air ou de mobilité durable.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Canicule-la-France-touchee-par-un-pic-de-pollution-a-l-ozone",
+      "date": "2026-05-27"
+    },
+    {
+      "id": "969a3b8575ee",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Repowering éolien : 4 à 6 chantiers par an chez Engie jusqu’en 2030",
+      "resume": "L'article illustre une tendance sectorielle (repowering éolien) qui pourrait influencer les attentes clients d'ABC en matière de gestion des déchets et d'efficacité énergétique, notamment pour les sites tertiaires ou industriels partenaires.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/repowering-eolien-4-a-6-chantiers-par-an-chez-engie-jusquen-2030-424850/",
       "date": "2026-05-27"
     },
     {
@@ -160,65 +149,21 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Comment Octopus se projette en fabricant de pompes à chaleur",
-      "resume": "L'investissement d'Octopus Energy dans une usine de pompes à chaleur en France pourrait influencer la demande des clients d'ABC (notamment industriels ou tertiaires) pour des solutions de chauffage décarboné, impactant indirectement les enjeux de décarbonation des prestations et de reporting CSRD.",
+      "resume": "L'investissement d'Octopus Energy dans une usine de pompes à chaleur en France pourrait influencer la demande des clients d'ABC (secteurs nucléaire, santé, industrie) pour des solutions de chauffage décarboné, impactant indirectement les enjeux de décarbonation et de reporting CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/comment-octopus-se-projette-en-fabricant-de-pompes-a-chaleur-424804/",
       "date": "2026-05-27"
     },
     {
-      "id": "355d8bc9e434",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "Dans les EnR électriques françaises, « nous pouvons être un consolidateur » [Patrick Monino, Plenitude]",
-      "resume": "L'article aborde la stratégie de Plenitude (Eni) pour consolider sa position dans les énergies renouvelables en France, ce qui pourrait influencer les attentes des clients d'ABC en matière de décarbonation et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/dans-les-enr-electriques-francaises-nous-pouvons-etre-un-consolidateur-patrick-monino-plenitude-424716/",
-      "date": "2026-05-27"
-    },
-    {
-      "id": "2261b47fdfe3",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Sur l’évolution du capital de NW, « tout est ouvert »  [Jean-Christophe Kerdelhué]",
-      "resume": "L'article évoque un investissement de 1,2 Md€ dans l'électrification des flottes et bornes de recharge par NW, ce qui pourrait impacter la stratégie de mobilité durable d'ABC (électrification de sa flotte ou adaptation aux exigences clients en ZFE).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/sur-levolution-du-capital-de-nw-tout-est-ouvert-jean-christophe-kerdelhue-424790/",
-      "date": "2026-05-27"
-    },
-    {
-      "id": "33cc0c6c50c0",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "BBR Énergie se dote d’une nouvelle usine pour le stockage d’électricité",
-      "resume": "Cette initiative de BBR Énergie dans le stockage d'électricité pourrait influencer les stratégies énergétiques des clients d'ABC (secteurs nucléaire, santé, industrie) en accélérant la transition vers des énergies renouvelables et des solutions bas-carbone, impactant indirectement les enjeux de décarbonation et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/bbr-energie-se-dote-dune-nouvelle-usine-pour-le-stockage-delectricite-424711/",
-      "date": "2026-05-27"
-    },
-    {
-      "id": "22af8ce0a518",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "McDonald’s to Miss 2030 Value Chain Decarbonization Goal, Remains Committed to Net Zero by 2050",
-      "resume": "L'article illustre un exemple concret de difficulté à décarboner la chaîne de valeur (scope 3), un enjeu clé pour ABC dans le cadre de ses engagements clients (nucléaire, santé, industrie) et de la CSRD.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/mcdonalds-to-miss-2030-value-chain-decarbonization-goal-remains-committed-to-net-zero-by-2050/?utm_source=rss&utm_medium=rss&utm_campaign=mcdonalds-to-miss-2030-value-chain-decarbonization-goal-remains-committed-to-net-zero-by-2050",
-      "date": "2026-05-27"
-    },
-    {
-      "id": "b61b325c50a8",
+      "id": "45f7431b2055",
       "source": "ESG Today",
       "categorie": "Déchets",
-      "titre": "IFRS, GRI Expand Collaboration to Align Sustainability Reporting Standards",
-      "resume": "L'article annonce l'alignement des normes IFRS et GRI pour le reporting extra-financier, ce qui impactera les exigences de reporting ESG (CSRD/ESRS) pour ABC dans le cadre de ses obligations clients et réglementaires.",
+      "titre": "IFS Launches New Emissions Measurement and Reporting Solution for Industrial Companies",
+      "resume": "IFS Zero propose une solution de mesure et reporting des émissions pour les entreprises industrielles, utile pour ABC dans le cadre de la décarbonation de sa flotte de véhicules (scope 1) et du reporting CSRD/ESRS.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.esgtoday.com/ifrs-gri-expand-collaboration-to-align-sustainability-reporting-standards/?utm_source=rss&utm_medium=rss&utm_campaign=ifrs-gri-expand-collaboration-to-align-sustainability-reporting-standards",
+      "url": "https://www.esgtoday.com/ifs-launches-new-emissions-measurement-and-reporting-solution-for-industrial-companies/?utm_source=rss&utm_medium=rss&utm_campaign=ifs-launches-new-emissions-measurement-and-reporting-solution-for-industrial-companies",
       "date": "2026-05-27"
     }
   ],
@@ -236,6 +181,11 @@
     {
       "dept_code": "16",
       "dept_nom": "Charente",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "08",
+      "dept_nom": "Ardennes",
       "niveau": "alerte renforcée"
     },
     {
@@ -281,6 +231,16 @@
     {
       "dept_code": "55",
       "dept_nom": "Meuse",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "23",
+      "dept_nom": "Creuse",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "89",
+      "dept_nom": "Yonne",
       "niveau": "vigilance"
     },
     {
@@ -939,7 +899,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des textes publiés au JO du 28 mai 2026 n'est directement pertinent pour un Responsable Environnement/Climat d'une grande entreprise de services, car ils concernent principalement la pêche, les accords internationaux, des nominations institutionnelles, des élections professionnelles ou des licences ferroviaires.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -973,6 +933,12 @@
     {
       "source": "AN Projets de loi",
       "items": [
+        {
+          "titre": "Projet de loi portant approbation des comptes de la sécurité sociale de l’année 2025 - N° 2843",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_portant_approbation_des_comptes_de_la_securite_sociale_de_annee_2025",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_portant_approbation_des_comptes_de_la_securite_sociale_de_annee_2025",
+          "date": "2026-05-28"
+        },
         {
           "titre": "Projet de loi habilitant le Gouvernement à prendre, par ordonnances, les adaptations rendues nécessaires par l’entrée en application des règlements (UE) n°s 2024/1347, 2024/1348, 2024/1349, 2024/1350, 2024/1351, 2024/1352, 2024/1356, 2024/1358, 2024/1359 du Parlement européen et du Conseil du 14 mai 2024, et les dispositions nécessaires à la transposition de la directive (UE) 2024/1346 du Parlement européen et &#13;du Conseil du 14 mai 2024 - N° 2820",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54094",
@@ -1281,5 +1247,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, le projet n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de pêche) et le projet n°2632 (protection et souveraineté agricoles) pourraient impacter les enjeux climatiques et RSE des entreprises, notamment via des obligations renforcées en matière de reporting environnemental ou de transition énergétique. Aucun texte ne semble directement lié aux déchets ou à des mesures spécifiques pour les grandes entreprises de services dans ce corpus."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le projet n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de transport) et le projet n°2740 (loi-cadre sur le développement des transports) présentent un intérêt direct pour un Responsable Environnement/Climat, en lien avec la transition écologique et la réglementation européenne. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux."
 }
