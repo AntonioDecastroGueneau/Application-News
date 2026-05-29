@@ -1,34 +1,100 @@
 {
   "date": "2026-05-29",
-  "generated_at": "09:35",
-  "elapsed_seconds": 198,
+  "generated_at": "14:22",
+  "elapsed_seconds": 204,
   "errors": [],
   "stats": {
     "jo_analyses": 25,
     "jo_retenus": 0,
-    "depts_restriction": 19
+    "depts_restriction": 20
   },
   "pipeline_meta": {
-    "run_at": "2026-05-29T09:35:01",
+    "run_at": "2026-05-29T14:22:03",
     "sources": {
       "JORF": 0,
-      "RSS": 9,
-      "VigiEau": 19,
+      "RSS": 13,
+      "VigiEau": 20,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 67,
-    "llm_seconds": 69.3
+    "llm_calls": 68,
+    "llm_seconds": 74.5
   },
   "items": [
     {
-      "id": "f4672cbbc7ae",
+      "id": "57bba4c648cb",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Canicule : une semaine qui a fait tomber les records",
+      "resume": "La canicule précoce et intense en France augmente les risques climatiques opérationnels pour ABC, notamment sur la gestion des sites clients (3 000+ sites) et la résilience des prestations de propreté/FM, avec des impacts potentiels sur la santé des employés et la continuité des services.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Canicule-une-semaine-qui-a-fait-tomber-les-records",
+      "date": "2026-05-29"
+    },
+    {
+      "id": "85b4173c4aa3",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "Canicule : la France mise à l'arrêt par une \"grève thermique\"",
+      "resume": "L'article souligne l'impact des canicules précoces sur l'activité économique en France, un risque climatique opérationnel pouvant perturber les prestations de propreté/FM d'ABC sur 3 000+ sites clients, notamment dans les secteurs sensibles (nucléaire, santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/canicule-la-france-mise-a-larret-par-une-greve-thermique",
+      "date": "2026-05-29"
+    },
+    {
+      "id": "12405b10ac64",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’agenda de la transition énergétique",
+      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, hydrogène) qui pourraient être utiles pour identifier des opportunités de décarbonation ou des partenariats pour ABC, notamment sur sa flotte de véhicules ou ses prestations énergétiques.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/lagenda-de-la-transition-energetique-280-424554/",
+      "date": "2026-05-29"
+    },
+    {
+      "id": "05c7b2557080",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Les documents de la semaine",
+      "resume": "Cette newsletter hebdomadaire recense les documents clés de la transition énergétique (réglementations, études, analyses) qui pourraient impacter les enjeux climatiques et RSE d'ABC, notamment sur la décarbonation, le reporting ESG ou la mobilité durable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/05/les-documents-de-la-semaine-381215/",
+      "date": "2026-05-29"
+    },
+    {
+      "id": "ab1feda4576e",
       "source": "Le Monde Planète",
       "categorie": "Climat",
-      "titre": "La canicule, révélateur de notre inadaptation au changement climatique",
-      "resume": "L'article souligne l'urgence de l'adaptation climatique en France, un enjeu qui impacte indirectement ABC via les risques opérationnels sur ses 3 000+ sites clients et les exigences carbone croissantes de ses clients (nucléaire, santé, industrie).",
+      "titre": "EN DIRECT, canicule | Un mois de mai « inédit » sur le plan climatique en France : plus de la moitié du pays a connu un pic de chaleur jamais atteint jusqu’ici",
+      "resume": "L'article souligne l'intensification des vagues de chaleur précoces en France, pouvant impacter l'activité d'ABC via des risques opérationnels (ex. : perturbations logistiques, adaptation des prestations en période de canicule) et des exigences clients accrues en matière de résilience climatique.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/live/2026/05/29/en-direct-canicule-un-mois-de-mai-inedit-sur-le-plan-climatique-en-france-plus-de-la-moitie-du-pays-a-connu-un-pic-de-chaleur-jamais-atteint-jusqu-ici_6693854_3244.html",
+      "date": "2026-05-29"
+    },
+    {
+      "id": "043d65fab691",
+      "source": "Le Monde Planète",
+      "categorie": "Énergie",
+      "titre": "TotalEnergies accusé d’avoir mené un lobbying mensonger sur ses objectifs climatiques auprès de Matignon",
+      "resume": "L'article met en lumière les risques de greenwashing et de non-conformité aux engagements climatiques pour les entreprises, ce qui peut impacter la crédibilité des acteurs du secteur de la propreté/FM comme ABC dans leurs relations avec des clients exigeants en matière de transparence carbone.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/05/29/totalenergies-accusee-d-avoir-mene-un-lobbying-mensonger-aupres-de-matignon_6694733_3244.html",
+      "date": "2026-05-29"
+    },
+    {
+      "id": "1370126c5368",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "La canicule, révélatrice de notre inadaptation au changement climatique",
+      "resume": "L'article souligne l'importance de l'adaptation climatique pour les entreprises, notamment via la gestion des risques opérationnels sur les 3 000+ sites clients d'ABC. Cela peut impacter la résilience des prestations et les exigences clients en matière de continuité d'activité.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/05/29/la-canicule-revelateur-de-notre-inadaptation-au-changement-climatique_6694724_3232.html",
@@ -39,7 +105,7 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "Les habitants de Parly 2, la plus grande copropriété d’Europe, basculent vers la géothermie : « C’est de l’écologie intelligente »",
-      "resume": "L'article illustre l'essor de la géothermie comme solution de chauffage décarboné dans le tertiaire, un secteur où ABC intervient via ses prestations de propreté/FM. Cela peut influencer les attentes clients en matière de décarbonation des bâtiments et de reporting ESG.",
+      "resume": "L'article illustre l'adoption croissante de solutions énergétiques décarbonées (géothermie) dans le secteur immobilier tertiaire, un enjeu stratégique pour ABC dans le cadre de la décarbonation de ses clients (bâtiments tertiaires) et de la CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/societe/article/2026/05/29/les-habitants-de-parly-2-la-plus-grande-copropriete-d-europe-basculent-vers-la-geothermie-c-est-de-l-ecologie-intelligente_6694715_3224.html",
@@ -50,7 +116,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Des ressources et un guide interactif pour s'informer et agir sur la transition écologique",
-      "resume": "L'article mentionne des ressources et guides interactifs sur la transition écologique, incluant des analyses sectorielles et des outils pour les actifs, ce qui peut être utile pour ABC pour rester informé sur les enjeux climatiques et les compétences à développer.",
+      "resume": "L'article mentionne la nécessité de faire évoluer les compétences de 30 millions d'actifs pour atteindre la neutralité carbone en France, ce qui peut impacter les besoins en formation et adaptation des équipes d'ABC pour répondre aux exigences clients en matière de transition écologique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/des-ressources-et-un-guide-interactif-pour-sinformer-et-agir-sur-la-transition-ecologique-1",
@@ -61,7 +127,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Pompes à chaleur industrielles : une fiche CEE élargit les cas d’usage",
-      "resume": "L'élargissement des cas d'usage des pompes à chaleur industrielles via une fiche CEE pourrait influencer les choix énergétiques des clients d'ABC, notamment dans le tertiaire ou l'industrie, en offrant une solution décarbonée pour le chauffage.",
+      "resume": "L'élargissement des cas d'usage des pompes à chaleur industrielles via une fiche CEE pourrait offrir à ABC une opportunité d'optimiser l'efficacité énergétique de ses sites clients (non-ICPE) en intégrant des solutions bas-carbone dans ses prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/pompes-chaleur-industrielles-une-fiche-cee-elargit-les-cas-dusage",
@@ -72,7 +138,7 @@
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Chaleur au travail : le rappel du décret de 2025, et les conseils de l'INRS",
-      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures préventives pour les salariés en environnement chaud, ce qui peut impacter les équipes de nettoyage en extérieur ou dans des locaux non climatisés chez les clients d'ABC.",
+      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures préventives pour les salariés exposés à des températures élevées, ce qui peut impacter les conditions de travail des équipes de propreté/FM d'ABC sur les sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-le-rappel-du-decret-de-2025-et-les-conseils-de-linrs-0",
@@ -83,21 +149,10 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "« La climatisation aggrave le problème » : les choses à faire et ne pas faire pour survivre sous les toits à plus de 30°C",
-      "resume": "L'article aborde les solutions de rafraîchissement passif (isolation, végétalisation) pour les bâtiments, pertinentes pour les enjeux d'efficacité énergétique et de décarbonation des sites clients d'ABC, notamment dans le cadre du DPE tertiaire et des trajectoires de réduction des consommations.",
+      "resume": "L'article souligne l'importance de l'isolation et des solutions passives (toits végétalisés, enduits) pour réduire la dépendance à la climatisation, ce qui peut impacter les stratégies d'efficacité énergétique des bâtiments tertiaires où ABC intervient.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Fournaise-sous-les-toits-La-climatisation-est-vraiment-une-solution-a-eviter",
-      "date": "2026-05-28"
-    },
-    {
-      "id": "00b200c033bd",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "EDF et Eclairion signent pour un troisième centre de données",
-      "resume": "L'article illustre la dynamique des centres de données en France, un secteur en croissance qui pourrait impacter indirectement les enjeux énergétiques et carbone d'ABC via ses clients industriels ou tertiaires (consommation électrique, besoins en refroidissement, etc.).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/05/edf-et-eclairion-signent-pour-un-troisieme-centre-de-donnees-424992/",
       "date": "2026-05-28"
     },
     {
@@ -105,21 +160,10 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Une électrification massive est programmée pour les logements HLM",
-      "resume": "L'électrification des logements HLM pourrait influencer les exigences clients d'ABC (secteurs santé, industrie, nucléaire) en matière de mobilité durable et d'infrastructures de recharge, sans impact direct immédiat sur ses activités.",
+      "resume": "L'électrification massive des logements HLM pourrait influencer les exigences clients d'ABC (notamment dans les secteurs santé ou industrie) en matière de mobilité durable et d'infrastructures de recharge, sans impact direct immédiat sur ses activités.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/une-electrification-massive-est-programmee-pour-les-logements-hlm-424993/",
-      "date": "2026-05-28"
-    },
-    {
-      "id": "ce0f17ad92a9",
-      "source": "ESG Today",
-      "categorie": "Climat",
-      "titre": "California’s SB 253 Just Made Your Carbon Data a CFO Problem",
-      "resume": "L'article souligne l'importance croissante de la qualité et de l'auditabilité des données carbone pour les entreprises, notamment sous l'effet de réglementations comme SB 253 en Californie, ce qui peut impacter indirectement les exigences clients d'ABC en matière de reporting ESG et de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/californias-sb-253-just-made-your-carbon-data-a-cfo-problem/?utm_source=rss&utm_medium=rss&utm_campaign=californias-sb-253-just-made-your-carbon-data-a-cfo-problem",
       "date": "2026-05-28"
     }
   ],
@@ -140,8 +184,18 @@
       "niveau": "alerte renforcée"
     },
     {
+      "dept_code": "85",
+      "dept_nom": "Vendée",
+      "niveau": "alerte renforcée"
+    },
+    {
       "dept_code": "16",
       "dept_nom": "Charente",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "64",
+      "dept_nom": "Pyrénées-Atlantiques",
       "niveau": "alerte renforcée"
     },
     {
@@ -153,11 +207,6 @@
       "dept_code": "01",
       "dept_nom": "Ain",
       "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "85",
-      "dept_nom": "Vendée",
-      "niveau": "alerte"
     },
     {
       "dept_code": "17",
@@ -1153,5 +1202,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi adoptés ou en discussion, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transposition de directives européennes sur l'énergie, l'environnement et le climat. Aucun autre texte ne mentionne explicitement des enjeux climatiques ou environnementaux majeurs."
+  "pjl_briefing": "Parmi les projets de loi du 29 mai 2026, le **projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **projet de loi portant diverses dispositions d’adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter directement les enjeux climatiques, énergétiques et de RSE des entreprises, notamment via des mesures sur l’agriculture durable, la transition énergétique ou la transposition de directives européennes environnementales. Aucun texte adopté ne semble directement lié à ces thématiques."
 }
