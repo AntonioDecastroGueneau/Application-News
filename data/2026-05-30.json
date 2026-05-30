@@ -1,26 +1,24 @@
 {
   "date": "2026-05-30",
-  "generated_at": "08:17",
-  "elapsed_seconds": 206,
+  "generated_at": "12:49",
+  "elapsed_seconds": 263,
   "errors": [],
   "stats": {
     "jo_analyses": 29,
-    "jo_retenus": 0,
+    "jo_retenus": 1,
     "depts_restriction": 22
   },
   "pipeline_meta": {
-    "run_at": "2026-05-30T08:17:34",
+    "run_at": "2026-05-30T12:49:51",
     "sources": {
-      "JORF": 0,
-      "RSS": 12,
+      "JORF": 1,
+      "RSS": 11,
       "VigiEau": 22,
       "Parlement": 1
     },
-    "errors": [
-      "SOURCE VIDE — JORF : 0 textes retenus"
-    ],
-    "llm_calls": 68,
-    "llm_seconds": 69.8
+    "errors": [],
+    "llm_calls": 67,
+    "llm_seconds": 141.2
   },
   "items": [
     {
@@ -28,10 +26,21 @@
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "« Les scientifiques avaient beau savoir que ça arriverait, on est sur quelque chose de stupéfiant »",
-      "resume": "L'article souligne l'accélération des vagues de chaleur en France, reflétant les projections climatiques du futur, ce qui impacte directement les risques opérationnels d'ABC (aléas climatiques sur 3 000+ sites clients) et renforce l'urgence de décarboner sa flotte et ses activités.",
+      "resume": "L'article souligne l'urgence climatique avec une vague de chaleur exceptionnelle en France, illustrant les risques opérationnels futurs pour ABC (aléas climatiques sur 3 000+ sites clients) et renforçant la nécessité de préparer des stratégies d'adaptation et de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Canicule-Les-scientifiques-avaient-beau-savoir-que-ca-arriverait-on-est-sur-quelque-chose",
+      "date": "2026-05-30"
+    },
+    {
+      "id": "23de757cfd5b",
+      "source": "Le Monde Planète",
+      "categorie": "Déchets",
+      "titre": "Carburant : le doublement de l’indemnité pour les « grands rouleurs » et des aides aux pêcheurs entérinés",
+      "resume": "L'article mentionne des aides au carburant pour les entreprises, mais celles-ci ciblent spécifiquement les pêcheurs et les 'grands rouleurs' modestes, sans lien direct avec les activités de propreté/FM d'ABC ou ses enjeux de flotte de véhicules.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/economie/article/2026/05/30/carburant-le-doublement-de-l-indemnite-pour-les-grands-rouleurs-et-des-aides-aux-pecheurs-enterines_6695246_3234.html",
       "date": "2026-05-30"
     },
     {
@@ -39,7 +48,7 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "« Nous ne reviendrons pas au climat de notre enfance au cours du XXIᵉ siècle, même si nous réussissons à décarboner nos modes de vie »",
-      "resume": "L'article souligne l'urgence d'une adaptation structurelle aux aléas climatiques, renforçant l'importance pour ABC de renforcer sa résilience opérationnelle et stratégique face aux risques climatiques sur ses 3 000+ sites clients.",
+      "resume": "L'article souligne l'urgence d'une adaptation climatique structurelle face à des aléas météorologiques de plus en plus fréquents et intenses, ce qui impacte directement la gestion des risques opérationnels de ABC sur ses 3 000+ sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/05/30/nous-ne-reviendrons-pas-au-climat-de-notre-enfance-au-cours-du-xxi-siecle-meme-si-nous-reussissons-a-decarboner-nos-modes-de-vie_6695216_3232.html",
@@ -50,7 +59,7 @@
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Chaleur au travail : le rappel du décret de 2025, et les conseils de l'INRS",
-      "resume": "Le décret de 2025 sur la chaleur au travail impose des mesures préventives pour les salariés exposés, ce qui peut impacter les conditions de travail des équipes de propreté/FM d'ABC intervenant sur des sites clients (notamment en période estivale).",
+      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures préventives pour les salariés exposés, ce qui peut impacter les conditions de travail des équipes de propreté/FM d'ABC chez ses clients, notamment en période estivale.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-le-rappel-du-decret-de-2025-et-les-conseils-de-linrs-0",
@@ -61,8 +70,8 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Pourquoi le camion électrique peine encore à prendre la route",
-      "resume": "L'article souligne les défis de l'électrification des flottes pour les transporteurs, ce qui impacte directement la stratégie de décarbonation de la flotte d'ABC (scope 1) et ses objectifs de transition énergétique.",
-      "pourquoi": "Le sujet concerne directement la flotte de véhicules d'ABC (scope 1) et les obstacles à l'électrification, un enjeu clé pour sa décarbonation et sa conformité aux exigences carbone des clients (nucléaire, santé, industrie).",
+      "resume": "L'article met en lumière les défis de l'électrification des flottes, un enjeu clé pour ABC qui doit décarboner sa flotte de véhicules (scope 1) dans le cadre de ses objectifs climat et des exigences clients (nucléaire, santé, industrie).",
+      "pourquoi": "Le sujet touche directement à la mobilité durable, un axe stratégique pour ABC (flotte de véhicules, scope 1, décarbonation). Bien que l'article cible les transporteurs, les obstacles identifiés (coût, bornes, financement) sont transposables aux prestataires de services comme ABC, impactant leur capacité à respecter les trajectoires de décarbonation et les attentes clients en matière de reporting ESG (CSRD, bilan GES).",
       "criticite": 2,
       "url": "https://www.actu-environnement.com/ae/news/camion-electrique-poids-lourds-decarbonation-obstacles-48067.php4#xtor=RSS-6",
       "date": "2026-05-29"
@@ -72,7 +81,7 @@
       "source": "Reporterre",
       "categorie": "Environnement",
       "titre": "« C'est pas une chaleur exceptionnelle » : contre la désinformation sur le climat, un outil vient d'être lancé",
-      "resume": "L'article met en lumière la persistance de la désinformation climatique en France, ce qui pourrait impacter la crédibilité des engagements RSE d'ABC auprès de ses clients sensibles aux enjeux carbone.",
+      "resume": "L'article met en lumière la désinformation climatique en France, ce qui pourrait impacter la crédibilité des engagements RSE d'ABC auprès de ses clients sensibles aux enjeux carbone.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/QuotaClimat-lance-une-nouvelle-plateforme-contre-la-desinformation-en-vue-de-l-election",
@@ -83,7 +92,7 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Canicule : une semaine qui a fait tomber les records",
-      "resume": "La canicule précoce et intense en France augmente les risques climatiques opérationnels pour ABC, notamment via des aléas sur les 3 000+ sites clients (perturbations des prestations, sécurité des équipes, exigences clients en résilience).",
+      "resume": "La canicule précoce et intense en France souligne l'augmentation des risques climatiques opérationnels pour ABC, notamment via les aléas climatiques sur ses 3 000+ sites clients et les exigences carbone accrues de ses clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Canicule-une-semaine-qui-a-fait-tomber-les-records",
@@ -94,21 +103,10 @@
       "source": "Novethic",
       "categorie": "Émissions",
       "titre": "AG de TotalEnergies : le climat au centre des débats, mais exclu du vote",
-      "resume": "L'article illustre l'importance croissante des enjeux climatiques dans les stratégies des grandes entreprises, notamment énergétiques, ce qui peut influencer les attentes des clients d'ABC en matière de reporting et de décarbonation.",
+      "resume": "L'article illustre l'importance croissante des enjeux climatiques dans les stratégies des grandes entreprises, notamment énergétiques, ce qui peut influencer les exigences carbone des clients d'ABC (secteurs nucléaire, santé, industrie) et renforcer la pression sur la décarbonation des prestations de services.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/finance-durable/engagement-actionnarial/ag-totalenergies-le-climat-au-centre-des-debats-mais-exclu-du-vote",
-      "date": "2026-05-29"
-    },
-    {
-      "id": "85b4173c4aa3",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "Canicule : la France mise à l'arrêt par une \"grève thermique\"",
-      "resume": "L'article souligne l'impact des aléas climatiques (canicules précoces) sur l'activité économique en France, un risque indirect pour ABC dont les 3 000+ sites clients pourraient subir des perturbations opérationnelles.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/canicule-la-france-mise-a-larret-par-une-greve-thermique",
       "date": "2026-05-29"
     },
     {
@@ -116,7 +114,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Renversement de tendance dans les raccordements EnR au premier trimestre",
-      "resume": "L'article signale un ralentissement des raccordements EnR en France au T1 2026, ce qui pourrait impacter les stratégies énergétiques des clients d'ABC (ex : tertiaire, industrie) et leurs exigences en matière de décarbonation des prestations.",
+      "resume": "L'article signale un ralentissement des raccordements d'énergies renouvelables (EnR) en France au T1 2026, ce qui pourrait impacter les clients d'ABC (notamment industriels ou tertiaires) dans leurs objectifs de décarbonation et leur stratégie énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/renversement-de-tendance-dans-les-raccordements-enr-au-premier-trimestre-425100/",
@@ -127,7 +125,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "L’agenda de la transition énergétique",
-      "resume": "Cet article recense des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.) qui pourraient influencer les attentes clients d'ABC en matière de décarbonation ou de reporting ESG.",
+      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, hydrogène) qui pourraient être utiles pour identifier des opportunités ou des tendances à suivre pour ABC, notamment sur la décarbonation de sa flotte ou ses engagements climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/lagenda-de-la-transition-energetique-280-424554/",
@@ -138,21 +136,10 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Les documents de la semaine",
-      "resume": "Cette veille hebdomadaire permet à ABC de suivre les évolutions réglementaires et documents clés (textes définitifs, consultations, études) liés à la transition énergétique, utile pour anticiper les obligations CSRD, BGES, ou les exigences clients en matière de décarbonation.",
+      "resume": "Sélection hebdomadaire de documents utiles pour les acteurs de la transition énergétique, incluant textes réglementaires, études et états financiers. Permet à ABC de rester informé des évolutions réglementaires et des bonnes pratiques en matière de décarbonation, reporting ESG et mobilité durable.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/05/les-documents-de-la-semaine-381215/",
-      "date": "2026-05-29"
-    },
-    {
-      "id": "043d65fab691",
-      "source": "Le Monde Planète",
-      "categorie": "Énergie",
-      "titre": "TotalEnergies accusé d’avoir mené un lobbying mensonger sur ses objectifs climatiques auprès de Matignon",
-      "resume": "L'article met en lumière les risques de greenwashing et de manque de transparence dans les engagements climatiques des grands groupes, ce qui peut impacter la crédibilité des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et leurs exigences en matière de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/05/29/totalenergies-accusee-d-avoir-mene-un-lobbying-mensonger-aupres-de-matignon_6694733_3244.html",
       "date": "2026-05-29"
     }
   ],
@@ -888,12 +875,6 @@
       "date": "2026-05-30"
     },
     {
-      "titre": "Arrêté du 29 mai 2026 modifiant l'arrêté du 22 décembre 2014 définissant les opérations standardisées d'économies d'énergie, l'arrêté du 29 décembre 2014 relatif aux modalités d'application du dispositif des certificats d'économies d'énergie et l'arrêté du 28 septembre 2021 relatif aux contrôles dans le cadre du dispositif des certificats d'économies d'énergie",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054152008",
-      "date": "2026-05-30"
-    },
-    {
       "titre": "Arrêté du 19 mai 2026 relatif aux cahiers des charges nationaux de l'expérimentation nationale des « haltes “soins addictions” »",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054152101",
@@ -1020,8 +1001,20 @@
       "date": "2026-05-30"
     }
   ],
-  "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés et décrets du 2026-05-30 incluent des mesures significatives pour la transition énergétique et la résilience industrielle : soutien aux pompes à chaleur (arrêtés 7 et 16), adaptation des tarifs de l'électricité pour les consommateurs résidentiels (arrêté 6), et aides aux entreprises de pêche face à la hausse des carburants (décrets 13 et 15). Ces textes impactent directement les stratégies RSE des entreprises, notamment en matière d'efficacité énergétique et de décarbonation.",
+  "jo_retenus": [
+    {
+      "id": "2f3d5465f814",
+      "source": "JORF",
+      "categorie": "Énergie",
+      "titre": "Arrêté du 29 mai 2026 modifiant l'arrêté du 22 décembre 2014 définissant les opérations standardisées d'économies d'énergie, l'arrêté du 29 décembre 2014 relatif aux modalités d'application du dispositif des certificats d'économies d'énergie et l'arrêté du 28 septembre 2021 relatif aux contrôles dans le cadre du dispositif des certificats d'économies d'énergie",
+      "resume": "Modification des règles du dispositif des Certificats d'Économies d'Énergie (CEE) qui pourrait impacter les obligations de réduction de consommation énergétique des sites clients d'ABC, notamment dans le tertiaire.",
+      "pourquoi": "Cet arrêté modifie les règles du dispositif CEE, imposant potentiellement aux sites clients d'ABC (notamment tertiaires) des obligations renforcées de réduction de consommation énergétique avec des échéances contraignantes (ex : 2027-2030), ce qui expose ABC à des risques contractuels (non-respect des engagements clients) ou à des opportunités de valorisation de ses prestations d'efficacité énergétique (audits, optimisation des locaux) pour accompagner ses clients dans la conformité.",
+      "criticite": 2,
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054152008",
+      "date": "2026-05-30"
+    }
+  ],
+  "briefing_jorf": "Plusieurs arrêtés et décrets du 2026-05-30 impactent directement la RSE : soutien aux énergies renouvelables (homologation de pompes à chaleur, tarifs réglementés d'électricité), transition énergétique (certificats d'économies d'énergie modifiés), et résilience industrielle (aides aux entreprises de pêche face aux crises géopolitiques). Les décisions de la CRE sur les tarifs du gaz naturel renforcent aussi la transition bas-carbone.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1369,5 +1362,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques agricoles, énergétiques et de reporting RSE. Le **projet de loi-cadre relatif au développement des transports (N°2740)** pourrait aussi influencer les stratégies de mobilité durable et d’émissions des entreprises."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi n°2518** (adaptation au droit de l’UE en matière environnementale, énergétique et agricole) et le **Projet de loi n°2740** (développement des transports) pourraient présenter un intérêt pour un Responsable Environnement/Climat, notamment via des mesures liées à la transition énergétique, aux transports durables ou à l’adaptation réglementaire européenne. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou RSE."
 }
