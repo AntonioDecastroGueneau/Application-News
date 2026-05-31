@@ -1,7 +1,7 @@
 {
   "date": "2026-05-31",
-  "generated_at": "08:35",
-  "elapsed_seconds": 153,
+  "generated_at": "12:58",
+  "elapsed_seconds": 143,
   "errors": [],
   "stats": {
     "jo_analyses": 15,
@@ -9,7 +9,7 @@
     "depts_restriction": 22
   },
   "pipeline_meta": {
-    "run_at": "2026-05-31T08:35:28",
+    "run_at": "2026-05-31T12:58:20",
     "sources": {
       "JORF": 0,
       "RSS": 3,
@@ -19,16 +19,27 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 34,
-    "llm_seconds": 30.2
+    "llm_calls": 33,
+    "llm_seconds": 29.1
   },
   "items": [
+    {
+      "id": "f671436cb09b",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article aborde l'alignement des normes de reporting ESG (IFRS et GRI) et l'initiative de la SEC, ce qui impacte directement les obligations de reporting extra-financier de ABC dans le cadre de la CSRD et des ESRS.",
+      "pourquoi": "Le sujet concerne directement le reporting ESG de ABC, notamment la CSRD et les normes ESRS, ainsi que les attentes réglementaires en matière de transparence et d'alignement des standards internationaux.",
+      "criticite": 2,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-263/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-263",
+      "date": "2026-05-31"
+    },
     {
       "id": "6daa56ed01bd",
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Chaleur au travail : le rappel du décret de 2025, et les conseils de l'INRS",
-      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures de prévention pour les salariés en extérieur (ex : prestations de nettoyage), avec des risques de non-conformité pour ABC si ses équipes interviennent sur des sites clients non équipés.",
+      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures de prévention pour les salariés exposés, ce qui peut impacter les conditions de travail des équipes d'ABC intervenant chez des clients (ex : sites industriels, tertiaires).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-le-rappel-du-decret-de-2025-et-les-conseils-de-linrs-0",
@@ -39,21 +50,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Canicule : la France a vécu une vague de chaleur exceptionnelle pour un mois de mai, revivez notre direct",
-      "resume": "L'article souligne l'intensification et la fréquence accrue des canicules en France, posant des questions sur la préparation du pays et des entreprises aux risques climatiques opérationnels, notamment pour les 3 000+ sites clients d'ABC.",
+      "resume": "L'article souligne l'intensification des canicules en France, un risque climatique opérationnel pouvant impacter les activités de propreté/FM d'ABC sur ses 3 000+ sites clients, notamment en termes de conditions de travail et de continuité de service.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/live/2026/05/30/en-direct-canicule-meteo-france-prevoit-la-fin-de-l-episode-dimanche-a-6-heures-du-matin_6693854_3244.html",
-      "date": "2026-05-30"
-    },
-    {
-      "id": "23de757cfd5b",
-      "source": "Le Monde Planète",
-      "categorie": "Déchets",
-      "titre": "Carburant : le doublement de l’indemnité pour les « grands rouleurs » et des aides aux pêcheurs entérinés",
-      "resume": "L'article aborde une aide publique aux carburants pour les entreprises, ce qui pourrait influencer les coûts de la flotte de véhicules d'ABC, mais sans obligation directe ou action immédiate identifiée.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/economie/article/2026/05/30/carburant-le-doublement-de-l-indemnite-pour-les-grands-rouleurs-et-des-aides-aux-pecheurs-enterines_6695246_3234.html",
       "date": "2026-05-30"
     }
   ],
@@ -1072,5 +1072,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le projet n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et agricole) et le projet n°2632 (protection et souveraineté agricoles) présentent un intérêt direct pour un Responsable Environnement/Climat, en lien avec la transposition de directives européennes et la résilience des filières agricoles face aux enjeux climatiques."
+  "pjl_briefing": "Parmi les projets de loi listés, seul le projet n°2518 (adaptation au droit de l'UE en matière environnementale, énergétique et agricole) et le projet n°2632 (protection et souveraineté agricoles) pourraient présenter un intérêt indirect pour un Responsable Environnement/Climat, mais aucun texte ne traite directement de reporting RSE, de transition énergétique ou de gestion des déchets. Les autres textes concernent principalement la sécurité, la défense, la fiscalité ou des accords internationaux non environnementaux."
 }
