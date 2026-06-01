@@ -1,26 +1,26 @@
 {
   "date": "2026-06-01",
-  "generated_at": "11:08",
-  "elapsed_seconds": 143,
+  "generated_at": "17:02",
+  "elapsed_seconds": 174,
   "errors": [],
   "stats": {
     "jo_analyses": 0,
     "jo_retenus": 0,
-    "depts_restriction": 23
+    "depts_restriction": 24
   },
   "pipeline_meta": {
-    "run_at": "2026-06-01T11:08:00",
+    "run_at": "2026-06-01T17:02:41",
     "sources": {
       "JORF": 0,
-      "RSS": 11,
-      "VigiEau": 23,
+      "RSS": 14,
+      "VigiEau": 24,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 30,
-    "llm_seconds": 33.6
+    "llm_calls": 45,
+    "llm_seconds": 51.6
   },
   "items": [
     {
@@ -28,10 +28,32 @@
       "source": "Le Monde Planète",
       "categorie": "Déchets",
       "titre": "Ce qui change le 1ᵉʳ juin pour votre budget : prix du gaz, aides carburant, véhicules électriques, smic, particuliers employeurs, contrats financiers souscrits en ligne",
-      "resume": "L'article mentionne des aides carburant et des évolutions sur les véhicules électriques, pouvant impacter la flotte de véhicules d'ABC et ses coûts opérationnels liés à la mobilité durable.",
-      "pourquoi": "Le sujet touche à la mobilité durable (électrification des flottes) et aux aides carburant, deux enjeux directs pour ABC dans le cadre de sa décarbonation et de sa flotte de véhicules (scope 1).",
+      "resume": "L'article mentionne des aides carburant et des évolutions sur les véhicules électriques, impactant potentiellement la flotte de véhicules d'ABC et ses coûts opérationnels.",
+      "pourquoi": "Le sujet touche à la mobilité durable (électrification des flottes) et aux coûts énergétiques (aides carburant), deux enjeux clés pour ABC dans le cadre de sa décarbonation et de sa gestion de flotte (scope 1).",
       "criticite": 2,
       "url": "https://www.lemonde.fr/argent/article/2026/06/01/ce-qui-change-le-1-juin-pour-votre-budget-prix-du-gaz-aides-carburant-vehicules-electriques-smic-particuliers-employeurs-contrats-financiers-souscrits-en-ligne_6695778_1657007.html",
+      "date": "2026-06-01"
+    },
+    {
+      "id": "3d0efb47b634",
+      "source": "Actuel HSE",
+      "categorie": "Déchets",
+      "titre": "Reuse Economy : 10 leviers pour passer à l'échelle",
+      "resume": "L'article aborde la réutilisation et le réemploi des déchets, un levier clé pour réduire l'impact environnemental des prestations de propreté/FM d'ABC, notamment dans le cadre de la REP et des attentes clients en matière de circularité.",
+      "pourquoi": "Le sujet touche directement aux enjeux déchets et économie circulaire d'ABC, avec des implications potentielles sur la traçabilité, les partenariats avec éco-organismes, et la réponse aux exigences CSRD/ESRS des clients. Les 10 leviers proposés pourraient inspirer des actions concrètes pour améliorer la performance environnementale des prestations.",
+      "criticite": 2,
+      "url": "https://www.actuel-hse.fr/content/reuse-economy-10-leviers-pour-passer-lechelle-2",
+      "date": "2026-06-01"
+    },
+    {
+      "id": "1d3ece2409b9",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "La Commission publie la liste des produits et déchets contenant des matières premières critiques",
+      "resume": "Ce règlement identifie les produits et déchets contenant des matières premières critiques (MPC), impactant potentiellement la gestion des déchets et la traçabilité des équipements utilisés par ABC dans ses prestations (ex : véhicules électriques, équipements électriques).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/liste-europeenne-produits-dechets-matieres-premieres-critiques-48074.php4#xtor=RSS-6",
       "date": "2026-06-01"
     },
     {
@@ -39,7 +61,7 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Les déchets du bâtiment : une ressource au coeur de l’économie circulaire",
-      "resume": "L'article aborde l'économie circulaire dans le secteur du bâtiment, un enjeu indirect pour ABC via la gestion des déchets de ses prestations de propreté/FM, mais sans lien réglementaire ou opérationnel direct immédiat.",
+      "resume": "L'article aborde l'économie circulaire dans le secteur du bâtiment, un enjeu indirect pour ABC via la gestion des déchets de ses prestations de propreté/FM chez les clients, notamment dans le cadre des obligations REP et de la CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/pdt/ecominero-dechets-materiaux-construction-batiment-recyclage-reemploi-1474.php4#xtor=RSS-6",
@@ -50,7 +72,7 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Fortes sécheresses, pluies intenses… Un « super El Niño » pourrait arriver",
-      "resume": "L'article souligne l'arrivée d'un épisode extrême d'El Niño, aggravé par le réchauffement climatique, pouvant impacter les aléas climatiques sur les 3 000+ sites clients d'ABC (risques opérationnels indirects).",
+      "resume": "L'article souligne l'arrivée d'un épisode extrême d'El Niño, aggravé par le réchauffement climatique, pouvant impacter les sites clients d'ABC (3 000+ sites) via des aléas climatiques (sécheresses, pluies intenses) et perturber les prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Fortes-secheresses-pluies-intenses-Un-super-El-Nino-pourrait-arriver",
@@ -61,10 +83,21 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Chaleur : comment Epyr veut faire mieux que les chaudières à gaz",
-      "resume": "L'article présente une alternative aux chaudières à gaz (solution de chauffage décarbonée) qui pourrait impacter les choix énergétiques des clients d'ABC, notamment dans le tertiaire ou l'industrie, et influencer les exigences carbone des donneurs d'ordre.",
+      "resume": "L'article présente une solution alternative aux chaudières à gaz pour le chauffage, ce qui pourrait impacter les choix énergétiques des clients d'ABC (secteurs tertiaire, santé, industrie) dans leur transition bas-carbone.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/chaleur-comment-epyr-veut-faire-mieux-que-les-chaudieres-a-gaz-425113/",
+      "date": "2026-06-01"
+    },
+    {
+      "id": "265610b7414c",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "Rio Tinto Commissions $1.5 Billion Low Carbon Aluminum Project in Canada",
+      "resume": "L'article illustre une tendance sectorielle vers la décarbonation de l'aluminium, un matériau potentiellement utilisé par les clients d'ABC (industrie, construction). Cela peut influencer les exigences carbone des clients d'ABC dans le cadre de leur reporting CSRD ou de leurs politiques d'achats durables.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/rio-tinto-commissions-1-5-billion-low-carbon-aluminum-project-in-canada/?utm_source=rss&utm_medium=rss&utm_campaign=rio-tinto-commissions-1-5-billion-low-carbon-aluminum-project-in-canada",
       "date": "2026-06-01"
     },
     {
@@ -72,21 +105,21 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Vrac et réemploi : les multiples réalités de la filière",
-      "resume": "L'article aborde les enjeux du réemploi et du vrac dans la filière déchets, un sujet lié à la réglementation REP et à la traçabilité des emballages, mais sans impact opérationnel direct immédiat pour ABC.",
+      "resume": "L'article aborde les enjeux de réemploi et de vrac dans la filière déchets, un sujet lié aux obligations de tri et de traçabilité (REP) qui impactent indirectement les prestations de propreté/FM d'ABC chez ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/vrac-et-reemploi-les-multiples-realites-de-la-filiere-2",
       "date": "2026-06-01"
     },
     {
-      "id": "3d0efb47b634",
+      "id": "ff24f5ec599b",
       "source": "Actuel HSE",
-      "categorie": "Déchets",
-      "titre": "Reuse Economy : 10 leviers pour passer à l'échelle",
-      "resume": "L'article aborde la réutilisation (reuse economy) comme levier de décarbonation et de gestion des déchets, deux enjeux centraux pour ABC dans le cadre de sa stratégie CSRD, BGES et ISO 14001, notamment via l'optimisation des flux de déchets de ses prestations.",
+      "categorie": "Environnement",
+      "titre": "Loi de simplification : la mutualisation des cellules PDP facilitée",
+      "resume": "La loi facilite la mutualisation des cellules PDP (Plan de Prévention des Risques), ce qui pourrait impacter la gestion des risques climatiques pour ABC dans le cadre de ses 3 000+ sites clients, notamment en termes de coordination et de reporting.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/reuse-economy-10-leviers-pour-passer-lechelle-2",
+      "url": "https://www.actuel-hse.fr/content/loi-de-simplification-la-mutualisation-des-cellules-pdp-facilitee",
       "date": "2026-06-01"
     },
     {
@@ -94,7 +127,7 @@
       "source": "Actuel HSE",
       "categorie": "Environnement",
       "titre": "L’ONU demande aux États de respecter l’avis consultatif de la CIJ sur leurs obligations en matière de climat",
-      "resume": "L'avis consultatif de la CIJ sur les obligations climatiques des États pourrait renforcer les exigences réglementaires et les attentes en matière de reporting ESG pour les entreprises, y compris celles comme ABC, via des politiques nationales plus strictes ou des contentieux climatiques.",
+      "resume": "L'avis consultatif de la CIJ sur les obligations climatiques des États pourrait renforcer les exigences réglementaires et contractuelles en matière de décarbonation pour les entreprises, y compris les prestataires de services comme ABC, notamment via des clients industriels ou publics.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/lonu-demande-aux-etats-de-respecter-lavis-consultatif-de-la-cij-sur-leurs-obligations-en-1",
@@ -105,7 +138,7 @@
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Chaleur au travail : le rappel du décret de 2025, et les conseils de l'INRS",
-      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures préventives pour les salariés exposés, pouvant impacter les conditions de travail des équipes de nettoyage chez les clients d'ABC, notamment en période estivale.",
+      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures préventives pour les salariés en période de canicule, ce qui peut impacter les conditions de travail des équipes d'ABC intervenant chez ses clients (3 000+ sites).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-le-rappel-du-decret-de-2025-et-les-conseils-de-linrs-0",
@@ -116,9 +149,9 @@
       "source": "ESG Today",
       "categorie": "Déchets",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article mentionne l'alignement des normes de reporting ESG (IFRS, GRI) et l'initiative de la SEC, ce qui impacte directement les obligations de reporting extra-financier de ABC dans le cadre de la CSRD et des ESRS.",
-      "pourquoi": "L'article signale une convergence réglementaire (IFRS, GRI, SEC) renforçant les exigences de reporting extra-financier, ce qui impose à ABC d'aligner ses données ESG (scope 1-3, BGES, CSRD) d'ici 2024-2025 pour éviter des non-conformités contractuelles avec ses clients (nucléaire, santé, etc.) et saisir l'opportunité de valoriser sa démarche bas-carbone auprès d'eux.",
-      "criticite": 2,
+      "resume": "L'article aborde l'alignement des normes de reporting ESG (IFRS, GRI) et l'initiative de la SEC, ce qui impacte directement les exigences de reporting extra-financier pour ABC, notamment dans le cadre de la CSRD et des ESRS.",
+      "pourquoi": "",
+      "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-263/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-263",
       "date": "2026-05-31"
     },
@@ -127,7 +160,7 @@
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "« Les scientifiques avaient beau savoir que ça arriverait, on est sur quelque chose de stupéfiant »",
-      "resume": "L'article met en lumière l'accélération des aléas climatiques en France (vagues de chaleur exceptionnelles), un risque opérationnel direct pour ABC qui intervient sur 3 000+ sites clients, avec des impacts potentiels sur les prestations de propreté/FM et les exigences carbone des clients.",
+      "resume": "L'article souligne l'urgence climatique avec une vague de chaleur exceptionnelle en France, illustrant les risques opérationnels pour ABC (aléas climatiques sur 3 000+ sites clients) et renforçant l'importance de la décarbonation de sa flotte et de ses prestations pour répondre aux exigences carbone des clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Canicule-Les-scientifiques-avaient-beau-savoir-que-ca-arriverait-on-est-sur-quelque-chose",
@@ -138,7 +171,7 @@
       "source": "Reporterre",
       "categorie": "Déchets",
       "titre": "Tunnel France-Italie : de coûteux travaux au détriment du train",
-      "resume": "L'article souligne l'orientation politique vers le report modal (route → rail) en France, ce qui pourrait impacter les stratégies de mobilité durable des entreprises comme ABC, notamment sur la gestion de leur flotte de véhicules (scope 1) et les attentes clients en matière de décarbonation.",
+      "resume": "L'article souligne l'investissement public dans les infrastructures routières (tunnel de Tende) au détriment du ferroviaire, ce qui pourrait influencer les politiques de mobilité durable en France et en UE, impactant indirectement les stratégies de flotte de véhicules et les attentes clients d'ABC en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Tunnel-France-Italie-de-couteux-travaux-au-detriment-du-train",
@@ -249,6 +282,11 @@
     {
       "dept_code": "34",
       "dept_nom": "Hérault",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "70",
+      "dept_nom": "Haute-Saône",
       "niveau": "vigilance"
     },
     {
@@ -625,5 +663,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux environnementaux et énergétiques dans sa transposition du droit européen."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le projet n°2632 (loi d’urgence pour la protection et la souveraineté agricoles) et le projet n°2518 (adaptation au droit de l’UE en matière environnementale et énergétique) pourraient avoir un impact indirect sur les enjeux climatiques et RSE pour une entreprise de services. Aucun texte ne traite directement des déchets, du reporting extra-financier ou de la transition énergétique de manière significative."
 }
