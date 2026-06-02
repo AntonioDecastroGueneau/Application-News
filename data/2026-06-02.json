@@ -1,7 +1,7 @@
 {
   "date": "2026-06-02",
-  "generated_at": "10:02",
-  "elapsed_seconds": 197,
+  "generated_at": "15:43",
+  "elapsed_seconds": 224,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,7 +9,7 @@
     "depts_restriction": 24
   },
   "pipeline_meta": {
-    "run_at": "2026-06-02T10:02:54",
+    "run_at": "2026-06-02T15:43:05",
     "sources": {
       "JORF": 0,
       "RSS": 11,
@@ -19,8 +19,8 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 64,
-    "llm_seconds": 62.5
+    "llm_calls": 63,
+    "llm_seconds": 68.4
   },
   "items": [
     {
@@ -28,10 +28,32 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SRB Online Meeting 3 June 2026",
-      "resume": "L'article concerne une réunion de l'EFRAG SRB sur le reporting ESG, pertinente pour ABC dans le cadre de la préparation à la CSRD et aux exigences de reporting extra-financier (ESRS).",
-      "pourquoi": "L'EFRAG SRB est l'organisme européen chargé de l'élaboration des normes de reporting de durabilité (ESRS) pour la CSRD, directement applicable à ABC dans le cadre de ses obligations de reporting ESG. La réunion pourrait aborder des évolutions réglementaires ou des interprétations des normes ESRS qui impactent les entreprises de services comme ABC.",
+      "resume": "L'article annonce une réunion de l'EFRAG SRB en juin 2026 sur les normes de reporting ESG (CSRD/ESRS), ce qui impacte directement les obligations de reporting extra-financier d'ABC pour ses clients et ses propres engagements.",
+      "pourquoi": "L'EFRAG SRB est l'organisme européen en charge de l'élaboration des normes ESRS (European Sustainability Reporting Standards) sous la CSRD. Ces normes concernent directement le reporting ESG des entreprises, y compris les prestataires de services comme ABC, qui doivent répondre aux exigences de leurs clients (nucléaire, santé, industrie) en matière de transparence carbone et d'impacts environnementaux. Une évolution réglementaire majeure à suivre pour anticiper les obligations futures.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-3-june-2026",
+      "date": "2026-06-02"
+    },
+    {
+      "id": "6daa56ed01bd",
+      "source": "Actuel HSE",
+      "categorie": "ICPE",
+      "titre": "Chaleur au travail : le rappel du décret de 2025, et les conseils de l'INRS",
+      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures préventives pour les salariés exposés à des températures élevées, ce qui peut impacter les équipes de nettoyage intervenant sur des sites clients en période de canicule.",
+      "pourquoi": "Le décret 2025 sur la chaleur au travail est une réglementation directe pour les entreprises dont les salariés sont exposés à des températures élevées, ce qui inclut les prestataires de propreté comme ABC intervenant sur des sites clients (non ICPE). Bien que non lié aux enjeux carbone ou CSRD, cette réglementation impacte directement les conditions de travail et peut nécessiter des adaptations opérationnelles (horaires, équipements, etc.).",
+      "criticite": 2,
+      "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-le-rappel-du-decret-de-2025-et-les-conseils-de-linrs-0",
+      "date": "2026-06-02"
+    },
+    {
+      "id": "0a3d3d1bfd70",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Obsolescence programmée : Epson comparaîtra devant le tribunal correctionnel début juillet",
+      "resume": "L'obsolescence programmée est un enjeu réglementaire croissant en France (loi AGEC, directive UE sur l'écoconception) qui pourrait impacter les politiques d'achat et de gestion des équipements de propreté (imprimantes, machines) d'ABC, notamment dans le cadre de la CSRD et des objectifs de durabilité.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/proces-epson-obsolescence-programmee-imprimante-48083.php4#xtor=RSS-6",
       "date": "2026-06-02"
     },
     {
@@ -39,7 +61,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Choose France : des investissements annoncés dans l'énergie et l'économie circulaire",
-      "resume": "L'article mentionne des investissements dans l'énergie, la mobilité électrique et l'économie circulaire en France, ce qui peut influencer les attentes clients d'ABC en matière de décarbonation et de reporting ESG.",
+      "resume": "L'article signale des investissements dans l'énergie, la mobilité électrique et l'économie circulaire en France, ce qui pourrait influencer les attentes clients d'ABC en matière de décarbonation et de reporting ESG (CSRD/ESRS).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/investissement-energie-photovoltaique-PAC-infratsructure-eplastqiue-textile-48076.php4#xtor=RSS-6",
@@ -50,10 +72,21 @@
       "source": "Reporterre",
       "categorie": "Environnement",
       "titre": "El Niño a 80 % de probabilité de revenir cet été, prévient l'Organisation météorologique mondiale",
-      "resume": "El Niño pourrait impacter les aléas climatiques sur les 3 000+ sites clients d'ABC, entraînant des perturbations opérationnelles (ex. : intempéries, retards) et des risques indirects pour la continuité des services de propreté/FM.",
+      "resume": "L'article signale un risque accru d'aléas climatiques (El Niño) pouvant impacter les opérations de propreté/FM d'ABC sur ses 3 000+ sites clients en France, avec des perturbations potentielles de la demande ou des conditions de travail.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/El-Nino-a-80-de-probabilite-de-revenir-cet-ete-previent-l-Organisation-meteorologique",
+      "date": "2026-06-02"
+    },
+    {
+      "id": "0d73edd53b4a",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "Désinformation climatique : les entreprises ciblées par une guerre d’influence",
+      "resume": "L'article met en lumière une menace indirecte pour ABC : la désinformation climatique pourrait influencer les exigences carbone de ses clients (nucléaire, santé, industrie) et complexifier la communication sur ses engagements RSE.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/environnement/transition-energetique/desinformation-climatique-entreprises-ciblees-guerre-influence",
       "date": "2026-06-02"
     },
     {
@@ -61,10 +94,21 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Mesurez votre impact écologique avec le calculateur d’empreinte carbone et eau",
-      "resume": "Outil gratuit de l'ADEME pour évaluer rapidement l'empreinte carbone et hydrique d'ABC, utile pour initier une démarche de décarbonation ou préparer un bilan GES/CSRD.",
+      "resume": "Outil pratique pour évaluer l'empreinte carbone et hydrique d'ABC, utile pour initier un bilan GES ou affiner une stratégie de décarbonation, sans obligation immédiate.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/chaleur-humaine/article/2026/06/02/mesurez-votre-impact-ecologique-avec-le-calculateur-d-empreinte-carbone-et-eau_6523433_6125300.html",
+      "date": "2026-06-02"
+    },
+    {
+      "id": "60bf02194cfc",
+      "source": "Le Monde Planète",
+      "categorie": "Environnement",
+      "titre": "El Niño est à nos portes et l’ONU appelle à se préparer à cet accélérateur du dérèglement climatique",
+      "resume": "L'article souligne l'imminence du phénomène El Niño, qui pourrait exacerber les risques climatiques opérationnels pour ABC (aléas météo sur 3 000+ sites clients) et impacter indirectement les exigences carbone des clients (nucléaire, santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/06/02/el-nino-est-a-nos-portes-et-l-onu-appelle-a-se-preparer-a-cet-accelerateur-du-dereglement-climatique_6696356_3244.html",
       "date": "2026-06-02"
     },
     {
@@ -72,10 +116,21 @@
       "source": "ESG Today",
       "categorie": "Biodiversité",
       "titre": "EU Commission Warns 20 Member States Over Failure to Implement Anti-Greenwashing Rules",
-      "resume": "L'article souligne le risque réglementaire lié à l'application insuffisante des règles anti-greenwashing (ECGT) par les États membres, ce qui pourrait impacter la crédibilité des allégations environnementales d'ABC dans ses rapports ESG et communications clients.",
+      "resume": "L'article souligne un risque réglementaire pour ABC lié à la transposition incomplète de la directive anti-greenwashing (ECGT) par plusieurs États membres, pouvant impacter la crédibilité des engagements ESG des clients et la conformité des communications RSE d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/eu-commission-warns-20-member-states-over-failure-to-implement-anti-greenwashing-rules/?utm_source=rss&utm_medium=rss&utm_campaign=eu-commission-warns-20-member-states-over-failure-to-implement-anti-greenwashing-rules",
+      "date": "2026-06-02"
+    },
+    {
+      "id": "3ea79b1c0999",
+      "source": "The Guardian Environment",
+      "categorie": "Énergie",
+      "titre": "New ways to remove CO2 from atmosphere must grow much faster, report says",
+      "resume": "L'article souligne l'urgence de développer des technologies de capture du CO2 (CDR) à grande échelle pour atteindre les objectifs climatiques, ce qui pourrait influencer les stratégies de décarbonation des clients d'ABC et leurs exigences en matière de services bas-carbone.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/environment/2026/jun/02/new-ways-remove-co2-from-atmosphere-carbon-dioxide-removal",
       "date": "2026-06-02"
     },
     {
@@ -83,66 +138,11 @@
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Le décret portant à 100 € l'indemnité carburant est paru",
-      "resume": "Le décret augmente l'indemnité carburant à 100 €, ce qui peut impacter la politique de mobilité durable d'ABC, notamment pour la flotte de véhicules (scope 1) et les coûts opérationnels.",
+      "resume": "Le décret augmente l'indemnité carburant à 100 €, ce qui peut impacter les coûts de la flotte de véhicules d'ABC et ses stratégies de mobilité durable.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/le-decret-portant-100-eu-lindemnite-carburant-est-paru",
       "date": "2026-06-02"
-    },
-    {
-      "id": "6daa56ed01bd",
-      "source": "Actuel HSE",
-      "categorie": "ICPE",
-      "titre": "Chaleur au travail : le rappel du décret de 2025, et les conseils de l'INRS",
-      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures préventives pour les salariés en extérieur ou exposés à des températures élevées, ce qui impacte les prestations de propreté/FM d'ABC chez ses clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-le-rappel-du-decret-de-2025-et-les-conseils-de-linrs-0",
-      "date": "2026-06-02"
-    },
-    {
-      "id": "1d3ece2409b9",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "La Commission publie la liste des produits et déchets contenant des matières premières critiques",
-      "resume": "Ce règlement impacte indirectement ABC via la gestion des déchets de ses clients (REP) et la traçabilité des matières premières critiques dans les équipements utilisés pour les prestations de propreté/FM.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/liste-europeenne-produits-dechets-matieres-premieres-critiques-48074.php4#xtor=RSS-6",
-      "date": "2026-06-01"
-    },
-    {
-      "id": "d84258b45e88",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Agrément des pompes à chaleur fabriquées en Europe : les textes sont publiés",
-      "resume": "L'article impacte indirectement ABC via l'évolution des aides aux équipements énergétiques (pompes à chaleur) éligibles aux certificats d'économie d'énergie, pouvant influencer les choix clients en matière de transition énergétique des bâtiments tertiaires.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/ademe-instruction-modeles-pompes-chaleur-agrement-fabrication-europe-bonifications-cee-48071.php4#xtor=RSS-6",
-      "date": "2026-06-01"
-    },
-    {
-      "id": "03efbad57f9d",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "L’américain Ecolab investit dans Holosolis et GravitHy",
-      "resume": "L’investissement d’Ecolab (leader du traitement de l’eau) dans des projets industriels verts (Holosolis pour le photovoltaïque, GravitHy pour l’hydrogène) illustre une tendance forte de décarbonation des industries clientes d’ABC, avec des enjeux de reporting ESG et de mobilité durable à surveiller.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/06/lamericain-ecolab-investit-dans-holosolis-et-gravithy-425248/",
-      "date": "2026-06-01"
-    },
-    {
-      "id": "c456846f833e",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Fusion des typologies, critères de résilience : l’appel d’offres « petit solaire » fait sa mue",
-      "resume": "L'article traite de l'évolution des critères de l'appel d'offres simplifié (AOS) pour les projets photovoltaïques de 100 à 500 kWc, ce qui pourrait impacter les clients d'ABC (secteurs tertiaire, industriel ou santé) dans leur stratégie d'autoconsommation solaire ou de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/06/fusion-des-typologies-criteres-de-resilience-lappel-doffres-petit-solaire-fait-sa-mue-425235/",
-      "date": "2026-06-01"
     }
   ],
   "restrictions_eau": [
@@ -744,7 +744,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Les arrêtés relatifs aux commissions consultatives paritaires (agents contractuels des agences de l'eau, établissements publics de l'environnement, ministères de la transition écologique et des transports) et la création du programme PEPITE dans le cadre des certificats d'économies d'énergie sont pertinents pour un Responsable Environnement/Climat, car ils impactent la gouvernance et les dispositifs d'efficacité énergétique. Les modifications sur les conditions de mesurage de l'amiante et les tarifs des réseaux d'électricité/gaz concernent aussi indirectement les enjeux de santé environnementale et de transition énergétique.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1098,5 +1098,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi n°2518** (adaptation au droit de l’UE en matière environnementale, énergétique et climatique) et le **Projet de loi n°2632** (souveraineté agricole, potentiellement lié aux enjeux climatiques et de biodiversité) pourraient présenter un intérêt pour un Responsable Environnement/Climat. Aucun texte adopté ne semble directement lié à ces enjeux."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi n°2518** (adaptation au droit de l’UE en matière environnementale, énergétique et économique) et le **Projet de loi n°2632** (protection et souveraineté agricoles) présentent un intérêt direct pour un Responsable Environnement/Climat, notamment via les enjeux de transposition des directives européennes (énergie, climat, économie circulaire) et de résilience des filières agricoles face aux changements climatiques."
 }
