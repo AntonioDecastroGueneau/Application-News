@@ -1,26 +1,26 @@
 {
   "date": "2026-06-03",
-  "generated_at": "10:34",
-  "elapsed_seconds": 214,
+  "generated_at": "16:02",
+  "elapsed_seconds": 238,
   "errors": [],
   "stats": {
     "jo_analyses": 29,
     "jo_retenus": 0,
-    "depts_restriction": 25
+    "depts_restriction": 24
   },
   "pipeline_meta": {
-    "run_at": "2026-06-03T10:34:18",
+    "run_at": "2026-06-03T16:02:42",
     "sources": {
       "JORF": 0,
-      "RSS": 7,
-      "VigiEau": 25,
+      "RSS": 16,
+      "VigiEau": 24,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 62,
-    "llm_seconds": 60.3
+    "llm_calls": 69,
+    "llm_seconds": 76.3
   },
   "items": [
     {
@@ -35,14 +35,14 @@
       "date": "2026-06-03"
     },
     {
-      "id": "6825e0a80fb3",
-      "source": "Actuel HSE",
-      "categorie": "Énergie",
-      "titre": "Électrification : l’Élysée officialise quatre pactes de filières",
-      "resume": "L'article annonce des pactes de filières pour accélérer l'électrification des usages, notamment dans la mobilité et les transports, ce qui impacte directement la flotte de véhicules d'ABC (scope 1) et ses obligations en matière de décarbonation.",
-      "pourquoi": "L'électrification des flottes est un levier clé pour ABC dans le cadre de sa décarbonation (scope 1) et de la CSRD/reporting ESG. Les pactes de filières pourraient influencer les politiques publiques et les exigences clients en matière de mobilité durable.",
-      "criticite": 2,
-      "url": "https://www.actuel-hse.fr/content/electrification-lelysee-officialise-quatre-pactes-de-filieres",
+      "id": "a944575a600a",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Recyclage chimique : Carbios annonce le report d'au moins un an de son projet d'usine en Asie",
+      "resume": "Le report du projet d'usine de recyclage chimique de Carbios en Asie pourrait influencer les attentes clients d'ABC en matière de gestion des déchets plastiques et de circularité, notamment dans le cadre des obligations REP ou des stratégies RSE des clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/report-projet-carbios-wankai-recyclage-pet-48087.php4#xtor=RSS-6",
       "date": "2026-06-03"
     },
     {
@@ -50,10 +50,65 @@
       "source": "Novethic",
       "categorie": "Déchets",
       "titre": "Norme anti-greenwashing, régulations économiques : le patronat européen réclame un \"moratoire\"",
-      "resume": "L'article aborde une demande de moratoire sur les régulations européennes, dont certaines pourraient impacter les obligations de reporting ESG (CSRD/ESRS) ou les normes anti-greenwashing, influençant indirectement les exigences clients d'ABC en matière de transparence climatique.",
+      "resume": "L'article aborde les tensions entre le patronat européen et les régulations anti-greenwashing, ce qui pourrait impacter les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et les obligations de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/business-europe-moratoire-normes-regulation-green-claims",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "cf4c08210085",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’Occitanie présente ses nouvelles mesures de transition énergétique",
+      "resume": "L'article met en avant les ambitions régionales en matière de transition énergétique, ce qui peut influencer les politiques clients d'ABC (notamment dans les secteurs énergie, industrie ou santé) et leurs exigences en matière de décarbonation ou d'efficacité énergétique.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/loccitanie-presente-ses-nouvelles-mesures-de-transition-energetique-425533/",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "4a55f7cf9fcb",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "La Nouvelle-Aquitaine prépare un nouveau PPA multi-acheteurs",
+      "resume": "Ce PPA multi-acheteurs en Nouvelle-Aquitaine pourrait inspirer des initiatives similaires pour sécuriser des contrats d'électricité renouvelable pour la flotte de véhicules ou les sites clients d'ABC, réduisant ainsi leur empreinte carbone (scope 2).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/la-nouvelle-aquitaine-prepare-un-nouveau-ppa-multi-acheteurs-425532/",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "4f7a549bf1e8",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Biométhane, hydrogène, CO2… : où en est le réseau gazier Teréga ?",
+      "resume": "L'article aborde les évolutions du réseau gazier vers des énergies décarbonées (biométhane, hydrogène, CO2), ce qui peut impacter indirectement les stratégies énergétiques des clients d'ABC (industrie, santé) et leurs exigences carbone, notamment sur le scope 3.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/biomethane-hydrogene-co2-ou-en-est-le-reseau-gazier-terega-425454/",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "3c73e24a3839",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Après la canicule, le gouvernement réduit le budget destiné à l’adaptation au réchauffement climatique",
+      "resume": "La réduction du budget du fonds vert pourrait impacter indirectement les collectivités clientes d'ABC, affectant leurs investissements en adaptation climatique et donc leurs exigences en matière de prestations de propreté/FM (ex : gestion des déchets, efficacité énergétique des sites).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/06/03/apres-la-canicule-le-gouvernement-reduit-le-budget-destine-a-l-adaptation-au-rechauffement-climatique_6696604_3244.html",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "6b8b455aa8d3",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "« La majorité des émissions de PFAS en Europe provient des climatiseurs et des pompes à chaleur, pourtant fers de lance de la décarbonation »",
+      "resume": "L'article met en lumière l'impact environnemental des PFAS dans les équipements de climatisation et pompes à chaleur, deux technologies clés pour la décarbonation des bâtiments. ABC, intervenant dans la propreté et le FM, pourrait être concerné indirectement via les exigences clients en matière de réduction des substances dangereuses dans les équipements utilisés sur leurs sites.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/idees/article/2026/06/03/la-majorite-des-emissions-de-pfas-en-europe-provient-des-climatiseurs-et-des-pompes-a-chaleur-pourtant-fers-de-lance-de-la-decarbonation_6696594_3232.html",
       "date": "2026-06-03"
     },
     {
@@ -61,10 +116,54 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "« On est au cœur d’une dissonance cognitive » : l’embarras des entreprises et des associations engagées pour l’environnement face à l’empreinte carbone de l’IA",
-      "resume": "L'article souligne les tensions entre l'utilisation de l'IA et la réduction de l'empreinte carbone, un enjeu indirect pour ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et son propre reporting ESG (CSRD).",
+      "resume": "L'article aborde l'enjeu de l'empreinte carbone de l'IA, un sujet émergent en matière de décarbonation des entreprises (scope 3) qui pourrait impacter les stratégies RSE d'ABC, notamment via les exigences carbone de ses clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/06/03/on-est-au-c-ur-d-une-dissonance-cognitive-les-organisations-engagees-pour-l-environnement-face-a-l-embarrassant-calcul-de-l-empreinte-carbone-de-l-ia_6696548_3234.html",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "511ebb45c248",
+      "source": "ESG Today",
+      "categorie": "Énergie",
+      "titre": "Gigaton Raises $26 Million to Slash Emissions Across Cement, Steel, Glass, Chemicals Sectors",
+      "resume": "Cet article présente une solution technologique (IA) pour décarboner des industries lourdes (ciment, acier, verre, chimie), secteurs clients potentiels d'ABC en tant que prestataire de services. Cela pourrait impacter indirectement les exigences carbone des clients d'ABC dans ces industries.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/gigaton-raises-26-million-to-slash-emissions-across-cement-steel-glass-chemicals-sectors/?utm_source=rss&utm_medium=rss&utm_campaign=gigaton-raises-26-million-to-slash-emissions-across-cement-steel-glass-chemicals-sectors",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "4fd2dbfbf791",
+      "source": "The Guardian Environment",
+      "categorie": "Déchets",
+      "titre": "​Why is Europe still not ready for extreme heat?",
+      "resume": "L'article souligne l'augmentation des risques climatiques extrêmes (canicules) en Europe, ce qui pourrait impacter les activités de nettoyage/maintenance de ABC chez ses clients (ex. : perturbations opérationnelles, exigences accrues en adaptation climatique).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/world/2026/jun/03/why-is-europe-still-not-ready-for-extreme-heat",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "1bc36a5cfebb",
+      "source": "EFRAG",
+      "categorie": "Climat",
+      "titre": "EFRAG Resumed Work on the European Sustainability Reporting Standard for Non-EU Groups and Launches Field Test Call for Interest",
+      "resume": "L'article concerne l'évolution des normes de reporting ESG (ESRS) pour les groupes non-UE, avec un appel à participation pour des tests terrain avant consultation publique en juillet 2026. ABC, concerné par le reporting CSRD/ESRS, doit suivre ces développements pour anticiper ses obligations futures.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-resumed-work-on-the-european-sustainability-reporting-standard-for-noneu-groups-and-launches",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "6825e0a80fb3",
+      "source": "Actuel HSE",
+      "categorie": "Énergie",
+      "titre": "Électrification : l’Élysée officialise quatre pactes de filières",
+      "resume": "L'article annonce des pactes de filières pour accélérer l'électrification des usages (mobilité, industrie, transports, bâtiment), ce qui pourrait influencer les exigences clients d'ABC en matière de décarbonation de sa flotte et des prestations de propreté.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/electrification-lelysee-officialise-quatre-pactes-de-filieres",
       "date": "2026-06-03"
     },
     {
@@ -72,7 +171,7 @@
       "source": "Actuel HSE",
       "categorie": "Biodiversité",
       "titre": "L'AEE alerte sur la nécessité de lutter contre la pollution à l'ozone troposphérique",
-      "resume": "L'article souligne l'enjeu de la pollution à l'ozone troposphérique, un polluant atmosphérique réglementé en Europe, qui pourrait impacter les exigences clients d'ABC en matière de qualité de l'air et de conformité environnementale.",
+      "resume": "L'article souligne l'importance de réduire la pollution à l'ozone troposphérique, un enjeu environnemental et sanitaire qui pourrait impacter les exigences réglementaires et clients d'ABC, notamment dans le cadre de ses engagements BGES/plan climat et de la CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/laee-alerte-sur-la-necessite-de-lutter-contre-la-pollution-lozone-tropospherique-2",
@@ -83,21 +182,21 @@
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Chaleur au travail : le rappel du décret de 2025, et les conseils de l'INRS",
-      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures préventives pour les salariés exposés à des températures élevées, ce qui peut impacter les conditions de travail des équipes de nettoyage chez les clients d'ABC, notamment en période estivale.",
+      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures de prévention pour les salariés exposés à des températures élevées, ce qui peut impacter les conditions de travail des équipes de nettoyage chez les clients d'ABC, notamment en période estivale.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-le-rappel-du-decret-de-2025-et-les-conseils-de-linrs-0",
       "date": "2026-06-03"
     },
     {
-      "id": "0a3d3d1bfd70",
-      "source": "Actu-Environnement",
+      "id": "3c0694d5878c",
+      "source": "EFRAG",
       "categorie": "Déchets",
-      "titre": "Obsolescence programmée : Epson comparaîtra devant le tribunal correctionnel début juillet",
-      "resume": "L'obsolescence programmée est un enjeu réglementaire et RSE croissant en Europe, pouvant impacter les politiques d'achat et de gestion des équipements (imprimantes, etc.) d'ABC. Cela pourrait influencer les exigences clients en matière de durabilité des prestations.",
+      "titre": "EFRAG SRB Online Meeting 3 June 2026",
+      "resume": "L'article annonce une réunion de l'EFRAG SRB sur le reporting extra-financier, pertinente pour la préparation de la CSRD et des ESRS, mais sans obligation directe immédiate pour ABC.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/proces-epson-obsolescence-programmee-imprimante-48083.php4#xtor=RSS-6",
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-online-meeting-3-june-2026",
       "date": "2026-06-02"
     }
   ],
@@ -105,11 +204,6 @@
     {
       "dept_code": "45",
       "dept_nom": "Loiret",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "24",
-      "dept_nom": "Dordogne",
       "niveau": "crise"
     },
     {
@@ -993,7 +1087,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Aucun des textes publiés ne traite directement de sujets environnementaux, climatiques ou de responsabilité sociétale des entreprises (RSE) pour les grandes entreprises de services. Les arrêtés et avis concernent principalement des nominations, des conventions collectives, des parités hommes-femmes ou des ajustements administratifs.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1023,6 +1117,329 @@
       "statut": "a_surveiller"
     }
   ],
-  "pjl_autres": [],
-  "pjl_briefing": ""
+  "pjl_autres": [
+    {
+      "source": "AN Projets de loi",
+      "items": [
+        {
+          "titre": "Projet de loi relatif à la protection des enfants - N° 2841",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_relatif_a_la_protection_des_enfants",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_relatif_a_la_protection_des_enfants",
+          "date": "2026-06-03"
+        },
+        {
+          "titre": "Projet de loi visant à offrir des réponses immédiates aux phénomènes troublant l’ordre public, la sécurité et la tranquillité de nos concitoyens - N° 2850",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53980",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53980",
+          "date": "2026-03-25"
+        },
+        {
+          "titre": "Projet de loi portant approbation des comptes de la sécurité sociale de l’année 2025 - N° 2843",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_portant_approbation_des_comptes_de_la_securite_sociale_de_annee_2025",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_portant_approbation_des_comptes_de_la_securite_sociale_de_annee_2025",
+          "date": "2026-05-27"
+        },
+        {
+          "titre": "Projet de loi habilitant le Gouvernement à prendre, par ordonnances, les adaptations rendues nécessaires par l’entrée en application des règlements (UE) n°s 2024/1347, 2024/1348, 2024/1349, 2024/1350, 2024/1351, 2024/1352, 2024/1356, 2024/1358, 2024/1359 du Parlement européen et du Conseil du 14 mai 2024, et les dispositions nécessaires à la transposition de la directive (UE) 2024/1346 du Parlement européen et &#13;du Conseil du 14 mai 2024 - N° 2820",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54094",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54094",
+          "date": "2026-04-08"
+        },
+        {
+          "titre": "Projet de loi portant transposition de l’avenant n°3 du 25 février 2026 au protocole d’accord du 10 novembre 2023 relatif à l’assurance chômage - N° 2805",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53981",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53981",
+          "date": "2026-03-25"
+        },
+        {
+          "titre": "Projet de loi Projet de loi-cadre relatif au développement des transports - N° 2740",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53785",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53785",
+          "date": "2026-02-11"
+        },
+        {
+          "titre": "Projet de loi constitutionnelle pour une Corse autonome au sein de la République - N° 2697",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_constitutionnelle_pour_Corse_autonome_au_sein_Republique",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_constitutionnelle_pour_Corse_autonome_au_sein_Republique",
+          "date": "2026-04-27"
+        },
+        {
+          "titre": "Résultats de la gestion et portant approbation des comptes de l'année 2025 - N° 2694",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/resultats_gestion_approbation_comptes_2025",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/resultats_gestion_approbation_comptes_2025",
+          "date": "2026-04-22"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement du Royaume des Pays-Bas portant délimitation de la frontière entre la République française (Saint-Martin) et le Royaume des Pays-Bas (Sint Maarten) - N° 2688",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53848",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53848",
+          "date": "2026-02-25"
+        },
+        {
+          "titre": "Projet de loi sur la justice criminelle et le respect des victimes - N° 2681",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53940",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53940",
+          "date": "2026-03-18"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord de partenariat et de coopération renforcé&#13;entre l'Union européenne et ses Etats membres, d'une part, et la République kirghize, d'autre part - N° 2691",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53844",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53844",
+          "date": "2026-02-25"
+        },
+        {
+          "titre": "Projet de loi organique relatif au renforcement des juridictions criminelles - N° 2682",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53942",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53942",
+          "date": "2026-03-18"
+        },
+        {
+          "titre": "Projet de loi actualisant la programmation militaire pour les années 2024 à 2030 et portant diverses dispositions intéressant la défense - N° 2630",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PJL_actualisation_loi_programmation_militaire_annees_2024_2030_diverses_dispositions_defense",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PJL_actualisation_loi_programmation_militaire_annees_2024_2030_diverses_dispositions_defense",
+          "date": "2026-04-08"
+        },
+        {
+          "titre": "Projet de loi d’urgence pour la protection et la souveraineté agricoles - N° 2632",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_urgence_pour_protection_et_souverainete_agricoles",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_urgence_pour_protection_et_souverainete_agricoles",
+          "date": "2026-04-08"
+        },
+        {
+          "titre": "Projet de loi portant habilitation de l’assemblée de Martinique à fixer elle-même des règles applicables sur son territoire en application de l’article 73 de la Constitution en matière d’énergie, d’eau et d’assainissement - N° 2609",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53600",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53600",
+          "date": "2026-01-19"
+        },
+        {
+          "titre": "Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche - N° 2518",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
+          "date": "2025-11-10"
+        },
+        {
+          "titre": "Projet de loi constitutionnelle relatif à la Nouvelle-Calédonie - N° 2529",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52984",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52984",
+          "date": "2025-10-14"
+        },
+        {
+          "titre": "Projet de loi de financement de la sécurité sociale pour 2026 - N° 2242",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2026",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2026",
+          "date": "2025-10-14"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de la convention entre le Gouvernement de la République française et le Gouvernement de la République de Chypre pour l’élimination de la double imposition en matière d’impôts sur le revenu et la prévention de l’évasion et de la fraude fiscales - N° 2516",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53706",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53706",
+          "date": "2026-01-28"
+        },
+        {
+          "titre": "Projet de loi autorisant l'approbation de la Convention entre le Gouvernement de la République française et le Gouvernement de la République italienne relative à l’entretien courant et à l’exploitation de la section située en territoire français de la lign - N° 2510",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53730",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53730",
+          "date": "2026-02-04"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de la convention d’extradition entre le Gouvernement de la République française et le Gouvernement de la République de Colombie - N° 2509",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53095",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53095",
+          "date": "2025-10-29"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République de Moldavie dans le domaine de la sécurité sociale - N° 2471",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/moldavie_securite_sociale",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/moldavie_securite_sociale",
+          "date": "2026-02-11"
+        },
+        {
+          "titre": "Projet de loi relatif à l’extension des prérogatives, des moyens, de l’organisation et du contrôle des polices municipales et des gardes champêtres - N° 2464",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53096",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53096",
+          "date": "2025-10-29"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et la Communauté des Caraïbes relatif à l’adhésion au protocole sur les privilèges et immunités de la Communauté des Caraïbes du 14 janvier 1985 - N° 2414",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53235",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53235",
+          "date": "2025-11-26"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République du Kazakhstan sur la réadmission des personnes - N° 2416",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53388",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53388",
+          "date": "2025-12-17"
+        },
+        {
+          "titre": "Projet de loi relatif à la restitution de biens culturels provenant d’États qui, du fait d’une appropriation illicite, en ont été privés - N° 2408",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52635",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52635",
+          "date": "2025-07-30"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République de Moldova relatif à la coopération dans le domaine de la défense - N° 2050",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_autorisant_approbation_accord_gouvernement_moldova_defense",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_autorisant_approbation_accord_gouvernement_moldova_defense",
+          "date": "2025-10-29"
+        },
+        {
+          "titre": "Projet de loi spéciale prévue par l'article 45 de la loi organique n°2001-692 du 1er août 2001 relative aux lois de finances - N° 2269",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/loi_speciale_2026",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/loi_speciale_2026",
+          "date": "2025-12-22"
+        },
+        {
+          "titre": "Projet de loi de finances pour 2026 - N° 2247",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2026",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2026",
+          "date": "2025-10-14"
+        }
+      ]
+    },
+    {
+      "source": "AN Textes adoptés",
+      "items": [
+        {
+          "titre": "Texte adopté N° 292",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/mobilisation_habitant_existant_crise_logement_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/mobilisation_habitant_existant_crise_logement_17e",
+          "date": "2026-04-14"
+        },
+        {
+          "titre": "Texte adopté N° 290",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/abrogation_code_noir",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/abrogation_code_noir",
+          "date": "2025-09-16"
+        },
+        {
+          "titre": "Texte adopté N° 289",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reconnaissance_commemoration_genocide_Roms_Sintis_Gitans_Manouches_Yeniches_Voyageurs",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reconnaissance_commemoration_genocide_Roms_Sintis_Gitans_Manouches_Yeniches_Voyageurs",
+          "date": "2026-03-25"
+        },
+        {
+          "titre": "Texte adopté N° 288",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52104",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52104",
+          "date": "2025-05-16"
+        },
+        {
+          "titre": "Texte adopté N° 286",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/montagne_vivante_souveraine_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/montagne_vivante_souveraine_17e",
+          "date": "2026-03-27"
+        },
+        {
+          "titre": "Texte adopté N° 285",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_mettre_en_place_programme_de_soutien_innovation_therapeutique_contre_cancers_maladies_rares_et_orphelines_enfant_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_mettre_en_place_programme_de_soutien_innovation_therapeutique_contre_cancers_maladies_rares_et_orphelines_enfant_17e",
+          "date": "2025-10-14"
+        },
+        {
+          "titre": "Texte adopté N° 284",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/information_protection_victimes_violences_sexuelles_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/information_protection_victimes_violences_sexuelles_17e",
+          "date": "2025-09-16"
+        },
+        {
+          "titre": "Texte adopté N° 283",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_developpement_transport_maritime_propulsion_velique_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_developpement_transport_maritime_propulsion_velique_17e",
+          "date": "2025-06-04"
+        },
+        {
+          "titre": "Texte adopté N° 282",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/condamner_derive_illiberale_autoritaire_gouvernement_georgien_reaffirmer_soutien_destin_europeen_Georgie",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/condamner_derive_illiberale_autoritaire_gouvernement_georgien_reaffirmer_soutien_destin_europeen_Georgie",
+          "date": "2025-09-24"
+        },
+        {
+          "titre": "Texte adopté N° 281",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/renforcer_parcours_inclusif_eleves_handicap",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/renforcer_parcours_inclusif_eleves_handicap",
+          "date": "2024-10-15"
+        },
+        {
+          "titre": "Texte adopté N° 278",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/retention_admin_prevention_attentats_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/retention_admin_prevention_attentats_17e",
+          "date": "2025-12-02"
+        },
+        {
+          "titre": "Texte adopté N° 277",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/faciliter_exercice_france_medecins_diplomes_royaume_uni_avant_brexit_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/faciliter_exercice_france_medecins_diplomes_royaume_uni_avant_brexit_17e",
+          "date": "2025-11-18"
+        },
+        {
+          "titre": "Texte adopté N° 276",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52230",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52230",
+          "date": "2025-05-19"
+        },
+        {
+          "titre": "Texte adopté N° 273",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L16N49868",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L16N49868",
+          "date": "2024-04-24"
+        },
+        {
+          "titre": "Texte adopté N° 271",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53315",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53315",
+          "date": "2025-12-04"
+        },
+        {
+          "titre": "Texte adopté N° 270",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51987",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51987",
+          "date": "2025-04-25"
+        },
+        {
+          "titre": "Texte adopté N° 268",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/penalisation_rave_party_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/penalisation_rave_party_17e",
+          "date": "2025-03-18"
+        },
+        {
+          "titre": "Texte adopté N° 267",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/encadrer_regroupements_pedagogiques_intercommunaux_garantir_egalite_acces_ecole_rural_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/encadrer_regroupements_pedagogiques_intercommunaux_garantir_egalite_acces_ecole_rural_17e",
+          "date": "2026-02-17"
+        },
+        {
+          "titre": "Texte adopté N° 263",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52985",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52985",
+          "date": "2025-10-14"
+        },
+        {
+          "titre": "Texte adopté N° 266",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reconnaitre_politique_nationale_adaptation_changement_climatique_adapter_mecanismes_assurance_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reconnaitre_politique_nationale_adaptation_changement_climatique_adapter_mecanismes_assurance_17e",
+          "date": "2025-10-28"
+        },
+        {
+          "titre": "Texte adopté N° 265",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_prevention_cardio_neuro_vasculaire_et_anticiper_risque_sanitaire_et_social_majeur_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_prevention_cardio_neuro_vasculaire_et_anticiper_risque_sanitaire_et_social_majeur_17e",
+          "date": "2025-12-23"
+        },
+        {
+          "titre": "Texte adopté N° 264",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_millefeuille_territorial_collectivite_unique_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_millefeuille_territorial_collectivite_unique_17e",
+          "date": "2025-09-16"
+        },
+        {
+          "titre": "Texte adopté N° 261",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fonds_social_euro_plus_banques_alimentaires",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fonds_social_euro_plus_banques_alimentaires",
+          "date": "2026-02-10"
+        }
+      ]
+    }
+  ],
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et économique) et le projet de loi n°2632 (protection et souveraineté agricoles) pourraient impacter indirectement les enjeux climatiques et RSE d’une entreprise de services, notamment via des adaptations réglementaires ou des mesures sectorielles. Aucun texte ne traite directement de reporting extra-financier ou de transition énergétique."
 }
