@@ -1,32 +1,54 @@
 {
   "date": "2026-06-04",
-  "generated_at": "09:46",
-  "elapsed_seconds": 341,
+  "generated_at": "14:21",
+  "elapsed_seconds": 476,
   "errors": [],
   "stats": {
     "jo_analyses": 32,
-    "jo_retenus": 1,
-    "depts_restriction": 25
+    "jo_retenus": 2,
+    "depts_restriction": 26
   },
   "pipeline_meta": {
-    "run_at": "2026-06-04T09:46:37",
+    "run_at": "2026-06-04T14:21:38",
     "sources": {
-      "JORF": 1,
-      "RSS": 12,
-      "VigiEau": 25,
+      "JORF": 2,
+      "RSS": 11,
+      "VigiEau": 26,
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 71,
-    "llm_seconds": 70.6
+    "llm_calls": 73,
+    "llm_seconds": 74.6
   },
   "items": [
+    {
+      "id": "54fb63e7d99e",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Déchets : la cour administrative d'appel de Bordeaux valide la collecte en apport volontaire en Dordogne",
+      "resume": "L'article confirme la validation de la collecte en apport volontaire des déchets en Dordogne, ce qui pourrait influencer les pratiques de gestion des déchets des clients d'ABC et leurs exigences en matière de traçabilité et de conformité réglementaire.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/dechets-dordogne-validation-collecte-apport-volontaire-48095.php4#xtor=RSS-6",
+      "date": "2026-06-04"
+    },
+    {
+      "id": "f6082e4472a7",
+      "source": "Haut Conseil pour le Climat",
+      "categorie": "Biodiversité",
+      "titre": "Publication de deux notes rédigées par Marta Torre Schaub à l’attention du Haut conseil pour le climat",
+      "resume": "Les notes de Marta Torre Schaub, experte en droit environnemental et climat, pourraient influencer les orientations du Haut conseil pour le climat, potentiellement en lien avec les politiques climatiques françaises (SNBC, PNACC) ou les exigences de reporting ESG (CSRD/ESRS) pertinentes pour ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.hautconseilclimat.fr/actualites/publication-de-deux-notes-redigees-par-marta-torre-schaub-a-lattention-du-haut-conseil-pour-le-climat/",
+      "date": "2026-06-04"
+    },
     {
       "id": "bcb950e15ce5",
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "Apave Acquires Climate School from AXA",
-      "resume": "L'acquisition d'une entreprise spécialisée dans la formation climatique des employés par Apave pourrait influencer les attentes des clients d'ABC en matière de sensibilisation et de compétences internes en décarbonation, notamment pour les secteurs nucléaires, santé et industrie.",
+      "resume": "L'acquisition de Climate School par Apave pourrait renforcer l'offre de formation climatique pour les entreprises, mais n'a pas d'impact direct immédiat sur ABC en termes réglementaires ou opérationnels.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/apave-acquires-climate-school-from-axa/?utm_source=rss&utm_medium=rss&utm_campaign=apave-acquires-climate-school-from-axa",
@@ -37,7 +59,7 @@
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Les récents épisodes de chaleur précoces accentuent la pollution atmosphérique à l'ozone",
-      "resume": "Les épisodes de chaleur précoces augmentent les risques de pollution à l'ozone, pouvant impacter la santé des employés en prestation de propreté et la qualité de l'air sur les sites clients, nécessitant une vigilance accrue sur les conditions de travail et les exigences clients en matière de qualité environnementale.",
+      "resume": "Les épisodes de chaleur précoces augmentent les risques de pollution à l'ozone, ce qui pourrait impacter les activités de propreté/FM d'ABC (exposition des agents, adaptation des prestations) et nécessiter une vigilance accrue sur les sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/les-recents-episodes-de-chaleur-precoces-accentuent-la-pollution-atmospherique-lozone-2",
@@ -48,7 +70,7 @@
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Chaleur au travail : le rappel du décret de 2025, et les conseils de l'INRS",
-      "resume": "Le décret 2025 sur la chaleur au travail impose des mesures de prévention pour les salariés exposés à des températures élevées, ce qui peut impacter les conditions de travail des équipes de propreté/FM d'ABC chez ses clients, notamment en période estivale.",
+      "resume": "Le décret de 2025 sur la chaleur au travail impose des mesures de prévention pour les salariés exposés, ce qui peut impacter les conditions de travail des équipes d'ABC intervenant chez ses clients, notamment en période estivale.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-le-rappel-du-decret-de-2025-et-les-conseils-de-linrs-0",
@@ -59,7 +81,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Recyclage chimique : Carbios annonce le report d'au moins un an de son projet d'usine en Asie",
-      "resume": "Le report du projet d'usine de recyclage chimique de Carbios en Asie pourrait influencer les stratégies de gestion des déchets plastiques des clients d'ABC, notamment dans les secteurs industriels ou tertiaires sensibles aux enjeux de recyclage et d'économie circulaire.",
+      "resume": "Le report du projet d'usine de recyclage chimique de Carbios en Asie pourrait influencer les stratégies de gestion des déchets plastiques des clients d'ABC, notamment dans les secteurs industriels ou tertiaires, et impacter les exigences en matière de recyclage des matériaux dans les contrats de prestation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/report-projet-carbios-wankai-recyclage-pet-48087.php4#xtor=RSS-6",
@@ -70,7 +92,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "L’Occitanie présente ses nouvelles mesures de transition énergétique",
-      "resume": "L'article souligne l'ambition régionale de transition énergétique en Occitanie, sans impact direct réglementaire ou opérationnel pour ABC, mais illustre une tendance nationale vers des objectifs énergétiques ambitieux.",
+      "resume": "L'article met en avant les ambitions régionales en matière de transition énergétique, ce qui peut influencer les attentes des clients d'ABC (notamment dans les secteurs nucléaire, santé ou industrie) en matière de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/loccitanie-presente-ses-nouvelles-mesures-de-transition-energetique-425533/",
@@ -81,43 +103,10 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "La Nouvelle-Aquitaine prépare un nouveau PPA multi-acheteurs",
-      "resume": "La Nouvelle-Aquitaine lance un nouveau PPA (Power Purchase Agreement) multi-acheteurs pour de l'électricité renouvelable, offrant une opportunité d'achat groupé d'énergie verte pour les entreprises locales, dont ABC pourrait bénéficier en tant que prestataire de services.",
+      "resume": "La Nouvelle-Aquitaine lance un nouveau PPA multi-acheteurs pour l'électricité renouvelable, offrant une opportunité pour ABC de sécuriser son approvisionnement énergétique et de réduire son empreinte carbone via des contrats d'achat direct (PPA) avec des producteurs éoliens ou solaires.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/la-nouvelle-aquitaine-prepare-un-nouveau-ppa-multi-acheteurs-425532/",
-      "date": "2026-06-03"
-    },
-    {
-      "id": "4f7a549bf1e8",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Biométhane, hydrogène, CO2… : où en est le réseau gazier Teréga ?",
-      "resume": "L'article aborde les évolutions du réseau gazier Teréga vers l'hydrogène et le CO2, sans impact direct réglementaire ou opérationnel pour ABC, mais reste pertinent pour suivre les tendances énergétiques et les infrastructures décarbonées en France.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/06/biomethane-hydrogene-co2-ou-en-est-le-reseau-gazier-terega-425454/",
-      "date": "2026-06-03"
-    },
-    {
-      "id": "3c73e24a3839",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Après la canicule, le gouvernement réduit le budget destiné à l’adaptation au réchauffement climatique",
-      "resume": "La réduction du budget du fonds vert pourrait impacter les financements disponibles pour les collectivités clientes d'ABC, notamment via des projets d'adaptation climatique (ex : rénovation énergétique des bâtiments, gestion des déchets). Cela pourrait influencer les appels d'offres et les exigences carbone des clients dans les années à venir.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/06/03/apres-la-canicule-le-gouvernement-reduit-le-budget-destine-a-l-adaptation-au-rechauffement-climatique_6696604_3244.html",
-      "date": "2026-06-03"
-    },
-    {
-      "id": "6b8b455aa8d3",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "« La majorité des émissions de PFAS en Europe provient des climatiseurs et des pompes à chaleur, pourtant fers de lance de la décarbonation »",
-      "resume": "Les PFAS, substances chimiques utilisées dans les climatiseurs et pompes à chaleur (technologies clés pour la décarbonation), pourraient faire l'objet de restrictions réglementaires en Europe, impactant potentiellement les équipements de nettoyage ou de traitement d'air utilisés par ABC chez ses clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/06/03/la-majorite-des-emissions-de-pfas-en-europe-provient-des-climatiseurs-et-des-pompes-a-chaleur-pourtant-fers-de-lance-de-la-decarbonation_6696594_3232.html",
       "date": "2026-06-03"
     },
     {
@@ -125,7 +114,7 @@
       "source": "ESG Today",
       "categorie": "Énergie",
       "titre": "Gigaton Raises $26 Million to Slash Emissions Across Cement, Steel, Glass, Chemicals Sectors",
-      "resume": "L'article met en lumière des solutions technologiques (IA) pour décarboner des secteurs industriels énergivores (ciment, acier, verre, chimie), ce qui pourrait impacter indirectement ABC via les exigences carbone de ses clients industriels ou énergétiques.",
+      "resume": "L'article met en lumière des solutions technologiques (IA) pour décarboner des secteurs industriels lourds (ciment, acier, verre, chimie), qui pourraient intéresser ABC dans le cadre de son reporting CSRD ou de ses engagements clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/gigaton-raises-26-million-to-slash-emissions-across-cement-steel-glass-chemicals-sectors/?utm_source=rss&utm_medium=rss&utm_campaign=gigaton-raises-26-million-to-slash-emissions-across-cement-steel-glass-chemicals-sectors",
@@ -136,7 +125,7 @@
       "source": "The Guardian Environment",
       "categorie": "Déchets",
       "titre": "​Why is Europe still not ready for extreme heat?",
-      "resume": "L'article souligne l'augmentation des risques climatiques (vagues de chaleur) en Europe, pouvant impacter les sites clients d'ABC (ex : santé des employés, perturbations opérationnelles) et nécessiter une adaptation des services (ex : nettoyage adapté aux températures extrêmes).",
+      "resume": "L'article souligne l'augmentation des vagues de chaleur en Europe, un risque climatique opérationnel pouvant impacter les sites clients d'ABC (3 000+ sites) et leurs exigences en matière de résilience climatique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.theguardian.com/world/2026/jun/03/why-is-europe-still-not-ready-for-extreme-heat",
@@ -147,7 +136,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Énergie",
       "titre": "Fiscalité de l'énergie : la révolution qui s'impose - Les Echos",
-      "resume": "L'article aborde la fiscalité de l'énergie en France, un sujet clé pour ABC dans le cadre de la décarbonation de sa flotte de véhicules (scope 1) et de la gestion énergétique de ses sites clients (énergie, efficacité).",
+      "resume": "L'article aborde la fiscalité de l'énergie en France, un levier clé pour la décarbonation des entreprises. ABC pourrait être impacté indirectement via la hausse des coûts énergétiques ou les incitations à la transition énergétique dans ses prestations.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTHVueDQ5MzlWM1NaVy1VM29VWUxJbU1QSXFNZFBtTERaMHRVYW9oZUFkdmxJWWxqazN3YWZBd1ZOSk5FbEtqdXM3dlBCZHhGYVdsNXdXOTFYLVREbzVPRWt3SUgyZEZZTEpHejlNYzFEbnRsT1EyOEZuemp3N3FBb2JsYVFCalVpdEtKYzZuU1JJNVFlSUIzNHhwbTR3Q21tZWtIcXZaWk5QMmJ4?oc=5",
@@ -211,6 +200,16 @@
       "niveau": "alerte"
     },
     {
+      "dept_code": "33",
+      "dept_nom": "Gironde",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "23",
+      "dept_nom": "Creuse",
+      "niveau": "alerte"
+    },
+    {
       "dept_code": "32",
       "dept_nom": "Gers",
       "niveau": "vigilance"
@@ -228,11 +227,6 @@
     {
       "dept_code": "55",
       "dept_nom": "Meuse",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "23",
-      "dept_nom": "Creuse",
       "niveau": "vigilance"
     },
     {
@@ -751,12 +745,6 @@
       "date": "2026-06-04"
     },
     {
-      "titre": "Décret n° 2026-433 du 2 juin 2026 relatif à la police des déchets et à la lutte contre l'abandon de déchets, à la traçabilité et au tri performant",
-      "nature": "DECRET",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054190097",
-      "date": "2026-06-04"
-    },
-    {
       "titre": "Arrêté du 2 juin 2026 relatif aux comités sociaux d'administration et aux formations spécialisées du ministère de la transition écologique, de la biodiversité et des négociations internationales sur le climat et la nature, du ministère de l'aménagement du territoire et de la décentralisation, du ministère des transports et du ministère de la ville et du logement",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054190354",
@@ -939,12 +927,23 @@
   ],
   "jo_retenus": [
     {
+      "id": "ca48a8242ae1",
+      "source": "JORF",
+      "categorie": "Climat",
+      "titre": "Décret n° 2026-433 du 2 juin 2026 relatif à la police des déchets et à la lutte contre l'abandon de déchets, à la traçabilité et au tri performant",
+      "resume": "Renforcement des obligations de traçabilité et de tri des déchets pour les prestataires de services comme ABC, avec risques de sanctions en cas de non-conformité.",
+      "pourquoi": "Le décret concerne directement la gestion des déchets des prestataires de services (incluant la propreté/FM) via des exigences accrues de traçabilité et de tri performant, applicables à ABC dans le cadre de ses prestations chez les clients. Bien que non ICPE, ABC est soumis aux règles générales des déchets en tant que producteur/gestionnaire.",
+      "criticite": 2,
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054190097",
+      "date": "2026-06-04"
+    },
+    {
       "id": "82223f6ddd20",
       "source": "JORF",
       "categorie": "Déchets",
       "titre": "Décret n° 2026-435 du 2 juin 2026 portant diverses dispositions relatives à la sortie du statut de déchet, aux sous-produits et au tri des biodéchets",
-      "resume": "Renforcement des obligations de tri et de valorisation des biodéchets pour les prestataires de services comme ABC, impactant la gestion des déchets de ses clients.",
-      "pourquoi": "Le décret impose un tri et une valorisation renforcés des biodéchets d'ici 2026, avec un risque de non-conformité pour ABC si ses clients (3 000+ sites) ne sont pas accompagnés dans cette transition, mais aussi une opportunité de différenciation RSE et de fidélisation via des solutions clés en main de gestion des biodéchets.",
+      "resume": "Extension des obligations de tri des biodéchets pour les prestataires de services comme ABC, avec impact sur la gestion des déchets de ses clients et sa propre filière de traitement.",
+      "pourquoi": "Ce décret impose à ABC, en tant que prestataire multiservices, une obligation concrète de tri des biodéchets sur l'ensemble des sites clients d'ici 2026 (délai court), générant un risque opérationnel et réglementaire majeur : non-conformité entraînant des sanctions, mais aussi une opportunité de différenciation commerciale via des solutions clés en main de gestion des biodéchets (partenariats avec éco-organismes, valorisation énergétique ou agronomique), alignées sur les exigences croissantes des clients en matière de RSE et de circularité.",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054190169",
       "date": "2026-06-04"
@@ -1138,7 +1137,7 @@
           "titre": "Projet de loi relatif à la restitution de biens culturels provenant d’États qui, du fait d’une appropriation illicite, en ont été privés - N° 2408",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52635",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52635",
-          "date": "2025-07-30"
+          "date": "2026-06-04"
         },
         {
           "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République de Moldova relatif à la coopération dans le domaine de la défense - N° 2050",
@@ -1156,13 +1155,19 @@
           "titre": "Projet de loi de finances pour 2026 - N° 2247",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2026",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLF_2026",
-          "date": "2025-10-14"
+          "date": "2026-06-04"
         }
       ]
     },
     {
       "source": "AN Textes adoptés",
       "items": [
+        {
+          "titre": "Texte adopté N° 300",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_reduire_risques_sanitaires_lies_aux_contaminations_au_cadmium_dans_alimentation_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_reduire_risques_sanitaires_lies_aux_contaminations_au_cadmium_dans_alimentation_17e",
+          "date": "2026-04-14"
+        },
         {
           "titre": "Texte adopté N° 292",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/mobilisation_habitant_existant_crise_logement_17e",
@@ -1294,15 +1299,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_millefeuille_territorial_collectivite_unique_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/simplifier_millefeuille_territorial_collectivite_unique_17e",
           "date": "2025-09-16"
-        },
-        {
-          "titre": "Texte adopté N° 261",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fonds_social_euro_plus_banques_alimentaires",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fonds_social_euro_plus_banques_alimentaires",
-          "date": "2026-02-10"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et climatique) et le projet de loi n°2632 (protection et souveraineté agricoles) pourraient avoir un impact indirect sur les enjeux RSE d’une entreprise de services, notamment via des adaptations réglementaires en matière d’énergie, d’eau, d’assainissement ou d’agriculture durable. Aucun texte ne traite directement de reporting climatique ou de décarbonation des activités."
+  "pjl_briefing": "Aucun des projets de loi ou textes adoptés listés ne traite directement de sujets environnementaux, climatiques, énergétiques ou de RSE. Les textes adoptés concernent principalement des approbations d'accords internationaux ou des mesures budgétaires et administratives, sans lien avec les enjeux de durabilité ou de transition écologique."
 }
