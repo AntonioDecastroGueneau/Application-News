@@ -1,7 +1,7 @@
 {
   "date": "2026-06-05",
-  "generated_at": "09:36",
-  "elapsed_seconds": 610,
+  "generated_at": "14:09",
+  "elapsed_seconds": 219,
   "errors": [],
   "stats": {
     "jo_analyses": 26,
@@ -9,7 +9,7 @@
     "depts_restriction": 28
   },
   "pipeline_meta": {
-    "run_at": "2026-06-05T09:36:04",
+    "run_at": "2026-06-05T14:09:56",
     "sources": {
       "JORF": 0,
       "RSS": 10,
@@ -19,8 +19,8 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 83,
-    "llm_seconds": 82.0
+    "llm_calls": 82,
+    "llm_seconds": 81.6
   },
   "items": [
     {
@@ -28,10 +28,21 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Fortes chaleurs : l’instruction acte le passage de l’accompagnement au contrôle",
-      "resume": "L'article annonce un renforcement des contrôles sur la gestion des vagues de chaleur en 2026, avec des obligations accrues pour les employeurs, ce qui impacte directement les conditions de travail des équipes de propreté/FM d'ABC intervenant sur site client.",
-      "pourquoi": "L'article traite d'un risque climatique opérationnel (fortes chaleurs) avec des implications réglementaires concrètes pour les entreprises de services intervenant sur site (droit de retrait, obligations de prévention, conditionnalité de l'activité partielle). Bien que non directement lié aux enjeux spécifiques d'ABC (BGES, CSRD, flotte véhicules), cela concerne la sécurité et les conditions de travail des employés sur les 3 000+ sites clients, avec un risque de perturbation des prestations.",
+      "resume": "L'article annonce un renforcement des contrôles sur la gestion des vagues de chaleur en 2026, avec des obligations accrues pour les employeurs, notamment en matière de prévention des risques physiques pour les salariés. Cela impacte indirectement ABC via la sécurité de ses 3 000+ sites clients et la gestion des risques climatiques opérationnels.",
+      "pourquoi": "Bien que l'article cible principalement le BTP, les obligations de prévention des fortes chaleurs (droit de retrait, activité partielle conditionnée) concernent tous les secteurs employeurs en France. ABC, intervenant sur des sites clients variés, doit anticiper ces exigences réglementaires pour ses propres équipes et ses clients, notamment dans le cadre de ses engagements BGES/plan climat et de la gestion des risques climatiques.",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-linstruction-acte-le-passage-de-laccompagnement-au-controle",
+      "date": "2026-06-05"
+    },
+    {
+      "id": "8a12170e641b",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Deux appels d’offres relancés pour décarboner les industriels",
+      "resume": "Ces appels d'offres visent à accélérer la décarbonation des industriels, ce qui pourrait impacter les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé ou industrie) et influencer leurs politiques d'achat ou de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/deux-appels-doffres-relances-pour-decarboner-les-industriels-425768/",
       "date": "2026-06-05"
     },
     {
@@ -39,7 +50,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Les documents de la semaine",
-      "resume": "Cette newsletter hebdomadaire recense les documents clés (réglementaires, études, analyses) liés à la transition énergétique, utile pour suivre les évolutions impactant les enjeux climatiques, énergétiques et réglementaires d'ABC (BGES, CSRD, mobilité, énergie).",
+      "resume": "Cet article hebdomadaire compile des documents clés (réglementations, études, rapports) liés à la transition énergétique, offrant une veille utile pour suivre les évolutions réglementaires et normatives impactant les enjeux climatiques et RSE d'ABC (BGES, CSRD, mobilité durable, etc.).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/les-documents-de-la-semaine-381215/",
@@ -50,7 +61,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "L’agenda de la transition énergétique",
-      "resume": "Cet article liste des événements professionnels sur la transition énergétique (énergies renouvelables, mobilité électrique, décarbonation de l'industrie) qui peuvent être utiles pour identifier des opportunités de veille ou de partenariats pour ABC, notamment sur la mobilité durable et la décarbonation.",
+      "resume": "L'article recense des événements professionnels sur la transition énergétique (énergies renouvelables, mobilité électrique, décarbonation de l'industrie), offrant à ABC une veille sur les tendances et opportunités sectorielles pertinentes pour ses enjeux de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/lagenda-de-la-transition-energetique-280-424554/",
@@ -61,10 +72,21 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Après trois ans de stagnation, les investissements climatiques frémissent en Europe en réaction à la guerre au Moyen-Orient",
-      "resume": "L'article signale un frémissement des investissements climatiques en Europe en 2025, avec un potentiel rebond en 2026 lié à des tensions géopolitiques, ce qui pourrait influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et leurs stratégies de décarbonation.",
+      "resume": "L'article souligne un frémissement des investissements climatiques en Europe en 2025, potentiellement accéléré par des tensions géopolitiques (blocage détroit d'Ormuz), ce qui pourrait influencer les politiques énergétiques et industrielles des clients d'ABC et leurs exigences en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/06/05/apres-trois-ans-de-stagnation-les-investissements-climatiques-fremissent-en-europe-en-reaction-a-la-guerre-au-moyen-orient_6697893_3244.html",
+      "date": "2026-06-05"
+    },
+    {
+      "id": "2a1123a32ebe",
+      "source": "Les Echos Environnement",
+      "categorie": "Climat",
+      "titre": "Bruxelles assouplit les règles budgétaires pour la transition énergétique - Investir Les Echos",
+      "resume": "L'assouplissement des règles budgétaires européennes pourrait faciliter le financement de projets de transition énergétique pour les entreprises, y compris celles du secteur de la propreté/FM comme ABC, en simplifiant l'accès aux fonds publics ou aux incitations financières.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQcjVIczZfRzREb09XSXJ6bzV1S3RIVDdESnhJVW1PTnFqd0N6Wmhwd1poaEVYV2UxZklnN3VkUk42dmMzcnNUclJzTER4Ym1UUEF0ZEZvSDRuWW92aXc3d3dISm9zaExnYkJQWnB1ZmNZVllxbFpwWDUxalY0aGFuRDdac0VlX2xrRVZRREk5YU5HZkhTRUVMUG1pcDhqTGM3UzAwRDJhM19pX3dUTUJCRXJTRkhXTVhOM25vMXF2bVhjSFJpeGdGa09yR3diY0s5RnQ3RU0wSEt4MmNmd3c?oc=5",
       "date": "2026-06-05"
     },
     {
@@ -72,54 +94,32 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Réemploi des emballages professionnels : une pratique qui ne demande qu’à progresser",
-      "resume": "L'article aborde le réemploi des emballages professionnels, un sujet lié à la gestion des déchets et à la réglementation REP qui pourrait impacter les pratiques de tri et de traçabilité des déchets pour ABC, notamment dans le cadre de ses prestations de propreté/FM.",
+      "resume": "L'article aborde le réemploi des emballages professionnels, un sujet lié à la gestion des déchets (scope 3) et à la filière REP qui pourrait impacter les pratiques de gestion des déchets d'ABC et de ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/reemploi-des-emballages-professionnels-une-pratique-qui-ne-demande-qua-progresser",
       "date": "2026-06-05"
     },
     {
-      "id": "43c63af16592",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Inthy accélère dans les camions électriques, renonce à l’hydrogène",
-      "resume": "L'article souligne l'accélération des solutions de mobilité électrique pour les camions, ce qui impacte directement la stratégie de flotte de véhicules d'ABC (scope 1) et ses engagements de décarbonation.",
-      "pourquoi": "Le sujet concerne la mobilité durable et l'électrification des flottes, un enjeu clé pour ABC dans le cadre de sa stratégie de décarbonation (scope 1) et de conformité aux réglementations ZFE et aux attentes carbone de ses clients (nucléaire, santé, industrie).",
-      "criticite": 2,
-      "url": "https://www.greenunivers.com/2026/06/inthy-accelere-dans-les-camions-electriques-renonce-a-lhydrogene-425669/",
-      "date": "2026-06-04"
-    },
-    {
       "id": "4250f6ba0afa",
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Déchets : deux décrets modifient une série de dispositions règlementaires",
-      "resume": "Les décrets renforcent les obligations de tri, traçabilité et sanctions pour les déchets, impactant potentiellement la gestion des déchets des prestations de propreté/FM d'ABC et ses clients.",
-      "pourquoi": "",
-      "criticite": 1,
+      "resume": "Les décrets renforcent les obligations de tri, traçabilité et sanctions pour les déchets, impactant potentiellement la gestion des déchets des prestations de propreté/FM d'ABC et ses clients (scope 3).",
+      "pourquoi": "L'article traite de réglementation déchets (REP, traçabilité, sanctions) directement liée aux activités de propreté et FM d'ABC, avec un impact sur la gestion des déchets des clients (scope 3) et les obligations de reporting. Bien que non une obligation immédiate, cela influence les pratiques opérationnelles et le reporting ESG.",
+      "criticite": 2,
       "url": "https://www.actu-environnement.com/ae/news/decrets-police-dechet-depots-sauvages-tracabilite-sortie-statut-dechet-48097.php4#xtor=RSS-6",
       "date": "2026-06-04"
     },
     {
-      "id": "54fb63e7d99e",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Déchets : la cour administrative d'appel de Bordeaux valide la collecte en apport volontaire en Dordogne",
-      "resume": "L'article confirme la validation par la justice administrative de la collecte des déchets en apport volontaire en Dordogne, ce qui pourrait influencer les pratiques de gestion des déchets des clients d'ABC (non exploitant ICPE) et leurs exigences en matière de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/dechets-dordogne-validation-collecte-apport-volontaire-48095.php4#xtor=RSS-6",
-      "date": "2026-06-04"
-    },
-    {
-      "id": "f6082e4472a7",
-      "source": "Haut Conseil pour le Climat",
-      "categorie": "Biodiversité",
-      "titre": "Publication de deux notes rédigées par Marta Torre Schaub à l’attention du Haut conseil pour le climat",
-      "resume": "Les notes de Marta Torre Schaub, experte en climat et droit environnemental, adressées au Haut conseil pour le climat, pourraient influencer les orientations politiques françaises en matière de décarbonation et de reporting ESG, impactant indirectement les exigences carbone des clients d'ABC et les cadres réglementaires applicables.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.hautconseilclimat.fr/actualites/publication-de-deux-notes-redigees-par-marta-torre-schaub-a-lattention-du-haut-conseil-pour-le-climat/",
+      "id": "43c63af16592",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Inthy accélère dans les camions électriques, renonce à l’hydrogène",
+      "resume": "L'article souligne l'accélération des solutions de mobilité lourde électrique, ce qui pourrait influencer les choix de flotte de véhicules d'ABC dans le cadre de sa décarbonation (scope 1).",
+      "pourquoi": "Le sujet touche à la mobilité durable et à l'électrification des flottes, un enjeu direct pour ABC dans sa stratégie de décarbonation et de conformité aux exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "criticite": 2,
+      "url": "https://www.greenunivers.com/2026/06/inthy-accelere-dans-les-camions-electriques-renonce-a-lhydrogene-425669/",
       "date": "2026-06-04"
     },
     {
@@ -127,7 +127,7 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Les petites toitures solaires deviennent un produit comme les autres",
-      "resume": "L'arrêté tarifaire S21 ouvre de nouvelles opportunités pour ABC d'intégrer des solutions d'autoconsommation solaire sur les toitures de ses clients (3 000+ sites), en alignement avec leurs exigences carbone et leurs plans climat.",
+      "resume": "L'arrêté tarifaire S21 ouvre le marché des petites toitures solaires (≤100 kW) à l'autoconsommation, ce qui pourrait influencer les stratégies énergétiques des clients d'ABC (ex : tertiaire, industrie) et leurs attentes en matière de services de propreté/FM intégrant des solutions durables.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/les-petites-toitures-solaires-deviennent-un-produit-comme-les-autres-425631/",
@@ -1107,7 +1107,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des textes publiés ne traite directement de sujets environnementaux, climatiques ou de responsabilité sociétale des entreprises (RSE). Les arrêtés et décrets concernent principalement des recrutements, des conventions collectives, des modifications administratives ou des agréments financiers.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1339,6 +1339,12 @@
           "date": "2025-03-24"
         },
         {
+          "titre": "Texte adopté N° 294",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_proteger_enfants_et_lutter_contre_les_violences_en_milieu_scolaire_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_proteger_enfants_et_lutter_contre_les_violences_en_milieu_scolaire_17e",
+          "date": "2026-04-28"
+        },
+        {
           "titre": "Texte adopté N° 292",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/mobilisation_habitant_existant_crise_logement_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/mobilisation_habitant_existant_crise_logement_17e",
@@ -1457,15 +1463,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/encadrer_regroupements_pedagogiques_intercommunaux_garantir_egalite_acces_ecole_rural_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/encadrer_regroupements_pedagogiques_intercommunaux_garantir_egalite_acces_ecole_rural_17e",
           "date": "2026-02-17"
-        },
-        {
-          "titre": "Texte adopté N° 263",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52985",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52985",
-          "date": "2025-10-14"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le projet n°2632 (loi d’urgence pour la protection et la souveraineté agricoles) et le projet n°2518 (transposition de directives UE en matière environnementale, énergétique et agricole) présentent un intérêt direct pour un Responsable Environnement/Climat, avec des implications sur les politiques agricoles durables et les adaptations réglementaires environnementales. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou RSE."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations réglementaires européennes dans des domaines clés comme l'énergie, l'environnement et le climat. Aucun autre texte ne semble aborder spécifiquement ces enjeux de manière prioritaire."
 }
