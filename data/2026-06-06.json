@@ -1,7 +1,7 @@
 {
   "date": "2026-06-06",
-  "generated_at": "08:25",
-  "elapsed_seconds": 192,
+  "generated_at": "12:52",
+  "elapsed_seconds": 156,
   "errors": [],
   "stats": {
     "jo_analyses": 19,
@@ -9,18 +9,18 @@
     "depts_restriction": 33
   },
   "pipeline_meta": {
-    "run_at": "2026-06-06T08:25:13",
+    "run_at": "2026-06-06T12:52:40",
     "sources": {
       "JORF": 0,
-      "RSS": 4,
+      "RSS": 3,
       "VigiEau": 33,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 54,
-    "llm_seconds": 48.3
+    "llm_calls": 44,
+    "llm_seconds": 37.5
   },
   "items": [
     {
@@ -28,10 +28,21 @@
       "source": "Le Monde Planète",
       "categorie": "Émissions",
       "titre": "« Pompes à chaleur et climatisation sont la première source d’émissions de PFAS en Europe »",
-      "resume": "Les PFAS, substances chimiques utilisées dans les pompes à chaleur et climatisations, pourraient faire l'objet de restrictions réglementaires accrues en UE, impactant potentiellement les équipements de chauffage/climatisation utilisés par ABC dans ses prestations.",
+      "resume": "Les PFAS, substances chimiques utilisées dans les pompes à chaleur et climatisations, pourraient devenir un enjeu réglementaire ou de reporting ESG pour ABC, notamment si les clients ou les normes (REACH, CSRD) imposent des restrictions ou des audits sur ces équipements.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/06/06/pompes-a-chaleur-et-climatisation-sont-la-premiere-source-d-emissions-de-pfas-en-europe_6696594_3233.html",
+      "date": "2026-06-06"
+    },
+    {
+      "id": "36fabe4bdc6d",
+      "source": "The Guardian Environment",
+      "categorie": "Énergie",
+      "titre": "UK urged not to further weaken EV rules as CO2 impact revealed",
+      "resume": "L'article souligne l'impact carbone des véhicules hybrides rechargeables (PHEV) et les risques de relâchement des règles sur les ventes de véhicules électriques au Royaume-Uni, ce qui pourrait influencer les exigences carbone des clients d'ABC en matière de mobilité durable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/business/2026/jun/06/uk-weaken-ev-rules-co2-impact-phevs",
       "date": "2026-06-06"
     },
     {
@@ -39,32 +50,10 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "« De plus en plus d’entreprises veulent investir elles-mêmes dans la décarbonation »[Newheat]",
-      "resume": "L'article souligne une tendance croissante des entreprises à investir directement dans des solutions de décarbonation, notamment pour la production de chaleur renouvelable, ce qui pourrait influencer les stratégies énergétiques des clients d'ABC et leurs exigences en matière de services durables.",
+      "resume": "L'article souligne une tendance croissante des entreprises à investir directement dans des solutions de décarbonation, notamment la production de chaleur renouvelable, ce qui pourrait influencer les attentes des clients d'ABC en matière de services durables et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/de-plus-en-plus-dentreprises-veulent-investir-elles-memes-dans-la-decarbonationnewheat-425809/",
-      "date": "2026-06-05"
-    },
-    {
-      "id": "8a12170e641b",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Deux appels d’offres relancés pour décarboner les industriels",
-      "resume": "Ces appels d'offres ciblent la décarbonation des industriels, un secteur client clé pour ABC, mais sans obligation directe pour le prestataire de propreté/FM. Ils reflètent une tendance réglementaire et marché à surveiller pour anticiper les exigences carbone futures des clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/06/deux-appels-doffres-relances-pour-decarboner-les-industriels-425768/",
-      "date": "2026-06-05"
-    },
-    {
-      "id": "2a1123a32ebe",
-      "source": "Les Echos Environnement",
-      "categorie": "Climat",
-      "titre": "Bruxelles assouplit les règles budgétaires pour la transition énergétique - Investir Les Echos",
-      "resume": "L'article pourrait impacter indirectement ABC via les règles budgétaires européennes influençant les financements publics pour la transition énergétique, notamment pour les projets clients (ex : rénovation énergétique des bâtiments tertiaires).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQcjVIczZfRzREb09XSXJ6bzV1S3RIVDdESnhJVW1PTnFqd0N6Wmhwd1poaEVYV2UxZklnN3VkUk42dmMzcnNUclJzTER4Ym1UUEF0ZEZvSDRuWW92aXc3d3dISm9zaExnYkJQWnB1ZmNZVllxbFpwWDUxalY0aGFuRDdac0VlX2xrRVZRREk5YU5HZkhTRUVMUG1pcDhqTGM3UzAwRDJhM19pX3dUTUJCRXJTRkhXTVhOM25vMXF2bVhjSFJpeGdGa09yR3diY0s5RnQ3RU0wSEt4MmNmd3c?oc=5",
       "date": "2026-06-05"
     }
   ],
@@ -1282,5 +1271,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le n°2632 (Projet de loi d’urgence pour la protection et la souveraineté agricoles) et le n°2518 (Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique) pourraient avoir un impact indirect sur les enjeux climatiques et environnementaux, notamment via des mesures agricoles ou des adaptations réglementaires européennes. Aucun texte ne traite directement des déchets, du reporting RSE ou de la transition énergétique."
+  "pjl_briefing": "Aucun des projets de loi ou textes adoptés listés ne traite directement de sujets environnementaux, climatiques, énergétiques ou de RSE pertinents pour une grande entreprise de services dans ces domaines. Les textes concernent principalement des réformes institutionnelles, fiscales, sociales ou de sécurité, sans lien avec les enjeux de transition écologique ou de reporting extra-financier."
 }
