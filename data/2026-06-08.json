@@ -1,37 +1,48 @@
 {
   "date": "2026-06-08",
-  "generated_at": "10:17",
-  "elapsed_seconds": 228,
+  "generated_at": "14:58",
+  "elapsed_seconds": 204,
   "errors": [],
   "stats": {
     "jo_analyses": 24,
     "jo_retenus": 0,
-    "depts_restriction": 34
+    "depts_restriction": 38
   },
   "pipeline_meta": {
-    "run_at": "2026-06-08T10:17:53",
+    "run_at": "2026-06-08T14:58:24",
     "sources": {
       "JORF": 0,
-      "RSS": 6,
-      "VigiEau": 34,
+      "RSS": 9,
+      "VigiEau": 38,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 57,
-    "llm_seconds": 54.1
+    "llm_calls": 67,
+    "llm_seconds": 64.0
   },
   "items": [
     {
-      "id": "70dc7887961c",
-      "source": "Actuel HSE",
-      "categorie": "Déchets",
-      "titre": "Plan plastique : la concertation est lancée",
-      "resume": "Le Plan plastique en concertation pourrait impacter la gestion des déchets des prestations de propreté de ABC, notamment via de nouvelles obligations de tri, traçabilité ou REP (Responsabilité Élargie du Producteur) pour les emballages et déchets plastiques.",
-      "pourquoi": "Bien que l'article ne mentionne pas explicitement les entreprises de services comme ABC, le sujet des déchets plastiques est directement lié à ses enjeux opérationnels (déchets des prestations, reporting CSRD/ESRS, réglementation REP). Une évolution réglementaire dans ce domaine pourrait imposer des actions concrètes (ex : adaptation des processus de tri, traçabilité des déchets, collaboration avec les éco-organismes).",
-      "criticite": 2,
-      "url": "https://www.actuel-hse.fr/content/plan-plastique-la-concertation-est-lancee-2",
+      "id": "f45f73352426",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Décarbonation : deux appels d'offres relancés pour les projets industriels",
+      "resume": "L'article annonce des appels d'offres publics pour la décarbonation industrielle, ce qui pourrait influencer les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé ou industrie) et potentiellement ouvrir des opportunités de services alignés sur ces projets.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/decarbonation-industrie-electrification-efficacite-ccs-48108.php4#xtor=RSS-6",
+      "date": "2026-06-08"
+    },
+    {
+      "id": "8e0eee829048",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "L'Occitanie annonce de nouvelles aides pour accompagner la transition énergétique",
+      "resume": "L'article annonce des aides régionales pour la transition énergétique en Occitanie, sans impact direct réglementaire ou opérationnel immédiat pour ABC, mais illustre une tendance de soutien aux projets d'efficacité énergétique dans le tertiaire.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/aides-energie-mobilite-renovation-region-occitanie-arec-48105.php4#xtor=RSS-6",
       "date": "2026-06-08"
     },
     {
@@ -39,10 +50,21 @@
       "source": "Actu-Environnement",
       "categorie": "Environnement",
       "titre": "Le chiffre du jour : + 1,5 °C",
-      "resume": "L'article souligne le franchissement du seuil de +1,5°C en Méditerranée, un signal fort sur l'urgence climatique qui impacte les risques opérationnels (aléas climatiques) et les exigences carbone des clients d'ABC (nucléaire, santé, industrie).",
+      "resume": "L'article souligne le franchissement du seuil de +1,5°C en Méditerranée, un signal climatique majeur qui renforce les enjeux de décarbonation et de résilience pour les entreprises comme ABC, notamment face aux risques opérationnels sur ses 3 000+ sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/dit-aujourdhui/1809.html#xtor=RSS-6",
+      "date": "2026-06-08"
+    },
+    {
+      "id": "18ca0ac5ebac",
+      "source": "I4CE",
+      "categorie": "Énergie",
+      "titre": "Prix de l’énergie : faire que les crises n’aient plus prise",
+      "resume": "L'article souligne l'importance de l'investissement dans les énergies décarbonées pour réduire la dépendance aux crises énergétiques, ce qui peut impacter les coûts et la stratégie énergétique des entreprises comme ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.i4ce.org/planifier-investissements-energie-decarbonnees-chronique-climat/",
       "date": "2026-06-08"
     },
     {
@@ -50,10 +72,21 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Électrification des poids lourds : une mission flash recommande de mieux partager le coût de la transition",
-      "resume": "L'article aborde l'électrification des poids lourds, un enjeu lié à la décarbonation des flottes de véhicules (scope 1) et aux politiques publiques incitatives, qui pourrait impacter les stratégies de mobilité durable d'ABC, notamment pour ses clients industriels ou logistiques.",
+      "resume": "L'article aborde l'électrification des poids lourds, un enjeu indirect pour ABC via la décarbonation de la logistique client et les attentes en matière de mobilité durable dans les chaînes d'approvisionnement.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/electrification-des-poids-lourds-une-mission-flash-recommande-de-mieux-partager-le-cout-de",
+      "date": "2026-06-08"
+    },
+    {
+      "id": "70dc7887961c",
+      "source": "Actuel HSE",
+      "categorie": "Déchets",
+      "titre": "Plan plastique : la concertation est lancée",
+      "resume": "Le Plan plastique en concertation pourrait impacter les obligations de traçabilité et de gestion des déchets pour ABC, notamment via les filières REP (Responsabilité Élargie du Producteur) et les exigences clients en matière de réduction des plastiques.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/plan-plastique-la-concertation-est-lancee-2",
       "date": "2026-06-08"
     },
     {
@@ -61,7 +94,7 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Fortes chaleurs : l’instruction acte le passage de l’accompagnement au contrôle",
-      "resume": "L'instruction renforce les obligations de prévention des risques liés aux fortes chaleurs pour les entreprises, incluant potentiellement les prestataires de services comme ABC intervenant sur des sites clients exposés.",
+      "resume": "L'instruction renforce les obligations de prévention des risques liés aux fortes chaleurs pour les entreprises, notamment en matière de droit de retrait et de recours à l'activité partielle, ce qui impacte la gestion des équipes de terrain d'ABC en période estivale.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-linstruction-acte-le-passage-de-laccompagnement-au-controle",
@@ -72,7 +105,7 @@
       "source": "ESG Today",
       "categorie": "Biodiversité",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article couvre des tendances ESG globales (finance durable, reporting, objectifs climatiques) qui peuvent influencer les attentes clients d'ABC en matière de reporting extra-financier et de décarbonation, sans obligation directe immédiate.",
+      "resume": "L'article fournit un aperçu des tendances ESG mondiales, notamment sur les financements de transition énergétique et les normes de reporting, utiles pour contextualiser les enjeux climatiques et réglementaires d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-264/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-264",
@@ -83,7 +116,7 @@
       "source": "Le Monde Planète",
       "categorie": "Émissions",
       "titre": "« Pompes à chaleur et climatisation sont la première source d’émissions de PFAS en Europe »",
-      "resume": "L'article met en lumière l'impact environnemental des pompes à chaleur et climatisations, potentiellement source de PFAS, ce qui pourrait influencer les choix technologiques d'ABC pour ses équipements et ses prestations de propreté/FM chez les clients.",
+      "resume": "L'article met en lumière l'impact environnemental des pompes à chaleur et climatisations, deux équipements clés pour l'adaptation climatique des bâtiments, mais sources potentielles d'émissions de PFAS. Cela pourrait influencer les choix technologiques d'ABC dans ses prestations de propreté/FM, notamment en matière de décarbonation et de conformité réglementaire.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/06/06/pompes-a-chaleur-et-climatisation-sont-la-premiere-source-d-emissions-de-pfas-en-europe_6696594_3233.html",
@@ -94,6 +127,11 @@
     {
       "dept_code": "44",
       "dept_nom": "Loire-Atlantique",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "85",
+      "dept_nom": "Vendée",
       "niveau": "crise"
     },
     {
@@ -129,11 +167,6 @@
     {
       "dept_code": "79",
       "dept_nom": "Deux-Sèvres",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "85",
-      "dept_nom": "Vendée",
       "niveau": "alerte renforcée"
     },
     {
@@ -182,6 +215,11 @@
       "niveau": "alerte"
     },
     {
+      "dept_code": "65",
+      "dept_nom": "Hautes-Pyrénées",
+      "niveau": "alerte"
+    },
+    {
       "dept_code": "23",
       "dept_nom": "Creuse",
       "niveau": "alerte"
@@ -195,6 +233,11 @@
       "dept_code": "34",
       "dept_nom": "Hérault",
       "niveau": "alerte"
+    },
+    {
+      "dept_code": "76",
+      "dept_nom": "Seine-Maritime",
+      "niveau": "vigilance"
     },
     {
       "dept_code": "53",
@@ -217,6 +260,11 @@
       "niveau": "vigilance"
     },
     {
+      "dept_code": "63",
+      "dept_nom": "Puy-de-Dôme",
+      "niveau": "vigilance"
+    },
+    {
       "dept_code": "89",
       "dept_nom": "Yonne",
       "niveau": "vigilance"
@@ -229,6 +277,11 @@
     {
       "dept_code": "71",
       "dept_nom": "Saône-et-Loire",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
       "niveau": "vigilance"
     },
     {
@@ -757,7 +810,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés n°6 à 12 créent ou modifient plusieurs réserves biologiques intégrales (RBI) et une réserve biologique dirigée (RBD), renforçant la protection des écosystèmes forestiers et humides en France. Ces mesures s'inscrivent dans une logique de préservation de la biodiversité et de lutte contre le changement climatique, alignées sur les objectifs RSE des entreprises engagées dans la durabilité.",
+  "briefing_jorf": "Les arrêtés 6 à 12 créent ou modifient plusieurs réserves biologiques intégrales (RBI) et une réserve biologique dirigée (RBD), renforçant la protection des écosystèmes forestiers en France, ce qui peut impacter les stratégies de compensation écologique ou de gestion des espaces naturels pour les entreprises. La décision 20 (SIRIUS) concerne un projet de centrale thermique bas carbone, pertinent pour les enjeux de transition énergétique et d'émissions indirectes des entreprises.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1117,5 +1170,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d’adaptation au droit de l’UE en matière environnementale (N°2518)** pourraient impacter les politiques agricoles, énergétiques et de reporting RSE. Le **Projet de loi-cadre relatif au développement des transports (N°2740)** pourrait aussi influencer les stratégies de mobilité durable des entreprises."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations réglementaires européennes dans des domaines clés comme l'énergie, l'environnement et l'agriculture. Aucun autre texte ne semble aborder directement des enjeux climatiques ou RSE de manière significative."
 }
