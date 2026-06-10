@@ -1,26 +1,26 @@
 {
   "date": "2026-06-10",
-  "generated_at": "09:44",
-  "elapsed_seconds": 383,
+  "generated_at": "14:37",
+  "elapsed_seconds": 212,
   "errors": [],
   "stats": {
     "jo_analyses": 12,
     "jo_retenus": 0,
-    "depts_restriction": 41
+    "depts_restriction": 42
   },
   "pipeline_meta": {
-    "run_at": "2026-06-10T09:44:10",
+    "run_at": "2026-06-10T14:37:40",
     "sources": {
       "JORF": 0,
-      "RSS": 10,
-      "VigiEau": 41,
+      "RSS": 16,
+      "VigiEau": 42,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 53,
-    "llm_seconds": 57.6
+    "llm_calls": 54,
+    "llm_seconds": 58.7
   },
   "items": [
     {
@@ -35,14 +35,80 @@
       "date": "2026-06-10"
     },
     {
+      "id": "3bf70fdc93df",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Qualité de l'air ambiant : les nouvelles normes sont mises en consultation",
+      "resume": "Les nouvelles normes sur la qualité de l'air pourraient impacter les exigences réglementaires des clients d'ABC (notamment dans les secteurs santé ou industrie) et influencer les politiques de mobilité durable ou d'émissions des véhicules de la flotte.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/normes-qualite-air-ambiant-consultation-projet-decret-arrete-48121.php4#xtor=RSS-6",
+      "date": "2026-06-10"
+    },
+    {
       "id": "f00499bbbd1d",
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Le ministère de la Transition écologique présente son plan national de lutte contre les plastiques en mer",
-      "resume": "Le plan national de lutte contre les plastiques en mer pourrait renforcer les exigences réglementaires sur la gestion des déchets plastiques dans les prestations de propreté, impactant potentiellement les obligations de tri et de traçabilité des déchets pour ABC.",
+      "resume": "Le plan national de lutte contre les plastiques en mer pourrait impacter les obligations de tri et de traçabilité des déchets plastiques pour ABC, notamment via les filières REP (Responsabilité Élargie du Producteur) ou des évolutions réglementaires sur les emballages.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/presentation-zero-plastiques-en-mer-transition-ecologique-48119.php4#xtor=RSS-6",
+      "date": "2026-06-10"
+    },
+    {
+      "id": "d6d7fee464a4",
+      "source": "Reporterre",
+      "categorie": "Déchets",
+      "titre": "« C'est une question de survie économique » : Le Relais ferme 4 000 bornes de collecte",
+      "resume": "L'article illustre les tensions sur la filière textile (REP) et les risques de saturation des débouchés pour les déchets, pouvant impacter les obligations de tri et de valorisation des prestations de propreté de ABC chez ses clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/C-est-une-question-de-survie-economique-Le-Relais-ferme-4-000-bornes-de-collecte",
+      "date": "2026-06-10"
+    },
+    {
+      "id": "95edae370d5b",
+      "source": "Reporterre",
+      "categorie": "Déchets",
+      "titre": "Les vagues de chaleurs extrêment deviennent « la norme plutôt que l'exception »",
+      "resume": "L'article confirme l'accélération des vagues de chaleur en Europe, ce qui augmente les risques opérationnels pour ABC (perturbations clients, adaptation des prestations, gestion des ressources).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Les-vagues-de-chaleurs-extrement-deviennent-la-norme-plutot-que-l-exception",
+      "date": "2026-06-10"
+    },
+    {
+      "id": "70aef3e29ffb",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Un jeu de solutions pour financer l’autoconsommation collective d’électricité",
+      "resume": "L'article aborde l'autoconsommation collective d'électricité, une solution pertinente pour ABC dans le cadre de sa transition énergétique et de la réduction de son empreinte carbone (scope 2), notamment pour ses sites clients tertiaires.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/un-jeu-de-solutions-pour-financer-lautoconsommation-collective-delectricite-426116/",
+      "date": "2026-06-10"
+    },
+    {
+      "id": "d43401b703aa",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Les tiers financeurs ne sont plus exclus des appels d’offres industriels de l’Ademe",
+      "resume": "L'article indique que l'Ademe peut désormais financer des projets d'efficacité énergétique impliquant des tiers financeurs, ce qui pourrait élargir les opportunités de subventions pour les projets de décarbonation d'ABC, notamment via des partenariats ou des appels d'offres.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/les-tiers-financeurs-ne-sont-plus-exclus-des-appels-doffres-industriels-de-lademe-426113/",
+      "date": "2026-06-10"
+    },
+    {
+      "id": "f8d78b7d18bf",
+      "source": "Le Monde Planète",
+      "categorie": "Eau",
+      "titre": "PFAS : l’Agence européenne des produits chimiques entérine la dangerosité du TFA, polluant éternel omniprésent dans l’eau et la chaîne alimentaire",
+      "resume": "Les PFAS, dont le TFA, pourraient devenir un enjeu réglementaire et client pour ABC via la traçabilité des produits de nettoyage utilisés et la gestion des déchets générés, impactant potentiellement les politiques RSE et les exigences des clients (nucléaire, santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/06/10/pfas-l-agence-europeenne-des-produits-chimiques-enterine-la-dangerosite-du-tfa-le-plus-repandu-des-polluants-eternels-omnipresent-dans-l-eau-et-la-chaine-alimentaire_6700418_3244.html",
       "date": "2026-06-10"
     },
     {
@@ -50,7 +116,7 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "« Les phénomènes climatiques extrêmes sont en train de devenir la norme plutôt que l’exception », alerte l’observatoire européen Copernicus",
-      "resume": "L'article souligne l'augmentation des phénomènes climatiques extrêmes en Europe, ce qui pourrait impacter la continuité des services de propreté/FM d'ABC sur ses 3 000+ sites clients et renforcer les exigences de résilience climatique des clients (nucléaire, santé, industrie).",
+      "resume": "L'article souligne l'augmentation des phénomènes climatiques extrêmes en Europe, ce qui pourrait impacter les activités de propreté/FM d'ABC (ex. : perturbations logistiques, risques opérationnels sur les 3 000+ sites clients).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/climat/article/2026/06/10/les-conditions-climatiques-extremes-deviennent-la-norme-selon-l-institut-copernicus_6700409_1652612.html",
@@ -68,11 +134,22 @@
       "date": "2026-06-10"
     },
     {
+      "id": "53ce3306b48a",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "Webinar EFRAG-OECD: Boosting SME Sustainable Finance – Leveraging Digitalisation and Voluntary Sustainability Reporting",
+      "resume": "Le webinar aborde les enjeux de reporting extra-financier et de digitalisation pour les PME, ce qui peut influencer les exigences clients d'ABC en matière de transparence ESG et de financement durable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/webinar-efragoecd-boosting-sme-sustainable-finance-leveraging-digitalisation-and-voluntary",
+      "date": "2026-06-10"
+    },
+    {
       "id": "d80cc3ed99ac",
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Empreinte des datacenters, réseaux et terminaux : l’Arcep alerte à nouveau",
-      "resume": "L'article souligne l'augmentation de l'empreinte environnementale du numérique (datacenters, réseaux, terminaux), un enjeu indirect pour ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et son propre reporting ESG (CSRD/ESRS).",
+      "resume": "L'article met en lumière l'augmentation de l'empreinte environnementale du numérique (datacenters, réseaux, terminaux), ce qui pourrait influencer les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et les inciter à réduire leur impact numérique, impactant indirectement les prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/empreinte-des-datacenters-reseaux-et-terminaux-larcep-alerte-nouveau",
@@ -83,7 +160,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Baromètre Greenflex-Ademe 2026 : les Français se remobilisent et réclament une consommation plus sobre",
-      "resume": "L'article reflète une tendance sociétale croissante vers la sobriété, pouvant influencer les attentes clients d'ABC (nucléaire, santé, industrie) en matière de services propreté/FM plus durables, sans obligation réglementaire directe pour l'entreprise.",
+      "resume": "L'article reflète une tendance sociétale croissante vers la sobriété, pouvant influencer les attentes clients d'ABC (nucléaire, santé, industrie) en matière de services éco-responsables, sans imposer d'action réglementaire directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/barometre-consommation-Ademe-Greenflex-2006-48117.php4#xtor=RSS-6",
@@ -94,7 +171,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Sollys cherche des fonds pour stocker la chaleur industrielle",
-      "resume": "Sollys développe une solution de stockage thermique pour décarboner la chaleur industrielle, un enjeu potentiellement aligné avec les objectifs de décarbonation des clients d'ABC (industrie, santé) et leur reporting ESG (scope 1/2/3).",
+      "resume": "Sollys développe une solution de stockage thermique pour décarboner la chaleur industrielle, un enjeu potentiellement aligné avec les objectifs de décarbonation des clients d'ABC (industrie, santé) et les exigences carbone croissantes (scope 3).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/sollys-cherche-des-fonds-pour-stocker-la-chaleur-industrielle-426015/",
@@ -105,21 +182,10 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Solaire : la DGEC fait preuve d’une grande prudence sur les appels d’offres",
-      "resume": "L'article aborde la prudence de la DGEC sur les seuils des appels d'offres solaires (17 MW), ce qui pourrait impacter les projets d'autoconsommation ou de partenariats énergétiques des entreprises de services comme ABC, notamment dans le cadre de leur stratégie de décarbonation ou de reporting ESG.",
+      "resume": "L'article aborde la prudence de la DGEC sur les appels d'offres solaires, sans impact direct immédiat pour ABC, mais reste pertinent pour suivre les évolutions réglementaires énergétiques en France.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/solaire-la-dgec-fait-preuve-dune-grande-prudence-sur-les-appels-doffres-426043/",
-      "date": "2026-06-09"
-    },
-    {
-      "id": "02355da49381",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Evias veut affranchir la recharge des contraintes de foncier",
-      "resume": "La technologie de recharge électrique souterraine d'Evias pourrait faciliter l'électrification de la flotte de véhicules professionnels d'ABC, notamment pour les véhicules lourds, en réduisant les contraintes de foncier liées aux bornes classiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/06/evias-veut-affranchir-la-recharge-des-contraintes-de-foncier-425993/",
       "date": "2026-06-09"
     },
     {
@@ -127,7 +193,7 @@
       "source": "ESG Today",
       "categorie": "Énergie",
       "titre": "Italy’s €23 Billion Plan to Support Renewable Energy Buildout Approved by EU",
-      "resume": "L'approbation par l'UE d'un plan italien de 23 milliards d'euros pour les énergies renouvelables pourrait influencer les exigences carbone des clients industriels d'ABC en Italie, notamment via des trajectoires de décarbonation accélérées ou des appels d'offres verts.",
+      "resume": "L'approbation par l'UE d'un plan italien de 23 milliards d'euros pour les énergies renouvelables pourrait influencer les exigences carbone des clients industriels d'ABC en Italie ou en Europe, via des trajectoires énergétiques plus strictes.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/italys-e23-billion-plan-to-support-renewable-energy-production-approved-by-eu/?utm_source=rss&utm_medium=rss&utm_campaign=italys-e23-billion-plan-to-support-renewable-energy-production-approved-by-eu",
@@ -328,6 +394,11 @@
     {
       "dept_code": "90",
       "dept_nom": "Territoire de Belfort",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "67",
+      "dept_nom": "Bas-Rhin",
       "niveau": "vigilance"
     },
     {
@@ -716,7 +787,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "L'arrêté du 8 juin 2026 portant déclaration d'utilité publique des travaux d'enfouissement partiel de la ligne à 225 000 volts ARGŒUVES-BRAILLY CORNEHOTTE est significatif pour un Responsable Environnement/Climat, car il impacte directement les infrastructures énergétiques et leur empreinte écologique. Aucun autre texte ne semble directement pertinent pour cette fonction.",
+  "briefing_jorf": "L'arrêté n°1 concernant l'enfouissement partiel d'une ligne à haute tension pourrait impacter les stratégies d'approvisionnement énergétique et les engagements RSE de l'entreprise en matière de transition écologique et d'empreinte carbone.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1070,5 +1141,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** présente un intérêt direct pour un Responsable Environnement/Climat, en raison de son volet environnemental et énergétique. Aucun autre texte adopté ou projet de loi ne semble directement lié aux enjeux climatiques, RSE ou reporting extra-financier."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux environnementaux et énergétiques dans le cadre de la transposition du droit européen. Aucun autre texte ne semble aborder spécifiquement les thèmes du climat, de l'énergie, des déchets ou du reporting RSE de manière significative."
 }
