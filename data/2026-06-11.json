@@ -1,7 +1,7 @@
 {
   "date": "2026-06-11",
-  "generated_at": "10:08",
-  "elapsed_seconds": 431,
+  "generated_at": "15:11",
+  "elapsed_seconds": 519,
   "errors": [],
   "stats": {
     "jo_analyses": 31,
@@ -9,26 +9,37 @@
     "depts_restriction": 43
   },
   "pipeline_meta": {
-    "run_at": "2026-06-11T10:08:53",
+    "run_at": "2026-06-11T15:11:31",
     "sources": {
       "JORF": 0,
-      "RSS": 7,
+      "RSS": 12,
       "VigiEau": 43,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 65,
-    "llm_seconds": 61.6
+    "llm_calls": 69,
+    "llm_seconds": 79.9
   },
   "items": [
+    {
+      "id": "a609425fd4eb",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "SBTi Releases Finalized New Corporate Net Zero Standard",
+      "resume": "SBTi Releases Finalized New Corporate Net Zero Standard",
+      "pourquoi": "Mention de SBTi.",
+      "criticite": 3,
+      "url": "https://www.esgtoday.com/sbti-releases-finalized-new-corporate-net-zero-standard/?utm_source=rss&utm_medium=rss&utm_campaign=sbti-releases-finalized-new-corporate-net-zero-standard",
+      "date": "2026-06-11"
+    },
     {
       "id": "682cfde9287b",
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Canicules marines, températures, niveau des mers : les indicateurs climatiques s'emballent",
-      "resume": "L'article souligne l'accélération du réchauffement climatique, ce qui peut impacter les risques opérationnels indirects d'ABC (aléas climatiques sur 3 000+ sites clients) et renforcer les exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "resume": "L'article souligne l'accélération du réchauffement climatique, ce qui pourrait impacter les risques opérationnels indirects d'ABC (aléas climatiques sur 3 000+ sites clients) et renforcer les exigences carbone de ses clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Canicules-marines-temperatures-niveau-des-mers-les-indicateurs-climatiques-s-emballent",
@@ -39,10 +50,21 @@
       "source": "Reporterre",
       "categorie": "Énergie",
       "titre": "La consigne de verre revient en France, mais les magasins ne jouent pas le jeu",
-      "resume": "La consigne de verre pourrait impacter les déchets générés par les prestations de propreté de ABC chez ses clients (emballages en verre dans les espaces publics ou locaux tertiaires), mais son adoption reste limitée et non contraignante à ce stade.",
+      "resume": "La consigne de verre en France pourrait influencer les pratiques de gestion des déchets des clients d'ABC (secteurs santé, industrie, etc.) via des exigences accrues en matière de recyclage et d'économie circulaire, sans impact direct immédiat sur ses activités.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/La-consigne-de-verre-revient-en-France-mais-les-magasins-ne-jouent-pas-le-jeu",
+      "date": "2026-06-11"
+    },
+    {
+      "id": "a127138fd3b6",
+      "source": "Novethic",
+      "categorie": "Déchets",
+      "titre": "Manque de ressources, isolement, résistances : le malaise des professionnels de la RSE",
+      "resume": "L'article met en lumière les défis structurels des professionnels de la RSE (ressources limitées, résistances internes), ce qui peut impacter la capacité d'ABC à déployer ses engagements climatiques et CSRD, notamment dans un contexte de complexité réglementaire croissante.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/difficultes-professionnels-rse-manque-moyens-resistances",
       "date": "2026-06-11"
     },
     {
@@ -50,10 +72,65 @@
       "source": "Contexte Environnement",
       "categorie": "Déchets",
       "titre": "Assurances, ONG, banques… La foire aux idées pour le futur plan d’adaptation au changement climatique de l’UE",
-      "resume": "L'article aborde la future stratégie européenne de résilience climatique (paquet législatif prévu fin 2026), qui pourrait influencer les exigences réglementaires et contractuelles des clients d'ABC (nucléaire, santé, industrie) en matière de gestion des risques climatiques sur leurs sites.",
+      "resume": "L'article signale une future réglementation européenne sur la résilience climatique (paquet attendu fin 2026) qui pourrait impacter les exigences des clients d'ABC en matière de gestion des risques climatiques sur leurs sites.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.contexte.com/fr/article/environnement/assurances-ong-banques-la-foire-aux-idees-pour-le-futur-plan-dadaptation-au-changement-climatique-de-lue_262264?source=rss",
+      "date": "2026-06-11"
+    },
+    {
+      "id": "bf439838aed5",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Valorem explore la recharge de camions électriques avec Paragon Mobility",
+      "resume": "L'article illustre une tendance émergente dans la recharge des véhicules électriques lourds (camions), un enjeu potentiel pour la flotte de véhicules d'ABC si elle envisage une électrification partielle ou totale.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/valorem-explore-la-recharge-de-camions-electriques-avec-paragon-mobility-426177/",
+      "date": "2026-06-11"
+    },
+    {
+      "id": "91f01b684bc7",
+      "source": "Le Monde Planète",
+      "categorie": "Environnement",
+      "titre": "El Niño, le phénomène climatique qui réchauffe les températures dans le Pacifique équatorial, a commencé",
+      "resume": "L'épisode El Niño pourrait accentuer les aléas climatiques (canicules, sécheresses, inondations) sur les 3 000+ sites clients d'ABC, impactant les prestations de propreté/FM et les risques opérationnels indirects.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/06/11/el-nino-le-phenomene-climatique-qui-rechauffe-les-temperatures-dans-le-pacifique-equatorial-a-commence_6700752_3244.html",
+      "date": "2026-06-11"
+    },
+    {
+      "id": "22053f598b5a",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "Novara Acquires Sustainability Software Platform Ensogo",
+      "resume": "L'acquisition d'une plateforme logicielle de performance RSE par Novara pourrait influencer les attentes des clients d'ABC en matière de reporting ESG et de gestion des risques climatiques, nécessitant une veille sur les outils de suivi des indicateurs environnementaux.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/novara-acquires-sustainability-software-platform-ensogo/?utm_source=rss&utm_medium=rss&utm_campaign=novara-acquires-sustainability-software-platform-ensogo",
+      "date": "2026-06-11"
+    },
+    {
+      "id": "2fa12d535e53",
+      "source": "The Guardian Environment",
+      "categorie": "Biodiversité",
+      "titre": "El Niño forms in Pacific as experts say it will likely turbocharge extreme weather",
+      "resume": "L'article souligne l'intensification d'El Niño, un phénomène climatique naturel, qui pourrait aggraver les aléas climatiques (canicules, inondations) affectant les 3 000+ sites clients d'ABC, augmentant ainsi les risques opérationnels indirects pour l'entreprise.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/us-news/2026/jun/11/el-nino-forms-historic-strength",
+      "date": "2026-06-11"
+    },
+    {
+      "id": "05c99386f1fc",
+      "source": "Les Echos Environnement",
+      "categorie": "Énergie",
+      "titre": "Quand le régulateur de l'énergie demande à GRDF d'arrêter de communiquer sur le biométhane - Les Echos",
+      "resume": "L'article pourrait impacter la stratégie énergétique d'ABC en influençant la perception et l'adoption du biométhane comme solution de décarbonation pour ses clients, notamment dans le cadre de la transition énergétique et des objectifs de décarbonation des flottes ou des sites tertiaires.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNYzZxeklUTEU2bm9OZUczMzdCN3ZSMDd2bHdpcU5zZGVnRk1TMW1ZVG1lVF9TRFVCQ1VCMjZ5TzdjTi1GUnVSc1otVk5FTWFHaTVGNllNeF94d3REejFjNFFBZF9LT0NBd216aG5DdFEwSmJpekNWcGdubzdFVDgxY09tQVRWYjVHNEk2Zi1kZFdYUFRYMzE4X0tPdnI5NWticVc4ZXlldFdnYmF1NW9kZDZ5UTZQVjQ5MU9aTUZjMGlrYm8xMlBycE1tbjVOVmV6ZHBYMzFvc0l2RFc5NFhvLVVzVDRkeXNzMEdqeTFzcGQ4Nmc?oc=5",
       "date": "2026-06-11"
     },
     {
@@ -61,40 +138,18 @@
       "source": "Les Echos Environnement",
       "categorie": "Environnement",
       "titre": "Climat : le seuil symbolique des +1,5 °C dépassé dans quatre ans - Les Echos",
-      "resume": "L'article souligne le dépassement imminent du seuil de +1,5°C, un signal fort sur l'urgence climatique qui impacte les exigences réglementaires et les attentes clients en matière de décarbonation pour les entreprises comme ABC.",
+      "resume": "L'article souligne le dépassement imminent du seuil de +1,5°C, un signal fort sur l'urgence climatique qui impacte les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et renforce les risques opérationnels liés aux aléas climatiques sur les 3 000+ sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOSmlhZ1VsLUFVeVo1S2RKZFh2SHVfX19kLUxVNnFRQ1FfR3BheVdacUlFQmtRWi0yU1lqTGNxd1d2cDNqd2FsNFlZc0YtZ2d0T05hWjRqcVZ2alN4UlZzRkJaaGhhSlhwcUxtRkpWZy00UFQ0NXpKUFQ4czNMbFk4MGMzS0xoRzdKeTljcC1HbXhmeGczWDFRZFR1bWRoX2ZVT2tydWI4X0hPNXJ6b0M3aTVLYkhYTWlyX0Nn?oc=5",
       "date": "2026-06-11"
     },
     {
-      "id": "9ae208069fa5",
-      "source": "Reporterre",
-      "categorie": "Déchets",
-      "titre": "« C'est une question de survie économique » : Le Relais ferme 4 000 bornes de collecte",
-      "resume": "L'article illustre les tensions sur la filière textile (REP) et les risques de saturation des débouchés pour les déchets, pouvant impacter les obligations de traçabilité et de valorisation des déchets des clients d'ABC, notamment dans les secteurs santé/industrie où les exigences carbone sont fortes.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/C-est-une-question-de-survie-economique-Le-Relais-ferme-4-000-bornes-de-collecte",
-      "date": "2026-06-10"
-    },
-    {
-      "id": "367b53304748",
-      "source": "Reporterre",
-      "categorie": "Déchets",
-      "titre": "Les vagues de chaleur extrême deviennent « la norme plutôt que l'exception »",
-      "resume": "Les vagues de chaleur extrême deviennent récurrentes, augmentant les risques opérationnels pour ABC (perturbations clients, adaptation des prestations, gestion énergétique des sites).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Les-vagues-de-chaleur-extreme-deviennent-la-norme-plutot-que-l-exception",
-      "date": "2026-06-10"
-    },
-    {
-      "id": "10c8a37b92db",
+      "id": "21afc23f772b",
       "source": "Le Monde Planète",
       "categorie": "Climat",
-      "titre": "Le réchauffement climatique dû aux activités humaines devrait atteindre 1,5 °C autour de 2030",
-      "resume": "L'article confirme le dépassement imminent du seuil de 1,5°C, renforçant les exigences réglementaires et clients en matière de décarbonation pour ABC, notamment sur les scopes 1 et 3.",
+      "titre": "Le réchauffement climatique dû aux activités humaines atteindra 1,5 °C autour de 2030",
+      "resume": "L'article confirme le dépassement imminent du seuil de 1,5°C de réchauffement climatique, ce qui renforce les risques opérationnels pour ABC (aléas climatiques sur ses 3 000+ sites clients) et accélère les exigences carbone de ses clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/06/11/le-rechauffement-climatique-du-aux-activites-humaines-devrait-atteindre-1-5-c-autour-de-2030_6700547_3244.html",
@@ -1239,5 +1294,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (transposition de directives UE en matière environnementale, énergétique et agricole) et le n°2632 (protection et souveraineté agricoles) pourraient impacter directement les enjeux climatiques et RSE d'une entreprise de services. Les textes adoptés ne mentionnent pas de mesures environnementales significatives."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le projet n°2632 (loi d’urgence pour la protection et la souveraineté agricoles) et le projet n°2518 (adaptation au droit de l’UE en matière environnementale et énergétique) présentent un intérêt direct pour un Responsable Environnement/Climat, notamment via des mesures agricoles durables ou des transpositions réglementaires liées à la transition écologique. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux."
 }
