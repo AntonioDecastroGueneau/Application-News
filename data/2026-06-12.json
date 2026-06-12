@@ -1,37 +1,103 @@
 {
   "date": "2026-06-12",
-  "generated_at": "09:57",
-  "elapsed_seconds": 218,
+  "generated_at": "14:22",
+  "elapsed_seconds": 228,
   "errors": [],
   "stats": {
     "jo_analyses": 32,
     "jo_retenus": 0,
-    "depts_restriction": 45
+    "depts_restriction": 50
   },
   "pipeline_meta": {
-    "run_at": "2026-06-12T09:57:37",
+    "run_at": "2026-06-12T14:22:15",
     "sources": {
       "JORF": 0,
-      "RSS": 15,
-      "VigiEau": 45,
+      "RSS": 14,
+      "VigiEau": 50,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 74,
-    "llm_seconds": 70.6
+    "llm_calls": 80,
+    "llm_seconds": 82.5
   },
   "items": [
+    {
+      "id": "7c8f8ab1fdfe",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "New appointments to EFRAG  bodies",
+      "resume": "L'article annonce des nominations au sein de l'EFRAG, organisme clé pour la mise en œuvre des normes CSRD/ESRS en Europe, ce qui impacte directement le reporting extra-financier d'ABC.",
+      "pourquoi": "L'EFRAG est l'organisme européen chargé de développer les normes de reporting de durabilité (ESRS) applicables dans le cadre de la CSRD, une réglementation centrale pour le reporting ESG des entreprises, y compris celles du secteur des services comme ABC. Les évolutions de ses instances influencent directement les obligations de reporting extra-financier d'ABC.",
+      "criticite": 2,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/new-appointments-to-efrag-bodies",
+      "date": "2026-06-12"
+    },
+    {
+      "id": "52e5cfaf4234",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Bruxelles publie son interprétation du règlement Emballages et de l'obligation de consigne pour recyclage",
+      "resume": "Le règlement Emballages de l'UE impacte indirectement ABC via la gestion des déchets de ses prestations de propreté (emballages des produits utilisés ou générés sur les sites clients), avec des obligations de recyclage renforcées et une traçabilité accrue.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/interpretation-commission-europenne-reglement-emballages-48134.php4#xtor=RSS-6",
+      "date": "2026-06-12"
+    },
+    {
+      "id": "1b298642836b",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Accélération du changement climatique : l'hypothèse qui inquiète les scientifiques",
+      "resume": "Cet article alerte sur l'accélération potentielle du réchauffement climatique, ce qui pourrait impacter les risques opérationnels et la résilience des sites clients d'ABC (3 000+ sites) et renforcer les exigences carbone de leurs donneurs d'ordre.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Acceleration-du-changement-climatique-l-hypothese-qui-inquiete-les-scientifiques",
+      "date": "2026-06-12"
+    },
     {
       "id": "705c69bd8de4",
       "source": "Novethic",
       "categorie": "Eau",
       "titre": "Northvolt, Morrow, Carbon : pourquoi les champions verts européens s'effondrent",
-      "resume": "L'article illustre les difficultés des acteurs industriels européens dans la transition verte, ce qui peut impacter indirectement les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et leurs stratégies de décarbonation.",
+      "resume": "L'article illustre les difficultés des acteurs industriels européens dans la décarbonation, signalant un contexte concurrentiel et réglementaire complexe pour les entreprises comme ABC engagées dans la transition énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/transition-energetique/northvolt-morrow-carbon-pourquoi-les-champions-verts-europeens-seffondrent",
+      "date": "2026-06-12"
+    },
+    {
+      "id": "05c7b2557080",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Les documents de la semaine",
+      "resume": "Cette newsletter hebdomadaire recense les documents clés (réglementations, études, analyses) liés à la transition énergétique, permettant à ABC de suivre les évolutions réglementaires et stratégiques impactant ses enjeux climatiques (BGES, CSRD, mobilité, énergie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/les-documents-de-la-semaine-381215/",
+      "date": "2026-06-12"
+    },
+    {
+      "id": "12405b10ac64",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’agenda de la transition énergétique",
+      "resume": "Cet article propose un agenda des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.), utile pour identifier des tendances ou opportunités à suivre pour ABC dans ses enjeux de décarbonation et de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/lagenda-de-la-transition-energetique-280-424554/",
+      "date": "2026-06-12"
+    },
+    {
+      "id": "e6b7e7101950",
+      "source": "EFRAG",
+      "categorie": "Climat",
+      "titre": "EFRAG publishes its comment letter on the GHG Protocol’s Actions and Market Instruments Phase 1 White Paper",
+      "resume": "L'article aborde les évolutions méthodologiques du GHG Protocol sur les instruments de marché et actions pour le calcul des émissions, ce qui impacte indirectement les méthodes de reporting ESG (CSRD/ESRS) utilisées par ABC pour son bilan GES et son reporting extra-financier.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-publishes-its-comment-letter-on-the-ghg-protocols-actions-and-market-instruments-phase-1",
       "date": "2026-06-12"
     },
     {
@@ -39,29 +105,18 @@
       "source": "Les Echos Environnement",
       "categorie": "Climat",
       "titre": "Astride Blanchard (ENGIE) : « La transition énergétique est avant tout une aventure humaine, fondée sur l’alliance entre l’Intelligence artificielle, l’intelligence humaine et notre engagement industriel de long terme. - Les Echos",
-      "resume": "L'article souligne l'importance de l'IA et de l'engagement industriel dans la transition énergétique, un contexte à suivre pour ABC dans le cadre de ses enjeux de décarbonation et d'innovation.",
+      "resume": "L'article souligne l'importance de l'alliance entre IA, intelligence humaine et engagement industriel pour la transition énergétique, un contexte stratégique à suivre pour ABC dans le cadre de ses enjeux de décarbonation et d'innovation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi_AJBVV95cUxQelV3SF9DLVdONFo5RDJ0ajFFNGhtS1pqQldxc1BhTEkyZlZNcS1pQnQzWWFBX2dlMlVmWjZJdTRZcDhxMTF4bXFkOUdISzZvd2FPa05RVlRSX0FZMktNenFDTVlGTFNxZGkyOTRHZDNaaWQxMlpaNS1hclh2YW5oc1hJNEF0WmE2WHBILXlIbDNIMVNsZVdzbWs1OVVXMVBSM29OYldNNnozYW5CaUlmQUtBN2JuU1RyN3o4MzY2TkhCZzZ4MENuYlpOUGJxTXVma0YxTG4xWDFCQWw0aVRxQjZnTi1xdlloczg4ZHBXTUxZQnNFcVdHT3VuLThNdDVDMGU4X3hWWnNqS0dYSWNwUjN6MkhRNUVwVUU5cEozaXRSRkRMLWhTMHRTS3JjajBDaTFJVzZvMU5VUDdoMHR0eTl6aGZLSmpyTVRfLW82XzNZVWxYLWJ1bGxZZnlQbTRmRmZ6WmZwVjRaOVJoZUw1R2ZtanAwTG1FaG5RNg?oc=5",
       "date": "2026-06-12"
     },
     {
-      "id": "a609425fd4eb",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "SBTi Releases Finalized New Corporate Net Zero Standard",
-      "resume": "SBTi Releases Finalized New Corporate Net Zero Standard",
-      "pourquoi": "Mention de SBTi.",
-      "criticite": 3,
-      "url": "https://www.esgtoday.com/sbti-releases-finalized-new-corporate-net-zero-standard/?utm_source=rss&utm_medium=rss&utm_campaign=sbti-releases-finalized-new-corporate-net-zero-standard",
-      "date": "2026-06-11"
-    },
-    {
       "id": "422ae1712c32",
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Consigne pour réemploi : l'expérimentation ReUse de Citeo ne décolle pas",
-      "resume": "L'article met en lumière les difficultés de l'expérimentation ReUse de Citeo sur le réemploi des emballages en verre, ce qui pourrait impacter les obligations de tri et de traçabilité des déchets pour ABC dans le cadre des REP (Responsabilité Élargie du Producteur) et de la CSRD.",
+      "resume": "L'article met en lumière les difficultés de l'expérimentation ReUse de Citeo sur le réemploi des emballages en verre, ce qui pourrait impacter les obligations de tri et de traçabilité des déchets pour ABC dans le cadre de ses prestations de propreté/FM, notamment en lien avec les attentes clients en matière de gestion des déchets.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/bilan-zero-waste-reuse-citeo-experimentation-reemploi-48132.php4#xtor=RSS-6",
@@ -72,7 +127,7 @@
       "source": "Actu-Environnement",
       "categorie": "Environnement",
       "titre": "L'AEE dresse un bilan contrasté des politiques d'adaptation climatique en Europe",
-      "resume": "L'article évalue les politiques d'adaptation climatique en Europe, ce qui peut impacter les risques opérationnels de ABC sur ses 3 000+ sites clients (aléas climatiques, exigences des clients industriels ou nucléaires).",
+      "resume": "L'article souligne l'importance de l'adaptation climatique pour les entreprises de services en Europe, avec des risques opérationnels accrus (ex. : perturbations des sites clients) pouvant impacter la résilience des activités d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/resilience-europe-politiques-actions-adaptation-changement-climatique-48131.php4#xtor=RSS-6",
@@ -83,32 +138,10 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "L'alignement des flux financiers avec les objectifs climatiques s'améliore, selon l'OCDE",
-      "resume": "L'article souligne l'importance croissante de l'alignement des flux financiers avec les objectifs climatiques, ce qui peut impacter les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et influencer leurs stratégies de reporting ESG (CSRD/ESRS).",
+      "resume": "L'article souligne l'importance croissante de l'alignement des flux financiers avec les objectifs climatiques, ce qui peut impacter les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et influencer leurs politiques de reporting ESG (CSRD, ESRS).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/alignement-flux-financiers-objectifs-climatiques-ocde-48130.php4#xtor=RSS-6",
-      "date": "2026-06-11"
-    },
-    {
-      "id": "bf7dbc96b938",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Stockage diffus : les batteries en basse tension pour équilibrer le réseau électrique",
-      "resume": "L'article aborde le stockage diffus par batteries en basse tension, une solution émergente pour l'équilibrage des réseaux électriques, qui pourrait influencer les stratégies énergétiques des entreprises clientes d'ABC dans le cadre de leur transition bas-carbone.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/stockage-diffus-batteries-en-basse-tension-pour-equilibrer-reseau-electrique-48118.php4#xtor=RSS-6",
-      "date": "2026-06-11"
-    },
-    {
-      "id": "2d79ea219fc1",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "Fraudes à la rénovation énergétique : la DGCCRF alourdit ses sanctions",
-      "resume": "La DGCCRF renforce les sanctions contre les fraudes à la rénovation énergétique, ce qui pourrait impacter indirectement les clients d'ABC (ex : industriels, collectivités) dans leurs obligations de conformité énergétique et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/bilan-controles-entreprises-sanctions-fraudes-renovation-energetique-DGCCRF-2025-48126.php4#xtor=RSS-6",
       "date": "2026-06-11"
     },
     {
@@ -116,32 +149,10 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "15 % du réchauffement climatique seraient dûs à des gaz à effet de serre passés sous les radars",
-      "resume": "L'étude met en lumière des gaz à effet de serre indirects (CO, COV, NOx, H2) non couverts par les politiques climatiques actuelles, représentant 15% du réchauffement. Cela pourrait impacter les stratégies de décarbonation et le reporting ESG de ABC si ces polluants sont intégrés dans les futures réglementations.",
+      "resume": "L'article met en lumière des gaz à effet de serre indirects (CO, COV, NOx, H2) non couverts par les politiques climatiques actuelles, représentant 15% du réchauffement. Cela pourrait impacter les stratégies de décarbonation et le reporting ESG d'ABC, notamment pour les scopes 1 et 3.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/15-du-rechauffement-climatique-seraient-dus-a-des-gaz-a-effet-de-serre-passes-sous-les",
-      "date": "2026-06-11"
-    },
-    {
-      "id": "a127138fd3b6",
-      "source": "Novethic",
-      "categorie": "Déchets",
-      "titre": "Manque de ressources, isolement, résistances : le malaise des professionnels de la RSE",
-      "resume": "L'article met en lumière les défis structurels des professionnels RSE (ressources limitées, résistances internes), ce qui peut impacter la capacité d'ABC à déployer ses engagements climatiques et CSRD malgré ses obligations réglementaires.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/difficultes-professionnels-rse-manque-moyens-resistances",
-      "date": "2026-06-11"
-    },
-    {
-      "id": "91f01b684bc7",
-      "source": "Le Monde Planète",
-      "categorie": "Environnement",
-      "titre": "El Niño, le phénomène climatique qui réchauffe les températures dans le Pacifique équatorial, a commencé",
-      "resume": "L'article signale un risque accru de perturbations climatiques (El Niño) pouvant impacter les opérations de nettoyage et de maintenance des sites clients d'ABC (ex : retards, conditions météo extrêmes).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/06/11/el-nino-le-phenomene-climatique-qui-rechauffe-les-temperatures-dans-le-pacifique-equatorial-a-commence_6700752_3244.html",
       "date": "2026-06-11"
     },
     {
@@ -149,7 +160,7 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "DHL Invests €160 Million in Decarbonization, Infrastructure in France",
-      "resume": "Investissement de DHL dans la décarbonation en France, illustrant l'exigence croissante des clients industriels et logistiques en matière de réduction des émissions, ce qui peut impacter les attentes carbone d'ABC dans le cadre de ses prestations.",
+      "resume": "Investissement de DHL dans la décarbonation en France, illustrant l'exigence croissante des clients industriels et logistiques en matière de réduction des émissions, ce qui peut impacter les attentes carbone des clients d'ABC dans ces secteurs.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/dhl-invests-e160-million-in-decarbonization-infrastructure-in-france/?utm_source=rss&utm_medium=rss&utm_campaign=dhl-invests-e160-million-in-decarbonization-infrastructure-in-france",
@@ -160,32 +171,10 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "Novara Acquires Sustainability Software Platform Ensogo",
-      "resume": "L'acquisition d'une plateforme de performance RSE par Novara pourrait influencer les attentes des clients d'ABC en matière de reporting ESG et de décarbonation, notamment via des outils de suivi automatisés.",
+      "resume": "L'acquisition d'une plateforme logicielle de performance RSE par Novara pourrait influencer les attentes des clients d'ABC en matière de reporting ESG et de gestion des risques climatiques, nécessitant une veille sur les outils de suivi des scopes 1/2/3.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/novara-acquires-sustainability-software-platform-ensogo/?utm_source=rss&utm_medium=rss&utm_campaign=novara-acquires-sustainability-software-platform-ensogo",
-      "date": "2026-06-11"
-    },
-    {
-      "id": "9f0fb59f93d4",
-      "source": "The Guardian Environment",
-      "categorie": "Énergie",
-      "titre": "‘Super El Niño’ is officially here, scientists say. What can we expect?",
-      "resume": "L'article signale l'arrivée d'un 'Super El Niño' qui pourrait intensifier les événements climatiques extrêmes et augmenter les températures mondiales, posant un risque indirect pour ABC via ses 3 000+ sites clients et leurs exigences carbone.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/environment/2026/apr/13/el-nino-explainer",
-      "date": "2026-06-11"
-    },
-    {
-      "id": "05c99386f1fc",
-      "source": "Les Echos Environnement",
-      "categorie": "Énergie",
-      "titre": "Quand le régulateur de l'énergie demande à GRDF d'arrêter de communiquer sur le biométhane - Les Echos",
-      "resume": "L'article souligne une restriction réglementaire sur la communication autour du biométhane, un sujet indirectement lié à la transition énergétique des entreprises de services comme ABC, notamment pour leur stratégie de décarbonation et leur reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNYzZxeklUTEU2bm9OZUczMzdCN3ZSMDd2bHdpcU5zZGVnRk1TMW1ZVG1lVF9TRFVCQ1VCMjZ5TzdjTi1GUnVSc1otVk5FTWFHaTVGNllNeF94d3REejFjNFFBZF9LT0NBd216aG5DdFEwSmJpekNWcGdubzdFVDgxY09tQVRWYjVHNEk2Zi1kZFdYUFRYMzE4X0tPdnI5NWticVc4ZXlldFdnYmF1NW9kZDZ5UTZQVjQ5MU9aTUZjMGlrYm8xMlBycE1tbjVOVmV6ZHBYMzFvc0l2RFc5NFhvLVVzVDRkeXNzMEdqeTFzcGQ4Nmc?oc=5",
       "date": "2026-06-11"
     }
   ],
@@ -213,6 +202,11 @@
     {
       "dept_code": "24",
       "dept_nom": "Dordogne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "18",
+      "dept_nom": "Cher",
       "niveau": "crise"
     },
     {
@@ -271,6 +265,11 @@
       "niveau": "alerte renforcée"
     },
     {
+      "dept_code": "56",
+      "dept_nom": "Morbihan",
+      "niveau": "alerte"
+    },
+    {
       "dept_code": "86",
       "dept_nom": "Vienne",
       "niveau": "alerte"
@@ -291,6 +290,11 @@
       "niveau": "alerte"
     },
     {
+      "dept_code": "28",
+      "dept_nom": "Eure-et-Loir",
+      "niveau": "alerte"
+    },
+    {
       "dept_code": "23",
       "dept_nom": "Creuse",
       "niveau": "alerte"
@@ -303,6 +307,11 @@
     {
       "dept_code": "34",
       "dept_nom": "Hérault",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "11",
+      "dept_nom": "Aude",
       "niveau": "alerte"
     },
     {
@@ -323,6 +332,11 @@
     {
       "dept_code": "59",
       "dept_nom": "Nord",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "27",
+      "dept_nom": "Eure",
       "niveau": "vigilance"
     },
     {
@@ -1289,7 +1303,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement : (1) le décret n°2026-475 sur les obligations des gestionnaires de réseaux électriques en matière de flexibilités (intégration des ENR, gestion de la demande), (2) la délibération n°2026-104/105 sur l'évolution des tarifs d'utilisation des réseaux publics d'électricité (HTB/HTA/BT) impactant les coûts énergétiques et la transition bas-carbone, et (3) l'arrêté du 8 juin 2026 créant la réserve biologique intégrale des Pitons rocheux de l'Armontabo en Guyane, renforçant la protection des écosystèmes.",
+  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement : (1) les obligations des gestionnaires de réseaux électriques en matière de flexibilités énergétiques (Décret n°2026-475), (2) la création d'une réserve biologique intégrale en Guyane (Arrêté du 8 juin 2026) et (3) les évolutions tarifaires des réseaux publics d'électricité (Délibérations n°2026-104 et 105), impactant la transition énergétique et la gestion des ressources.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1649,5 +1663,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi listés, seul le **projet de loi n°2518** (adaptation au droit de l’UE en matière environnementale, énergétique et économique) et le **projet de loi n°2632** (protection et souveraineté agricoles, potentiellement lié à des enjeux climatiques) pourraient présenter un intérêt indirect pour un Responsable Environnement/Climat. Aucun texte ne traite spécifiquement de reporting RSE ou de déchets."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi n°2518** (adaptation au droit de l’UE en matière environnementale, énergétique et climatique) et le **Projet de loi n°2632** (protection et souveraineté agricoles, potentiellement lié aux enjeux climatiques et agroécologiques) présentent un intérêt direct pour un Responsable Environnement/Climat. Aucun texte adopté n’est explicitement lié à ces thématiques dans cette liste."
 }
