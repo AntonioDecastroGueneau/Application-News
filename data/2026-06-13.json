@@ -1,7 +1,7 @@
 {
   "date": "2026-06-13",
-  "generated_at": "08:47",
-  "elapsed_seconds": 180,
+  "generated_at": "13:04",
+  "elapsed_seconds": 171,
   "errors": [],
   "stats": {
     "jo_analyses": 10,
@@ -9,7 +9,7 @@
     "depts_restriction": 51
   },
   "pipeline_meta": {
-    "run_at": "2026-06-13T08:47:48",
+    "run_at": "2026-06-13T13:04:38",
     "sources": {
       "JORF": 1,
       "RSS": 7,
@@ -17,8 +17,8 @@
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 50,
-    "llm_seconds": 48.1
+    "llm_calls": 42,
+    "llm_seconds": 41.7
   },
   "items": [
     {
@@ -26,7 +26,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Dominique Méda : « Nous devons réussir à rendre la transition écologique désirable »",
-      "resume": "L'article souligne l'importance de rendre la transition écologique désirable pour le grand public, ce qui peut influencer les attentes des clients d'ABC en matière de RSE et de reporting ESG.",
+      "resume": "L'article aborde la perception sociétale de la transition écologique et son acceptabilité, un enjeu indirect pour ABC dans la communication de ses engagements climatiques auprès de ses clients et parties prenantes.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/06/13/dominique-meda-nous-devons-reussir-a-rendre-la-transition-ecologique-desirable_6701312_3232.html",
@@ -37,7 +37,7 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Le rythme du réchauffement planétaire s'emballe",
-      "resume": "L'article souligne l'accélération du réchauffement climatique, un contexte qui renforce les enjeux de décarbonation et de résilience pour les entreprises de services comme ABC, notamment face aux risques opérationnels et aux exigences clients en matière de stratégie climatique.",
+      "resume": "L'accélération du réchauffement climatique augmente les risques opérationnels indirects pour ABC (aléas climatiques sur 3 000+ sites clients) et renforce les exigences carbone des clients (nucléaire, santé, industrie), nécessitant une vigilance accrue sur les stratégies d'adaptation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/rechauffement-climatique-humain-record-2025-48137.php4#xtor=RSS-6",
@@ -59,10 +59,21 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "El Niño commence déjà à sévir dans le Pacifique",
-      "resume": "El Niño pourrait accentuer les aléas climatiques (sécheresses, inondations) affectant les 3 000+ sites clients d'ABC, impactant potentiellement les prestations de propreté/FM et les exigences carbone des clients (nucléaire, santé, industrie).",
+      "resume": "El Niño pourrait aggraver les aléas climatiques (sécheresses, inondations) affectant les 3 000+ sites clients d'ABC, augmentant les risques opérationnels (perturbations des prestations, coûts logistiques).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/El-Nino-l-enfant-terrible-du-Pacifique-a-officiellement-commence",
+      "date": "2026-06-12"
+    },
+    {
+      "id": "1b298642836b",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Accélération du changement climatique : l'hypothèse qui inquiète les scientifiques",
+      "resume": "Cet article alerte sur l'accélération du changement climatique via le déséquilibre énergétique de la Terre, un phénomène qui pourrait impacter les risques opérationnels de ABC (aléas climatiques sur 3 000+ sites clients) et renforcer les exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Acceleration-du-changement-climatique-l-hypothese-qui-inquiete-les-scientifiques",
       "date": "2026-06-12"
     },
     {
@@ -70,7 +81,7 @@
       "source": "Novethic",
       "categorie": "Déchets",
       "titre": "Supply chain : le climat redessine la géographie mondiale des approvisionnements",
-      "resume": "L'article souligne l'importance croissante des risques climatiques sur les chaînes d'approvisionnement, un enjeu indirect mais critique pour ABC dont les 3 000+ sites clients sont exposés à des aléas climatiques, impactant potentiellement la continuité des prestations.",
+      "resume": "L'article souligne l'importance de l'adaptation climatique dans les supply chains, un enjeu indirect mais critique pour ABC compte tenu de ses 3 000+ sites clients exposés aux aléas climatiques, impactant la continuité des prestations et les exigences carbone des clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/economie-et-social/business-model-en-transition/supply-chain-climat-redessine-geographie-mondiale-approvisionnements",
@@ -81,21 +92,10 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "La décarbonation industrielle profite d’un arsenal de moyens de financement",
-      "resume": "L'article aborde les mécanismes de financement de la décarbonation industrielle, un sujet qui peut impacter indirectement ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et les opportunités de subventions pour des projets de transition énergétique.",
+      "resume": "L'article aborde les mécanismes de financement de la décarbonation industrielle en France, un contexte qui peut influencer les exigences carbone des clients d'ABC (secteur nucléaire, santé, industrie) et les opportunités de subventions pour des projets de transition énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/la-decarbonation-industrielle-profite-dun-arsenal-de-moyens-de-financement-426420/",
-      "date": "2026-06-12"
-    },
-    {
-      "id": "05c7b2557080",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Les documents de la semaine",
-      "resume": "Cette newsletter hebdomadaire recense les documents clés (réglementaires, études, analyses) liés à la transition énergétique, permettant à ABC de suivre les évolutions pertinentes pour son reporting ESG (CSRD, ESRS), sa décarbonation (scope 1/3) et ses risques climatiques opérationnels.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/06/les-documents-de-la-semaine-381215/",
       "date": "2026-06-12"
     }
   ],
@@ -964,14 +964,14 @@
       "source": "JORF",
       "categorie": "Climat",
       "titre": "Arrêté du 12 juin 2026 portant reconnaissance de l'état de catastrophe naturelle",
-      "resume": "Risque accru de sinistres liés aux catastrophes naturelles sur les 3 000+ sites clients d'ABC, impactant potentiellement les prestations et la continuité d'activité.",
-      "pourquoi": "Cet arrêté impose une reconnaissance systématique des catastrophes naturelles, créant une obligation de résilience opérationnelle pour ABC : adaptation des contrats clients (clauses de force majeure, garanties), renforcement des plans de continuité d'activité (PCA) et de la traçabilité des impacts sur les prestations, avec un délai de mise en conformité immédiat (2026) pour éviter des pénalités contractuelles ou une perte de crédibilité RSE face aux clients exigeants en matière de gestion des risques climatiques.",
+      "resume": "Risque accru de sinistres liés aux aléas climatiques sur les sites clients de ABC, impactant potentiellement les contrats et la continuité d'activité.",
+      "pourquoi": "L'arrêté du 12 juin 2026 impose une reconnaissance systématique des catastrophes naturelles, créant une obligation de transparence et de gestion des risques pour ABC : délai immédiat pour intégrer ces aléas dans les contrats clients (clauses de force majeure, adaptation des prestations) et dans la résilience opérationnelle, sous peine de sanctions contractuelles ou de perte de marchés face à des clients exigeants (CSRD, BGES).",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054245373",
       "date": "2026-06-13"
     }
   ],
-  "briefing_jorf": "L'arrêté du 28 mai 2026 sur la création de la réserve biologique intégrale (RBI) du Pas de la Lauze et des modifications de la RBD de l'Espinouse (Hérault) est significatif pour la préservation de la biodiversité, tandis que les arrêtés du 10 et 11 juin 2026 modifiant la prime de transition énergétique impactent directement les stratégies d'efficacité énergétique des entreprises.",
+  "briefing_jorf": "Les arrêtés n°2 et n°4/5 sont pertinents : le premier renforce la protection des écosystèmes (réserve biologique intégrale) et les seconds modifient les aides à la transition énergétique, impactant potentiellement les stratégies RSE des entreprises. Aucun autre texte ne concerne directement l'environnement ou le climat.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1337,5 +1337,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi listés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations réglementaires européennes dans ces domaines, incluant potentiellement des normes environnementales et climatiques."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi n°2518** (adaptation au droit de l’UE en matière environnementale, énergétique et économique) et le **Projet de loi n°2632** (protection et souveraineté agricoles) pourraient avoir un impact indirect sur les enjeux RSE, notamment via des mesures liées à la transition écologique ou à la gestion des ressources. Aucun texte ne traite directement des obligations de reporting extra-financier ou des politiques climatiques sectorielles."
 }
