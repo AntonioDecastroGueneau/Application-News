@@ -1,7 +1,7 @@
 {
   "date": "2026-06-14",
-  "generated_at": "09:02",
-  "elapsed_seconds": 185,
+  "generated_at": "13:14",
+  "elapsed_seconds": 142,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,18 +9,18 @@
     "depts_restriction": 51
   },
   "pipeline_meta": {
-    "run_at": "2026-06-14T09:02:53",
+    "run_at": "2026-06-14T13:14:18",
     "sources": {
       "JORF": 0,
-      "RSS": 1,
+      "RSS": 2,
       "VigiEau": 51,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 28,
-    "llm_seconds": 29.0
+    "llm_calls": 31,
+    "llm_seconds": 27.5
   },
   "items": [
     {
@@ -28,10 +28,21 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article couvre des évolutions réglementaires et sectorielles en ESG (CSRD, SBTi, CDP) et des initiatives RSE d'entreprises (Amazon, Google, BlackRock) qui impactent indirectement les attentes des clients d'ABC en matière de reporting et de décarbonation.",
+      "resume": "L'article couvre des évolutions réglementaires et sectorielles en ESG (CSRD, SBTi, CDP) et des initiatives RSE (neutralité carbone, reporting) qui impactent indirectement les entreprises de services comme ABC, notamment via les exigences clients et les standards de reporting.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-265/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-265",
+      "date": "2026-06-14"
+    },
+    {
+      "id": "e2aa1d502c98",
+      "source": "The Guardian Environment",
+      "categorie": "Déchets",
+      "titre": "UK poised to water down 2030 EV sales targets after industry and union pressure",
+      "resume": "Le Royaume-Uni assouplit ses objectifs de vente de véhicules électriques d'ici 2030, ce qui pourrait influencer les stratégies de mobilité durable des entreprises européennes, dont ABC, notamment pour sa flotte de véhicules.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/business/2026/jun/14/uk-poised-water-down-2030-ev-sales-targets-industry-union-pressure",
       "date": "2026-06-14"
     }
   ],
@@ -1213,5 +1224,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi listés, seul le **Projet de loi n°2518** (adaptation au droit de l’UE en matière environnementale, énergétique et climatique) et le **Projet de loi n°2632** (protection et souveraineté agricoles, potentiellement lié aux enjeux climatiques et de biodiversité) pourraient présenter un intérêt pour un Responsable Environnement/Climat. Aucun texte adopté ne semble directement lié aux priorités RSE ou climat."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de santé) et le projet de loi n°2632 (protection et souveraineté agricoles) pourraient présenter un intérêt indirect pour un Responsable Environnement/Climat, notamment via des mesures liées à la transition écologique ou à la résilience des systèmes agricoles. Aucun texte ne traite directement de reporting RSE ou de déchets."
 }
