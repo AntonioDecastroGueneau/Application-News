@@ -1,7 +1,7 @@
 {
   "date": "2026-06-17",
-  "generated_at": "10:29",
-  "elapsed_seconds": 386,
+  "generated_at": "14:41",
+  "elapsed_seconds": 418,
   "errors": [],
   "stats": {
     "jo_analyses": 7,
@@ -9,29 +9,29 @@
     "depts_restriction": 63
   },
   "pipeline_meta": {
-    "run_at": "2026-06-17T10:29:24",
+    "run_at": "2026-06-17T14:41:58",
     "sources": {
       "JORF": 0,
-      "RSS": 5,
+      "RSS": 13,
       "VigiEau": 63,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 36,
-    "llm_seconds": 39.1
+    "llm_calls": 45,
+    "llm_seconds": 54.0
   },
   "items": [
     {
-      "id": "757ce6c5c258",
-      "source": "Actuel HSE",
-      "categorie": "Eau",
-      "titre": "Dépôts sauvages : un décret renforce l’arsenal juridique",
-      "resume": "Le décret renforce les obligations de traçabilité des déchets pour les entreprises, ce qui impacte directement ABC dans la gestion des déchets de ses prestations de propreté/FM chez les clients.",
-      "pourquoi": "Le renforcement de la traçabilité des déchets (scope 3 pour ABC) et des sanctions est directement lié aux enjeux de reporting CSRD/ESRS et à la gestion des déchets des prestations de propreté/FM. ABC doit s'assurer que ses processus de collecte et traçabilité des déchets respectent les nouvelles exigences réglementaires.",
-      "criticite": 2,
-      "url": "https://www.actuel-hse.fr/content/depots-sauvages-un-decret-renforce-larsenal-juridique",
+      "id": "c7cc79d6c326",
+      "source": "EFRAG",
+      "categorie": "Climat",
+      "titre": "EFRAG extends deadline for     N-ESRS cost-benefit analysis tender",
+      "resume": "EFRAG extends deadline for     N-ESRS cost-benefit analysis tender",
+      "pourquoi": "Mention de ESRS.",
+      "criticite": 3,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-extends-deadline-for-nesrs-costbenefit-analysis-tender",
       "date": "2026-06-17"
     },
     {
@@ -39,7 +39,7 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Canicule : EDF envisage de réduire la production de deux centrales nucléaires",
-      "resume": "L'article illustre un risque climatique opérationnel (canicule) impactant la production d'électricité nucléaire, ce qui pourrait affecter la disponibilité énergétique pour les sites clients d'ABC et leurs exigences en matière de continuité de service.",
+      "resume": "L'article met en lumière les risques climatiques opérationnels (canicule) impactant la production d'électricité nucléaire, ce qui peut affecter la disponibilité énergétique pour les clients d'ABC et leurs exigences en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Canicule-EDF-envisage-de-reduire-la-production-de-deux-centrales-nucleaires",
@@ -50,10 +50,76 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Valérie Masson-Delmotte : « Le nombre de jours de vagues de chaleur sera multiplié par dix à l'horizon 2100 »",
-      "resume": "L'article souligne l'augmentation des vagues de chaleur en France d'ici 2100, ce qui expose ABC à des risques climatiques opérationnels sur ses 3 000+ sites clients, notamment en termes de continuité de service et d'adaptation des prestations.",
+      "resume": "L'article souligne l'augmentation des vagues de chaleur en France d'ici 2100, ce qui expose ABC à des risques climatiques opérationnels sur ses 3 000+ sites clients, notamment en termes de continuité de service et de contraintes réglementaires (ex : adaptation des prestations de propreté aux conditions extrêmes).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Valerie-Masson-Delmotte-Le-depassement-de-40-oC-autrefois-rarissime-est-en-train-de",
+      "date": "2026-06-17"
+    },
+    {
+      "id": "077f87637754",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Seuls 4% des méthaniseurs valorisent leur CO2",
+      "resume": "L'article met en lumière le faible taux de valorisation du CO2 biogénique issu des méthaniseurs en France, un enjeu potentiel pour les entreprises de services comme ABC dans le cadre de leur stratégie de décarbonation et de reporting ESG (scope 3).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/seuls-4-des-methaniseurs-valorisent-leur-co2-426787/",
+      "date": "2026-06-17"
+    },
+    {
+      "id": "ae30dab61437",
+      "source": "Le Monde Planète",
+      "categorie": "Déchets",
+      "titre": "Comment être au frais chez soi, sans abuser de la climatisation, même s’il fait 40 °C dehors",
+      "resume": "L'article aborde des solutions pour réduire la consommation énergétique liée à la climatisation, un enjeu pertinent pour ABC dans le cadre de la maîtrise de sa consommation énergétique et de son empreinte carbone (scope 2).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/des-solutions-pour-la-planete/article/2026/06/17/canicule-comment-reduire-la-temperature-chez-soi-meme-sans-climatisation_5480480_5444641.html",
+      "date": "2026-06-17"
+    },
+    {
+      "id": "510e039617e0",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "Iberdrola Issues €1.5 Billion Green Bond to Finance Grid, Renewables Investments",
+      "resume": "Cet article illustre une tendance forte de financement vert dans le secteur énergétique, reflétant l'accélération des investissements dans les énergies renouvelables et les infrastructures électriques, ce qui peut impacter indirectement les exigences carbone des clients d'ABC (notamment industriels ou tertiaires) dans leurs stratégies de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/iberdrola-issues-e1-5-billion-green-bond-to-finance-grid-renewables-investments/?utm_source=rss&utm_medium=rss&utm_campaign=iberdrola-issues-e1-5-billion-green-bond-to-finance-grid-renewables-investments",
+      "date": "2026-06-17"
+    },
+    {
+      "id": "2030ee231409",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "ISO Releases Draft Net Zero Standard",
+      "resume": "L'ISO publie un projet de norme sur le net zéro qui pourrait influencer les exigences clients d'ABC en matière de décarbonation et de reporting ESG, notamment via la CSRD et les bilans GES.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/iso-releases-draft-net-zero-standard/?utm_source=rss&utm_medium=rss&utm_campaign=iso-releases-draft-net-zero-standard",
+      "date": "2026-06-17"
+    },
+    {
+      "id": "6f2bc621a0ef",
+      "source": "The Guardian Environment",
+      "categorie": "Déchets",
+      "titre": "Rising temperatures may increase flood risk through river ‘whiplash’, study finds",
+      "resume": "L'article met en lumière l'augmentation des risques de 'whiplash hydroclimatique' (alternance rapide entre inondations et sécheresses) due au réchauffement climatique, ce qui pourrait impacter la résilience des sites clients d'ABC et exiger une adaptation des stratégies de gestion des risques opérationnels.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/environment/2026/jun/17/rising-temperatures-may-increase-flood-risk-through-river-whiplash-study-finds",
+      "date": "2026-06-17"
+    },
+    {
+      "id": "757ce6c5c258",
+      "source": "Actuel HSE",
+      "categorie": "Eau",
+      "titre": "Dépôts sauvages : un décret renforce l’arsenal juridique",
+      "resume": "Le décret renforce les obligations de traçabilité des déchets pour les prestataires comme ABC, impactant potentiellement la gestion des déchets de ses clients (scope 3).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/depots-sauvages-un-decret-renforce-larsenal-juridique",
       "date": "2026-06-17"
     },
     {
@@ -61,21 +127,43 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "La filière étanchéité publie un guide pour adapter les toitures au changement climatique",
-      "resume": "Le guide de la filière étanchéité sur l'adaptation des toitures au changement climatique pourrait impacter les prestations de propreté/FM d'ABC chez ses clients tertiaires (bureaux, hôpitaux, etc.), notamment en termes de maintenance des toitures et gestion des risques liés aux aléas climatiques.",
+      "resume": "Le guide de la filière étanchéité sur l'adaptation des toitures au changement climatique pourrait impacter les prestations de propreté/FM d'ABC, notamment en termes de gestion des sites clients (risques d'infiltration, maintenance adaptée).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/la-filiere-etancheite-publie-un-guide-pour-adapter-les-toitures-au-changement-climatique",
       "date": "2026-06-17"
     },
     {
-      "id": "6275c2888dd2",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "Upright Launches New AI Model to Quantify Companies’ Sustainability Impacts, Risks and Opportunities",
-      "resume": "L'article présente un outil d'IA pour quantifier les impacts, risques et opportunités de durabilité des entreprises, utile pour structurer le reporting ESG et la stratégie climat de ABC, notamment dans le cadre de la CSRD.",
+      "id": "857ebe75fd75",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Engie crée sa task force pour les centres de données",
+      "resume": "L'article souligne l'émergence d'un nouveau marché énergétique (centres de données) lié à l'IA, avec une forte croissance de la consommation électrique, ce qui pourrait impacter indirectement les stratégies clients d'ABC (ex : tertiaire, industrie) et leurs exigences en matière de décarbonation et d'efficacité énergétique.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.esgtoday.com/upright-launches-new-ai-model-to-quantify-companies-sustainability-impacts-risks-and-opportunities/?utm_source=rss&utm_medium=rss&utm_campaign=upright-launches-new-ai-model-to-quantify-companies-sustainability-impacts-risks-and-opportunities",
+      "url": "https://www.greenunivers.com/2026/06/engie-cree-sa-task-force-pour-les-centres-de-donnees-426764/",
+      "date": "2026-06-16"
+    },
+    {
+      "id": "1de65295d5d6",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Nerius Invest se mue en facilitateur de la décarbonation des PME",
+      "resume": "L'article illustre une tendance émergente où des acteurs financiers (comme Nerius Invest) se positionnent comme facilitateurs de la décarbonation des PME, ce qui pourrait influencer les attentes des clients d'ABC en matière d'accompagnement sur leurs enjeux climatiques.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/nerius-invest-se-mue-en-facilitateur-de-la-decarbonation-des-pme-426741/",
+      "date": "2026-06-16"
+    },
+    {
+      "id": "245eb8026bf5",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "« Canicule », « plume » ou « dôme » de chaleur… quels mots pour décrire les hausses de température ?",
+      "resume": "L'article clarifie les termes météorologiques liés aux vagues de chaleur, utiles pour évaluer les risques climatiques opérationnels sur les 3 000+ sites clients d'ABC et adapter les plans d'adaptation (BGES, ISO 14001).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/06/16/canicule-plume-ou-dome-de-chaleur-quels-mots-pour-decrire-les-hausses-de-temperature_6182497_3245.html",
       "date": "2026-06-16"
     }
   ],
@@ -141,6 +229,11 @@
       "niveau": "alerte renforcée"
     },
     {
+      "dept_code": "33",
+      "dept_nom": "Gironde",
+      "niveau": "alerte renforcée"
+    },
+    {
       "dept_code": "47",
       "dept_nom": "Lot-et-Garonne",
       "niveau": "alerte renforcée"
@@ -193,11 +286,6 @@
     {
       "dept_code": "17",
       "dept_nom": "Charente-Maritime",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "33",
-      "dept_nom": "Gironde",
       "niveau": "alerte"
     },
     {
@@ -783,7 +871,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les textes du 17 juin 2026 incluent des modifications réglementaires majeures pour la transition énergétique (prime de transition énergétique élargie et précisée) et des ajustements sectoriels (sécurité maritime et ferroviaire), directement impactant les stratégies RSE et les investissements durables des entreprises de services.",
+  "briefing_jorf": "Les textes du 17 juin 2026 introduisent des modifications réglementaires majeures pour la transition énergétique : renforcement des normes de sécurité et de prévention de la pollution maritime (1), ajustements des primes de transition énergétique (4,5,6) incluant des critères techniques élargis pour les travaux éligibles et les avances remboursables, et une licence ferroviaire (3) potentiellement impactante pour les stratégies de mobilité durable des entreprises.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1149,5 +1237,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux climatiques et énergétiques européens. Aucun autre texte ne traite explicitement de sujets environnementaux, de transition écologique ou de reporting RSE dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi n°2518** (adaptation au droit de l’UE en matière environnementale, énergétique et économique) et le **Projet de loi n°2632** (protection et souveraineté agricoles, potentiellement lié aux enjeux climatiques et agricoles durables) pourraient présenter un intérêt indirect pour un Responsable Environnement/Climat. Aucun texte ne traite explicitement de reporting RSE ou de déchets, et les autres projets concernent des domaines éloignés (sécurité, justice, finances, etc.)."
 }
