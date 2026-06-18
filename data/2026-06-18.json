@@ -1,46 +1,57 @@
 {
   "date": "2026-06-18",
-  "generated_at": "10:06",
-  "elapsed_seconds": 239,
+  "generated_at": "14:35",
+  "elapsed_seconds": 222,
   "errors": [],
   "stats": {
     "jo_analyses": 15,
-    "jo_retenus": 2,
+    "jo_retenus": 1,
     "depts_restriction": 63
   },
   "pipeline_meta": {
-    "run_at": "2026-06-18T10:06:26",
+    "run_at": "2026-06-18T14:35:25",
     "sources": {
-      "JORF": 2,
-      "RSS": 18,
+      "JORF": 1,
+      "RSS": 11,
       "VigiEau": 63,
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 64,
-    "llm_seconds": 76.9
+    "llm_calls": 57,
+    "llm_seconds": 70.8
   },
   "items": [
+    {
+      "id": "202a88332684",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "ENR : le Gouvernement envisage de proposer des produits de long terme pour les entreprises",
+      "resume": "Le Gouvernement envisage de proposer aux entreprises des contrats d'approvisionnement en électricité renouvelable à long terme, ce qui pourrait influencer la stratégie énergétique d'ABC et ses clients en matière de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/enr-contrats-long-terme-entreprises-consultation-48168.php4#xtor=RSS-6",
+      "date": "2026-06-18"
+    },
     {
       "id": "afb05d5db9eb",
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "[INFOGRAPHIE] Quelles ont été les dépenses de la France pour protéger l'environnement en 2023 ?",
-      "resume": "L'article fournit un contexte macroéconomique sur les dépenses environnementales en France, utile pour évaluer les tendances sectorielles et les attentes réglementaires futures, mais sans impact direct immédiat sur les enjeux opérationnels d'ABC.",
+      "resume": "L'infographie illustre l'enveloppe budgétaire française dédiée à la protection de l'environnement en 2023, avec un focus sur les déchets et eaux usées, secteurs clés pour les activités de propreté/FM d'ABC. Cela peut servir de contexte pour évaluer les opportunités de marché ou les attentes réglementaires futures.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/depenses-investissements-france-environnement-2023-48162.php4#xtor=RSS-6",
       "date": "2026-06-18"
     },
     {
-      "id": "bf5a51d99d52",
+      "id": "99a2de47835b",
       "source": "Reporterre",
       "categorie": "Climat",
-      "titre": "Climat : la France cuit, et le gouvernement se félicite",
-      "resume": "L'article souligne l'insuffisance des mesures d'adaptation climatique en France, ce qui pourrait impacter les risques opérationnels des sites clients d'ABC (ex : vagues de chaleur perturbant les prestations de propreté/FM).",
+      "titre": "La SNCF annule 71 trains à cause de la canicule",
+      "resume": "L'article illustre l'impact direct des aléas climatiques (canicule) sur les infrastructures de transport, un risque opérationnel indirect pour ABC via ses 3 000+ sites clients et sa flotte de véhicules.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://reporterre.net/Climat-la-France-cuit-et-le-gouvernement-se-felicite-des-maigres-avancees",
+      "url": "https://reporterre.net/La-SNCF-annule-71-trains-a-cause-de-la-canicule",
       "date": "2026-06-18"
     },
     {
@@ -48,7 +59,7 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Chaleur, inondations... Un quart des futurs data centers français vulnérable aux risques climatiques",
-      "resume": "L'article met en lumière la vulnérabilité des infrastructures critiques (data centers) aux risques climatiques en France, ce qui peut impacter indirectement ABC via ses clients (nucléaire, santé, industrie) et leurs exigences en matière de résilience opérationnelle.",
+      "resume": "L'article met en lumière l'exposition accrue des infrastructures critiques (data centers) aux risques climatiques en France, ce qui peut impacter indirectement ABC via ses clients (nucléaire, santé, industrie) et leurs exigences en matière de résilience opérationnelle.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Chaleur-inondations-Un-quart-des-futurs-data-centers-francais-vulnerable-aux-risques",
@@ -59,18 +70,18 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Jacques Ferrier, architecte : « La ville de demain ne peut pas être une succession de refuges climatisés reliés par des espaces extérieurs devenus hostiles »",
-      "resume": "L'article souligne l'importance de repenser l'urbanisme pour limiter les îlots de chaleur et favoriser des solutions passives (végétalisation, ventilation naturelle), ce qui pourrait influencer les attentes clients d'ABC en matière de prestations de propreté/FM dans des bâtiments durables.",
+      "resume": "L'article souligne l'importance de repenser l'urbanisme et les bâtiments pour s'adapter au réchauffement climatique, en intégrant des solutions passives (ombre, ventilation naturelle, végétalisation) qui pourraient influencer les attentes clients d'ABC en matière de prestations de propreté/FM dans des espaces durables.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/06/18/jacques-ferrier-architecte-la-ville-de-demain-ne-peut-pas-etre-une-succession-de-refuges-climatises-relies-par-des-espaces-exterieurs-devenus-hostiles_6704491_3232.html",
       "date": "2026-06-18"
     },
     {
-      "id": "8d9763ab4be0",
+      "id": "f3358bd39f01",
       "source": "Le Monde Planète",
-      "categorie": "Déchets",
-      "titre": "Les entreprises sommées de s’adapter à la multiplication des vagues de chaleur",
-      "resume": "L'article rappelle l'obligation pour ABC d'évaluer et prévenir les risques liés aux vagues de chaleur pour ses salariés intervenant chez les clients, notamment dans le cadre de la santé au travail et de la responsabilité employeur.",
+      "categorie": "Climat",
+      "titre": "Canicule : les entreprises sommées de s’adapter aux vagues de chaleur à répétition",
+      "resume": "L'article rappelle l'obligation légale pour ABC d'évaluer et prévenir les risques liés aux vagues de chaleur pour ses salariés intervenant sur les 3 000+ sites clients, sans seuil de température précis dans le code du travail.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/06/18/les-entreprises-sommees-de-s-adapter-a-la-multiplication-des-vagues-de-chaleur_6704492_3234.html",
@@ -81,7 +92,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "En pleine canicule, l’exécutif ne veut pas apparaître dépassé par la crise climatique",
-      "resume": "L'article souligne les lacunes du PNACC (Plan National d'Adaptation au Changement Climatique) face aux canicules, ce qui pourrait impacter les exigences clients d'ABC en matière de résilience climatique et de reporting ESG.",
+      "resume": "L'article souligne les lacunes du PNACC face aux canicules, un risque climatique opérationnel pour ABC qui intervient sur 3 000+ sites clients en France. Cela peut impacter les exigences de continuité de service et les attentes clients en matière de résilience climatique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/06/18/en-pleine-canicule-l-executif-ne-veut-pas-apparaitre-depasse-par-la-crise-climatique_6704472_3244.html",
@@ -92,7 +103,7 @@
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Budget des Vingt-sept : l’avenir très incertain du financement européen de l’environnement",
-      "resume": "L'incertitude sur le financement européen de l'environnement (via le programme LIFE) pourrait impacter indirectement les opportunités de subventions ou partenariats pour les projets RSE d'ABC, notamment en matière de décarbonation ou d'économie circulaire.",
+      "resume": "L'incertitude sur le financement européen de l'environnement pourrait impacter les subventions ou aides disponibles pour les projets de décarbonation ou d'efficacité énergétique des entreprises, y compris pour ABC dans le cadre de ses engagements CSRD ou ISO 14001.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/budget-des-vingt-sept-lavenir-tres-incertain-du-financement-europeen-de-lenvironnement",
@@ -103,7 +114,7 @@
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Risque chaleur : l’Espagne prépare un outil fondé sur l’indice WBGT pour anticiper l’exposition au travail",
-      "resume": "L'Espagne développe un outil basé sur l'indice WBGT pour évaluer les risques liés à la chaleur en milieu professionnel, ce qui pourrait inspirer des mesures similaires en France ou dans l'UE, impactant les prestataires de services comme ABC intervenant sur des sites clients.",
+      "resume": "L'Espagne développe un outil basé sur l'indice WBGT pour évaluer les risques liés à la chaleur en milieu professionnel, ce qui pourrait inspirer des mesures similaires en France ou dans l'UE, impactant potentiellement les obligations de prévention des risques climatiques pour les entreprises de services comme ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/risque-chaleur-lespagne-prepare-un-outil-fonde-sur-lindice-wbgt-pour-anticiper-lexposition",
@@ -114,109 +125,21 @@
       "source": "Actuel HSE",
       "categorie": "ICPE",
       "titre": "Greenwashing : plusieurs entreprises énergétiques visées par des plaintes d'associations de consommateurs",
-      "resume": "L'article souligne les risques de greenwashing pour les entreprises énergétiques, ce qui peut impacter la crédibilité des engagements climatiques des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et influencer leurs exigences en matière de reporting ESG et de décarbonation.",
+      "resume": "Cet article met en lumière les risques de greenwashing pour les entreprises énergétiques, ce qui peut impacter la crédibilité des engagements climatiques d'ABC et ses clients, notamment dans le cadre de la CSRD et du reporting extra-financier.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/greenwashing-plusieurs-entreprises-energetiques-visees-par-des-plaintes-dassociations-de-1",
       "date": "2026-06-18"
     },
     {
-      "id": "559a96cb5c51",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "MACF : les États membres valident l'extension à de nouveaux produits importés",
-      "resume": "MACF : les États membres valident l'extension à de nouveaux produits importés",
-      "pourquoi": "Mention de MACF.",
-      "criticite": 3,
-      "url": "https://www.actu-environnement.com/ae/news/macf-elargissement-produits-importes-etats-membres-48155.php4#xtor=RSS-6",
-      "date": "2026-06-17"
-    },
-    {
       "id": "134a649e7553",
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Consigne pour recyclage : les collectivités essuient une fin de non-recevoir",
-      "resume": "L'article aborde les tensions autour de la consigne pour recyclage des bouteilles en plastique, un sujet lié à la réglementation des déchets (REP) qui pourrait impacter les obligations de tri et de recyclage des prestataires de propreté comme ABC.",
+      "resume": "L'article aborde les tensions autour de la consigne pour recyclage des bouteilles en plastique, un sujet lié à la réglementation REP (Responsabilité Élargie du Producteur) qui pourrait impacter les obligations de tri et de traçabilité des déchets pour ABC dans ses prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/consigne-recyclage-collectivites-plan-plastique-48163.php4#xtor=RSS-6",
-      "date": "2026-06-17"
-    },
-    {
-      "id": "dd20ed5d4277",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Canicule : EDF envisage de réduire la production de deux centrales nucléaires",
-      "resume": "L'article illustre un risque climatique opérationnel (canicule) impactant la production d'électricité nucléaire, ce qui peut affecter la disponibilité énergétique pour les clients d'ABC et leurs exigences en matière de continuité de service.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Canicule-EDF-envisage-de-reduire-la-production-de-deux-centrales-nucleaires",
-      "date": "2026-06-17"
-    },
-    {
-      "id": "564eff94dfc6",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "La gronde monte contre le « tout électrification »",
-      "resume": "L'article souligne les tensions autour de la stratégie d'électrification exclusive en France, ce qui pourrait impacter les choix énergétiques des clients d'ABC (notamment tertiaire/industrie) et influencer leurs exigences en matière de mobilité durable ou d'efficacité énergétique.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/06/la-gronde-monte-contre-le-tout-electrification-426887/",
-      "date": "2026-06-17"
-    },
-    {
-      "id": "077f87637754",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "Seuls 4% des méthaniseurs valorisent leur CO2",
-      "resume": "L'article souligne le faible taux de valorisation du CO2 biogénique issu des méthaniseurs en France, ce qui pourrait impacter les stratégies de décarbonation des clients d'ABC (notamment industriels ou énergétiques) et leurs exigences en matière de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/06/seuls-4-des-methaniseurs-valorisent-leur-co2-426787/",
-      "date": "2026-06-17"
-    },
-    {
-      "id": "6ca87c22d1ec",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Canicule : le gouvernement présente un plan « endurance » pour faciliter l’adaptation des logements",
-      "resume": "Le plan 'endurance' du gouvernement vise à adapter les logements aux canicules, ce qui pourrait impacter les sites tertiaires clients d'ABC (ex : bureaux, hôpitaux) via des exigences accrues en efficacité énergétique ou adaptation climatique dans les contrats de propreté/FM.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/06/17/canicule-le-ministre-du-logement-vincent-jeanbrun-annonce-des-mesures-pour-faciliter-l-adaptation-des-logements_6704296_3244.html",
-      "date": "2026-06-17"
-    },
-    {
-      "id": "93e035c66459",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Canicule : les bons gestes  pour une utilisation raisonnée des climatiseurs",
-      "resume": "L'article souligne l'importance de régler les climatiseurs à 27°C pour réduire la consommation énergétique, ce qui impacte indirectement les coûts et l'empreinte carbone de la flotte de véhicules et des sites clients d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/06/17/canicule-les-bons-gestes-pour-une-utilisation-raisonnee-des-climatiseurs_6135414_3245.html",
-      "date": "2026-06-17"
-    },
-    {
-      "id": "510e039617e0",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "Iberdrola Issues €1.5 Billion Green Bond to Finance Grid, Renewables Investments",
-      "resume": "Cet article illustre une tendance de financement vert dans le secteur énergétique, pouvant influencer les exigences carbone des clients d'ABC (notamment industriels ou énergétiques) en matière de reporting et de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/iberdrola-issues-e1-5-billion-green-bond-to-finance-grid-renewables-investments/?utm_source=rss&utm_medium=rss&utm_campaign=iberdrola-issues-e1-5-billion-green-bond-to-finance-grid-renewables-investments",
-      "date": "2026-06-17"
-    },
-    {
-      "id": "2030ee231409",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "ISO Releases Draft Net Zero Standard",
-      "resume": "L'ISO publie un projet de norme sur le net zéro, qui pourrait influencer les exigences clients d'ABC en matière de reporting carbone et de décarbonation, notamment pour les scopes 1, 2 et 3.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/iso-releases-draft-net-zero-standard/?utm_source=rss&utm_medium=rss&utm_campaign=iso-releases-draft-net-zero-standard",
       "date": "2026-06-17"
     }
   ],
@@ -1139,6 +1062,12 @@
       "date": "2026-06-18"
     },
     {
+      "titre": "Arrêté du 4 juin 2026 modifiant plusieurs arrêtés relatifs aux installations de traitement de déchets",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054268378",
+      "date": "2026-06-18"
+    },
+    {
       "titre": "Arrêté du 8 juin 2026 portant homologation du cahier des charges du label rouge n° LA 01/16 « Pâté de foie de volaille supérieur »",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054268503",
@@ -1201,32 +1130,18 @@
   ],
   "jo_retenus": [
     {
-      "id": "b1283924e5e9",
-      "source": "JORF",
-      "categorie": "Déchets",
-      "titre": "Arrêté du 4 juin 2026 modifiant plusieurs arrêtés relatifs aux installations de traitement de déchets",
-      "resume": "Modification des règles de traitement des déchets pouvant impacter les filières REP ou la traçabilité des déchets générés par les prestations de propreté de ABC.",
-      "pourquoi": "L'arrêté du 4 juin 2026 impose des modifications strictes sur la traçabilité et le traitement des déchets (notamment via les filières REP), ce qui expose ABC à un risque de non-conformité réglementaire dès 2027 (délai court) si ses processus de tri, collecte et reporting ne sont pas alignés, mais offre aussi une opportunité de renforcer son leadership RSE en optimisant sa chaîne de valeur déchets et en répondant aux exigences croissantes des clients (CSRD, BGES).",
-      "criticite": 2,
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054268378",
-      "date": "2026-06-18"
-    },
-    {
       "id": "80e3e392f1e6",
       "source": "JORF",
       "categorie": "Déchets",
       "titre": "Arrêté du 17 juin 2026 modifiant l'arrêté du 14 décembre 2023 fixant la liste des versions de voitures particulières électriques ayant atteint le score environnemental minimal conditionnant l'éligibilité à certaines aides à l'achat ou à la location de véhicules peu polluants",
-      "resume": "Mise à jour des critères d'éligibilité aux aides pour l'achat/location de véhicules électriques, impactant la stratégie de renouvellement de la flotte de véhicules d'ABC.",
-      "pourquoi": {
-        "obligation_concrete": "L'arrêté impose un score environnemental minimal pour l'éligibilité aux aides à l'achat/location de véhicules électriques, contraignant ABC à renouveler sa flotte avec des modèles conformes sous peine de perte d'aides financières (ex : bonus écologique, prime à la conversion).",
-        "delai_risque_opportunite": "Le délai de mise en œuvre est immédiat (publication en 2026), avec un risque de surcoût ou de blocage des aides si la flotte n'est pas alignée, mais aussi une opportunité de modernisation accélérée vers des véhicules plus performants et bas-carbone."
-      },
+      "resume": "Modification des critères d'éligibilité aux aides pour les véhicules électriques, impactant la flotte de véhicules d'ABC.",
+      "pourquoi": "Cet arrêté impose un score environnemental minimal pour l'éligibilité aux aides à l'achat ou location de véhicules électriques, ce qui oblige ABC à adapter sa flotte d'ici 2026 pour maintenir l'accès aux subventions et éviter des coûts supplémentaires, tout en renforçant sa stratégie d'électrification déjà en cours.",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054268421",
       "date": "2026-06-18"
     }
   ],
-  "briefing_jorf": "L'arrêté du 4 juin 2026 modifiant les règles sur les installations de traitement de déchets et celui du 17 juin 2026 actualisant la liste des véhicules électriques éligibles aux aides publiques sont les seuls textes directement pertinents pour un Responsable Environnement/Climat, car ils impactent respectivement la gestion des déchets et la transition énergétique des flottes.",
+  "briefing_jorf": "L'arrêté du 4 juin 2026 modifiant les arrêtés relatifs aux installations de traitement de déchets est le seul texte directement pertinent pour un Responsable Environnement/Climat, car il impacte les réglementations sur la gestion des déchets des entreprises.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1592,5 +1507,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux climatiques et énergétiques liés à la transposition de directives européennes. Aucun texte adopté ne semble aborder spécifiquement ces sujets."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (transposition de directives UE en matière environnementale, énergétique et économique) et le projet de loi n°2632 (protection et souveraineté agricoles) pourraient avoir un impact indirect sur les enjeux climatiques et RSE pour une grande entreprise de services, notamment via des adaptations réglementaires ou des mesures sectorielles."
 }
