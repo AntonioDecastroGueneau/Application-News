@@ -1,7 +1,7 @@
 {
   "date": "2026-06-19",
-  "generated_at": "10:13",
-  "elapsed_seconds": 230,
+  "generated_at": "14:27",
+  "elapsed_seconds": 216,
   "errors": [],
   "stats": {
     "jo_analyses": 8,
@@ -9,18 +9,18 @@
     "depts_restriction": 65
   },
   "pipeline_meta": {
-    "run_at": "2026-06-19T10:13:25",
+    "run_at": "2026-06-19T14:27:38",
     "sources": {
       "JORF": 0,
-      "RSS": 17,
+      "RSS": 20,
       "VigiEau": 65,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 57,
-    "llm_seconds": 68.2
+    "llm_calls": 65,
+    "llm_seconds": 87.6
   },
   "items": [
     {
@@ -39,21 +39,87 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG Update: May Edition Now Available",
-      "resume": "L'article mentionne les activités d'EFRAG liées à la CSRD et aux normes ESRS, essentielles pour le reporting extra-financier d'ABC dans le cadre de la réglementation européenne. Cela impacte directement la préparation des données pour le Responsable Environnement/Climat.",
-      "pourquoi": "EFRAG est l'organisme européen en charge de l'élaboration des normes ESRS (European Sustainability Reporting Standards) sous la CSRD, qui impose un reporting extra-financier détaillé aux entreprises concernées. ABC, en tant que prestataire de services, est indirectement concerné par ces exigences via ses clients (notamment dans les secteurs nucléaire, santé et industrie) qui devront intégrer ces données dans leur propre reporting.",
+      "resume": "L'article informe sur les mises à jour de l'EFRAG (European Financial Reporting Advisory Group), notamment sur les évolutions du cadre de reporting ESG en Europe, ce qui impacte directement les obligations de reporting extra-financier de ABC dans le cadre de la CSRD.",
+      "pourquoi": "L'EFRAG joue un rôle clé dans l'élaboration des normes ESRS (European Sustainability Reporting Standards) sous la CSRD, dont le reporting est obligatoire pour ABC en tant qu'entreprise concernée par la directive. Les décisions techniques et consultations mentionnées peuvent influencer les exigences de reporting ESG de ABC dans les 12 mois.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-update-may-edition-now-available-0",
       "date": "2026-06-19"
     },
     {
-      "id": "94141d6f7f53",
+      "id": "78c47a9ac02c",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Surchauffe des logements : le plan gouvernemental jugé insuffisant",
+      "resume": "L'article souligne l'insuffisance des mesures gouvernementales contre la surchauffe des logements, un enjeu climatique qui pourrait impacter les sites tertiaires clients d'ABC (ex : bureaux, établissements de santé) et leurs obligations de confort thermique ou d'adaptation climatique, sans action directe immédiate pour le prestataire.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/logements-bouilloires-thermiques-annonces-gouvernement-insuffisantes-ignes-fondation-logement-defavorises-48179.php4#xtor=RSS-6",
+      "date": "2026-06-19"
+    },
+    {
+      "id": "dc0205f906b4",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Près d'Orléans, une zone économique alimentée en chaleur et en froid par un incinérateur",
+      "resume": "Le projet d'Orléans Métropole illustre une solution de décarbonation des bâtiments tertiaires via un réseau de chaleur/froid alimenté par un incinérateur, ce qui pourrait inspirer des clients d'ABC (secteurs santé, industrie, tertiaire) à adopter des solutions similaires pour réduire leur empreinte carbone.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/reseau-chaleur-froid-incinerateur-orleans-pole45-48177.php4#xtor=RSS-6",
+      "date": "2026-06-19"
+    },
+    {
+      "id": "c88aa125fc82",
       "source": "Reporterre",
       "categorie": "Climat",
-      "titre": "« Je n'ai pas le choix, il faut travailler » : en pleine canicule, ouvriers et livreurs continuent malgré la fournaise",
-      "resume": "L'article met en lumière les risques climatiques opérationnels (canicules) affectant les travailleurs en extérieur, ce qui peut impacter la santé et la productivité des équipes de nettoyage de ABC sur ses 3 000+ sites clients.",
+      "titre": "784 écoles fermées à cause de la canicule, des fêtes et des courses annulées",
+      "resume": "L'article met en lumière l'impact des aléas climatiques (canicules) sur les infrastructures publiques en France, illustrant un risque opérationnel indirect pour ABC via ses 3 000+ sites clients (ex : annulations de services, perturbations logistiques).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/784-ecoles-fermees-a-cause-de-la-canicule-des-fetes-et-des-courses-annulees",
+      "date": "2026-06-19"
+    },
+    {
+      "id": "a0c6d001f3ae",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "« Je n'ai pas le choix, il faut travailler » : ouvriers et livreurs cuisent dans la fournaise",
+      "resume": "L'article met en lumière les impacts des vagues de chaleur sur les travailleurs en extérieur (BTP, livreurs), ce qui peut impacter la productivité et les conditions de travail des équipes d'ABC intervenant sur des sites clients en période de canicule.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Je-n-ai-pas-le-choix-il-faut-travailler-en-pleine-canicule-ouvriers-et-livreurs",
+      "date": "2026-06-19"
+    },
+    {
+      "id": "3a668b643985",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "Santé, environnement : les Français attendent plus des entreprises",
+      "resume": "L'article souligne l'attente croissante des consommateurs français envers les entreprises pour des modèles de production plus durables, ce qui peut impacter la stratégie RSE et commerciale d'ABC en renforçant la pression sur ses engagements climatiques et environnementaux.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/consommation-responsable-sante-ecologie-ademe-greenflex-2026",
+      "date": "2026-06-19"
+    },
+    {
+      "id": "05c7b2557080",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Les documents de la semaine",
+      "resume": "Cette newsletter hebdomadaire compile des documents clés sur la transition énergétique (réglementations, études, analyses) qui pourraient inclure des évolutions pertinentes pour le reporting ESG (CSRD/ESRS), la décarbonation (scope 1/3) ou les risques climatiques opérationnels de ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/les-documents-de-la-semaine-381215/",
+      "date": "2026-06-19"
+    },
+    {
+      "id": "12405b10ac64",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’agenda de la transition énergétique",
+      "resume": "L'article recense des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, rénovation), offrant une veille sur les tendances et évolutions réglementaires/marché pertinentes pour ABC, notamment sur la décarbonation et la mobilité durable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/lagenda-de-la-transition-energetique-280-424554/",
       "date": "2026-06-19"
     },
     {
@@ -61,21 +127,32 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "A Bonn, les négociations climatiques avancent sur l’énergie mais butent sur le financement",
-      "resume": "L'article souligne les avancées sur l'électrification mondiale dans le cadre des négociations climatiques, un enjeu indirect pour ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et la transition énergétique des flottes de véhicules.",
+      "resume": "L'article souligne les avancées sur l'électrification mondiale dans le cadre des négociations climatiques, un enjeu indirect pour ABC via la décarbonation de sa flotte de véhicules et les attentes clients en matière de mobilité durable.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/06/19/a-bonn-les-negociations-climatiques-avancent-sur-l-energie-mais-butent-sur-le-financement_6704928_3244.html",
       "date": "2026-06-19"
     },
     {
-      "id": "73a0e12d43c8",
+      "id": "496371b468dc",
       "source": "Le Monde Planète",
       "categorie": "Climat",
-      "titre": "Canicule : en Ile-de-France, les usagers se détournent des transports en commun, métro, bus et RER étant peu climatisés, voire pas du tout",
-      "resume": "L'article met en lumière les risques opérationnels liés aux aléas climatiques (canicules) qui pourraient impacter la mobilité des employés de ABC et de ses clients, notamment en Île-de-France. Cela pourrait affecter la ponctualité des interventions et la logistique des prestations de propreté/FM.",
+      "titre": "Canicule : les usagers d’Ile-de-France se détournent des transports en commun, peu climatisés, voire pas du tout",
+      "resume": "Les aléas climatiques (canicules) impactent directement la mobilité des employés et clients d'ABC, pouvant perturber les prestations de propreté/FM sur 3 000+ sites. Risque indirect de baisse de fréquentation des sites clients ou de perturbation des déplacements des équipes.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/06/19/canicule-en-ile-de-france-les-usagers-se-detournent-des-transports-en-commun-metro-bus-et-rer-etant-peu-voire-pas-climatises_6704924_3234.html",
+      "date": "2026-06-19"
+    },
+    {
+      "id": "8da1f29bde20",
+      "source": "The Guardian Environment",
+      "categorie": "Environnement",
+      "titre": "Macron calls for vigilance as western Europe faces second heatwave of year",
+      "resume": "L'article souligne l'intensification des vagues de chaleur en France, pouvant impacter la santé des employés et la continuité des services de propreté/FM, notamment sur des sites clients sensibles (santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/world/2026/jun/19/macron-calls-for-vigilance-as-western-europe-faces-second-heatwave-of-year",
       "date": "2026-06-19"
     },
     {
@@ -83,7 +160,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Consommation durable : l’enjeu est du côté des entreprises",
-      "resume": "L'article souligne que la consommation durable dépend autant des entreprises que des consommateurs, ce qui impacte indirectement les obligations de reporting ESG et la stratégie RSE d'ABC pour répondre aux attentes clients en matière de durabilité.",
+      "resume": "L'article souligne l'importance de l'offre des entreprises pour rendre la consommation durable effective, ce qui implique pour ABC de renforcer ses engagements en matière de déchets (REP, traçabilité) et d'éco-conception de ses prestations pour répondre aux attentes clients et réglementaires.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/consommation-durable-lenjeu-est-du-cote-des-entreprises",
@@ -94,7 +171,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Déchets médicaux perforants : Dastri annonce avoir atteint l'essentiel de ses objectifs règlementaires en 2025",
-      "resume": "L'article traite de la gestion des déchets médicaux perforants, un sujet lié à la réglementation des déchets (REP) et aux enjeux de traçabilité pour les prestataires de services comme ABC intervenant dans le secteur santé. Bien que non directement applicable à ABC, il signale une évolution réglementaire à surveiller pour les clients du secteur médical.",
+      "resume": "L'article traite de la gestion des déchets médicaux perforants, un sujet lié à la réglementation REP (Responsabilité Élargie du Producteur) et à la traçabilité des déchets, qui peut impacter les obligations de reporting et de gestion des déchets pour ABC dans le cadre de ses prestations chez des clients du secteur santé.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/collecte-2025-dastri-objectifs-48174.php4#xtor=RSS-6",
@@ -105,7 +182,7 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Canicule : le Gouvernement dévoile son plan pour rafraîchir logements et écoles",
-      "resume": "Le plan gouvernemental pour lutter contre la surchauffe des logements et écoles pourrait influencer les exigences des clients d'ABC (secteurs santé, éducation) en matière d'adaptation climatique, notamment via des besoins accrus en prestations de propreté adaptées aux températures extrêmes.",
+      "resume": "Le plan gouvernemental pour rafraîchir logements et écoles pourrait influencer les exigences des clients d'ABC (secteurs santé, éducation) en matière d'adaptation climatique, notamment via des demandes accrues en services de propreté résilients aux canicules.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/confort-ete-batiments-plan-gouvernement-stores-pompes-chaleur-reversibles-logements-ecoles-48173.php4#xtor=RSS-6",
@@ -116,7 +193,7 @@
       "source": "Actu-Environnement",
       "categorie": "Biodiversité",
       "titre": "Hydrogène : le nombre de projets diminue alors que la crise révèle les dépendances",
-      "resume": "L'article souligne la dépendance aux importations d'hydrogène et ses risques pour les chaînes d'approvisionnement, ce qui pourrait impacter les stratégies clients d'ABC (ex : industrie, santé) et leurs exigences en matière de décarbonation.",
+      "resume": "L'article souligne la dépendance aux importations d'hydrogène et les risques associés pour les chaînes d'approvisionnement des industries clientes d'ABC (nucléaire, santé, industrie), pouvant impacter leurs exigences carbone et leurs stratégies de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/hydrogene-projets-recul-crise-dependances-48172.php4#xtor=RSS-6",
@@ -127,21 +204,10 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Installations de traitement de déchets : un arrêté transpose la directive IED révisée",
-      "resume": "L'arrêté transpose la directive IED révisée (2024) pour les installations de traitement de déchets, ce qui impacte indirectement ABC via les exigences clients en matière de traçabilité et conformité réglementaire des déchets générés par ses prestations.",
+      "resume": "L'arrêté transpose la directive IED révisée (2024) pour les installations de traitement de déchets, ce qui pourrait impacter les obligations de traçabilité et de conformité des déchets générés par les prestations de propreté/FM d'ABC chez ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/arrete-transposition-directive-ied-traitement-dechets-48171.php4#xtor=RSS-6",
-      "date": "2026-06-18"
-    },
-    {
-      "id": "202a88332684",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "ENR : le Gouvernement envisage de proposer des produits de long terme pour les entreprises",
-      "resume": "Le Gouvernement envisage de proposer des contrats d'approvisionnement en électricité renouvelable de long terme aux entreprises, ce qui pourrait offrir à ABC une opportunité de sécuriser son mix énergétique pour ses sites ou activités.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/enr-contrats-long-terme-entreprises-consultation-48168.php4#xtor=RSS-6",
       "date": "2026-06-18"
     },
     {
@@ -149,21 +215,10 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Bientôt tous inassurables ? De premières données et beaucoup de questions",
-      "resume": "L'article souligne l'impact croissant des aléas climatiques sur l'assurabilité des biens, ce qui pourrait influencer les coûts et la disponibilité des assurances pour les sites clients d'ABC (3 000+ sites) et indirectement ses activités de propreté/FM.",
+      "resume": "L'article souligne l'augmentation des risques climatiques (inondations, sécheresses) et leur impact sur l'assurabilité des biens, ce qui pourrait influencer les coûts et la disponibilité des assurances pour les sites clients d'ABC, notamment en cas de sinistres liés aux aléas climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Bientot-tous-inassurables-De-premieres-donnees-et-beaucoup-de-questions",
-      "date": "2026-06-18"
-    },
-    {
-      "id": "99a2de47835b",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "La SNCF annule 71 trains à cause de la canicule",
-      "resume": "L'article illustre l'impact des aléas climatiques (canicule) sur les infrastructures critiques, un risque indirect pour ABC via ses 3 000+ sites clients, notamment dans les secteurs nucléaire, santé ou industrie.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/La-SNCF-annule-71-trains-a-cause-de-la-canicule",
       "date": "2026-06-18"
     },
     {
@@ -171,7 +226,7 @@
       "source": "Novethic",
       "categorie": "Énergie",
       "titre": "Stellantis, Airbus, TotalEnergies... ces géants dont la facture carbone dépasse les bénéfices",
-      "resume": "L'article met en lumière l'exposition financière des grandes entreprises françaises au coût carbone, un signal fort pour ABC qui doit anticiper les exigences carbone de ses clients industriels et énergétiques dans le cadre de la CSRD et des trajectoires net zéro.",
+      "resume": "L'article met en lumière l'impact financier du coût carbone pour les grandes entreprises françaises, illustrant les enjeux de décarbonation et de reporting ESG qui pourraient influencer les exigences des clients d'ABC en matière de réduction des émissions (scope 3).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/climat/verite-40-2026-risque-carbone-entreprises-france",
@@ -182,32 +237,10 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "L’Etat veut proposer des contrats long terme d’électricité renouvelable",
-      "resume": "L'État propose des contrats long terme d'électricité renouvelable, ce qui pourrait influencer les coûts énergétiques des prestations de services de ABC et ses clients, notamment dans le cadre de leur reporting ESG et de leur stratégie de décarbonation.",
+      "resume": "L'État propose des contrats long terme pour de l'électricité renouvelable, ce qui pourrait influencer les choix énergétiques des sites clients d'ABC et impacter indirectement sa stratégie d'achat d'énergie ou de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/letat-veut-proposer-des-contrats-long-terme-delectricite-renouvelable-427074/",
-      "date": "2026-06-18"
-    },
-    {
-      "id": "0eafce4cefaf",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Le fonds IDF Décarbonation monte à 115 M€",
-      "resume": "Le fonds IDF Décarbonation, dédié à la décarbonation des entreprises franciliennes, pourrait influencer les attentes des clients d'ABC (notamment industriels et tertiaires) en matière d'investissements bas-carbone, sans impact opérationnel direct immédiat.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/06/le-fonds-idf-decarbonation-monte-a-115-me-427010/",
-      "date": "2026-06-18"
-    },
-    {
-      "id": "86f48123320d",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Mécanisme d’ajustement carbone aux frontières : « Pour que le dispositif soit efficace et juste, il faut l’adapter aux territoires ultramarins »",
-      "resume": "L'article aborde le mécanisme d'ajustement carbone aux frontières (MACF) de l'UE, qui pourrait impacter indirectement les coûts des prestations de services de ABC via les clients industriels ou énergétiques soumis à ce dispositif.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/06/18/mecanisme-d-ajustement-carbone-aux-frontieres-pour-que-le-dispositif-soit-efficace-et-juste-il-faut-l-adapter-aux-territoires-ultramarins_6704546_3232.html",
       "date": "2026-06-18"
     }
   ],
@@ -1333,5 +1366,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de pêche) et le n°2632 (protection et souveraineté agricoles) pourraient impacter directement les enjeux climatiques et environnementaux d’une grande entreprise de services. Aucun texte adopté ne semble directement lié à ces thématiques."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N° 2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux environnementaux et énergétiques dans son champ d'application. Aucun autre texte ne semble aborder spécifiquement des sujets liés au climat, à l'énergie, aux déchets ou au reporting RSE de manière significative."
 }
