@@ -1,7 +1,7 @@
 {
   "date": "2026-06-20",
-  "generated_at": "08:42",
-  "elapsed_seconds": 227,
+  "generated_at": "13:06",
+  "elapsed_seconds": 213,
   "errors": [],
   "stats": {
     "jo_analyses": 25,
@@ -9,18 +9,18 @@
     "depts_restriction": 69
   },
   "pipeline_meta": {
-    "run_at": "2026-06-20T08:42:22",
+    "run_at": "2026-06-20T13:06:47",
     "sources": {
       "JORF": 0,
-      "RSS": 12,
+      "RSS": 7,
       "VigiEau": 69,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 64,
-    "llm_seconds": 75.5
+    "llm_calls": 54,
+    "llm_seconds": 58.5
   },
   "items": [
     {
@@ -28,21 +28,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "La climatisation est-elle devenue une solution incontournable pour faire face aux vagues de chaleur ?",
-      "resume": "L'article aborde l'enjeu de l'adaptation aux vagues de chaleur via la climatisation, un sujet indirectement lié aux risques climatiques opérationnels pour ABC (3 000+ sites clients) et à la demande croissante de solutions durables par ses clients (nucléaire, santé, industrie).",
+      "resume": "L'article aborde les enjeux liés à l'adaptation aux vagues de chaleur, un risque climatique opérationnel pour ABC qui intervient sur 3 000+ sites clients. La climatisation pourrait devenir un sujet de demande accrue de la part des clients (nucléaire, santé, industrie) pour maintenir leurs activités, impactant indirectement les prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/06/20/la-climatisation-est-elle-devenue-une-solution-incontournable-pour-faire-face-aux-vagues-de-chaleur_6705260_3244.html",
-      "date": "2026-06-20"
-    },
-    {
-      "id": "5db9c16518d4",
-      "source": "The Guardian Environment",
-      "categorie": "Énergie",
-      "titre": "Can we electrify the world? Ambition moves from nerdish backwater to centre stage",
-      "resume": "L'article souligne l'accélération de l'électrification mondiale (véhicules, chauffage, industrie) comme levier clé pour décarboner l'énergie, avec des implications potentielles sur la stratégie de flotte et les services énergétiques d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/environment/2026/jun/20/electrification-takes-centre-stage-bonn-climate-talks",
       "date": "2026-06-20"
     },
     {
@@ -50,7 +39,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Déchets plastiques : la fermeture des frontières européennes accentue la pression sur les recycleurs",
-      "resume": "L'arrêt des exportations de déchets plastiques hors UE accentue la pression sur les recycleurs européens, ce qui pourrait impacter la gestion des déchets des prestations de propreté/FM d'ABC et ses obligations de traçabilité (REP).",
+      "resume": "L'arrêt des exportations hors UE de déchets plastiques accentue la pression sur les recycleurs européens, ce qui pourrait impacter la gestion des déchets des prestations de propreté de ABC et ses clients, notamment via la REP emballages.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/arret-exportations-dechets-plastiques-europe-48182.php4#xtor=RSS-6",
@@ -61,7 +50,7 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Surchauffe des logements : le plan gouvernemental jugé insuffisant",
-      "resume": "L'article aborde les enjeux de surchauffe des logements liés aux aléas climatiques, un risque indirect pour ABC via ses 3 000+ sites clients (ex : tertiaire, santé, industrie). Cela peut impacter les exigences clients en matière de résilience climatique et de décarbonation.",
+      "resume": "L'article souligne l'insuffisance des mesures gouvernementales contre la surchauffe des logements, un enjeu climatique croissant en France qui pourrait impacter les sites tertiaires clients d'ABC (ex : bureaux, établissements de santé).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/logements-bouilloires-thermiques-annonces-gouvernement-insuffisantes-ignes-fondation-logement-defavorises-48179.php4#xtor=RSS-6",
@@ -72,32 +61,21 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Huiles usagées : Cyclevia revoit à la baisse le gisement collectable",
-      "resume": "L'article impacte indirectement ABC via la gestion des déchets de ses prestations (huiles usagées) et la traçabilité des flux dans le cadre de la REP, avec un risque de complexité accrue dans la collecte et le reporting.",
+      "resume": "L'article impacte ABC via la filière REP des huiles usagées, avec un gisement collectable revu à la baisse (234 000 tonnes), ce qui peut influencer les obligations de traçabilité et de reporting déchets pour les prestations de nettoyage industriel.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/etude-gisement-huiles-usagees-cyclevia-48183.php4#xtor=RSS-6",
       "date": "2026-06-19"
     },
     {
-      "id": "dc0205f906b4",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Près d'Orléans, une zone économique alimentée en chaleur et en froid par un incinérateur",
-      "resume": "Le projet d'Orléans Métropole illustre une solution de décarbonation des bâtiments tertiaires via un réseau de chaleur/froid alimenté par un incinérateur, un modèle potentiellement transposable pour les sites clients d'ABC (santé, industrie, tertiaire) dans le cadre de leurs objectifs BGES/plan climat.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/reseau-chaleur-froid-incinerateur-orleans-pole45-48177.php4#xtor=RSS-6",
-      "date": "2026-06-19"
-    },
-    {
-      "id": "3a668b643985",
-      "source": "Novethic",
+      "id": "c88aa125fc82",
+      "source": "Reporterre",
       "categorie": "Climat",
-      "titre": "Santé, environnement : les Français attendent plus des entreprises",
-      "resume": "L'article souligne l'attente croissante des consommateurs français envers les entreprises pour des modèles de production plus durables, ce qui peut influencer les exigences clients d'ABC en matière de RSE et de décarbonation.",
+      "titre": "784 écoles fermées à cause de la canicule, des fêtes et des courses annulées",
+      "resume": "L'article souligne l'impact des aléas climatiques (canicules) sur les infrastructures publiques en France, ce qui peut affecter les sites clients d'ABC (ex : écoles, bâtiments tertiaires) et générer des risques opérationnels indirects (perturbations de services, besoins accrus en nettoyage ou adaptation des prestations).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/consommation-responsable-sante-ecologie-ademe-greenflex-2026",
+      "url": "https://reporterre.net/784-ecoles-fermees-a-cause-de-la-canicule-des-fetes-et-des-courses-annulees",
       "date": "2026-06-19"
     },
     {
@@ -105,21 +83,10 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Bruxelles lance une place de marché pour le biométhane",
-      "resume": "La création d'une place de marché européenne pour le biométhane pourrait influencer les stratégies énergétiques des clients d'ABC (notamment industriels ou tertiaires) et potentiellement impacter les contrats de prestation de services liés à l'énergie ou aux déchets.",
+      "resume": "La création d'une place de marché européenne pour le biométhane pourrait influencer les stratégies énergétiques des clients d'ABC (notamment industriels ou tertiaires) et potentiellement leur demande en services de transition énergétique, sans impact direct immédiat sur les activités de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/bruxelles-lance-une-place-de-marche-pour-le-biomethane-427228/",
-      "date": "2026-06-19"
-    },
-    {
-      "id": "05c7b2557080",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Les documents de la semaine",
-      "resume": "Sélection hebdomadaire de documents utiles pour suivre les évolutions réglementaires et les tendances en transition énergétique, permettant à ABC de rester informé sur les sujets impactant ses enjeux RSE (BGES, CSRD, mobilité, énergie, déchets).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/06/les-documents-de-la-semaine-381215/",
       "date": "2026-06-19"
     },
     {
@@ -127,32 +94,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Canicule : des copropriétaires ayant installé une climatisation sans autorisation sont condamnés à la retirer",
-      "resume": "L'article souligne les contraintes réglementaires liées à l'installation de climatiseurs en copropriété, un sujet pouvant impacter les sites clients d'ABC (notamment tertiaires) dans le cadre de la gestion énergétique et des risques climatiques.",
+      "resume": "L'article rappelle les contraintes réglementaires liées à l'installation de climatisation en copropriété, un sujet indirectement lié à la gestion énergétique des bâtiments tertiaires où ABC intervient (DPE tertiaire, efficacité énergétique).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/argent/article/2026/06/19/canicule-des-coproprietaires-ayant-installe-une-climatisation-sans-autorisation-sont-condamnes-a-la-retirer_6704977_1657007.html",
-      "date": "2026-06-19"
-    },
-    {
-      "id": "862aaf7bc9e8",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "Equinor Drops Renewable Energy Goal: “Seen for Several Years We Won’t Reach that Target”",
-      "resume": "L'article illustre un recul stratégique dans les énergies renouvelables par un acteur majeur du secteur énergétique, signalant un contexte économique défavorable pour les projets décarbonés qui pourrait influencer les exigences carbone des clients d'ABC (notamment industriels ou énergétiques).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/equinor-drops-renewable-energy-goals-seen-for-several-years-we-wont-reach-that-target/?utm_source=rss&utm_medium=rss&utm_campaign=equinor-drops-renewable-energy-goals-seen-for-several-years-we-wont-reach-that-target",
-      "date": "2026-06-19"
-    },
-    {
-      "id": "8da1f29bde20",
-      "source": "The Guardian Environment",
-      "categorie": "Environnement",
-      "titre": "Macron calls for vigilance as western Europe faces second heatwave of year",
-      "resume": "L'article souligne l'augmentation des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter la prestation de services de propreté/FM sur 3 000+ sites clients (ex. : perturbations logistiques, sécurité des équipes, adaptation des horaires).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/world/2026/jun/19/macron-calls-for-vigilance-as-western-europe-faces-second-heatwave-of-year",
       "date": "2026-06-19"
     }
   ],
@@ -1652,5 +1597,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N° 2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux environnementaux et énergétiques dans le droit national. Aucun autre texte ne semble aborder directement les thèmes du climat, de l'énergie, des déchets ou du reporting RSE."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux réglementaires européens clés en matière d'énergie, d'environnement et de climat. Aucun autre texte ne semble aborder directement des sujets liés à la RSE, au reporting extra-financier ou à la transition écologique."
 }
