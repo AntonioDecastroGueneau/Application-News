@@ -1,26 +1,26 @@
 {
   "date": "2026-06-22",
-  "generated_at": "11:34",
-  "elapsed_seconds": 227,
+  "generated_at": "16:13",
+  "elapsed_seconds": 238,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
     "jo_retenus": 0,
-    "depts_restriction": 70
+    "depts_restriction": 71
   },
   "pipeline_meta": {
-    "run_at": "2026-06-22T11:34:08",
+    "run_at": "2026-06-22T16:13:34",
     "sources": {
       "JORF": 0,
-      "RSS": 12,
-      "VigiEau": 70,
+      "RSS": 16,
+      "VigiEau": 71,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 53,
-    "llm_seconds": 58.6
+    "llm_calls": 63,
+    "llm_seconds": 81.8
   },
   "items": [
     {
@@ -39,8 +39,8 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG Update Podcast: New May Edition Episodes Available",
-      "resume": "L'article mentionne les évolutions du reporting ESG via l'EFRAG, notamment les normes ESRS et IFRS, qui impactent directement les obligations de reporting extra-financier de ABC dans le cadre de la CSRD.",
-      "pourquoi": "ABC est concerné par le reporting ESG (CSRD/ESRS) et doit suivre les évolutions des normes de reporting financier et extra-financier pour ses clients et ses propres obligations réglementaires.",
+      "resume": "L'article mentionne les évolutions du cadre de reporting extra-financier (CSRD/ESRS) via l'EFRAG, ce qui impacte directement le reporting ESG de ABC pour répondre aux exigences clients et réglementaires.",
+      "pourquoi": "Le sujet concerne le reporting ESG (CSRD, ESRS) qui est un enjeu direct pour ABC dans le cadre de ses obligations de transparence et de ses clients (nucléaire, santé, industrie). L'EFRAG joue un rôle clé dans l'endossement des normes IFRS et ESRS, influençant les pratiques de reporting des entreprises en Europe.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-update-podcast-new-may-edition-episodes-available",
       "date": "2026-06-22"
@@ -50,10 +50,43 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Lire notre dossier d'actu \"Canicule : la France face au défi du confort d'été\"",
-      "resume": "L'article souligne l'augmentation des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter les sites clients d'ABC (ex : confort thermique, adaptation des bâtiments) et nécessitant une veille sur les solutions durables pour les prestations de propreté/FM.",
+      "resume": "La canicule devient un risque climatique opérationnel pour ABC, pouvant impacter la prestation de propreté (ex. : conditions de travail, adaptation des horaires) et les exigences clients en matière de résilience climatique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/dossier-actu/dossier-canicule-chaleur-adaptation-climat-batiment-ville-128#xtor=RSS-6",
+      "date": "2026-06-22"
+    },
+    {
+      "id": "61dfdd74758f",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Canicule : le changement climatique a entraîné une hausse des températures pouvant atteindre 4 °C",
+      "resume": "L'article souligne l'impact direct des vagues de chaleur sur les activités de nettoyage et de FM, avec des risques accrus pour les équipes et les infrastructures clients (ex. : surcharge des systèmes de climatisation, dégradation des équipements).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/canicule-changement-climatique-hausse-temperatures-48190.php4#xtor=RSS-6",
+      "date": "2026-06-22"
+    },
+    {
+      "id": "ca3c6cd1181d",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Sans le changement climatique, la canicule aurait été plus fraîche de 2,4 °C à Paris",
+      "resume": "L'article confirme l'impact du changement climatique sur les vagues de chaleur en Europe, un risque opérationnel indirect pour ABC via l'augmentation des aléas climatiques sur ses 3 000+ sites clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Sans-le-changement-climatique-la-canicule-aurait-ete-plus-fraiche-de-2-4-oC-a-Paris",
+      "date": "2026-06-22"
+    },
+    {
+      "id": "f473cef7ea3f",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "53 °C sous la verrière de l'école... et des rénovations aux abonnés absents",
+      "resume": "L'article illustre les enjeux de rénovation énergétique des bâtiments tertiaires (écoles) face aux vagues de chaleur, un contexte pertinent pour ABC dans le cadre de ses engagements en efficacité énergétique et adaptation climatique pour ses clients (bureaux, établissements publics, etc.).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/53-oC-sous-la-verriere-de-l-ecole-et-des-renovations-aux-abonnes-absents",
       "date": "2026-06-22"
     },
     {
@@ -61,7 +94,7 @@
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Chaleur, sécheresse, inondations… quand le climat fait planer le risque d’inassurabilité sur l’économie",
-      "resume": "L'article souligne l'augmentation des risques d'inassurabilité liés aux événements climatiques extrêmes, ce qui pourrait impacter la couverture des sites clients d'ABC et ses coûts opérationnels.",
+      "resume": "L'article souligne l'augmentation des risques d'inassurabilité pour les entreprises en raison des événements climatiques extrêmes, ce qui pourrait impacter la couverture des risques opérationnels de ABC sur ses 3 000+ sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/finance-durable/tendances-de-marche/chaleur-secheresse-inondations-quand-climat-fait-planer-risque-inassurabilite-economie",
@@ -72,7 +105,7 @@
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Canicule : les acteurs économiques face au mur climatique",
-      "resume": "L'article souligne l'impact des canicules sur les activités économiques en France, un risque climatique opérationnel pouvant affecter les 3 000+ sites clients d'ABC (ex : perturbations logistiques, sécurité des employés, adaptation des prestations).",
+      "resume": "L'article souligne l'impact des canicules sur les acteurs économiques en France, un risque climatique opérationnel pouvant affecter les 3 000+ sites clients d'ABC (perturbations logistiques, santé des employés, etc.).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/climat/canicule-consequences-entreprises-mur-climatique-adaptation",
@@ -83,10 +116,21 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Canicule : une impréparation flagrante, une anticipation indispensable",
-      "resume": "L'article souligne l'importance de l'anticipation des risques climatiques pour les politiques publiques, ce qui impacte indirectement les exigences des clients d'ABC en matière de résilience et de reporting extra-financier.",
+      "resume": "L'article souligne l'urgence d'intégrer les risques climatiques dans les politiques publiques, ce qui pourrait impacter les exigences des clients d'ABC en matière de résilience et de reporting extra-financier.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/06/22/canicule-une-impreparation-flagrante-une-anticipation-indispensable_6706576_3232.html",
+      "date": "2026-06-22"
+    },
+    {
+      "id": "566634f9f578",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Canicule : l’exposition est, sud et ouest de l’appartement justifie l’installation d’une climatisation",
+      "resume": "L'article souligne l'augmentation des besoins en climatisation dans les logements, ce qui pourrait impacter la demande en services de propreté/FM pour les sites tertiaires (bureaux, commerces) exposés aux canicules, notamment dans le sud et l'ouest de la France.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/argent/article/2026/06/22/canicule-l-exposition-est-sud-et-ouest-de-l-appartement-justifie-l-installation-d-une-climatisation_6706574_1657007.html",
       "date": "2026-06-22"
     },
     {
@@ -94,7 +138,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Canicule : à un an de la présidentielle, les politiques en plein déni des enjeux de l’adaptation au réchauffement",
-      "resume": "L'article souligne l'absence de priorité politique sur l'adaptation au réchauffement climatique en France, ce qui pourrait impacter les risques opérationnels indirects d'ABC (aléas climatiques sur ses 3 000+ sites clients) et renforcer les exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "resume": "L'article souligne l'absence de politiques publiques d'adaptation climatique en France, ce qui pourrait impacter la résilience des sites clients d'ABC (3 000+ sites) face aux aléas climatiques (canicules, etc.), renforçant les risques opérationnels indirects pour le prestataire.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/06/22/canicule-a-un-an-de-la-presidentielle-les-politiques-en-plein-deni-des-enjeux-de-l-adaptation-au-rechauffement_6706433_3244.html",
@@ -105,7 +149,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Climat",
       "titre": "Transition énergétique : mobilisation générale à Dijon pendant trois jours - Les Echos",
-      "resume": "L'article pourrait aborder des initiatives locales de transition énergétique à Dijon, sans lien direct avec les obligations réglementaires ou opérationnelles d'ABC en matière de décarbonation ou de reporting ESG.",
+      "resume": "Cet article sur la mobilisation pour la transition énergétique à Dijon pourrait informer ABC sur les dynamiques locales en matière de décarbonation et de mobilité durable, bien que sans lien direct avec ses obligations réglementaires immédiates.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPcDhvRmpubG5DZG82eVZ4YUlDazluM1ltNkRfVHQtaFkwZWlmcjRmMDhTSUpsSG0wS01CNzBBek1MbkM1WTZHRnRNRk4yQTdhU2Z6NEZleFdzNEdsOGZpVzFRaUh5N3N5OUF4d05MQmtubDk1NWN4cEJtTDZLMnNwYzFVdjlmNUhNc1RHUGotZUtNc0M4X2NOTW1HemRoOVg2QTJxSzg1S1ZWeFFsSm1aZkZKTC14TExxUUpxejQzZ2FmeE5tTkZEOUZBVTVyZ29TNnhUZHdwZw?oc=5",
@@ -116,21 +160,10 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Transition écologique : les entreprises ont-elles encore intérêt à s’engager ?",
-      "resume": "L'article aborde les bénéfices de la transition écologique pour les entreprises, un sujet stratégique pour ABC qui doit répondre aux exigences carbone de ses clients (nucléaire, santé, industrie) et aux réglementations CSRD/ISO 14001.",
+      "resume": "L'article aborde les bénéfices de la transition écologique pour les entreprises, un sujet stratégique pour ABC dans le cadre de ses engagements RSE et de ses relations clients (nucléaire, santé, industrie) exigeants en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/transition-ecologique-les-entreprises-ont-elles-encore-interet-sengager",
-      "date": "2026-06-22"
-    },
-    {
-      "id": "f84053ded37b",
-      "source": "Actuel HSE",
-      "categorie": "Climat",
-      "titre": "La dépense de protection de l'air extérieur dépasse les 8 milliards d'euros",
-      "resume": "L'article souligne l'augmentation des dépenses de protection de l'air extérieur en France, ce qui pourrait influencer les exigences réglementaires ou contractuelles des clients d'ABC en matière de qualité de l'air et d'émissions, notamment dans les secteurs sensibles comme la santé ou l'industrie.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/la-depense-de-protection-de-lair-exterieur-depasse-les-8-milliards-deuros-2",
       "date": "2026-06-22"
     },
     {
@@ -138,10 +171,21 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article mentionne la publication d'une norme ISO sur le net zéro, un sujet clé pour ABC dans le cadre de sa stratégie de décarbonation et de reporting ESG (CSRD/ESRS).",
+      "resume": "L'article mentionne la publication d'un projet de norme ISO sur le net zéro, un sujet clé pour le reporting ESG et la stratégie climatique d'ABC, notamment dans le cadre de la CSRD et des objectifs de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-266/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-266",
+      "date": "2026-06-21"
+    },
+    {
+      "id": "d0a70cd39e06",
+      "source": "The Guardian Environment",
+      "categorie": "Déchets",
+      "titre": "France cancels events and restricts alcohol consumption amid brutal heatwave",
+      "resume": "L'article souligne l'intensification des vagues de chaleur en France, avec des alertes rouges dans 35 départements, ce qui pourrait impacter la prestation de services de propreté/FM d'ABC (ex. : conditions de travail, adaptation des horaires, risques opérationnels sur les sites clients).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/world/2026/jun/21/france-cancels-events-restricts-alcohol-consumption-music-festival-heatwave",
       "date": "2026-06-21"
     },
     {
@@ -149,9 +193,9 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG FRB Online Meeting - 24 June 2026",
-      "resume": "L'article annonce un webinaire de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting ESG, incluant potentiellement les ESRS (European Sustainability Reporting Standards) liés à la CSRD, ce qui impacte directement le reporting extra-financier d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
+      "resume": "L'article annonce une réunion de l'EFRAG FRB en juin 2026 sur les normes de reporting extra-financier, pertinente pour ABC dans le cadre de la préparation à la CSRD et aux exigences ESRS.",
+      "pourquoi": "L'EFRAG (European Financial Reporting Advisory Group) est l'organisme européen en charge de l'élaboration des normes ESRS (European Sustainability Reporting Standards) sous la CSRD. La réunion du 24 juin 2026 pourrait aborder des évolutions réglementaires directes pour le reporting ESG de ABC, notamment sur les indicateurs de décarbonation (scope 1/2/3), déchets, énergie et mobilité durable, tous des enjeux clés pour l'entreprise.",
+      "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-frb-online-meeting-24-june-2026",
       "date": "2026-06-18"
     }
@@ -358,6 +402,11 @@
       "niveau": "alerte"
     },
     {
+      "dept_code": "74",
+      "dept_nom": "Haute-Savoie",
+      "niveau": "alerte"
+    },
+    {
       "dept_code": "14",
       "dept_nom": "Calvados",
       "niveau": "vigilance"
@@ -410,6 +459,11 @@
     {
       "dept_code": "94",
       "dept_nom": "Val-de-Marne",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "41",
+      "dept_nom": "Loir-et-Cher",
       "niveau": "vigilance"
     },
     {
@@ -485,11 +539,6 @@
     {
       "dept_code": "68",
       "dept_nom": "Haut-Rhin",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "74",
-      "dept_nom": "Haute-Savoie",
       "niveau": "vigilance"
     },
     {
@@ -841,7 +890,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés relatifs aux schémas régionaux de gestion sylvicole (Grand Est, Bourgogne-Franche-Comté, Provence-Alpes-Côte d'Azur) et aux sites classés ou protégés (Parc national de forêts, biotopes, habitats naturels, sites géologiques) sont significatifs pour un Responsable Environnement/Climat, car ils impactent la gestion durable des forêts et la préservation de la biodiversité. Aucun autre texte n'est directement pertinent pour ce domaine.",
+  "briefing_jorf": "Les arrêtés relatifs aux schémas régionaux de gestion sylvicole (Grand Est, Bourgogne-Franche-Comté, Provence-Alpes-Côte d'Azur) et aux sites classés ou protégés (Parc national de forêts, biotopes, géotopes, habitats naturels) sont significatifs pour un Responsable Environnement/Climat, car ils impactent la gestion des forêts privées et la protection des écosystèmes, influençant les stratégies de durabilité et de compensation carbone des entreprises.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1201,5 +1250,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des réglementations européennes clés en matière d'énergie, d'environnement et de climat. Aucun des autres textes ne traite spécifiquement de sujets environnementaux ou RSE."
+  "pjl_briefing": "Parmi les projets de loi, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N° 2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des normes environnementales et énergétiques européennes. Aucun texte adopté ne semble aborder des enjeux climatiques ou RSE majeurs."
 }
