@@ -1,26 +1,26 @@
 {
   "date": "2026-06-23",
-  "generated_at": "08:58",
-  "elapsed_seconds": 183,
+  "generated_at": "14:02",
+  "elapsed_seconds": 272,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
     "jo_retenus": 0,
-    "depts_restriction": 73
+    "depts_restriction": 74
   },
   "pipeline_meta": {
-    "run_at": "2026-06-23T08:58:32",
+    "run_at": "2026-06-23T14:02:41",
     "sources": {
       "JORF": 0,
-      "RSS": 15,
-      "VigiEau": 73,
+      "RSS": 16,
+      "VigiEau": 74,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 49,
-    "llm_seconds": 58.2
+    "llm_calls": 62,
+    "llm_seconds": 70.9
   },
   "items": [
     {
@@ -28,21 +28,21 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Lire notre dossier d'actu \"Canicule : la France face au défi du confort d'été\"",
-      "resume": "L'article souligne l'augmentation des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter les sites clients d'ABC (ex : confort thermique, santé des occupants) et nécessitant une adaptation des prestations de propreté/FM.",
+      "resume": "L'article souligne l'augmentation des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter les sites clients d'ABC (ex : confort thermique, santé des occupants) et influencer leurs exigences en matière de services de propreté/FM adaptés.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/dossier-actu/dossier-canicule-chaleur-adaptation-climat-batiment-ville-128#xtor=RSS-6",
       "date": "2026-06-23"
     },
     {
-      "id": "cbf8644f9b5d",
-      "source": "Actu-Environnement",
+      "id": "7dfce0ad4f65",
+      "source": "Reporterre",
       "categorie": "Climat",
-      "titre": "S'inspirer de l'architecture vernaculaire pour faire face à la canicule",
-      "resume": "L'article met en lumière des solutions d'adaptation aux canicules via l'architecture vernaculaire, ce qui pourrait inspirer ABC pour proposer des prestations de propreté/FM adaptées aux enjeux climatiques de ses clients (ex : gestion des espaces verts, isolation thermique des locaux).",
+      "titre": "Terminer de travailler à 15 h : l'idée des Espagnols qui pourrait inspirer la France",
+      "resume": "L'article souligne l'adaptation des horaires de travail face aux vagues de chaleur, un enjeu climatique croissant qui pourrait impacter les conditions d'intervention des équipes de propreté/FM d'ABC chez ses clients, notamment en période estivale.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/architecture-vernaculaire-canicule-confort-ete-mouvement-unissons-48191.php4#xtor=RSS-6",
+      "url": "https://reporterre.net/Terminer-de-travailler-a-15-h-l-idee-des-Espagnols-qui-pourrait-inspirer-la-France",
       "date": "2026-06-23"
     },
     {
@@ -57,14 +57,25 @@
       "date": "2026-06-23"
     },
     {
-      "id": "d2614cd70877",
+      "id": "82c6eb9120f6",
       "source": "Reporterre",
       "categorie": "Environnement",
-      "titre": "Mégafeux en France : « Tous les ingrédients sont là pour qu'ils se multiplient »",
-      "resume": "L'augmentation des risques de mégafeux en France, liée au changement climatique, pourrait impacter la sécurité des sites clients d'ABC (3 000+ sites) et exiger des adaptations opérationnelles (ex : plans de prévention, gestion des déchets post-incendie).",
+      "titre": "Chaleur, nature asséchée : le cocktail qui fait exploser le risque incendie en France",
+      "resume": "L'augmentation des risques d'incendie en France due au changement climatique pourrait impacter la sécurité des sites clients d'ABC (3 000+ sites), notamment en perturbant les prestations de propreté/FM ou en générant des coûts supplémentaires liés à la protection des infrastructures.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Megafeux-en-France-Tous-les-ingredients-sont-la-pour-qu-ils-se-multiplient",
+      "date": "2026-06-23"
+    },
+    {
+      "id": "ae30dab61437",
+      "source": "Le Monde Planète",
+      "categorie": "Déchets",
+      "titre": "Comment être au frais chez soi, sans abuser de la climatisation, même s’il fait 40 °C dehors",
+      "resume": "L'article aborde des solutions pour réduire la consommation énergétique liée à la climatisation, un poste potentiellement impactant pour les sites clients d'ABC (bureaux, établissements tertiaires) dans le cadre de leur efficacité énergétique et de leur bilan GES (scope 2).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/des-solutions-pour-la-planete/article/2026/06/23/comment-etre-au-frais-chez-soi-sans-abuser-de-la-climatisation-meme-s-il-fait-40-c-dehors_5480480_5444641.html",
       "date": "2026-06-23"
     },
     {
@@ -72,10 +83,21 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Canicule : « Construites entre les années 1850 et les années 1990, nos infrastructures ont été conçues pour un climat tempéré que nous n’avons plus »",
-      "resume": "L'article souligne l'inadéquation des infrastructures françaises (dont celles des sites clients d'ABC) avec les nouvelles conditions climatiques, ce qui peut impacter les prestations de propreté/FM (ex. : adaptation des conditions de travail, gestion des déchets en période de canicule).",
+      "resume": "L'article souligne l'obsolescence des infrastructures françaises face aux canicules, un risque climatique opérationnel pouvant impacter les 3 000+ sites clients d'ABC, notamment en termes de conditions de travail et de continuité des prestations.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/06/23/canicule-construites-entre-les-annees-1850-et-les-annees-1990-nos-infrastructures-ont-ete-concues-pour-un-climat-tempere-que-nous-n-avons-plus_6708572_3232.html",
+      "date": "2026-06-23"
+    },
+    {
+      "id": "796f80a68e27",
+      "source": "ESG Today",
+      "categorie": "Énergie",
+      "titre": "LEGO Launches Solar Project to Provide 100% of Electricity for Denmark Headquarters",
+      "resume": "Cet article illustre une stratégie de décarbonation par l'autoproduction d'électricité renouvelable, un levier pertinent pour ABC dans le cadre de la réduction de son scope 2 et de l'alignement avec les attentes clients en matière de transition énergétique.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/lego-launches-solar-park-to-provide-100-of-electricity-for-denmark-headquarters/?utm_source=rss&utm_medium=rss&utm_campaign=lego-launches-solar-park-to-provide-100-of-electricity-for-denmark-headquarters",
       "date": "2026-06-23"
     },
     {
@@ -83,21 +105,21 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "AI’s Role in Building More Sustainable Supply Chains",
-      "resume": "L'article aborde l'utilisation de l'IA pour optimiser les chaînes d'approvisionnement durables, un sujet connexe aux enjeux de décarbonation et d'efficacité opérationnelle d'ABC, notamment pour ses clients industriels ou de santé.",
+      "resume": "L'article aborde l'utilisation de l'IA pour optimiser les chaînes d'approvisionnement durables, ce qui peut inspirer des solutions pour réduire l'empreinte carbone de la flotte de véhicules et des prestations de propreté d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/ais-role-in-building-more-sustainable-supply-chains/?utm_source=rss&utm_medium=rss&utm_campaign=ais-role-in-building-more-sustainable-supply-chains",
       "date": "2026-06-23"
     },
     {
-      "id": "0fd9daf38e2e",
+      "id": "8d9cd3339ce2",
       "source": "The Guardian Environment",
-      "categorie": "Environnement",
-      "titre": "Europe heatwave live: UK temperatures forecast to reach 38C; French PM to hold crisis meeting after heat deaths",
-      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe, avec des alertes rouges en France et en Italie, ce qui peut impacter la santé des employés de ABC intervenant sur les sites clients et générer des risques opérationnels (ex. : baisse de productivité, contraintes logistiques).",
+      "categorie": "Déchets",
+      "titre": "Majority of datacenters are vulnerable to climate threats like floods and fires, study finds",
+      "resume": "Les risques climatiques (inondations, incendies) menacent les datacenters, infrastructures critiques pour les clients d'ABC (secteurs santé, industrie, nucléaire), pouvant impacter la continuité des services et les coûts opérationnels.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.theguardian.com/world/live/2026/jun/23/europe-heatwave-live-news-updates-uk-red-temperature-warnings-40-degrees-france-heat-deaths-crisis-meeting",
+      "url": "https://www.theguardian.com/us-news/2026/jun/23/datacenters-climate-hazards-study",
       "date": "2026-06-23"
     },
     {
@@ -105,10 +127,43 @@
       "source": "Les Echos Environnement",
       "categorie": "Biodiversité",
       "titre": "Comment la hausse des émissions de méthane crée un cercle vicieux pour le climat - Les Echos",
-      "resume": "L'article souligne l'impact du méthane (scope 1 pour ABC) sur le climat et les risques de renforcement des réglementations sectorielles, notamment pour les entreprises de services comme ABC.",
+      "resume": "Le méthane, bien que moins médiatisé que le CO₂, est un gaz à effet de serre puissant (28 fois plus que le CO₂ sur 100 ans) dont la hausse des émissions aggrave le réchauffement climatique. ABC doit surveiller ce sujet car les clients industriels ou énergétiques pourraient intégrer des exigences de réduction du méthane dans leurs critères d'achat ou reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNOEtYeHA5eFBxUFV4YXVvLXRJV0pVb3JIb25uUkl0VmtvNEtJYUMxZDNqQWkwQVBpMk9oaWdiUUhrRl95OTBsek1uU25LSE5ZN29LOTJkQVlTYjR2VG9fV3JZYnVSR0FXYTNuNW5RTXdTanlENHVWbnBEMlFuTHlLcXJhdFl3dWxFTzJuZHVTQkY0RDhpVElMSnhzZ2pnM3BCMFJhbGoxd3ZraFFSdG1MNDhVTUVHR0NraGpDUndMSXJBd0RkS21jLXdkbVhBWHVISGM1bmxVNDk2M2lyaUY0anFHNDNoY2U3?oc=5",
+      "date": "2026-06-23"
+    },
+    {
+      "id": "bcbd4a082210",
+      "source": "Les Echos Environnement",
+      "categorie": "Déchets",
+      "titre": "Economie circulaire : cet entrepreneur veut créer plusieurs usines en France pour recycler la laine de verre - Les Echos",
+      "resume": "L'article aborde l'économie circulaire et le recyclage des matériaux de construction, ce qui pourrait impacter indirectement ABC via les exigences clients en matière de gestion des déchets et de décarbonation des prestations de propreté/FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPZjNkN1Nwb2ljNVBDczZUZDIwbnRRa3lLSTBVaXRGNHE0Qk1mRFhQYnlyYUw5WEdoS0FIVjV3akhaT0RIXzBhVUdvMm5VRk56d2NwWXc0S055RjFVZTU1R25EeGhDNktiRWtMc0lvTGFKcEtOTVhKdGlpM1hrVFN2Mm5IWl9QTmF1bldSbGNXVVJVWEJWVUx3U3FkVFFqbzhRcVlJc1g4SWRBWWlPTFRYbHRBa0FZVHJtbFNGWDJYUWZZRlNfcGwxLWpNSHV0blVGSS1XZWRyd1VFeWR0Tm5iZzc5UEROTFVXN2JqRXFhX0pJZTVSZGdHRURNZ2kxa19kVE1RM0hiSFNYdmpaRG4yV3lBUWNIZTN5Wnc?oc=5",
+      "date": "2026-06-23"
+    },
+    {
+      "id": "aefd8a13b962",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "Fortes chaleurs : le gouvernement appelle à la plus grande vigilance les entreprises des départements passés en vigilance rouge",
+      "resume": "L'article alerte sur les risques physiques liés aux fortes chaleurs pour les entreprises, notamment en termes de sécurité des travailleurs et d'adaptation des activités, ce qui impacte directement les prestations de propreté/FM d'ABC sur ses 3 000+ sites clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-le-gouvernement-appelle-la-plus-grande-vigilance-les-entreprises-des-1",
+      "date": "2026-06-23"
+    },
+    {
+      "id": "25dda120cf1a",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "Canicule : la CGT et l'Unsa réclament un renforcement de la protection des travailleurs",
+      "resume": "L'article souligne l'évolution des exigences réglementaires et sociales en matière de protection des travailleurs contre les canicules, ce qui pourrait impacter les obligations de sécurité et de prévention des risques climatiques pour ABC dans ses prestations chez ses clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/canicule-la-cgt-et-lunsa-reclament-un-renforcement-de-la-protection-des-travailleurs",
       "date": "2026-06-23"
     },
     {
@@ -116,7 +171,7 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Canicule : le changement climatique a entraîné une hausse des températures pouvant atteindre 4 °C",
-      "resume": "L'article souligne l'impact du changement climatique sur les vagues de chaleur en France et en Europe, ce qui peut affecter les sites clients d'ABC (ex. : besoins accrus en nettoyage, risques opérationnels liés aux températures extrêmes).",
+      "resume": "L'article souligne l'impact direct des vagues de chaleur accrues sur les activités de nettoyage et de maintenance des sites clients (3 000+ sites), pouvant perturber les prestations et nécessiter des adaptations opérationnelles (ex : horaires, équipements).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/canicule-changement-climatique-hausse-temperatures-48190.php4#xtor=RSS-6",
@@ -127,32 +182,10 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Sans le changement climatique, la canicule aurait été plus fraîche de 2,4 °C à Paris",
-      "resume": "L'article confirme l'impact du changement climatique sur l'intensité des canicules en France/Europe, ce qui peut influencer les risques opérationnels (ex. : perturbations des prestations de propreté en période de forte chaleur) et les attentes clients en matière de résilience climatique.",
+      "resume": "L'article confirme l'impact du changement climatique sur les vagues de chaleur en Europe, un risque opérationnel pour ABC (perturbations potentielles sur 3 000+ sites clients et exigences carbone accrues des clients).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Sans-le-changement-climatique-la-canicule-aurait-ete-plus-fraiche-de-2-4-oC-a-Paris",
-      "date": "2026-06-22"
-    },
-    {
-      "id": "f473cef7ea3f",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "53 °C sous la verrière de l'école... et des rénovations aux abonnés absents",
-      "resume": "L'article illustre l'impact des aléas climatiques (vagues de chaleur) sur les bâtiments tertiaires (écoles) et les retards de rénovation énergétique, un enjeu indirect pour ABC via la gestion des sites clients exposés aux mêmes risques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/53-oC-sous-la-verriere-de-l-ecole-et-des-renovations-aux-abonnes-absents",
-      "date": "2026-06-22"
-    },
-    {
-      "id": "8d82f284d9fe",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "Chaleur, sécheresse, inondations… quand le climat fait planer le risque d’inassurabilité sur l’économie",
-      "resume": "L'article souligne l'augmentation des risques d'inassurabilité pour les entreprises en raison des événements climatiques extrêmes, ce qui pourrait impacter la couverture des risques opérationnels de ABC sur ses 3 000+ sites clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/finance-durable/tendances-de-marche/chaleur-secheresse-inondations-quand-climat-fait-planer-risque-inassurabilite-economie",
       "date": "2026-06-22"
     },
     {
@@ -160,32 +193,10 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Le Turpe suffit pour les investissements si Enedis « est performant » [M. Laigneau]",
-      "resume": "L'article aborde la modernisation du réseau électrique français via Enedis, avec un investissement de 96 Mds€ d’ici 2040, ce qui pourrait impacter les coûts énergétiques et la disponibilité des énergies renouvelables pour les sites clients d’ABC, notamment dans le cadre de leur transition énergétique.",
+      "resume": "L'article aborde la modernisation du réseau électrique français via Enedis, avec un investissement de 96 Mds€ d’ici 2040, impactant potentiellement les coûts énergétiques et la transition électrique des clients d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/le-turpe-suffit-pour-les-investissements-si-enedis-est-performant-m-laigneau-427379/",
-      "date": "2026-06-22"
-    },
-    {
-      "id": "933db4b87ee4",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "La canicule démontre l’intérêt de flexibiliser la consommation [Marchés]",
-      "resume": "L'article souligne l'importance de la flexibilisation de la consommation énergétique face aux aléas climatiques, ce qui peut impacter les coûts opérationnels d'ABC et la gestion de ses sites clients (3 000+ sites).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/06/la-canicule-demontre-linteret-de-flexibiliser-la-consommation-marches-427329/",
-      "date": "2026-06-22"
-    },
-    {
-      "id": "9fd6ba3ed9b9",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Canicule : « Le sous-sol demeure le parent pauvre de la connaissance urbaine »",
-      "resume": "L'article met en lumière l'importance des espaces souterrains pour adapter les villes aux canicules, un enjeu indirect pour ABC via la gestion des sites clients (ex : optimisation énergétique des bâtiments tertiaires ou industriels).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/06/22/canicule-le-sous-sol-demeure-le-parent-pauvre-de-la-connaissance-urbaine_6708081_3232.html",
       "date": "2026-06-22"
     }
   ],
@@ -406,6 +417,11 @@
       "niveau": "alerte"
     },
     {
+      "dept_code": "73",
+      "dept_nom": "Savoie",
+      "niveau": "alerte"
+    },
+    {
       "dept_code": "14",
       "dept_nom": "Calvados",
       "niveau": "vigilance"
@@ -458,6 +474,11 @@
     {
       "dept_code": "94",
       "dept_nom": "Val-de-Marne",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "77",
+      "dept_nom": "Seine-et-Marne",
       "niveau": "vigilance"
     },
     {
@@ -538,11 +559,6 @@
     {
       "dept_code": "68",
       "dept_nom": "Haut-Rhin",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "73",
-      "dept_nom": "Savoie",
       "niveau": "vigilance"
     },
     {
@@ -883,7 +899,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés 1 et 2 sont significatifs : le premier renforce les contraintes environnementales sur les carburants non routiers (soufre), tandis que le second supprime des dispositifs d'efficacité énergétique pour les serres agricoles, réduisant les incitations à la transition écologique dans ce secteur. Les autres textes ne concernent pas directement les enjeux RSE ou climat.",
+  "briefing_jorf": "L'arrêté du 21 avril 2026 renforce les exigences environnementales en supprimant les dérogations sur la teneur en soufre des gazoles non routiers, impactant potentiellement les flottes et équipements des entreprises de services. Les décisions de sanctions (décembre 2025 à janvier 2026) dans le cadre des certificats d'économies d'énergie rappellent l'importance de la conformité réglementaire en matière de transition énergétique.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1243,5 +1259,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi adoptés ou en discussion, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l'économie circulaire et au reporting ESG. Aucun autre texte ne traite spécifiquement de climat, déchets ou RSE de manière significative."
+  "pjl_briefing": "Parmi les projets de loi, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des normes européennes en matière d'énergie et d'environnement. Aucun autre texte ne traite explicitement de sujets climatiques, de gestion des déchets ou de reporting RSE."
 }
