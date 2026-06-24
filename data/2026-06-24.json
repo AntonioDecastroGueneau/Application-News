@@ -1,32 +1,65 @@
 {
   "date": "2026-06-24",
-  "generated_at": "08:55",
-  "elapsed_seconds": 254,
+  "generated_at": "13:38",
+  "elapsed_seconds": 281,
   "errors": [],
   "stats": {
     "jo_analyses": 19,
-    "jo_retenus": 1,
-    "depts_restriction": 75
+    "jo_retenus": 2,
+    "depts_restriction": 0
   },
   "pipeline_meta": {
-    "run_at": "2026-06-24T08:55:22",
+    "run_at": "2026-06-24T13:38:57",
     "sources": {
-      "JORF": 1,
-      "RSS": 17,
-      "VigiEau": 75,
+      "JORF": 2,
+      "RSS": 16,
+      "VigiEau": 0,
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 76,
-    "llm_seconds": 90.8
+    "llm_calls": 72,
+    "llm_seconds": 91.2
   },
   "items": [
+    {
+      "id": "60ed494e47c7",
+      "source": "Novethic",
+      "categorie": "Déchets",
+      "titre": "SFDR 2.0 : les investisseurs réclament de la clarté",
+      "resume": "SFDR 2.0 : les investisseurs réclament de la clarté",
+      "pourquoi": "Mention de SFDR.",
+      "criticite": 3,
+      "url": "https://www.novethic.fr/finance-durable/reglementation/sfdr-2-0-investisseurs-reclament-clarte",
+      "date": "2026-06-24"
+    },
+    {
+      "id": "fda2ded99757",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Avec la canicule moins de nucléaire, mais plus de gaz",
+      "resume": "L'article illustre l'impact des aléas climatiques (canicules) sur la production nucléaire française, un risque indirect pour ABC via la dépendance de ses clients à cette énergie et leurs exigences carbone.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Avec-la-canicule-moins-de-nucleaire-mais-plus-de-gaz",
+      "date": "2026-06-24"
+    },
+    {
+      "id": "a003b68a9534",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "Face à la canicule, faut-il ouvrir les bureaux climatisés au public ?",
+      "resume": "L'article aborde les enjeux de gestion des vagues de chaleur et de l'accès à des espaces climatisés, un sujet pouvant impacter la qualité de service et la responsabilité sociale d'ABC auprès de ses clients (santé, bien-être des employés).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/environnement/climat/canicule-bureaux-climatises-entreprises-requisitionner",
+      "date": "2026-06-24"
+    },
     {
       "id": "8c6e9a950543",
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Canicule, prix du pétrole... le télétravail comme arme anti-crise",
-      "resume": "Le télétravail pourrait réduire les déplacements professionnels et donc l'empreinte carbone de la flotte de véhicules d'ABC, tout en atténuant les risques liés aux aléas climatiques (canicules) sur les sites clients.",
+      "resume": "Le télétravail peut réduire les déplacements professionnels (scope 1) et limiter l'exposition aux aléas climatiques pour les équipes d'ABC, mais son impact direct sur les enjeux réglementaires ou stratégiques de l'entreprise est limité.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/climat/canicule-prix-du-petrole-le-teletravail-comme-arme-anti-crise",
@@ -37,10 +70,21 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Teréga et Prodeval s’allient dans le bioCO2 des méthaniseurs",
-      "resume": "L'article aborde la valorisation du CO2 biogénique issu des méthaniseurs, un sujet indirectement lié aux enjeux de décarbonation et de reporting ESG (scope 3) pour ABC, notamment dans le cadre de la CSRD et des trajectoires net zéro.",
+      "resume": "L'article met en lumière une initiative de valorisation du CO2 biogénique issu des méthaniseurs, un sujet lié à la décarbonation des activités industrielles et tertiaires, mais sans impact direct immédiat sur les enjeux opérationnels d'ABC (flotte véhicules, déchets prestations, reporting CSRD).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/terega-et-prodeval-sallient-dans-le-bioco2-des-methaniseurs-427533/",
+      "date": "2026-06-24"
+    },
+    {
+      "id": "3a52be76576b",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Canicule : longtemps critique sur la climatisation symbole d’une « maladaptation », la gauche revoit son logiciel",
+      "resume": "L'article aborde la question de la climatisation comme outil d'adaptation au réchauffement climatique, un sujet pouvant impacter les stratégies de confort thermique des sites clients d'ABC (tertiaire, santé, industrie) et leurs exigences en matière de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/politique/article/2026/06/24/canicule-longtemps-critique-sur-la-climatisation-symbole-d-une-maladaptation-la-gauche-revoit-son-logiciel_6710239_823448.html",
       "date": "2026-06-24"
     },
     {
@@ -48,29 +92,18 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Des Français racontent le manque d’adaptation de leur travail à la canicule : « On doit garder notre doudoune sans manches pour être identifiables »",
-      "resume": "L'article met en lumière les risques opérationnels liés aux vagues de chaleur pour les entreprises de services comme ABC, pouvant impacter la santé des salariés et la continuité des prestations sur 3 000+ sites clients.",
+      "resume": "L'article met en lumière les risques opérationnels liés aux vagues de chaleur pour les entreprises de services comme ABC, notamment sur la santé et la sécurité des employés en tenue de travail inadaptée, et l'absence d'anticipation des employeurs face à ces aléas climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/06/24/des-francais-racontent-le-manque-d-adaptation-de-leur-travail-a-la-canicule-on-doit-garder-notre-doudoune-sans-manches-pour-etre-reconnaissables_6710197_3234.html",
       "date": "2026-06-24"
     },
     {
-      "id": "35976bd930e2",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Canicule : de l’Espagne à l’Allemagne, une zone rouge « d’une extension géographique exceptionnelle »",
-      "resume": "L'article souligne l'extension géographique exceptionnelle des vagues de canicule en Europe, mettant en lumière les risques climatiques indirects pour les 3 000+ sites clients d'ABC (perturbations opérationnelles, exigences clients en résilience).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/climat/article/2026/06/24/canicule-de-l-espagne-a-l-allemagne-une-zone-rouge-d-une-extension-geographique-exceptionnelle_6710192_1652612.html",
-      "date": "2026-06-24"
-    },
-    {
-      "id": "f31de002c079",
+      "id": "3aee24d615c3",
       "source": "The Guardian Environment",
-      "categorie": "Énergie",
-      "titre": "Europe heatwave live: UK issues rare red heat warning as record-breaking temperatures in France bring power outages",
-      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe, pouvant impacter l'activité opérationnelle d'ABC (ex : perturbations logistiques, risques pour les équipes en intervention) et augmenter la demande énergétique chez les clients, affectant leur performance carbone.",
+      "categorie": "Déchets",
+      "titre": "Europe heatwave live: estimated 94 million people to experience temperatures above 35C today",
+      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe, avec des risques opérationnels accrus pour ABC (perturbations énergétiques, sécurité des équipes, adaptation des prestations).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.theguardian.com/world/live/2026/jun/24/europe-heatwave-live-news-updates-uk-record-breaking-temperatures-italy-red-alert",
@@ -81,7 +114,7 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Incendie de parkings : les véhicules électriques sous les feux de la rampe",
-      "resume": "L'article aborde les risques spécifiques liés aux incendies de véhicules électriques dans les parkings, un enjeu potentiellement impactant pour la flotte de véhicules d'ABC et ses obligations en matière de sécurité et de gestion des risques.",
+      "resume": "L'article souligne les risques spécifiques d'incendie liés aux véhicules électriques dans les parkings, un enjeu potentiel pour la flotte de véhicules d'ABC et la sécurité des sites clients où ses équipes interviennent.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/incendie-de-parkings-les-vehicules-electriques-sous-les-feux-de-la-rampe-0",
@@ -92,7 +125,7 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Batteries : Bruxelles fixe les règles de sa facilité «Battery Booster»",
-      "resume": "La facilité 'Battery Booster' de l'UE pourrait influencer la stratégie d'électrification de la flotte de véhicules d'ABC en soutenant la production de batteries pour véhicules électriques, mais sans obligation directe pour le prestataire de propreté.",
+      "resume": "La facilité 'Battery Booster' de l'UE pourrait influencer les exigences clients d'ABC en matière de mobilité durable, notamment pour les flottes de véhicules électriques ou hybrides, mais sans obligation directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/batteries-bruxelles-fixe-les-regles-de-sa-facilite-battery-booster",
@@ -103,7 +136,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Fortes chaleurs : le gouvernement appelle à la plus grande vigilance les entreprises des départements passés en vigilance rouge",
-      "resume": "L'article souligne les risques physiques liés aux fortes chaleurs pour les entreprises, notamment en termes de sécurité des travailleurs et d'adaptation des activités, ce qui impacte directement les prestations de propreté/FM d'ABC sur ses 3 000+ sites clients.",
+      "resume": "L'article alerte sur les risques physiques liés aux fortes chaleurs pour les entreprises, notamment en termes de sécurité des travailleurs et d'adaptation des activités, ce qui impacte directement les prestations de propreté/FM de ABC sur ses 3 000+ sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-le-gouvernement-appelle-la-plus-grande-vigilance-les-entreprises-des-1",
@@ -114,7 +147,7 @@
       "source": "Actu-Environnement",
       "categorie": "Environnement",
       "titre": "Résilience des infrastructures : moins de 10 % d'investissement peut permettre d'éviter des pertes importantes",
-      "resume": "L'article souligne l'importance d'investir dans la résilience des infrastructures pour éviter des pertes financières majeures, ce qui pourrait impacter indirectement ABC via les sites clients (3 000+ sites) exposés aux aléas climatiques.",
+      "resume": "L'article souligne l'importance de l'investissement dans la résilience des infrastructures pour éviter des pertes financières majeures, ce qui peut impacter indirectement les sites clients d'ABC (3 000+ sites) et leurs exigences en matière de continuité d'activité et de gestion des risques climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/adaptation-resilience-infrastructures-48195.php4#xtor=RSS-6",
@@ -125,7 +158,7 @@
       "source": "Reporterre",
       "categorie": "Énergie",
       "titre": "Toujours plus gros, les SUV « cannibalisent » l'espace public",
-      "resume": "L'article souligne la croissance continue des dimensions des véhicules particuliers en Europe, ce qui pourrait impacter la stratégie de flotte de véhicules d'ABC (scope 1) et ses engagements de décarbonation, notamment en lien avec les ZFE et l'électrification.",
+      "resume": "L'article souligne la tendance à l'augmentation de la taille des véhicules, ce qui pourrait impacter la flotte d'ABC en termes d'électrification et de conformité aux ZFE, bien que sans obligation directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/1-2-cm-par-an-les-SUV-grandissent-et-cannibalisent-l-espace-public",
@@ -136,65 +169,21 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Canicule : ce mardi est la journée la plus chaude jamais enregistrée en France",
-      "resume": "L'article souligne l'intensification des canicules en France, un risque climatique opérationnel majeur pour ABC qui intervient sur 3 000+ sites clients, pouvant impacter les prestations, la sécurité des équipes et la continuité d'activité.",
+      "resume": "L'article souligne l'intensification des vagues de chaleur en France, un risque climatique opérationnel pour ABC (3 000+ sites clients) pouvant impacter les prestations de propreté/FM et nécessiter des adaptations logistiques ou énergétiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Canicule-ce-mardi-est-la-journee-la-plus-chaude-jamais-enregistree-en-France",
       "date": "2026-06-23"
     },
     {
-      "id": "b09164c84290",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Canicule : la centrale nucléaire de Golfech arrêtée",
-      "resume": "Cet article illustre un risque climatique opérationnel (canicule) impactant directement un site industriel (centrale nucléaire), mettant en lumière les vulnérabilités des infrastructures de refroidissement et les contraintes réglementaires associées. Cela peut servir d'exemple pour sensibiliser ABC aux aléas climatiques sur ses 3 000+ sites clients.",
+      "id": "81c3c4d0a03f",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Réseaux, appels d’offres EnR, nucléaire… : les coulisses du colloque de l’UFE",
+      "resume": "L'article aborde les enjeux énergétiques français (EnR, nucléaire) et les acteurs majeurs du secteur, ce qui peut impacter indirectement les stratégies clients d'ABC en matière de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://reporterre.net/Canicule-la-centrale-nucleaire-de-Golfech-arretee",
-      "date": "2026-06-23"
-    },
-    {
-      "id": "7dfce0ad4f65",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Terminer de travailler à 15 h : l'idée des Espagnols qui pourrait inspirer la France",
-      "resume": "L'article souligne l'importance de l'adaptation des conditions de travail aux vagues de chaleur, un risque climatique opérationnel croissant pour ABC qui intervient sur 3 000+ sites clients en France. Cela pourrait impacter la planification des prestations et la sécurité des employés.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Terminer-de-travailler-a-15-h-l-idee-des-Espagnols-qui-pourrait-inspirer-la-France",
-      "date": "2026-06-23"
-    },
-    {
-      "id": "796f80a68e27",
-      "source": "ESG Today",
-      "categorie": "Énergie",
-      "titre": "LEGO Launches Solar Project to Provide 100% of Electricity for Denmark Headquarters",
-      "resume": "Cet article illustre une initiative concrète de décarbonation via l'autoproduction d'électricité renouvelable, un levier pertinent pour ABC dans le cadre de sa stratégie énergie et reporting ESG (scope 2).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/lego-launches-solar-park-to-provide-100-of-electricity-for-denmark-headquarters/?utm_source=rss&utm_medium=rss&utm_campaign=lego-launches-solar-park-to-provide-100-of-electricity-for-denmark-headquarters",
-      "date": "2026-06-23"
-    },
-    {
-      "id": "8d9cd3339ce2",
-      "source": "The Guardian Environment",
-      "categorie": "Déchets",
-      "titre": "Majority of datacenters are vulnerable to climate threats like floods and fires, study finds",
-      "resume": "Les datacenters, infrastructures critiques pour les services numériques, sont vulnérables aux aléas climatiques (inondations, incendies, vents violents), ce qui peut impacter la continuité des services clients d'ABC et augmenter les coûts opérationnels.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/us-news/2026/jun/23/datacenters-climate-hazards-study",
-      "date": "2026-06-23"
-    },
-    {
-      "id": "bcbd4a082210",
-      "source": "Les Echos Environnement",
-      "categorie": "Déchets",
-      "titre": "Economie circulaire : cet entrepreneur veut créer plusieurs usines en France pour recycler la laine de verre - Les Echos",
-      "resume": "L'article aborde l'économie circulaire et le recyclage des matériaux, ce qui pourrait impacter indirectement ABC via la gestion des déchets de ses clients (scope 3) et les exigences réglementaires en matière de REP ou de traçabilité des déchets.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPZjNkN1Nwb2ljNVBDczZUZDIwbnRRa3lLSTBVaXRGNHE0Qk1mRFhQYnlyYUw5WEdoS0FIVjV3akhaT0RIXzBhVUdvMm5VRk56d2NwWXc0S055RjFVZTU1R25EeGhDNktiRWtMc0lvTGFKcEtOTVhKdGlpM1hrVFN2Mm5IWl9QTmF1bldSbGNXVVJVWEJWVUx3U3FkVFFqbzhRcVlJc1g4SWRBWWlPTFRYbHRBa0FZVHJtbFNGWDJYUWZZRlNfcGwxLWpNSHV0blVGSS1XZWRyd1VFeWR0Tm5iZzc5UEROTFVXN2JqRXFhX0pJZTVSZGdHRURNZ2kxa19kVE1RM0hiSFNYdmpaRG4yV3lBUWNIZTN5Wnc?oc=5",
+      "url": "https://www.greenunivers.com/2026/06/reseaux-appels-doffres-nucleaire-les-coulisses-du-colloque-de-lufe-427550/",
       "date": "2026-06-23"
     },
     {
@@ -202,390 +191,14 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG FRB Online Meeting - 24 June 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting extra-financier, incluant potentiellement des évolutions liées à la CSRD/ESRS qui impactent directement le reporting ESG d'ABC.",
-      "pourquoi": "EFRAG est l'organisme européen de référence pour les normes de reporting extra-financier (ESRS) applicables dans le cadre de la CSRD. Une réunion de cet organisme peut annoncer des clarifications ou évolutions réglementaires majeures pour le reporting ESG d'ABC, notamment sur la collecte de données, la méthodologie ou les exigences de transparence.",
+      "resume": "L'article annonce une réunion en ligne de l'EFRAG FRB en juin 2026, susceptible d'aborder des évolutions dans les normes de reporting extra-financier (ESRS) liées à la CSRD, impactant directement les obligations de reporting ESG d'ABC pour ses clients.",
+      "pourquoi": "L'EFRAG (European Financial Reporting Advisory Group) est un acteur clé dans l'élaboration des normes ESRS (European Sustainability Reporting Standards) sous la CSRD. Une réunion de son Financial Reporting Board (FRB) en 2026 pourrait présenter des clarifications ou évolutions sur les exigences de reporting extra-financier, notamment pour les entreprises de services comme ABC, qui doivent répondre aux attentes de leurs clients (nucléaire, santé, industrie) en matière de transparence carbone et ESG.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-frb-online-meeting-24-june-2026",
       "date": "2026-06-18"
     }
   ],
-  "restrictions_eau": [
-    {
-      "dept_code": "44",
-      "dept_nom": "Loire-Atlantique",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "85",
-      "dept_nom": "Vendée",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "17",
-      "dept_nom": "Charente-Maritime",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "16",
-      "dept_nom": "Charente",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "64",
-      "dept_nom": "Pyrénées-Atlantiques",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "36",
-      "dept_nom": "Indre",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "45",
-      "dept_nom": "Loiret",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "18",
-      "dept_nom": "Cher",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "24",
-      "dept_nom": "Dordogne",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "03",
-      "dept_nom": "Allier",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "63",
-      "dept_nom": "Puy-de-Dôme",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "82",
-      "dept_nom": "Tarn-et-Garonne",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "46",
-      "dept_nom": "Lot",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "81",
-      "dept_nom": "Tarn",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "66",
-      "dept_nom": "Pyrénées-Orientales",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "56",
-      "dept_nom": "Morbihan",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "49",
-      "dept_nom": "Maine-et-Loire",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "79",
-      "dept_nom": "Deux-Sèvres",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "86",
-      "dept_nom": "Vienne",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "33",
-      "dept_nom": "Gironde",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "65",
-      "dept_nom": "Hautes-Pyrénées",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "47",
-      "dept_nom": "Lot-et-Garonne",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "08",
-      "dept_nom": "Ardennes",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "51",
-      "dept_nom": "Marne",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "23",
-      "dept_nom": "Creuse",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "89",
-      "dept_nom": "Yonne",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "58",
-      "dept_nom": "Nièvre",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "01",
-      "dept_nom": "Ain",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "07",
-      "dept_nom": "Ardèche",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "31",
-      "dept_nom": "Haute-Garonne",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "09",
-      "dept_nom": "Ariège",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "12",
-      "dept_nom": "Aveyron",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "53",
-      "dept_nom": "Mayenne",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "72",
-      "dept_nom": "Sarthe",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "32",
-      "dept_nom": "Gers",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "28",
-      "dept_nom": "Eure-et-Loir",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "19",
-      "dept_nom": "Corrèze",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "21",
-      "dept_nom": "Côte-d'Or",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "71",
-      "dept_nom": "Saône-et-Loire",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "11",
-      "dept_nom": "Aude",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "34",
-      "dept_nom": "Hérault",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "25",
-      "dept_nom": "Doubs",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "90",
-      "dept_nom": "Territoire de Belfort",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "74",
-      "dept_nom": "Haute-Savoie",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "73",
-      "dept_nom": "Savoie",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "14",
-      "dept_nom": "Calvados",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "76",
-      "dept_nom": "Seine-Maritime",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "61",
-      "dept_nom": "Orne",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "29",
-      "dept_nom": "Finistère",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "62",
-      "dept_nom": "Pas-de-Calais",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "59",
-      "dept_nom": "Nord",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "27",
-      "dept_nom": "Eure",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "55",
-      "dept_nom": "Meuse",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "54",
-      "dept_nom": "Meurthe-et-Moselle",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "67",
-      "dept_nom": "Bas-Rhin",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "94",
-      "dept_nom": "Val-de-Marne",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "77",
-      "dept_nom": "Seine-et-Marne",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "41",
-      "dept_nom": "Loir-et-Cher",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "87",
-      "dept_nom": "Haute-Vienne",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "15",
-      "dept_nom": "Cantal",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "52",
-      "dept_nom": "Haute-Marne",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "42",
-      "dept_nom": "Loire",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "43",
-      "dept_nom": "Haute-Loire",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "69",
-      "dept_nom": "Rhône",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "39",
-      "dept_nom": "Jura",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "38",
-      "dept_nom": "Isère",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "48",
-      "dept_nom": "Lozère",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "30",
-      "dept_nom": "Gard",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "26",
-      "dept_nom": "Drôme",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "88",
-      "dept_nom": "Vosges",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "70",
-      "dept_nom": "Haute-Saône",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "68",
-      "dept_nom": "Haut-Rhin",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "06",
-      "dept_nom": "Alpes-Maritimes",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "2A",
-      "dept_nom": "Corse-du-Sud",
-      "niveau": "vigilance"
-    }
-  ],
+  "restrictions_eau": [],
   "jo_autres": [
     {
       "titre": "Décision n° CS-02 du 6 mai 2025 de la commission des sanctions de la Haute Autorité de l'audit portant modification de son règlement intérieur",
@@ -1208,12 +821,6 @@
     {
       "titre": "Arrêté du 3 juin 2026 portant agrément d'un éco-organisme de la filière à responsabilité élargie du producteur d'emballages servant à commercialiser des produits consommés ou utilisés par des professionnels",
       "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054300419",
-      "date": "2026-06-24"
-    },
-    {
-      "titre": "Arrêté du 3 juin 2026 portant agrément d'un éco-organisme de la filière à responsabilité élargie du producteur d'emballages servant à commercialiser des produits consommés ou utilisés par des professionnels",
-      "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054300432",
       "date": "2026-06-24"
     },
@@ -1308,14 +915,25 @@
       "source": "JORF",
       "categorie": "Énergie",
       "titre": "Arrêté du 3 juin 2026 portant agrément d'un éco-organisme de la filière à responsabilité élargie du producteur d'emballages servant à commercialiser des produits consommés ou utilisés par des professionnels",
-      "resume": "ABC doit vérifier si ses emballages de produits utilisés en prestation de propreté sont couverts par cette nouvelle filière REP et adapter sa gestion des déchets en conséquence.",
-      "pourquoi": "Cet arrêté impose une nouvelle obligation de responsabilité élargie du producteur (REP) sur les emballages professionnels utilisés par ABC, avec un délai de mise en conformité à anticiper dès 2026, sous peine de sanctions ou d'exclusion des marchés clients exigeants en matière de gestion des déchets et d'économie circulaire.",
+      "resume": "ABC doit s'assurer que ses clients (non exploitants ICPE) respectent les nouvelles obligations de tri et traçabilité des emballages professionnels via l'éco-organisme agréé, impactant potentiellement la gestion des déchets de ses prestations.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054300419",
+      "date": "2026-06-24"
+    },
+    {
+      "id": "fafb8b7249af",
+      "source": "JORF",
+      "categorie": "Énergie",
+      "titre": "Arrêté du 3 juin 2026 portant agrément d'un éco-organisme de la filière à responsabilité élargie du producteur d'emballages servant à commercialiser des produits consommés ou utilisés par des professionnels",
+      "resume": "ABC doit s'assurer que ses clients (non exploitants ICPE) respectent les nouvelles obligations de tri et traçabilité des emballages professionnels via l'éco-organisme agréé, impactant la gestion des déchets de ses prestations.",
+      "pourquoi": "Le texte concerne la filière REP des emballages professionnels, qui s'applique aux producteurs et distributeurs (clients d'ABC). ABC, en tant que prestataire de propreté/FM intervenant chez ces clients, doit veiller à la conformité de ses activités (gestion des déchets, traçabilité) avec cette nouvelle réglementation, même si elle n'est pas directement productrice.",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054300445",
       "date": "2026-06-24"
     }
   ],
-  "briefing_jorf": "Les arrêtés n°3, 4 et 5 du 3 juin 2026 concernant l'agrément d'éco-organismes pour la filière REP des emballages professionnels sont significatifs, car ils impactent directement la gestion des déchets et la responsabilité élargie des producteurs (REP) dans le cadre de la transition écologique. Aucun autre texte ne semble directement lié aux enjeux environnementaux ou climatiques pour une entreprise de services.",
+  "briefing_jorf": "Les arrêtés n°3, 4 et 5 du 3 juin 2026 concernent l'agrément de nouveaux éco-organismes pour la filière REP des emballages professionnels, ce qui impacte directement la gestion des déchets et la responsabilité élargie des producteurs (REP) pour les entreprises de services. Aucun autre texte ne semble directement lié aux enjeux environnementaux ou climatiques.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1523,6 +1141,12 @@
       "source": "AN Textes adoptés",
       "items": [
         {
+          "titre": "Texte adopté N° 319",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52000",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52000",
+          "date": "2025-04-28"
+        },
+        {
           "titre": "Texte adopté N° 310",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53304",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53304",
@@ -1658,16 +1282,10 @@
           "titre": "Texte adopté N° 285",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_mettre_en_place_programme_de_soutien_innovation_therapeutique_contre_cancers_maladies_rares_et_orphelines_enfant_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_mettre_en_place_programme_de_soutien_innovation_therapeutique_contre_cancers_maladies_rares_et_orphelines_enfant_17e",
-          "date": "2025-10-14"
-        },
-        {
-          "titre": "Texte adopté N° 284",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/information_protection_victimes_violences_sexuelles_17e",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/information_protection_victimes_violences_sexuelles_17e",
-          "date": "2025-09-16"
+          "date": "2026-06-24"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N° 2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux environnementaux et énergétiques dans son champ d'application. Aucun autre texte ne semble aborder spécifiquement les thématiques climatiques, de reporting RSE ou de gestion des déchets."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (adaptation au droit de l'UE en matière environnementale, énergétique et de santé) et le projet de loi-cadre n°2740 (développement des transports) pourraient présenter un intérêt pour un Responsable Environnement/Climat, notamment via des évolutions réglementaires sur les normes énergétiques ou les infrastructures durables. Aucun texte ne traite directement de reporting RSE ou de gestion des déchets."
 }
