@@ -1,48 +1,81 @@
 {
   "date": "2026-06-25",
-  "generated_at": "08:48",
-  "elapsed_seconds": 223,
+  "generated_at": "13:37",
+  "elapsed_seconds": 243,
   "errors": [],
   "stats": {
     "jo_analyses": 26,
     "jo_retenus": 0,
-    "depts_restriction": 79
+    "depts_restriction": 75
   },
   "pipeline_meta": {
-    "run_at": "2026-06-25T08:48:30",
+    "run_at": "2026-06-25T13:37:54",
     "sources": {
       "JORF": 0,
-      "RSS": 18,
-      "VigiEau": 79,
+      "RSS": 16,
+      "VigiEau": 75,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 74,
-    "llm_seconds": 76.1
+    "llm_calls": 72,
+    "llm_seconds": 85.7
   },
   "items": [
     {
-      "id": "1c83e02be344",
+      "id": "a953ff10ac29",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Responsabilité sociale des entreprises : retour sur l'année 2025-2026",
+      "resume": "L'article aborde les évolutions de la RSE en 2025-2026, notamment le désengagement financier américain et la contraction du cadre normatif européen, ce qui pourrait impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et les attentes en matière de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/synthese-rse-annee-2025-2026-48149.php4#xtor=RSS-6",
+      "date": "2026-06-25"
+    },
+    {
+      "id": "5c314d44af04",
       "source": "Reporterre",
       "categorie": "Climat",
-      "titre": "« La climatisation, une diversion dans un moment où il faut du courage politique »",
-      "resume": "L'article souligne l'inefficacité climatique de la climatisation face aux canicules, un sujet indirectement lié à l'adaptation des sites clients d'ABC (exposition aux risques climatiques) et à la décarbonation de ses propres activités (énergie, confort thermique).",
+      "titre": "Canicule : dans le Finistère, une journée éprouvante sans électricité",
+      "resume": "Cet article illustre un risque climatique opérationnel (canicule) ayant un impact direct sur les infrastructures énergétiques (RTE), pouvant perturber l'activité des clients d'ABC (3 000+ sites) et leurs prestations de propreté/FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Canicule-dans-le-Finistere-une-journee-eprouvante-sans-electricite",
+      "date": "2026-06-25"
+    },
+    {
+      "id": "31f9bf168aed",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "« Le débat sur la climatisation est une diversion »",
+      "resume": "L'article souligne les enjeux liés à la climatisation face aux canicules, un sujet indirectement lié à la gestion énergétique des sites clients d'ABC et à leur adaptation aux risques climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/La-climatisation-une-diversion-dans-un-moment-ou-il-faut-du-courage-politique",
       "date": "2026-06-25"
     },
     {
-      "id": "3ecd118ebe45",
+      "id": "d351c8955eb5",
       "source": "Reporterre",
       "categorie": "Climat",
-      "titre": "Face aux canicules, faisons corps avec les arbres",
-      "resume": "L'article souligne l'importance des arbres pour atténuer les effets des canicules, un enjeu climatique croissant qui pourrait influencer les politiques urbaines et les attentes des clients d'ABC en matière de résilience climatique.",
+      "titre": "Face à la canicule, arrêtons de couper des arbres en ville",
+      "resume": "L'article souligne l'importance des arbres urbains comme solution d'adaptation climatique face aux canicules, un enjeu indirect pour ABC via les risques opérationnels sur ses 3 000+ sites clients (exposition aux aléas climatiques).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Face-aux-canicules-faisons-corps-avec-les-arbres",
+      "date": "2026-06-25"
+    },
+    {
+      "id": "0aba17b25f81",
+      "source": "Novethic",
+      "categorie": "Déchets",
+      "titre": "[Exclusif] Contribution climatique : les 10 premiers scores d’entreprises dévoilés",
+      "resume": "L'article illustre l'émergence de cadres de reporting climatique (CCF) et la transparence accrue des entreprises sur leur contribution climatique, un enjeu clé pour ABC dans le cadre de la CSRD et des attentes clients (nucléaire, santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/environnement/climat/exclusif-contribution-climatique-les-10-premiers-scores-dentreprises-devoiles",
       "date": "2026-06-25"
     },
     {
@@ -50,10 +83,21 @@
       "source": "Contexte Environnement",
       "categorie": "Énergie",
       "titre": "Règlement emballages : la dernière vague de lobbying agace plus qu’elle ne convainc",
-      "resume": "Le règlement emballages pourrait impacter ABC via la gestion des déchets de ses prestations (scope 3) et les exigences clients en matière de traçabilité et d'éco-conception des emballages utilisés.",
+      "resume": "Le règlement emballages pourrait impacter les pratiques de gestion des déchets d'ABC, notamment via les obligations de recyclage et de traçabilité des emballages utilisés dans ses prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.contexte.com/fr/article/environnement/reglement-emballages-la-derniere-vague-de-lobbying-agace-plus-quelle-ne-convainc_267617?source=rss",
+      "date": "2026-06-25"
+    },
+    {
+      "id": "6229eeabdcb4",
+      "source": "Le Monde Planète",
+      "categorie": "Eau",
+      "titre": "Sécheresse en Italie : les fleuves de Lombardie et de Toscane sont très en dessous de leurs niveaux habituels, le nord du pays redoute le manque d’eau",
+      "resume": "L'article souligne un risque climatique indirect pour ABC via la dépendance de ses clients industriels (notamment en Lombardie et Toscane) à la disponibilité en eau, pouvant impacter leurs activités et leurs exigences carbone. Cela pourrait influencer les contrats de prestation de services ou les engagements RSE des clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/06/25/les-fleuves-de-lombardie-et-toscane-sont-tres-en-dessous-de-leurs-niveaux-habituels-le-nord-de-l-italie-redoute-le-stress-hydrique_6713398_3244.html",
       "date": "2026-06-25"
     },
     {
@@ -61,32 +105,21 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "Manque d’eau et chaleur : la France sur la trajectoire d’une forte sécheresse estivale",
-      "resume": "L'article souligne les risques climatiques opérationnels liés à la sécheresse et aux restrictions d'eau en France, pouvant impacter les activités de propreté/FM d'ABC (ex. : accès à l'eau pour les prestations, contraintes logistiques).",
+      "resume": "L'article souligne les risques climatiques opérationnels liés aux sécheresses estivales en France, pouvant impacter la disponibilité de l'eau pour les activités de nettoyage et de gestion des déchets des 3 000+ sites clients d'ABC, notamment dans les départements déjà soumis à des restrictions.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/06/25/manque-d-eau-et-chaleur-la-france-sur-la-trajectoire-d-une-forte-secheresse-estivale_6713366_3244.html",
       "date": "2026-06-25"
     },
     {
-      "id": "e6017c7f5ea1",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Emmanuel Grégoire, maire de Paris, sur la crise climatique : « Pour nous adapter, nous devons faire évoluer les rythmes de vie »",
-      "resume": "L'article aborde l'adaptation aux canicules via des mesures structurelles (rythmes de vie, climatisation collective) qui pourraient influencer les exigences clients d'ABC en matière de services de propreté/FM résilients au climat, notamment dans les secteurs santé/industrie.",
+      "id": "cd26e50e0ee2",
+      "source": "The Guardian Environment",
+      "categorie": "Environnement",
+      "titre": "Extreme heat grips Europe as UK extends warnings, France shuts down nuclear reactors and deaths rise across continent – live",
+      "resume": "L'article souligne l'impact des aléas climatiques (canicules) sur les infrastructures critiques en Europe, notamment la fermeture de réacteurs nucléaires en France et les restrictions d'eau au Royaume-Uni, ce qui pourrait affecter la continuité des services de propreté/FM pour ABC et ses clients.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/politique/article/2026/06/25/emmanuel-gregoire-maire-de-paris-sur-la-crise-climatique-pour-nous-adapter-nous-devons-faire-evoluer-les-rythmes-de-vie_6713349_823448.html",
-      "date": "2026-06-25"
-    },
-    {
-      "id": "14075d1830c7",
-      "source": "Actuel HSE",
-      "categorie": "Climat",
-      "titre": "France Logistique et l’Ademe poursuivent leur partenariat jusqu’en 2028",
-      "resume": "Le partenariat entre France Logistique et l'ADEME jusqu'en 2028 pourrait influencer les attentes des clients d'ABC en matière de décarbonation des chaînes logistiques et de reporting environnemental, notamment via des critères carbone intégrés aux appels d'offres.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/france-logistique-et-lademe-poursuivent-leur-partenariat-jusquen-2028-2",
+      "url": "https://www.theguardian.com/world/live/2026/jun/25/europe-heatwave-uk-italy-france-record-temperature-latest-news-updates",
       "date": "2026-06-25"
     },
     {
@@ -94,7 +127,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Un nouveau baromètre pour suivre la transition écologique",
-      "resume": "Le baromètre pourrait fournir des indicateurs clés pour évaluer la progression des engagements climatiques des entreprises, utiles pour le reporting CSRD/ESRS d'ABC et la comparaison avec les trajectoires nationales (SNBC/PNACC).",
+      "resume": "Le baromètre pourrait fournir des indicateurs utiles pour suivre la transition écologique des clients d'ABC et évaluer les attentes en matière de reporting ESG, notamment dans le cadre de la CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/un-nouveau-barometre-pour-suivre-la-transition-ecologique-2",
@@ -123,25 +156,14 @@
       "date": "2026-06-24"
     },
     {
-      "id": "60ed494e47c7",
-      "source": "Novethic",
+      "id": "47315c7a17a4",
+      "source": "Actu-Environnement",
       "categorie": "Déchets",
-      "titre": "SFDR 2.0 : les investisseurs réclament de la clarté",
-      "resume": "SFDR 2.0 : les investisseurs réclament de la clarté",
-      "pourquoi": "Mention de SFDR.",
-      "criticite": 3,
-      "url": "https://www.novethic.fr/finance-durable/reglementation/sfdr-2-0-investisseurs-reclament-clarte",
-      "date": "2026-06-24"
-    },
-    {
-      "id": "3c90529ebba8",
-      "source": "ESG Today",
-      "categorie": "Énergie",
-      "titre": "EU Member States Propose Dropping Exclusion of Fossil Fuel Companies from New SFDR Transition Fund Category",
-      "resume": "EU Member States Propose Dropping Exclusion of Fossil Fuel Companies from New SFDR Transition Fund Category",
-      "pourquoi": "Mention de SFDR.",
-      "criticite": 3,
-      "url": "https://www.esgtoday.com/eu-member-states-propose-dropping-exclusion-of-fossil-fuel-companies-from-new-sfdr-transition-fund-category/?utm_source=rss&utm_medium=rss&utm_campaign=eu-member-states-propose-dropping-exclusion-of-fossil-fuel-companies-from-new-sfdr-transition-fund-category",
+      "titre": "Loi anti fast-fashion (2/2) : le texte retouche la REP textiles et autres filières",
+      "resume": "La loi anti fast-fashion modifie le cadre des filières REP, notamment textile, ce qui pourrait impacter les obligations de traçabilité et de gestion des déchets pour ABC dans le cadre de ses prestations de propreté chez ses clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/mesures-loi-fast-fashion-rep-textiles-ecomodulation-controle-48203.php4#xtor=RSS-6",
       "date": "2026-06-24"
     },
     {
@@ -149,43 +171,10 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Emballages : Adelphe lance trois standards de bouteilles de vin réemployables",
-      "resume": "L'article aborde les standards de bouteilles réemployables pour le vin, un sujet lié à la gestion des déchets et à l'économie circulaire, mais sans impact direct immédiat sur les activités de propreté/FM ou les enjeux carbone de ABC.",
+      "resume": "L'article aborde l'innovation dans les emballages réemployables pour le vin, un sujet lié à la gestion des déchets et à l'économie circulaire, mais sans impact direct identifié sur les activités de propreté/FM d'ABC ou ses enjeux réglementaires prioritaires (BGES, CSRD, flotte véhicules, etc.).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/lancement-bouteille-reemploi-adelphe-filiere-viticole-48206.php4#xtor=RSS-6",
-      "date": "2026-06-24"
-    },
-    {
-      "id": "fda2ded99757",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Avec la canicule moins de nucléaire, mais plus de gaz",
-      "resume": "L'article souligne l'impact des aléas climatiques (canicules) sur la production nucléaire française, entraînant une augmentation de la production électrique à partir de gaz. Cela pourrait influencer les exigences carbone des clients d'ABC (notamment industriels et tertiaires) en matière de reporting et de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Avec-la-canicule-moins-de-nucleaire-mais-plus-de-gaz",
-      "date": "2026-06-24"
-    },
-    {
-      "id": "a003b68a9534",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "Face à la canicule, faut-il ouvrir les bureaux climatisés au public ?",
-      "resume": "L'article aborde les enjeux de gestion des espaces climatisés en période de canicule, un sujet indirectement lié aux risques climatiques opérationnels et à la responsabilité sociale des entreprises (RSE) pour ABC, notamment en termes d'adaptation aux aléas climatiques et de confort des parties prenantes.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/environnement/climat/canicule-bureaux-climatises-entreprises-requisitionner",
-      "date": "2026-06-24"
-    },
-    {
-      "id": "81a43fabaf83",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Coupures de courant, « surchauffe » des lignes à haute tension : les réseaux électriques mis à rude épreuve par la canicule",
-      "resume": "Les canicules accentuent les risques de coupures électriques, pouvant impacter la continuité des prestations de propreté/FM d'ABC chez ses clients. RTE et Enedis investissent dans la résilience des réseaux, ce qui pourrait influencer la planification des interventions et la gestion des aléas climatiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/economie/article/2026/06/24/coupures-de-courant-surchauffe-des-lignes-a-haute-tension-les-reseaux-electriques-mis-a-rude-epreuve-par-la-canicule_6713232_3234.html",
       "date": "2026-06-24"
     },
     {
@@ -193,21 +182,10 @@
       "source": "ESG Today",
       "categorie": "Biodiversité",
       "titre": "Google, Energy Dome Launch Energy Storage Project to Enable 24/7 Clean Energy Access",
-      "resume": "L'article illustre une innovation technologique dans le stockage d'énergie renouvelable (CO2 Battery), pertinente pour les enjeux de décarbonation et d'accès à une énergie propre 24/7, alignée avec les objectifs de transition énergétique des clients d'ABC (nucléaire, santé, industrie).",
+      "resume": "L'article illustre une innovation technologique (stockage d'énergie par batterie CO2) qui pourrait influencer les stratégies clients d'ABC dans le cadre de leur transition énergétique et de leur reporting ESG (scope 2), notamment pour les sites tertiaires ou industriels.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/google-energy-dome-launch-energy-storage-project-to-enable-24-7-clean-energy-access/?utm_source=rss&utm_medium=rss&utm_campaign=google-energy-dome-launch-energy-storage-project-to-enable-24-7-clean-energy-access",
-      "date": "2026-06-24"
-    },
-    {
-      "id": "5fe15e57cf7f",
-      "source": "The Guardian Environment",
-      "categorie": "Environnement",
-      "titre": "UK records its hottest June day and France its hottest day ever as heatwave sweeps Europe",
-      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe, un risque climatique opérationnel pouvant impacter les activités de propreté/FM d'ABC sur ses 3 000+ sites clients, notamment en termes de santé des employés et de continuité de service.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/environment/2026/jun/24/uk-records-hottest-june-day",
       "date": "2026-06-24"
     },
     {
@@ -215,7 +193,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Énergie",
       "titre": "De la chaudière au lave-linge, Bruxelles simplifie l'étiquetage énergie sans l'enterrer - Les Echos",
-      "resume": "L'article aborde la simplification de l'étiquetage énergie par l'UE, qui pourrait impacter les équipements utilisés par ABC dans ses prestations (ex : lave-linge, chaudières) et influencer les exigences clients en matière d'efficacité énergétique.",
+      "resume": "L'article aborde la simplification de l'étiquetage énergie par l'UE, qui pourrait impacter les équipements énergétiques utilisés par ABC dans ses prestations de propreté/FM, notamment pour les sites tertiaires clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQdnFsRnBPR282akMyY0U3cVNuRzdzc2U4eUtPcnRaVnppeEY2ejI1SUFnS0VWblBtdTFUa21TMmIxdzVILXVTWm1uRldkWnRsNUhva2JKanNjMkFlU1JWcVlkamhQMEwxYS1oaXpjU19jMFBkbEo2eWZEQmlnUFpVT3QxS245a3lmMWRfaXBDcjAyVk1UM0VzMDl0czNLY01ETmtZNnljVElzYk44bUhrUXlCdDZhNV9OLUVORHpFN2dqQ3hKckpXeHpQWVNGbmo4Ulo0d01pNUpYMWdQYk5xV19PUVptRFlScUJ3ZlVn?oc=5",
@@ -254,6 +232,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "28",
+      "dept_nom": "Eure-et-Loir",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "36",
       "dept_nom": "Indre",
       "niveau": "crise"
@@ -289,11 +272,6 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "46",
-      "dept_nom": "Lot",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "81",
       "dept_nom": "Tarn",
       "niveau": "crise"
@@ -324,11 +302,6 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "33",
-      "dept_nom": "Gironde",
-      "niveau": "alerte renforcée"
-    },
-    {
       "dept_code": "65",
       "dept_nom": "Hautes-Pyrénées",
       "niveau": "alerte renforcée"
@@ -349,8 +322,8 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "23",
-      "dept_nom": "Creuse",
+      "dept_code": "67",
+      "dept_nom": "Bas-Rhin",
       "niveau": "alerte renforcée"
     },
     {
@@ -404,16 +377,6 @@
       "niveau": "alerte"
     },
     {
-      "dept_code": "28",
-      "dept_nom": "Eure-et-Loir",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "19",
-      "dept_nom": "Corrèze",
-      "niveau": "alerte"
-    },
-    {
       "dept_code": "21",
       "dept_nom": "Côte-d'Or",
       "niveau": "alerte"
@@ -436,6 +399,11 @@
     {
       "dept_code": "34",
       "dept_nom": "Hérault",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "70",
+      "dept_nom": "Haute-Saône",
       "niveau": "alerte"
     },
     {
@@ -514,8 +482,8 @@
       "niveau": "vigilance"
     },
     {
-      "dept_code": "67",
-      "dept_nom": "Bas-Rhin",
+      "dept_code": "57",
+      "dept_nom": "Moselle",
       "niveau": "vigilance"
     },
     {
@@ -536,11 +504,6 @@
     {
       "dept_code": "87",
       "dept_nom": "Haute-Vienne",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "15",
-      "dept_nom": "Cantal",
       "niveau": "vigilance"
     },
     {
@@ -591,11 +554,6 @@
     {
       "dept_code": "88",
       "dept_nom": "Vosges",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "70",
-      "dept_nom": "Haute-Saône",
       "niveau": "vigilance"
     },
     {
@@ -1858,5 +1816,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le projet n°2518 (adaptation au droit de l'UE en matière environnementale, énergétique et de transport) et le projet n°2632 (protection et souveraineté agricoles) pourraient avoir un impact indirect sur les enjeux climatiques et environnementaux pour une entreprise de services. Aucun texte adopté ne semble directement lié à la RSE ou au reporting extra-financier."
+  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (adaptation au droit de l'UE en matière environnementale, énergétique et de pêche) et le n°2632 (protection et souveraineté agricoles) pourraient impacter directement les enjeux climatiques et environnementaux d'une grande entreprise de services. Les textes adoptés ne semblent pas directement liés à ces thématiques."
 }
