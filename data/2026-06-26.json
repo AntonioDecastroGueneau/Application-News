@@ -1,34 +1,56 @@
 {
   "date": "2026-06-26",
-  "generated_at": "08:51",
-  "elapsed_seconds": 245,
+  "generated_at": "13:32",
+  "elapsed_seconds": 258,
   "errors": [],
   "stats": {
     "jo_analyses": 32,
     "jo_retenus": 0,
-    "depts_restriction": 76
+    "depts_restriction": 77
   },
   "pipeline_meta": {
-    "run_at": "2026-06-26T08:51:24",
+    "run_at": "2026-06-26T13:32:11",
     "sources": {
       "JORF": 0,
-      "RSS": 16,
-      "VigiEau": 76,
+      "RSS": 22,
+      "VigiEau": 77,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 74,
-    "llm_seconds": 103.8
+    "llm_calls": 82,
+    "llm_seconds": 96.6
   },
   "items": [
+    {
+      "id": "1b74c0200893",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Lire notre dossier d'actu \"Canicule : la France face au défi du confort d'été\"",
+      "resume": "L'article souligne l'augmentation des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter les sites clients d'ABC (ex : besoins accrus en climatisation, maintenance adaptée, gestion des déchets liés aux équipements).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/dossier-actu/dossier-canicule-chaleur-adaptation-climat-batiment-ville-128#xtor=RSS-6",
+      "date": "2026-06-26"
+    },
+    {
+      "id": "a92d6e304821",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Rénovation énergétique des hôpitaux : le Gouvernement double le financement face à la canicule",
+      "resume": "Le doublement du financement pour la rénovation énergétique des hôpitaux pourrait influencer les exigences carbone des clients d'ABC (secteur santé), notamment en matière de performance énergétique des bâtiments et de décarbonation des prestations.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/canicule-renovation-energetique-hopitaux-financement-rafraichissement-ehpads-48218.php4#xtor=RSS-6",
+      "date": "2026-06-26"
+    },
     {
       "id": "2c083d5f82bb",
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "La voiture, grande gagnante de la canicule",
-      "resume": "L'article souligne l'augmentation de l'usage des véhicules climatisés pendant les canicules, ce qui pourrait impacter la flotte de véhicules d'ABC (scope 1) et les attentes clients en matière de mobilité durable.",
+      "resume": "L'article met en lumière l'augmentation de l'usage des véhicules climatisés lors des canicules, un phénomène qui pourrait influencer les politiques de mobilité durable et les exigences carbone des clients d'ABC, notamment dans les secteurs nucléaire, santé et industrie.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/La-voiture-grande-gagnante-de-la-canicule",
@@ -39,10 +61,32 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Juin 2026, la canicule de tous les records",
-      "resume": "L'article souligne l'intensification des canicules en France, un risque climatique opérationnel majeur pour ABC qui intervient sur 3 000+ sites clients, pouvant impacter la continuité des prestations et les exigences carbone des clients.",
+      "resume": "L'article souligne l'intensification des canicules en France, un risque climatique opérationnel majeur pour ABC qui intervient sur 3 000+ sites clients. Cela peut impacter la continuité des prestations de propreté/FM et les exigences carbone des clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Juin-2026-la-canicule-de-tous-les-records",
+      "date": "2026-06-26"
+    },
+    {
+      "id": "b8b680599f9b",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "Climat : Les data centers, géants numériques aux pieds d’argile",
+      "resume": "Les risques climatiques (canicules) impactent directement la résilience des infrastructures numériques des clients d'ABC (ex : data centers), pouvant perturber leurs opérations et donc les prestations de propreté/FM. Cela renforce l'importance de l'analyse des risques climatiques dans le reporting CSRD/ESRS et la gestion des sites clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/environnement/climat/data-center-canicule-risques-climatiques-robustesse",
+      "date": "2026-06-26"
+    },
+    {
+      "id": "5c7aae14c6e5",
+      "source": "Novethic",
+      "categorie": "Environnement",
+      "titre": "Données ESG : l’omniprésence des fournisseurs américains masque une préférence européenne",
+      "resume": "L'article souligne une préférence croissante des acteurs financiers pour les fournisseurs de données ESG européens, ce qui pourrait influencer les choix de reporting extra-financier d'ABC dans le cadre de la CSRD et des ESRS.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/finance-durable/reglementation/donnees-esg-omnipresence-fournisseurs-americains-masque-preference-europeenne",
       "date": "2026-06-26"
     },
     {
@@ -50,10 +94,21 @@
       "source": "I4CE",
       "categorie": "Environnement",
       "titre": "Adaptation au changement climatique : qu’attendre (vraiment) du Fonds vert ?",
-      "resume": "Le Fonds vert est un outil de financement complémentaire pour les collectivités locales en matière d'adaptation climatique, sans couvrir l'ensemble des besoins. ABC pourrait indirectement en bénéficier via ses clients (collectivités ou entreprises locales) pour des projets d'adaptation sur leurs sites.",
+      "resume": "Le Fonds vert est un outil complémentaire pour le financement de l'action climatique locale en France, sans couvrir l'intégralité des besoins. ABC pourrait indirectement en bénéficier via ses clients (collectivités) ou ses propres investissements en adaptation, mais sans obligation directe.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.i4ce.org/adaptation-changement-climatique-attendre-fonds-vert/",
+      "date": "2026-06-26"
+    },
+    {
+      "id": "12405b10ac64",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’agenda de la transition énergétique",
+      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, hydrogène), offrant une veille sur les tendances et évolutions sectorielles pertinentes pour ABC, notamment en matière de décarbonation et de mobilité durable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/lagenda-de-la-transition-energetique-280-424554/",
       "date": "2026-06-26"
     },
     {
@@ -61,7 +116,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Jean-Pierre Farandou, ministre du travail : « On ne peut pas arrêter la France à partir de 30 °C »",
-      "resume": "L'article souligne l'importance de l'adaptation des conditions de travail aux aléas climatiques (canicules), un risque opérationnel indirect pour ABC qui intervient sur 3 000+ sites clients en France. Cela pourrait impacter les plannings et méthodes de prestation, notamment en période de forte chaleur.",
+      "resume": "L'article souligne l'importance de l'adaptation aux vagues de chaleur pour les travailleurs, ce qui impacte directement les activités de propreté/FM de ABC chez ses clients (3 000+ sites). Risque opérationnel accru en cas de canicules intenses.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/politique/article/2026/06/26/jean-pierre-farandou-ministre-du-travail-on-ne-peut-pas-arreter-la-france-a-partir-de-30-degres_6715811_823448.html",
@@ -72,18 +127,29 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Canicule : comment réfléchir à la climatisation sans caricature ?",
-      "resume": "L'article aborde la question de la climatisation face aux canicules, un enjeu croissant pour les entreprises de services comme ABC, notamment en termes de consommation énergétique et d'adaptation aux risques climatiques sur les sites clients.",
+      "resume": "L'article aborde la question de la climatisation dans un contexte de canicule, un enjeu croissant pour les entreprises de services comme ABC, notamment en termes de gestion énergétique et d'adaptation aux risques climatiques sur les sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/06/26/canicule-comment-reflechir-a-la-climatisation-sans-caricature_6715792_3244.html",
       "date": "2026-06-26"
     },
     {
-      "id": "96b6dd62c5a1",
+      "id": "efc1cd85003c",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "Paris Court Orders TotalEnergies to Address Climate Risks from Customers’ Use of its Products",
+      "resume": "L'article souligne l'obligation pour TotalEnergies de gérer les risques climatiques liés à l'usage de ses produits par ses clients, ce qui pourrait influencer les attentes réglementaires et contractuelles des clients d'ABC en matière de reporting scope 3 et de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/paris-court-orders-totalenergies-to-address-climate-risks-from-customers-use-of-its-products/?utm_source=rss&utm_medium=rss&utm_campaign=paris-court-orders-totalenergies-to-address-climate-risks-from-customers-use-of-its-products",
+      "date": "2026-06-26"
+    },
+    {
+      "id": "84533db0c235",
       "source": "The Guardian Environment",
-      "categorie": "Déchets",
-      "titre": "Red warning for south-east England after record June heat; 55 people have drowned in France  – Europe heatwave live",
-      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe, avec des mesures exceptionnelles (interdictions publiques, annulations d'événements) en France, illustrant l'augmentation des risques climatiques opérationnels pour les sites clients d'ABC (santé, sécurité, continuité d'activité).",
+      "categorie": "Environnement",
+      "titre": "Europe heatwave live: UK June heat record broken for third day in a row; France and Belgium cancel events",
+      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe, avec des températures record et des risques accrus d'incendies, ce qui pourrait impacter la continuité des services de propreté/FM d'ABC sur ses 3 000+ sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.theguardian.com/environment/live/2026/jun/26/europe-heatwave-extreme-heat-red-alert-weather-uk-england-france-climate-crisis-latest-news-updates",
@@ -94,7 +160,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Obligations de solarisation des toitures : «Il y aura un décalage sur le terrain»",
-      "resume": "L'article aborde les obligations de solarisation des toitures pour les bâtiments non résidentiels et parkings, ce qui pourrait impacter les sites clients d'ABC (ex : tertiaire, industrie) et leurs exigences en matière de décarbonation ou de reporting ESG.",
+      "resume": "L'article aborde les obligations de solarisation des toitures pour les bâtiments non résidentiels et parkings, qui pourraient impacter les sites clients d'ABC (ex : tertiaires, industriels) et leurs exigences en matière de décarbonation ou de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/obligations-de-solarisation-des-toitures-il-y-aura-un-decalage-sur-le-terrain",
@@ -105,7 +171,7 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Fortes chaleurs : le ministre du travail va créer un groupe de travail",
-      "resume": "Le groupe de travail sur les fortes chaleurs pourrait influencer les obligations de sécurité et de prévention des risques physiques pour les salariés d'ABC intervenant sur les sites clients, notamment en période estivale.",
+      "resume": "Le groupe de travail sur les fortes chaleurs pourrait impacter les obligations de sécurité et de prévention des risques physiques pour les salariés d'ABC intervenant sur les sites clients, notamment en période estivale.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-le-ministre-du-travail-va-creer-un-groupe-de-travail-0",
@@ -116,7 +182,7 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "L'Anses publie son avis sur le projet de décret qui révise les normes de qualité de l'air",
-      "resume": "L'avis de l'Anses sur la révision des normes de qualité de l'air pourrait impacter les exigences réglementaires en matière de propreté et de qualité de l'air intérieur chez les clients d'ABC, notamment dans les secteurs sensibles (santé, industrie).",
+      "resume": "L'avis de l'Anses sur la révision des normes de qualité de l'air pourrait impacter les exigences réglementaires des sites clients d'ABC, notamment en santé et industrie, avec des implications potentielles sur les prestations de propreté/FM et leur reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/lanses-publie-son-avis-sur-le-projet-de-decret-qui-revise-les-normes-de-qualite-de-lair-2",
@@ -127,7 +193,7 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Incendie de parkings : les véhicules électriques sous les feux de la rampe",
-      "resume": "L'article souligne les risques spécifiques d'incendie liés aux véhicules électriques dans les parkings, un enjeu potentiel pour la flotte de véhicules d'ABC et la sécurité de ses sites clients, notamment dans le cadre de la transition vers des véhicules propres.",
+      "resume": "L'article aborde les risques spécifiques d'incendie liés aux véhicules électriques dans les parkings, un enjeu de sécurité et environnemental qui pourrait impacter la flotte de véhicules d'ABC et ses obligations en matière de gestion des risques opérationnels.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/incendie-de-parkings-les-vehicules-electriques-sous-les-feux-de-la-rampe-0",
@@ -138,8 +204,8 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "TotalEnergies condamné à prendre en compte les émissions carbone de ses clients",
-      "resume": "Cette décision renforce l'obligation pour les entreprises de prendre en compte les émissions de scope 3 dans leur stratégie climatique, ce qui impacte indirectement ABC via les exigences carbone de ses clients (nucléaire, santé, industrie).",
-      "pourquoi": "L'article aborde le devoir de vigilance et les émissions de scope 3, un enjeu clé pour les entreprises comme ABC dont les clients (non exploitants ICPE) sont soumis à des exigences carbone croissantes. Bien que ABC ne soit pas directement visée, cette décision influence les attentes réglementaires et contractuelles des clients envers leurs prestataires, notamment en matière de reporting ESG et de décarbonation.",
+      "resume": "Cette décision renforce l'obligation de vigilance climatique pour les entreprises, y compris les prestataires de services comme ABC, en intégrant les émissions scope 3 (clients/utilisateurs finaux) dans les plans de vigilance et BGES. Cela peut impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et leur reporting CSRD.",
+      "pourquoi": "L'article traite d'une obligation légale (devoir de vigilance) qui s'étend aux émissions scope 3, directement liée aux enjeux de reporting ESG (CSRD/ESRS) et de décarbonation des entreprises clientes d'ABC. Bien que non spécifique à ABC, cela impacte indirectement ses clients et leurs exigences envers leurs prestataires.",
       "criticite": 2,
       "url": "https://reporterre.net/TotalEnergies-condamne-a-prendre-en-compte-les-emissions-carbone-de-ses-clients",
       "date": "2026-06-25"
@@ -149,7 +215,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Contentieux climatique : TotalEnergies sommé par la justice de compléter son plan de vigilance",
-      "resume": "L'article rappelle l'importance de l'intégration des émissions indirectes (scope 3) dans les plans de vigilance, un enjeu pertinent pour ABC dans le cadre de son reporting CSRD et de la gestion des risques climatiques liés à ses clients.",
+      "resume": "Cet article illustre l'évolution des exigences réglementaires en matière de reporting des émissions indirectes (scope 3), un enjeu critique pour ABC dans le cadre de la CSRD et des attentes clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/contentieux-climatique-total-energies-completer-plan-vigilance-48213.php4#xtor=RSS-6",
@@ -160,21 +226,21 @@
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Décision inédite : TotalEnergies doit inclure les émissions de ses clients dans son plan de vigilance",
-      "resume": "Cette décision judiciaire pourrait influencer les exigences de reporting et de vigilance climatique des clients d'ABC, notamment dans les secteurs nucléaire, santé et industrie, en élargissant la responsabilité aux émissions indirectes (scope 3).",
+      "resume": "Cette décision pourrait influencer les exigences des clients d'ABC en matière de reporting Scope 3, notamment dans les secteurs nucléaire, santé et industrie, où les donneurs d'ordre pourraient renforcer leurs attentes en matière de transparence carbone.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/climat/decision-historique-totalenergies-doit-inclure-les-emissions-de-ses-clients-dans-son-plan-de-vigilance",
       "date": "2026-06-25"
     },
     {
-      "id": "0aba17b25f81",
-      "source": "Novethic",
-      "categorie": "Déchets",
-      "titre": "[Exclusif] Contribution climatique : les 10 premiers scores d’entreprises dévoilés",
-      "resume": "Cet article présente le Climate Contribution Framework (CCF), un outil de mesure de la contribution climatique des entreprises, qui pourrait influencer les attentes des clients d'ABC en matière de reporting ESG et de décarbonation, notamment dans le cadre de la CSRD.",
+      "id": "dcae9da002a6",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Les CEE se préparent à la polycrise",
+      "resume": "Les CEE pourraient être impactés par des changements politiques en France, ce qui pourrait influencer les dispositifs d'efficacité énergétique et les opportunités de financement pour les entreprises comme ABC, notamment dans le cadre de la décarbonation de sa flotte ou de ses sites.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.novethic.fr/environnement/climat/exclusif-contribution-climatique-les-10-premiers-scores-dentreprises-devoiles",
+      "url": "https://www.greenunivers.com/2026/06/les-cee-se-preparent-a-la-polycrise-427745/",
       "date": "2026-06-25"
     },
     {
@@ -182,21 +248,21 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "En pleine canicule, le réseau de froid de La Défense à la peine",
-      "resume": "L'article illustre les risques climatiques opérationnels (canicules) affectant les infrastructures tertiaires en France, pouvant impacter la prestation de services de propreté/FM chez les clients d'ABC, notamment dans les zones urbaines comme La Défense.",
+      "resume": "L'article illustre les risques climatiques opérationnels (canicules) affectant les infrastructures critiques (réseau de froid) en France, pouvant impacter les activités de services multisites comme ABC, notamment en termes de continuité de service et de résilience.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/en-pleine-canicule-le-reseau-de-froid-de-la-defense-a-la-peine-427720/",
       "date": "2026-06-25"
     },
     {
-      "id": "4e1642373ca2",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Très exposés aux canicules, les travailleurs indépendants n’ont pas les moyens de s’arrêter",
-      "resume": "L'article met en lumière les risques climatiques opérationnels pour les travailleurs indépendants (dont certains prestataires de services comme ABC), soulignant des vulnérabilités similaires à celles de la flotte de véhicules ou des sites clients exposés aux canicules.",
+      "id": "205e8ffd1a25",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "Microsoft Hits Water Positive Target 5 Years Ahead of 2030 Goal",
+      "resume": "L'article illustre une avancée en matière de gestion de l'eau par une grande entreprise, un enjeu indirect pour ABC dans le cadre de son reporting ESG et de ses engagements climatiques, bien que non opérationnel directement.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/economie/article/2026/06/25/tres-exposes-aux-canicules-les-travailleurs-independants-n-ont-pas-les-moyens-de-s-arreter_6715465_3234.html",
+      "url": "https://www.esgtoday.com/microsoft-hits-water-positive-target-5-years-ahead-of-2030-goal/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-hits-water-positive-target-5-years-ahead-of-2030-goal",
       "date": "2026-06-25"
     }
   ],
@@ -247,11 +313,6 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "24",
-      "dept_nom": "Dordogne",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "03",
       "dept_nom": "Allier",
       "niveau": "crise"
@@ -282,6 +343,11 @@
       "niveau": "alerte renforcée"
     },
     {
+      "dept_code": "35",
+      "dept_nom": "Ille-et-Vilaine",
+      "niveau": "alerte renforcée"
+    },
+    {
       "dept_code": "72",
       "dept_nom": "Sarthe",
       "niveau": "alerte renforcée"
@@ -302,13 +368,13 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "65",
-      "dept_nom": "Hautes-Pyrénées",
+      "dept_code": "33",
+      "dept_nom": "Gironde",
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "47",
-      "dept_nom": "Lot-et-Garonne",
+      "dept_code": "65",
+      "dept_nom": "Hautes-Pyrénées",
       "niveau": "alerte renforcée"
     },
     {
@@ -319,6 +385,11 @@
     {
       "dept_code": "67",
       "dept_nom": "Bas-Rhin",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "87",
+      "dept_nom": "Haute-Vienne",
       "niveau": "alerte renforcée"
     },
     {
@@ -334,6 +405,11 @@
     {
       "dept_code": "01",
       "dept_nom": "Ain",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "39",
+      "dept_nom": "Jura",
       "niveau": "alerte renforcée"
     },
     {
@@ -419,6 +495,11 @@
     {
       "dept_code": "34",
       "dept_nom": "Hérault",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "88",
+      "dept_nom": "Vosges",
       "niveau": "alerte"
     },
     {
@@ -517,11 +598,6 @@
       "niveau": "vigilance"
     },
     {
-      "dept_code": "87",
-      "dept_nom": "Haute-Vienne",
-      "niveau": "vigilance"
-    },
-    {
       "dept_code": "43",
       "dept_nom": "Haute-Loire",
       "niveau": "vigilance"
@@ -529,11 +605,6 @@
     {
       "dept_code": "69",
       "dept_nom": "Rhône",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "39",
-      "dept_nom": "Jura",
       "niveau": "vigilance"
     },
     {
@@ -557,13 +628,13 @@
       "niveau": "vigilance"
     },
     {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
+      "dept_code": "84",
+      "dept_nom": "Vaucluse",
       "niveau": "vigilance"
     },
     {
-      "dept_code": "88",
-      "dept_nom": "Vosges",
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
       "niveau": "vigilance"
     },
     {
@@ -1851,5 +1922,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) et le projet de loi portant diverses dispositions d’adaptation au droit de l’Union européenne en matière environnementale (N°2518) pourraient présenter un intérêt indirect pour un Responsable Environnement/Climat, notamment via des mesures liées à l’agriculture durable ou à la transposition de directives européennes environnementales. Aucun texte ne traite directement de climat, énergie, déchets ou reporting RSE de manière significative."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N° 2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N° 2518)** pourraient présenter un intérêt pour un Responsable Environnement/Climat, en lien avec les enjeux agricoles et réglementaires européens. Aucun texte adopté ne semble directement lié aux priorités RSE, climat ou reporting."
 }
