@@ -1,7 +1,7 @@
 {
   "date": "2026-06-28",
-  "generated_at": "08:45",
-  "elapsed_seconds": 396,
+  "generated_at": "12:59",
+  "elapsed_seconds": 391,
   "errors": [],
   "stats": {
     "jo_analyses": 22,
@@ -9,10 +9,10 @@
     "depts_restriction": 85
   },
   "pipeline_meta": {
-    "run_at": "2026-06-28T08:45:03",
+    "run_at": "2026-06-28T12:59:27",
     "sources": {
       "JORF": 0,
-      "RSS": 9,
+      "RSS": 7,
       "VigiEau": 85,
       "Parlement": 1
     },
@@ -20,26 +20,37 @@
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 43,
-    "llm_seconds": 46.1
+    "llm_seconds": 42.4
   },
   "items": [
     {
-      "id": "c98864f3d580",
+      "id": "aefd8a13b962",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "Fortes chaleurs : le gouvernement appelle à la plus grande vigilance les entreprises des départements passés en vigilance rouge",
+      "resume": "L'article souligne l'obligation pour les entreprises de renforcer la vigilance face aux risques physiques liés aux fortes chaleurs, notamment dans les départements en vigilance rouge, ce qui impacte directement la gestion des sites clients d'ABC (3 000+ sites) et les conditions de travail des équipes de propreté/FM.",
+      "pourquoi": "L'aléa climatique (canicule) est un risque opérationnel direct pour ABC, car il affecte la sécurité des travailleurs et la continuité des prestations chez les clients. Bien que non réglementaire stricto sensu, cette vigilance gouvernementale impose une adaptation des protocoles (ex : horaires, pauses, équipements) et une anticipation des perturbations sur les sites clients.",
+      "criticite": 2,
+      "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-le-gouvernement-appelle-la-plus-grande-vigilance-les-entreprises-des-1",
+      "date": "2026-06-28"
+    },
+    {
+      "id": "d6c778a28293",
       "source": "Le Monde Planète",
       "categorie": "Climat",
-      "titre": "Comment la canicule dessine une nouvelle carte de France des inégalités au travail",
-      "resume": "L'article souligne l'impact des vagues de chaleur sur les conditions de travail en France, un risque climatique opérationnel pouvant affecter les 3 000+ sites clients d'ABC et nécessitant une adaptation des prestations de propreté/FM.",
+      "titre": "« Cols secs » et « cols humides » : comment la canicule dessine une nouvelle carte de France des inégalités au travail",
+      "resume": "L'article souligne l'impact des vagues de chaleur sur les conditions de travail en France, un risque climatique opérationnel pouvant affecter les 3 000+ sites clients d'ABC et nécessiter des adaptations (ex : protocoles de sécurité, gestion des déchets en période de canicule).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/06/28/canicule-pour-comprendre-concretement-l-impact-de-la-chaleur-sur-l-economie-il-ne-suffit-pas-de-regarder-ou-il-fera-le-plus-chaud_6716528_3232.html",
       "date": "2026-06-28"
     },
     {
-      "id": "a992d95df998",
+      "id": "d4b84129edd1",
       "source": "Le Monde Planète",
       "categorie": "Climat",
-      "titre": "D’une canicule à l’autre, de 2003 à 2026, la prise de conscience inachevée d’une catastrophe sanitaire et climatique",
-      "resume": "L'article souligne l'insuffisance des mesures d'adaptation au changement climatique en France, ce qui expose ABC à des risques opérationnels accrus (perturbations des prestations, sécurité des équipes) sur ses 3 000+ sites clients, notamment en cas de canicules ou d'événements extrêmes.",
+      "titre": "D’une canicule à l’autre, de 2003 à 2026 : la prise de conscience inachevée en France d’une catastrophe sanitaire et climatique",
+      "resume": "L'article souligne l'insuffisance des mesures d'adaptation climatique en France malgré les risques accrus de canicules, ce qui pourrait impacter la résilience opérationnelle d'ABC sur ses 3 000+ sites clients, notamment en termes de continuité de service et de gestion des risques sanitaires liés à la chaleur.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/societe/article/2026/06/28/d-une-canicule-a-l-autre-de-2003-a-2026-la-prise-de-conscience-inachevee-d-une-catastrophe-sanitaire-et-climatique_6716518_3224.html",
@@ -50,7 +61,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "« La canicule qui s’achève montre sans l’ombre d’un doute que, sans mesures fortes d’atténuation, l’adaptation sera impossible »",
-      "resume": "L'article souligne l'urgence d'une action climatique forte pour éviter des impacts opérationnels majeurs, notamment sur la résilience des sites clients et la continuité des prestations de propreté/FM.",
+      "resume": "L'article souligne l'urgence d'une action climatique forte pour éviter des impacts irréversibles, ce qui pourrait influencer les exigences carbone des clients d'ABC et les risques opérationnels liés aux aléas climatiques sur ses 3 000+ sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/06/28/la-canicule-qui-s-acheve-montre-sans-l-ombre-d-un-doute-que-sans-mesures-fortes-d-attenuation-l-adaptation-sera-impossible_6716515_3244.html",
@@ -61,10 +72,21 @@
       "source": "ESG Today",
       "categorie": "Énergie",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article couvre des actualités ESG variées (reporting, réglementations, engagements sectoriels) qui peuvent influencer les attentes clients d'ABC en matière de durabilité, notamment via des évolutions en reporting (CSRD, ESRS) ou des initiatives sectorielles (nature-based solutions).",
+      "resume": "L'article synthétise des évolutions ESG (CSO, reporting, réglementations) et initiatives sectorielles (nature, énergie) qui peuvent influencer les attentes clients d'ABC en matière de reporting extra-financier et de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-267/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-267",
+      "date": "2026-06-28"
+    },
+    {
+      "id": "987c02afda33",
+      "source": "The Guardian Environment",
+      "categorie": "Déchets",
+      "titre": "Temperature records tumble across Europe as heatwave moves east",
+      "resume": "L'article souligne l'extension des vagues de chaleur en Europe, avec des températures dépassant 35°C et des alertes dans plusieurs pays, ce qui pourrait impacter les sites clients d'ABC (risques opérationnels liés aux aléas climatiques).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/environment/2026/jun/28/temperature-records-tumble-across-europe-as-heatwave-moves-east",
       "date": "2026-06-28"
     },
     {
@@ -77,50 +99,6 @@
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/incendie-de-parkings-les-vehicules-electriques-sous-les-feux-de-la-rampe-0",
       "date": "2026-06-28"
-    },
-    {
-      "id": "aefd8a13b962",
-      "source": "Actuel HSE",
-      "categorie": "Climat",
-      "titre": "Fortes chaleurs : le gouvernement appelle à la plus grande vigilance les entreprises des départements passés en vigilance rouge",
-      "resume": "L'article souligne les risques climatiques opérationnels liés aux fortes chaleurs pour les entreprises en France, ce qui impacte directement ABC dans la gestion de ses 3 000+ sites clients et la protection de ses employés.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-le-gouvernement-appelle-la-plus-grande-vigilance-les-entreprises-des-1",
-      "date": "2026-06-28"
-    },
-    {
-      "id": "db48242cfc04",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Canicules à répétition : de la nécessité d’allier adaptation et atténuation",
-      "resume": "L'article souligne l'importance de combiner adaptation et atténuation face aux canicules, un enjeu climatique croissant pour les entreprises de services comme ABC, notamment en raison des risques opérationnels sur ses 3 000+ sites clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/06/27/canicules-a-repetition-de-la-necessite-d-allier-adaptation-et-attenuation_6716359_3232.html",
-      "date": "2026-06-27"
-    },
-    {
-      "id": "4aac147178ad",
-      "source": "The Guardian Environment",
-      "categorie": "Énergie",
-      "titre": "Europe heatwave: drought fears in Italy as records tumble around Europe – as it happened",
-      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe, avec des impacts sur les ressources en eau (ex. : assèchement du Pô en Italie), pouvant affecter les activités de prestation de services (ex. : approvisionnement en eau pour les sites clients) et les risques opérationnels liés aux aléas climatiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/world/live/2026/jun/27/europe-heatwave-germany-poland-france-uk-temperature-heat-latest-news-updates",
-      "date": "2026-06-27"
-    },
-    {
-      "id": "172903bdb165",
-      "source": "The Guardian Environment",
-      "categorie": "Environnement",
-      "titre": "Germany and Italy swelter in heatwave as records tumble across Europe",
-      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe, un risque climatique opérationnel pouvant impacter les activités de propreté/FM d'ABC (ex. : conditions de travail, maintenance des équipements, demande en services de refroidissement).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/world/2026/jun/27/germany-italy-heatwave-records-tumble-across-europe",
-      "date": "2026-06-27"
     }
   ],
   "restrictions_eau": [
@@ -1285,5 +1263,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Aucun des projets de loi ou textes adoptés listés ne traite directement de sujets environnementaux, climatiques, énergétiques ou de RSE pour les entreprises. Les textes adoptés concernent principalement des approbations d'accords internationaux, des questions fiscales, sociales ou institutionnelles, sans lien avec les enjeux de durabilité ou de reporting extra-financier."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N° 2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N° 2518)** pourraient impacter directement les enjeux climatiques et environnementaux d’une entreprise de services, notamment via des adaptations réglementaires en matière d’énergie, d’eau, d’assainissement ou de transposition de directives européennes."
 }
