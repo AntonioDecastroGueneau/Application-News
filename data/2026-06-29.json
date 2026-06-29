@@ -1,34 +1,111 @@
 {
   "date": "2026-06-29",
-  "generated_at": "10:22",
-  "elapsed_seconds": 212,
+  "generated_at": "15:00",
+  "elapsed_seconds": 229,
   "errors": [],
   "stats": {
     "jo_analyses": 23,
     "jo_retenus": 0,
-    "depts_restriction": 88
+    "depts_restriction": 89
   },
   "pipeline_meta": {
-    "run_at": "2026-06-29T10:22:01",
+    "run_at": "2026-06-29T15:00:30",
     "sources": {
       "JORF": 0,
-      "RSS": 13,
-      "VigiEau": 88,
+      "RSS": 26,
+      "VigiEau": 89,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 60,
-    "llm_seconds": 64.8
+    "llm_calls": 79,
+    "llm_seconds": 98.9
   },
   "items": [
+    {
+      "id": "56997a9ea18a",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "ISSB to Allow Use of TNFD Metrics to Meet Nature-Related Disclosure Requirements",
+      "resume": "ISSB to Allow Use of TNFD Metrics to Meet Nature-Related Disclosure Requirements",
+      "pourquoi": "Mention de ISSB.",
+      "criticite": 3,
+      "url": "https://www.esgtoday.com/issb-to-allow-use-of-tnfd-metrics-to-meet-nature-related-disclosure-requirements/?utm_source=rss&utm_medium=rss&utm_campaign=issb-to-allow-use-of-tnfd-metrics-to-meet-nature-related-disclosure-requirements",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "298aa9f39959",
+      "source": "EFRAG",
+      "categorie": "Climat",
+      "titre": "SAVE THE DATE | 22 July Webinars : ESRS for Third-Country Undertakings",
+      "resume": "SAVE THE DATE | 22 July Webinars : ESRS for Third-Country Undertakings",
+      "pourquoi": "Mention de ESRS.",
+      "criticite": 3,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/save-the-date-22-july-webinars-esrs-for-thirdcountry-undertakings",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "c80794290046",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG FR TEG - CFSS Physical Meeting - 30 June 2026",
+      "resume": "L'article annonce une réunion de l'EFRAG FR TEG (groupe technique sur le reporting financier) qui pourrait influencer les normes ESRS de la CSRD, impactant directement le reporting extra-financier d'ABC.",
+      "pourquoi": "EFRAG est l'organisme européen de référence pour les normes de reporting (ESRS) dans le cadre de la CSRD. Les décisions prises lors de cette réunion pourraient impacter les exigences de reporting ESG pour ABC, notamment sur les scopes 1, 2 et 3, la traçabilité des déchets ou la décarbonation de la flotte. Même si le contenu exact n'est pas détaillé, la thématique est directement liée aux enjeux de reporting et de conformité réglementaire d'ABC.",
+      "criticite": 2,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-fr-teg-cfss-physical-meeting-30-june-2026",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "70231e41c3c4",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG FR TEG hysical Meeting - 1 July 2026",
+      "resume": "L'article annonce une réunion de l'EFRAG FR TEG en juillet 2026, groupe influent dans l'élaboration des normes de reporting ESG (ESRS) sous la CSRD. Cela impacte directement le reporting extra-financier d'ABC, notamment pour la préparation des données CSRD/ESRS.",
+      "pourquoi": "L'EFRAG FR TEG joue un rôle clé dans la définition des normes ESRS (European Sustainability Reporting Standards) applicables à la CSRD. ABC, en tant qu'entreprise soumise à la CSRD (selon sa taille et son secteur), doit suivre ces évolutions pour adapter son reporting ESG et ses processus de collecte de données. La réunion pourrait influencer les exigences futures en matière de transparence carbone, déchets, ou énergie.",
+      "criticite": 2,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-fr-teg-hysical-meeting-1-july-2026",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "40e3d8bb8a54",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Rénovation énergétique : plusieurs travaux monogestes bientôt exclus de MaPrimeRénov'",
+      "resume": "L'exclusion de travaux monogestes de MaPrimeRénov' à partir de septembre 2026 pourrait impacter indirectement ABC via les exigences carbone de ses clients (notamment dans le secteur tertiaire) qui pourraient renforcer leurs critères de rénovation énergétique des bâtiments.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/maprimerenov-suppression-monogestes-renovation-2026-48227.php4#xtor=RSS-6",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "1b74c0200893",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Lire notre dossier d'actu \"Canicule : la France face au défi du confort d'été\"",
+      "resume": "L'article souligne l'intensification des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter les sites clients d'ABC (ex : besoins accrus en nettoyage des espaces exposés, adaptation des prestations).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/dossier-actu/dossier-canicule-chaleur-adaptation-climat-batiment-ville-128#xtor=RSS-6",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "7a1c7fa36c92",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "« L'ombre n'est plus un agrément, mais une condition d'habitabilité des villes »",
+      "resume": "L'article souligne l'importance croissante de l'ombre urbaine face aux canicules, un enjeu qui pourrait influencer les stratégies de mobilité et d'aménagement des sites clients d'ABC (ex : ZFE, végétalisation des espaces de travail).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/ombre-habitabilite-villes-adaptation-canicule-48225.php4#xtor=RSS-6",
+      "date": "2026-06-29"
+    },
     {
       "id": "bb051ff7db7d",
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Avec Dalkia, Equium met l'énergie du son au service de la production de chaud et de froid",
-      "resume": "Innovation technologique dans les énergies renouvelables (PAC thermoacoustique) pouvant inspirer des solutions pour la décarbonation des réseaux de chaleur ou des sites clients d'ABC, bien que sans lien direct avec ses activités principales.",
+      "resume": "Innovation technologique dans les PAC thermoacoustiques pour la production de chaud/froid, potentiellement applicable aux réseaux de chaleur tertiaires ou industriels, mais sans lien direct avec les enjeux immédiats d'ABC (flotte, déchets, BGES, CSRD).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/pac-thermoacoustique-equium-dalkia-reseau-chaleur-48216.php4#xtor=RSS-6",
@@ -39,10 +116,65 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Alcome et MerTerre au service d’une mission : la réduction des mégots mal jetés",
-      "resume": "L'article aborde la gestion des déchets (mégots) via une filière REP, un sujet indirectement lié aux obligations de traçabilité et de réduction des déchets pour les prestataires de propreté comme ABC, notamment dans le cadre de la CSRD et des attentes clients en matière de RSE.",
+      "resume": "L'article aborde la gestion des déchets (mégots) via une filière REP, un sujet indirectement lié aux enjeux déchets et reporting ESG de ABC, notamment pour ses clients industriels ou tertiaires.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/pdt/alcome-merterre-reduction-megots-jetes-sol-pollution-macrodechets-sensibiliser-calanques-1480.php4#xtor=RSS-6",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "26af36d19e8a",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Canicule : au moins 1 000 morts supplémentaires en France",
+      "resume": "L'article souligne l'impact sanitaire des canicules en France, avec un risque accru pour les populations vulnérables (personnes âgées), ce qui peut influencer les exigences des clients d'ABC (secteurs santé, industrie) en matière de résilience climatique et de gestion des risques opérationnels.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Canicule-au-moins-1-000-morts-supplementaires-en-France",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "abfd8ae7606b",
+      "source": "Novethic",
+      "categorie": "Eau",
+      "titre": "Bouteilles \"100% recyclées\" et \"neutres en carbone\" : Volvic condamné pour pratiques trompeuses",
+      "resume": "L'article illustre les risques juridiques et réputationnels liés aux allégations environnementales non vérifiées, ce qui est pertinent pour ABC dans le cadre de son reporting ESG (CSRD/ESRS) et de sa communication sur les déchets (REP).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/bouteilles-recyclees-neutres-carbone-volvic-condamne-pratiques-trompeuses",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "cc102e3a6e31",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Des coupes franches dans les aides aux rénovations « monogestes »",
+      "resume": "L'article annonce une réduction des aides publiques pour les rénovations énergétiques 'monogestes' (isolation, chauffage biomasse), ce qui pourrait impacter les incitations clients d'ABC à investir dans l'efficacité énergétique de leurs bâtiments tertiaires.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/des-coupes-franches-dans-les-aides-aux-renovations-monogestes-428016/",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "903eae568593",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Une consultation espérée à la rentrée sur les futures règles de raccordement électrique",
+      "resume": "L'article pourrait impacter la stratégie énergétique d'ABC via les règles de raccordement électrique, influençant potentiellement la consommation énergétique des sites clients et les coûts opérationnels.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/06/une-consultation-esperee-a-la-rentree-sur-les-futures-regles-de-raccordement-electrique-427845/",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "f4a640b47c7b",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "EN DIRECT, canicule : « Il faut réfléchir dès maintenant à la prochaine vague de chaleur. Il me semble que la priorité est de chercher des mesures d’adaptation collective » ; posez vos questions à notre journaliste Nabil Wakim, animateur du podcast « Chaleur humaine »",
+      "resume": "L'article souligne l'importance de l'adaptation collective face aux vagues de chaleur, un risque climatique opérationnel pouvant impacter les 3 000+ sites clients d'ABC (ex : conditions de travail, performance des prestations, exigences clients en santé/industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/live/2026/06/29/en-direct-canicule-cette-vague-de-chaleur-la-plus-severe-a-avoir-ete-mesuree-en-europe-aurait-ete-quasi-impossible-en-juin-sans-le-changement-climatique-selon-le-world-weather-attribution_6710159_3244.html",
       "date": "2026-06-29"
     },
     {
@@ -50,7 +182,7 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "Volvic condamnée pour les mentions « neutre en carbone » et « 100 % recyclée » sur ses bouteilles d’eau, qui relèvent du greenwashing",
-      "resume": "Cette décision renforce les exigences de transparence et de preuve dans les allégations environnementales (ex: 'neutre en carbone', '100% recyclée'), ce qui impacte la communication RSE d'ABC et ses engagements clients en matière de reporting ESG.",
+      "resume": "Cette décision renforce les exigences en matière de transparence et de preuve des allégations environnementales (ex: 'neutre en carbone', '100% recyclée'), ce qui impacte directement les engagements RSE et la communication d'ABC envers ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/06/29/greenwashing-volvic-condamnee-pour-les-mentions-neutre-en-carbone-et-100-recyclee-sur-ses-bouteilles-d-eau_6716834_3244.html",
@@ -61,10 +193,21 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "Panneaux solaires : la batterie devient-elle obligatoire pour rentabiliser l’investissement ?",
-      "resume": "L'article aborde l'optimisation des investissements en panneaux solaires via le stockage par batteries, ce qui pourrait intéresser ABC pour réduire ses coûts énergétiques et améliorer son bilan carbone (scope 2), notamment dans le cadre de sa stratégie de décarbonation et de reporting ESG.",
+      "resume": "L'article aborde l'optimisation de la rentabilité des installations solaires via le stockage par batteries, ce qui pourrait intéresser ABC pour ses propres sites ou ceux de ses clients (bureaux, entrepôts) dans une démarche de décarbonation et d'efficacité énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/argent/article/2026/06/29/panneaux-solaires-la-batterie-devient-elle-obligatoire-pour-rentabiliser-l-investissement_6716831_1657007.html",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "b556edfa299d",
+      "source": "The Guardian Environment",
+      "categorie": "Environnement",
+      "titre": "Dangerous temperatures forecast for central and eastern Europe",
+      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe centrale et orientale, ce qui pourrait impacter les opérations de nettoyage et de FM d'ABC sur ses 3 000+ sites clients, notamment en termes de sécurité des employés et de continuité de service.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/environment/2026/jun/29/dangerous-temperatures-forecast-central-eastern-europe-heatwave",
       "date": "2026-06-29"
     },
     {
@@ -72,7 +215,7 @@
       "source": "The Guardian Environment",
       "categorie": "Déchets",
       "titre": "Monday briefing: Will the heatwave spark action, or further inflame the culture wars?",
-      "resume": "L'article souligne l'impact des aléas climatiques (canicules précoces) sur la perception politique du changement climatique en Europe, un risque indirect pour ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et la pression réglementaire (SNBC, PNACC).",
+      "resume": "L'article souligne l'impact des aléas climatiques (vagues de chaleur précoces) sur les attentes politiques et sociales en matière de transition écologique, ce qui pourrait influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et renforcer les risques opérationnels liés aux sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.theguardian.com/world/2026/jun/29/first-edition-monday-briefing-heatwave-europe-uk-political-action-far-right-culture-wars",
@@ -83,7 +226,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Énergie",
       "titre": "Bouteilles « neutres en carbone » ou « 100 % recyclables » : Volvic condamnée pour « pratiques commerciales trompeuses » - Les Echos",
-      "resume": "L'article illustre les risques juridiques et réputationnels liés aux allégations environnementales non vérifiées, un enjeu critique pour ABC dans le cadre de son reporting ESG (CSRD/ESRS) et de sa communication RSE.",
+      "resume": "L'article illustre les risques de greenwashing liés aux allégations carbone et recyclabilité, ce qui peut impacter la crédibilité des engagements RSE d'ABC et ses relations avec des clients sensibles à la transparence environnementale.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPMnU0SE1QRDFhUm9mQXVWM3ZwSE5PU1c3S0ZQOWFVWXo0cEdHX3lSWW0wcFhVXy0zVHJJdjc4TmVVbDJ5X0ZzMEw1RUVkLXNtWWxieDQ0TnRhUTVDV0xaM1Q1LW4zb2s0VS1GTUFFcnNzSmNpaUJwdFhRVkhkSkdRY1VJNWFyN2EzQnlUeGRIRVlPa0J2Z0gzdFlZamF4VjloVzVPSG1Gai1qQWZDbFJoMlo0eTZmSlB2QXRfUDBqczd6dmJyb1hxRno0Qml4MG0xalZzSFdBZ0I2N0w1YTJIUzRPeTQ2MzVHZVRHNzNOUkVqaTJ3UXc5UDRrcmd5NjhlRC0xag?oc=5",
@@ -94,7 +237,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Chaleur au travail : les syndicats européens proposent une directive prête à l’emploi",
-      "resume": "La proposition de directive européenne sur le stress thermique au travail pourrait imposer de nouvelles obligations aux employeurs en matière de prévention des risques climatiques, impactant potentiellement les conditions de travail des équipes de nettoyage chez les clients d'ABC.",
+      "resume": "La proposition de directive européenne sur le stress thermique au travail pourrait imposer de nouvelles obligations aux employeurs, y compris ABC, en matière de protection des salariés exposés à la chaleur lors des prestations de propreté/FM sur les sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-les-syndicats-europeens-proposent-une-directive-prete-lemploi",
@@ -105,7 +248,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Canicule : l'approvisionnement en électricité reste garanti",
-      "resume": "L'article confirme la stabilité de l'approvisionnement électrique en France malgré les contraintes climatiques, ce qui limite les risques opérationnels pour ABC liés aux coupures ou à la hausse des coûts énergétiques.",
+      "resume": "L'article confirme la résilience du réseau électrique français face aux canicules, réduisant les risques opérationnels pour ABC liés aux coupures ou restrictions énergétiques chez ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/canicule-lapprovisionnement-en-electricite-reste-garanti-2",
@@ -127,7 +270,7 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Incendie de parkings : les véhicules électriques sous les feux de la rampe",
-      "resume": "L'article aborde les risques spécifiques liés aux incendies de véhicules électriques dans les parkings, un enjeu potentiellement impactant pour la flotte de véhicules d'ABC et ses obligations en matière de sécurité et de gestion des risques opérationnels.",
+      "resume": "L'article aborde les risques spécifiques liés aux incendies de véhicules électriques en parkings, un enjeu potentiellement impactant pour la flotte de véhicules d'ABC et ses obligations en matière de sécurité et de gestion des risques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/incendie-de-parkings-les-vehicules-electriques-sous-les-feux-de-la-rampe-0",
@@ -138,7 +281,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Fortes chaleurs : le gouvernement appelle à la plus grande vigilance les entreprises des départements passés en vigilance rouge",
-      "resume": "L'article souligne les risques climatiques opérationnels liés aux fortes chaleurs en France, incitant les entreprises à renforcer leur vigilance pour protéger leurs salariés et leurs activités sur 3 000+ sites clients.",
+      "resume": "L'article souligne les risques climatiques opérationnels liés aux fortes chaleurs en France, imposant une vigilance accrue pour les entreprises intervenant sur des sites clients (3 000+ sites). Cela impacte directement les activités de propreté/FM d'ABC, notamment en termes de sécurité des travailleurs et d'adaptation des prestations.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-le-gouvernement-appelle-la-plus-grande-vigilance-les-entreprises-des-1",
@@ -149,7 +292,7 @@
       "source": "ESG Today",
       "categorie": "Énergie",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article couvre des évolutions ESG transversales (reporting, réglementations, financements) qui impactent indirectement les attentes des clients d'ABC en matière de durabilité et de reporting extra-financier, notamment via la CSRD et les normes ESRS.",
+      "resume": "L'article couvre des évolutions ESG (reporting, réglementations, engagements sectoriels) qui peuvent influencer les attentes clients d'ABC en matière de durabilité, notamment via la CSRD/ESRS ou les fonds dédiés aux solutions bas-carbone.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-267/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-267",
@@ -160,7 +303,7 @@
       "source": "The Guardian Environment",
       "categorie": "Déchets",
       "titre": "Germany, Czechia, Poland and Hungary swelter through hottest days on record",
-      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe, avec des températures records (>40°C) dans plusieurs pays, ce qui pourrait impacter la santé des employés en extérieur et la demande en services de nettoyage (ex. désinfection, gestion des déchets liés aux canicules).",
+      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe, avec des températures records (>40°C) dans plusieurs pays, ce qui pourrait impacter les activités de propreté/FM d'ABC (ex. : adaptation des prestations, risques opérationnels sur les sites clients).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.theguardian.com/environment/2026/jun/28/temperature-records-tumble-across-europe-as-heatwave-moves-east",
@@ -429,6 +572,11 @@
       "niveau": "alerte"
     },
     {
+      "dept_code": "55",
+      "dept_nom": "Meuse",
+      "niveau": "alerte"
+    },
+    {
       "dept_code": "54",
       "dept_nom": "Meurthe-et-Moselle",
       "niveau": "alerte"
@@ -529,11 +677,6 @@
       "niveau": "vigilance"
     },
     {
-      "dept_code": "55",
-      "dept_nom": "Meuse",
-      "niveau": "vigilance"
-    },
-    {
       "dept_code": "57",
       "dept_nom": "Moselle",
       "niveau": "vigilance"
@@ -551,6 +694,11 @@
     {
       "dept_code": "94",
       "dept_nom": "Val-de-Marne",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "93",
+      "dept_nom": "Seine-Saint-Denis",
       "niveau": "vigilance"
     },
     {
@@ -1002,7 +1150,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "L'arrêté n°1 relatif aux PFAS (substances perfluoroalkylées et polyfluoroalkylées) est le seul texte directement pertinent pour un Responsable Environnement/Climat, car il définit les modalités de redevance pour la pollution de l'eau par ces polluants éternels, une priorité réglementaire et environnementale majeure pour les entreprises.",
+  "briefing_jorf": "L'arrêté du 25 juin 2026 relatif aux modalités de la redevance pour pollution de l'eau par les PFAS (substances perfluoroalkylées) est le seul texte directement pertinent pour un Responsable Environnement/Climat, imposant des obligations de suivi et de contribution financière pour les entreprises concernées par ces polluants persistants.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1350,5 +1498,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient présenter un intérêt pour un Responsable Environnement/Climat, notamment en lien avec les enjeux agricoles, énergétiques et de transposition des réglementations européennes. Aucun texte adopté ne semble directement lié à la RSE ou au reporting extra-financier."
+  "pjl_briefing": "Aucun texte parlementaire de cette liste ne traite directement de sujets environnementaux, climatiques, énergétiques ou de RSE pour les entreprises. Les projets de loi concernent principalement des domaines juridiques, fiscaux, sociaux, agricoles ou institutionnels, sans lien avec les enjeux de durabilité ou de reporting extra-financier."
 }
