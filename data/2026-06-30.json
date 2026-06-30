@@ -1,7 +1,7 @@
 {
   "date": "2026-06-30",
-  "generated_at": "08:57",
-  "elapsed_seconds": 215,
+  "generated_at": "13:24",
+  "elapsed_seconds": 248,
   "errors": [],
   "stats": {
     "jo_analyses": 20,
@@ -9,20 +9,31 @@
     "depts_restriction": 90
   },
   "pipeline_meta": {
-    "run_at": "2026-06-30T08:57:05",
+    "run_at": "2026-06-30T13:24:52",
     "sources": {
       "JORF": 0,
-      "RSS": 21,
+      "RSS": 24,
       "VigiEau": 90,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 72,
-    "llm_seconds": 82.2
+    "llm_calls": 73,
+    "llm_seconds": 91.7
   },
   "items": [
+    {
+      "id": "a5eb69c5ecf7",
+      "source": "EFRAG",
+      "categorie": "Climat",
+      "titre": "Deadline Extended to 8 July : ESRS for Third-Country Undertakings - Field Test Call for Expression of Interest",
+      "resume": "Deadline Extended to 8 July : ESRS for Third-Country Undertakings - Field Test Call for Expression of Interest",
+      "pourquoi": "Mention de ESRS.",
+      "criticite": 3,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/deadline-extended-to-8-july-esrs-for-thirdcountry-undertakings-field-test-call-for-expression-of",
+      "date": "2026-06-30"
+    },
     {
       "id": "9d3568b38eeb",
       "source": "Actuel HSE",
@@ -39,21 +50,43 @@
       "source": "EFRAG",
       "categorie": "Énergie",
       "titre": "EFRAG releases conference report celebrating its 25th anniversary",
-      "resume": "L'article relate les évolutions futures du reporting corporate en Europe via EFRAG, organisation clé pour les normes CSRD/ESRS, ce qui impacte directement les obligations de reporting ESG d'ABC pour ses clients.",
-      "pourquoi": "EFRAG est l'organisme européen de référence pour les normes de reporting extra-financier (ESRS sous CSRD), dont ABC dépend pour ses obligations de reporting ESG (scope 3 inclus). L'article souligne l'évolution des standards, pertinente pour la conformité future d'ABC.",
+      "resume": "L'article relate les évolutions futures du reporting ESG en Europe via EFRAG, acteur clé des normes CSRD/ESRS, ce qui impacte directement le reporting extra-financier d'ABC.",
+      "pourquoi": "EFRAG est l'organisme européen de référence pour les normes de reporting ESG (CSRD/ESRS), directement applicables à ABC dans le cadre de ses obligations de reporting extra-financier (scope 3 inclus). L'article souligne l'évolution des standards, pertinente pour la stratégie de conformité et d'amélioration continue d'ABC.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-releases-conference-report-celebrating-its-25th-anniversary",
       "date": "2026-06-30"
     },
     {
-      "id": "a2905bff7549",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Que propose la gauche face à la canicule ? Tour d'horizon en cinq propositions",
-      "resume": "L'article aborde les propositions de la gauche pour faire face aux vagues de chaleur en France, un enjeu climatique croissant qui pourrait impacter les sites clients d'ABC (ex. : besoins accrus en climatisation ou adaptation des locaux).",
+      "id": "b9c57011c406",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Autoconsommation collective : les règles de répartition modifiées par décret",
+      "resume": "Le décret modifie les règles d'autoconsommation collective en France, imposant une maximisation de l'autoconsommation et supprimant les adaptations des clés de répartition. Cela pourrait impacter les stratégies énergétiques des sites clients d'ABC, notamment en tertiaire.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://reporterre.net/Que-propose-la-gauche-face-a-la-canicule-Tour-d-horizon-en-cinq-propositions",
+      "url": "https://www.actu-environnement.com/ae/news/decret-autoconsommation-collective-repartition-energie-48232.php4#xtor=RSS-6",
+      "date": "2026-06-30"
+    },
+    {
+      "id": "afd0e29248cd",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Puits de carbone forestier : Canopée alerte sur une dégradation accélérée par la demande en bois-énergie",
+      "resume": "L'article souligne la dégradation des puits de carbone forestiers due à la demande en bois-énergie, ce qui pourrait impacter indirectement les stratégies de décarbonation et de reporting ESG d'ABC, notamment via la gestion des déchets et la chaîne de valeur des prestations.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/foret-puits-carbone-menace-48231.php4#xtor=RSS-6",
+      "date": "2026-06-30"
+    },
+    {
+      "id": "6ad66e6ca8d0",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "Les entreprises cotées internationales en route vers un réchauffement climatique de 3,2°C",
+      "resume": "L'article souligne l'écart entre les objectifs climatiques des entreprises et la trajectoire nécessaire pour limiter le réchauffement à 1,5°C, ce qui peut influencer les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et renforcer la pression sur les prestataires de services comme ABC pour aligner leurs propres engagements.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/environnement/climat/entreprises-cotees-rechauffement-climatique-32-degres-cdp-wwf",
       "date": "2026-06-30"
     },
     {
@@ -61,7 +94,7 @@
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Canicule : après la sidération, la mobilisation s'organise pour préparer l'avenir",
-      "resume": "L'article souligne l'importance de la préparation aux aléas climatiques (canicules) pour les entreprises, un enjeu indirect mais stratégique pour ABC compte tenu de ses 3 000+ sites clients exposés aux risques climatiques.",
+      "resume": "Cet article souligne l'importance de la préparation aux aléas climatiques (canicules) pour les entreprises, notamment en termes de résilience opérationnelle et de gestion des risques indirects pour les 3 000+ sites clients d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/climat/canicule-mobilisation-avenir-adaptation-climatique-citoyens",
@@ -72,10 +105,21 @@
       "source": "The Shift Project",
       "categorie": "Climat",
       "titre": "Automobile et Mobilités routières : s’engager pleinement dans la décarbonation",
-      "resume": "Le rapport du Shift sur la décarbonation de l'automobile et des mobilités routières est pertinent pour ABC car il aborde la transition vers des véhicules propres, un enjeu direct pour sa flotte de véhicules (scope 1) et les exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "resume": "Le rapport du Shift sur la décarbonation de l'automobile et des mobilités routières est pertinent pour ABC car il aborde la transition vers des flottes de véhicules propres, un enjeu direct pour la flotte de véhicules de l'entreprise (scope 1) et ses obligations réglementaires (ZFE, électrification).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://theshiftproject.org/publications/automobile-et-mobilites-routieres-rapport-intermediaire/",
+      "date": "2026-06-30"
+    },
+    {
+      "id": "7640c008a5a0",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Canicule : près de 16 000 foyers privés d’électricité à Paris, dans le Nord et l’Aisne, selon Enedis",
+      "resume": "L'article illustre les risques climatiques opérationnels (canicules) pouvant impacter les infrastructures électriques des sites clients d'ABC, notamment dans les secteurs sensibles (santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/06/30/canicule-pres-de-16-000-foyers-prives-d-electricite-a-paris-dans-le-nord-et-l-aisne-selon-enedis_6717257_3244.html",
       "date": "2026-06-30"
     },
     {
@@ -83,21 +127,32 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Mais qui aurait pu prédire… une telle impréparation ?",
-      "resume": "L'article souligne l'impréparation de la France face aux canicules, un risque climatique opérationnel pouvant impacter les 3 000+ sites clients d'ABC, notamment en termes de continuité de service et de contraintes réglementaires accrues.",
+      "resume": "L'article souligne l'impréparation de la France face aux canicules récurrentes, un risque climatique opérationnel pouvant impacter les 3 000+ sites clients d'ABC, notamment en termes de continuité de service et de sécurité des équipes.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/sciences-au-carre/article/2026/06/30/mais-qui-aurait-pu-predire-une-telle-impreparation_6717221_6565027.html",
       "date": "2026-06-30"
     },
     {
-      "id": "668a044100e6",
+      "id": "84827d67bb2a",
       "source": "The Guardian Environment",
-      "categorie": "Déchets",
-      "titre": "Reader Q&A: ask Ajit Niranjan anything about Europe’s hellish week of heat",
-      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe, un risque climatique opérationnel pouvant impacter les 3 000+ sites clients d'ABC, notamment en termes de santé des employés, de conditions de travail et de continuité des services.",
+      "categorie": "Énergie",
+      "titre": "Reader Q&A live: we answer your questions about Europe’s hellish week of heat",
+      "resume": "L'article met en lumière les risques climatiques opérationnels (vagues de chaleur) qui pourraient impacter la prestation de services de propreté/FM sur 3 000+ sites clients en France/UE, avec des enjeux de continuité d'activité et d'adaptation des processus.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.theguardian.com/community/live/2026/jun/30/reader-qa-ask-ajit-niranjan-anything-about-europes-hellish-week-of-heat",
+      "date": "2026-06-30"
+    },
+    {
+      "id": "8df4abefb91e",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG publishes Assessment Report on voluntary information template for SMEs and Startups on the European Single Access Point",
+      "resume": "L'EFRAG publie un rapport d'évaluation sur un modèle d'information volontaire pour les PME et startups via l'ESAP, concluant à un intérêt insuffisant des parties prenantes. Cela pourrait impacter indirectement les exigences de reporting des clients d'ABC dans le cadre de la CSRD.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-publishes-assessment-report-on-voluntary-information-template-for-smes-and-startups-on-the",
       "date": "2026-06-30"
     },
     {
@@ -105,7 +160,7 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Incendie de parkings : les véhicules électriques sous les feux de la rampe",
-      "resume": "L'article aborde les risques spécifiques d'incendie liés aux véhicules électriques dans les parkings, un enjeu potentiellement impactant pour la flotte de véhicules d'ABC et ses obligations en matière de sécurité et de gestion des risques.",
+      "resume": "L'article aborde les risques spécifiques d'incendie liés aux véhicules électriques dans les parkings, un sujet pouvant impacter la gestion des flottes de véhicules d'ABC et les exigences de sécurité de ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/incendie-de-parkings-les-vehicules-electriques-sous-les-feux-de-la-rampe-0",
@@ -127,10 +182,21 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG FR TEG - CFSS Physical Meeting - 30 June 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG FR TEG (groupe technique sur le reporting financier) incluant des discussions sur les normes ESRS de la CSRD, pertinentes pour le reporting extra-financier d'ABC.",
-      "pourquoi": "L'EFRAG FR TEG traite des normes ESRS (European Sustainability Reporting Standards) liées à la CSRD, qui impactent directement le reporting ESG d'ABC. Bien que l'article ne détaille pas les sujets abordés, la CSRD est une obligation réglementaire majeure pour les entreprises de services en Europe, y compris les prestataires de propreté/FM.",
+      "resume": "L'article annonce une réunion physique de l'EFRAG FR TEG le 30 juin 2026, susceptible d'aborder des évolutions des normes de reporting ESG (CSRD/ESRS) qui impactent directement le reporting extra-financier d'ABC.",
+      "pourquoi": "EFRAG (European Financial Reporting Advisory Group) est l'organisme en charge de l'élaboration des normes ESRS sous la CSRD. Les décisions prises lors de cette réunion pourraient influencer les exigences de reporting ESG pour ABC, notamment sur la traçabilité des données carbone (scope 1/2/3), déchets, énergie et mobilité durable. Même si le contenu exact n'est pas détaillé, le sujet est directement lié au reporting CSRD/ESRS et aux obligations de transparence extra-financière d'ABC.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-fr-teg-cfss-physical-meeting-30-june-2026",
+      "date": "2026-06-29"
+    },
+    {
+      "id": "7b3884945c81",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG FR TEG Physical Meeting - 1 July 2026",
+      "resume": "L'article annonce une réunion de l'EFRAG FR TEG en juillet 2026, groupe technique clé pour les normes de reporting extra-financier (ESRS) sous la CSRD. Cela impacte directement ABC pour son reporting CSRD/ESRS à venir.",
+      "pourquoi": "L'EFRAG FR TEG est l'organisme européen en charge de l'élaboration des normes ESRS (European Sustainability Reporting Standards) applicables dans le cadre de la CSRD. Ces normes définissent les exigences de reporting ESG pour les entreprises concernées, dont ABC pourrait être impactée en tant que prestataire de services avec des clients soumis à la CSRD. La réunion de juillet 2026 pourrait préciser des évolutions majeures dans les obligations de reporting, notamment sur les scopes 1/2/3, la traçabilité des déchets ou la décarbonation de la flotte.",
+      "criticite": 2,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-fr-teg-physical-meeting-1-july-2026-0",
       "date": "2026-06-29"
     },
     {
@@ -138,7 +204,7 @@
       "source": "Actu-Environnement",
       "categorie": "Environnement",
       "titre": "Rénovation énergétique : un arrêté facilite l'accès au label RGE",
-      "resume": "L'arrêté facilite l'accès au label RGE pour les artisans du bâtiment, ce qui pourrait impacter indirectement ABC via ses clients tertiaires engagés dans des rénovations énergétiques (DPE tertiaire, efficacité énergétique).",
+      "resume": "L'arrêté facilite l'accès au label RGE pour les artisans du bâtiment, ce qui pourrait impacter indirectement ABC via ses clients tertiaires engagés dans des rénovations énergétiques (DPE tertiaire, décarbonation).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/arrete-rge-vae-artisans-batiment-48229.php4#xtor=RSS-6",
@@ -149,7 +215,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Rénovation énergétique : plusieurs travaux monogestes bientôt exclus de MaPrimeRénov'",
-      "resume": "L'exclusion de certains travaux monogestes de MaPrimeRénov' à partir de septembre 2026 pourrait impacter indirectement les clients d'ABC (secteurs tertiaire, santé, industrie) dans leurs stratégies de rénovation énergétique, influençant leurs exigences contractuelles en matière de performance énergétique.",
+      "resume": "L'exclusion de certains travaux monogestes de MaPrimeRénov' à partir de septembre 2026 pourrait impacter les clients tertiaires d'ABC (ex : bâtiments de bureaux, santé) en réduisant les incitations à la rénovation énergétique, influençant indirectement leurs exigences en matière de services de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/maprimerenov-suppression-monogestes-renovation-2026-48227.php4#xtor=RSS-6",
@@ -160,21 +226,10 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Lire notre dossier d'actu \"Canicule : la France face au défi du confort d'été\"",
-      "resume": "L'article souligne l'augmentation des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter les activités de propreté/FM d'ABC sur ses 3 000+ sites clients (ex : adaptation des prestations, contraintes énergétiques, santé des employés).",
+      "resume": "L'article souligne l'augmentation des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter les sites clients d'ABC (ex : confort thermique, santé des occupants) et nécessitant une adaptation des prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/dossier-actu/dossier-canicule-chaleur-adaptation-climat-batiment-ville-128#xtor=RSS-6",
-      "date": "2026-06-29"
-    },
-    {
-      "id": "7a1c7fa36c92",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "« L'ombre n'est plus un agrément, mais une condition d'habitabilité des villes »",
-      "resume": "L'article souligne l'importance croissante de l'ombre urbaine face aux canicules, un enjeu qui pourrait influencer les stratégies de mobilité et d'adaptation climatique des clients d'ABC (ex : collectivités, tertiaire).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/ombre-habitabilite-villes-adaptation-canicule-48225.php4#xtor=RSS-6",
       "date": "2026-06-29"
     },
     {
@@ -182,7 +237,7 @@
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "MaPrimRénov' : encore moins de travaux éligibles",
-      "resume": "Réduction possible des travaux éligibles à MaPrimRénov', impactant les incitations à la rénovation énergétique des bâtiments tertiaires (clients d'ABC) et potentiellement les demandes de services de propreté/FM associés.",
+      "resume": "Réduction des travaux éligibles à MaPrimRénov' (notamment les monogestes), ce qui pourrait impacter les clients tertiaires d'ABC (ex : bâtiments) dans leurs projets de rénovation énergétique et leurs exigences en matière de prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/MaPrimRenov-encore-moins-de-travaux-eligibles",
@@ -193,7 +248,7 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Canicule : au moins 1 000 morts supplémentaires en France",
-      "resume": "L'article souligne l'impact des aléas climatiques (canicules) sur la santé publique en France, un risque indirect pour ABC via ses 3 000+ sites clients, notamment dans les régions en vigilance rouge. Cela peut influencer les exigences clients en matière de résilience climatique et de continuité de service.",
+      "resume": "L'article souligne l'impact des aléas climatiques (canicules) sur la santé publique en France, avec un risque accru pour les populations vulnérables, ce qui peut influencer les exigences des clients d'ABC en matière de résilience climatique des prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Canicule-au-moins-1-000-morts-supplementaires-en-France",
@@ -204,7 +259,7 @@
       "source": "Novethic",
       "categorie": "Eau",
       "titre": "Bouteilles \"100% recyclées\" et \"neutres en carbone\" : Volvic condamné pour pratiques trompeuses",
-      "resume": "L'article illustre les risques juridiques et réputationnels liés aux allégations environnementales trompeuses, ce qui rappelle à ABC l'importance de la rigueur dans ses communications sur ses engagements carbone (scope 1/2/3) et recyclage des déchets de prestation.",
+      "resume": "L'article illustre les risques de greenwashing liés aux allégations environnementales (recyclage, neutralité carbone) et souligne l'importance de la conformité réglementaire et de la transparence dans le reporting ESG pour ABC, notamment dans le cadre de la CSRD et des attentes clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/bouteilles-recyclees-neutres-carbone-volvic-condamne-pratiques-trompeuses",
@@ -215,7 +270,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "« Les difficultés de MaPrimeRénov offrent une opportunité aux CEE » [Frédéric Utzmann, Effy]",
-      "resume": "L'article met en lumière l'opportunité pour les Certificats d'Économies d'Énergie (CEE) dans un contexte de réduction des aides publiques à la rénovation énergétique, ce qui pourrait influencer les stratégies d'efficacité énergétique des clients d'ABC (secteurs tertiaire, industrie, santé).",
+      "resume": "L'article met en lumière une opportunité pour les Certificats d'Économies d'Énergie (CEE) suite aux réductions des aides publiques (MaPrimeRénov), ce qui pourrait influencer les stratégies énergétiques des clients d'ABC dans le tertiaire.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/les-difficultes-de-maprimerenov-offrent-une-opportunite-aux-cee-frederic-utzmann-effy-428043/",
@@ -226,32 +281,10 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Des coupes franches dans les aides aux rénovations « monogestes »",
-      "resume": "L'article annonce une réduction des aides publiques pour les rénovations 'monogestes' (isolation, chauffage biomasse), ce qui pourrait impacter la demande des clients d'ABC en efficacité énergétique des bâtiments tertiaires, sans obligation directe mais avec un risque de ralentissement du marché.",
+      "resume": "La réduction des aides aux rénovations 'monogestes' (isolation, biomasse) pourrait impacter les clients tertiaires d'ABC (ex : DPE tertiaire) en limitant les incitations financières pour des travaux d'efficacité énergétique, influençant indirectement leurs plans d'action climat.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/des-coupes-franches-dans-les-aides-aux-renovations-monogestes-428016/",
-      "date": "2026-06-29"
-    },
-    {
-      "id": "903eae568593",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Une consultation espérée à la rentrée sur les futures règles de raccordement électrique",
-      "resume": "L'article annonce une consultation sur les futures règles de raccordement électrique, ce qui pourrait impacter les coûts énergétiques et la planification des sites clients d'ABC, notamment en termes d'efficacité énergétique et de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/06/une-consultation-esperee-a-la-rentree-sur-les-futures-regles-de-raccordement-electrique-427845/",
-      "date": "2026-06-29"
-    },
-    {
-      "id": "70231e41c3c4",
-      "source": "EFRAG",
-      "categorie": "Déchets",
-      "titre": "EFRAG FR TEG hysical Meeting - 1 July 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG FR TEG en juillet 2026, groupe technique influent sur les normes de reporting ESG (CSRD/ESRS). Cela impacte indirectement ABC via les exigences de reporting extra-financier de ses clients et la préparation de ses propres données pour la CSRD.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-fr-teg-hysical-meeting-1-july-2026",
       "date": "2026-06-29"
     }
   ],
@@ -269,6 +302,11 @@
     {
       "dept_code": "17",
       "dept_nom": "Charente-Maritime",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "86",
+      "dept_nom": "Vienne",
       "niveau": "crise"
     },
     {
@@ -412,11 +450,6 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "86",
-      "dept_nom": "Vienne",
-      "niveau": "alerte renforcée"
-    },
-    {
       "dept_code": "40",
       "dept_nom": "Landes",
       "niveau": "alerte renforcée"
@@ -542,6 +575,11 @@
       "niveau": "alerte"
     },
     {
+      "dept_code": "26",
+      "dept_nom": "Drôme",
+      "niveau": "alerte"
+    },
+    {
       "dept_code": "34",
       "dept_nom": "Hérault",
       "niveau": "alerte"
@@ -549,6 +587,11 @@
     {
       "dept_code": "48",
       "dept_nom": "Lozère",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
       "niveau": "alerte"
     },
     {
@@ -672,11 +715,6 @@
       "niveau": "vigilance"
     },
     {
-      "dept_code": "26",
-      "dept_nom": "Drôme",
-      "niveau": "vigilance"
-    },
-    {
       "dept_code": "30",
       "dept_nom": "Gard",
       "niveau": "vigilance"
@@ -684,11 +722,6 @@
     {
       "dept_code": "84",
       "dept_nom": "Vaucluse",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
       "niveau": "vigilance"
     },
     {
@@ -1220,7 +1253,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement la transition énergétique avec la relance des investissements dans l'hydroélectricité (LOI n°2026-554), la gestion des certificats d'économies d'énergie (Décret n°2026-560), les règles d'autoconsommation collective (Décret n°2026-561), et le maintien des audits énergétiques en entreprise (Décret n°2026-564).",
+  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat incluent la LOI n° 2026-554 sur la relance des investissements dans l'hydroélectricité pour la transition énergétique, les décrets n° 2026-560 et n° 2026-561 sur la gestion des certificats d'économies d'énergie et l'autoconsommation collective, ainsi que le décret n° 2026-564 maintenant la reconnaissance des prestataires qualifiés pour l'audit énergétique en entreprise.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1568,5 +1601,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Aucun des projets de loi ou textes adoptés ne traite directement de sujets environnementaux, climatiques, énergétiques ou de RSE pour les entreprises. Le projet de loi le plus proche est le 'Projet de loi d’urgence pour la protection et la souveraineté agricoles' (N°2632), qui pourrait indirectement impacter les pratiques agricoles et donc les chaînes d’approvisionnement des entreprises."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632) et le Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518) pourraient présenter un intérêt indirect pour un Responsable Environnement/Climat, notamment via des mesures liées à la transition agricole ou à la transposition de réglementations européennes environnementales. Aucun texte ne traite directement de reporting RSE ou de politiques climatiques ambitieuses."
 }
