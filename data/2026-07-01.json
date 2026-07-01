@@ -1,34 +1,45 @@
 {
   "date": "2026-07-01",
-  "generated_at": "09:29",
-  "elapsed_seconds": 200,
+  "generated_at": "13:47",
+  "elapsed_seconds": 219,
   "errors": [],
   "stats": {
     "jo_analyses": 1,
     "jo_retenus": 0,
-    "depts_restriction": 91
+    "depts_restriction": 92
   },
   "pipeline_meta": {
-    "run_at": "2026-07-01T09:29:20",
+    "run_at": "2026-07-01T13:47:33",
     "sources": {
       "JORF": 0,
       "RSS": 16,
-      "VigiEau": 91,
+      "VigiEau": 92,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 55,
-    "llm_seconds": 64.6
+    "llm_calls": 57,
+    "llm_seconds": 73.1
   },
   "items": [
     {
-      "id": "8d1452ccd1f0",
+      "id": "1236deea5cf8",
+      "source": "EFRAG",
+      "categorie": "Climat",
+      "titre": "EFRAG State of Play 2026 Report Now Available",
+      "resume": "Le rapport EFRAG 2026 évalue la mise en œuvre des ESRS dans les déclarations de durabilité 2025, ce qui impacte directement le reporting CSRD d'ABC et ses obligations en matière de transparence ESG pour ses clients.",
+      "pourquoi": "Le rapport EFRAG 2026 analyse les pratiques de reporting sous les ESRS (European Sustainability Reporting Standards), qui sont au cœur de la directive CSRD applicable à ABC en tant qu'entreprise soumise à ces obligations. Cela influence directement la qualité et la conformité du reporting extra-financier d'ABC, ainsi que ses processus internes pour collecter et vérifier les données ESG (scope 1/2/3, déchets, énergie, etc.).",
+      "criticite": 2,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-state-of-play-2026-report-now-available",
+      "date": "2026-07-01"
+    },
+    {
+      "id": "97f0832b11e4",
       "source": "Reporterre",
       "categorie": "Climat",
-      "titre": "Comment la canicule met les centrales nucléaires à l'épreuve",
-      "resume": "L'article souligne la vulnérabilité des infrastructures critiques (nucléaire) aux aléas climatiques, un risque indirect pour ABC via ses 3 000+ sites clients. Cela peut impacter la continuité des prestations et les exigences carbone des clients (nucléaire, santé, industrie).",
+      "titre": "Sécheresse et températures trop élevées : le nucléaire souffre aussi des canicules",
+      "resume": "L'article illustre les risques climatiques opérationnels sur les infrastructures énergétiques (nucléaire), pouvant impacter la disponibilité des clients d'ABC (secteurs nucléaire, santé, industrie) et leurs exigences en matière de continuité de service et de résilience.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Comment-la-canicule-met-les-centrales-nucleaires-a-l-epreuve",
@@ -39,10 +50,21 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "21 °C à la surface des océans : un record absolu pour la saison",
-      "resume": "L'article souligne l'accélération du réchauffement climatique avec des records de température océanique, ce qui augmente les risques climatiques pour les 3 000+ sites clients d'ABC (aléas météo, perturbations logistiques).",
+      "resume": "L'article souligne l'accélération du réchauffement des océans, un phénomène qui pourrait impacter indirectement ABC via des risques climatiques accrus sur ses 3 000+ sites clients (ex : perturbations logistiques, coûts énergétiques, exigences clients en décarbonation).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/21-oC-a-la-surface-des-oceans-un-record-absolu-pour-la-saison",
+      "date": "2026-07-01"
+    },
+    {
+      "id": "0f700a1d31e5",
+      "source": "Novethic",
+      "categorie": "Énergie",
+      "titre": "Les investisseurs se branchent sur la mégatendance de l’électrification de l’économie",
+      "resume": "L'électrification croissante de l'économie renforce la pression sur les entreprises de services comme ABC pour décarboner leur flotte de véhicules (scope 1) et s'aligner sur les attentes clients en matière de transition énergétique.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/finance-durable/tendances-de-marche/investisseurs-veulent-surfer-megatendance-electrification-economie",
       "date": "2026-07-01"
     },
     {
@@ -50,7 +72,7 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Géothermie : Arverne hyperactif dans un secteur amorphe",
-      "resume": "La géothermie pourrait devenir un levier énergétique pertinent pour les sites tertiaires de ABC, notamment dans le cadre de la décarbonation de sa consommation énergétique et de la conformité aux trajectoires nationales (SNBC, loi énergie-climat).",
+      "resume": "La géothermie pourrait devenir un levier de décarbonation pour les sites tertiaires et industriels, mais son développement reste marginal. ABC pourrait anticiper des demandes clients pour des solutions énergétiques bas-carbone dans le cadre de leurs plans climat ou CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/geothermie-arverne-hyperactif-dans-un-secteur-amorphe-428052/",
@@ -61,10 +83,21 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Le gouvernement français à la recherche de 100 territoires à électrifier en priorité",
-      "resume": "L'initiative pourrait influencer les politiques locales de mobilité durable, impactant potentiellement les exigences carbone des clients d'ABC (ex : collectivités ou entreprises partenaires) en matière de décarbonation des flottes ou des sites.",
+      "resume": "L'initiative pourrait influencer les politiques locales de mobilité durable et d'électrification des flottes, impactant potentiellement les exigences carbone des clients d'ABC dans les territoires concernés.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/07/01/le-gouvernement-a-la-recherche-de-100-territoires-a-electrifier-en-priorite_6717493_3234.html",
+      "date": "2026-07-01"
+    },
+    {
+      "id": "f44198368682",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "Google Cuts Operational Emissions, But Says Moonshot Climate Goals “Getting Harder”",
+      "resume": "L'article illustre les défis de décarbonation malgré des progrès sur les scopes 1 et 2, un enjeu pertinent pour ABC dans sa gestion de sa flotte véhicules (scope 1) et son reporting ESG (CSRD).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/google-cuts-operational-emissions-but-says-moonshot-climate-goals-getting-harder/?utm_source=rss&utm_medium=rss&utm_campaign=google-cuts-operational-emissions-but-says-moonshot-climate-goals-getting-harder",
       "date": "2026-07-01"
     },
     {
@@ -72,76 +105,32 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "La baisse des émissions de GES se confirme mais devra accélérer d'ici 2030",
-      "resume": "L'article confirme la tendance de baisse des émissions de GES en France, mais souligne la nécessité d'accélérer le rythme pour respecter les objectifs climatiques nationaux d'ici 2030. Pour ABC, cela implique de renforcer ses efforts de décarbonation (scope 1/2/3) et d'aligner ses stratégies sur les trajectoires SNBC/PNACC pour répondre aux exigences clients (CSRD, reporting extra-financier).",
+      "resume": "L'article confirme la tendance de baisse des émissions de GES en France, mais souligne la nécessité d'accélérer cette dynamique pour respecter les objectifs climatiques nationaux d'ici 2030. Cela impacte indirectement ABC en renforçant les attentes des clients (nucléaire, santé, industrie) sur la décarbonation des prestataires de services.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/la-baisse-des-emissions-de-ges-se-confirme-mais-devra-accelerer-dici-2030",
       "date": "2026-07-01"
     },
     {
-      "id": "7b01ca78b74f",
+      "id": "465e30a46b28",
       "source": "Actuel HSE",
-      "categorie": "Déchets",
-      "titre": "Incendie de parkings : les véhicules électriques sous les feux de la rampe",
-      "resume": "L'article met en lumière les risques spécifiques d'incendie liés aux véhicules électriques dans les parkings, un enjeu potentiellement impactant pour la flotte de véhicules d'ABC et ses obligations en matière de sécurité et de gestion des risques.",
+      "categorie": "Climat",
+      "titre": "Chaleur au travail : les syndicats européens proposent une directive prête à l’emploi",
+      "resume": "La proposition de directive européenne sur le stress thermique au travail pourrait imposer de nouvelles obligations aux employeurs, dont ABC, en matière de prévention des risques climatiques pour les salariés intervenant sur les sites clients.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/incendie-de-parkings-les-vehicules-electriques-sous-les-feux-de-la-rampe-0",
+      "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-les-syndicats-europeens-proposent-une-directive-prete-lemploi",
       "date": "2026-07-01"
-    },
-    {
-      "id": "97d7384237ab",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "EU Adopts New Circularity Requirements for Vehicles",
-      "resume": "La réglementation européenne impose de nouvelles exigences de circularité pour les véhicules (contenu recyclé, démontage, responsabilité des constructeurs), ce qui impacte indirectement la flotte de véhicules d'ABC et ses obligations en matière de gestion des déchets et de reporting ESG.",
-      "pourquoi": "L'article concerne la réglementation européenne sur la circularité des véhicules, qui influence les obligations des entreprises en matière de gestion de flotte (scope 1), de déchets (REP véhicules) et de reporting ESG (CSRD/ESRS). Bien qu'ABC ne soit pas constructeur, cette réglementation peut impacter ses choix de véhicules (électrification, recyclabilité) et ses obligations de traçabilité des déchets liés à sa flotte.",
-      "criticite": 2,
-      "url": "https://www.esgtoday.com/eu-adopts-new-circularity-requirements-for-vehicles/?utm_source=rss&utm_medium=rss&utm_campaign=eu-adopts-new-circularity-requirements-for-vehicles",
-      "date": "2026-06-30"
     },
     {
       "id": "e7658318ef14",
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Consigne pour recyclage : les collectivités quittent la concertation et se tournent vers le Premier ministre",
-      "resume": "L'article souligne une tension sur la mise en œuvre de la consigne pour recyclage en France, qui pourrait impacter les obligations de tri et de traçabilité des déchets pour ABC dans le cadre de ses prestations de propreté/FM chez ses clients.",
+      "resume": "L'article signale une tension sur la mise en œuvre de la consigne pour recyclage en France, ce qui pourrait impacter les obligations de tri et de traçabilité des déchets pour ABC dans le cadre de ses prestations de propreté/FM chez ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/concertation-consigne-reemploi-opposition-collectivites-quittent-concerntationgreve-tgap-48239.php4#xtor=RSS-6",
-      "date": "2026-06-30"
-    },
-    {
-      "id": "0f697e2b8b81",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Allégations environnementales : Volvic condamnée pour pratiques commerciales trompeuses",
-      "resume": "L'article illustre les risques juridiques et réputationnels liés aux allégations environnementales non vérifiables ou trompeuses, un enjeu critique pour ABC dans le cadre de son reporting ESG (CSRD/ESRS) et de sa communication RSE.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/volvic-condamnee-allegations-environnementales-greenwashing-48237.php4#xtor=RSS-6",
-      "date": "2026-06-30"
-    },
-    {
-      "id": "b9c57011c406",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Autoconsommation collective : les règles de répartition modifiées par décret",
-      "resume": "Le décret modifie les règles de répartition de l'autoconsommation collective en imposant une maximisation de l'autoconsommation, ce qui pourrait impacter les stratégies énergétiques des sites clients d'ABC (tertiaire, industrie) et leurs obligations de reporting ESG (CSRD/ESRS).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/decret-autoconsommation-collective-repartition-energie-48232.php4#xtor=RSS-6",
-      "date": "2026-06-30"
-    },
-    {
-      "id": "6ad66e6ca8d0",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "Les entreprises cotées internationales en route vers un réchauffement climatique de 3,2°C",
-      "resume": "L'article souligne l'écart entre les objectifs climatiques des entreprises et la trajectoire de réchauffement de 3,2°C, ce qui peut impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et renforcer les pressions réglementaires ou contractuelles sur la décarbonation des prestations.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/environnement/climat/entreprises-cotees-rechauffement-climatique-32-degres-cdp-wwf",
       "date": "2026-06-30"
     },
     {
@@ -149,7 +138,7 @@
       "source": "The Shift Project",
       "categorie": "Climat",
       "titre": "Lancement du projet Prospective Europe",
-      "resume": "Le projet Prospective Europe du Shift Project vise à éclairer les décisions énergie-climat en Europe, ce qui pourrait influencer les politiques climatiques françaises (SNBC, PNACC) et les exigences réglementaires futures pour les entreprises comme ABC.",
+      "resume": "Le projet Prospective Europe du Shift Project vise à renforcer la prospective énergie-climat en Europe, ce qui pourrait influencer les politiques climatiques françaises et européennes (SNBC, PNACC) et impacter les stratégies de décarbonation des entreprises comme ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://theshiftproject.org/publications/lancement-du-projet-prospective-europe/",
@@ -160,10 +149,21 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Lesaffre choisit Dalkia pour un nouveau projet de chaleur fatale",
-      "resume": "L'article illustre une tendance croissante de récupération de chaleur fatale dans l'industrie, un levier potentiel pour ABC dans l'optimisation énergétique de ses prestations de propreté/FM chez les clients industriels.",
+      "resume": "L'article illustre une tendance croissante de récupération de chaleur fatale dans l'industrie, un levier potentiel pour ABC dans le cadre de ses enjeux énergétiques et de décarbonation (scope 1/2).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/06/lesaffre-choisit-dalkia-pour-un-nouveau-projet-de-chaleur-fatale-428143/",
+      "date": "2026-06-30"
+    },
+    {
+      "id": "97d7384237ab",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "EU Adopts New Circularity Requirements for Vehicles",
+      "resume": "La nouvelle réglementation européenne impose des exigences de circularité renforcées pour les véhicules, incluant des contenus recyclés, une meilleure recyclabilité et la responsabilité des constructeurs pour la fin de vie. Cela impacte indirectement ABC via la gestion de sa flotte et les attentes clients en matière de durabilité.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/eu-adopts-new-circularity-requirements-for-vehicles/?utm_source=rss&utm_medium=rss&utm_campaign=eu-adopts-new-circularity-requirements-for-vehicles",
       "date": "2026-06-30"
     },
     {
@@ -171,7 +171,7 @@
       "source": "The Guardian Environment",
       "categorie": "Énergie",
       "titre": "‘Is there a way out of this mess?’: Your questions answered on Europe’s week of hellish heat",
-      "resume": "L'article souligne l'urgence climatique en Europe avec des vagues de chaleur extrêmes, renforçant les risques opérationnels pour ABC (aléas climatiques sur 3 000+ sites clients) et la nécessité de préparer des plans d'adaptation.",
+      "resume": "L'article souligne l'urgence climatique en Europe avec des vagues de chaleur extrêmes, renforçant les risques opérationnels pour ABC (aléas climatiques sur 3 000+ sites clients) et la pression sur les clients pour des engagements carbone ambitieux.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.theguardian.com/community/live/2026/jun/30/reader-qa-ask-ajit-niranjan-anything-about-europes-hellish-week-of-heat",
@@ -182,7 +182,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Déchets",
       "titre": "Déchets : bras de fer autour de la consigne des bouteilles en plastique - Les Echos",
-      "resume": "L'article aborde la consigne des bouteilles en plastique, un sujet lié à la réglementation REP (Responsabilité Élargie du Producteur) qui impacte la gestion des déchets des prestataires de propreté comme ABC, notamment via les flux de déchets plastiques générés chez les clients.",
+      "resume": "L'article aborde la consigne des bouteilles en plastique, un sujet lié à la REP (Responsabilité Élargie du Producteur) qui pourrait impacter les obligations de tri et de traçabilité des déchets pour ABC dans le cadre de ses prestations de propreté.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPa3VzMkFhNTBpNVJLVFo5M2xUd2JMNnNnTHA4bW9wVWhVUE5KazlPeFIzWkVldlAza2IzdVB3VFRWWWJMeS11UVhuRy12N21ZMFpqTHg1ckU3dkVrRUEwQXlXT0tZcTF4a19DSkZNQ2tkX3ZRcW5Mcmd4RldlTE1mZlhMelludFd1ekcta1VJUncyQlNydWtkbnVqYWVFb1hFN1ZnLWJ3Uk9icU5DZ3hURkdGM3ZZVWNiR2llaEtjR2FxRlJUMUtHcS1YYnFXZExfNmtWMS1sdkpjQQ?oc=5",
@@ -193,8 +193,8 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG FR TEG Physical Meeting - 1 July 2026",
-      "resume": "L'article concerne une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting extra-financier, potentiellement liées à la CSRD/ESRS, ce qui impacte directement les obligations de reporting ESG d'ABC pour ses clients.",
-      "pourquoi": "EFRAG est l'organisme européen de référence pour les normes de reporting extra-financier (ESRS) dans le cadre de la CSRD. Les évolutions discutées lors de cette réunion pourraient influencer les exigences de reporting des entreprises, y compris celles des prestataires comme ABC, notamment sur la traçabilité des données ESG et la méthodologie de calcul des émissions (scope 1/2/3).",
+      "resume": "Réunion technique de l'EFRAG sur les normes de reporting extra-financier (ESRS) qui impactent directement les obligations de reporting CSRD pour ABC, notamment sur la collecte de données environnementales pour ses clients.",
+      "pourquoi": "L'EFRAG (European Financial Reporting Advisory Group) est l'organisme en charge de l'élaboration des normes ESRS (European Sustainability Reporting Standards) sous la CSRD. Ces normes définissent les exigences de reporting extra-financier pour les entreprises, y compris les prestataires de services comme ABC, qui doivent collecter et déclarer des données environnementales (scope 1/2/3, énergie, déchets, etc.) pour leurs clients. Une évolution dans ces normes peut impacter les processus internes de collecte de données et les méthodologies de reporting d'ABC.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-fr-teg-physical-meeting-1-july-2026-0",
       "date": "2026-06-29"
@@ -392,6 +392,11 @@
       "niveau": "alerte renforcée"
     },
     {
+      "dept_code": "41",
+      "dept_nom": "Loir-et-Cher",
+      "niveau": "alerte renforcée"
+    },
+    {
       "dept_code": "87",
       "dept_nom": "Haute-Vienne",
       "niveau": "alerte renforcée"
@@ -577,6 +582,11 @@
       "niveau": "vigilance"
     },
     {
+      "dept_code": "80",
+      "dept_nom": "Somme",
+      "niveau": "vigilance"
+    },
+    {
       "dept_code": "60",
       "dept_nom": "Oise",
       "niveau": "vigilance"
@@ -614,11 +624,6 @@
     {
       "dept_code": "93",
       "dept_nom": "Seine-Saint-Denis",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "41",
-      "dept_nom": "Loir-et-Cher",
       "niveau": "vigilance"
     },
     {
@@ -690,7 +695,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Ce décret instaure une aide financière pour les entreprises du BTP utilisant du gazole non routier, ce qui pourrait retarder leur transition vers des alternatives moins polluantes et impacter les objectifs de réduction des émissions de CO₂ d'une grande entreprise de services.",
+  "briefing_jorf": "Ce décret de 2026 instaure une aide financière pour les entreprises du BTP utilisant du gazole non routier, ce qui pourrait retarder leur transition vers des énergies moins polluantes et impacter les objectifs climatiques de l'entreprise.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -734,7 +739,7 @@
           "titre": "La relance et la décentralisation du logement - N° 2981",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PJL_relance_decentralisation_logement",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PJL_relance_decentralisation_logement",
-          "date": "2026-06-25"
+          "date": "2026-06-24"
         },
         {
           "titre": "Projet de loi relatif à la régulation de l'enseignement supérieur privé - N° 2860",
@@ -1040,15 +1045,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/abrogation_code_noir",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/abrogation_code_noir",
           "date": "2025-09-16"
-        },
-        {
-          "titre": "Texte adopté N° 289",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reconnaissance_commemoration_genocide_Roms_Sintis_Gitans_Manouches_Yeniches_Voyageurs",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reconnaissance_commemoration_genocide_Roms_Sintis_Gitans_Manouches_Yeniches_Voyageurs",
-          "date": "2026-03-25"
         }
       ]
     }
   ],
-  "pjl_briefing": "Aucun des projets de loi ou textes adoptés listés ne traite directement de sujets environnementaux, climatiques, énergétiques ou de RSE dans une approche globale ou structurante pour une grande entreprise de services. Seuls des aspects sectoriels ou indirects (comme la transposition de directives UE ou des mesures agricoles) pourraient avoir des implications mineures, mais sans impact significatif identifié pour un Responsable Environnement/Climat."
+  "pjl_briefing": "Aucun texte parlementaire de cette liste ne traite directement de sujets environnementaux, climatiques, énergétiques, de déchets ou de reporting RSE. Les projets de loi concernent principalement des domaines sociaux, économiques, sécuritaires, juridiques ou institutionnels, sans lien apparent avec les enjeux de durabilité ou de transition écologique."
 }
