@@ -1,7 +1,7 @@
 {
   "date": "2026-07-02",
-  "generated_at": "08:42",
-  "elapsed_seconds": 206,
+  "generated_at": "13:18",
+  "elapsed_seconds": 170,
   "errors": [],
   "stats": {
     "jo_analyses": 12,
@@ -9,106 +9,84 @@
     "depts_restriction": 92
   },
   "pipeline_meta": {
-    "run_at": "2026-07-02T08:42:49",
+    "run_at": "2026-07-02T13:18:28",
     "sources": {
       "JORF": 0,
-      "RSS": 8,
+      "RSS": 6,
       "VigiEau": 92,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 59,
-    "llm_seconds": 63.5
+    "llm_calls": 48,
+    "llm_seconds": 51.5
   },
   "items": [
     {
-      "id": "125e2d19ca52",
-      "source": "Les Echos Environnement",
-      "categorie": "Énergie",
-      "titre": "Jallatte lance des chaussures de sécurité certifiées carbone neutre - Les Echos",
-      "resume": "L'article présente une initiative de décarbonation d'un fournisseur de chaussures de sécurité (Jallatte), ce qui pourrait influencer les exigences carbone des clients d'ABC dans les secteurs industriel ou nucléaire, notamment via des appels d'offres ou des politiques RSE.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZVBuazhsM1FvRWgxVW9wMHBic0wyOXhNRllEVm5SWWptY1RIZmVjREppSmFMVUdBa0o4UmtkQ1lnUHlPb0pIX0hXeVdsZGVIaWhJMXBzQW9YR0RRMzBmckZYdHZuRGVBeGtUcU5tX3M3alVHQmtXN2M2SkExY1NqNVVYcGdQVGRkRm5jcTFfN2pTOWo1X1ZmYlhLZVJMR0lrUU1JZ2h3Tzc4UFprazRtSTU4WGZ6cWx2bHZnU0hTdm8?oc=5",
-      "date": "2026-07-02"
-    },
-    {
-      "id": "d49af5838b12",
-      "source": "Actuel HSE",
-      "categorie": "Énergie",
-      "titre": "Règlement d’accélération industrielle : l’épreuve du carbone et de la préférence européenne",
-      "resume": "Le règlement pourrait influencer les critères d'achat des clients d'ABC (marchés publics et aides publiques) en intégrant des exigences bas carbone et de préférence européenne, impactant potentiellement les appels d'offres et la compétitivité des prestations.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/reglement-dacceleration-industrielle-lepreuve-du-carbone-et-de-la-preference-europeenne",
-      "date": "2026-07-02"
-    },
-    {
-      "id": "465e30a46b28",
-      "source": "Actuel HSE",
-      "categorie": "Climat",
-      "titre": "Chaleur au travail : les syndicats européens proposent une directive prête à l’emploi",
-      "resume": "La proposition de directive européenne sur le stress thermique au travail pourrait imposer de nouvelles obligations aux employeurs, notamment en matière de prévention des risques climatiques pour les salariés intervenant sur les sites clients d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-les-syndicats-europeens-proposent-une-directive-prete-lemploi",
-      "date": "2026-07-02"
-    },
-    {
-      "id": "6f515ad4b68a",
-      "source": "Actuel HSE",
-      "categorie": "Eau",
-      "titre": "Obligations de solarisation des toitures : «Il y aura un décalage sur le terrain»",
-      "resume": "L'article aborde l'obligation de solarisation des toitures pour les bâtiments non résidentiels et parkings, ce qui pourrait impacter les sites clients d'ABC (ex : tertiaire, industrie) et leurs exigences en matière de décarbonation ou de reporting ESG (CSRD).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/obligations-de-solarisation-des-toitures-il-y-aura-un-decalage-sur-le-terrain",
-      "date": "2026-07-02"
-    },
-    {
-      "id": "617acbd7b5cd",
+      "id": "6c745cbea6ff",
       "source": "Actu-Environnement",
       "categorie": "Eau",
-      "titre": "Changement climatique : améliorer la culture du dialogue pour mieux s'adapter",
-      "resume": "L'article souligne l'importance de renforcer le dialogue et la préservation du cycle de l'eau pour l'adaptation au changement climatique dans le bassin Rhône-Méditerranée, ce qui peut impacter indirectement les sites clients d'ABC et leurs exigences en matière de résilience climatique.",
+      "titre": "Réseaux d'eau : LTF exploite l'énergie cinétique des écoulements pour alimenter les capteurs",
+      "resume": "L'article présente une innovation technologique (micro-turbine cinétique) pour l'autonomie énergétique des capteurs de réseaux d'eau, sans perturber leur fonctionnement. Cela pourrait inspirer des solutions similaires pour réduire l'empreinte carbone des prestations de propreté/FM d'ABC sur les sites clients.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/dialogue-grand-cycle-eau-territoire-zones-humides-preservation-changement-climatique-dialogue-acteurs-48247.php4#xtor=RSS-6",
-      "date": "2026-07-01"
+      "url": "https://www.actu-environnement.com/ae/news/micro-turbine-reseaux-eau-capteurs-energie-48245.php4#xtor=RSS-6",
+      "date": "2026-07-02"
+    },
+    {
+      "id": "2ce93844abc5",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Concours Cube Logement : 9,2 % d'économies d'énergie en moyenne dès la première saison",
+      "resume": "Le concours Cube Logement démontre l'efficacité des CEE pour réduire les consommations énergétiques des bâtiments tertiaires, un levier potentiel pour ABC dans l'accompagnement de ses clients (ex : DPE tertiaire, efficacité énergétique).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/cube-logement-sobriete-energetique-residences-bailleurs-copropriete-48251.php4#xtor=RSS-6",
+      "date": "2026-07-02"
+    },
+    {
+      "id": "b65fb8b9b7ef",
+      "source": "Novethic",
+      "categorie": "Déchets",
+      "titre": "Coca-Cola, Nestlé, Pepsico… : pourquoi les industriels des boissons disent oui à la consigne pour recyclage",
+      "resume": "La consigne pour recyclage pourrait devenir obligatoire en France dès 2029, ce qui impacte indirectement ABC via les exigences clients (notamment dans l'industrie agroalimentaire) et les flux de déchets de ses prestations.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/coca-cola-nestle-pepsico-industriels-boissons-positionnent-faveur-consigne-recyclage",
+      "date": "2026-07-02"
+    },
+    {
+      "id": "8c8517419bf4",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Pascal Canfin, eurodéputé : « Face à la canicule, le RN tente de faire oublier son opposition radicale à toute politique climatique »",
+      "resume": "L'article souligne les contradictions politiques sur les politiques climatiques en France, ce qui peut impacter la perception des enjeux environnementaux par les clients d'ABC et influencer leurs exigences en matière de décarbonation et de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/idees/article/2026/07/02/pascal-canfin-eurodepute-face-a-la-canicule-le-rn-tente-de-faire-oublier-son-opposition-radicale-a-toute-politique-climatique_6717830_3232.html",
+      "date": "2026-07-02"
+    },
+    {
+      "id": "41ffc9e1625e",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "Most Companies Still Struggle to Quantify Impact of Sustainability Risks and Opportunities: KPMG Survey",
+      "resume": "L'article souligne les difficultés persistantes des entreprises à quantifier les risques et opportunités liés à la durabilité, ce qui peut impacter la capacité d'ABC à répondre aux exigences de reporting ESG (CSRD/ESRS) et à anticiper les attentes clients en matière de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/majority-of-companies-still-struggle-to-quantify-impact-of-sustainability-risks-and-opportunities-kpmg-survey/?utm_source=rss&utm_medium=rss&utm_campaign=majority-of-companies-still-struggle-to-quantify-impact-of-sustainability-risks-and-opportunities-kpmg-survey",
+      "date": "2026-07-02"
     },
     {
       "id": "304a09e40523",
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Stockage par batteries : la filière française s'organise face au boom attendu du marché",
-      "resume": "L'article aborde l'émergence d'une filière structurée pour le stockage par batteries en France, un sujet indirectement lié aux enjeux de décarbonation et d'efficacité énergétique des entreprises, notamment pour les flottes de véhicules électriques ou les solutions énergétiques des sites clients d'ABC.",
+      "resume": "L'article aborde l'émergence d'une filière structurée pour le stockage par batteries en France, un secteur en croissance qui pourrait impacter les stratégies énergétiques des entreprises, notamment via des solutions de mobilité durable ou d'autoconsommation pour les sites clients d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/stockage-batteries-stationnaires-association-france-48244.php4#xtor=RSS-6",
-      "date": "2026-07-01"
-    },
-    {
-      "id": "0f700a1d31e5",
-      "source": "Novethic",
-      "categorie": "Énergie",
-      "titre": "Les investisseurs se branchent sur la mégatendance de l’électrification de l’économie",
-      "resume": "L'article souligne la croissance de l'électrification de l'économie, une tendance qui pourrait impacter les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et influencer leurs politiques d'achat de services de propreté/FM.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/finance-durable/tendances-de-marche/investisseurs-veulent-surfer-megatendance-electrification-economie",
-      "date": "2026-07-01"
-    },
-    {
-      "id": "ea6fae82f769",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Canicule : une motion de censure « n’arrêtera pas le changement climatique », affirme Maud Bregeon",
-      "resume": "L'article souligne l'importance de la préparation aux canicules, un risque climatique opérationnel pouvant impacter les 3 000+ sites clients d'ABC, notamment en termes de continuité de service et d'adaptation des prestations.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/politique/article/2026/07/01/canicule-une-motion-de-censure-n-arretera-pas-le-changement-climatique-affirme-maud-bregeon_6717544_823448.html",
       "date": "2026-07-01"
     }
   ],
@@ -354,6 +332,11 @@
       "niveau": "alerte renforcée"
     },
     {
+      "dept_code": "88",
+      "dept_nom": "Vosges",
+      "niveau": "alerte renforcée"
+    },
+    {
       "dept_code": "25",
       "dept_nom": "Doubs",
       "niveau": "alerte renforcée"
@@ -366,6 +349,16 @@
     {
       "dept_code": "50",
       "dept_nom": "Manche",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "14",
+      "dept_nom": "Calvados",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "27",
+      "dept_nom": "Eure",
       "niveau": "alerte"
     },
     {
@@ -424,11 +417,6 @@
       "niveau": "alerte"
     },
     {
-      "dept_code": "88",
-      "dept_nom": "Vosges",
-      "niveau": "alerte"
-    },
-    {
       "dept_code": "70",
       "dept_nom": "Haute-Saône",
       "niveau": "alerte"
@@ -447,11 +435,6 @@
       "dept_code": "73",
       "dept_nom": "Savoie",
       "niveau": "alerte"
-    },
-    {
-      "dept_code": "14",
-      "dept_nom": "Calvados",
-      "niveau": "vigilance"
     },
     {
       "dept_code": "22",
@@ -481,11 +464,6 @@
     {
       "dept_code": "59",
       "dept_nom": "Nord",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "27",
-      "dept_nom": "Eure",
       "niveau": "vigilance"
     },
     {
@@ -1404,6 +1382,12 @@
       "source": "AN Projets de loi",
       "items": [
         {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République unie de Tanzanie relatif aux services aériens - N° 2985",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54168",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54168",
+          "date": "2026-04-15"
+        },
+        {
           "titre": "Projet de loi portant simplification des normes applicables aux collectivités territoriales - N° 2987",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54164",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54164",
@@ -1564,12 +1548,6 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/moldavie_securite_sociale",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/moldavie_securite_sociale",
           "date": "2026-02-11"
-        },
-        {
-          "titre": "Projet de loi relatif à l’extension des prérogatives, des moyens, de l’organisation et du contrôle des polices municipales et des gardes champêtres - N° 2464",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53096",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53096",
-          "date": "2025-10-29"
         }
       ]
     },
@@ -1723,5 +1701,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations réglementaires européennes dans des domaines clés comme l’énergie, l’environnement et le climat. Aucun autre texte ne semble aborder spécifiquement ces enjeux de manière prioritaire."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi-cadre relatif au développement des transports (N°2740)** pourraient impacter les enjeux climatiques et énergétiques. Le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** est également pertinent pour le reporting RSE et la transposition des réglementations européennes."
 }
