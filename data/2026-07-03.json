@@ -1,7 +1,7 @@
 {
   "date": "2026-07-03",
-  "generated_at": "08:48",
-  "elapsed_seconds": 201,
+  "generated_at": "13:23",
+  "elapsed_seconds": 255,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,29 +9,62 @@
     "depts_restriction": 92
   },
   "pipeline_meta": {
-    "run_at": "2026-07-03T08:48:43",
+    "run_at": "2026-07-03T13:23:37",
     "sources": {
       "JORF": 0,
-      "RSS": 15,
+      "RSS": 16,
       "VigiEau": 92,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 58,
-    "llm_seconds": 69.7
+    "llm_calls": 59,
+    "llm_seconds": 72.9
   },
   "items": [
+    {
+      "id": "7bb6bed4f77b",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Comment sont sélectionnés les 100 territoires d’électrification",
+      "resume": "L'article aborde la sélection des territoires prioritaires pour l'électrification des flottes de véhicules en France, un enjeu direct pour ABC dans le cadre de sa transition vers une flotte décarbonée (scope 1) et de ses obligations clients (ZFE, mobilité durable).",
+      "pourquoi": "Le sujet touche à la mobilité durable, un levier clé pour ABC dans sa stratégie de décarbonation (flotte de véhicules) et de réponse aux exigences carbone de ses clients (nucléaire, santé, industrie). La sélection des territoires d'électrification influence les politiques locales de ZFE et les aides disponibles, impactant les choix d'ABC en matière de renouvellement de flotte.",
+      "criticite": 2,
+      "url": "https://www.greenunivers.com/2026/07/comment-sont-selectionnes-les-100-territoires-delectrification-428393/",
+      "date": "2026-07-03"
+    },
+    {
+      "id": "87c6cd77cec9",
+      "source": "Actu-Environnement",
+      "categorie": "Environnement",
+      "titre": "Le chiffre du jour : 327 millions de personnes",
+      "resume": "L'article souligne l'augmentation des risques climatiques en Europe, notamment les vagues de chaleur, qui pourraient impacter les activités de propreté/FM d'ABC sur ses 3 000+ sites clients (ex. : adaptation des prestations, gestion des ressources).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/dit-aujourdhui/1817.html#xtor=RSS-6",
+      "date": "2026-07-03"
+    },
     {
       "id": "1b74c0200893",
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Lire notre dossier d'actu \"Canicule : la France face au défi du confort d'été\"",
-      "resume": "L'article souligne l'augmentation des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter les sites clients d'ABC (ex : confort thermique, maintenance adaptée) et nécessiter des adaptations de ses prestations.",
+      "resume": "Les vagues de chaleur accrues en France impactent directement les sites clients d'ABC (non résidentiels), nécessitant des adaptations des prestations de propreté/FM pour garantir le confort et la sécurité des occupants, tout en intégrant des risques climatiques dans la gestion des contrats.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/dossier-actu/dossier-canicule-chaleur-adaptation-climat-batiment-ville-128#xtor=RSS-6",
+      "date": "2026-07-03"
+    },
+    {
+      "id": "f11ac9617fd6",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Canicule de juin : les décès en hausse de presque 30 %",
+      "resume": "L'article souligne l'impact croissant des canicules sur la santé publique en France, un risque climatique opérationnel pouvant affecter la disponibilité des sites clients de ABC (ex : fermetures temporaires, contraintes sanitaires).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Canicule-de-juin-les-deces-en-hausse-de-presque-30",
       "date": "2026-07-03"
     },
     {
@@ -39,21 +72,54 @@
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "« Si on n'a pas de pluie, on va être très, très mal » : la France fait face à une sécheresse intense",
-      "resume": "La sécheresse intense en France augmente les risques opérationnels pour ABC (3 000+ sites clients) via des perturbations logistiques, des restrictions d'accès à l'eau pour les prestations de nettoyage, et des aléas climatiques impactant la mobilité des équipes et des véhicules.",
+      "resume": "L'article souligne l'intensification des sécheresses en France, avec 96 départements en alerte en juillet 2024, ce qui pourrait impacter les activités de propreté/FM d'ABC (ex. : restrictions d'eau pour les prestations, risques opérationnels sur 3 000+ sites clients).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Si-on-n-a-pas-de-pluie-on-va-etre-tres-tres-mal-une-secheresse-intense-asseche-la-France",
       "date": "2026-07-03"
     },
     {
-      "id": "fd4d6cbc96ef",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "En Bretagne, la canicule fait vaciller le monde agricole : « De toute ma carrière, je n’avais connu ça qu’une seule fois, en 2003 »",
-      "resume": "L'article illustre l'impact croissant des aléas climatiques (canicules) sur les activités économiques en France, soulignant des risques opérationnels indirects pour ABC via ses 3 000+ sites clients, notamment dans les secteurs agricole et agroalimentaire.",
+      "id": "df33b79e0af1",
+      "source": "Novethic",
+      "categorie": "Eau",
+      "titre": "Face à un réseau saturé, le Danemark fait passer les data centers après les usages essentiels",
+      "resume": "L'article illustre un risque indirect pour ABC : la saturation des réseaux électriques en Europe pourrait impacter la disponibilité énergétique pour ses clients (notamment industriels ou tertiaires) et contraindre les prestations de propreté/FM, avec des répercussions sur les engagements carbone et la CSRD.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/economie/article/2026/07/03/en-bretagne-la-canicule-fait-vaciller-le-monde-agricole-de-toute-ma-carriere-je-n-avais-connu-ca-qu-une-seule-fois-en-2003_6718468_3234.html",
+      "url": "https://www.novethic.fr/environnement/transition-energetique/face-a-un-reseau-sature-le-danemark-fait-passer-les-data-centers-apres-les-usages-essentiels",
+      "date": "2026-07-03"
+    },
+    {
+      "id": "05c7b2557080",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Les documents de la semaine",
+      "resume": "Cette newsletter hebdomadaire compile les documents clés (textes réglementaires, études, états financiers) liés à la transition énergétique, permettant à ABC de suivre les évolutions réglementaires et les bonnes pratiques en matière de décarbonation, reporting ESG et mobilité durable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/les-documents-de-la-semaine-381215/",
+      "date": "2026-07-03"
+    },
+    {
+      "id": "12405b10ac64",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’agenda de la transition énergétique",
+      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.) qui pourraient être utiles pour ABC afin de rester informé des tendances et opportunités sectorielles.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/lagenda-de-la-transition-energetique-280-424554/",
+      "date": "2026-07-03"
+    },
+    {
+      "id": "d9b9b502b7e0",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Canicule au travail : la CGT veut un changement d’urgence de la loi ; le gouvernement, des accords par métier",
+      "resume": "L'article aborde les risques climatiques opérationnels (canicules) et les exigences réglementaires associées, pouvant impacter les conditions de travail des 3 000+ sites clients d'ABC. La CGT pousse pour des accords sectoriels urgents, ce qui pourrait influencer les politiques RSE et les plans climat des entreprises clientes.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/politique/article/2026/07/03/canicule-au-travail-la-cgt-veut-un-changement-d-urgence-de-la-loi-le-gouvernement-des-accords-par-metier_6719168_823448.html",
       "date": "2026-07-03"
     },
     {
@@ -61,7 +127,7 @@
       "source": "Le Monde Planète",
       "categorie": "Environnement",
       "titre": "Climat : Est-ce que partager les voitures, ça marche ?",
-      "resume": "L'article aborde la mobilité durable, un enjeu clé pour ABC via la décarbonation de sa flotte de véhicules (scope 1) et les attentes clients en matière de réduction d'émissions.",
+      "resume": "L'article aborde la mobilité durable et le partage de véhicules, un enjeu clé pour la décarbonation des flottes de services comme celle d'ABC, impactant directement le scope 1 et les objectifs net zéro.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/chaleur-humaine/article/2026/07/03/climat-est-ce-que-partager-les-voitures-ca-marche_6718459_6125299.html",
@@ -83,40 +149,18 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Chaleur au travail : les syndicats européens proposent une directive prête à l’emploi",
-      "resume": "La proposition de directive européenne sur le stress thermique au travail pourrait imposer de nouvelles obligations aux employeurs, notamment en matière de prévention des risques climatiques pour les salariés intervenant en extérieur ou dans des environnements non climatisés.",
+      "resume": "La proposition de directive européenne sur le stress thermique au travail pourrait imposer de nouvelles obligations de prévention pour ABC, notamment sur les sites clients exposés à des risques climatiques accrus (ex : canicules).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-les-syndicats-europeens-proposent-une-directive-prete-lemploi",
       "date": "2026-07-03"
     },
     {
-      "id": "b65fb8b9b7ef",
-      "source": "Novethic",
-      "categorie": "Déchets",
-      "titre": "Coca-Cola, Nestlé, Pepsico… : pourquoi les industriels des boissons disent oui à la consigne pour recyclage",
-      "resume": "La consigne pour recyclage pourrait devenir obligatoire en France dès 2029, ce qui impacte la gestion des déchets des prestataires de propreté comme ABC, notamment via les flux clients (emballages, canettes, etc.).",
-      "pourquoi": "L'article aborde la réglementation déchets (REP) et son extension potentielle à la consigne, ce qui concerne directement la gestion des déchets des prestations de propreté chez les clients d'ABC. Bien que non encore actée, cette mesure pourrait imposer des adaptations logistiques et de tri pour les sites clients, avec un impact sur les processus de collecte et de valorisation des déchets.",
-      "criticite": 2,
-      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/coca-cola-nestle-pepsico-industriels-boissons-positionnent-faveur-consigne-recyclage",
-      "date": "2026-07-02"
-    },
-    {
-      "id": "2ce93844abc5",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Concours Cube Logement : 9,2 % d'économies d'énergie en moyenne dès la première saison",
-      "resume": "Le concours Cube Logement démontre des économies d'énergie significatives (9,2%) dans des résidences collectives via des actions d'efficacité énergétique, un levier pertinent pour ABC dans le cadre de ses prestations de propreté/FM et de son engagement en décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/cube-logement-sobriete-energetique-residences-bailleurs-copropriete-48251.php4#xtor=RSS-6",
-      "date": "2026-07-02"
-    },
-    {
       "id": "e269ea46252e",
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Malgré la crise, Photosol concrétise le 2e plus grand parc solaire de France",
-      "resume": "L'article illustre la dynamique des grands projets solaires en France, un secteur en croissance qui pourrait influencer les attentes clients d'ABC en matière d'énergies renouvelables et de décarbonation.",
+      "resume": "L'article illustre la dynamique des grands projets solaires en France, un secteur en croissance qui pourrait influencer les attentes clients d'ABC en matière d'énergies renouvelables et de décarbonation des prestations.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/malgre-la-crise-photosol-concretise-le-2e-plus-grand-parc-solaire-de-france-428388/",
@@ -127,7 +171,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Flexibilités : ce qu’il faut retenir du colloque de France Renouvelables",
-      "resume": "L'article aborde les enjeux de flexibilité et stockage d'énergie, un sujet connexe à la transition énergétique des entreprises et à la décarbonation des flottes et sites clients d'ABC, sans imposer d'action directe immédiate.",
+      "resume": "L'article aborde les enjeux de flexibilité et stockage d'énergie, un sujet connexe à la décarbonation des flottes et à l'efficacité énergétique des bâtiments tertiaires, mais sans lien direct avec les obligations réglementaires ou opérationnelles immédiates d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/flexibilites-ce-quil-faut-retenir-du-colloque-de-france-renouvelables-428379/",
@@ -138,43 +182,10 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Powerdot étend son réseau de recharge dans la péninsule ibérique",
-      "resume": "L'extension du réseau de recharge électrique par Powerdot en péninsule ibérique pourrait influencer les stratégies de mobilité durable des clients d'ABC en France, notamment pour les flottes de véhicules électriques ou hybrides.",
+      "resume": "L'extension du réseau de recharge électrique par Powerdot en péninsule ibérique pourrait influencer la stratégie de mobilité durable d'ABC, notamment pour ses clients industriels ou tertiaires ayant des sites dans ces zones, en facilitant l'électrification de leurs flottes.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/powerdot-etend-son-reseau-de-recharge-dans-la-peninsule-iberique-428372/",
-      "date": "2026-07-02"
-    },
-    {
-      "id": "6a6b641811c1",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "EnR : les financeurs sont plus attentifs à la solidité des sociétés",
-      "resume": "L'article souligne une attention accrue des financeurs envers la solidité des sociétés dans les énergies renouvelables, un contexte à surveiller pour ABC dans le cadre de sa stratégie de décarbonation et de reporting ESG (CSRD/ESRS).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/enr-les-financeurs-sont-plus-attentifs-a-la-solidite-des-societes-428326/",
-      "date": "2026-07-02"
-    },
-    {
-      "id": "ab463c76287d",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Les émissions de CO₂ de Google et d’Amazon bondissent, propulsées par l’essor de l’IA",
-      "resume": "L'article illustre l'impact croissant des émissions liées au numérique (IA, data centers) sur les bilans carbone des entreprises, un enjeu indirect pour ABC via les exigences carbone de ses clients industriels ou tertiaires.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/pixels/article/2026/07/03/les-emissions-de-co-de-google-et-amazon-bondissent-propulsees-par-l-essor-de-l-ia_6718303_4408996.html",
-      "date": "2026-07-02"
-    },
-    {
-      "id": "41ffc9e1625e",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "Most Companies Still Struggle to Quantify Impact of Sustainability Risks and Opportunities: KPMG Survey",
-      "resume": "L'article souligne les difficultés des entreprises à quantifier les risques et opportunités liés à la durabilité, un enjeu clé pour ABC dans le cadre de son reporting CSRD/ESRS et de sa stratégie climat (BGES, scope 3).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/majority-of-companies-still-struggle-to-quantify-impact-of-sustainability-risks-and-opportunities-kpmg-survey/?utm_source=rss&utm_medium=rss&utm_campaign=majority-of-companies-still-struggle-to-quantify-impact-of-sustainability-risks-and-opportunities-kpmg-survey",
       "date": "2026-07-02"
     },
     {
@@ -182,7 +193,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Climat",
       "titre": "Climat : les émissions de CO2 importées, la face cachée du bilan carbone de la France enfin dévoilée - Les Echos",
-      "resume": "L'article met en lumière les émissions de CO2 importées, un angle pertinent pour ABC dans le cadre de son reporting CSRD/ESRS et de l'analyse de son scope 3 (achats, déchets, énergie). Cela peut influencer la stratégie de décarbonation et la traçabilité des impacts indirects liés à ses prestations.",
+      "resume": "L'article met en lumière l'impact des émissions importées sur le bilan carbone national, ce qui peut influencer les exigences des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) en matière de reporting scope 3 et de décarbonation de la chaîne de valeur.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNV0tEeV9XZTBKckdfRnZIdG5sRF9qbDNzMU1hQ2w5M3ZMQnRvanE4STJQU0k0TnhhLS1MR3lDUEtldVAyNzNWbVl6d3Uwd1dzRnl5bm1XdUs1RzdrR0dqbzA3cXZCTEZpZnc0UmFCaDdxaGd6cTJvUGJSMG9paGdfZGhaMUdHa3dzcXVDSE5EdGI2cVF4Ui1NdG8zcXhaLWUtQVB4b1NLY3VLZVhHMW14WTM5YXBsTjd1NXBJYjE4MVFRUjlQTGlPZDlHLVJPVmh1T1hZZmNsZVhxUFdiYmNFdmlnS3Jrdy11bHk4YmVB?oc=5",
@@ -213,11 +224,6 @@
     {
       "dept_code": "17",
       "dept_nom": "Charente-Maritime",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "86",
-      "dept_nom": "Vienne",
       "niveau": "crise"
     },
     {
@@ -281,6 +287,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "19",
+      "dept_nom": "Corrèze",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "23",
       "dept_nom": "Creuse",
       "niveau": "crise"
@@ -293,6 +304,11 @@
     {
       "dept_code": "63",
       "dept_nom": "Puy-de-Dôme",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "15",
+      "dept_nom": "Cantal",
       "niveau": "crise"
     },
     {
@@ -371,6 +387,11 @@
       "niveau": "alerte renforcée"
     },
     {
+      "dept_code": "86",
+      "dept_nom": "Vienne",
+      "niveau": "alerte renforcée"
+    },
+    {
       "dept_code": "40",
       "dept_nom": "Landes",
       "niveau": "alerte renforcée"
@@ -398,16 +419,6 @@
     {
       "dept_code": "41",
       "dept_nom": "Loir-et-Cher",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "19",
-      "dept_nom": "Corrèze",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "15",
-      "dept_nom": "Cantal",
       "niveau": "alerte renforcée"
     },
     {
@@ -441,6 +452,11 @@
       "niveau": "alerte renforcée"
     },
     {
+      "dept_code": "90",
+      "dept_nom": "Territoire de Belfort",
+      "niveau": "alerte renforcée"
+    },
+    {
       "dept_code": "68",
       "dept_nom": "Haut-Rhin",
       "niveau": "alerte renforcée"
@@ -466,6 +482,11 @@
       "niveau": "alerte"
     },
     {
+      "dept_code": "78",
+      "dept_nom": "Yvelines",
+      "niveau": "alerte"
+    },
+    {
       "dept_code": "55",
       "dept_nom": "Meuse",
       "niveau": "alerte"
@@ -488,6 +509,11 @@
     {
       "dept_code": "43",
       "dept_nom": "Haute-Loire",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "38",
+      "dept_nom": "Isère",
       "niveau": "alerte"
     },
     {
@@ -518,11 +544,6 @@
     {
       "dept_code": "70",
       "dept_nom": "Haute-Saône",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "90",
-      "dept_nom": "Territoire de Belfort",
       "niveau": "alerte"
     },
     {
@@ -576,11 +597,6 @@
       "niveau": "vigilance"
     },
     {
-      "dept_code": "78",
-      "dept_nom": "Yvelines",
-      "niveau": "vigilance"
-    },
-    {
       "dept_code": "02",
       "dept_nom": "Aisne",
       "niveau": "vigilance"
@@ -618,11 +634,6 @@
     {
       "dept_code": "69",
       "dept_nom": "Rhône",
-      "niveau": "vigilance"
-    },
-    {
-      "dept_code": "38",
-      "dept_nom": "Isère",
       "niveau": "vigilance"
     },
     {
@@ -1272,7 +1283,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Les arrêtés relatifs aux appels à projets « Infrastructures de données et Équipements numériques résilients et durables (EcoIDEN) » et « Accélérer le déploiement du biocontrôle et de la biostimulation » sont pertinents pour un Responsable Environnement/Climat, car ils visent respectivement la durabilité numérique et l'innovation agroécologique, deux leviers clés pour la transition écologique des entreprises.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1626,5 +1637,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Aucun des projets de loi ou textes adoptés listés ne traite directement de sujets environnementaux, climatiques, énergétiques ou de RSE. Les mesures concernent principalement des accords internationaux, des réformes institutionnelles, des questions de sécurité, de justice ou de finances publiques, sans lien apparent avec les enjeux de durabilité ou de reporting extra-financier."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (adaptation au droit de l'UE en matière environnementale, énergétique et de transport) et le projet de loi-cadre n°2740 (développement des transports) pourraient présenter un intérêt indirect pour un Responsable Environnement/Climat, notamment via des évolutions réglementaires ou des normes sectorielles. Aucun texte ne traite explicitement de reporting RSE, de déchets ou de stratégies climatiques ambitieuses."
 }
