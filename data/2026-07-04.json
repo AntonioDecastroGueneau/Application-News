@@ -1,7 +1,7 @@
 {
   "date": "2026-07-04",
-  "generated_at": "08:23",
-  "elapsed_seconds": 231,
+  "generated_at": "12:45",
+  "elapsed_seconds": 201,
   "errors": [],
   "stats": {
     "jo_analyses": 20,
@@ -9,18 +9,18 @@
     "depts_restriction": 92
   },
   "pipeline_meta": {
-    "run_at": "2026-07-04T08:23:54",
+    "run_at": "2026-07-04T12:45:01",
     "sources": {
       "JORF": 0,
-      "RSS": 10,
+      "RSS": 3,
       "VigiEau": 92,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 55,
-    "llm_seconds": 58.4
+    "llm_calls": 44,
+    "llm_seconds": 45.0
   },
   "items": [
     {
@@ -28,76 +28,21 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Chaleur au travail : les syndicats européens proposent une directive prête à l’emploi",
-      "resume": "La proposition de directive européenne sur le stress thermique au travail pourrait imposer de nouvelles obligations aux employeurs, dont ABC, en matière de prévention des risques climatiques pour les salariés intervenant chez les clients (3 000+ sites).",
+      "resume": "La proposition de directive européenne sur le stress thermique au travail pourrait imposer de nouvelles obligations aux employeurs, dont ABC, en matière de prévention des risques climatiques pour les salariés intervenant sur les sites clients (3 000+ sites).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-les-syndicats-europeens-proposent-une-directive-prete-lemploi",
       "date": "2026-07-04"
     },
     {
-      "id": "87c6cd77cec9",
-      "source": "Actu-Environnement",
-      "categorie": "Environnement",
-      "titre": "Le chiffre du jour : 327 millions de personnes",
-      "resume": "L'article souligne l'exposition croissante de populations européennes aux vagues de chaleur, un risque climatique indirect pour ABC via ses 3 000+ sites clients et leurs exigences en matière de résilience opérationnelle.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/dit-aujourdhui/1817.html#xtor=RSS-6",
-      "date": "2026-07-03"
-    },
-    {
       "id": "eaa11f6070dc",
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Pourquoi les retards de train se multiplient pendant la canicule ?",
-      "resume": "L'article met en lumière l'impact des aléas climatiques (canicule) sur les infrastructures de transport, un risque indirect pour ABC via ses 3 000+ sites clients et la mobilité de ses équipes ou livraisons.",
+      "resume": "L'article met en lumière l'impact des aléas climatiques (canicule) sur les infrastructures de transport, un risque indirect pour ABC via la perturbation potentielle des déplacements de ses équipes ou clients sur 3 000+ sites.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Voies-qui-flambent-catenaires-dilatees-Pourquoi-les-retards-de-train-se-multiplient",
-      "date": "2026-07-03"
-    },
-    {
-      "id": "f11ac9617fd6",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Canicule de juin : les décès en hausse de presque 30 %",
-      "resume": "L'article souligne l'impact croissant des aléas climatiques (canicules) sur la santé publique en France, ce qui pourrait renforcer les exigences des clients d'ABC (secteurs santé, industrie) en matière de résilience climatique et de gestion des risques opérationnels.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Canicule-de-juin-les-deces-en-hausse-de-presque-30",
-      "date": "2026-07-03"
-    },
-    {
-      "id": "05c7b2557080",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Les documents de la semaine",
-      "resume": "Cette newsletter hebdomadaire recense les documents clés de la transition énergétique (textes réglementaires, études, rapports) qui pourraient impacter les entreprises de services comme ABC, notamment sur les enjeux de reporting ESG (CSRD/ESRS), décarbonation (scope 1/2/3) ou réglementation énergie/déchets.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/les-documents-de-la-semaine-381215/",
-      "date": "2026-07-03"
-    },
-    {
-      "id": "12405b10ac64",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "L’agenda de la transition énergétique",
-      "resume": "L'article fournit un agenda d'événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.), utile pour identifier des opportunités de veille ou de participation à des réseaux influents pour ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/lagenda-de-la-transition-energetique-280-424554/",
-      "date": "2026-07-03"
-    },
-    {
-      "id": "7bb6bed4f77b",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Comment sont sélectionnés les 100 territoires d’électrification",
-      "resume": "L'article aborde la sélection des territoires d'électrification en France, un enjeu lié à la mobilité durable et à la décarbonation des flottes de véhicules (scope 1), potentiellement impactant pour la stratégie de flotte d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/comment-sont-selectionnes-les-100-territoires-delectrification-428393/",
       "date": "2026-07-03"
     },
     {
@@ -105,32 +50,10 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "Entre sécheresse et pollutions, la nécessaire repolitisation des usages de l’eau",
-      "resume": "L'article met en lumière les enjeux croissants de raréfaction de l'eau en France, un risque climatique opérationnel pouvant impacter les activités de nettoyage et de gestion des déchets des 3 000+ sites clients d'ABC, notamment via des restrictions d'usage ou des coûts accrus.",
+      "resume": "L'article souligne l'importance de repolitiser les usages de l'eau face aux sécheresses, un enjeu indirect pour ABC via les risques climatiques opérationnels sur ses 3 000+ sites clients et les exigences carbone des clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/07/03/entre-secheresse-et-pollutions-la-necessaire-repolitisation-des-usages-de-l-eau_6720446_3232.html",
-      "date": "2026-07-03"
-    },
-    {
-      "id": "d9b9b502b7e0",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Canicule au travail : la CGT veut un changement d’urgence de la loi ; le gouvernement, des accords par métier",
-      "resume": "L'article souligne l'urgence de réguler les conditions de travail lors des canicules, ce qui pourrait impacter les obligations de sécurité et d'adaptation des sites clients d'ABC (ex : tertiaire, industrie).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/politique/article/2026/07/03/canicule-au-travail-la-cgt-veut-un-changement-d-urgence-de-la-loi-le-gouvernement-des-accords-par-metier_6719168_823448.html",
-      "date": "2026-07-03"
-    },
-    {
-      "id": "5f2d838bbdfb",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Canicule : les élus locaux s’agacent du procès en impréparation instruit par Sébastien Lecornu",
-      "resume": "L'article souligne les tensions entre l'État et les collectivités locales sur la gestion des canicules, mettant en lumière les investissements locaux en adaptation climatique (écoles, transports) qui pourraient impacter indirectement les sites clients d'ABC (ex : contraintes sur les prestations en période de forte chaleur).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/politique/article/2026/07/03/canicule-les-elus-locaux-s-agacent-du-proces-en-impreparation-instruit-par-sebastien-lecornu_6719163_823448.html",
       "date": "2026-07-03"
     }
   ],
@@ -1487,5 +1410,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des réglementations européennes clés en matière de climat, énergie, déchets et reporting ESG. Aucun autre texte ne traite spécifiquement de ces enjeux."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi-cadre relatif au développement des transports (N°2740)** pourraient impacter les stratégies énergie-climat des entreprises, notamment via des adaptations réglementaires ou des investissements dans des infrastructures durables. Le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** est également pertinent pour le reporting et la conformité aux nouvelles normes européennes. Aucun texte adopté ne semble directement lié à ces enjeux."
 }
