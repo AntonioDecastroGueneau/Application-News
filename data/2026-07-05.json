@@ -1,7 +1,7 @@
 {
   "date": "2026-07-05",
-  "generated_at": "08:40",
-  "elapsed_seconds": 170,
+  "generated_at": "12:49",
+  "elapsed_seconds": 153,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,7 +9,7 @@
     "depts_restriction": 92
   },
   "pipeline_meta": {
-    "run_at": "2026-07-05T08:40:23",
+    "run_at": "2026-07-05T12:49:40",
     "sources": {
       "JORF": 0,
       "RSS": 3,
@@ -19,19 +19,30 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 29,
-    "llm_seconds": 28.7
+    "llm_calls": 30,
+    "llm_seconds": 29.0
   },
   "items": [
     {
-      "id": "f671436cb09b",
-      "source": "ESG Today",
-      "categorie": "Énergie",
-      "titre": "ESG Today: Week in Review",
-      "resume": "L'article aborde des enjeux climatiques et ESG généraux (objectifs net zéro, décarbonation) qui, bien que non spécifiques à ABC, restent pertinents pour suivre les tendances et évolutions réglementaires impactant les entreprises de services comme ABC.",
+      "id": "5fcca968899c",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Canicule : pour Nicolas Revel, directeur de l’AP-HP, « on a dépassé le seuil qui conduit à un choc sanitaire »",
+      "resume": "L'article souligne l'impact croissant des canicules sur les infrastructures critiques (hôpitaux), illustrant un risque climatique opérationnel pour les entreprises de services comme ABC, dont les sites clients pourraient être affectés par des aléas similaires.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.esgtoday.com/esg-today-week-in-review-268/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-268",
+      "url": "https://www.lemonde.fr/societe/article/2026/07/05/canicule-pour-nicolas-revel-directeur-de-l-ap-hp-on-a-depasse-le-seuil-qui-conduit-a-un-choc-sanitaire_6720876_3224.html",
+      "date": "2026-07-05"
+    },
+    {
+      "id": "e23828b19f91",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Les forêts françaises durablement fragilisées par la multiplication des canicules et des sécheresses",
+      "resume": "L'article souligne l'impact des aléas climatiques (canicules, sécheresses) sur les forêts françaises, ce qui pourrait indirectement affecter les sites clients d'ABC (ex : risques de perturbations logistiques ou de coûts liés à la gestion des espaces verts).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/07/05/les-forets-francaises-durablement-fragilisees-par-la-multiplication-des-canicules-et-des-secheresses_6720869_3244.html",
       "date": "2026-07-05"
     },
     {
@@ -39,22 +50,11 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Chaleur au travail : les syndicats européens proposent une directive prête à l’emploi",
-      "resume": "La proposition de directive européenne sur le stress thermique au travail pourrait imposer de nouvelles obligations aux employeurs, y compris ABC, en matière de prévention des risques liés à la chaleur sur les sites clients (3 000+ sites).",
+      "resume": "La proposition de directive européenne sur le stress thermique au travail pourrait imposer de nouvelles obligations aux employeurs, dont ABC, en matière de prévention des risques climatiques pour les salariés intervenant sur les sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/chaleur-au-travail-les-syndicats-europeens-proposent-une-directive-prete-lemploi",
       "date": "2026-07-05"
-    },
-    {
-      "id": "857d716ad70e",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Après les canicules, les militants du climat espèrent un regain de mobilisation : « Il faut que la société se réveille »",
-      "resume": "L'article souligne l'impact des aléas climatiques (canicules) sur la mobilisation sociétale, ce qui pourrait renforcer les exigences des clients d'ABC en matière de résilience climatique et de reporting ESG, sans imposer d'action immédiate.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/07/04/apres-les-canicules-les-militants-du-climat-esperent-un-regain-de-mobilisation-il-faut-que-la-societe-se-reveille_6720674_3244.html",
-      "date": "2026-07-04"
     }
   ],
   "restrictions_eau": [
@@ -822,7 +822,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés et avis publiés concernent principalement des dispositifs techniques (pompes à chaleur, traçabilité des porcins), des procédures administratives (examens professionnels) et des modifications de cahiers des charges pour des labels agricoles (AOC, IGP, Label Rouge), sans impact direct sur les enjeux RSE majeurs d'une grande entreprise de services.",
+  "briefing_jorf": "Les arrêtés et avis du JO du 5 juillet 2026 concernent principalement des dispositifs techniques (pompes à chaleur, traçabilité des porcins, autoconsommation collective) et des labels agroalimentaires (AOC, IGP, Label Rouge), sans impact direct pour un Responsable Environnement/Climat d'une grande entreprise de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1176,5 +1176,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des normes européennes en matière environnementale et énergétique, pouvant impacter les obligations de reporting et les stratégies RSE des entreprises."
+  "pjl_briefing": "Aucun texte parlementaire de cette liste ne traite directement de sujets environnementaux, climatiques, énergétiques ou de reporting RSE. Les projets de loi concernent principalement des accords internationaux, des réformes institutionnelles, des questions sociales ou sécuritaires, et des adaptations juridiques sans lien avec les enjeux environnementaux ou la RSE."
 }
