@@ -1,59 +1,103 @@
 {
   "date": "2026-07-06",
-  "generated_at": "09:55",
-  "elapsed_seconds": 192,
+  "generated_at": "14:46",
+  "elapsed_seconds": 258,
   "errors": [],
   "stats": {
     "jo_analyses": 10,
     "jo_retenus": 0,
-    "depts_restriction": 92
+    "depts_restriction": 93
   },
   "pipeline_meta": {
-    "run_at": "2026-07-06T09:55:06",
+    "run_at": "2026-07-06T14:46:17",
     "sources": {
       "JORF": 0,
-      "RSS": 12,
-      "VigiEau": 92,
+      "RSS": 22,
+      "VigiEau": 93,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 44,
-    "llm_seconds": 54.5
+    "llm_calls": 59,
+    "llm_seconds": 74.2
   },
   "items": [
+    {
+      "id": "79c38ddc2bd0",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "CSRD : la Commission européenne adopte des normes ESRS allégées, applicables dès 2027",
+      "resume": "CSRD : la Commission européenne adopte des normes ESRS allégées, applicables dès 2027",
+      "pourquoi": "Mention de CSRD.",
+      "criticite": 3,
+      "url": "https://www.actu-environnement.com/ae/news/esrs-simplifies-commission-europeenne-csrd-48262.php4#xtor=RSS-6",
+      "date": "2026-07-06"
+    },
+    {
+      "id": "411ee2c99f0b",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "European Commission Adopts Finalized Corporate Sustainability Reporting Standards",
+      "resume": "L'adoption des normes ESRS (European Sustainability Reporting Standards) par la Commission européenne renforce les exigences de reporting extra-financier pour les entreprises, dont ABC devra intégrer dans son reporting CSRD.",
+      "pourquoi": "L'article concerne directement le reporting ESG (CSRD/ESRS) qui impacte ABC dans le cadre de ses obligations réglementaires et de ses clients (nucléaire, santé, industrie).",
+      "criticite": 2,
+      "url": "https://www.esgtoday.com/european-commission-adopts-finalized-corporate-sustainability-reporting-standards/?utm_source=rss&utm_medium=rss&utm_campaign=european-commission-adopts-finalized-corporate-sustainability-reporting-standards",
+      "date": "2026-07-06"
+    },
+    {
+      "id": "77b7c1a7f94c",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Territorialisation de la planification écologique : la circulaire de Sébastien Lecornu",
+      "resume": "La circulaire Lecornu renforce la territorialisation de la planification écologique en France, ce qui pourrait impacter les exigences réglementaires locales (BGES, énergie, déchets) pour les sites clients d'ABC, notamment via les COP régionales et les plans communaux.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/planification-ecologique-circulaire-lecornu-prefets-48261.php4#xtor=RSS-6",
+      "date": "2026-07-06"
+    },
     {
       "id": "17ed309c8bd9",
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Biocarburant B100, Solution française disponible",
-      "resume": "Le biocarburant B100 (Oleo100) offre une solution de décarbonation pour la flotte de véhicules d'ABC, compatible avec les véhicules existants, sans nécessiter de renouvellement massif. Cela peut contribuer à réduire les émissions scope 1 et répondre aux exigences carbone des clients.",
-      "pourquoi": "Le sujet concerne directement la flotte de véhicules d'ABC (scope 1), un enjeu clé identifié. Bien que l'article ne mentionne pas explicitement les obligations réglementaires pour les entreprises de services, il propose une solution opérationnelle pour la décarbonation de la flotte, alignée sur les trajectoires nationales (SNBC) et les attentes clients en matière de réduction d'émissions.",
-      "criticite": 2,
+      "resume": "Le biocarburant B100 (Oleo100) représente une solution de décarbonation pour la flotte de véhicules d'ABC, compatible avec les véhicules existants et alignée sur les enjeux de transition énergétique et de souveraineté française.",
+      "pourquoi": "",
+      "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/pdt/oleo-100-biocarburant-b100-decarbonation-transport-lourd-flotte-retrofit-1477.php4#xtor=RSS-6",
       "date": "2026-07-06"
     },
     {
-      "id": "5703ed024276",
-      "source": "Contexte Environnement",
-      "categorie": "Eau",
-      "titre": "Tout ce que le gouvernement veut mettre dans son plan plastique (ou presque)",
-      "resume": "Le plan plastique pourrait impacter les modalités de gestion des déchets pour ABC, notamment via des réformes de la collecte sélective et des relations avec les éco-organismes, influençant potentiellement les obligations de tri et de traçabilité des déchets de ses prestations.",
-      "pourquoi": "L'article aborde la réglementation déchets (REP, traçabilité, éco-organismes), un enjeu direct pour ABC dans le cadre de ses prestations de propreté/FM et de son reporting ESG (CSRD, ESRS). Bien que le plan plastique soit spécifique, il s'inscrit dans une dynamique réglementaire plus large sur les déchets qui concerne ABC.",
-      "criticite": 2,
-      "url": "https://www.contexte.com/fr/article/environnement/tout-ce-que-le-gouvernement-veut-mettre-dans-son-plan-plastique-ou-presque_271223?source=rss",
+      "id": "ae7e3447e5dc",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "« Des conditions caniculaires » de retour sur la France",
+      "resume": "L'article signale des vagues de chaleur prolongées en France, pouvant impacter l'activité d'ABC via des risques opérationnels (ex. : adaptation des prestations de propreté en période de canicule, gestion des déchets sensibles à la chaleur) et des exigences clients accrues en matière de résilience climatique.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Des-conditions-caniculaires-de-retour-sur-la-France",
       "date": "2026-07-06"
     },
     {
-      "id": "12c7d762a26c",
+      "id": "be73ef5dd8da",
       "source": "Reporterre",
       "categorie": "Climat",
-      "titre": "« Agir ou cuire, il faut choisir » : avec les canicules, le retour des luttes pour le climat",
-      "resume": "L'article souligne un regain de mobilisation climatique en France lié aux canicules, ce qui pourrait influencer les attentes des clients d'ABC (secteurs nucléaire, santé, industrie) en matière d'adaptation et de résilience climatique, impactant indirectement les exigences carbone et les risques opérationnels.",
+      "titre": "Face aux canicules, le sursaut du mouvement climat « pour limiter les dégâts »",
+      "resume": "L'article souligne un regain de mobilisation climatique en France lié aux canicules, ce qui pourrait influencer les attentes des clients d'ABC (nucléaire, santé, industrie) en matière d'adaptation et de résilience climatique, impactant indirectement les enjeux de reporting ESG et de gestion des risques opérationnels.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Agir-ou-cuire-il-faut-choisir-avec-les-canicules-le-retour-des-luttes-pour-le-climat",
+      "date": "2026-07-06"
+    },
+    {
+      "id": "4b50c9b4595d",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "Bruxelles à l'origine de plus de 50 reculs sur l'environnement et la santé",
+      "resume": "L'article signale des reculs réglementaires européens (dont CSRD) qui pourraient impacter les obligations de reporting ESG d'ABC, notamment pour ses clients soumis à des exigences carbone strictes (nucléaire, santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/environnement/climat/bruxelles-a-lorigine-de-plus-de-50-reculs-sur-lenvironnement-et-la-sante",
       "date": "2026-07-06"
     },
     {
@@ -61,10 +105,65 @@
       "source": "Novethic",
       "categorie": "Émissions",
       "titre": "Bilan des AG 2026 : notre infographie exclusive des principales résolutions ESG",
-      "resume": "L'article souligne l'évolution des attentes des actionnaires en matière de résolutions ESG pour les AG 2026, ce qui peut impacter indirectement les exigences carbone et reporting des clients d'ABC (secteurs nucléaire, santé, industrie).",
+      "resume": "L'article aborde les résolutions ESG votées en AG 2026, un contexte à surveiller pour anticiper les exigences carbone croissantes des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/finance-durable/engagement-actionnarial/bilan-ag-2026-principales-resolutions-esg-infographie",
+      "date": "2026-07-06"
+    },
+    {
+      "id": "5703ed024276",
+      "source": "Contexte Environnement",
+      "categorie": "Eau",
+      "titre": "Tout ce que le gouvernement veut mettre dans son plan plastique (ou presque)",
+      "resume": "Le plan plastique pourrait impacter les modalités de gestion des déchets pour ABC, notamment via des réformes de la collecte sélective et des relations avec les éco-organismes, sans obligation directe immédiate mais avec des évolutions à surveiller pour les prestations de propreté.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.contexte.com/fr/article/environnement/tout-ce-que-le-gouvernement-veut-mettre-dans-son-plan-plastique-ou-presque_271223?source=rss",
+      "date": "2026-07-06"
+    },
+    {
+      "id": "21ce506e15a7",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "L’été renchérit encore le prix de l’électricité [Marchés]",
+      "resume": "L'augmentation des prix de l'électricité en été peut impacter les coûts énergétiques des sites clients d'ABC, influençant indirectement la compétitivité des prestations de propreté/FM et les exigences carbone des clients (notamment dans les secteurs nucléaire, santé ou industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/lete-rencherit-encore-le-prix-de-lelectricite-marches-428625/",
+      "date": "2026-07-06"
+    },
+    {
+      "id": "5d92d828f80e",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Batteries : combien rapporte 1 MW en juin [Observatoire]",
+      "resume": "L'article illustre l'impact des aléas climatiques (canicule) sur les revenus des batteries de stockage d'électricité, un sujet indirectement lié aux enjeux énergétiques et de décarbonation des entreprises comme ABC, notamment via la gestion de la demande énergétique de ses clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/batteries-combien-rapporte-1-mw-en-juin-observatoire-428529/",
+      "date": "2026-07-06"
+    },
+    {
+      "id": "4476ce518ae1",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Decade Energy et l’OTRE lancent un programme de 50 M€ pour les transporteurs lourds",
+      "resume": "Le programme de 50 M€ vise à accélérer l'électrification des flottes de transporteurs lourds, ce qui pourrait impacter indirectement ABC via ses clients industriels ou logistiques (scope 3) et leurs exigences en matière de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/decade-energy-et-lotre-lancent-un-programme-de-50-me-pour-les-transporteurs-lourds-428537/",
+      "date": "2026-07-06"
+    },
+    {
+      "id": "81584d9b4d00",
+      "source": "Le Monde Planète",
+      "categorie": "Biodiversité",
+      "titre": "En pleine vague de chaleur, le gouvernement met fin aux programmes de recherche sur l’adaptation des logements et des territoires",
+      "resume": "La suppression d'un programme interministériel sur l'adaptation des logements et territoires aux vagues de chaleur pourrait impacter indirectement ABC via une augmentation des risques climatiques opérationnels sur ses 3 000+ sites clients, notamment en termes de maintenance et d'adaptation des infrastructures.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/economie/article/2026/07/06/en-pleine-vague-de-chaleur-le-gouvernement-met-fin-aux-programmes-de-recherche-sur-l-adaptation-des-logements-et-des-territoires_6721187_3234.html",
       "date": "2026-07-06"
     },
     {
@@ -72,7 +171,7 @@
       "source": "Le Monde Planète",
       "categorie": "Déchets",
       "titre": "Dans le sud de l’Europe, des avancées dans les entreprises encore insuffisantes face aux chaleurs extrêmes",
-      "resume": "L'article souligne l'adaptation des législations européennes (Espagne, Italie) face aux vagues de chaleur, un risque climatique indirect pour ABC via ses 3 000+ sites clients, notamment dans les secteurs nucléaire, santé et industrie.",
+      "resume": "L'article souligne l'adaptation des législations européennes (Espagne, Italie) aux vagues de chaleur extrêmes, un risque climatique opérationnel pour ABC dont les 3 000+ sites clients pourraient être impactés par des aléas climatiques, nécessitant une veille sur les mesures locales et leurs implications pour les contrats de prestation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/07/06/dans-le-sud-de-l-europe-des-avancees-dans-les-entreprises-encore-insuffisantes-face-aux-chaleurs-extremes_6721160_3234.html",
@@ -83,7 +182,7 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "Bureaux refuges ou recours massif au télétravail, les entreprises s’adaptent tant bien que mal aux vagues de chaleur",
-      "resume": "L'article souligne l'absence d'anticipation des entreprises face aux vagues de chaleur, un risque climatique opérationnel pouvant impacter les sites clients d'ABC (3 000+ sites) et leurs conditions de travail, nécessitant une adaptation des prestations de propreté/FM.",
+      "resume": "L'article souligne le manque d'anticipation des entreprises face aux vagues de chaleur, un risque climatique opérationnel pouvant impacter les 3 000+ sites clients d'ABC (ex : conditions de travail, adaptation des prestations).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/07/06/bureaux-refuges-ou-recours-massif-au-teletravail-les-entreprises-s-adaptent-tant-bien-que-mal-aux-vagues-de-chaleur_6721150_3234.html",
@@ -94,7 +193,7 @@
       "source": "Le Monde Planète",
       "categorie": "Déchets",
       "titre": "PFAS : même au prix d’investissements massifs, moins de 2 % des émissions seraient retirées de l’environnement",
-      "resume": "L'article souligne l'inefficacité des solutions de dépollution des PFAS et l'urgence de réduire drastiquement leurs émissions, ce qui pourrait impacter les exigences réglementaires et clients d'ABC en matière de gestion des déchets et de reporting ESG (scope 3).",
+      "resume": "L'article souligne l'inefficacité des solutions de dépollution des PFAS et l'urgence de réduire drastiquement leurs émissions, ce qui pourrait impacter les obligations réglementaires et les attentes clients d'ABC en matière de gestion des déchets et de reporting ESG (scope 3).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/les-decodeurs/article/2026/07/06/pfas-meme-au-prix-d-investissements-massifs-moins-de-2-des-emissions-seraient-retirees-de-l-environnement_6721139_4355770.html",
@@ -105,7 +204,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Plus de la moitié des maisons en France menacées par les mouvements des sols argileux dus à la sécheresse : « C’est devenu un drame national »",
-      "resume": "L'article souligne l'augmentation des risques climatiques liés aux mouvements de sols argileux en France, pouvant impacter les sites clients d'ABC (bâtiments tertiaires, industriels ou de santé) et générer des coûts de réparation ou des perturbations opérationnelles.",
+      "resume": "Les mouvements de sols argileux liés à la sécheresse pourraient impacter la stabilité des infrastructures des sites clients d'ABC (non exploitants ICPE), générant des risques opérationnels indirects (ex. : dégradation des bâtiments, perturbations des prestations).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/07/06/plus-de-la-moitie-des-maisons-en-france-menacees-par-les-mouvements-des-sols-argileux-dus-a-la-secheresse-c-est-devenu-un-drame-national_6721135_3244.html",
@@ -116,7 +215,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Canicule : « Tant que l’industrie fossile continuera d’ignorer les lois de la physique, les événements climatiques extrêmes gagneront en intensité et en fréquence »",
-      "resume": "L'article souligne l'urgence climatique et l'impact des énergies fossiles sur l'intensification des événements extrêmes, ce qui renforce les risques opérationnels pour ABC (aléas climatiques sur les sites clients) et les exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "resume": "L'article souligne l'urgence climatique et l'impact des énergies fossiles sur l'intensification des événements extrêmes, ce qui renforce les enjeux de décarbonation pour ABC, notamment sur sa flotte de véhicules (scope 1) et ses engagements clients en matière de reporting ESG (CSRD).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/07/06/canicule-tant-que-l-industrie-fossile-continuera-d-ignorer-les-lois-de-la-physique-les-evenements-climatiques-extremes-gagneront-en-intensite-et-en-frequence_6721060_3232.html",
@@ -127,7 +226,7 @@
       "source": "The Guardian Environment",
       "categorie": "Déchets",
       "titre": "EV charger rollout in UK slows amid political uncertainty and rise in installation costs",
-      "resume": "L'article souligne un ralentissement du déploiement des bornes de recharge au Royaume-Uni, lié à des incertitudes politiques et à la hausse des coûts, ce qui peut impacter la stratégie de mobilité durable d'ABC (électrification de sa flotte) en termes de coûts et de planification.",
+      "resume": "L'article souligne un ralentissement du déploiement des bornes de recharge au Royaume-Uni, lié à des incertitudes politiques et à la hausse des coûts, ce qui pourrait impacter la stratégie de mobilité durable d'ABC en France et en Europe.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.theguardian.com/business/2026/jul/06/uk-rollout-ev-chargers-slows",
@@ -138,7 +237,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Travail pendant la canicule : Jean-Pierre Farandou évoque 3 600 contrôles en un mois et un «cadrage national» en octobre",
-      "resume": "L'article souligne l'intensification des contrôles sur le travail pendant les épisodes de canicule en France, avec un cadrage national prévu en octobre 2026. Cela impacte indirectement ABC via les risques climatiques opérationnels sur ses 3 000+ sites clients, nécessitant une adaptation des protocoles de sécurité et de prévention des risques thermiques pour les équipes de propreté/FM.",
+      "resume": "L'article souligne l'intensification des contrôles sur les conditions de travail pendant les canicules, avec un cadrage national prévu en octobre 2026, ce qui pourrait impacter les pratiques opérationnelles d'ABC sur ses 3 000+ sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/travail-pendant-la-canicule-jean-pierre-farandou-evoque-3-600-controles-en-un-mois-et-un-1",
@@ -149,11 +248,22 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Audit énergétique en entreprise : la reconnaissance de compétence transitoire des auditeurs est prolongée d'un an",
-      "resume": "Prolongation d'un an de la reconnaissance transitoire des compétences des auditeurs pour les audits énergétiques en entreprise, ce qui peut impacter la qualité et la conformité des audits énergétiques réalisés par ABC pour ses clients.",
+      "resume": "L'article prolonge d'un an la reconnaissance transitoire des auditeurs pour les audits énergétiques en entreprise, ce qui pourrait impacter les délais de conformité pour ABC dans le cadre de ses obligations en efficacité énergétique (DPE tertiaire, ISO 14001).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/audit-energetique-en-entreprise-la-reconnaissance-de-competence-transitoire-des-auditeurs-3",
       "date": "2026-07-06"
+    },
+    {
+      "id": "f671436cb09b",
+      "source": "ESG Today",
+      "categorie": "Énergie",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article aborde des enjeux climatiques globaux (objectifs net zéro) et des défis de reporting ESG, pertinents pour le contexte de reporting extra-financier et de décarbonation de ABC, mais sans obligation réglementaire directe ou action opérationnelle immédiate.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-268/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-268",
+      "date": "2026-07-05"
     }
   ],
   "restrictions_eau": [
@@ -185,6 +295,11 @@
     {
       "dept_code": "86",
       "dept_nom": "Vienne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "33",
+      "dept_nom": "Gironde",
       "niveau": "crise"
     },
     {
@@ -355,11 +470,6 @@
     {
       "dept_code": "40",
       "dept_nom": "Landes",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "33",
-      "dept_nom": "Gironde",
       "niveau": "alerte renforcée"
     },
     {
@@ -600,6 +710,11 @@
     {
       "dept_code": "84",
       "dept_nom": "Vaucluse",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "04",
+      "dept_nom": "Alpes-de-Haute-Provence",
       "niveau": "vigilance"
     },
     {
@@ -897,7 +1012,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés relatifs aux pompes à chaleur agréées et à la traçabilité des porcins pourraient impacter les stratégies d'approvisionnement durable et de décarbonation des entreprises, tandis que les procédures d'opposition sur les labels agricoles (AOC, IGP, Label Rouge) concernent des enjeux de qualité et de résilience des filières alimentaires.",
+  "briefing_jorf": "Les arrêtés n°2 et n°3 concernent respectivement la résilience industrielle des pompes à chaleur (énergies renouvelables) et la traçabilité des données énergétiques, deux enjeux clés pour la transition écologique. Les avis sur les modifications de cahiers des charges (label rouge, AOC, IGP) impactent les filières agroalimentaires durables et locales, pertinents pour une stratégie RSE axée sur l'économie circulaire et la réduction de l'empreinte carbone.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1251,5 +1366,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N° 2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des normes européennes en matière d'énergie, d'environnement et de climat. Aucun autre texte ne traite explicitement de sujets RSE, reporting ou déchets."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de transport) et le n°2740 (développement des transports) pourraient avoir un impact indirect sur les enjeux climatiques et énergétiques pour une entreprise de services. Aucun texte ne traite directement de la RSE, du reporting extra-financier ou de la gestion des déchets."
 }
