@@ -1,7 +1,7 @@
 {
   "date": "2026-07-07",
-  "generated_at": "09:24",
-  "elapsed_seconds": 216,
+  "generated_at": "13:34",
+  "elapsed_seconds": 192,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,18 +9,18 @@
     "depts_restriction": 93
   },
   "pipeline_meta": {
-    "run_at": "2026-07-07T09:24:03",
+    "run_at": "2026-07-07T13:34:55",
     "sources": {
       "JORF": 0,
-      "RSS": 20,
+      "RSS": 16,
       "VigiEau": 93,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 57,
-    "llm_seconds": 67.7
+    "llm_calls": 51,
+    "llm_seconds": 57.0
   },
   "items": [
     {
@@ -35,25 +35,69 @@
       "date": "2026-07-07"
     },
     {
+      "id": "067087be7751",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Biométhane : la filière s'inquiète de l'évolution des soutiens",
+      "resume": "L'article aborde le biométhane, une énergie renouvelable dont l'évolution des soutiens pourrait impacter les stratégies énergétiques des entreprises, notamment dans le cadre de leur décarbonation et de leur reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/biomethane-soutiens-tarif-achat-decret-48271.php4#xtor=RSS-6",
+      "date": "2026-07-07"
+    },
+    {
+      "id": "2996d8a6b316",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Incendies de végétation : Atmo livre une note sur leurs conséquences sur la qualité de l'air",
+      "resume": "L'article souligne l'augmentation des incendies de végétation en France, liée aux canicules et sécheresses, pouvant impacter la qualité de l'air et les activités de propreté/FM d'ABC sur ses 3 000+ sites clients (risques indirects liés aux aléas climatiques).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/incendies-vegetation-qualite-air-atmosud-48270.php4#xtor=RSS-6",
+      "date": "2026-07-07"
+    },
+    {
       "id": "6c5cd91dd89b",
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Sécheresse, canicule : l'eau de demain sera recyclée",
-      "resume": "L'article souligne l'urgence de la gestion de l'eau en France face aux sécheresses récurrentes, ce qui pourrait impacter les activités de nettoyage extérieur d'ABC (ex. : arrosage des espaces verts, lavage des sols) et influencer les attentes clients en matière de durabilité.",
+      "resume": "L'article souligne l'urgence de la gestion de l'eau face aux sécheresses accrues en France, un risque climatique opérationnel pouvant impacter les activités de nettoyage et de propreté d'ABC sur ses 3 000+ sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/biodiversite/secheresse-canicule-leau-de-demain-sera-recyclee",
       "date": "2026-07-07"
     },
     {
-      "id": "e6ccfa72a998",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "EN DIRECT, incendies : le Vaucluse passe en vigilance sécheresse alors que le département affiche déjà un risque d’incendies « très élevé »",
-      "resume": "L'article souligne l'augmentation des risques d'incendies en France, notamment dans le Vaucluse, ce qui pourrait impacter la sécurité des sites clients d'ABC et nécessiter des adaptations opérationnelles (ex : plans d'urgence, gestion des déchets végétaux).",
+      "id": "a4cd1c2e16b3",
+      "source": "GreenUnivers",
+      "categorie": "Biodiversité",
+      "titre": "La sortie du gaz intéresse plus de territoires que prévu [SGPE]",
+      "resume": "La sortie du gaz en France pourrait impacter les politiques énergétiques des collectivités locales, influençant potentiellement les contrats de prestation de services (énergie, mobilité) d'ABC avec ses clients, notamment via des exigences accrues en décarbonation ou des adaptations des infrastructures.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/live/2026/07/07/en-direct-incendies-61-departements-en-vigilance-orange-canicule-mardi-l-incendie-dans-les-pyrenees-orientales-n-a-pas-progresse-pendant-la-nuit_6720911_3244.html",
+      "url": "https://www.greenunivers.com/2026/07/la-sortie-du-gaz-interesse-plus-de-territoires-que-prevu-sgpe-428755/",
+      "date": "2026-07-07"
+    },
+    {
+      "id": "dac1b6dd9e2f",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "L’Allemagne lance les inscriptions aux appels d’offres pour 9 GW de capacités de longue durée",
+      "resume": "L'Allemagne accélère sa transition énergétique avec des appels d'offres pour 9 GW de capacités de longue durée, influençant indirectement les exigences carbone et les stratégies énergétiques des clients industriels d'ABC en France et en Europe.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/lallemagne-lance-les-inscriptions-aux-appels-doffres-pour-9-gw-de-capacites-de-longue-duree-428671/",
+      "date": "2026-07-07"
+    },
+    {
+      "id": "c4c190d5c3f4",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "De nouvelles aides pour l’électrification",
+      "resume": "L'article annonce de nouvelles aides gouvernementales pour l'électrification des flottes de véhicules, ce qui pourrait impacter la stratégie de décarbonation de la flotte d'ABC (scope 1) et ses coûts opérationnels.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/de-nouvelles-aides-pour-lelectrification-428642/",
       "date": "2026-07-07"
     },
     {
@@ -61,7 +105,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "« A chaque épisode climatique majeur, notre capacité collective à faire face repose sur des travailleurs en première ligne »",
-      "resume": "L'article souligne l'importance des travailleurs en première ligne (dont ceux du secteur de la propreté/FM) pour la résilience face aux aléas climatiques, un enjeu indirect mais stratégique pour ABC face aux exigences de continuité de service de ses clients.",
+      "resume": "L'article souligne l'importance des travailleurs de première ligne (dont ceux du secteur de la propreté/FM) dans la résilience face aux aléas climatiques, un enjeu critique pour ABC compte tenu de ses 3 000+ sites clients exposés aux risques climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/07/07/a-chaque-episode-climatique-majeur-notre-capacite-collective-a-faire-face-repose-sur-des-travailleurs-en-premiere-ligne_6721427_3232.html",
@@ -72,7 +116,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Canicule : Elisabeth Borne appelle « à sanctuariser les moyens pour la transition écologique »",
-      "resume": "L'article souligne l'importance de financements publics pour la transition écologique, notamment via le fonds vert, mais n'impose pas d'action directe pour ABC dans ses activités de propreté/FM ou son reporting.",
+      "resume": "L'article souligne l'importance de maintenir les financements publics pour la transition écologique, ce qui pourrait impacter indirectement les budgets des clients d'ABC (collectivités, entreprises) et leurs exigences en matière de services durables.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/politique/article/2026/07/07/canicule-elisabeth-borne-appelle-a-sanctuariser-les-moyens-pour-la-transition-ecologique_6721426_823448.html",
@@ -83,10 +127,21 @@
       "source": "Les Echos Environnement",
       "categorie": "Énergie",
       "titre": "Climat : « Le taux vert est un complément indispensable à la tarification carbone » - Les Echos",
-      "resume": "L'article souligne l'importance du 'taux vert' comme outil complémentaire à la tarification carbone pour accélérer la décarbonation des entreprises, ce qui pourrait influencer les stratégies de reporting ESG et de réduction des émissions de ABC.",
+      "resume": "L'article souligne l'importance du taux vert (subventions pour les projets bas-carbone) comme complément à la tarification carbone, ce qui pourrait influencer les stratégies de financement des projets de décarbonation d'ABC, notamment pour sa flotte de véhicules ou ses investissements énergétiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQk85eXNDaE9QMVhfOGlpNzZQVTB2bDQxTmFJU3FDRkx6bW1UbG1qLWlpLWc0S2xSVTd5emJIal9KNzhUUkNQSTFtTUhWMTQydWIyLUhWS3ZhT0R5eldVdnlJVkpiVElBOTkwVWR5SE5oXzRqV0NTTUtVQ1NKaDNIM3VWQkdWVkdTM2YzQjRDR2ZZdkF3dERidU5jeWVzZlVDVjZEX0lpaFlRdkdNeUJqTW8wSmM0QW96T3lsS2NQVjRUS0xmZ24waw?oc=5",
+      "date": "2026-07-07"
+    },
+    {
+      "id": "2677aedbef65",
+      "source": "Les Echos Environnement",
+      "categorie": "Eau",
+      "titre": "Batteries, solaire, éolien : les nouveaux appels d'offres du gouvernement pour les énergies renouvelables - Les Echos",
+      "resume": "L'article annonce des appels d'offres gouvernementaux pour les énergies renouvelables (batteries, solaire, éolien), ce qui pourrait influencer les stratégies clients d'ABC (ex : décarbonation des sites tertiaires ou industriels) et les attentes en matière de reporting ESG (CSRD/ESRS).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNTG9MMG11YUxqUWZlcmdlWVlqY3B1VVNFakpfQkxwOHlIX3oxZkoxVVF3Mkh6N0hKS2VtNkZmcFZpQ094RjBEb1gxZUhncWFoQVFsbnc3YS0zVzV5MnQzYkZ0c2JTUWtBQmVzR1hyRXFraWd0cWhmV05Ebk1kQTdadmxxSXhPU2xvcEhaUkVWSzZ1U3JwOEV1X2JWdnBKVkVua3hkUTdwekwzMFJQUER4SkxxUmhlSGtSSkJHUDZSeHJPWklxcndOZk5yR1I5NGIxOEZyX3ZpV28zak5DLVpVOU5GN0hBaUF1NHBHVWRZTGZJRUsxTEFzUkoyc1JyTHNlblZr?oc=5",
       "date": "2026-07-07"
     },
     {
@@ -101,22 +156,11 @@
       "date": "2026-07-06"
     },
     {
-      "id": "411ee2c99f0b",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "European Commission Adopts Finalized Corporate Sustainability Reporting Standards",
-      "resume": "L'adoption des normes ESRS (European Sustainability Reporting Standards) par la Commission européenne renforce les exigences de reporting ESG pour les entreprises, y compris ABC, dans le cadre de la CSRD. Cela impacte directement la préparation de leur rapport extra-financier.",
-      "pourquoi": "L'article concerne directement le reporting ESG (CSRD/ESRS) qui est un enjeu clé pour ABC dans le cadre de sa stratégie RSE et de ses obligations réglementaires. Bien que non encore opérationnel immédiatement, cette évolution impose une veille active et une préparation pour 2024-2025.",
-      "criticite": 2,
-      "url": "https://www.esgtoday.com/european-commission-adopts-finalized-corporate-sustainability-reporting-standards/?utm_source=rss&utm_medium=rss&utm_campaign=european-commission-adopts-finalized-corporate-sustainability-reporting-standards",
-      "date": "2026-07-06"
-    },
-    {
       "id": "b2a9a494d724",
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Plastique recyclé : Bruxelles valide la préférence européenne et encadre le recyclage chimique",
-      "resume": "L'article impacte indirectement ABC via la réglementation européenne sur le plastique recyclé (REP), influençant potentiellement les déchets générés par les prestations de nettoyage et les exigences clients en matière de traçabilité des matériaux. La préférence européenne pour le recyclage mécanique en Europe pourrait modifier les filières d'approvisionnement des produits de nettoyage ou des emballages utilisés sur les sites clients.",
+      "resume": "L'article impacte indirectement ABC via la réglementation européenne sur le plastique recyclé (REP), influençant les déchets de prestations (scope 3) et les exigences clients en matière de traçabilité et d'approvisionnement durable.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/regles-recyclage-chimique-incorporation-pet-recycle-bouteilles-48267.php4#xtor=RSS-6",
@@ -127,54 +171,10 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Territorialisation de la planification écologique : la circulaire de Sébastien Lecornu",
-      "resume": "La circulaire Lecornu renforce la territorialisation de la planification écologique, ce qui pourrait impacter les exigences carbone des clients d'ABC (notamment industriels, santé ou nucléaire) via des COP régionales et des plans locaux intégrant des critères environnementaux plus stricts.",
+      "resume": "La circulaire Lecornu renforce la territorialisation des politiques climatiques locales, ce qui pourrait influencer les exigences des clients d'ABC (notamment collectivités et entreprises locales) en matière de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/planification-ecologique-circulaire-lecornu-prefets-48261.php4#xtor=RSS-6",
-      "date": "2026-07-06"
-    },
-    {
-      "id": "ae7e3447e5dc",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "« Des conditions caniculaires » de retour sur la France",
-      "resume": "L'article signale des vagues de canicule en France, pouvant impacter l'activité d'ABC via des risques opérationnels (ex. : perturbation des prestations chez les clients, contraintes sur la flotte de véhicules ou les conditions de travail).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Des-conditions-caniculaires-de-retour-sur-la-France",
-      "date": "2026-07-06"
-    },
-    {
-      "id": "4b50c9b4595d",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "Bruxelles à l'origine de plus de 50 reculs sur l'environnement et la santé",
-      "resume": "L'article signale des reculs réglementaires européens sur des sujets clés pour ABC (CSRD, reporting de durabilité, émissions, véhicules électriques), pouvant impacter les exigences clients en matière de reporting ESG et de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/environnement/climat/bruxelles-a-lorigine-de-plus-de-50-reculs-sur-lenvironnement-et-la-sante",
-      "date": "2026-07-06"
-    },
-    {
-      "id": "c4c190d5c3f4",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "De nouvelles aides pour l’électrification",
-      "resume": "Le gouvernement annonce de nouvelles aides pour l'électrification des flottes, incluant un leasing social pour 50 000 véhicules électriques, ce qui pourrait impacter la stratégie de décarbonation de la flotte de véhicules d'ABC (scope 1).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/de-nouvelles-aides-pour-lelectrification-428642/",
-      "date": "2026-07-06"
-    },
-    {
-      "id": "03359a259263",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Pourquoi Rive investit dans la chaleur renouvelable industrielle",
-      "resume": "L'article illustre une tendance de décarbonation industrielle via la chaleur renouvelable (biomasse), un enjeu potentiel pour les clients d'ABC (nucléaire, santé, industrie) dans leur stratégie climat et reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/pourquoi-rive-investit-dans-la-chaleur-renouvelable-industrielle-428677/",
       "date": "2026-07-06"
     },
     {
@@ -182,54 +182,10 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Reflect10 promet une augmentation de production record des modules solaires",
-      "resume": "L'article aborde une innovation technologique dans le solaire (réflectricité) qui pourrait influencer les choix énergétiques des clients d'ABC, notamment en termes de décarbonation et de reporting ESG (scope 2).",
+      "resume": "L'article présente une innovation technologique (réflectricité) pouvant impacter le marché des énergies renouvelables, mais sans lien direct avec les enjeux opérationnels immédiats d'ABC (flotte, déchets, BGES, CSRD).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/reflect10-promet-une-augmentation-de-production-record-des-modules-solaires-428664/",
-      "date": "2026-07-06"
-    },
-    {
-      "id": "21ce506e15a7",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "L’été renchérit encore le prix de l’électricité [Marchés]",
-      "resume": "L'augmentation des prix de l'électricité en période estivale peut impacter les coûts énergétiques des sites clients d'ABC, notamment dans le cadre de la gestion des bâtiments tertiaires. Cela peut influencer les stratégies d'achat d'énergie ou d'optimisation des consommations pour les prestations de FM.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/lete-rencherit-encore-le-prix-de-lelectricite-marches-428625/",
-      "date": "2026-07-06"
-    },
-    {
-      "id": "4476ce518ae1",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Decade Energy et l’OTRE lancent un programme de 50 M€ pour les transporteurs lourds",
-      "resume": "L'article aborde la décarbonation des flottes de transport lourd, un enjeu indirect pour ABC via la mobilité durable de ses propres véhicules (scope 1) et les exigences carbone de ses clients industriels ou logistiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/decade-energy-et-lotre-lancent-un-programme-de-50-me-pour-les-transporteurs-lourds-428537/",
-      "date": "2026-07-06"
-    },
-    {
-      "id": "20ae9d05f1ad",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Canicule : « L’adaptation matérielle des écoles devra se combiner avec une adaptation des rythmes »",
-      "resume": "L'article souligne l'importance de l'adaptation des bâtiments et des rythmes organisationnels face aux canicules, ce qui pourrait impacter les sites clients d'ABC (ex : écoles) et leurs exigences en matière de résilience climatique.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/07/06/canicule-l-adaptation-materielle-des-ecoles-devra-se-combiner-avec-une-adaptation-des-rythmes_6721231_3232.html",
-      "date": "2026-07-06"
-    },
-    {
-      "id": "6dd2a514165a",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Canicule : les salariés de RTE, gestionnaire du réseau de transport d’électricité, alertent sur un « danger grave et imminent »",
-      "resume": "L'article souligne les risques climatiques (canicules) sur les infrastructures électriques, pouvant impacter la continuité de service des clients d'ABC et leur propre flotte de véhicules (électrification).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/economie/article/2026/07/06/canicule-les-salaries-de-rte-gestionnaire-du-reseau-de-transport-d-electricite-alertent-sur-un-danger-grave-et-imminent_6721232_3234.html",
       "date": "2026-07-06"
     },
     {
@@ -237,7 +193,7 @@
       "source": "ESG Today",
       "categorie": "Déchets",
       "titre": "Starbucks “Actively Reassessing” 2030 Climate Goal",
-      "resume": "L'article illustre une tendance sectorielle de réévaluation des objectifs climatiques par une grande entreprise, signalant une pression accrue sur les fournisseurs (dont ABC) pour aligner leurs engagements carbone avec ceux de leurs clients.",
+      "resume": "L'article illustre une tendance sectorielle où les entreprises réévaluent leurs objectifs climatiques en raison de pressions réglementaires ou d'exigences clients, ce qui peut impacter les attentes des clients d'ABC en matière de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/starbucks-actively-reassessing-value-chain-emissions-reduction-goal/?utm_source=rss&utm_medium=rss&utm_campaign=starbucks-actively-reassessing-value-chain-emissions-reduction-goal",
@@ -1506,5 +1462,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Aucun des projets de loi ou textes adoptés listés ne traite directement de sujets environnementaux, climatiques, énergétiques ou de reporting RSE majeurs pour une grande entreprise de services. Les textes adoptés (N°305 à 323) semblent concerner des sujets administratifs ou sectoriels sans lien apparent avec les enjeux climatiques ou la RSE."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des réglementations européennes clés en matière de climat, énergie et déchets. Aucun autre texte ne mentionne explicitement des enjeux environnementaux ou climatiques."
 }
