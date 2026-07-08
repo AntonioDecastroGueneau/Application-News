@@ -1,7 +1,7 @@
 {
   "date": "2026-07-08",
-  "generated_at": "08:08",
-  "elapsed_seconds": 226,
+  "generated_at": "13:02",
+  "elapsed_seconds": 215,
   "errors": [],
   "stats": {
     "jo_analyses": 10,
@@ -9,29 +9,40 @@
     "depts_restriction": 93
   },
   "pipeline_meta": {
-    "run_at": "2026-07-08T08:08:44",
+    "run_at": "2026-07-08T13:02:31",
     "sources": {
       "JORF": 0,
-      "RSS": 20,
+      "RSS": 21,
       "VigiEau": 93,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 54,
-    "llm_seconds": 59.0
+    "llm_calls": 62,
+    "llm_seconds": 71.5
   },
   "items": [
     {
-      "id": "8c661388d95f",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "« Mon directeur m'a dit d'aller acheter des Mr. Freeze » : la colère de salariés de salles d'escalade par 40 °C",
-      "resume": "L'article illustre l'impact des aléas climatiques (canicules) sur les sites tertiaires non adaptés, soulignant les risques opérationnels et réputationnels pour les prestataires de services comme ABC, notamment en termes de confort des employés et de continuité de service.",
+      "id": "1e84e6bf203d",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Loi Aper : la justice donne des précisions sur son application dans le temps",
+      "resume": "La décision de la cour administrative d'appel de Nancy précise l'application temporelle de la loi APER (Accélération de la Production des Énergies Renouvelables), ce qui peut impacter les obligations des entreprises en matière de tri et de gestion des déchets, notamment via les filières REP.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://reporterre.net/Mon-directeur-m-a-dit-d-aller-acheter-des-Mr-Freeze-la-colere-de-salaries-de-salles-d",
+      "url": "https://www.actu-environnement.com/ae/news/loi-aper-application-permis-photovoltaique-48280.php4#xtor=RSS-6",
+      "date": "2026-07-08"
+    },
+    {
+      "id": "87b34e8735fe",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "REP emballages professionnels (1/2) : un report surprise qui fait de nombreux déçus",
+      "resume": "Le report de la REP emballages professionnels pourrait impacter la gestion des déchets de prestations de propreté/FM d'ABC, notamment en termes de traçabilité et de coûts liés aux emballages utilisés sur les sites clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/report-rep-emballages-professionnels-revirement-concurrence-48278.php4#xtor=RSS-6",
       "date": "2026-07-08"
     },
     {
@@ -39,10 +50,43 @@
       "source": "Novethic",
       "categorie": "Eau",
       "titre": "Starbucks supprime sa direction du développement durable",
-      "resume": "La suppression de la direction du développement durable chez Starbucks pourrait signaler un recul des engagements RSE dans le secteur des services, un contexte à surveiller pour ABC afin d'anticiper les attentes clients en matière de durabilité.",
+      "resume": "Cette décision de Starbucks pourrait signaler une tendance à la réduction des ressources dédiées à la RSE dans certains secteurs, mais n'a pas d'impact direct ou réglementaire immédiat sur ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/starbucks-suppression-direction-developpement-durable",
+      "date": "2026-07-08"
+    },
+    {
+      "id": "7ef37d1fa990",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "La viabilité des plans d’électrification européens reste incertaine [Étude]",
+      "resume": "L'incertitude sur la viabilité des plans d'électrification européens pourrait impacter les coûts et la planification de la flotte de véhicules d'ABC, notamment en termes d'investissements dans des véhicules propres et de dépendance aux infrastructures de recharge.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/la-viabilite-des-plans-delectrification-europeens-reste-incertaine-etude-428804/",
+      "date": "2026-07-08"
+    },
+    {
+      "id": "6a3556166a17",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Valeco signe un PPA solaire de 15 ans et se prépare à monter en gamme",
+      "resume": "L'article illustre une tendance croissante des PPA (Power Purchase Agreements) solaires en France, un modèle énergétique que des clients d'ABC (notamment dans l'industrie ou la distribution) pourraient adopter, impactant indirectement les enjeux de décarbonation et de reporting ESG pour le prestataire.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/valeco-signe-un-ppa-solaire-de-15-ans-et-se-prepare-a-monter-en-gamme-428857/",
+      "date": "2026-07-08"
+    },
+    {
+      "id": "9c87fdd38f4d",
+      "source": "Le Monde Planète",
+      "categorie": "Énergie",
+      "titre": "Dans le solaire et l’éolien, l’inquiétude monte face aux suppressions de postes",
+      "resume": "L'article souligne des tensions dans le secteur des énergies renouvelables, ce qui pourrait impacter les politiques clients d'ABC (notamment industriels ou nucléaires) en matière de décarbonation et de transition énergétique, sans affecter directement ses activités.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/economie/article/2026/07/08/dans-le-solaire-et-l-eolien-l-inquietude-monte-face-aux-suppressions-de-postes_6721832_3234.html",
       "date": "2026-07-08"
     },
     {
@@ -50,7 +94,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "La « justice climatique », grande oubliée des politiques d’adaptation aux canicules",
-      "resume": "L'article souligne l'importance de l'adaptation climatique ciblant les populations vulnérables, ce qui pourrait influencer les exigences des clients d'ABC (secteurs santé, industrie) en matière de résilience de leurs sites et prestations.",
+      "resume": "L'article souligne l'importance des politiques d'adaptation climatique ciblant les populations vulnérables, un enjeu indirect pour ABC via la gestion des risques opérationnels sur ses 3 000+ sites clients exposés aux aléas climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/07/08/la-justice-climatique-grande-oubliee-des-politiques-d-adaptation-aux-canicules_6721791_3232.html",
@@ -61,7 +105,7 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "Baisse marquée des émissions de gaz à effet de serre en France au premier trimestre, en raison d’un hiver très chaud",
-      "resume": "L'article illustre l'impact des conditions climatiques (hiver doux) sur les émissions de GES en France, un signal utile pour contextualiser les enjeux de décarbonation des activités de services comme celles d'ABC, notamment dans le cadre de la SNBC ou des trajectoires nationales.",
+      "resume": "L'article illustre l'impact des conditions climatiques (hiver doux) sur les émissions de GES en France, un signal utile pour contextualiser les tendances de décarbonation et les attentes clients en matière de reporting environnemental.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/07/08/baisse-marquee-des-emissions-de-gaz-a-effet-de-serre-en-france-au-premier-trimestre-en-raison-d-un-hiver-tres-chaud_6721767_3244.html",
@@ -72,10 +116,32 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "« Promouvoir la climatisation en remplacement d’une chaudière au gaz ou au fioul, c’est gagner sur tous les tableaux »",
-      "resume": "L'article aborde la climatisation comme alternative aux systèmes de chauffage fossiles, un sujet indirectement lié à la transition énergétique des bâtiments tertiaires où ABC intervient, mais sans obligation réglementaire ou action opérationnelle directe pour le prestataire.",
+      "resume": "L'article aborde la climatisation comme alternative aux systèmes de chauffage fossiles, un sujet indirectement lié à l'efficacité énergétique des bâtiments tertiaires où ABC intervient, mais sans impact direct sur ses enjeux réglementaires ou opérationnels immédiats.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/07/08/promouvoir-la-climatisation-en-remplacement-d-une-chaudiere-au-gaz-ou-au-fioul-c-est-gagner-sur-tous-les-tableaux_6721762_3232.html",
+      "date": "2026-07-08"
+    },
+    {
+      "id": "7b1713db5a7a",
+      "source": "The Guardian Environment",
+      "categorie": "Environnement",
+      "titre": "Unions in Europe press for new worker protections to counter heat stress",
+      "resume": "L'article souligne l'émergence de nouvelles réglementations européennes sur la protection des travailleurs contre le stress thermique, pouvant impacter les conditions de travail des équipes de nettoyage de ABC sur les sites clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/environment/2026/jul/08/unions-europe-worker-protections-heat-stress-climate-crisis",
+      "date": "2026-07-08"
+    },
+    {
+      "id": "e1cb85f26ae1",
+      "source": "Les Echos Environnement",
+      "categorie": "Énergie",
+      "titre": "« Réduire les émissions, c'est fermer le robinet. Mais qui va vider la baignoire ? » : « La France ne doit pas oublier le chantier de l'élimination du carbone » - Les Echos",
+      "resume": "L'article souligne l'importance de l'élimination du carbone en complément de la réduction des émissions, un enjeu stratégique pour les entreprises engagées dans des trajectoires net zéro, comme ABC. Cela peut influencer les attentes clients en matière de compensation carbone et de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMiogJBVV95cUxNWHpkZUQtSDBCWk04Y2VDdGx3SzhfSUdLZ1Biazg0ZWxvN0tOM0tKYTdOazd2QWJaNGMxNXg4bWZuOTRkZmZERlJfR3RYOUE5anVFUUdtRVB1MDJwcUhVSEpxbXg4VVJ1cHdUeC1KWGZvZXNySVpBRWllcVp0MGR5T0tRVUgwMWF5WTZMX3F6eFVwVlVGLWtqcmRhMVBJUklXNURDSXAzN01pNkV2alluVExNQkozaHRBRV9EZlcycDZzNzJEdkJxeGVfTjNwQk9Bc0JHSjZDbEp4aXlta3hIRlBVbTA3SUFRS0cwNkpvSFFIT3BRWDBrY1pQelRhd3hnbTBWZHFjTzM0NUI5V2p6YThpS2gzNkh4cTVxekl3Smxkdw?oc=5",
       "date": "2026-07-08"
     },
     {
@@ -83,7 +149,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Forte chaleur : l'INRS publie six fiches pratiques de prévention par secteur",
-      "resume": "L'article aborde la prévention des risques liés à la forte chaleur, un enjeu croissant pour les entreprises de services comme ABC, notamment pour la santé et la sécurité des employés intervenant sur des sites clients.",
+      "resume": "L'article aborde la prévention des risques liés à la forte chaleur, un enjeu climatique opérationnel pouvant impacter les 3 000+ sites clients d'ABC, notamment dans le cadre de la gestion des risques physiques et de la santé au travail.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/forte-chaleur-linrs-publie-six-fiches-pratiques-de-prevention-par-secteur-1",
@@ -94,7 +160,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Écoconception : Bruxelles précise le fonctionnement du passeport numérique de produit",
-      "resume": "L'article aborde l'écoconception et le passeport numérique de produit, une obligation réglementaire européenne qui pourrait impacter la gestion des déchets et la traçabilité des produits utilisés par ABC dans ses prestations de propreté/FM.",
+      "resume": "L'article aborde l'écoconception et le passeport numérique de produit, une obligation réglementaire émergente qui pourrait impacter la traçabilité des déchets et la gestion des équipements utilisés par ABC dans ses prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/ecoconception-bruxelles-precise-le-fonctionnement-du-passeport-numerique-de-produit",
@@ -127,7 +193,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "PFAS et fluides frigorigènes : ce que la réglementation Reach pourrait changer pour les pompes à chaleur",
-      "resume": "La restriction des PFAS via REACH pourrait impacter l'utilisation des fluides frigorigènes dans les pompes à chaleur, potentiellement utilisées par ABC pour ses sites clients ou ses propres équipements. Cela pourrait entraîner des coûts de conformité ou des adaptations techniques.",
+      "resume": "La restriction des PFAS via REACH pourrait impacter l'utilisation de fluides frigorigènes fluorés dans les équipements de climatisation/ventilation des sites clients d'ABC, nécessitant une veille sur les alternatives et adaptations techniques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/pfas-fluides-frigorigenes-pompes-chaleur-reach-48274.php4#xtor=RSS-6",
@@ -138,7 +204,7 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Sécheresse 2026 : les préfets se préparent à un été hors normes",
-      "resume": "L'article souligne un risque accru de sécheresse en 2026, pouvant impacter les activités de propreté/FM d'ABC via des restrictions d'eau sur les sites clients (ex : nettoyage, gestion des déchets) ou des perturbations logistiques.",
+      "resume": "La sécheresse anticipée pour 2026 pourrait impacter les sites clients d'ABC (notamment en termes d'accès à l'eau pour les prestations de propreté), nécessitant une adaptation des plans de continuité d'activité et une vigilance accrue sur les ressources utilisées.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/brgm-ofn-onde-secheresse-nappes-alimentation-eau-potable-instruction-ministere-sante-transition-ecologique-48276.php4#xtor=RSS-6",
@@ -149,32 +215,10 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "Plan d'électrification : les collectivités ont répondu présent",
-      "resume": "L'article souligne l'accélération de l'électrification des flottes, notamment dans les collectivités, ce qui peut influencer les exigences clients d'ABC en matière de mobilité durable et de reporting carbone (scope 1).",
+      "resume": "L'article souligne l'accélération du plan d'électrification des flottes en France, avec un fort engagement des collectivités, ce qui pourrait influencer les exigences clients d'ABC (notamment industriels ou publics) en matière de mobilité durable et de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/plan-electrification-collectivites-territoires-outils-48273.php4#xtor=RSS-6",
-      "date": "2026-07-07"
-    },
-    {
-      "id": "067087be7751",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "Biométhane : la filière s'inquiète de l'évolution des soutiens",
-      "resume": "L'article aborde les évolutions des soutiens au biométhane, une énergie renouvelable pouvant impacter la stratégie énergétique d'ABC dans le cadre de sa décarbonation et de son reporting ESG (scope 2).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/biomethane-soutiens-tarif-achat-decret-48271.php4#xtor=RSS-6",
-      "date": "2026-07-07"
-    },
-    {
-      "id": "2996d8a6b316",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "Incendies de végétation : Atmo livre une note sur leurs conséquences sur la qualité de l'air",
-      "resume": "Les incendies de végétation liés aux canicules et sécheresses pourraient impacter la qualité de l'air sur les sites clients d'ABC, notamment en perturbant les prestations de propreté/FM ou en générant des demandes accrues de services (nettoyage post-incendie, gestion des poussières).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/incendies-vegetation-qualite-air-atmosud-48270.php4#xtor=RSS-6",
       "date": "2026-07-07"
     },
     {
@@ -182,21 +226,10 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Cours d'école végétalisées : le maire de Bordeaux abandonne en pleine canicule",
-      "resume": "L'article illustre l'impact des aléas climatiques (canicules) sur les politiques locales de végétalisation, un enjeu indirect pour ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) en matière de résilience climatique des sites.",
+      "resume": "L'article illustre l'impact des aléas climatiques (canicules) sur les politiques locales de végétalisation, un enjeu indirect pour ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) sensibles aux risques climatiques opérationnels.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Cours-d-ecole-vegetalisees-le-maire-de-Bordeaux-abandonne-en-pleine-canicule",
-      "date": "2026-07-07"
-    },
-    {
-      "id": "7da16e80b0d9",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Les relais de croissance selon Octopus, Reden et Ze Energy",
-      "resume": "L'article aborde la flexibilité énergétique et la diversification géographique comme leviers de croissance pour les acteurs du secteur, un contexte à surveiller pour anticiper les attentes clients en matière de décarbonation et d'efficacité énergétique.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/les-relais-de-croissance-selon-octopus-reden-et-ze-energy-428862/",
       "date": "2026-07-07"
     },
     {
@@ -204,44 +237,22 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Quels sont les moteurs de la consommation mondiale d’électricité ?",
-      "resume": "L'article souligne l'impact de l'électrification des usages et des data centers sur la demande mondiale d'électricité, un contexte à surveiller pour anticiper les besoins énergétiques futurs de la flotte de véhicules et des sites clients d'ABC.",
+      "resume": "L'article met en lumière l'impact de l'électrification des usages et de l'essor des data centers sur la consommation mondiale d'électricité, un enjeu indirect pour ABC via la pression carbone de ses clients industriels et tertiaires.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/quels-sont-les-moteurs-de-la-consommation-mondiale-delectricite-428867/",
       "date": "2026-07-07"
     },
     {
-      "id": "a4cd1c2e16b3",
-      "source": "GreenUnivers",
-      "categorie": "Biodiversité",
-      "titre": "La sortie du gaz intéresse plus de territoires que prévu [SGPE]",
-      "resume": "L'article aborde la sortie du gaz comme enjeu de planification écologique, ce qui impacte indirectement les stratégies énergétiques des entreprises clientes d'ABC (notamment tertiaires et industrielles) et leurs exigences en matière de décarbonation.",
+      "id": "65dcc4dba157",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG SRB & SR TEG Online Meeting 9 July 2026",
+      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting de durabilité (ESRS), pertinente pour préparer le reporting CSRD/ESRS d'ABC, bien que sans obligation immédiate.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/la-sortie-du-gaz-interesse-plus-de-territoires-que-prevu-sgpe-428755/",
-      "date": "2026-07-07"
-    },
-    {
-      "id": "dac1b6dd9e2f",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "L’Allemagne lance les inscriptions aux appels d’offres pour 9 GW de capacités de longue durée",
-      "resume": "L'article illustre la dynamique européenne de décarbonation du mix électrique via des mécanismes de capacité, un contexte à suivre pour anticiper les évolutions réglementaires et les opportunités marché liées à l'énergie en France/UE.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/lallemagne-lance-les-inscriptions-aux-appels-doffres-pour-9-gw-de-capacites-de-longue-duree-428671/",
-      "date": "2026-07-07"
-    },
-    {
-      "id": "9f6d796f4929",
-      "source": "The Guardian Environment",
-      "categorie": "Eau",
-      "titre": "M&S invests in fridges that can cope with weather as hot as 45C",
-      "resume": "L'article illustre l'impact concret des aléas climatiques (canicules) sur les infrastructures et la logistique des entreprises, un risque indirect pour ABC qui intervient sur 3 000+ sites clients en France.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/business/2026/jul/07/marks-and-spencer-fridges-hot-weather-45c",
-      "date": "2026-07-07"
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-sr-teg-online-meeting-9-july-2026",
+      "date": "2026-07-03"
     }
   ],
   "restrictions_eau": [
@@ -1380,7 +1391,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Deux projets majeurs impactent directement les enjeux climatiques : la concertation sur le captage et stockage de CO2 de la cimenterie de Martres-Tolosane (CapCO2mminges) et le projet REBOUND de production de carburant d'aviation durable à Dunkerque, tous deux nécessitant une vigilance sur les émissions et les infrastructures énergétiques associées.",
+  "briefing_jorf": "Deux projets majeurs impactent directement les enjeux climatiques : la concertation sur le captage et stockage du CO2 de la cimenterie de Martres-Tolosane (CapCO2mminges) et le projet REBOUND de production de carburant d'aviation durable à Dunkerque, tous deux nécessitant une analyse stratégique pour une entreprise de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1681,7 +1692,7 @@
           "titre": "Texte adopté N° 300",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_reduire_risques_sanitaires_lies_aux_contaminations_au_cadmium_dans_alimentation_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_reduire_risques_sanitaires_lies_aux_contaminations_au_cadmium_dans_alimentation_17e",
-          "date": "2026-07-08"
+          "date": "2026-04-14"
         },
         {
           "titre": "Texte adopté N° 301",
@@ -1699,28 +1710,28 @@
           "titre": "Texte adopté N° 298",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accompagnement_parents_enfants_cancers_maladies_handicaps2",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accompagnement_parents_enfants_cancers_maladies_handicaps2",
-          "date": "2026-07-08"
+          "date": "2024-09-17"
         },
         {
           "titre": "Texte adopté N° 297",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/responsabilite_indemnisation_chlordecone",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/responsabilite_indemnisation_chlordecone",
-          "date": "2026-07-08"
+          "date": "2024-01-16"
         },
         {
           "titre": "Texte adopté N° 294",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_proteger_enfants_et_lutter_contre_les_violences_en_milieu_scolaire_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_proteger_enfants_et_lutter_contre_les_violences_en_milieu_scolaire_17e",
-          "date": "2026-07-08"
+          "date": "2026-04-28"
         },
         {
           "titre": "Texte adopté N° 292",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/mobilisation_habitant_existant_crise_logement_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/mobilisation_habitant_existant_crise_logement_17e",
-          "date": "2026-07-08"
+          "date": "2026-04-14"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°2632)** et le **Projet de loi-cadre relatif au développement des transports (N°2740)** pourraient impacter les enjeux climatiques et énergétiques. Le **Projet de loi portant diverses dispositions d'adaptation au droit de l’UE en matière environnementale (N°2518)** est également pertinent pour le reporting et la conformité réglementaire. Aucun texte adopté ne semble directement lié à ces thématiques."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N° 2518) est directement pertinent pour un Responsable Environnement/Climat, car il inclut des mesures liées à l'énergie, à l'environnement et au climat dans le cadre de la transposition du droit européen. Aucun autre texte ne mentionne explicitement des enjeux RSE, déchets ou reporting extra-financier."
 }
