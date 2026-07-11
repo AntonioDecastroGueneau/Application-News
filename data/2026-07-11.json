@@ -1,7 +1,7 @@
 {
   "date": "2026-07-11",
-  "generated_at": "07:33",
-  "elapsed_seconds": 210,
+  "generated_at": "12:15",
+  "elapsed_seconds": 186,
   "errors": [],
   "stats": {
     "jo_analyses": 17,
@@ -9,29 +9,51 @@
     "depts_restriction": 93
   },
   "pipeline_meta": {
-    "run_at": "2026-07-11T07:33:26",
+    "run_at": "2026-07-11T12:15:32",
     "sources": {
       "JORF": 0,
-      "RSS": 14,
+      "RSS": 12,
       "VigiEau": 93,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 64,
-    "llm_seconds": 62.5
+    "llm_calls": 51,
+    "llm_seconds": 51.2
   },
   "items": [
     {
-      "id": "ce25130466bf",
+      "id": "5ca0b9b68006",
       "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Les canicules en Europe sont-elles aggravées par une zone froide dans l’Atlantique qui intrigue les chercheurs ?",
-      "resume": "Cet article met en lumière un phénomène climatique (zone froide dans l'Atlantique) pouvant aggraver les canicules en Europe, ce qui pourrait impacter les activités de nettoyage et FM d'ABC sur ses 3 000+ sites clients (ex. : perturbations logistiques, hausse des besoins en climatisation, risques sanitaires).",
+      "categorie": "Eau",
+      "titre": "Visualisez l’étendue des incendies en France, en carte et graphique",
+      "resume": "L'article met en lumière l'augmentation des risques d'incendies en France, un aléa climatique pouvant impacter les sites clients d'ABC (3 000+ sites) et perturber les prestations de propreté/FM, notamment en termes de continuité d'activité et de sécurité.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/07/11/les-canicules-en-europe-sont-elles-aggravees-par-une-zone-froide-dans-l-atlantique-qui-intrigue-les-chercheurs_6722661_3244.html",
+      "url": "https://www.lemonde.fr/les-decodeurs/article/2026/07/11/visualisez-l-etendue-des-incendies-en-france-en-carte-et-graphique_6722679_4355770.html",
+      "date": "2026-07-11"
+    },
+    {
+      "id": "6b935e971813",
+      "source": "Le Monde Planète",
+      "categorie": "Énergie",
+      "titre": "Pauline Vilain-Carlotti, géographe : « L’intensité des feux de forêt, qui semble aujourd’hui exceptionnelle, risque de devenir la norme basse dans les années à venir »",
+      "resume": "L'article souligne l'augmentation des risques d'incendies en France, ce qui pourrait impacter la continuité des services de propreté/FM d'ABC sur 3 000+ sites clients, notamment en termes de sécurité des équipes et de résilience opérationnelle.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/idees/article/2026/07/11/pauline-vilain-carlotti-geographe-l-intensite-des-feux-de-forets-qui-semble-aujourd-hui-exceptionnelle-risque-de-devenir-la-norme-basse-dans-les-annees-a-venir_6722662_3232.html",
+      "date": "2026-07-11"
+    },
+    {
+      "id": "7b3f074a6060",
+      "source": "The Guardian Environment",
+      "categorie": "Déchets",
+      "titre": "Datacentres drive up big tech’s carbon emissions to a third of those of France",
+      "resume": "L'article met en lumière l'impact environnemental croissant des datacentres, un secteur en expansion qui pourrait influencer les exigences carbone des clients d'ABC (notamment dans les secteurs santé, industrie et nucléaire) et indirectement ses propres enjeux de reporting ESG et décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/us-news/2026/jul/11/microsoft-amazon-google-datacentre-carbon-emissions-france",
       "date": "2026-07-11"
     },
     {
@@ -39,7 +61,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Forte chaleur : l'INRS publie six fiches pratiques de prévention par secteur",
-      "resume": "L'article aborde les risques physiques liés à la forte chaleur, un enjeu climatique croissant pouvant impacter les conditions de travail des équipes de nettoyage sur les sites clients d'ABC, nécessitant une adaptation des pratiques de prévention.",
+      "resume": "L'article de l'INRS sur la prévention des risques liés à la forte chaleur fournit des fiches sectorielles utiles pour adapter les protocoles de sécurité des équipes de propreté/FM d'ABC, notamment en période de canicule, et anticiper les impacts opérationnels sur les sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/forte-chaleur-linrs-publie-six-fiches-pratiques-de-prevention-par-secteur-1",
@@ -50,43 +72,32 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Règlement européen sur les emballages : des précisions sont attendues malgré une mise en application imminente",
-      "resume": "Le règlement européen sur les emballages impose des exigences renforcées en matière de recyclabilité et d'étiquetage, ce qui pourrait impacter les déchets générés par les prestations de propreté de ABC chez ses clients (scope 3 lié aux déchets).",
+      "resume": "Le règlement européen sur les emballages impacte indirectement ABC via les déchets générés par ses prestations de propreté/FM chez ses clients, notamment en termes de recyclabilité, traçabilité et obligations d'étiquetage des emballages utilisés ou produits.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/reglement-europeen-sur-les-emballages-des-precisions-sont-attendues-malgre-une-mise-en",
       "date": "2026-07-11"
     },
     {
-      "id": "f442a54d327a",
-      "source": "Actu-Environnement",
+      "id": "ea84e944eb94",
+      "source": "Actuel HSE",
       "categorie": "Énergie",
-      "titre": "DPE : une nouvelle révision du coefficient de conversion de l'électricité prévue en 2027",
-      "resume": "La révision du coefficient de conversion de l'électricité dans le DPE en 2027 pourrait impacter les obligations de performance énergétique des bâtiments tertiaires où ABC intervient, notamment pour les audits énergétiques ou les plans d'action liés au DPE tertiaire.",
-      "pourquoi": "Le DPE est un enjeu clé pour les prestataires de services comme ABC, notamment dans le cadre de la réglementation tertiaire (décret DPE tertiaire) et des obligations de reporting énergétique pour les clients. Une modification du coefficient pourrait influencer les stratégies d'efficacité énergétique des sites clients et les recommandations d'ABC.",
-      "criticite": 2,
-      "url": "https://www.actu-environnement.com/ae/news/dpe-coefficient-conversion-electricite-2027-revision-projet-arrete-48291.php4#xtor=RSS-6",
-      "date": "2026-07-10"
+      "titre": "Fortes chaleurs : la CGT réclame des modifications du code du travail",
+      "resume": "L'article aborde les revendications de la CGT pour renforcer les obligations légales des employeurs face aux fortes chaleurs, ce qui pourrait impacter les conditions de travail des équipes de propreté/FM d'ABC sur les sites clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-la-cgt-reclame-des-modifications-du-code-du-travail",
+      "date": "2026-07-11"
     },
     {
-      "id": "1b74c0200893",
+      "id": "81f2d5086f9f",
       "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "Lire notre dossier d'actu \"Canicule : la France face au défi du confort d'été\"",
-      "resume": "L'article souligne l'augmentation des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter les sites clients d'ABC (ex : surchauffe des locaux tertiaires, besoins accrus en climatisation, maintenance adaptée).",
+      "categorie": "Déchets",
+      "titre": "Refonte REP textiles (1/5) : un décret pour réduire les exportations et tracer les flux",
+      "resume": "La refonte de la REP textiles impose un contrôle renforcé des flux de déchets textiles et une contractualisation avec l'éco-organisme Refashion, ce qui peut impacter la gestion des déchets de prestations de nettoyage chez ABC.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actu-environnement.com/dossier-actu/dossier-canicule-chaleur-adaptation-climat-batiment-ville-128#xtor=RSS-6",
-      "date": "2026-07-10"
-    },
-    {
-      "id": "a5ab2baea8f6",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "« Ne nous oubliez pas après les canicules » : 37 000 « sinistrés climatiques » interpellent l'État",
-      "resume": "L'article met en lumière l'impact croissant des aléas climatiques (canicules, incendies) sur les infrastructures et activités économiques en France, soulignant un risque opérationnel indirect pour ABC via ses 3 000+ sites clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Ne-nous-oubliez-pas-apres-les-canicules-des-milliers-de-sinistres-climatiques",
+      "url": "https://www.actu-environnement.com/ae/news/decret-refonte-rep-textiles-exportation-tracabilite-contractualisation-refashion-48287.php4#xtor=RSS-6",
       "date": "2026-07-10"
     },
     {
@@ -94,7 +105,7 @@
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Canicule : Eurostar revoit sa commande de trains pour s’adapter à des étés à... 55°C",
-      "resume": "L'article souligne l'adaptation des infrastructures aux risques climatiques extrêmes (canicules à 55°C), un enjeu indirect pour ABC via la résilience des sites clients et la gestion des aléas opérationnels.",
+      "resume": "Cet article illustre l'adaptation des infrastructures aux risques climatiques (canicules extrêmes), un enjeu indirect pour ABC via les aléas climatiques affectant ses 3 000+ sites clients et leurs exigences en résilience opérationnelle.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/economie-et-social/business-model-en-transition/canicule-eurostar-revoit-sa-commande-de-trains-pour-sadapter-a-des-etes-a-55c",
@@ -105,21 +116,10 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Les documents de la semaine",
-      "resume": "Cette newsletter hebdomadaire recense les documents clés (réglementaires, études, analyses) liés à la transition énergétique, permettant à ABC de suivre les évolutions pertinentes pour ses enjeux (BGES, CSRD, mobilité durable, énergie, déchets).",
+      "resume": "Cette newsletter hebdomadaire recense les documents clés de la transition énergétique (réglementations, études, analyses) qui pourraient impacter les enjeux RSE et climat d'ABC, notamment en matière de reporting CSRD, BGES, ou réglementations énergie/déchets.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/les-documents-de-la-semaine-381215/",
-      "date": "2026-07-10"
-    },
-    {
-      "id": "bce2a21e30e8",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "AO solaire bâtiment : Arkolia sort vainqueur de la 12e période",
-      "resume": "L'article informe sur un appel d'offres solaire pour bâtiments, remporté par Arkolia, ce qui pourrait influencer les stratégies énergétiques des clients d'ABC (notamment tertiaires) et leur demande en solutions de propreté/FM intégrant des énergies renouvelables.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/arkolia-grand-vainqueur-de-la-12e-periode-de-lao-batiment-429272/",
       "date": "2026-07-10"
     },
     {
@@ -127,43 +127,10 @@
       "source": "Le Monde Planète",
       "categorie": "Déchets",
       "titre": "Menace d’une nouvelle flambée des prix sur le diesel",
-      "resume": "L'interdiction russe d'exportation de diesel pourrait impacter les coûts de la flotte de véhicules d'ABC (scope 1), avec un risque de hausse des prix des carburants et une pression accrue sur la décarbonation de la mobilité.",
+      "resume": "La hausse des prix du diesel pourrait impacter les coûts opérationnels de la flotte de véhicules d'ABC, notamment pour les prestations de propreté/FM chez les clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/07/10/menace-d-une-nouvelle-flambee-des-prix-sur-le-diesel_6722499_3234.html",
-      "date": "2026-07-10"
-    },
-    {
-      "id": "914b7d390252",
-      "source": "Le Monde Planète",
-      "categorie": "Déchets",
-      "titre": "Yann Ninot, architecte militant du réemploi : « Les déchets de chantier doivent être valorisés, conservés et réhabilités au lieu de recourir à de nouvelles matières premières »",
-      "resume": "L'article met en lumière l'enjeu de la valorisation des déchets de chantier et du réemploi des matériaux, un sujet aligné avec les obligations réglementaires de traçabilité et de gestion des déchets pour ABC (REP, économie circulaire).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/m-perso/article/2026/07/10/yann-ninot-architecte-militant-du-reemploi-les-dechets-de-chantier-doivent-etre-valorises-conserves-et-rehabilites-au-lieu-de-recourir-a-de-nouvelles-matieres-premieres_6722483_4497916.html",
-      "date": "2026-07-10"
-    },
-    {
-      "id": "e93eab19aedf",
-      "source": "Le Monde Planète",
-      "categorie": "Eau",
-      "titre": "« Aucun territoire n’est à l’abri du changement climatique, la Bretagne ne sera pas un refuge »",
-      "resume": "L'article souligne que tous les territoires, y compris la Bretagne, sont vulnérables aux impacts du changement climatique, ce qui peut impacter les sites clients d'ABC (aléas climatiques, perturbations logistiques ou opérationnelles).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/07/10/aucun-territoire-n-est-a-l-abri-du-changement-climatique-la-bretagne-ne-sera-pas-un-refuge_6722456_3232.html",
-      "date": "2026-07-10"
-    },
-    {
-      "id": "b84a3abd8d80",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "ESG Playbook Launches New Sustainability Reporting Solutions for Small, Mid-Sized Businesses",
-      "resume": "L'article présente des solutions de reporting ESG adaptées aux PME, ce qui pourrait intéresser ABC pour préparer sa conformité CSRD/ESRS avec des outils simplifiés.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/esg-playbook-launches-new-sustainability-reporting-solutions-for-small-mid-sized-businesses/?utm_source=rss&utm_medium=rss&utm_campaign=esg-playbook-launches-new-sustainability-reporting-solutions-for-small-mid-sized-businesses",
       "date": "2026-07-10"
     },
     {
@@ -171,10 +138,21 @@
       "source": "Les Echos Environnement",
       "categorie": "Déchets",
       "titre": "Morgan Stanley IP reprend Nicollin Environnement - Les Echos",
-      "resume": "L'acquisition de Nicollin Environnement par Morgan Stanley IP pourrait impacter la concurrence dans le secteur de la propreté/FM en France, influençant indirectement les dynamiques de marché et les exigences carbone des clients d'ABC.",
+      "resume": "L'acquisition de Nicollin Environnement par Morgan Stanley IP pourrait impacter le marché de la propreté et du FM en France, avec des répercussions potentielles sur les exigences carbone des clients d'ABC et la concurrence dans le secteur.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPUkdpdnM0OEFiMGhjWjJ4aVFVbDdSVHFEMm1IaHI4WUNWYkk1ang1ZTJydGpCdzFhLTNucVRFdXpvTUZBTnJ1d3BEdkZzVU1EcDdDYThfX2VuT004OUZzLWFBOGdtY1hJUW0weGNMQ01ic1ZBVE9nSjVmSzdncHR3bUNDWjgyMmxKRjF1elc3UF9feno0UE55THhGcmgxbTVva2ZB?oc=5",
+      "date": "2026-07-10"
+    },
+    {
+      "id": "68b232f58422",
+      "source": "Les Echos Environnement",
+      "categorie": "Eau",
+      "titre": "Le Groupe Nicollin ouvre son activité déchets et eau à un fonds d'infrastructures de Morgan Stanley - Les Echos",
+      "resume": "L'article illustre une tendance sectorielle de cession d'activités déchets et eau à des fonds d'infrastructures, pouvant impacter les dynamiques concurrentielles et les exigences clients en matière de gestion des déchets pour ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxNYXhTa0VqODB6V2JYbGJBME1Ka19pLTV0akEwcS1UdnVjTUV0YTVKbjh3SldrZ3ZOUVdiWjhfSzB1NmlqTXNCOXRsNGhLVTk0Z2tVbG9rMUlaeE5kZVNqVUxrakIzNFl5MVJlNDdiVlFEVEFGUWY4eDlDWFNKODl5aUhqWkc0aHhoQl9yVkJFWTV3b3ZKek5NVjdPSlBZTFlVTEl3Smc5aFgzaW0wa2xyZTgtUnlWSzBnRjE5RmxXX3FWRWJ6d2V6QzRqYjRIcGtfQndxWjc1bGhjM0g0cmVtUzJ5cVZ1Z0lUX09kYktyTnB4SXVCVmpYbHR3dEczVUhM?oc=5",
       "date": "2026-07-10"
     }
   ],
@@ -435,6 +413,11 @@
       "niveau": "alerte renforcée"
     },
     {
+      "dept_code": "42",
+      "dept_nom": "Loire",
+      "niveau": "alerte renforcée"
+    },
+    {
       "dept_code": "01",
       "dept_nom": "Ain",
       "niveau": "alerte renforcée"
@@ -552,11 +535,6 @@
     {
       "dept_code": "52",
       "dept_nom": "Haute-Marne",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "42",
-      "dept_nom": "Loire",
       "niveau": "alerte"
     },
     {
@@ -1380,7 +1358,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "L'arrêté du 10 juillet 2026 modifiant temporairement les limites de rejets thermiques de la centrale nucléaire du Bugey (INB n°78 et n°89) est significatif pour un Responsable Environnement/Climat, car il impacte directement les émissions thermiques et potentiellement la biodiversité locale. Aucun autre texte du JO ne semble directement lié aux enjeux environnementaux ou climatiques pour une entreprise de services.",
+  "briefing_jorf": "L'arrêté n°2 modifiant temporairement les limites de rejets thermiques de la centrale nucléaire du Bugey (INB n°78 et 89) est significatif pour un Responsable Environnement/Climat, car il impacte directement les émissions thermiques et potentiellement la biodiversité locale. Aucun autre texte ne semble directement pertinent pour les enjeux climatiques ou environnementaux d'une entreprise de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1722,5 +1700,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux climatiques et énergétiques liés à la transposition de directives européennes. Aucun autre texte ne traite spécifiquement de RSE, reporting extra-financier ou gestion des déchets."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale, énergétique et de santé (N° 2518), et le projet de loi-cadre relatif au développement des transports (N° 2740), qui pourraient influencer les politiques énergétiques, la mobilité durable et les obligations de reporting RSE. Aucun texte ne traite directement des déchets ou de la RSE de manière exhaustive."
 }
