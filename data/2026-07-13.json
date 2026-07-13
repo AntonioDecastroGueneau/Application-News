@@ -1,7 +1,7 @@
 {
   "date": "2026-07-13",
-  "generated_at": "08:46",
-  "elapsed_seconds": 188,
+  "generated_at": "13:36",
+  "elapsed_seconds": 185,
   "errors": [],
   "stats": {
     "jo_analyses": 18,
@@ -9,18 +9,18 @@
     "depts_restriction": 93
   },
   "pipeline_meta": {
-    "run_at": "2026-07-13T08:46:38",
+    "run_at": "2026-07-13T13:36:21",
     "sources": {
       "JORF": 0,
-      "RSS": 6,
+      "RSS": 9,
       "VigiEau": 93,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 48,
-    "llm_seconds": 46.9
+    "llm_calls": 49,
+    "llm_seconds": 52.8
   },
   "items": [
     {
@@ -28,10 +28,43 @@
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Canicule : les entreprises devront être prêtes \"avant l'été 2027\"",
-      "resume": "L'article souligne l'obligation pour les entreprises d'adapter leurs pratiques aux canicules répétées, avec un délai avant l'été 2027 pour négocier des mesures (ex : horaires de travail). ABC, intervenant sur 3 000+ sites clients, doit anticiper des risques opérationnels liés aux aléas climatiques affectant ses prestations.",
-      "pourquoi": "L'article aborde un risque climatique opérationnel direct pour ABC (perturbations des prestations sur sites clients en cas de canicule), sans lien avec des obligations réglementaires immédiates mais avec une échéance proche (2027) nécessitant une anticipation stratégique. Le sujet relève des risques indirects identifiés (aléas climatiques sur sites clients) et impacte potentiellement la continuité des services.",
+      "resume": "L'article souligne l'obligation pour les entreprises d'adapter leurs pratiques (ex : horaires de travail) aux canicules répétées d'ici 2027, ce qui impacte la gestion des ressources humaines et opérationnelles de ABC sur ses 3 000+ sites clients.",
+      "pourquoi": "Bien que non directement réglementaire pour ABC, le sujet touche aux risques climatiques opérationnels (perturbations des prestations, sécurité des employés) et aux attentes clients en matière de résilience climatique. L'échéance 2027 impose une anticipation stratégique pour adapter les processus internes et les contrats clients.",
       "criticite": 2,
       "url": "https://www.novethic.fr/environnement/climat/canicule-les-entreprises-devront-etre-pretes-avant-lete-2027",
+      "date": "2026-07-13"
+    },
+    {
+      "id": "f116f9a0bbd3",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Refonte REP textiles (2/5) : de nouveaux objectifs et une nouvelle organisation pour les atteindre",
+      "resume": "La refonte de la REP textiles (TLC) impacte indirectement ABC via ses obligations de tri et traçabilité des déchets textiles générés par ses prestations de nettoyage chez les clients, avec une nouvelle organisation centrée sur Refashion.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/objectif-projets-cahier-charges-rep-textiles-refashion-48293.php4#xtor=RSS-6",
+      "date": "2026-07-13"
+    },
+    {
+      "id": "6834c05d8810",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Sécheresse : un quart des petits cours d'eau sont à sec en France",
+      "resume": "La sécheresse et la baisse des débits des cours d'eau en France pourraient impacter la disponibilité de la ressource en eau potable, un enjeu indirect pour ABC via ses clients (ex : sites tertiaires dépendant de réseaux d'eau).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Secheresse-un-quart-des-petits-cours-d-eau-sont-a-sec-en-France",
+      "date": "2026-07-13"
+    },
+    {
+      "id": "bf896b087aee",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "L'Inde s'étonne : pourquoi la France est-elle si peu préparée aux canicules ?",
+      "resume": "L'article souligne l'insuffisance de préparation de la France face aux canicules, un risque climatique opérationnel majeur pour ABC qui intervient sur 3 000+ sites clients, exposant ses activités et celles de ses clients à des perturbations.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/L-Inde-s-etonne-pourquoi-la-France-est-elle-si-peu-preparee-aux-canicules",
       "date": "2026-07-13"
     },
     {
@@ -39,7 +72,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Yves Tramblay, hydrologue : « Les épisodes de canicule qui se succèdent entraînent une perte très importante et rapide de l’eau stockée dans les sols »",
-      "resume": "L'article souligne l'accélération de la sécheresse en France, ce qui peut impacter la disponibilité des ressources en eau pour les activités de nettoyage et de gestion des déchets chez les clients d'ABC, notamment dans les secteurs sensibles (santé, industrie).",
+      "resume": "L'article souligne l'accélération des épisodes de sécheresse en France, ce qui pourrait impacter la disponibilité des ressources en eau pour les activités de nettoyage et de gestion des déchets d'ABC, ainsi que celles de ses clients (notamment dans les secteurs industriels ou tertiaires sensibles à la ressource hydrique).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/07/13/yves-tramblay-hydrologue-les-episodes-de-canicule-qui-se-succedent-entrainent-une-perte-tres-importante-et-rapide-de-l-eau-stockee-dans-les-sols_6723045_3244.html",
@@ -50,7 +83,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Forte chaleur : l'INRS publie six fiches pratiques de prévention par secteur",
-      "resume": "L'article aborde la prévention des risques liés aux fortes chaleurs, un enjeu opérationnel pour ABC dans le cadre de la santé et sécurité au travail (SST) de ses employés intervenant sur des sites clients, sans impact direct sur les enjeux climatiques ou RSE prioritaires de l'entreprise.",
+      "resume": "L'INRS publie des fiches pratiques sur la prévention des risques liés à la forte chaleur, un enjeu croissant pour les entreprises de services comme ABC intervenant sur des sites clients en France, notamment dans un contexte de réchauffement climatique et d'exigences accrues en matière de RSE.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/forte-chaleur-linrs-publie-six-fiches-pratiques-de-prevention-par-secteur-1",
@@ -61,7 +94,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Règlement européen sur les emballages : des précisions sont attendues malgré une mise en application imminente",
-      "resume": "Le règlement européen sur les emballages impose des exigences renforcées en matière de recyclabilité et d'étiquetage, impactant potentiellement les déchets générés par les prestations de propreté/FM d'ABC chez ses clients.",
+      "resume": "Le règlement européen sur les emballages impacte indirectement ABC via les exigences de recyclabilité et d'étiquetage des déchets générés par ses prestations de propreté, notamment pour les emballages des produits utilisés sur les sites clients (scope 3).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/reglement-europeen-sur-les-emballages-des-precisions-sont-attendues-malgre-une-mise-en",
@@ -72,7 +105,7 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Fortes chaleurs : la CGT réclame des modifications du code du travail",
-      "resume": "L'article aborde les risques physiques liés aux fortes chaleurs et les revendications syndicales pour renforcer les obligations légales des employeurs, ce qui pourrait impacter les conditions de travail des équipes de propreté/FM d'ABC sur les sites clients.",
+      "resume": "L'article aborde les risques physiques liés aux fortes chaleurs et les revendications syndicales pour renforcer les obligations légales des employeurs, ce qui pourrait impacter les conditions de travail des équipes de propreté/FM d'ABC chez ses clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-la-cgt-reclame-des-modifications-du-code-du-travail",
@@ -83,8 +116,8 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'adoption des normes finales CSRD et des standards volontaires de reporting ESG par la Commission européenne confirme l'évolution réglementaire majeure pour ABC, impactant directement ses obligations de reporting extra-financier (scope 3 inclus) et sa stratégie de conformité CSRD.",
-      "pourquoi": "L'article traite directement du reporting ESG (CSRD, ESRS) qui est un enjeu clé pour ABC dans le cadre de ses obligations réglementaires et de ses clients (nucléaire, santé, industrie). La CSRD impose des exigences strictes sur la transparence des impacts environnementaux et sociaux, y compris pour les prestataires de services comme ABC.",
+      "resume": "L'adoption des normes finales CSRD et des standards volontaires de reporting ESG par la Commission européenne impacte directement le reporting extra-financier d'ABC, notamment pour la collecte et la structuration des données ESG nécessaires à la conformité réglementaire.",
+      "pourquoi": "L'article traite d'une évolution réglementaire majeure (CSRD) qui impose des obligations de reporting ESG claires et structurées pour les entreprises, y compris les prestataires de services comme ABC. Cela concerne directement le reporting extra-financier, la collecte de données et la conformité aux exigences de transparence.",
       "criticite": 2,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-269/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-269",
       "date": "2026-07-12"
@@ -962,7 +995,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Les arrêtés et décisions pertinents concernent principalement des modifications réglementaires dans les secteurs des transports (sécurité ferroviaire), de l'énergie (autorisation d'achat/revente d'électricité), et des déchets radioactifs (PNGMDR), ainsi que des approbations de projets européens (PIIEC sur semi-conducteurs et IA) pouvant impacter les stratégies RSE des entreprises.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -982,13 +1015,8 @@
       "historique": [
         {
           "date": "2026-07-13",
-          "stade": "Dépôt",
-          "event": "Importé depuis UI"
-        },
-        {
-          "date": "2026-07-13",
           "stade": "Première lecture à l'Assemblée nationale",
-          "event": "Avancement : Dépôt → Première lecture à l'Assemblée nationale"
+          "event": "Importé depuis UI"
         }
       ],
       "created_at": "2026-07-13",
@@ -1309,5 +1337,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux climatiques et énergétiques majeurs via le droit européen. Aucun autre texte ne semble aborder spécifiquement les thématiques RSE, reporting extra-financier ou gestion des déchets."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°3017)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques agricoles et réglementaires liées à la transition écologique. Aucun texte adopté ne semble directement lié à des enjeux climatiques ou environnementaux majeurs."
 }
