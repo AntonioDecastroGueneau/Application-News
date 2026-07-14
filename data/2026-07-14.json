@@ -1,7 +1,7 @@
 {
   "date": "2026-07-14",
-  "generated_at": "07:46",
-  "elapsed_seconds": 168,
+  "generated_at": "12:49",
+  "elapsed_seconds": 185,
   "errors": [],
   "stats": {
     "jo_analyses": 4,
@@ -9,7 +9,7 @@
     "depts_restriction": 93
   },
   "pipeline_meta": {
-    "run_at": "2026-07-14T07:46:58",
+    "run_at": "2026-07-14T12:49:31",
     "sources": {
       "JORF": 0,
       "RSS": 11,
@@ -20,7 +20,7 @@
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 38,
-    "llm_seconds": 43.4
+    "llm_seconds": 43.9
   },
   "items": [
     {
@@ -28,9 +28,9 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG Update: June Edition Now Available",
-      "resume": "L'EFRAG Update de juin 2026 pourrait contenir des évolutions sur les normes ESRS (European Sustainability Reporting Standards) liées à la CSRD, impactant directement le reporting extra-financier et les obligations de transparence carbone d'ABC pour ses clients.",
-      "pourquoi": "L'EFRAG est l'organisme européen en charge des normes de reporting ESG (ESRS) sous la CSRD. Les mises à jour techniques et consultations publiques peuvent impacter les exigences de reporting des entreprises, y compris celles des prestataires de services comme ABC, notamment pour les scopes 1, 2 et 3. Même si le contenu exact n'est pas détaillé ici, la pertinence est liée à l'évolution réglementaire ESG en UE.",
-      "criticite": 2,
+      "resume": "L'EFRAG Update de juin 2026 fournit des informations sur les évolutions techniques et réglementaires liées au reporting ESG (CSRD/ESRS), notamment pour les PME et startups, ce qui peut impacter les exigences de reporting extra-financier d'ABC dans le cadre de la CSRD.",
+      "pourquoi": "",
+      "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-update-june-edition-now-available-0",
       "date": "2026-07-14"
     },
@@ -39,7 +39,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Forte chaleur : l'INRS publie six fiches pratiques de prévention par secteur",
-      "resume": "L'article aborde la prévention des risques liés à la forte chaleur, un enjeu croissant pour les entreprises de services comme ABC, notamment pour la santé et la sécurité des employés intervenant sur des sites clients exposés aux aléas climatiques.",
+      "resume": "L'article aborde la prévention des risques liés aux fortes chaleurs, un enjeu croissant pour les entreprises de services comme ABC, notamment pour la sécurité des employés intervenant sur des sites clients en période de canicule.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/forte-chaleur-linrs-publie-six-fiches-pratiques-de-prevention-par-secteur-1",
@@ -50,10 +50,21 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Règlement européen sur les emballages : des précisions sont attendues malgré une mise en application imminente",
-      "resume": "Le règlement européen sur les emballages impacte indirectement ABC via les exigences de recyclabilité et d'étiquetage des emballages utilisés dans ses prestations de propreté/FM, notamment pour les déchets générés chez les clients.",
+      "resume": "Le règlement européen sur les emballages impose des exigences renforcées en matière de recyclabilité et d'étiquetage, ce qui impacte indirectement ABC via la gestion des déchets de ses prestations de propreté et la traçabilité des emballages utilisés sur les sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/reglement-europeen-sur-les-emballages-des-precisions-sont-attendues-malgre-une-mise-en",
+      "date": "2026-07-14"
+    },
+    {
+      "id": "ea84e944eb94",
+      "source": "Actuel HSE",
+      "categorie": "Énergie",
+      "titre": "Fortes chaleurs : la CGT réclame des modifications du code du travail",
+      "resume": "L'article aborde les demandes de la CGT pour renforcer les obligations légales des employeurs face aux fortes chaleurs, ce qui pourrait impacter les conditions de travail des équipes de propreté/FM d'ABC sur les sites clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-la-cgt-reclame-des-modifications-du-code-du-travail",
       "date": "2026-07-14"
     },
     {
@@ -61,21 +72,10 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Face à la canicule,  le groupe Veolia accélère ses réseaux de chaleur et de froid",
-      "resume": "L'article illustre une tendance croissante des acteurs du FM/propreté à intégrer des solutions énergétiques résilientes face aux aléas climatiques, ce qui pourrait influencer les attentes des clients d'ABC en matière de décarbonation et d'adaptation.",
+      "resume": "L'article illustre une tendance croissante vers les réseaux de chaleur/froid urbains, pouvant impacter les exigences clients d'ABC en matière d'efficacité énergétique et de résilience climatique, notamment dans le cadre de leurs plans climat ou BGES.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/veolia-reseaux-chaleur-froid-urbains-48305.php4#xtor=RSS-6",
-      "date": "2026-07-13"
-    },
-    {
-      "id": "f116f9a0bbd3",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Refonte REP textiles (2/5) : de nouveaux objectifs et une nouvelle organisation pour les atteindre",
-      "resume": "La refonte de la REP textiles (TLC) impacte indirectement ABC via ses obligations de tri et traçabilité des déchets textiles générés par ses prestations de propreté, avec une nouvelle organisation centrée sur Refashion.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/objectif-projets-cahier-charges-rep-textiles-refashion-48293.php4#xtor=RSS-6",
       "date": "2026-07-13"
     },
     {
@@ -83,7 +83,7 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Sécheresse : un quart des petits cours d'eau sont à sec en France",
-      "resume": "L'article souligne l'impact croissant de la sécheresse sur les ressources en eau potable en France, notamment via la Loire, ce qui pourrait influencer les exigences clients d'ABC en matière de gestion durable de l'eau dans les prestations de nettoyage.",
+      "resume": "La sécheresse et la baisse des débits des cours d'eau en France pourraient impacter la disponibilité de la ressource en eau pour les sites clients d'ABC, notamment dans les régions dépendantes de la Loire, et influencer les exigences en matière de gestion de l'eau dans les prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Secheresse-un-quart-des-petits-cours-d-eau-sont-a-sec-en-France",
@@ -94,7 +94,7 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Solaire : « la situation a un goût de moratoire déguisé » [Daniel Bour, Enerplan]",
-      "resume": "L'article souligne les tensions réglementaires autour du solaire en France, un sujet indirectement lié à la stratégie énergétique d'ABC (énergie des bâtiments tertiaires, décarbonation des sites clients).",
+      "resume": "L'article souligne les tensions réglementaires autour du solaire en France, un secteur clé pour la décarbonation des entreprises et la transition énergétique des sites clients d'ABC. Bien qu'indirect, cela impacte les attentes clients en matière d'énergies renouvelables et de plans climat.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/solaire-la-situation-a-le-gout-dun-moratoire-deguise-daniel-bour-enerplan-429456/",
@@ -105,7 +105,7 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Lhyfe trouve un client-actionnaire pour plusieurs projets",
-      "resume": "L'article illustre une tendance de collaboration entre acteurs industriels pour accélérer la production d'hydrogène vert, un vecteur énergétique clé pour la décarbonation des flottes et des sites tertiaires, sans impact direct immédiat sur ABC mais à surveiller pour des opportunités futures.",
+      "resume": "L'article met en lumière un partenariat stratégique dans l'hydrogène vert (Lhyfe/Messer), un levier potentiel pour décarboner les flottes de véhicules ou les sites clients d'ABC, bien que non directement applicable à court terme.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/lhyfe-trouve-un-client-actionnaire-pour-plusieurs-projets-429432/",
@@ -116,7 +116,7 @@
       "source": "ESG Today",
       "categorie": "Énergie",
       "titre": "Microsoft’s Carbon Footprint Jumps 25% as AI Buildout Challenges Climate Goals",
-      "resume": "L'article illustre l'impact croissant des activités numériques et de l'IA sur l'empreinte carbone d'une entreprise, un enjeu indirect mais pertinent pour ABC dans le cadre de son reporting ESG (scope 3) et de la CSRD.",
+      "resume": "L'article illustre l'impact des nouvelles technologies (IA) sur l'empreinte carbone d'une entreprise majeure, un signal à surveiller pour ABC dans le cadre de sa stratégie de décarbonation et de reporting ESG (scope 3).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/microsofts-carbon-footprint-jumps-25-as-ai-buildout-challenges-climate-goals/?utm_source=rss&utm_medium=rss&utm_campaign=microsofts-carbon-footprint-jumps-25-as-ai-buildout-challenges-climate-goals",
@@ -127,7 +127,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Énergie",
       "titre": "Faire connaître au client l'impact global de ses courses : Coopérative U généralise les « tickets carbone - Les Echos",
-      "resume": "L'article illustre une tendance croissante vers la transparence carbone pour les clients finaux, ce qui pourrait impacter les exigences des clients d'ABC en matière de reporting et de traçabilité des émissions liées aux prestations de propreté/FM.",
+      "resume": "L'article présente l'initiative de la Coopérative U généralisant des 'tickets carbone' pour informer les clients sur l'impact environnemental de leurs achats, ce qui pourrait influencer les attentes des clients d'ABC en matière de transparence carbone sur les prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOY29TZ0tOQTVDMk80M3hPbUxDcTcteTd4MU5iYTY4LWxBWUR0dzNXWEZja2dHajFfWXlnSDAzZDNvbFExYUxUMW4xMUdlX3pqTEg1TDMwajhZOXEzWVZVa3JITFFPUkhuaFBvQUp2djdSWGF2ZFdxWnRBeGtSWmhmZWowRThORFUzMXU4WFl3NkZ0eHQ1Q0FpLUs1ZGE1R0lLR25xVFpVLVhXWVlkS3pKNExWSF9Kcl8wRzhXOWJyUU02cnI4ZjVTUjczVlNFMFQxSFdlOHdkX2VuR0dNRjJUblBzRHNBOHh0X2t2RFp6RzY3Wk93a2FzWEppbzR0bms?oc=5",
@@ -138,7 +138,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Déchets",
       "titre": "Déchets : pourquoi la filière française des combustibles alternatifs fait grise mine ﻿ - Les Echos",
-      "resume": "L'article aborde la filière des combustibles alternatifs en France, un sujet indirectement lié aux enjeux déchets et économie circulaire de ABC, notamment via les REP et la gestion des déchets de ses clients.",
+      "resume": "L'article aborde la filière des combustibles alternatifs en France, un sujet lié aux déchets et à leur valorisation énergétique, ce qui impacte indirectement les enjeux de gestion des déchets des prestataires de services comme ABC, notamment dans le cadre des REP et de la traçabilité.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOR0NZZFdNZ0ZPX3FDWVdhNzlCSk8yaS1Kc0FMdzBnUUl2RkEzdGtnTGxHRXYtdW82amVZSUk1SDRnc0xDNFM1QkcxekpqeWtBWmRyb0NkZ3lQRWx1WFlneTM2T3NKVk41aTlrRDR5NkJxUV82MHdfSklnSHV2eE5QMDdfQVBTNURBM2NiZ3NNN2RGaFczdDZwWGE2aXhaNlF1cTRoTlVqSVlKbE1Cd0VUNnlfYXRFaW1hQmdGRzlwTjVEVDlBdTZESlVndzM2c19fZUxsb3dyWExnQkxnMVdwRm9ubHZSMUo3TC04?oc=5",
@@ -1035,7 +1035,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Deux décrets du 13 juillet 2026 impactent directement les enjeux environnementaux et climatiques : le démantèlement de l'installation nucléaire Masurca (CEA Cadarache) et une aide à la trésorerie pour le transport fluvial en Guyane, lié aux perturbations géopolitiques des carburants. L'arrêté sur l'ours brun dans les Pyrénées est moins pertinent pour une grande entreprise de services.",
+  "briefing_jorf": "L'arrêté sur l'ours brun dans les Pyrénées et le décret sur le démantèlement de l'installation nucléaire Masurca (CEA Cadarache) sont significatifs pour la RSE, notamment en matière de biodiversité et de gestion des déchets radioactifs. L'aide à la trésorerie pour le transport fluvial en Guyane est moins pertinente pour une grande entreprise de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1377,5 +1377,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°3017)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques agricoles et réglementaires liées à la transition écologique. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou RSE dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** présente un intérêt direct pour un Responsable Environnement/Climat, en raison de son volet environnemental et énergétique. Aucun autre texte ne semble aborder spécifiquement les enjeux climatiques, RSE ou reporting extra-financier."
 }
