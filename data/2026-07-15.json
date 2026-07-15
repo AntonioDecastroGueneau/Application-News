@@ -1,7 +1,7 @@
 {
   "date": "2026-07-15",
-  "generated_at": "07:50",
-  "elapsed_seconds": 173,
+  "generated_at": "12:53",
+  "elapsed_seconds": 249,
   "errors": [],
   "stats": {
     "jo_analyses": 4,
@@ -9,29 +9,40 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-07-15T07:50:31",
+    "run_at": "2026-07-15T12:53:56",
     "sources": {
       "JORF": 0,
-      "RSS": 9,
+      "RSS": 10,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 33,
-    "llm_seconds": 37.0
+    "llm_calls": 42,
+    "llm_seconds": 47.2
   },
   "items": [
     {
-      "id": "93b0f56c01fe",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "Le groupe BayWa veut vendre les EnR, évaluées 800 M€ de moins que prévu",
-      "resume": "L'article illustre une tendance de marché dans le secteur des énergies renouvelables (décote des actifs EnR), ce qui peut impacter les stratégies d'approvisionnement ou de partenariat d'ABC avec des acteurs du secteur, sans obligation directe immédiate.",
+      "id": "05c0a3d85be9",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "En supprimant la double matérialité pour les entreprises étrangères, l'UE risque une CSRD à deux vitesses",
+      "resume": "En supprimant la double matérialité pour les entreprises étrangères, l'UE risque une CSRD à deux vitesses",
+      "pourquoi": "Mention de CSRD.",
+      "criticite": 3,
+      "url": "https://www.novethic.fr/finance-durable/reglementation/csrd-deux-vitesses-double-materialite-entreprises-etrangeres",
+      "date": "2026-07-15"
+    },
+    {
+      "id": "555d73d6098e",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Refonte REP textiles (3/5) : les modalités de soutien au tri chamboulées",
+      "resume": "La refonte REP textiles impacte indirectement ABC via la gestion des déchets de ses clients (vêtements professionnels, textiles de prestation) et les modalités de soutien au tri, influençant les coûts et pratiques de recyclage des déchets générés par ses activités.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/le-groupe-baywa-veut-vendre-les-enr-evaluees-800-me-de-moins-que-prevu-429391/",
+      "url": "https://www.actu-environnement.com/ae/news/nouvelles-modalites-soutien-financier-tri-textiles-48294.php4#xtor=RSS-6",
       "date": "2026-07-15"
     },
     {
@@ -39,32 +50,43 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "La Commission européenne attendue sur le prix du CO2 et l’électrification",
-      "resume": "La révision du prix du CO2 et les mesures d'électrification en Europe pourraient impacter les coûts énergétiques et la stratégie de décarbonation de la flotte de véhicules d'ABC, notamment en renforçant les incitations à l'électrification.",
+      "resume": "La Commission européenne prépare des mesures sur le prix du CO2 et l'électrification, pouvant impacter les coûts énergétiques et les obligations de décarbonation des flottes de véhicules (scope 1) pour ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/la-commission-europeenne-attendue-sur-le-prix-du-co2-et-lelectrification-429354/",
       "date": "2026-07-15"
     },
     {
-      "id": "496f8577421d",
+      "id": "d1a984c32488",
       "source": "Le Monde Planète",
-      "categorie": "Énergie",
-      "titre": "La taxe carbone peut-elle être socialement juste ?",
-      "resume": "L'article aborde la taxe carbone, un levier clé de décarbonation des entreprises (scope 1/2/3), dont l'évolution réglementaire pourrait impacter les coûts et stratégies de décarbonation de la flotte véhicules et des consommations énergétiques d'ABC.",
+      "categorie": "Eau",
+      "titre": "CARTE | Sécheresse : êtes-vous concerné par des restrictions d’eau ?",
+      "resume": "L'article met en lumière les restrictions d'eau en France via une carte interactive, un risque climatique opérationnel pouvant impacter les activités de nettoyage et de gestion des déchets des 3 000+ sites clients d'ABC.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/video/2026/07/15/la-taxe-carbone-peut-elle-etre-socialement-juste_6723490_3244.html",
+      "url": "https://www.lemonde.fr/les-decodeurs/article/2026/07/15/secheresse-etes-vous-concerne-par-des-restrictions-d-eau_6183749_4355771.html",
       "date": "2026-07-15"
     },
     {
-      "id": "6aa8b98fc660",
-      "source": "Actuel HSE",
+      "id": "f484a56aefb3",
+      "source": "Le Monde Planète",
       "categorie": "Climat",
-      "titre": "Grandes chaleurs : la CGT du ministère du travail dénonce une «catastrophe sanitaire» et réclame des moyens pour les inspecteurs du travail",
-      "resume": "L'article souligne les risques sanitaires liés aux grandes chaleurs en milieu professionnel, ce qui pourrait impacter les obligations de sécurité et de prévention des risques climatiques pour les 3 000+ sites clients d'ABC, notamment dans des secteurs sensibles comme la santé ou l'industrie.",
+      "titre": "EN DIRECT, canicule : avec 99 départements français concernés par des restrictions d’eau, « la totalité du territoire métropolitain » touché par la sécheresse",
+      "resume": "La sécheresse généralisée en France pourrait impacter les activités de propreté/FM d'ABC (ex. : restrictions d'eau pour les sites clients, perturbations logistiques, risques de pénurie de ressources).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/grandes-chaleurs-la-cgt-du-ministere-du-travail-denonce-une-catastrophe-sanitaire-et-0",
+      "url": "https://www.lemonde.fr/planete/live/2026/07/15/en-direct-incendies-la-france-touchee-par-une-secheresse-exceptionnelle-et-tres-preoccupante-declare-la-ministre-de-la-transition-ecologique_6723261_3244.html",
+      "date": "2026-07-15"
+    },
+    {
+      "id": "dca77ec3a3d6",
+      "source": "The Guardian Environment",
+      "categorie": "Énergie",
+      "titre": "Surviving extreme heat increasingly boils down to this: access to air conditioning | Mark Wolfe",
+      "resume": "L'article souligne l'importance croissante de l'accès à la climatisation comme mesure d'adaptation aux vagues de chaleur, un enjeu indirect pour ABC via la demande accrue de services de propreté/FM dans des environnements tertiaires ou industriels climatisés.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/commentisfree/2026/jul/15/air-conditioning-access-extreme-heat",
       "date": "2026-07-15"
     },
     {
@@ -72,7 +94,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Canicule : deux outils pour rendre visibles ses conséquences",
-      "resume": "L'article met en avant des outils pour visualiser les impacts des canicules, un risque climatique opérationnel pouvant affecter les 3 000+ sites clients d'ABC et perturber ses prestations de propreté/FM.",
+      "resume": "L'article met en lumière des outils pour évaluer les impacts de la canicule, un risque climatique opérationnel pouvant affecter les 3 000+ sites clients d'ABC et leurs exigences en matière de résilience climatique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/canicule-deux-outils-pour-rendre-visibles-ses-consequences",
@@ -90,14 +112,14 @@
       "date": "2026-07-15"
     },
     {
-      "id": "065f1c20186b",
+      "id": "c3667ce5debe",
       "source": "Actuel HSE",
       "categorie": "Climat",
-      "titre": "Forte chaleur : l'INRS publie six fiches pratiques de prévention par secteur",
-      "resume": "L'article aborde la prévention des risques liés aux fortes chaleurs, un enjeu de sécurité et de santé au travail (SST) qui peut impacter les équipes de propreté/FM d'ABC intervenant chez ses clients, notamment en période estivale.",
+      "titre": "Règlement européen sur les emballages : des précisions sont attendues malgré une mise en application imminente",
+      "resume": "Le règlement européen sur les emballages impacte potentiellement les déchets générés par les prestations de propreté de ABC (emballages de produits d'entretien, consommables), avec des exigences renforcées en recyclabilité et traçabilité.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/forte-chaleur-linrs-publie-six-fiches-pratiques-de-prevention-par-secteur-1",
+      "url": "https://www.actuel-hse.fr/content/reglement-europeen-sur-les-emballages-des-precisions-sont-attendues-malgre-une-mise-en",
       "date": "2026-07-15"
     },
     {
@@ -105,21 +127,10 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "Deloitte Launches New Framework to Measure Value of Sustainability Investments",
-      "resume": "Ce cadre méthodologique de Deloitte pourrait aider ABC à structurer la valorisation de ses investissements RSE (ex : électrification flotte, efficacité énergétique) dans un contexte de reporting CSRD/ESRS, mais sans obligation immédiate.",
+      "resume": "Le cadre 'Sustainability Fusion' de Deloitte propose une méthodologie pour évaluer la valeur des investissements durables, utile pour structurer le reporting ESG et la stratégie climat de ABC, notamment dans le cadre de la CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/deloitte-launches-new-solution-to-enable-companies-to-measure-value-of-sustainability-investments/?utm_source=rss&utm_medium=rss&utm_campaign=deloitte-launches-new-solution-to-enable-companies-to-measure-value-of-sustainability-investments",
-      "date": "2026-07-14"
-    },
-    {
-      "id": "c4869303a161",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "Energy System Modelling Startup Gridcog Raises $10 Million",
-      "resume": "L'article évoque des solutions technologiques pour l'intégration des énergies renouvelables dans les réseaux, ce qui pourrait impacter indirectement les stratégies énergétiques des clients d'ABC et leurs exigences en matière de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/energy-system-modelling-startup-gridcog-raises-10-million/?utm_source=rss&utm_medium=rss&utm_campaign=energy-system-modelling-startup-gridcog-raises-10-million",
       "date": "2026-07-14"
     }
   ],
@@ -886,7 +897,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "L'arrêté sur l'effarouchement de l'ours brun dans les Pyrénées et le décret sur le démantèlement de l'installation nucléaire Masurca (CEA Cadarache) sont pertinents pour évaluer les enjeux de biodiversité et de gestion des déchets radioactifs. Le décret sur l'aide aux entreprises de transport fluvial en Guyane reflète des impacts indirects des crises géopolitiques sur les chaînes logistiques et les coûts énergétiques.",
+  "briefing_jorf": "Le décret n°2026-631 impose le démantèlement de l'installation nucléaire de base Masurca, ce qui pourrait impacter les stratégies de transition énergétique et de gestion des déchets radioactifs pour les entreprises du secteur. L'arrêté sur l'ours brun dans les Pyrénées et le décret sur l'aide au transport fluvial en Guyane sont moins directement pertinents pour une grande entreprise de services, sauf si elle opère dans ces secteurs spécifiques.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1094,6 +1105,12 @@
           "date": "2024-12-03"
         },
         {
+          "titre": "Texte adopté N° 324",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_droit_avocat_mesure_assistance_educative_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_droit_avocat_mesure_assistance_educative_17e",
+          "date": "2025-09-16"
+        },
+        {
           "titre": "Texte adopté N° 316",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/acces_logement_travailleurs_services_publics_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/acces_logement_travailleurs_services_publics_17e",
@@ -1218,15 +1235,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_proteger_enfants_et_lutter_contre_les_violences_en_milieu_scolaire_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_proteger_enfants_et_lutter_contre_les_violences_en_milieu_scolaire_17e",
           "date": "2026-04-28"
-        },
-        {
-          "titre": "Texte adopté N° 292",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/mobilisation_habitant_existant_crise_logement_17e",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/mobilisation_habitant_existant_crise_logement_17e",
-          "date": "2026-04-14"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations aux réglementations européennes (dont des directives environnementales et énergétiques) qui impacteront les obligations de reporting, les normes énergétiques et les politiques RSE des entreprises."
+  "pjl_briefing": "Parmi les projets de loi, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition écologique, à l’énergie et à la pêche. Aucun autre texte adopté ou projet de loi ne semble aborder spécifiquement des enjeux climatiques ou environnementaux."
 }
