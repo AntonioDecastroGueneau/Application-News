@@ -1,7 +1,7 @@
 {
   "date": "2026-07-16",
-  "generated_at": "07:55",
-  "elapsed_seconds": 193,
+  "generated_at": "13:02",
+  "elapsed_seconds": 228,
   "errors": [],
   "stats": {
     "jo_analyses": 20,
@@ -9,24 +9,79 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-07-16T07:55:36",
+    "run_at": "2026-07-16T13:02:29",
     "sources": {
       "JORF": 1,
-      "RSS": 14,
+      "RSS": 13,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 59,
-    "llm_seconds": 62.4
+    "llm_calls": 62,
+    "llm_seconds": 67.3
   },
   "items": [
+    {
+      "id": "e306b71c83ab",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG Update Podcast of June: New Episodes Available",
+      "resume": "L'article mentionne des évolutions dans le reporting extra-financier (EFRAG, ESRS) qui impactent directement les obligations de reporting ESG de ABC, notamment dans le cadre de la CSRD.",
+      "pourquoi": "EFRAG est l'organisme européen de référence pour les normes de reporting extra-financier (ESRS) liées à la CSRD, dont ABC sera soumis en tant qu'entreprise concernée. Les mises à jour sur les consultations et rapports (ex : template pour PME) sont pertinentes pour anticiper les exigences de reporting ESG de ABC.",
+      "criticite": 2,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-update-podcast-of-june-new-episodes-available",
+      "date": "2026-07-16"
+    },
+    {
+      "id": "487dada15acb",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Rénovation des bâtiments : le projet Rénov'le vise à encourager l'innovation pédagogique",
+      "resume": "Le projet Rénov'le promeut l'innovation pédagogique en rénovation énergétique des bâtiments, un enjeu clé pour les clients tertiaires d'ABC (ex : DPE tertiaire, efficacité énergétique).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/renov-le-renovation-energetique-formation-chalons-en-champagne-marne-48316.php4#xtor=RSS-6",
+      "date": "2026-07-16"
+    },
+    {
+      "id": "8e3f13c93158",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "La France vise une sortie du pétrole en 2045",
+      "resume": "La SNBC-3 confirme la trajectoire de décarbonation de la France, avec une sortie progressive des énergies fossiles d'ici 2050, influençant les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et les attentes en matière de reporting ESG (CSRD/ESRS).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/La-France-vise-une-sortie-du-petrole-en-2045",
+      "date": "2026-07-16"
+    },
+    {
+      "id": "85057cf5b34a",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "Neutralité carbone : quelle est la part de l'effort secteur par secteur ?",
+      "resume": "La SNBC 3 fixe les trajectoires sectorielles de décarbonation en France, ce qui impacte indirectement les clients d'ABC (nucléaire, santé, industrie) et leurs exigences carbone, influençant ainsi les enjeux de reporting ESG et de décarbonation de la flotte de véhicules d'ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/environnement/climat/neutralite-carbone-quelle-est-la-part-de-leffort-secteur-par-secteur",
+      "date": "2026-07-16"
+    },
+    {
+      "id": "262489651a61",
+      "source": "Le Monde Planète",
+      "categorie": "Énergie",
+      "titre": "El Niño pourrait faire bondir l’usage de la climatisation et poser « des défis immédiats » aux systèmes électriques, selon l’Agence internationale de l’énergie",
+      "resume": "L'article souligne l'augmentation de la demande en climatisation due au phénomène El Niño, ce qui pourrait impacter indirectement la consommation énergétique des sites clients d'ABC (tertiaire, santé, industrie) et influencer leurs exigences en matière de performance énergétique et de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/07/16/el-nino-pourrait-faire-bondir-l-usage-de-la-climatisation-et-poser-des-defis-immediats-aux-systemes-electriques-selon-l-agence-internationale-de-l-energie_6723766_3244.html",
+      "date": "2026-07-16"
+    },
     {
       "id": "564326df0309",
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Travail et canicule : le Haut-commissaire au plan suggère des négociations de branche",
-      "resume": "L'article aborde les risques physiques liés aux canicules pour les travailleurs, suggérant des négociations de branche pour adapter l'organisation du travail. Cela pourrait impacter les équipes de propreté/FM d'ABC en période de forte chaleur, notamment pour les interventions chez les clients.",
+      "resume": "L'article souligne l'émergence d'une réglementation future sur l'adaptation des conditions de travail en cas de canicule, ce qui pourrait impacter les 3 000+ sites clients d'ABC et nécessiter des ajustements opérationnels pour les équipes de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/travail-et-canicule-le-haut-commissaire-au-plan-suggere-des-negociations-de-branche-0",
@@ -37,7 +92,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Sécheresse : seuls Mayotte et la Guyane sans vigilance ni restriction, 93 % des nappes en baisse",
-      "resume": "L'article souligne l'ampleur de la sécheresse en France métropolitaine (93% des nappes en baisse), ce qui pourrait impacter les sites clients d'ABC (ex : restrictions d'eau, perturbations logistiques) et renforcer les exigences en matière de résilience climatique pour les prestataires de services.",
+      "resume": "L'article souligne l'ampleur de la sécheresse en France métropolitaine (93% des nappes en baisse), ce qui pourrait impacter les sites clients d'ABC (ex : restrictions d'eau, risques de pénurie pour les activités de nettoyage).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/secheresse-seuls-mayotte-et-la-guyane-sans-vigilance-ni-restriction-93-des-nappes-en-baisse",
@@ -48,29 +103,18 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Fortes chaleurs : la CGT réclame des modifications du code du travail",
-      "resume": "L'article aborde les risques physiques liés aux fortes chaleurs et les demandes de modification du code du travail, ce qui pourrait impacter les obligations des employeurs en matière de sécurité des travailleurs, y compris pour les prestataires de services comme ABC intervenant sur des sites clients.",
+      "resume": "L'article aborde les risques physiques liés aux fortes chaleurs et les demandes de la CGT pour renforcer les obligations légales des employeurs, ce qui pourrait impacter les conditions de travail des équipes de propreté/FM d'ABC sur les sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-la-cgt-reclame-des-modifications-du-code-du-travail",
       "date": "2026-07-16"
     },
     {
-      "id": "05c0a3d85be9",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "En supprimant la double matérialité pour les entreprises étrangères, l'UE risque une CSRD à deux vitesses",
-      "resume": "En supprimant la double matérialité pour les entreprises étrangères, l'UE risque une CSRD à deux vitesses",
-      "pourquoi": "Mention de CSRD.",
-      "criticite": 3,
-      "url": "https://www.novethic.fr/finance-durable/reglementation/csrd-deux-vitesses-double-materialite-entreprises-etrangeres",
-      "date": "2026-07-15"
-    },
-    {
       "id": "555d73d6098e",
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Refonte REP textiles (3/5) : les modalités de soutien au tri chamboulées",
-      "resume": "La refonte de la REP textiles pourrait impacter les modalités de tri et de traçabilité des déchets textiles pour ABC, notamment si ses clients (secteurs santé, industrie) sont concernés par ces nouvelles obligations de réemploi et recyclage de proximité.",
+      "resume": "La refonte REP textiles impacte indirectement ABC via la gestion des déchets de ses clients (textiles professionnels) et les modalités de soutien au tri, pouvant influencer les coûts et pratiques de collecte des déchets textiles en prestation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/nouvelles-modalites-soutien-financier-tri-textiles-48294.php4#xtor=RSS-6",
@@ -81,32 +125,10 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "La justice annule un projet de centre de valorisation des déchets en zone inondable",
-      "resume": "L'annulation d'un projet de centre de valorisation des déchets en zone inondable souligne les risques réglementaires et opérationnels liés à l'implantation des sites de traitement des déchets, pouvant impacter la gestion des déchets des clients d'ABC et leur conformité aux exigences de résilience climatique.",
+      "resume": "L'annulation d'un projet de centre de valorisation des déchets en zone inondable souligne les risques réglementaires et opérationnels liés aux aléas climatiques pour les prestataires de services comme ABC, notamment dans la gestion des déchets et la conformité des sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/annulation-centre-valorisation-dechets-zone-inondable-pradet-48310.php4#xtor=RSS-6",
-      "date": "2026-07-15"
-    },
-    {
-      "id": "f3342d2dc61e",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Les raccordements électriques des EnR sont saturés sur 10% du territoire",
-      "resume": "L'article souligne des contraintes croissantes sur les réseaux électriques pour les EnR, pouvant impacter la disponibilité énergétique des sites clients d'ABC et influencer leurs exigences en matière de décarbonation ou de transition énergétique.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/les-raccordements-electriques-des-enr-sont-satures-sur-10-du-territoire-429596/",
-      "date": "2026-07-15"
-    },
-    {
-      "id": "7aa7c03e4f0b",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "La nouvelle stratégie bas carbone compte sur l’électrification",
-      "resume": "La SNBC3 renforce l'électrification comme levier clé de décarbonation, ce qui impacte directement la stratégie de flotte véhicules d'ABC (scope 1) et ses engagements net zéro.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/la-nouvelle-strategie-bas-carbone-compte-sur-lelectrification-429512/",
       "date": "2026-07-15"
     },
     {
@@ -114,7 +136,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "L’alerte du gouvernement sur le manque d’eau en France : « La sobriété doit être notre réflexe collectif »",
-      "resume": "L'article souligne l'urgence de la sobriété hydrique en France, avec des restrictions déjà en place dans la majorité des départements. Pour ABC, cela peut impacter les activités de nettoyage (consommation d'eau, gestion des déchets liquides) et renforcer les exigences clients en matière de résilience climatique.",
+      "resume": "L'article souligne l'urgence de la sobriété hydrique en France, avec des restrictions déjà en place dans la majorité des départements. ABC, prestataire de services, pourrait être impacté indirectement par des contraintes accrues sur les ressources en eau de ses clients (ex : sites tertiaires, industries), affectant les prestations de nettoyage ou les processus internes.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/07/15/l-alerte-du-gouvernement-sur-le-manque-d-eau-en-france-la-sobriete-doit-etre-notre-reflexe-collectif-selon-monique-barbut_6723614_3244.html",
@@ -125,21 +147,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "La France, éreintée par les canicules, adopte une feuille de route pour être neutre en carbone en 2050, qui devra démontrer sa crédibilité",
-      "resume": "La troisième Stratégie Nationale Bas Carbone (SNBC-3) fixe des objectifs ambitieux de neutralité carbone d'ici 2050, avec des implications potentielles sur les exigences réglementaires et clients pour ABC (ex : décarbonation des flottes, énergie, déchets).",
+      "resume": "La SNBC 3 fixe des objectifs ambitieux de neutralité carbone d'ici 2050, impactant indirectement les exigences clients d'ABC (nucléaire, santé, industrie) en matière de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/07/15/la-france-ereintee-par-les-canicules-adopte-une-feuille-de-route-pour-etre-neutre-en-carbone-en-2050-qui-devra-demontrer-sa-credibilite_6723608_3244.html",
-      "date": "2026-07-15"
-    },
-    {
-      "id": "d1a984c32488",
-      "source": "Le Monde Planète",
-      "categorie": "Eau",
-      "titre": "CARTE | Sécheresse : êtes-vous concerné par des restrictions d’eau ?",
-      "resume": "L'article informe sur les restrictions d'eau en France via une carte interactive, un risque climatique opérationnel pouvant impacter les activités de nettoyage et de gestion des déchets sur les sites clients d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/les-decodeurs/article/2026/07/15/secheresse-etes-vous-concerne-par-des-restrictions-d-eau_6183749_4355771.html",
       "date": "2026-07-15"
     },
     {
@@ -147,32 +158,10 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "EU Commission Launches Legal Action Against All 27 Member States for Failing to Implement Zero Emission Building Law",
-      "resume": "La non-transposition par les États membres de la directive européenne sur les bâtiments à zéro émission (2050) pourrait impacter indirectement ABC via les exigences carbone de ses clients (secteurs nucléaire, santé, industrie) et les normes énergétiques des sites tertiaires où ABC intervient.",
+      "resume": "La non-transposition par les États membres de la directive européenne sur les bâtiments à émissions nulles d'ici 2050 pourrait impacter les exigences clients d'ABC (secteurs nucléaire, santé, industrie) en matière de décarbonation des sites tertiaires, notamment via des audits renforcés ou des plans d'action obligatoires.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/eu-commission-launches-legal-action-against-all-member-states-for-failing-to-implement-zero-emission-building-law/?utm_source=rss&utm_medium=rss&utm_campaign=eu-commission-launches-legal-action-against-all-member-states-for-failing-to-implement-zero-emission-building-law",
-      "date": "2026-07-15"
-    },
-    {
-      "id": "c15c0a6f8369",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "Green Project Technologies Acquires Carbon Accounting Platform Optera",
-      "resume": "L'acquisition d'une plateforme de comptabilité carbone par Green Project Technologies pourrait influencer les attentes des clients d'ABC en matière de reporting carbone (scope 3) et de décarbonation des chaînes d'approvisionnement, notamment pour les secteurs industriels ou nucléaires.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/green-project-technologies-acquires-carbon-accounting-platform-optera/?utm_source=rss&utm_medium=rss&utm_campaign=green-project-technologies-acquires-carbon-accounting-platform-optera",
-      "date": "2026-07-15"
-    },
-    {
-      "id": "dca77ec3a3d6",
-      "source": "The Guardian Environment",
-      "categorie": "Énergie",
-      "titre": "Surviving extreme heat increasingly boils down to this: access to air conditioning | Mark Wolfe",
-      "resume": "L'article souligne l'importance croissante de l'accès à la climatisation comme mesure d'adaptation aux vagues de chaleur, un enjeu indirect pour ABC via les risques climatiques opérationnels sur ses 3 000+ sites clients et les exigences carbone de ses clients (nucléaire, santé, industrie).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/commentisfree/2026/jul/15/air-conditioning-access-extreme-heat",
       "date": "2026-07-15"
     }
   ],
@@ -1274,17 +1263,14 @@
       "source": "JORF",
       "categorie": "Déchets",
       "titre": "Arrêté du 15 juillet 2026 modifiant l'arrêté du 14 décembre 2023 fixant la liste des versions de voitures particulières électriques ayant atteint le score environnemental minimal conditionnant l'éligibilité à certaines aides à l'achat ou à la location de véhicules peu polluants",
-      "resume": "Mise à jour des critères d'éligibilité aux aides pour les véhicules électriques, impactant potentiellement la flotte de véhicules d'ABC.",
-      "pourquoi": {
-        "obligation_concrete": "L'arrêté impose un score environnemental minimal pour les véhicules électriques éligibles aux aides, ce qui peut contraindre ABC à renouveler sa flotte avec des modèles conformes sous peine de perdre des subventions ou d'augmenter ses coûts d'acquisition.",
-        "delai_risque_opportunite": "Le délai de mise en application est immédiat (2026), avec un risque de non-conformité des véhicules actuels ou futurs, mais aussi une opportunité de moderniser la flotte vers des modèles plus performants et alignés avec les exigences clients et réglementaires."
-      },
+      "resume": "Mise à jour des critères d'éligibilité aux aides pour l'achat/location de véhicules électriques, impactant potentiellement la flotte de véhicules d'ABC.",
+      "pourquoi": "L'arrêté du 15 juillet 2026 impose une mise à jour des critères d'éligibilité aux aides pour l'achat ou la location de véhicules électriques, avec un délai de conformité immédiat pour les nouveaux achats/locations, ce qui expose ABC à un risque de perte d'aides financières (bonus écologique, prime à la conversion) si sa flotte ne respecte pas les nouveaux scores environnementaux minimaux, tout en accélérant la transition vers des véhicules plus performants et alignés avec les exigences clients en matière de décarbonation.",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054427080",
       "date": "2026-07-16"
     }
   ],
-  "briefing_jorf": "Les arrêtés n°10, 11 et 12 sont pertinents : le premier dispense d'évaluation environnementale un projet minier, le second modifie les règles de pêche du bar européen dans le golfe de Gascogne, et le troisième met à jour la liste des véhicules électriques éligibles aux aides à l'achat, impactant les stratégies RSE et d'approvisionnement durable.",
+  "briefing_jorf": "Les arrêtés n°10, 11 et 12 sont pertinents : le premier dispense d'évaluation environnementale un projet minier, le second modifie la gestion de la pêche du bar en Atlantique, et le troisième ajuste la liste des véhicules électriques éligibles aux aides, impactant les critères RSE des flottes d'entreprise. Aucun autre texte ne concerne directement les enjeux environnementaux ou climatiques.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1620,5 +1606,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations réglementaires liées à l’énergie, l’environnement et la pêche, essentielles pour les stratégies RSE et le reporting extra-financier des entreprises."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, deux sont particulièrement significatifs pour un Responsable Environnement/Climat : le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°3017)** qui impacte les pratiques agricoles et la transition écologique des territoires, et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)**, incluant des enjeux énergétiques, de déchets et de reporting RSE. Aucun texte adopté ne traite directement de ces sujets."
 }
