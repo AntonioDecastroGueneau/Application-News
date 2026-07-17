@@ -7,7 +7,7 @@ from .output import write_output
 from .sources.jorf import fetch_jorf
 from .sources.parlement import fetch_parlement
 from .sources.rss import fetch_rss
-from .sources.vigieau import fetch_vigieau, fetch_vigieau_history
+from .sources.vigieau import fetch_vigieau, fetch_vigieau_communes, fetch_vigieau_history
 from .config import GROQ_MODEL
 
 
@@ -41,6 +41,7 @@ def main() -> int:
     items = []
     stats = {}
     restrictions = []
+    restrictions_sites = []
     jorf_autres = []
     jorf_items = []
     briefing_jorf = []
@@ -73,6 +74,15 @@ def main() -> int:
         log.error(f"VigiEau fatal : {e}")
         errors.append('VigiEau')
         stats['depts_restriction'] = 0
+
+    # 3b. VigiEau par commune (sites GSF) — niveau officiel par site
+    try:
+        restrictions_sites = fetch_vigieau_communes()
+        stats['sites_restriction'] = sum(1 for s in restrictions_sites if s.get('niveau'))
+    except Exception as e:
+        log.error(f"VigiEau communes fatal : {e}")
+        errors.append('VigiEau_communes')
+        stats['sites_restriction'] = 0
 
     # 4. VigiEau historique
     try:
@@ -118,6 +128,7 @@ def main() -> int:
         'stats': stats,
         'items': unique,
         'restrictions_eau': restrictions,
+        'restrictions_sites': restrictions_sites,
         'jo_autres': jorf_autres,
         'jo_retenus': jorf_items,
         'briefing_jorf': briefing_jorf,

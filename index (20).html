@@ -296,6 +296,49 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
 .parl-hist-item{display:flex;gap:8px;align-items:baseline;font-size:11px;color:var(--muted);padding:2px 0}
 .parl-hist-date{font-family:var(--mono);flex-shrink:0}
 .parl-empty{padding:48px 20px;text-align:center;font-size:13px;color:var(--muted)}
+/* ── Recherche restriction par commune ── */
+.sb-eausearch{padding:12px 14px;border-top:1px solid var(--sb-border)}
+.eaus-box{position:relative}
+.eaus-input{width:100%;background:var(--sb-hover);border:1px solid var(--sb-border);border-radius:var(--radius-sm);color:var(--sb-text);font-family:var(--sans);font-size:12px;padding:7px 9px;outline:none}
+.eaus-input::placeholder{color:var(--sb-muted)}
+.eaus-input:focus{border-color:var(--sb-accent)}
+.eaus-suggest{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--sb-bg);border:1px solid var(--sb-border);border-radius:var(--radius-sm);box-shadow:0 6px 20px rgba(0,0,0,.35);z-index:1200;max-height:240px;overflow-y:auto;display:none}
+.eaus-suggest.open{display:block}
+.eaus-sug-item{display:flex;align-items:baseline;gap:8px;padding:7px 10px;cursor:pointer;font-size:12px;color:var(--sb-text);border-bottom:1px solid var(--sb-border)}
+.eaus-sug-item:last-child{border-bottom:none}
+.eaus-sug-item:hover{background:var(--sb-hover)}
+.eaus-sug-dept{font-family:var(--mono);font-size:10px;color:var(--sb-muted);flex-shrink:0}
+.eaus-sug-empty{padding:9px 10px;font-size:11px;color:var(--sb-muted)}
+/* Modal */
+.eaus-overlay{position:fixed;inset:0;z-index:2000;background:rgba(15,20,30,.55);backdrop-filter:blur(2px);display:none;align-items:center;justify-content:center;padding:20px}
+.eaus-overlay.open{display:flex}
+.eaus-modal{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.25);width:100%;max-width:480px;max-height:82vh;display:flex;flex-direction:column;overflow:hidden;animation:eausPop .16s ease-out}
+@keyframes eausPop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+.eaus-mhead{padding:18px 20px 16px;color:#fff;position:relative}
+.eaus-mclose{position:absolute;top:12px;right:12px;width:26px;height:26px;border:none;border-radius:6px;background:rgba(255,255,255,.18);color:#fff;font-size:13px;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center}
+.eaus-mclose:hover{background:rgba(255,255,255,.3)}
+.eaus-mcommune{font-size:17px;font-weight:600;line-height:1.25}
+.eaus-mmeta{font-size:11px;opacity:.85;font-family:var(--mono);margin-top:2px}
+.eaus-mbadge{display:inline-flex;align-items:center;gap:6px;margin-top:12px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:4px 12px;font-size:12px;font-weight:600}
+.eaus-mbadge .dot{width:8px;height:8px;border-radius:50%;background:#fff}
+.eaus-mbody{padding:0;overflow-y:auto}
+.eaus-zone{padding:14px 20px;border-bottom:1px solid var(--border)}
+.eaus-zone:last-child{border-bottom:none}
+.eaus-zone-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+.eaus-zone-nom{font-size:13px;font-weight:600;color:var(--text)}
+.eaus-zone-niv{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;padding:2px 8px;border-radius:10px;color:#fff;flex-shrink:0}
+.eaus-arrete{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:11px;color:var(--muted);margin-bottom:10px}
+.eaus-arrete a{color:var(--blue);text-decoration:none;font-weight:500}
+.eaus-arrete a:hover{text-decoration:underline}
+.eaus-usages-lbl{font-size:10px;font-weight:600;letter-spacing:.05em;color:var(--muted);text-transform:uppercase;margin-bottom:6px}
+.eaus-usage{display:flex;gap:8px;padding:6px 0;border-top:1px solid var(--surface2)}
+.eaus-usage:first-of-type{border-top:none}
+.eaus-uthem{flex-shrink:0;font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;background:var(--surface2);color:var(--text2);padding:2px 6px;border-radius:4px;height:fit-content;margin-top:1px}
+.eaus-utext{flex:1;min-width:0}
+.eaus-uname{font-size:12px;font-weight:500;color:var(--text)}
+.eaus-udesc{font-size:11px;color:var(--muted);margin-top:1px;white-space:pre-line}
+.eaus-empty,.eaus-error{padding:32px 20px;text-align:center;font-size:13px;color:var(--muted)}
+.eaus-loading{padding:32px 20px;text-align:center;font-size:12px;color:var(--muted);font-family:var(--mono)}
 </style>
 </head>
 <body>
@@ -326,6 +369,13 @@ html,body{height:100%;background:var(--bg);color:var(--text);font-family:var(--s
         <div class="stat-cell"><div class="stat-val" id="stat-pjl">—</div><div class="stat-lbl">PJL suivis</div></div>
       </div>
       <div id="sidebar-eau"></div>
+    </div>
+    <div class="sb-eausearch">
+      <div class="sb-section-lbl" style="padding:0 0 6px">Restriction par commune</div>
+      <div class="eaus-box">
+        <input id="eaus-input" type="text" class="eaus-input" placeholder="Rechercher une commune…" autocomplete="off" oninput="eausSearch(this.value)" onfocus="eausSearch(this.value)">
+        <div id="eaus-suggest" class="eaus-suggest"></div>
+      </div>
     </div>
     <div class="sb-filters">
       <div class="sb-section-lbl" style="padding:0;margin-bottom:6px">Sources</div>
@@ -962,7 +1012,98 @@ function switchView(view){
 function formatDate(iso){if(!iso)return'—';const[y,m,d]=iso.split('-');const M=['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];return `${parseInt(d)} ${M[parseInt(m)-1]} ${y}`;}
 function escHtml(str){return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2500);}
+
+/* ══════════ Recherche restriction par commune (VigiEau /api/zones) ══════════ */
+const EAUS_PROFIL='entreprise';
+let eausTimer=null, eausLastQuery='';
+function eausDebounce(fn,ms){return function(...a){clearTimeout(eausTimer);eausTimer=setTimeout(()=>fn.apply(this,a),ms);};}
+
+const eausSearch=eausDebounce(async function(q){
+  q=(q||'').trim();
+  const box=document.getElementById('eaus-suggest');
+  if(q.length<2){box.classList.remove('open');box.innerHTML='';return;}
+  eausLastQuery=q;
+  try{
+    const url=`https://geo.api.gouv.fr/communes?nom=${encodeURIComponent(q)}&fields=code,nom,codeDepartement,centre&boost=population&limit=7`;
+    const r=await fetch(url);
+    const communes=await r.json();
+    if(eausLastQuery!==q)return; // réponse obsolète
+    if(!communes.length){box.innerHTML=`<div class="eaus-sug-empty">Aucune commune trouvée</div>`;box.classList.add('open');return;}
+    box.innerHTML=communes.map(c=>{
+      const co=c.centre&&c.centre.coordinates||[null,null];
+      return `<div class="eaus-sug-item" onclick="eausSelect('${c.code}','${escHtml(c.nom).replace(/'/g,"\\'")}','${c.codeDepartement}',${co[0]},${co[1]})"><span>${escHtml(c.nom)}</span><span class="eaus-sug-dept">${c.codeDepartement}</span></div>`;
+    }).join('');
+    box.classList.add('open');
+  }catch(e){box.innerHTML=`<div class="eaus-sug-empty">Erreur réseau</div>`;box.classList.add('open');}
+},220);
+
+async function eausSelect(insee,nom,dept,lon,lat){
+  document.getElementById('eaus-suggest').classList.remove('open');
+  document.getElementById('eaus-input').value=nom;
+  eausOpenModal();
+  const body=document.getElementById('eaus-modal-inner');
+  body.innerHTML=`<div class="eaus-loading">Interrogation VigiEau…</div>`;
+  let zones=null,status=0;
+  try{
+    let url=`https://api.vigieau.gouv.fr/api/zones?commune=${insee}&profil=${EAUS_PROFIL}&zoneType=SUP`;
+    let r=await fetch(url);status=r.status;
+    if(r.status===409&&lon!=null&&lat!=null){ // commune à cheval → désambiguïser
+      r=await fetch(url+`&lon=${lon}&lat=${lat}`);status=r.status;
+    }
+    if(r.ok){const d=await r.json();zones=Array.isArray(d)?d:[d];}
+  }catch(e){status=-1;}
+  eausRenderModal(nom,insee,dept,zones,status);
+}
+
+function eausRenderModal(nom,insee,dept,zones,status){
+  const inner=document.getElementById('eaus-modal-inner');
+  // Niveau global du site = le plus grave parmi les zones
+  const ordre={'vigilance':1,'alerte':2,'alerte renforcée':3,'crise':4};
+  const valid=(zones||[]).filter(z=>z&&z.niveauGravite);
+  if(status===-1){inner.innerHTML=eausHeadHtml(nom,insee,dept,null)+`<div class="eaus-mbody"><div class="eaus-error">Erreur réseau — réessayez.</div></div>`;return;}
+  if(!valid.length){inner.innerHTML=eausHeadHtml(nom,insee,dept,null)+`<div class="eaus-mbody"><div class="eaus-empty">Aucune restriction en vigueur sur les eaux superficielles pour cette commune.</div></div>`;return;}
+  let niveauMax='';valid.forEach(z=>{const n=normalizeNiveau(z.niveauGravite);if((ordre[n]||0)>(ordre[niveauMax]||0))niveauMax=n;});
+
+  let html=eausHeadHtml(nom,insee,dept,niveauMax)+`<div class="eaus-mbody">`;
+  valid.sort((a,b)=>(ordre[normalizeNiveau(b.niveauGravite)]||0)-(ordre[normalizeNiveau(a.niveauGravite)]||0));
+  html+=valid.map(z=>{
+    const niv=normalizeNiveau(z.niveauGravite),col=NIVEAU_COLOR[niv]||'#94a3b8';
+    const ar=z.arrete||{};
+    const usages=(z.usages||[]).filter(u=>u.concerneEntreprise);
+    let arrow='';
+    const dd=ar.dateDebutValidite?formatDate(ar.dateDebutValidite):null, df=ar.dateFinValidite?formatDate(ar.dateFinValidite):null;
+    if(dd)arrow+=`<span>En vigueur : ${dd}${df?` → ${df}`:''}</span>`;
+    if(ar.cheminFichier)arrow+=`<a href="${ar.cheminFichier}" target="_blank" rel="noopener">Arrêté ↗</a>`;
+    if(ar.cheminFichierArreteCadre)arrow+=`<a href="${ar.cheminFichierArreteCadre}" target="_blank" rel="noopener">Arrêté-cadre ↗</a>`;
+    let u='';
+    if(usages.length){
+      u=`<div class="eaus-usages-lbl">${usages.length} restriction${usages.length>1?'s':''} entreprise</div>`+usages.map(x=>
+        `<div class="eaus-usage"><span class="eaus-uthem">${escHtml(x.thematique||'—')}</span><div class="eaus-utext"><div class="eaus-uname">${escHtml(x.nom||'')}</div>${x.description?`<div class="eaus-udesc">${escHtml(x.description)}</div>`:''}</div></div>`
+      ).join('');
+    }else{u=`<div class="eaus-usages-lbl">Aucune restriction spécifique aux entreprises à ce niveau</div>`;}
+    return `<div class="eaus-zone"><div class="eaus-zone-top"><span class="eaus-zone-nom">${escHtml(z.nom||'Zone de gestion')}</span><span class="eaus-zone-niv" style="background:${col}">${NIVEAU_LABEL[niv]||niv}</span></div><div class="eaus-arrete">${arrow}</div>${u}</div>`;
+  }).join('')+`</div>`;
+  inner.innerHTML=html;
+}
+
+function eausHeadHtml(nom,insee,dept,niveauMax){
+  const col=niveauMax?(NIVEAU_COLOR[niveauMax]||'#64748b'):'#64748b';
+  const lbl=niveauMax?(NIVEAU_LABEL[niveauMax]||niveauMax):'Aucune restriction';
+  return `<div class="eaus-mhead" style="background:${col}">`+
+    `<button class="eaus-mclose" onclick="eausCloseModal()">✕</button>`+
+    `<div class="eaus-mcommune">${escHtml(nom)}</div>`+
+    `<div class="eaus-mmeta">INSEE ${insee} · Dépt ${dept} · eaux superficielles</div>`+
+    `<div class="eaus-mbadge"><span class="dot"></span>${lbl}</div></div>`;
+}
+function eausOpenModal(){document.getElementById('eaus-overlay').classList.add('open');}
+function eausCloseModal(){document.getElementById('eaus-overlay').classList.remove('open');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')eausCloseModal();});
+document.addEventListener('click',e=>{const box=document.getElementById('eaus-suggest');const wrap=document.querySelector('.eaus-box');if(box&&wrap&&!wrap.contains(e.target))box.classList.remove('open');});
+
 init();
 </script>
+<div class="eaus-overlay" id="eaus-overlay" onclick="if(event.target===this)eausCloseModal()">
+  <div class="eaus-modal"><div id="eaus-modal-inner"></div></div>
+</div>
 </body>
 </html>

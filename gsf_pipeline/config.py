@@ -10,6 +10,9 @@ Dynamic values like paths and "today" are handled in `gsf_pipeline.main`.
 
 JORF_BASE_URL = 'https://echanges.dila.gouv.fr/OPENDATA/JORF/'
 VIGIEAU_DEPTS_URL = 'https://api.vigieau.gouv.fr/api/departements'
+# Endpoint par commune (niveau officiel + restrictions détaillées pour un site précis).
+# Usage : f"{VIGIEAU_ZONES_URL}?commune={insee}&profil=entreprise&zoneType=SUP"
+VIGIEAU_ZONES_URL = 'https://api.vigieau.gouv.fr/api/zones'
 
 
 # ─────────────────────────────────────────────
@@ -219,6 +222,28 @@ NIVEAUX_ORDRE = {
     'alerte renforcée': 3,
     'crise': 4,
 }
+
+# ─────────────────────────────────────────────
+# Référentiel des sites GSF suivis (niveau par commune)
+# ─────────────────────────────────────────────
+# Construit une fois puis stocké ici (pas recalculé à chaque appel).
+# `insee`   : code commune INSEE 5 chiffres (obligatoire pour /api/zones)
+# `station` : code station Hub'Eau (optionnel, pour le VCN3 indicatif — cf. hubeau.py)
+# `lon/lat` : à renseigner UNIQUEMENT si la commune est à cheval sur plusieurs zones
+#             (VigiEau renvoie alors une 409 explicite qu'on désambiguïse avec lon/lat).
+# TODO GSF : remplacer/compléter par la vraie liste des sites suivis.
+GSF_SITES = [
+    {
+        'nom': 'Exemple — Yonne (Cousin)',
+        'insee': '89025',
+        'station': 'H222101001',   # Gurgy, exemple de la spec
+        'lon': None,
+        'lat': None,
+    },
+]
+
+# Profil d'usager pour filtrer les restrictions retournées (sites GSF = entreprise).
+VIGIEAU_PROFIL = 'entreprise'
 
 DATAGOUV_DATASET_ID = 'donnee-secheresse-vigieau'
 DATAGOUV_API = 'https://www.data.gouv.fr/api/1/datasets/'

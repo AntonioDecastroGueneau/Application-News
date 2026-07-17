@@ -12,10 +12,13 @@ from ..config import (
     DATAGOUV_API,
     DATAGOUV_DATASET_ID,
     DEPT_NOMS,
+    GSF_SITES,
     NIVEAUX_GRAVITE,
     NIVEAUX_ORDRE,
     VIGIEAU_DEPTS_URL,
     VIGIEAU_FALLBACK_URLS,
+    VIGIEAU_PROFIL,
+    VIGIEAU_ZONES_URL,
     TIMEOUT,
 )
 
@@ -45,6 +48,106 @@ def fetch_vigieau():
     except Exception as e:
         log.error(f"VigiEau fatal : {e}", exc_info=True)
     return restrictions
+
+
+def _fetch_zone_commune(site: dict) -> list:
+    """Appelle /api/zones pour un site GSF (niveau officiel par commune).
+
+    Renvoie la liste brute des zones de gestion concernées (une entrée par zone).
+    Gère la 409 "commune à cheval" en réessayant avec lon/lat si fournis.
+    """
+    insee = str(site.get('insee', '')).strip()
+    if not insee:
+        log.warning(f"Site '{site.get('nom')}' sans code INSEE — ignoré")
+        return []
+
+    params = {'commune': insee, 'profil': VIGIEAU_PROFIL, 'zoneType': 'SUP'}
+    resp = requests.get(VIGIEAU_ZONES_URL, params=params, timeout=TIMEOUT)
+
+    # 409 = commune à cheval sur plusieurs zones : désambiguïser avec lon/lat.
+    if resp.status_code == 409 and site.get('lon') is not None and site.get('lat') is not None:
+        log.info(f"  {insee} à cheval (409) → nouvel appel avec lon/lat")
+        params.update({'lon': site['lon'], 'lat': site['lat']})
+        resp = requests.get(VIGIEAU_ZONES_URL, params=params, timeout=TIMEOUT)
+
+    if resp.status_code == 404:
+        # Pas de zone SUP en restriction pour cette commune (cas normal, pas une erreur).
+        return []
+    resp.raise_for_status()
+
+    data = resp.json()
+    # L'API peut renvoyer soit une liste de zones, soit un objet unique selon les versions.
+    if isinstance(data, dict):
+        return [data]
+    return data or []
+
+
+def fetch_vigieau_communes(sites: list | None = None) -> list:
+    """Niveau officiel VigiEau **par commune** pour les sites GSF suivis.
+
+    Source de vérité "quel niveau est officiellement en vigueur" (republie les
+    arrêtés préfectoraux). À afficher à côté du VCN3 Hub'Eau, jamais à la place.
+    """
+    log.info("=== VigiEau par commune (sites GSF) ===")
+    sites = sites if sites is not None else GSF_SITES
+    resultats = []
+
+    for site in sites:
+        try:
+            zones = _fetch_zone_commune(site)
+        except Exception as e:
+            log.error(f"VigiEau site '{site.get('nom')}' ({site.get('insee')}) : {e}")
+            resultats.append({
+                'site': site.get('nom', ''),
+                'insee': site.get('insee', ''),
+                'station': site.get('station'),
+                'erreur': str(e),
+                'zones': [],
+            })
+            continue
+
+        zones_out = []
+        for z in zones:
+            arrete = z.get('arrete') or {}
+            usages = [
+                {
+                    'nom': u.get('nom'),
+                    'thematique': u.get('thematique'),
+                    'description': u.get('description'),
+                }
+                for u in (z.get('usages') or [])
+                if u.get('concerneEntreprise')
+            ]
+            zones_out.append({
+                'nom': z.get('nom', ''),
+                'niveau': _normalize_niveau(z.get('niveauGravite', '')),
+                'niveau_brut': z.get('niveauGravite', ''),
+                'departement': z.get('departement'),
+                'arrete_pdf': arrete.get('cheminFichier'),
+                'arrete_cadre_pdf': arrete.get('cheminFichierArreteCadre'),
+                'date_debut': arrete.get('dateDebutValidite'),
+                'date_fin': arrete.get('dateFinValidite'),
+                'usages': usages,
+            })
+
+        # Niveau du site = le plus grave parmi ses zones de gestion.
+        niveau_site = max(
+            (z['niveau'] for z in zones_out if z['niveau']),
+            key=lambda n: NIVEAUX_ORDRE.get(n, 0),
+            default=None,
+        )
+        resultats.append({
+            'site': site.get('nom', ''),
+            'insee': site.get('insee', ''),
+            'station': site.get('station'),
+            'niveau': niveau_site,
+            'zones': zones_out,
+        })
+        log.info(f"  {site.get('nom')} ({site.get('insee')}) → {niveau_site or 'aucune restriction'}")
+
+    resultats.sort(key=lambda x: NIVEAUX_ORDRE.get(x.get('niveau') or '', 0), reverse=True)
+    log.info(f"VigiEau communes : {len(resultats)} sites évalués")
+    return resultats
 
 
 def _normalize_niveau(niveau: str) -> str:
