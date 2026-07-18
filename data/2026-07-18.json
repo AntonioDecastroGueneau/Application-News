@@ -1,24 +1,26 @@
 {
   "date": "2026-07-18",
-  "generated_at": "07:28",
-  "elapsed_seconds": 228,
+  "generated_at": "12:13",
+  "elapsed_seconds": 176,
   "errors": [],
   "stats": {
     "jo_analyses": 12,
-    "jo_retenus": 1,
+    "jo_retenus": 0,
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-07-18T07:28:35",
+    "run_at": "2026-07-18T12:13:39",
     "sources": {
-      "JORF": 1,
-      "RSS": 18,
+      "JORF": 0,
+      "RSS": 12,
       "VigiEau": 94,
       "Parlement": 1
     },
-    "errors": [],
-    "llm_calls": 57,
-    "llm_seconds": 68.4
+    "errors": [
+      "SOURCE VIDE — JORF : 0 textes retenus"
+    ],
+    "llm_calls": 47,
+    "llm_seconds": 50.4
   },
   "items": [
     {
@@ -26,7 +28,7 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SR TEG Online Meeting 23 July 2026",
-      "resume": "L'article concerne les travaux de l'EFRAG sur les normes de reporting de durabilité (ESRS), pertinentes pour le reporting CSRD/ESG d'ABC, mais sans obligation immédiate ou action opérationnelle identifiable.",
+      "resume": "L'article concerne une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting de durabilité (ESRS), pertinente pour le reporting CSRD/ESRS d'ABC, mais sans obligation immédiate ou action opérationnelle directe.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-sr-teg-online-meeting-23-july-2026-0",
@@ -37,7 +39,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Canicule : deux outils pour rendre visibles ses conséquences",
-      "resume": "L'article aborde les outils pour visualiser les impacts de la canicule, un risque climatique opérationnel pouvant affecter les 3 000+ sites clients d'ABC, notamment en termes de santé au travail et de continuité de service.",
+      "resume": "L'article aborde les outils pour évaluer les impacts de la canicule, un risque climatique opérationnel pouvant affecter les 3 000+ sites clients d'ABC, notamment en termes de sécurité des employés et de continuité des prestations.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/canicule-deux-outils-pour-rendre-visibles-ses-consequences",
@@ -55,12 +57,23 @@
       "date": "2026-07-17"
     },
     {
+      "id": "fc9004a2cc0b",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Refonte REP textiles (5/5) : les finances de Refashion sous surveillance",
+      "resume": "La refonte de la REP textiles pourrait impacter les obligations de tri et de traçabilité des déchets textiles pour ABC, notamment dans le cadre de ses prestations de propreté chez ses clients. Une surveillance accrue des finances de Refashion pourrait aussi influencer les coûts ou modalités de gestion des déchets pour les entreprises du secteur.",
+      "pourquoi": "La REP (Responsabilité Élargie du Producteur) textiles concerne directement les déchets générés par les activités de propreté et FM d'ABC chez ses clients. Une refonte de ce dispositif, avec un contrôle renforcé des écocontributions, peut entraîner des ajustements dans les pratiques de gestion des déchets textiles (collecte, tri, traçabilité) et potentiellement des coûts supplémentaires ou des obligations accrues pour les prestataires comme ABC.",
+      "criticite": 2,
+      "url": "https://www.actu-environnement.com/ae/news/rep-textiles-refashion-provisions-ecocontributions-48297.php4#xtor=RSS-6",
+      "date": "2026-07-17"
+    },
+    {
       "id": "053c5bad019f",
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "La Commission européenne veut doubler le taux d’électrification",
-      "resume": "La Commission européenne propose un plan d'action pour doubler le taux d'électrification, ce qui pourrait impacter les stratégies de décarbonation des flottes de véhicules d'ABC et ses obligations en matière de mobilité durable.",
-      "pourquoi": "Le sujet concerne directement la mobilité durable (électrification des flottes) et la réglementation européenne, un enjeu clé pour ABC dans le cadre de sa stratégie de décarbonation (scope 1) et de reporting ESG (CSRD).",
+      "resume": "La Commission européenne propose un plan d'action pour doubler le taux d'électrification, ce qui pourrait impacter la stratégie de décarbonation de la flotte de véhicules d'ABC et ses engagements en matière de mobilité durable.",
+      "pourquoi": "L'électrification accélérée de la flotte d'ABC devient un impératif stratégique à court terme (délai 2-3 ans) pour anticiper les réglementations européennes (interdiction progressive des véhicules thermiques neufs dès 2035) et répondre aux exigences carbone croissantes des clients (CSRD, BGES), avec un risque de perte de compétitivité si l'adaptation est trop lente, mais une opportunité de différenciation RSE et de réduction des coûts énergétiques à moyen terme.",
       "criticite": 2,
       "url": "https://www.greenunivers.com/2026/07/la-commission-europeenne-veut-doubler-le-taux-delectrification-429840/",
       "date": "2026-07-17"
@@ -70,32 +83,21 @@
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "Marché carbone européen : la Commission propose une réforme pour décarboner l'industrie",
-      "resume": "La réforme du marché carbone européen pourrait impacter indirectement ABC via l'augmentation des coûts énergétiques ou des exigences carbone accrues de ses clients industriels, nécessitant une adaptation de sa stratégie de décarbonation (scope 1/2) et de reporting (CSRD).",
+      "resume": "La réforme du marché carbone européen pourrait impacter indirectement les clients d'ABC (industriels) en accélérant leurs investissements de décarbonation, influençant ainsi leurs exigences en matière de prestations de propreté/FM (ex : traçabilité des déchets, efficacité énergétique des sites).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/reforme-ets-quotas-decarbonation-incineration-48327.php4#xtor=RSS-6",
       "date": "2026-07-17"
     },
     {
-      "id": "fc9004a2cc0b",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "Refonte REP textiles (5/5) : les finances de Refashion sous surveillance",
-      "resume": "La refonte de la REP textiles pourrait impacter les obligations de traçabilité et de contribution financière d'ABC en tant que prestataire de services, notamment si ses clients sont concernés par cette filière. Une vigilance sur les évolutions des éco-organismes et des provisions est nécessaire pour anticiper d'éventuelles charges supplémentaires.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/rep-textiles-refashion-provisions-ecocontributions-48297.php4#xtor=RSS-6",
-      "date": "2026-07-17"
-    },
-    {
-      "id": "86455ae71f8a",
-      "source": "Reporterre",
+      "id": "bc46ad5207b0",
+      "source": "Contexte Environnement",
       "categorie": "Climat",
-      "titre": "Canicule : plus de 12 000 décès excédentaires enregistrés en Europe",
-      "resume": "L'article souligne l'impact croissant des aléas climatiques (canicules) sur la santé publique en Europe, ce qui pourrait influencer les exigences des clients d'ABC en matière de résilience climatique et de gestion des risques opérationnels.",
+      "titre": "La Commission desserre la contrainte sur le marché carbone dans un périlleux exercice d’équilibriste",
+      "resume": "La réforme de l'ETS (marché carbone européen) pourrait influencer les coûts énergétiques et les exigences carbone des clients d'ABC, notamment dans les secteurs industriels et tertiaires, sans impact direct immédiat sur ses activités.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://reporterre.net/Canicule-plus-de-12-000-deces-excedentaires-enregistres-en-Europe",
+      "url": "https://www.contexte.com/fr/article/energie/la-commission-desserre-la-contrainte-sur-le-marche-carbone-dans-un-perilleux-exercice-dequilibriste_272765?source=rss",
       "date": "2026-07-17"
     },
     {
@@ -103,7 +105,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Bruxelles veut créer une « banque de décarbonation industrielle »",
-      "resume": "La proposition de la Commission européenne d'une 'banque de décarbonation industrielle' pourrait influencer les mécanismes de financement de la transition carbone, notamment via l'ETS, mais n'impose pas d'action directe immédiate pour ABC dans ses activités de propreté/FM.",
+      "resume": "La proposition de la Commission européenne d'une 'banque de décarbonation industrielle' pourrait influencer les mécanismes de financement de la transition bas-carbone en Europe, notamment via l'ETS, mais n'a pas d'impact direct immédiat sur les activités d'ABC en tant que prestataire de services.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/bruxelles-veut-creer-une-banque-de-decarbonation-industrielle-429876/",
@@ -114,7 +116,7 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "Bruxelles confirme sur la géothermie mais ne dévoile pas son plan",
-      "resume": "La géothermie est confirmée comme énergie locale et pilotable par l'UE, mais sans plan détaillé publié. Cela pourrait influencer les stratégies énergétiques des clients d'ABC (ex : tertiaire, industrie) dans leur mix énergétique.",
+      "resume": "La géothermie est confirmée comme énergie locale et pilotable par l'UE, mais sans plan détaillé publié. Cela pourrait impacter les stratégies énergétiques des clients d'ABC (tertiaire, industrie) dans leur transition bas-carbone.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/bruxelles-confirme-sur-la-geothermie-mais-ne-devoile-pas-son-plan-429835/",
@@ -125,32 +127,10 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "TVA réduite, TRVE et fuites de carbone au menu du CSE",
-      "resume": "L'article mentionne des projets réglementaires français (TVA réduite, TRVE, fuites de carbone) qui pourraient influencer les obligations de reporting et les coûts opérationnels d'ABC, notamment en lien avec la décarbonation et la fiscalité verte.",
+      "resume": "L'article aborde des sujets réglementaires liés à la TVA réduite, la Taxe sur les Résidus de Valorisation Énergétique (TRVE) et les fuites de carbone, qui pourraient impacter indirectement les coûts et la stratégie carbone d'ABC, notamment via les exigences clients en matière de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/tva-reduite-trve-et-fuites-de-carbone-au-menu-du-cse-429809/",
-      "date": "2026-07-17"
-    },
-    {
-      "id": "05c7b2557080",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Les documents de la semaine",
-      "resume": "Cette newsletter hebdomadaire recense les documents clés sur la transition énergétique (réglementations, études, analyses) qui pourraient impacter les enjeux RSE et climat d'ABC, notamment sur la CSRD, la décarbonation ou les risques climatiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/les-documents-de-la-semaine-381215/",
-      "date": "2026-07-17"
-    },
-    {
-      "id": "12405b10ac64",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "L’agenda de la transition énergétique",
-      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.) en France, offrant une veille sur les tendances et évolutions sectorielles pertinentes pour ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/lagenda-de-la-transition-energetique-280-424554/",
       "date": "2026-07-17"
     },
     {
@@ -158,54 +138,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Décarbonation : la Commission veut donner plus de temps à l’industrie européenne",
-      "resume": "La réforme du marché du carbone européen pourrait impacter indirectement les clients industriels d'ABC en accélérant leurs exigences de décarbonation, influençant ainsi les attentes en matière de reporting ESG et de réduction des émissions scope 3 pour le prestataire.",
+      "resume": "La réforme du marché du carbone européen pourrait impacter les coûts énergétiques et les investissements en décarbonation pour les clients industriels d'ABC, sans obligation directe pour l'entreprise elle-même.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/07/17/decarbonation-la-commission-veut-donner-plus-de-temps-a-l-industrie-europeenne_6724218_3244.html",
-      "date": "2026-07-17"
-    },
-    {
-      "id": "4a2c30991fce",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Quand direction et syndicats cherchent un chemin commun face au réchauffement climatique",
-      "resume": "L'article met en lumière une initiative de dialogue social et environnemental pour co-construire des mesures d'adaptation et d'atténuation face au réchauffement climatique, ce qui peut inspirer ABC pour engager ses parties prenantes internes (salariés, syndicats) dans sa stratégie climat et RSE.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/economie/article/2026/07/17/quand-direction-et-syndicats-cherchent-un-chemin-commun-face-au-rechauffement-climatique-comment-faire-pour-que-quand-on-avance-on-embarque-tout-le-monde_6724200_3234.html",
-      "date": "2026-07-17"
-    },
-    {
-      "id": "82e4f001a345",
-      "source": "Le Monde Planète",
-      "categorie": "Énergie",
-      "titre": "L’Union européenne propose d’assouplir la tarification du carbone pour les industriels jusqu’en 2038",
-      "resume": "L'assouplissement des quotas carbone gratuits pour les industriels jusqu'en 2038 pourrait impacter indirectement ABC via les exigences carbone de ses clients (nucléaire, santé, industrie), tandis que l'objectif d'électrification à 46% en 2040 renforce l'importance de la décarbonation de la flotte véhicules (scope 1) et des énergies renouvelables.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/07/17/l-union-europeenne-propose-d-assouplir-la-tarification-du-carbone-pour-les-industriels-jusqu-en-2038_6724184_3244.html",
-      "date": "2026-07-17"
-    },
-    {
-      "id": "04dfdf74a695",
-      "source": "Le Monde Planète",
-      "categorie": "Biodiversité",
-      "titre": "Christel Cournil, professeur de droit : « L’Etat a une obligation de protection en matière d’adaptation climatique »",
-      "resume": "L'article souligne l'obligation légale de l'État français d'adapter ses politiques aux risques climatiques, ce qui pourrait renforcer les exigences réglementaires en matière de résilience des entreprises, notamment pour les prestataires comme ABC intervenant sur 3 000+ sites clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/07/17/christel-cournil-professeur-de-droit-l-etat-a-une-obligation-de-protection-en-matiere-d-adaptation-climatique_6724174_3232.html",
-      "date": "2026-07-17"
-    },
-    {
-      "id": "e10052f55341",
-      "source": "Les Echos Environnement",
-      "categorie": "Climat",
-      "titre": "Quotas gratuits sous conditions, rythme de décarbonation adapté… Bruxelles révise son marché carbone - Les Echos",
-      "resume": "La révision du marché carbone européen (EU ETS) pourrait impacter indirectement ABC via les coûts carbone répercutés par ses clients industriels ou énergétiques, notamment sur la compétitivité des prestations et la demande en services de décarbonation.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxOdmh6QjFQOEgxY012Nm1BME44a1lHWF94R2VKUVVZTzczdUxOX3lUR05tcWpLNEI5RW0tUUJhaU9hTzNwa1FGTVJ0SjlTWFlYODBZTTFwd1p2U3p3dTVNLUVqV2lSenRSLWFQU0FieVVESEduek1YRVN0Mkxqd2taVHZvTVo2TXlxZFo5UUVxajRUV2VBNzA2YmU4WElqQW9DMFM0WnhUSEF0ekQ2Y21vQmQxdXpUVzZaU2NPVDRNcXBBWlVnRXRzbThSMi1nZTAzWkREMzFFMG9fQm1QTmtwY1F6TjhxM0hpTUw2OUIxUHJSNzZUN3lwOWFoVE52Ykxk?oc=5",
       "date": "2026-07-17"
     }
   ],
@@ -1181,6 +1117,12 @@
       "date": "2026-07-18"
     },
     {
+      "titre": "Décret n° 2026-636 du 16 juillet 2026 relatif aux budgets carbone nationaux et à la stratégie nationale bas-carbone",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054440907",
+      "date": "2026-07-18"
+    },
+    {
       "titre": "Arrêté du 16 juillet 2026 portant modification des modalités d'inscription des pieds à restitution d'énergie inscrits au chapitre 7 du titre II de la liste prévue à l'article L. 165-1 (LPP) du code de la sécurité sociale",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054441035",
@@ -1235,20 +1177,8 @@
       "date": "2026-07-18"
     }
   ],
-  "jo_retenus": [
-    {
-      "id": "4195e082ec49",
-      "source": "JORF",
-      "categorie": "Climat",
-      "titre": "Décret n° 2026-636 du 16 juillet 2026 relatif aux budgets carbone nationaux et à la stratégie nationale bas-carbone",
-      "resume": "Le décret SNBC 2026 renforce les objectifs carbone nationaux, impactant indirectement les exigences clients d'ABC (secteurs nucléaire, santé, industrie) via leurs propres plans climat et reporting CSRD.",
-      "pourquoi": "Le texte modifie la Stratégie Nationale Bas-Carbone (SNBC), qui sert de référence pour les obligations de reporting extra-financier (CSRD) et les plans climat des grandes entreprises clientes d'ABC. Ces clients, soumis à des exigences carbone accrues, pourraient imposer à ABC des critères de décarbonation plus stricts (flotte, énergie, déchets) pour leurs prestations. Bien que le décret ne crée pas d'obligation directe pour ABC, il influence les attentes réglementaires et contractuelles des clients, générant un risque indirect de conformité ou de perte de marché.",
-      "criticite": 2,
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054440907",
-      "date": "2026-07-18"
-    }
-  ],
-  "briefing_jorf": "Le décret n° 2026-636 du 16 juillet 2026 relatif aux budgets carbone nationaux et à la stratégie nationale bas-carbone est le seul texte directement pertinent pour un Responsable Environnement/Climat, car il impacte les objectifs de décarbonation des entreprises dans le cadre de la transition écologique.",
+  "jo_retenus": [],
+  "briefing_jorf": "Le décret n° 2026-636 du 16 juillet 2026 relatif aux budgets carbone nationaux et à la stratégie nationale bas-carbone est significatif pour un Responsable Environnement/Climat, car il impacte directement les objectifs de décarbonation des entreprises. Les autres textes ne concernent pas directement les enjeux climatiques ou environnementaux des grandes entreprises de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1578,5 +1508,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de pêche) et le projet de loi n°2740 (développement des transports) pourraient présenter un intérêt indirect pour un Responsable Environnement/Climat, notamment via des mesures liées à la transition énergétique ou à la régulation sectorielle. Aucun texte ne traite directement de reporting RSE ou de déchets."
+  "pjl_briefing": "Parmi les projets de loi listés, seul le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l’économie circulaire et à la réglementation environnementale européenne. Aucun autre texte ne semble aborder spécifiquement les enjeux climatiques, énergétiques ou de reporting RSE."
 }
