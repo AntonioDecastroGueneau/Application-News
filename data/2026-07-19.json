@@ -1,7 +1,7 @@
 {
   "date": "2026-07-19",
-  "generated_at": "07:58",
-  "elapsed_seconds": 151,
+  "generated_at": "12:16",
+  "elapsed_seconds": 206,
   "errors": [],
   "stats": {
     "jo_analyses": 12,
@@ -9,18 +9,18 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-07-19T07:58:01",
+    "run_at": "2026-07-19T12:16:05",
     "sources": {
       "JORF": 0,
-      "RSS": 4,
+      "RSS": 6,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 31,
-    "llm_seconds": 30.8
+    "llm_calls": 37,
+    "llm_seconds": 41.6
   },
   "items": [
     {
@@ -28,18 +28,40 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SR TEG Online Meeting 23 July 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG SR TEG sur les normes de reporting de durabilité (ESRS), pertinente pour préparer le reporting CSRD d'ABC et anticiper les exigences réglementaires européennes.",
-      "pourquoi": "L'EFRAG SR TEG travaille sur les normes ESRS (European Sustainability Reporting Standards) qui sont directement liées à la CSRD, un enjeu majeur pour le reporting extra-financier d'ABC. Bien que l'article ne détaille pas le contenu de la réunion, il signale une évolution réglementaire à suivre pour adapter les processus de collecte de données et de reporting.",
+      "resume": "L'article annonce une réunion de l'EFRAG SR TEG sur les normes de reporting de durabilité (ESRS), pertinente pour la préparation à la CSRD et au reporting extra-financier d'ABC.",
+      "pourquoi": "EFRAG (European Financial Reporting Advisory Group) est l'organisme européen chargé d'élaborer les normes ESRS (European Sustainability Reporting Standards) applicables dans le cadre de la CSRD. ABC, en tant qu'entreprise soumise à la CSRD (selon son secteur et taille), doit suivre ces évolutions pour adapter son reporting ESG et ses processus internes. La réunion du 23 juillet 2026 pourrait aborder des clarifications ou mises à jour sur les ESRS, impactant directement la méthodologie de reporting d'ABC.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-sr-teg-online-meeting-23-july-2026-0",
       "date": "2026-07-22"
+    },
+    {
+      "id": "f671436cb09b",
+      "source": "ESG Today",
+      "categorie": "Énergie",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article couvre des actualités ESG/UE (ETS, reporting, énergie propre) et des alertes réglementaires (loi bâtiments verts) qui impactent indirectement les enjeux clients d'ABC (nucléaire, santé, industrie) et ses obligations de reporting (CSRD).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-270/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-270",
+      "date": "2026-07-19"
+    },
+    {
+      "id": "acb44a942383",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "EU Taps the Brakes on ETS Carbon Pricing System",
+      "resume": "L'article aborde la révision du système d'échange de quotas d'émissions (ETS) de l'UE, qui impacte indirectement les entreprises comme ABC via les coûts carbone et les exigences clients en matière de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/eu-taps-the-brakes-on-ets-carbon-pricing-system/?utm_source=rss&utm_medium=rss&utm_campaign=eu-taps-the-brakes-on-ets-carbon-pricing-system",
+      "date": "2026-07-19"
     },
     {
       "id": "1a7c77a4b6cc",
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Canicule : deux outils pour rendre visibles ses conséquences",
-      "resume": "L'article met en avant des outils pour évaluer les impacts des canicules, un risque climatique opérationnel pouvant affecter les 3 000+ sites clients d'ABC et perturber ses prestations de propreté/FM.",
+      "resume": "L'article met en lumière des outils pour évaluer les impacts des canicules, un risque climatique opérationnel pouvant affecter les 3 000+ sites clients d'ABC et leurs exigences en matière de résilience climatique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/canicule-deux-outils-pour-rendre-visibles-ses-consequences",
@@ -50,7 +72,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Climat",
       "titre": "La stratégie de la France pour atteindre la neutralité carbone d'ici 2050 a été publiée - Les Echos",
-      "resume": "La publication de la stratégie française de neutralité carbone d'ici 2050 renforce le cadre réglementaire et les attentes en matière de décarbonation pour les entreprises, notamment via la SNBC et le PNACC, impactant les objectifs et reporting ESG d'ABC.",
+      "resume": "La publication de la stratégie française de neutralité carbone d'ici 2050 renforce le cadre réglementaire et les objectifs climatiques nationaux, influençant indirectement les exigences clients et les trajectoires de décarbonation des entreprises comme ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNQUUzT0hQR3JvdXFkZjd0UFJHZ3ZMRXNaa1VGUXVmZ2pTa2Q4ZGt6OXNpdnp4Vl84NzZkMFdha25EWXdqSVd5cU5ISEFBeno3clVCWlZtU3RlNmlIU0E2OGVnYkRFR1FDeWtCTGVjOXkzZERXQk0wSTNwNkw2dnR0bHNhNUxyOEd0MTF1X3BLVWNfaEdhV0pKWi1KOW84YUtQOUE3OEVWUTJTQmYwNkk2emItS2pRQWluZGlaYVJQSUNlWmZDTGQ4ZmEtNUhfeGtXMVZVdHR2TG1NdFN2eC1lTTNuQXktUlBlYnRHRQ?oc=5",
@@ -886,7 +908,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des textes publiés ne traite directement de sujets environnementaux, climatiques ou de responsabilité sociétale des entreprises (RSE) pertinents pour un Responsable Environnement/Climat d'une grande entreprise de services.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1216,5 +1238,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet n°2987 (simplification des normes pour les collectivités territoriales) et le n°2518 (adaptation au droit de l'UE en matière environnementale, énergétique et de pêche) pourraient impacter les politiques locales et sectorielles. Le projet n°2740 (développement des transports) et le n°2529 (Nouvelle-Calédonie) pourraient aussi influencer les stratégies climatiques et énergétiques. Aucun texte adopté ne semble directement lié aux enjeux environnementaux ou climatiques."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et économique) et le projet de loi n°2740 (développement des transports) pourraient impacter directement les enjeux climat, énergie ou RSE d’une grande entreprise de services, notamment via des adaptations réglementaires ou des orientations stratégiques en matière de décarbonation et de transition énergétique."
 }
