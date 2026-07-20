@@ -1,7 +1,7 @@
 {
   "date": "2026-07-20",
-  "generated_at": "08:38",
-  "elapsed_seconds": 182,
+  "generated_at": "13:28",
+  "elapsed_seconds": 235,
   "errors": [],
   "stats": {
     "jo_analyses": 9,
@@ -9,18 +9,18 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-07-20T08:38:26",
+    "run_at": "2026-07-20T13:28:00",
     "sources": {
       "JORF": 0,
-      "RSS": 9,
+      "RSS": 14,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 46,
-    "llm_seconds": 52.6
+    "llm_calls": 60,
+    "llm_seconds": 77.8
   },
   "items": [
     {
@@ -28,9 +28,9 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SR TEG Online Meeting 23 July 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG SR TEG sur les normes de reporting de durabilité (ESRS), pertinente pour ABC dans le cadre de ses obligations CSRD et de son reporting extra-financier.",
-      "pourquoi": "L'article signale une évolution des normes ESRS (European Sustainability Reporting Standards) sous CSRD, imposant à ABC une refonte de son reporting extra-financier d'ici 2026-2027 pour intégrer des données carbone granulaires (scope 1, 2 et 3 partiel), avec un risque de non-conformité réglementaire et de perte de crédibilité client si les exigences de traçabilité des émissions (flotte, déchets, énergie) et de résilience climatique des sites clients ne sont pas alignées.",
-      "criticite": 2,
+      "resume": "L'article annonce une réunion de l'EFRAG SR TEG sur les normes de reporting de durabilité (ESRS), pertinente pour le reporting CSRD/ESRS d'ABC, mais sans obligation immédiate ou action opérationnelle identifiable.",
+      "pourquoi": "",
+      "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-sr-teg-online-meeting-23-july-2026-0",
       "date": "2026-07-22"
     },
@@ -39,10 +39,43 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Fortes chaleurs au travail : que prévoit le PST 2026-2030 ?",
-      "resume": "Le PST 2026-2030 impose aux entreprises d'intégrer les risques climatiques (fortes chaleurs) dans les DUERP et d'adapter les locaux, ce qui impacte directement les prestations de propreté/FM d'ABC chez ses clients.",
-      "pourquoi": "L'article aborde un enjeu réglementaire et opérationnel lié aux risques climatiques (fortes chaleurs) qui affecte les entreprises de services comme ABC. Le PST 2026-2030 impose des actions concrètes (intégration dans les DUERP, adaptation des locaux) directement applicables aux prestations de propreté et FM. Cela concerne ABC car ses interventions chez 3 000+ clients doivent désormais prendre en compte ces exigences pour rester conformes et répondre aux attentes des clients (nucléaire, santé, industrie).",
+      "resume": "Le PST 2026-2030 impose aux entreprises d'adapter leurs locaux et d'intégrer les risques climatiques (fortes chaleurs) dans le DUERP, ce qui impacte directement les activités de propreté/FM d'ABC sur ses 3 000+ sites clients.",
+      "pourquoi": "L'article traite des risques climatiques opérationnels (fortes chaleurs) et de leur intégration dans les documents de prévention (DUERP), ce qui concerne directement les prestations de propreté/FM d'ABC chez ses clients. Bien que non lié à une obligation réglementaire immédiate pour ABC, cela impacte la gestion des risques et la conformité des sites clients, avec des enjeux de sécurité et de continuité d'activité.",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-au-travail-que-prevoit-le-pst-2026-2030",
+      "date": "2026-07-20"
+    },
+    {
+      "id": "d44db11c38a1",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Lire notre dossier d'actu \"REP textile : une filière en pleine refondation\"",
+      "resume": "La REP TLC pourrait impacter les déchets générés par les prestations de propreté de ABC chez ses clients (textiles professionnels, linge de maison), nécessitant une adaptation des filières de tri et recyclage.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/dossier-actu/dossier-rep-textile-fast-fashion-132#xtor=RSS-6",
+      "date": "2026-07-20"
+    },
+    {
+      "id": "777582acfc9d",
+      "source": "France Stratégie",
+      "categorie": "Énergie",
+      "titre": "Quelle est la place de la France dans le domaine de l'innovation « bas carbone » ?",
+      "resume": "L'article met en lumière la position de la France dans l'innovation bas carbone, notamment via le nucléaire et les technologies décarbonées, ce qui peut influencer les attentes clients d'ABC (secteurs nucléaire, santé, industrie) en matière de décarbonation et de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.strategie-plan.gouv.fr/quelle-est-la-place-de-la-france-dans-le-domaine-de-linnovation-bas-carbone",
+      "date": "2026-07-20"
+    },
+    {
+      "id": "4629a82f118e",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Le prix de l’électricité française au plus haut sur l’année [Marchés]",
+      "resume": "L'augmentation du prix de l'électricité en France peut impacter les coûts énergétiques des prestations de nettoyage et FM d'ABC, notamment pour les sites clients tertiaires ou industriels, et influencer les stratégies d'achat d'énergie ou d'efficacité énergétique.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/le-prix-de-lelectricite-francaise-au-plus-haut-sur-lannee-marches-430059/",
       "date": "2026-07-20"
     },
     {
@@ -50,10 +83,21 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "« La France met un prix sur les vies sauvées sur ses routes, mais elle se garde de le faire sur celles que les canicules emportent »",
-      "resume": "L'article souligne l'absence de valorisation économique des vies perdues lors des canicules en France, ce qui pourrait impacter la perception des risques climatiques par les entreprises et leurs clients, notamment dans le cadre des exigences carbone et de la CSRD.",
+      "resume": "L'article souligne l'absence de valorisation économique des vies humaines perdues lors des canicules en France, un enjeu indirect pour ABC via les risques climatiques opérationnels sur ses 3 000+ sites clients et les exigences carbone de ses clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/07/20/la-france-met-un-prix-sur-les-vies-sauvees-sur-ses-routes-mais-elle-se-garde-de-le-faire-sur-celles-que-les-canicules-emportent_6726946_3232.html",
+      "date": "2026-07-20"
+    },
+    {
+      "id": "afcc7d03f320",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "Telefonica Sets Goal to Cut Value Chain Emissions by More than Half by 2030",
+      "resume": "L'article illustre une stratégie de décarbonation ambitieuse (réduction de plus de 50% des émissions du scope 3 d'ici 2030) qui peut servir de référence pour ABC dans l'alignement de ses propres objectifs climatiques, notamment face aux exigences carbone de ses clients industriels ou nucléaires.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/telefonica-sets-goal-to-cut-value-chain-emissions-by-more-than-half-by-2030/?utm_source=rss&utm_medium=rss&utm_campaign=telefonica-sets-goal-to-cut-value-chain-emissions-by-more-than-half-by-2030",
       "date": "2026-07-20"
     },
     {
@@ -61,7 +105,7 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Carrefour et Autobacs : deux exemples de danger grave et imminent et de droit de retrait face aux grandes chaleurs",
-      "resume": "L'article illustre les risques opérationnels liés aux aléas climatiques (vagues de chaleur) pour les entreprises de services, pouvant impacter la santé des salariés et entraîner des droits de retrait, un enjeu direct pour ABC sur ses 3 000+ sites clients.",
+      "resume": "L'article illustre les risques opérationnels liés aux vagues de chaleur pour les entreprises de services, pouvant impacter la santé des salariés et la continuité des activités chez ABC, notamment sur ses 3 000+ sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/carrefour-et-autobacs-deux-exemples-de-danger-grave-et-imminent-et-de-droit-de-retrait-0",
@@ -72,10 +116,21 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Péages routiers : vers une tarification différenciée selon les émissions des poids lourds",
-      "resume": "L'article évoque une future tarification différenciée des péages pour les poids lourds en fonction de leurs émissions, ce qui pourrait impacter les coûts logistiques et la mobilité durable de la flotte d'ABC (scope 1).",
+      "resume": "La tarification différenciée des péages pour les poids lourds en fonction de leurs émissions pourrait impacter les coûts logistiques des clients d'ABC (industrie, santé, etc.) et influencer leurs exigences carbone sur les prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/peages-routiers-vers-une-tarification-differenciee-selon-les-emissions-des-poids-lourds",
+      "date": "2026-07-20"
+    },
+    {
+      "id": "540ceeb74ef5",
+      "source": "Fédération de la Propreté",
+      "categorie": "Climat",
+      "titre": "Retours sur l’Assemblée Générale de la FEP 2026",
+      "resume": "L'article évoque l'Assemblée Générale de la FEP (Fédération des Entreprises de Propreté), un acteur clé du secteur pour ABC, mais sans mention explicite de sujets réglementaires ou stratégiques directement applicables à ses enjeux RSE/climat (BGES, CSRD, décarbonation, etc.).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.federation-proprete.com/retours-ag-de-la-fep-2026/",
       "date": "2026-07-20"
     },
     {
@@ -83,7 +138,7 @@
       "source": "ESG Today",
       "categorie": "Énergie",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article couvre des actualités ESG transverses (UE, reporting, énergie) qui peuvent influencer les attentes clients d'ABC en matière de décarbonation et de reporting, sans obligation directe immédiate.",
+      "resume": "L'article couvre des actualités ESG transversales (UE, reporting, énergie) qui peuvent impacter indirectement ABC via les exigences clients ou réglementaires, notamment sur la décarbonation et le reporting extra-financier.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/esg-today-week-in-review-270/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-270",
@@ -94,7 +149,7 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "EU Taps the Brakes on ETS Carbon Pricing",
-      "resume": "L'article traite de la révision du système d'échange de quotas d'émissions (ETS) de l'UE, qui impacte indirectement les entreprises comme ABC via les exigences carbone de leurs clients (industrie, nucléaire, santé) et les coûts associés à la décarbonation des activités.",
+      "resume": "L'article aborde la révision du système d'échange de quotas d'émissions (ETS) de l'UE, qui impacte indirectement les entreprises comme ABC via les coûts carbone et les exigences de reporting pour leurs clients (scope 1/2/3).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/eu-taps-the-brakes-on-ets-carbon-pricing-system/?utm_source=rss&utm_medium=rss&utm_campaign=eu-taps-the-brakes-on-ets-carbon-pricing-system",
@@ -105,9 +160,9 @@
       "source": "Les Echos Environnement",
       "categorie": "Climat",
       "titre": "La stratégie de la France pour atteindre la neutralité carbone d'ici à 2050 a été publiée - Les Echos",
-      "resume": "La publication de la stratégie française de neutralité carbone d'ici 2050 (SNBC) fournit le cadre réglementaire et les trajectoires sectorielles pour les entreprises, incluant les objectifs de décarbonation des flottes, des bâtiments tertiaires et des déchets, alignés sur les exigences CSRD et ISO 14001.",
-      "pourquoi": "La SNBC impose des trajectoires sectorielles strictes (décarbonation des flottes d’ici 2030-2035, réduction des déchets et efficacité énergétique des bâtiments d’ici 2030) avec des obligations de reporting CSRD dès 2024-2025, exposant ABC à un risque de non-conformité ou de perte de contrats clients si ses engagements ne sont pas alignés, mais offrant une opportunité de différenciation concurrentielle via une offre bas-carbone et résiliente aux aléas climatiques.",
-      "criticite": 2,
+      "resume": "La publication de la stratégie française de neutralité carbone d'ici 2050 (SNBC) fournit le cadre réglementaire et les trajectoires sectorielles qui influencent les obligations de décarbonation des entreprises, y compris les prestataires de services comme ABC, notamment via les BGES et les exigences clients en matière de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNQUUzT0hQR3JvdXFkZjd0UFJHZ3ZMRXNaa1VGUXVmZ2pTa2Q4ZGt6OXNpdnp4Vl84NzZkMFdha25EWXdqSVd5cU5ISEFBeno3clVCWlZtU3RlNmlIU0E2OGVnYkRFR1FDeWtCTGVjOXkzZERXQk0wSTNwNkw2dnR0bHNhNUxyOEd0MTF1X3BLVWNfaEdhV0pKWi1KOW84YUtQOUE3OEVWUTJTQmYwNkk2emItS2pRQWluZGlaYVJQSUNlWmZDTGQ4ZmEtNUhfeGtXMVZVdHR2TG1NdFN2eC1lTTNuQXktUlBlYnRHRQ?oc=5",
       "date": "2026-07-18"
     }
@@ -434,6 +489,11 @@
       "niveau": "alerte renforcée"
     },
     {
+      "dept_code": "52",
+      "dept_nom": "Haute-Marne",
+      "niveau": "alerte renforcée"
+    },
+    {
       "dept_code": "42",
       "dept_nom": "Loire",
       "niveau": "alerte renforcée"
@@ -506,11 +566,6 @@
     {
       "dept_code": "57",
       "dept_nom": "Moselle",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "52",
-      "dept_nom": "Haute-Marne",
       "niveau": "alerte"
     },
     {
@@ -887,7 +942,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Aucun des arrêtés ou avis publiés ne traite directement de sujets environnementaux ou climatiques pertinents pour un Responsable Environnement/Climat d'une grande entreprise de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1217,5 +1272,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, le plus pertinent pour un Responsable Environnement/Climat concerne le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)**, qui pourrait intégrer des mesures clés pour la transition écologique et énergétique. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou RSE dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et climatique) et le projet n°2740 (développement des transports) pourraient présenter un intérêt pour un Responsable Environnement/Climat, notamment via des mesures liées à la transition énergétique ou à la réglementation environnementale. Aucun texte ne semble directement cibler les déchets ou le reporting RSE de manière significative."
 }
