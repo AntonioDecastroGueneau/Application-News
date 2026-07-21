@@ -1,7 +1,7 @@
 {
   "date": "2026-07-21",
-  "generated_at": "08:11",
-  "elapsed_seconds": 418,
+  "generated_at": "12:54",
+  "elapsed_seconds": 198,
   "errors": [],
   "stats": {
     "jo_analyses": 5,
@@ -9,18 +9,18 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-07-21T08:11:35",
+    "run_at": "2026-07-21T12:54:30",
     "sources": {
       "JORF": 0,
-      "RSS": 12,
+      "RSS": 13,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 46,
-    "llm_seconds": 53.4
+    "llm_calls": 51,
+    "llm_seconds": 58.9
   },
   "items": [
     {
@@ -28,11 +28,22 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SR TEG Online Meeting 23 July 2026",
-      "resume": "L'article concerne une réunion de l'EFRAG sur les normes de reporting de durabilité (ESRS), pertinente pour le reporting CSRD/ESRS d'ABC, mais sans obligation immédiate ou action opérationnelle identifiable.",
-      "pourquoi": "",
-      "criticite": 1,
+      "resume": "L'article concerne une réunion de l'EFRAG sur les normes de reporting de durabilité (CSRD/ESRS), pertinente pour le reporting extra-financier de ABC dans le cadre de ses obligations CSRD.",
+      "pourquoi": "EFRAG (European Financial Reporting Advisory Group) est l'organisme européen qui développe les normes ESRS (European Sustainability Reporting Standards) applicables dans le cadre de la CSRD (Corporate Sustainability Reporting Directive). Ces normes impactent directement le reporting ESG des entreprises, y compris les prestataires de services comme ABC, qui doivent répondre aux exigences de leurs clients en matière de transparence et de conformité réglementaire.",
+      "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-sr-teg-online-meeting-23-july-2026-0",
       "date": "2026-07-22"
+    },
+    {
+      "id": "7ecf8cd4384b",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "Climate Transition Plan Disclosure Jumps to 69% of CSRD Companies: EFRAG",
+      "resume": "Climate Transition Plan Disclosure Jumps to 69% of CSRD Companies: EFRAG",
+      "pourquoi": "Mention de CSRD.",
+      "criticite": 3,
+      "url": "https://www.esgtoday.com/climate-transition-plan-disclosure-jumps-to-69-of-csrd-companies-efrag/?utm_source=rss&utm_medium=rss&utm_campaign=climate-transition-plan-disclosure-jumps-to-69-of-csrd-companies-efrag",
+      "date": "2026-07-21"
     },
     {
       "id": "1c2b026f41af",
@@ -46,14 +57,14 @@
       "date": "2026-07-21"
     },
     {
-      "id": "d4b2808afc85",
-      "source": "Les Echos Environnement",
-      "categorie": "Énergie",
-      "titre": "Environnement : « Où est le danger, les nanoparticules de plastique ou la mauvaise gestion des déchets en plastique - Les Echos",
-      "resume": "L'article aborde la gestion des déchets plastiques et les risques liés aux nanoparticules, ce qui peut impacter les obligations de traçabilité et de reporting des déchets pour ABC dans le cadre de la REP et de la CSRD.",
+      "id": "a12842a20df1",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "CSPE 2027 : la CRE anticipe une hausse tirée par les volumes d'ENR",
+      "resume": "La hausse de la CSPE en 2027 pourrait impacter les coûts énergétiques des prestations de propreté/FM d'ABC, notamment via une augmentation des charges liées aux énergies renouvelables intégrées dans les contrats clients.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQSGttUDJ1b1dUVGJ5al9IZm90al81blNyOUFWbUxKRmtOdzNfci1Jc3pacTVkWEE3dDduQU5GX2VTQ0E3Qnpjb0lDQ3BJeWlkNGpVOGJCRENNcUlPbXR2cFk3WmtJQ0RleVhiNGRPOHVSUnFwTXVCcElDdWVZMS02RVJ0d0x4S1ZxTGdOaVA4ZDlNVTVlQ3k1alhJN0tnSHFDQmVwSVExaFV6VDBRREVpQ2dUam0tSU5RVko5cW95cTJZVUJKLVZ6cHB1d1pyZXduYUYtcC1OM09yaTMtbGw2NWs0Z2VCbEtaOFJYT2ZaYzJ2aGpZ?oc=5",
+      "url": "https://www.actu-environnement.com/ae/news/cspe-2027-estimation-cre-enr-48336.php4#xtor=RSS-6",
       "date": "2026-07-21"
     },
     {
@@ -61,32 +72,65 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Pollution atmosphérique : les États membres de l'UE progressent dans le respect de la directive NEC",
-      "resume": "La directive NEC de l'UE sur la pollution atmosphérique pourrait impacter les exigences réglementaires des clients d'ABC (notamment industriels ou tertiaires) en matière de qualité de l'air, influençant indirectement leurs politiques RSE et leurs attentes envers leurs prestataires de propreté/FM.",
+      "resume": "La directive NEC (National Emission Ceilings) de l'UE impose des plafonds d'émissions polluantes aux États membres, influençant indirectement les exigences environnementales des clients d'ABC (nucléaire, santé, industrie) et les réglementations locales sur la qualité de l'air.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/pollution-atmospherique-les-etats-membres-de-lue-progressent-dans-le-respect-de-la-2",
       "date": "2026-07-21"
     },
     {
-      "id": "7fd6a650e06a",
-      "source": "EFRAG",
+      "id": "bc543ab40874",
+      "source": "Actu-Environnement",
       "categorie": "Déchets",
-      "titre": "EFRAG FRB Online Meeting - 23 July 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG FRB en juillet 2026 sur les normes de reporting financier (ESRS) liées à la CSRD, ce qui impacte directement les obligations de reporting extra-financier d'ABC pour ses clients.",
-      "pourquoi": "L'EFRAG FRB traite des normes ESRS (European Sustainability Reporting Standards) qui sont au cœur de la CSRD, une réglementation clé pour le reporting ESG des entreprises. ABC, en tant que prestataire de services, doit s'assurer que ses clients (notamment dans les secteurs nucléaire, santé et industrie) respectent ces exigences, ce qui influence ses propres processus de collecte de données et de reporting.",
-      "criticite": 2,
-      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-frb-online-meeting-23-july-2026",
+      "titre": "Ecomaison a collecté près de 2 millions de tonnes en 2025",
+      "resume": "L'article illustre l'ampleur des volumes de déchets gérés dans le cadre des filières REP, ce qui peut impacter les obligations de traçabilité et de reporting des déchets pour ABC dans le cadre de ses prestations de propreté/FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/collecte-2025-ecomaison-rep-pmcb-dea-abj-jouets-48334.php4#xtor=RSS-6",
       "date": "2026-07-20"
     },
     {
-      "id": "777582acfc9d",
-      "source": "France Stratégie",
-      "categorie": "Énergie",
-      "titre": "Quelle est la place de la France dans le domaine de l'innovation « bas carbone » ?",
-      "resume": "L'article souligne l'investissement français dans les technologies bas carbone, notamment le nucléaire, ce qui peut influencer les attentes clients d'ABC (secteurs nucléaire, santé, industrie) en matière de décarbonation et de reporting ESG.",
+      "id": "9eb1ce97ada2",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "La France adopte une troisième stratégie bas-carbone renforcée",
+      "resume": "La troisième SNBC renforce les objectifs de décarbonation nationale, ce qui peut impacter les exigences carbone des clients d'ABC (secteurs nucléaire, santé, industrie) et influencer les trajectoires de reporting ESG (CSRD) et de gestion des émissions (scope 1/3).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.strategie-plan.gouv.fr/quelle-est-la-place-de-la-france-dans-le-domaine-de-linnovation-bas-carbone",
+      "url": "https://www.actu-environnement.com/ae/news/snbc3-strategie-bas-carbone-budgets-neutralite-48333.php4#xtor=RSS-6",
+      "date": "2026-07-20"
+    },
+    {
+      "id": "00f8337ed168",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Électrification : la Commission européenne présente son plan pour accélérer",
+      "resume": "L'électrification accélérée de l'UE pourrait impacter la stratégie de flotte de véhicules d'ABC (scope 1) et ses besoins en énergie pour les prestations de propreté/FM, avec des opportunités de décarbonation via l'électrification des véhicules et l'adaptation des infrastructures.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/plan-electrification-commission-europeenne-2040-48332.php4#xtor=RSS-6",
+      "date": "2026-07-20"
+    },
+    {
+      "id": "f5e383eaa4f2",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Les renouvelables n’ont pas progressé dans le mix électrique français en 2025",
+      "resume": "L'article souligne un recul des énergies renouvelables dans le mix électrique français en 2025, ce qui peut impacter la stratégie énergétique des clients d'ABC et leurs exigences en matière de décarbonation des prestations de propreté/FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/les-renouvelables-nont-pas-progresse-dans-le-mix-electrique-francais-en-2025-430096/",
+      "date": "2026-07-20"
+    },
+    {
+      "id": "4629a82f118e",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "Le prix de l’électricité française au plus haut sur l’année [Marchés]",
+      "resume": "L'augmentation du prix de l'électricité en France impacte directement les coûts énergétiques des prestations de propreté/FM d'ABC, notamment pour les sites clients tertiaires ou industriels. Cela peut influencer les budgets opérationnels et les stratégies d'achat d'énergie.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/le-prix-de-lelectricite-francaise-au-plus-haut-sur-lannee-marches-430059/",
       "date": "2026-07-20"
     },
     {
@@ -94,7 +138,7 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Eolien, solaire, biométhane… vers une hausse de 11 % du coût du soutien public aux énergies renouvelables en 2027",
-      "resume": "L'article indique une hausse des coûts de soutien aux énergies renouvelables en France, ce qui pourrait impacter les tarifs énergétiques pour les sites clients d'ABC et influencer leurs stratégies de décarbonation (scope 2).",
+      "resume": "L'article signale une hausse des coûts de soutien aux énergies renouvelables en France, ce qui pourrait impacter les prix de l'énergie pour les clients d'ABC et influencer leurs stratégies de décarbonation, notamment pour les sites tertiaires ou industriels.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/07/20/eolien-solaire-biomethane-vers-une-hausse-de-11-du-cout-du-soutien-public-aux-energies-renouvelables-en-2027_6727650_3244.html",
@@ -105,43 +149,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "L’été de tous les records ne surprend pas les climatologues : « On est entrés dans une zone dangereuse »",
-      "resume": "L'article confirme l'accélération des aléas climatiques en France, ce qui impacte directement les risques opérationnels de ABC sur ses 3 000+ sites clients (perturbations des prestations, coûts liés aux adaptations).",
+      "resume": "L'article confirme l'accélération des aléas climatiques en France, renforçant les risques opérationnels pour ABC sur ses 3 000+ sites clients (perturbations de prestations, exigences accrues en résilience des contrats).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/07/20/l-ete-de-tous-les-records-ne-surprend-pas-les-climatologues-on-est-entres-dans-une-zone-dangereuse_6727476_3244.html",
-      "date": "2026-07-20"
-    },
-    {
-      "id": "afcc7d03f320",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "Telefonica Sets Goal to Cut Value Chain Emissions by More than Half by 2030",
-      "resume": "L'article illustre une tendance forte de décarbonation des chaînes de valeur (scope 3) dans un secteur industriel, signalant une pression accrue des parties prenantes sur les entreprises de services comme ABC pour aligner leurs prestations sur des objectifs carbone ambitieux.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/telefonica-sets-goal-to-cut-value-chain-emissions-by-more-than-half-by-2030/?utm_source=rss&utm_medium=rss&utm_campaign=telefonica-sets-goal-to-cut-value-chain-emissions-by-more-than-half-by-2030",
-      "date": "2026-07-20"
-    },
-    {
-      "id": "1690b1b0b0f8",
-      "source": "Les Echos Environnement",
-      "categorie": "Climat",
-      "titre": "Climat : comment faire des statistiques une arme contre la désinformation qui prospère sur le réchauffement climatique - Les Echos",
-      "resume": "L'article aborde la lutte contre la désinformation climatique, un enjeu indirect mais stratégique pour ABC dans le cadre de la crédibilité de ses engagements RSE et de la communication avec ses clients (notamment ceux soumis à des exigences carbone strictes).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxOdjh3dTJ6MjJtU2pXajI0MnZyTzZJWW5EaVJrNTBNOEt6Q1p3SmllOThsTHVwWHdtTjdfU2dteWV0TzJQREw4U3JYVVZqZGJPeS1HOWFMdGR2TW1iT2ZoQzdjR0FlLWJfQ25iRG94cG11bXBHZ01vamU1blIwWTFqSEk4NldHeFR2MGtDOFoxR0lyRnhha3FBVkVWa0VQaGJudzJtcEd5STBWSGU1ZE4tTWVRbzB5aGJtaTBCYXN1eVFCcExDdklOenRlS2YzQWVMcFNsemVBcjIwR3ExSFJacWxRRkIyNXJfWnJWMm5WXzJGcGNVN1EtUkNNZU0ySFBhbml5aw?oc=5",
-      "date": "2026-07-20"
-    },
-    {
-      "id": "540ceeb74ef5",
-      "source": "Fédération de la Propreté",
-      "categorie": "Climat",
-      "titre": "Retours sur l’Assemblée Générale de la FEP 2026",
-      "resume": "L’article évoque l’Assemblée Générale de la FEP (Fédération des Entreprises de Propreté), un réseau professionnel clé pour ABC dans le secteur de la propreté/FM. Il peut fournir des tendances sectorielles ou des orientations stratégiques à suivre pour rester aligné avec les enjeux RSE et climatiques du secteur.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.federation-proprete.com/retours-ag-de-la-fep-2026/",
       "date": "2026-07-20"
     }
   ],
@@ -342,6 +353,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "42",
+      "dept_nom": "Loire",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "43",
       "dept_nom": "Haute-Loire",
       "niveau": "crise"
@@ -469,11 +485,6 @@
     {
       "dept_code": "52",
       "dept_nom": "Haute-Marne",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "42",
-      "dept_nom": "Loire",
       "niveau": "alerte renforcée"
     },
     {
@@ -1250,5 +1261,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique et de santé (N°2518) pourrait inclure des mesures clés pour la transition écologique et le reporting RSE. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et climatique) et le n°2920 (programmation militaire 2024-2030) pourraient impacter indirectement les enjeux climatiques et énergétiques d’une grande entreprise de services. Aucun texte adopté ne semble directement lié à la RSE ou au reporting environnemental."
 }
