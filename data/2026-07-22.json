@@ -1,7 +1,7 @@
 {
   "date": "2026-07-22",
-  "generated_at": "08:08",
-  "elapsed_seconds": 180,
+  "generated_at": "12:58",
+  "elapsed_seconds": 196,
   "errors": [],
   "stats": {
     "jo_analyses": 26,
@@ -9,62 +9,51 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-07-22T08:08:06",
+    "run_at": "2026-07-22T12:58:16",
     "sources": {
       "JORF": 0,
-      "RSS": 8,
+      "RSS": 6,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 61,
-    "llm_seconds": 67.0
+    "llm_calls": 66,
+    "llm_seconds": 73.5
   },
   "items": [
+    {
+      "id": "1a91e382b483",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "From Carbon to Constraints: Why Sustainability Is Becoming a Growth Strategy",
+      "resume": "L'article souligne l'évolution de la durabilité comme levier de croissance stratégique, notamment via des contraintes carbone renforcées, ce qui peut impacter les exigences clients d'ABC en matière de reporting ESG et de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/from-carbon-to-constraints-why-sustainability-is-becoming-a-growth-strategy/?utm_source=rss&utm_medium=rss&utm_campaign=from-carbon-to-constraints-why-sustainability-is-becoming-a-growth-strategy",
+      "date": "2026-07-22"
+    },
     {
       "id": "9b071c987b89",
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG SR TEG Online Meeting 23 July 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG SR TEG sur les normes de reporting de durabilité (ESRS) en juillet 2026, ce qui impacte directement les obligations de reporting ESG (CSRD) pour ABC dans le cadre de sa stratégie RSE et de conformité réglementaire.",
-      "pourquoi": "EFRAG (European Financial Reporting Advisory Group) est l'organisme européen clé pour l'élaboration des normes ESRS (European Sustainability Reporting Standards) applicables dans le cadre de la CSRD. Les décisions prises lors de cette réunion pourraient influencer les exigences de reporting extra-financier d'ABC, notamment sur les scopes 1, 2 et 3, les risques climatiques, et la taxonomie verte, tous des enjeux centraux pour le Responsable Environnement/Climat d'ABC.",
-      "criticite": 2,
+      "resume": "L'article annonce une réunion de l'EFRAG SR TEG sur les normes de reporting de durabilité (ESRS), pertinente pour ABC dans le cadre de la préparation à la CSRD et au reporting extra-financier.",
+      "pourquoi": "",
+      "criticite": 1,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-sr-teg-online-meeting-23-july-2026-0",
       "date": "2026-07-22"
-    },
-    {
-      "id": "7ecf8cd4384b",
-      "source": "ESG Today",
-      "categorie": "Climat",
-      "titre": "Climate Transition Plan Disclosure Jumps to 69% of CSRD Companies: EFRAG",
-      "resume": "Climate Transition Plan Disclosure Jumps to 69% of CSRD Companies: EFRAG",
-      "pourquoi": "Mention de CSRD.",
-      "criticite": 3,
-      "url": "https://www.esgtoday.com/climate-transition-plan-disclosure-jumps-to-69-of-csrd-companies-efrag/?utm_source=rss&utm_medium=rss&utm_campaign=climate-transition-plan-disclosure-jumps-to-69-of-csrd-companies-efrag",
-      "date": "2026-07-21"
     },
     {
       "id": "c2a560a62a71",
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Photovoltaïque : Soren a collecté plus de 13 500 tonnes de panneaux usagés en 2025",
-      "resume": "L'article illustre la croissance du marché du recyclage des panneaux photovoltaïques en France, ce qui pourrait impacter les obligations de traçabilité et de gestion des déchets des prestataires comme ABC dans le cadre de la REP (Responsabilité Élargie du Producteur) ou des exigences clients en matière de circularité.",
+      "resume": "L'article souligne l'accélération du recyclage des panneaux photovoltaïques en France, ce qui pourrait impacter la gestion des déchets des prestations de propreté/FM d'ABC, notamment dans le cadre des obligations REP (Responsabilité Élargie du Producteur) et de la traçabilité des déchets.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/collecte-2025-soren-panneaux-photovoltaiques-48339.php4#xtor=RSS-6",
-      "date": "2026-07-21"
-    },
-    {
-      "id": "a12842a20df1",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "CSPE 2027 : la CRE anticipe une hausse tirée par les volumes d'ENR",
-      "resume": "La hausse de la CSPE en 2027 pourrait impacter les coûts énergétiques des sites clients d'ABC, notamment via une augmentation des charges de service public financées par les consommateurs. Cela pourrait influencer les budgets énergie des prestations de propreté/FM et les stratégies d'achat d'électricité.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/cspe-2027-estimation-cre-enr-48336.php4#xtor=RSS-6",
       "date": "2026-07-21"
     },
     {
@@ -72,21 +61,10 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "EODev veut muscler son offre dans les piles à combustible",
-      "resume": "EODev renforce son offre dans les piles à combustible, une technologie pertinente pour décarboner les flottes de véhicules (scope 1) et les groupes électrogènes utilisés par ABC dans ses prestations de propreté/FM.",
+      "resume": "EODev développe son offre de piles à combustible pour groupes électrogènes à hydrogène, une technologie pouvant intéresser ABC pour décarboner sa flotte de véhicules ou ses sites clients (scope 1/2).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/eodev-veut-muscler-son-offre-dans-les-piles-a-combustible-430218/",
-      "date": "2026-07-21"
-    },
-    {
-      "id": "99fecbd12097",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Savoie Process concrétise dans le chaud-froid industriel",
-      "resume": "L'article illustre une innovation dans l'électrification des procédés industriels (chaleur/froid), un enjeu potentiel pour les clients d'ABC dans les secteurs agroalimentaire, pharmacie ou cosmétique, pouvant impacter leurs exigences en matière de décarbonation et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/savoie-process-concretise-dans-le-chaud-froid-industriel-430189/",
       "date": "2026-07-21"
     },
     {
@@ -94,8 +72,8 @@
       "source": "EFRAG",
       "categorie": "Déchets",
       "titre": "EFRAG FRB Online Meeting - 23 July 2026",
-      "resume": "L'article annonce une réunion de l'EFRAG (European Financial Reporting Advisory Group) sur les normes de reporting ESG (CSRD/ESRS), pertinente pour le reporting extra-financier d'ABC dans le cadre de ses obligations CSRD.",
-      "pourquoi": "Le sujet concerne directement le reporting ESG (CSRD/ESRS), un enjeu clé pour ABC dans le cadre de ses obligations réglementaires et de ses clients (nucléaire, santé, industrie). La réunion pourrait influencer les futures exigences de reporting pour l'entreprise.",
+      "resume": "L'article annonce une réunion de l'EFRAG FRB en juillet 2026, probablement liée aux normes ESRS de la CSRD, ce qui impacte directement le reporting extra-financier d'ABC pour ses clients.",
+      "pourquoi": "EFRAG (European Financial Reporting Advisory Group) est l'organisme européen en charge de l'élaboration des normes ESRS (European Sustainability Reporting Standards) sous la CSRD. Ces normes définissent les exigences de reporting ESG pour les entreprises concernées, dont les prestataires de services comme ABC. Une évolution des ESRS peut impacter les méthodologies de collecte de données, les indicateurs à suivre (scope 3, déchets, énergie, etc.) et les attentes des clients en matière de transparence. Même si l'article ne détaille pas le contenu, il signale une étape clé à surveiller pour anticiper les adaptations nécessaires.",
       "criticite": 2,
       "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-frb-online-meeting-23-july-2026",
       "date": "2026-07-20"
@@ -1608,5 +1586,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet n°2518 (adaptation au droit de l'UE en matière environnementale, énergétique et de pêche) et le projet n°2740 (développement des transports) pourraient présenter un intérêt pour un Responsable Environnement/Climat, en lien avec la transposition de réglementations européennes et les enjeux de mobilité durable. Aucun texte ne traite directement de reporting RSE ou de gestion des déchets."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et agricole) et le projet de loi n°2920 (programmation militaire 2024-2030) pourraient impacter indirectement les enjeux climatiques et énergétiques d’une entreprise de services, notamment via des normes environnementales renforcées ou des adaptations réglementaires liées à la transition énergétique."
 }
