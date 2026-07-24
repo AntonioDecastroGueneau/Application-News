@@ -1,7 +1,7 @@
 {
   "date": "2026-07-24",
-  "generated_at": "08:10",
-  "elapsed_seconds": 351,
+  "generated_at": "12:57",
+  "elapsed_seconds": 217,
   "errors": [],
   "stats": {
     "jo_analyses": 20,
@@ -9,29 +9,51 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-07-24T08:10:06",
+    "run_at": "2026-07-24T12:57:40",
     "sources": {
       "JORF": 0,
-      "RSS": 10,
+      "RSS": 15,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 57,
-    "llm_seconds": 221.3
+    "llm_calls": 65,
+    "llm_seconds": 69.1
   },
   "items": [
+    {
+      "id": "923f0e29cf80",
+      "source": "Actuel HSE",
+      "categorie": "Eau",
+      "titre": "Les 12 articles environnement à (re)lire pendant l'été",
+      "resume": "L'article mentionne des sujets réglementaires et stratégiques pertinents pour ABC, notamment les audits énergétiques, les réglementations européennes (Industrial Accelerator Act) et les bilans des lois Climat et Résilience/LOM, qui impactent directement les enjeux énergie, reporting ESG et mobilité durable de l'entreprise.",
+      "pourquoi": "L'article aborde des thèmes alignés avec les enjeux d'ABC : audit énergétique (efficacité énergétique), réglementations UE (Industrial Accelerator Act potentiellement lié aux obligations de reporting ou décarbonation), et bilans des lois Climat et Résilience/LOM (SNBC, PNACC, mobilité durable). Ces sujets sont critiques pour le Responsable Environnement/Climat de ABC, notamment pour la mise à jour des BGES, la préparation à la CSRD, ou l'adaptation de la flotte de véhicules.",
+      "criticite": 2,
+      "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
+      "date": "2026-07-24"
+    },
     {
       "id": "07cccaeff8dc",
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Faux départ pour la filière REP des emballages professionnels",
-      "resume": "Le report de la filière REP des emballages professionnels impacte la gestion des déchets de prestations pour ABC, nécessitant une veille sur les nouvelles échéances et adaptations des processus de tri/traçabilité.",
-      "pourquoi": "La REP (Responsabilité Élargie du Producteur) des emballages professionnels concerne directement ABC dans le cadre de la gestion des déchets générés par ses prestations de nettoyage/facility management. Bien que le report ne soit pas une obligation immédiate, cela impacte les processus internes de tri, traçabilité et collaboration avec les éco-organismes, alignés sur les enjeux de reporting CSRD et de conformité réglementaire déchets.",
+      "resume": "Le report de la filière REP des emballages professionnels impacte indirectement ABC via ses obligations de traçabilité et de gestion des déchets pour ses clients, notamment en termes de conformité réglementaire et de reporting ESG.",
+      "pourquoi": "Le report de la filière REP des emballages professionnels impose à ABC un délai critique pour adapter ses processus de traçabilité et de gestion des déchets (d’ici 12-18 mois), sous peine de non-conformité réglementaire et de perte de crédibilité auprès de clients soumis à des exigences ESG strictes, tout en créant une opportunité de différenciation par une anticipation proactive des obligations futures.",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/faux-depart-pour-la-filiere-rep-des-emballages-professionnels",
+      "date": "2026-07-24"
+    },
+    {
+      "id": "3748316cbe3b",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "La justice annule le plan territorial de prévention et de gestion des déchets de la Corse",
+      "resume": "L'annulation du plan territorial de gestion des déchets en Corse pourrait impacter les obligations réglementaires des prestataires de propreté comme ABC, notamment en matière de traçabilité et de gestion des déchets pour les sites clients en région. Risque de complexification des processus de reporting déchets.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/annulation-ptpgd-corse-tribunal-bastia-48354.php4#xtor=RSS-6",
       "date": "2026-07-24"
     },
     {
@@ -39,7 +61,7 @@
       "source": "Reporterre",
       "categorie": "Déchets",
       "titre": "30 fois plus d'incendies en 20 ans : la France est entrée dans l'ère du feu",
-      "resume": "L'augmentation des incendies en France pourrait impacter la prestation de propreté/FM d'ABC via des risques opérationnels accrus (perturbation des interventions, sécurité des équipes) et des exigences clients renforcées en matière de résilience climatique.",
+      "resume": "L'augmentation des incendies en France pourrait impacter la prestation de propreté/FM d'ABC via des risques opérationnels accrus (sécurité des sites clients, mobilisation des équipes) et des coûts liés à la gestion des dégâts, bien que sans lien direct avec les enjeux réglementaires ou stratégiques immédiats d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/30-fois-plus-d-incendies-en-20-ans-la-France-est-entree-dans-l-ere-du-feu",
@@ -50,21 +72,76 @@
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Les professionnels de la RSE épuisés par la pression de démontrer leur business case",
-      "resume": "L'article souligne la pression croissante sur les professionnels RSE pour démontrer un retour sur investissement, ce qui peut impacter les attentes des clients d'ABC en matière de reporting et de stratégie climatique, notamment dans le cadre de la CSRD et des bilans GES.",
+      "resume": "L'article souligne la pression croissante sur les professionnels RSE pour démontrer un retour sur investissement, ce qui peut impacter les attentes des clients d'ABC en matière de reporting ESG et de stratégie climatique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/rse-pression-business-case-etude-accp-2026",
       "date": "2026-07-24"
     },
     {
-      "id": "923f0e29cf80",
-      "source": "Actuel HSE",
-      "categorie": "Eau",
-      "titre": "Les 12 articles environnement à (re)lire pendant l'été",
-      "resume": "L'article aborde des sujets réglementaires et stratégiques liés à l'audit énergétique, aux réglementations européennes (dont REACH et Industrial Accelerator Act), ainsi qu'à l'application des lois Climat et Résilience et LOM, pertinents pour le reporting ESG et la conformité d'ABC.",
+      "id": "e3ecd00e534d",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "DPE, garanties d’origine, rénovation : le sort des principaux textes au CSE",
+      "resume": "L'article aborde les évolutions réglementaires autour du DPE et des garanties d'origine, qui impactent indirectement les obligations énergétiques des bâtiments tertiaires (DPE tertiaire) où ABC intervient via ses prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
+      "url": "https://www.greenunivers.com/2026/07/dpe-garanties-dorigine-renovation-le-sort-des-principaux-textes-au-cse-430555/",
+      "date": "2026-07-24"
+    },
+    {
+      "id": "05c7b2557080",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Les documents de la semaine",
+      "resume": "L'article propose une veille hebdomadaire sur les documents clés liés à la transition énergétique, incluant réglementations et études pertinentes pour les entreprises engagées dans la décarbonation et le reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/les-documents-de-la-semaine-381215/",
+      "date": "2026-07-24"
+    },
+    {
+      "id": "12405b10ac64",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’agenda de la transition énergétique",
+      "resume": "L'article recense des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.) qui pourraient informer ABC sur les tendances du marché et les opportunités stratégiques, notamment pour sa flotte de véhicules ou ses partenariats clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/lagenda-de-la-transition-energetique-280-424554/",
+      "date": "2026-07-24"
+    },
+    {
+      "id": "0fcb92100722",
+      "source": "Le Monde Planète",
+      "categorie": "Eau",
+      "titre": "Visualisez l’étendue des incendies en France, en carte et graphiques",
+      "resume": "L'article met en lumière l'augmentation des risques d'incendies en France, un aléa climatique pouvant impacter les sites clients d'ABC (3 000+ sites) et perturber les prestations de propreté/FM, notamment en termes de sécurité et de continuité d'activité.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/les-decodeurs/article/2026/07/24/visualisez-l-etendue-des-incendies-en-france-en-carte-et-graphiques_6722679_4355771.html",
+      "date": "2026-07-24"
+    },
+    {
+      "id": "8cb1e6aa332b",
+      "source": "ESG Today",
+      "categorie": "Émissions",
+      "titre": "EcoVadis Opens its Sustainable Supply Chain Networking Platform to all Suppliers",
+      "resume": "EcoVadis élargit sa plateforme de mise en réseau pour une chaîne d'approvisionnement durable, ce qui pourrait impacter les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé ou industrie) en renforçant les attentes en matière de reporting ESG et de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/ecovadis-opens-its-sustainable-supply-chain-networking-platform-to-all-suppliers/?utm_source=rss&utm_medium=rss&utm_campaign=ecovadis-opens-its-sustainable-supply-chain-networking-platform-to-all-suppliers",
+      "date": "2026-07-24"
+    },
+    {
+      "id": "b177572aa451",
+      "source": "The Guardian Environment",
+      "categorie": "Environnement",
+      "titre": "France orders total evacuation of Cap Ferret peninsula as wildfire spreads",
+      "resume": "L'article illustre l'augmentation des risques climatiques extrêmes en France (feux de forêt) qui pourraient impacter la continuité des services de propreté/FM d'ABC sur ses 3 000+ sites clients, notamment via des aléas logistiques ou des perturbations opérationnelles.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/world/2026/jul/24/france-evacuation-cap-ferret-peninsula-wildfire",
       "date": "2026-07-24"
     },
     {
@@ -72,43 +149,21 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Fortes chaleurs : l’OPPBTP inventorie les arrêtés préfectoraux",
-      "resume": "L'article met en lumière les arrêtés préfectoraux liés aux fortes chaleurs, pouvant impacter les conditions de travail des équipes de propreté/FM d'ABC sur les sites clients, notamment en termes de sécurité et d'organisation des prestations.",
+      "resume": "L'article met en lumière les arrêtés préfectoraux liés aux fortes chaleurs, un risque climatique opérationnel pouvant impacter les 3 000+ sites clients d'ABC et leurs activités de propreté/FM, notamment en termes de sécurité des travailleurs et de continuité de service.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-loppbtp-inventorie-les-arretes-prefectoraux-2",
       "date": "2026-07-24"
     },
     {
-      "id": "25479cc94c22",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "Le chiffre du jour : 5 764 décès",
-      "resume": "L'article souligne l'impact des aléas climatiques (canicules) sur la santé publique en France, ce qui peut influencer les exigences de résilience climatique des clients d'ABC (secteurs santé, industrie, etc.) et renforcer les attentes en matière de gestion des risques climatiques dans les contrats de propreté/FM.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/dit-aujourdhui/1820.html#xtor=RSS-6",
-      "date": "2026-07-23"
-    },
-    {
       "id": "0f440ed71784",
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Morts de la canicule : « Le gros du problème, c'est le logement »",
-      "resume": "L'article souligne l'urgence de renforcer la résilience des bâtiments face aux canicules, un enjeu indirect pour ABC via les exigences clients (ex : DPE tertiaire, adaptation des sites) et la gestion des risques climatiques sur 3 000+ sites.",
+      "resume": "L'article souligne l'urgence climatique en France avec des impacts sanitaires majeurs liés aux canicules, mettant en lumière les enjeux de résilience des bâtiments et des sites clients d'ABC, notamment dans le tertiaire.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Morts-de-la-canicule-Le-gros-du-probleme-c-est-le-logement",
-      "date": "2026-07-23"
-    },
-    {
-      "id": "6136171033df",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Data centers : la consommation d'électricité pourrait doubler en 5 ans",
-      "resume": "L'article souligne l'explosion de la consommation électrique des data centers, liée à l'IA, ce qui pourrait impacter indirectement les clients d'ABC (secteurs industrie, santé, etc.) via des exigences carbone accrues ou des contraintes énergétiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Data-centers-la-consommation-d-electricite-pourrait-doubler-en-5-ans",
       "date": "2026-07-23"
     },
     {
@@ -116,7 +171,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Iricc, e-SAF et électrolyse attendus dans le PLF 2027",
-      "resume": "L'article évoque le soutien à l'électrolyse et les e-SAF (e-fuels) dans le PLF 2027, ce qui pourrait impacter la stratégie de décarbonation de la flotte de véhicules d'ABC (scope 1) et ses engagements net zéro.",
+      "resume": "Le PLF 2027 pourrait intégrer des mesures sur l'électrolyse et les e-SAF (carburants d'aviation durables), influençant indirectement les stratégies de décarbonation des flottes et des partenariats clients d'ABC, notamment dans les secteurs industriels et aéronautiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/iricc-e-saf-et-electrolyse-attendus-dans-le-plf-2027-430453/",
@@ -138,6 +193,11 @@
     {
       "dept_code": "50",
       "dept_nom": "Manche",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "61",
+      "dept_nom": "Orne",
       "niveau": "crise"
     },
     {
@@ -524,11 +584,6 @@
       "dept_code": "2A",
       "dept_nom": "Corse-du-Sud",
       "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "61",
-      "dept_nom": "Orne",
-      "niveau": "alerte"
     },
     {
       "dept_code": "76",
@@ -1311,7 +1366,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés n°7 (modification du seuil d'émissions pour qualifier l'hydrogène comme renouvelable/bas-carbone) et n°2 (cahier des charges des éco-organismes pour les huiles minérales/synthétiques) sont pertinents pour un Responsable Environnement/Climat, car ils impactent directement les critères de durabilité et de gestion des déchets dans les filières industrielles. Aucun autre texte ne semble directement lié à la RSE ou à la transition écologique.",
+  "briefing_jorf": "L'arrêté du 7 juillet 2026 modifiant le seuil d'émissions de GES et la méthodologie pour qualifier l'hydrogène comme renouvelable ou bas-carbone est significatif pour une entreprise de services, car il impacte directement les critères de durabilité des énergies utilisées et les stratégies de décarbonation. Les autres textes ne concernent pas directement les enjeux environnementaux ou climatiques des entreprises de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1631,15 +1686,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53159",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53159",
           "date": "2025-11-14"
-        },
-        {
-          "titre": "Texte adopté N° 298",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accompagnement_parents_enfants_cancers_maladies_handicaps2",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accompagnement_parents_enfants_cancers_maladies_handicaps2",
-          "date": "2024-09-17"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi adoptés ou en cours, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition écologique, à l'énergie et à l'économie circulaire. Aucun autre texte ne mentionne explicitement des enjeux climatiques, de déchets ou de reporting RSE dans son intitulé."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux climatiques et énergétiques majeurs liés à la transposition de directives européennes. Aucun autre texte ne traite explicitement de sujets environnementaux ou RSE dans cette liste."
 }
