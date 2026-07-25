@@ -1,7 +1,7 @@
 {
   "date": "2026-07-25",
-  "generated_at": "07:55",
-  "elapsed_seconds": 425,
+  "generated_at": "12:17",
+  "elapsed_seconds": 173,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
@@ -9,18 +9,18 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-07-25T07:55:09",
+    "run_at": "2026-07-25T12:17:14",
     "sources": {
       "JORF": 0,
-      "RSS": 11,
+      "RSS": 6,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 48,
-    "llm_seconds": 54.8
+    "llm_calls": 47,
+    "llm_seconds": 50.0
   },
   "items": [
     {
@@ -28,10 +28,21 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Fortes chaleurs au travail : que prévoit le PST 2026-2030 ?",
-      "resume": "Le PST 2026-2030 impose aux entreprises d'intégrer les risques climatiques (fortes chaleurs) dans les DUERP et d'adapter les locaux, ce qui impacte les prestations de propreté/FM d'ABC chez ses clients.",
-      "pourquoi": "Le PST 2026-2030 est une évolution réglementaire majeure en matière de santé au travail qui inclut explicitement l'adaptation des locaux et la gestion des risques climatiques. Bien qu'ABC ne soit pas directement concernée par la sécurité des travailleurs, ses prestations de propreté/FM chez ses clients (notamment dans les secteurs sensibles comme l'industrie ou la santé) pourraient être impactées par ces nouvelles exigences. L'article est donc pertinent pour anticiper les attentes clients et adapter les services proposés.",
+      "resume": "Le PST 2026-2030 impose des adaptations des locaux et une intégration des risques climatiques dans les DUERP, ce qui impacte les 3 000+ sites clients d'ABC en termes de sécurité et de conformité réglementaire.",
+      "pourquoi": "Le sujet concerne directement les risques climatiques opérationnels (fortes chaleurs) pour les sites clients d'ABC, avec des obligations réglementaires (DUERP, EPI) qui peuvent impacter les prestations de propreté/FM. Bien que non une obligation directe pour ABC, cela influence les exigences clients et les risques indirects (aléas climatiques sur les sites).",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-au-travail-que-prevoit-le-pst-2026-2030",
+      "date": "2026-07-25"
+    },
+    {
+      "id": "7818b69c3dfc",
+      "source": "Le Monde Planète",
+      "categorie": "Énergie",
+      "titre": "« La stratégie nationale bas carbone n’atteindra probablement pas les réductions d’émissions attendues »",
+      "resume": "L'article souligne les lacunes de la SNBC française, ce qui pourrait impacter les objectifs de décarbonation des clients d'ABC (notamment industriels et tertiaires) et renforcer leurs exigences en matière de reporting carbone et de réduction des scopes 1/2/3.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/idees/article/2026/07/25/la-strategie-nationale-bas-carbone-n-atteindra-probablement-pas-les-reductions-d-emissions-attendues_6732241_3232.html",
       "date": "2026-07-25"
     },
     {
@@ -39,7 +50,7 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Carrefour et Autobacs : deux exemples de danger grave et imminent et de droit de retrait face aux grandes chaleurs",
-      "resume": "L'article illustre l'obligation pour les entreprises de protéger leurs salariés contre les risques climatiques (canicules), ce qui impacte directement les politiques de prévention et de sécurité des prestataires comme ABC intervenant sur des sites clients.",
+      "resume": "L'article illustre l'obligation de prévention des risques climatiques (canicules) pour les entreprises de services comme ABC, avec un impact potentiel sur la santé des salariés et la responsabilité juridique en cas de non-respect des mesures de protection.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/carrefour-et-autobacs-deux-exemples-de-danger-grave-et-imminent-et-de-droit-de-retrait-0",
@@ -50,21 +61,10 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "La quatrième canicule de l'été attendue en France",
-      "resume": "L'article souligne l'augmentation des épisodes de canicule en France, ce qui pourrait impacter la mobilité des équipes et la demande en services de nettoyage (climatisation, désinfection) chez les clients d'ABC.",
+      "resume": "L'article signale une canicule attendue en France, ce qui pourrait impacter l'activité opérationnelle d'ABC (ex. : contraintes logistiques, risques pour les équipes en extérieur, perturbations chez les clients).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/La-quatrieme-canicule-de-l-ete-attendue-en-France",
-      "date": "2026-07-24"
-    },
-    {
-      "id": "a82226c24880",
-      "source": "Novethic",
-      "categorie": "Énergie",
-      "titre": "Déchets, dioxines, PFAS : la mégacentrale qui fait polémique aux portes de Paris",
-      "resume": "L'article aborde les enjeux liés à la gestion des déchets et aux émissions polluantes (dioxines, PFAS) d'une centrale thermique, ce qui peut impacter les exigences réglementaires et les attentes clients d'ABC en matière de traçabilité et de performance environnementale des prestations de propreté.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/environnement/transition-energetique/thermo-sur-seine-vitry-mega-projet-incinerateur-sous-feu-critiques",
       "date": "2026-07-24"
     },
     {
@@ -72,7 +72,7 @@
       "source": "Haut Conseil pour le Climat",
       "categorie": "Environnement",
       "titre": "Chargé(e) d’études et d’enquêtes sur les politiques publiques d’adaptation au changement climatique H/F",
-      "resume": "L'article met en avant une veille sur les politiques publiques d'adaptation au changement climatique, ce qui peut impacter les exigences réglementaires et clients d'ABC (notamment en matière de BGES/plan climat et CSRD).",
+      "resume": "L'article met en lumière l'importance de la veille sur les politiques publiques d'adaptation au changement climatique, ce qui est crucial pour ABC afin d'anticiper les évolutions réglementaires et les attentes clients en matière de résilience climatique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.hautconseilclimat.fr/actualites/chargee-detudes-et-denquetes-sur-les-politiques-publiques-dadaptation-au-changement-climatique-h-f/",
@@ -83,65 +83,10 @@
       "source": "GreenUnivers",
       "categorie": "Eau",
       "titre": "La nouvelle vague des agrégateurs d’électricité",
-      "resume": "L'article aborde l'évolution du marché de l'agrégation d'électricité renouvelable, un sujet indirectement lié à la gestion énergétique des sites clients d'ABC et à leur reporting extra-financier (CSRD/ESRS), sans imposer d'action immédiate.",
+      "resume": "L'article aborde l'évolution du marché de l'agrégation d'électricité renouvelable, un sujet indirectement lié à la gestion énergétique des sites clients d'ABC et à leur reporting ESG (scope 2), sans imposer d'action immédiate mais utile pour anticiper les tendances du secteur.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/07/la-nouvelle-vague-des-agregateurs-delectricite-430475/",
-      "date": "2026-07-24"
-    },
-    {
-      "id": "e3ecd00e534d",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "DPE, garanties d’origine, rénovation : le sort des principaux textes au CSE",
-      "resume": "L'article aborde des sujets réglementaires liés au DPE et à la rénovation énergétique, qui pourraient impacter les bâtiments tertiaires des clients d'ABC (secteur santé, industrie, etc.) et influencer leurs exigences en matière de performance énergétique des prestations de propreté/FM.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/dpe-garanties-dorigine-renovation-le-sort-des-principaux-textes-au-cse-430555/",
-      "date": "2026-07-24"
-    },
-    {
-      "id": "05c7b2557080",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Les documents de la semaine",
-      "resume": "Sélection hebdomadaire de documents utiles pour la transition énergétique, incluant textes réglementaires, études et états financiers pertinents pour le suivi des enjeux climatiques et RSE d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/les-documents-de-la-semaine-381215/",
-      "date": "2026-07-24"
-    },
-    {
-      "id": "9639ce6f0a6d",
-      "source": "Le Monde Planète",
-      "categorie": "Eau",
-      "titre": "La presqu’île du Cap-Ferret prise au piège des incendies en Gironde : « Ça fait quatre ans qu’on s’y attendait »",
-      "resume": "L'article illustre les risques climatiques opérationnels (incendies, évacuations) qui pourraient impacter les sites clients d'ABC en zone côtière, renforçant l'importance de l'analyse des vulnérabilités climatiques dans le cadre du reporting CSRD et de la gestion des risques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/07/24/la-presqu-ile-du-cap-ferret-prise-au-piege-des-incendies-en-gironde-ca-fait-quatre-ans-qu-on-s-y-attendait_6731540_3244.html",
-      "date": "2026-07-24"
-    },
-    {
-      "id": "0fcb92100722",
-      "source": "Le Monde Planète",
-      "categorie": "Eau",
-      "titre": "Visualisez l’étendue des incendies en France, en carte et graphiques",
-      "resume": "L'article met en lumière l'augmentation des risques d'incendies en France, ce qui pourrait impacter la continuité des prestations de propreté/FM d'ABC sur ses 3 000+ sites clients, notamment en cas de restrictions d'accès ou de perturbations logistiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/les-decodeurs/article/2026/07/24/visualisez-l-etendue-des-incendies-en-france-en-carte-et-graphiques_6722679_4355771.html",
-      "date": "2026-07-24"
-    },
-    {
-      "id": "8cb1e6aa332b",
-      "source": "ESG Today",
-      "categorie": "Émissions",
-      "titre": "EcoVadis Opens its Sustainable Supply Chain Networking Platform to all Suppliers",
-      "resume": "L'article annonce l'ouverture d'une plateforme de mise en réseau durable pour les fournisseurs par EcoVadis, ce qui pourrait influencer les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) en matière de reporting et de traçabilité des émissions scope 3.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/ecovadis-opens-its-sustainable-supply-chain-networking-platform-to-all-suppliers/?utm_source=rss&utm_medium=rss&utm_campaign=ecovadis-opens-its-sustainable-supply-chain-networking-platform-to-all-suppliers",
       "date": "2026-07-24"
     }
   ],
@@ -1190,7 +1135,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement la réglementation des quotas d'émission de gaz à effet de serre (arrêté du 26 juin 2026) et le traitement des déchets liquides dangereux ou non (arrêté du 16 juillet 2026), impactant directement les obligations de conformité environnementale des entreprises.",
+  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement la réglementation des émissions de gaz à effet de serre (arrêté modifiant les quotas gratuits 2021-2025) et le traitement des déchets liquides dangereux/non dangereux (arrêté du 16/07/2026), ainsi que la protection d'un site naturel (décret sur la réserve de Sainte-Victoire).",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1508,5 +1453,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi significatifs pour un Responsable Environnement/Climat, le projet de loi d'urgence pour la protection et la souveraineté agricoles (N°3017) et le projet de loi portant diverses dispositions d'adaptation au droit de l’UE en matière environnementale (N°2518) pourraient impacter les politiques agricoles et les normes environnementales applicables aux entreprises. Le projet de loi-cadre relatif au développement des transports (N°2740) pourrait également influencer les stratégies de mobilité durable et les émissions liées aux activités de l'entreprise."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** pourrait présenter un intérêt direct pour un Responsable Environnement/Climat, en raison de son volet environnemental et énergétique. Aucun autre texte ne semble aborder spécifiquement des enjeux climatiques, de déchets ou de reporting RSE de manière significative."
 }
