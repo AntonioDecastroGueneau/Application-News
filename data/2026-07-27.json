@@ -1,7 +1,7 @@
 {
   "date": "2026-07-27",
-  "generated_at": "09:32",
-  "elapsed_seconds": 445,
+  "generated_at": "13:56",
+  "elapsed_seconds": 247,
   "errors": [],
   "stats": {
     "jo_analyses": 20,
@@ -9,29 +9,95 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-07-27T09:32:00",
+    "run_at": "2026-07-27T13:56:44",
     "sources": {
       "JORF": 0,
-      "RSS": 5,
+      "RSS": 13,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 50,
-    "llm_seconds": 52.0
+    "llm_calls": 61,
+    "llm_seconds": 70.9
   },
   "items": [
     {
-      "id": "8606813c5262",
-      "source": "Actuel HSE",
+      "id": "8e72f829ec52",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "Rapports CSRD : l'Efrag révèle le fossé entre transparence et transformation",
+      "resume": "Rapports CSRD : l'Efrag révèle le fossé entre transparence et transformation",
+      "pourquoi": "Mention de CSRD.",
+      "criticite": 3,
+      "url": "https://www.novethic.fr/economie-et-social/business-model-en-transition/rapports-csrd-bilan-efrag-ecart-materialite-impact",
+      "date": "2026-07-27"
+    },
+    {
+      "id": "24189d315283",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "Dassault Sets SBTi-Approved 2050 Net Zero Target",
+      "resume": "Dassault Sets SBTi-Approved 2050 Net Zero Target",
+      "pourquoi": "Mention de SBTi.",
+      "criticite": 3,
+      "url": "https://www.esgtoday.com/dassault-sets-sbti-approved-2050-net-zero-target/?utm_source=rss&utm_medium=rss&utm_campaign=dassault-sets-sbti-approved-2050-net-zero-target",
+      "date": "2026-07-27"
+    },
+    {
+      "id": "58b984821e41",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "EFRAG Releases Proposed CSRD Sustainability Reporting Standards for Non-EU Companies",
+      "resume": "EFRAG Releases Proposed CSRD Sustainability Reporting Standards for Non-EU Companies",
+      "pourquoi": "Mention de CSRD.",
+      "criticite": 3,
+      "url": "https://www.esgtoday.com/efrag-releases-proposed-csrd-sustainability-reporting-standard-for-non-eu-companies/?utm_source=rss&utm_medium=rss&utm_campaign=efrag-releases-proposed-csrd-sustainability-reporting-standard-for-non-eu-companies",
+      "date": "2026-07-27"
+    },
+    {
+      "id": "772594e7cd77",
+      "source": "EFRAG",
       "categorie": "Énergie",
-      "titre": "Fortes chaleurs au travail : que prévoit le PST 2026-2030 ?",
-      "resume": "Le PST 2026-2030 impose aux entreprises d'intégrer les risques climatiques (fortes chaleurs) dans les DUERP et d'adapter les locaux/équipements, ce qui impacte directement les prestations de propreté/FM d'ABC chez ses clients.",
-      "pourquoi": "Le PST 2026-2030 est un plan national qui impose des obligations réglementaires aux entreprises en matière de gestion des risques climatiques (fortes chaleurs) pour les travailleurs, incluant l'adaptation des locaux et des équipements. ABC, en tant que prestataire de services intervenant sur 3 000+ sites clients, doit anticiper ces exigences pour ses clients (notamment dans les secteurs nucléaire, santé et industrie) et adapter ses prestations (ex : nettoyage, maintenance des équipements, gestion des espaces de travail). Cela touche directement ses enjeux de BGES/plan climat, CSRD/reporting et ISO 14001.",
+      "titre": "EFRAG Publishes its Comment Letter on the ISSB SASB Enhancement Consultation",
+      "resume": "EFRAG Publishes its Comment Letter on the ISSB SASB Enhancement Consultation",
+      "pourquoi": "Mention de ISSB.",
+      "criticite": 3,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-publishes-its-comment-letter-on-the-issb-sasb-enhancement-consultation",
+      "date": "2026-07-27"
+    },
+    {
+      "id": "3a5e3334965d",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "REP Emballages professionnels : deux spécialistes du réemploi agréés en tant que systèmes individuels",
+      "resume": "La REP emballages professionnels impose désormais des obligations de traçabilité et de recyclage pour les prestataires de propreté comme ABC, avec deux systèmes individuels agréés jusqu'en 2031. Cela peut impacter la gestion des déchets de prestation et le reporting extra-financier.",
+      "pourquoi": "L'article traite de la REP emballages professionnels, une réglementation qui impacte directement la gestion des déchets des prestataires de services comme ABC. Bien que non critique à court terme, cela influence le reporting ESG (CSRD) et la stratégie déchets de l'entreprise.",
       "criticite": 2,
-      "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-au-travail-que-prevoit-le-pst-2026-2030",
+      "url": "https://www.actu-environnement.com/ae/news/agrements-rep-emballages-professionnels-sysemes-individuels-48364.php4#xtor=RSS-6",
+      "date": "2026-07-27"
+    },
+    {
+      "id": "e79be378de43",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "Mégafeux en Gironde : 14500 entreprises à l'arrêt, le coût économique du changement climatique s’alourdit",
+      "resume": "L'article illustre l'impact direct des aléas climatiques (mégafeux) sur l'activité économique des entreprises, un risque opérationnel majeur pour ABC qui intervient sur 3 000+ sites clients en France. Cela renforce l'importance de l'analyse des risques climatiques dans la stratégie RSE et la gestion des contrats.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/megafeux-en-gironde-14500-entreprises-a-larret-le-cout-economique-du-changement-climatique-salourdit",
+      "date": "2026-07-27"
+    },
+    {
+      "id": "e4748728dd8d",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Les prix de l’électricité bien partis pour rester élevés pour 2027 [Marchés]",
+      "resume": "L'article souligne une tendance de hausse durable des prix de l'électricité en France jusqu'en 2027, ce qui impacte directement les coûts énergétiques des prestations de propreté/FM d'ABC et la compétitivité de sa flotte de véhicules.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/07/les-prix-de-lelectricite-bien-partis-pour-rester-eleves-pour-2027-marches-430689/",
       "date": "2026-07-27"
     },
     {
@@ -39,21 +105,54 @@
       "source": "Le Monde Planète",
       "categorie": "Environnement",
       "titre": "Incendies : une indispensable réponse nationale et européenne",
-      "resume": "L'article souligne l'urgence d'adapter les politiques publiques face aux incendies liés aux aléas climatiques, ce qui impacte indirectement ABC via les risques opérationnels sur ses 3 000+ sites clients et les exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "resume": "L'article souligne l'urgence d'adapter les politiques publiques face aux incendies liés aux aléas climatiques, un risque indirect majeur pour ABC (3 000+ sites clients exposés). Cela peut impacter les exigences carbone des clients (nucléaire, santé, industrie) et les plans de résilience.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/07/27/incendies-une-indispensable-reponse-nationale-et-europeenne_6733977_3232.html",
       "date": "2026-07-27"
     },
     {
-      "id": "00ee5230af0c",
+      "id": "49eed00272e7",
       "source": "Le Monde Planète",
       "categorie": "Environnement",
-      "titre": "Le gouvernement de Sébastien Lecornu mis à l’épreuve dans la lutte contre les « incendies XXL »",
-      "resume": "L'article souligne l'augmentation des risques d'incendies majeurs en France liés au changement climatique, ce qui pourrait impacter la résilience opérationnelle de ABC sur ses 3 000+ sites clients et exacerber les exigences de continuité de service.",
+      "titre": "La lutte contre les « incendies XXL » met à l’épreuve le gouvernement de Sébastien Lecornu",
+      "resume": "L'article souligne l'augmentation des risques d'incendies majeurs liés au changement climatique, ce qui pourrait impacter la continuité des services de propreté/FM d'ABC sur ses 3 000+ sites clients en France, notamment en termes de sécurité des intervenants et de résilience opérationnelle.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/politique/article/2026/07/27/la-gestion-controversee-du-gouvernement-face-aux-incendies-xxl_6733607_823448.html",
+      "date": "2026-07-27"
+    },
+    {
+      "id": "5214740b843e",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "TÜV SÜD Acquires Climate Impact Verification Platform SustainCERT",
+      "resume": "L'acquisition de SustainCERT par TÜV SÜD renforce les capacités de vérification des impacts climatiques, ce qui pourrait impacter les exigences de reporting ESG (CSRD/ESRS) pour les clients d'ABC et indirectement ses propres obligations de transparence.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/tuv-sud-acquires-climate-impact-verification-platform-sustaincert/?utm_source=rss&utm_medium=rss&utm_campaign=tuv-sud-acquires-climate-impact-verification-platform-sustaincert",
+      "date": "2026-07-27"
+    },
+    {
+      "id": "b85e7228000a",
+      "source": "The Guardian Environment",
+      "categorie": "Environnement",
+      "titre": "Europe live: French firefighters warn it could take ‘weeks or months’ to extinguish wildfires",
+      "resume": "L'article souligne l'augmentation des risques climatiques (feux de forêt) en Europe, pouvant impacter les opérations de propreté/FM d'ABC sur les sites clients (ex. : perturbations logistiques, sécurité des équipes).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/world/live/2026/jul/27/europe-wildfires-france-spain-emmanuel-macron-crisis-meeting-pedro-sanchez-castillon-latest-news-updates",
+      "date": "2026-07-27"
+    },
+    {
+      "id": "8606813c5262",
+      "source": "Actuel HSE",
+      "categorie": "Énergie",
+      "titre": "Fortes chaleurs au travail : que prévoit le PST 2026-2030 ?",
+      "resume": "Le PST 2026-2030 impose aux entreprises d'adapter leurs locaux et processus aux risques climatiques (fortes chaleurs), impactant potentiellement les prestations de propreté/FM d'ABC chez ses clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-au-travail-que-prevoit-le-pst-2026-2030",
       "date": "2026-07-27"
     },
     {
@@ -61,22 +160,11 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Carrefour et Autobacs : deux exemples de danger grave et imminent et de droit de retrait face aux grandes chaleurs",
-      "resume": "L'article illustre l'obligation pour les entreprises de protéger leurs salariés contre les risques climatiques (canicules), ce qui impacte les politiques de prévention et de sécurité des sites clients d'ABC, notamment en période estivale.",
+      "resume": "L'article illustre l'application du droit de retrait en cas de risques liés aux fortes chaleurs, un enjeu de santé au travail et de gestion des risques climatiques pour les entreprises de services comme ABC intervenant sur des sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/carrefour-et-autobacs-deux-exemples-de-danger-grave-et-imminent-et-de-droit-de-retrait-0",
       "date": "2026-07-27"
-    },
-    {
-      "id": "9d4f3f4a41be",
-      "source": "Politico Energy EU",
-      "categorie": "Climat",
-      "titre": "Extension du marché carbone : le jour où Macron et Bayrou ont dit non à quatre ministres",
-      "resume": "L'article souligne l'échec de la mise en œuvre accélérée du second marché carbone en France, un sujet qui pourrait influencer les politiques climatiques futures et les coûts énergétiques pour les entreprises, y compris ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.politico.eu/article/extension-du-marche-carbone-le-jour-ou-macron-et-bayrou-ont-dit-non-a-quatre-ministres/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "date": "2026-07-26"
     }
   ],
   "restrictions_eau": [
@@ -878,7 +966,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Le décret n° 2026-665 du 24 juillet 2026 publie l'accord franco-kazakh sur la coopération dans la lutte contre le réchauffement climatique, incluant des mesures concrètes pour la transition écologique, ce qui est directement pertinent pour un Responsable Environnement/Climat d'une grande entreprise de services.",
+  "briefing_jorf": "Le décret n° 2026-665 du 24 juillet 2026 publie un accord franco-kazakh sur la coopération dans la lutte contre le réchauffement climatique, ce qui peut impacter les stratégies RSE des entreprises françaises opérant au Kazakhstan ou engagées dans des projets transnationaux de réduction des émissions.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1186,15 +1274,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_reduire_risques_sanitaires_lies_aux_contaminations_au_cadmium_dans_alimentation_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_reduire_risques_sanitaires_lies_aux_contaminations_au_cadmium_dans_alimentation_17e",
           "date": "2026-04-14"
-        },
-        {
-          "titre": "Texte adopté N° 301",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interdiction_vaisselle_plastique_17",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/interdiction_vaisselle_plastique_17",
-          "date": "2025-03-24"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (adaptation au droit de l'UE en matière environnementale, énergétique et de pêche) et le n°2609 (habilitation de l'Assemblée de Martinique à fixer des règles locales en énergie, eau et assainissement) présentent un intérêt direct pour un Responsable Environnement/Climat, en lien avec la transition écologique et la décentralisation des politiques environnementales."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l’économie circulaire et à la protection de l’environnement dans le cadre du droit européen. Aucun autre texte ne semble aborder spécifiquement les enjeux climatiques, énergétiques ou de reporting RSE."
 }
