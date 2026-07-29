@@ -1,7 +1,7 @@
 {
   "date": "2026-07-29",
-  "generated_at": "08:20",
-  "elapsed_seconds": 260,
+  "generated_at": "13:17",
+  "elapsed_seconds": 269,
   "errors": [],
   "stats": {
     "jo_analyses": 30,
@@ -9,27 +9,82 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-07-29T08:20:13",
+    "run_at": "2026-07-29T13:17:30",
     "sources": {
       "JORF": 1,
-      "RSS": 13,
+      "RSS": 15,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 72,
-    "llm_seconds": 91.4
+    "llm_calls": 78,
+    "llm_seconds": 101.9
   },
   "items": [
+    {
+      "id": "07cccaeff8dc",
+      "source": "Actuel HSE",
+      "categorie": "Eau",
+      "titre": "Faux départ pour la filière REP des emballages professionnels",
+      "resume": "Le report de la filière REP des emballages professionnels impacte potentiellement la gestion des déchets des prestations de propreté/FM d'ABC, notamment en termes de traçabilité et de coûts de conformité.",
+      "pourquoi": "Le report de la filière REP des emballages professionnels retarde la clarification des obligations de traçabilité et de financement pour ABC, exposant l'entreprise à des risques de non-conformité réglementaire (sanctions, coûts imprévus) et à une perte d'opportunité de différenciation RSE auprès de clients exigeants, avec un délai critique pour anticiper les nouvelles règles d'ici 2025-2026.",
+      "criticite": 2,
+      "url": "https://www.actuel-hse.fr/content/faux-depart-pour-la-filiere-rep-des-emballages-professionnels",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "95176f320db0",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "REP huiles : Cyclevia peut gérer les emballages et contenants d'huiles",
+      "resume": "L'arrêté publié au Journal officiel le 24 juillet étend la gestion des emballages et contenants d'huiles lubrifiantes à Cyclevia dans le cadre de la REP, ce qui impacte indirectement ABC via la traçabilité des déchets générés par ses prestations de propreté.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/cahier-charges-huiles-gestion-contenants-48377.php4#xtor=RSS-6",
+      "date": "2026-07-29"
+    },
     {
       "id": "a88d9621a79b",
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Réforme du marché carbone européen : encore du temps de gagné pour polluer",
-      "resume": "La réforme du marché carbone européen assouplit les contraintes du SEQE, repoussant les échéances de décarbonation pour l'industrie. Cela pourrait impacter indirectement les exigences carbone des clients d'ABC (nucléaire, santé, industrie) en ralentissant leurs propres trajectoires de réduction.",
+      "resume": "La réforme du marché carbone européen (SEQE) assouplit les contraintes de décarbonation pour l'industrie, ce qui pourrait influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et les incitations réglementaires pour réduire les émissions de la flotte de véhicules (scope 1).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Reforme-du-marche-carbone-europeen-encore-du-temps-de-gagne-pour-polluer",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "e4e8e83799f1",
+      "source": "ESG Today",
+      "categorie": "Environnement",
+      "titre": "ISO, GHG Protocol to Launch a Single Unified Carbon Accounting Standard",
+      "resume": "L'article annonce une future norme unifiée de comptabilité carbone entre ISO et GHG Protocol, ce qui pourrait simplifier et harmoniser le reporting des émissions (scope 1/2/3) pour ABC, notamment dans le cadre de la CSRD et des exigences clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/iso-ghg-protocol-to-launch-a-single-unified-carbon-accounting-standard/?utm_source=rss&utm_medium=rss&utm_campaign=iso-ghg-protocol-to-launch-a-single-unified-carbon-accounting-standard",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "2f4855aeeca6",
+      "source": "ESG Today",
+      "categorie": "Énergie",
+      "titre": "“Waste Intelligence” Startup Greyparrot Raises $27 Million",
+      "resume": "L'article met en lumière une solution technologique (IA pour l'intelligence des déchets) qui pourrait intéresser ABC dans l'optimisation de la gestion des déchets de ses prestations, notamment pour répondre aux exigences CSRD/ESRS ou aux attentes clients en matière de traçabilité et performance environnementale.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/waste-intelligence-startup-grayparrot-raises-27-million/?utm_source=rss&utm_medium=rss&utm_campaign=waste-intelligence-startup-grayparrot-raises-27-million",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "6a7c9409bbc5",
+      "source": "The Guardian Environment",
+      "categorie": "Environnement",
+      "titre": "Half of England officially in ‘exceptionally serious’ drought",
+      "resume": "L'article signale une sécheresse exceptionnelle en Angleterre, pouvant impacter les activités de nettoyage et FM d'ABC chez ses clients locaux (ex. : restrictions d'eau, risques opérationnels).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/environment/2026/jul/29/half-england-officially-drought-environment-agency",
       "date": "2026-07-29"
     },
     {
@@ -37,30 +92,19 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Politiques climatiques : le HCC formule des recommandations, y compris en santé au travail",
-      "resume": "Le HCC souligne l'importance de l'adaptation aux vagues de chaleur et de la protection des populations, ce qui peut impacter les conditions de travail des employés d'ABC intervenant sur des sites clients exposés à ces risques climatiques.",
+      "resume": "Le HCC souligne l'importance de l'adaptation aux vagues de chaleur et de la protection des populations dans les politiques climatiques, ce qui pourrait impacter les obligations en santé au travail pour les entreprises de services comme ABC, notamment en termes de conditions de travail des salariés en extérieur.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/politiques-climatiques-le-hcc-formule-des-recommandations-y-compris-en-sante-au-travail",
       "date": "2026-07-29"
     },
     {
-      "id": "24a2d8413324",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "Singapore Releases Proposed ISSB-Aligned Sustainability Reporting Standards",
-      "resume": "Singapore Releases Proposed ISSB-Aligned Sustainability Reporting Standards",
-      "pourquoi": "Mention de ISSB.",
-      "criticite": 3,
-      "url": "https://www.esgtoday.com/singapore-releases-proposed-issb-aligned-sustainability-reporting-standards/?utm_source=rss&utm_medium=rss&utm_campaign=singapore-releases-proposed-issb-aligned-sustainability-reporting-standards",
-      "date": "2026-07-28"
-    },
-    {
       "id": "cc447c0f5bd0",
       "source": "Actu-Environnement",
       "categorie": "Climat",
       "titre": "REP emballages professionnels : la filière démarrera au 1er janvier 2027",
-      "resume": "La REP emballages professionnels (Epro) s'appliquera à partir du 1er janvier 2027, ce qui impactera la gestion des déchets de prestation de propreté/FM d'ABC (emballages liés aux produits utilisés sur les sites clients).",
-      "pourquoi": "La REP Epro concerne les emballages professionnels, y compris ceux générés par les prestataires de services comme ABC sur les sites clients. Bien que l'article ne détaille pas encore les obligations spécifiques pour les entreprises de services, cette réglementation future imposera une traçabilité et une responsabilité élargie sur les déchets d'emballages, alignée sur les enjeux de reporting CSRD et de gestion des déchets de prestation d'ABC.",
+      "resume": "La REP emballages professionnels (REP Epro) entrera en vigueur au 1er janvier 2027, imposant aux entreprises comme ABC de contribuer financièrement à la gestion des déchets d'emballages utilisés dans leurs prestations de propreté/FM.",
+      "pourquoi": "ABC est concerné en tant que prestataire de services utilisant des emballages (ex. sacs poubelles, produits d'entretien) dans ses prestations chez les clients. La REP Epro impacte directement la gestion des déchets liés à ces emballages, avec des obligations de contribution financière et de traçabilité à anticiper pour 2027.",
       "criticite": 2,
       "url": "https://www.actu-environnement.com/ae/news/report-filiere-rep-emballages-professionnels-janvier-2027-48374.php4#xtor=RSS-6",
       "date": "2026-07-28"
@@ -70,10 +114,21 @@
       "source": "Les Echos Environnement",
       "categorie": "Énergie",
       "titre": "Déchets : la filière des emballages professionnels sera lancée le 1er janvier 2027 - Les Echos",
-      "resume": "La filière REP emballages professionnels (obligatoire à partir de 2027) impactera ABC via la gestion des déchets de ses prestations de propreté/FM chez les clients, nécessitant une adaptation des processus de tri et traçabilité.",
-      "pourquoi": "L'article concerne la réglementation déchets (REP) applicable aux emballages professionnels, qui impacte directement les activités de propreté/FM d'ABC (gestion des déchets de prestations). Bien que l'obligation soit en 2027, elle impose une anticipation pour adapter les processus internes et ceux des clients.",
+      "resume": "La filière REP emballages professionnels (décret attendu fin 2024) imposera à ABC une traçabilité renforcée des déchets d'emballages issus de ses prestations de propreté/FM chez ses clients, avec des obligations de reporting et de contribution financière à un éco-organisme.",
+      "pourquoi": "L'article concerne directement la réglementation déchets (REP) applicable aux entreprises de services comme ABC, avec une échéance proche (2027) et des impacts opérationnels (traçabilité, reporting, coûts). Bien que non classé comme obligation immédiate (score 3), il s'agit d'une évolution réglementaire majeure à anticiper dans les 12-24 mois.",
       "criticite": 2,
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPWG1scmpNN0tSRUpNR0FtRDBMVHNoR1paRTZERnQzMGRiaEhKRVc0OTFzOVpoX1lzMXpEQlhRNkRzTlIyQng1QllBQ29qSUZfSnZyOFl3MUxmSG4zLXUydDB0T2dXUzE4ek4yN3U4V1ItbUpkTmZ1OUdvcTQ0MWpodXlFNVdmUVgyelF1Ml92QWY0UkpNZ1VSUS0wRjRCeUZXSExPdjliMDZpR2lJTGZEc0prQmgxZ3g2dS1kWGFPUElyZ2VTQ3ZPLXlWRzRDTXhkanoyZlBNRFZOMktXUFRtTEZrY3RVbUxS?oc=5",
+      "date": "2026-07-28"
+    },
+    {
+      "id": "d8c1436ca198",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "PFAS : le contrôle des rejets des installations de traitement de déchets liquides entre en vigueur",
+      "resume": "L'article impose un nouveau contrôle réglementaire sur les rejets de PFAS pour les installations de traitement de déchets liquides, ce qui pourrait impacter les prestations de gestion des déchets d'ABC chez ses clients (notamment en cas de présence de lixiviats ou déchets dangereux).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/controle-pfas-installation-traitement-dechets-liquides-48373.php4#xtor=RSS-6",
       "date": "2026-07-28"
     },
     {
@@ -81,7 +136,7 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Sécheresse : « Je veux être sûre qu'on ait de l'eau potable en septembre », s'inquiète Monique Barbut",
-      "resume": "L'article souligne l'aggravation des restrictions d'eau en France (91 départements concernés), ce qui pourrait impacter la disponibilité des ressources pour les activités de nettoyage et de gestion des déchets chez les clients d'ABC, notamment en période estivale.",
+      "resume": "L'article souligne l'aggravation des restrictions d'eau en France (91 départements concernés), un risque opérationnel indirect pour ABC via ses 3 000+ sites clients (ex. : accès à l'eau pour les prestations de nettoyage ou la gestion des déchets).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/secheresse-eau-potable-restrictions-departements-48371.php4#xtor=RSS-6",
@@ -92,7 +147,7 @@
       "source": "Actu-Environnement",
       "categorie": "Environnement",
       "titre": "MaPrimeRénov' : au premier semestre 2026, les demandes chutent pour les rénovations d'ampleur",
-      "resume": "L'article signale une baisse des rénovations d'ampleur éligibles à MaPrimeRénov' à partir de 2026, ce qui pourrait impacter les clients tertiaires d'ABC (bureaux, copropriétés) dans leurs projets de rénovation énergétique et leur reporting CSRD.",
+      "resume": "L'article signale une baisse des demandes pour MaPrimeRénov' (rénovations d'ampleur) à partir de 2026, ce qui pourrait impacter indirectement les stratégies clients d'ABC dans le secteur tertiaire ou résidentiel, notamment via des exigences carbone ou des plans de rénovation énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/maprimerenov-renovation-ampleur-demandes-2026-48372.php4#xtor=RSS-6",
@@ -103,7 +158,7 @@
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "Face à la sécheresse, l'État accusé de tergiverser",
-      "resume": "L'article souligne l'aggravation des risques climatiques (sécheresse) en France, pouvant impacter la continuité des services de propreté/FM d'ABC chez ses 3 000+ clients, notamment dans les secteurs sensibles (nucléaire, santé, industrie).",
+      "resume": "L'article met en lumière les tensions sur la ressource en eau en France, un risque climatique opérationnel pouvant impacter les activités de nettoyage (accès à l'eau, contraintes réglementaires locales) et les sites clients d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Face-a-la-secheresse-l-Etat-accuse-de-tergiverser",
@@ -114,21 +169,10 @@
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Adaptation climatique : \"Planter un arbre en ville est beaucoup plus compliqué qu'on ne l'imagine\"",
-      "resume": "L'article souligne les défis de l'adaptation climatique en milieu urbain, notamment via la végétalisation, ce qui peut impacter les stratégies de prestation de services de propreté/FM d'ABC sur les sites clients (ex : gestion des espaces verts, adaptation aux canicules).",
+      "resume": "L'article souligne les défis de l'adaptation climatique en milieu urbain, notamment la complexité de la végétalisation, ce qui peut impacter les prestations de propreté/FM d'ABC chez ses clients (ex : gestion des espaces verts, adaptation aux canicules).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/biodiversite/adaptation-climatique-planter-un-arbre-en-ville-est-beaucoup-plus-complique-quon-ne-limagine",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "35f5be59781c",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "A Cattenom, EDF étudie la récupération de la chaleur nucléaire perdue",
-      "resume": "L'article illustre une innovation sectorielle (récupération de chaleur nucléaire) qui pourrait influencer les attentes clients d'ABC en matière de décarbonation des réseaux de chaleur, notamment dans le cadre de leurs BGES et reporting CSRD.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/a-cattenom-edf-etudie-la-recuperation-de-la-chaleur-nucleaire-perdue-430853/",
       "date": "2026-07-28"
     },
     {
@@ -136,32 +180,10 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "TotalEnergies to Appeal Court Ruling Ordering it to Address Climate Risks from Use of its Products",
-      "resume": "L'article illustre une tendance réglementaire et juridique croissante en France (et en UE) où les entreprises sont tenues de rendre compte des risques climatiques liés à l'usage de leurs produits, ce qui pourrait impacter les exigences carbone des clients d'ABC dans les secteurs industriels ou énergétiques.",
+      "resume": "L'article illustre l'extension des obligations de reporting climatique aux émissions liées à l'usage des produits (scope 3 amont/aval), un enjeu potentiel pour ABC via ses clients industriels ou énergétiques soumis à des exigences similaires.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/totalenergies-to-appeal-court-ruling-ordering-it-to-address-climate-risks-from-use-of-its-products/?utm_source=rss&utm_medium=rss&utm_campaign=totalenergies-to-appeal-court-ruling-ordering-it-to-address-climate-risks-from-use-of-its-products",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "8e802921083f",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "CDP Launches AI Tool to Enable Faster, Easier Sustainability Reporting",
-      "resume": "CDP lance un outil d'IA pour accélérer et simplifier le reporting de durabilité, ce qui pourrait optimiser le processus de collecte et de déclaration des données ESG pour ABC, notamment dans le cadre de la CSRD et des exigences clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/cdp-launches-ai-tool-to-enable-faster-easier-sustainability-reporting/?utm_source=rss&utm_medium=rss&utm_campaign=cdp-launches-ai-tool-to-enable-faster-easier-sustainability-reporting",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "7a13aa8b9728",
-      "source": "EFRAG",
-      "categorie": "Déchets",
-      "titre": "EFRAG SRB & SR TEG Joint Online Meeting 29 July 2026",
-      "resume": "L'article concerne les travaux de l'EFRAG sur les normes de reporting ESG (CSRD/ESRS), pertinentes pour le reporting extra-financier d'ABC dans le cadre de ses obligations CSRD et ISO 14001.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-srb-sr-teg-joint-online-meeting-29-july-2026",
       "date": "2026-07-28"
     }
   ],
@@ -1455,8 +1477,8 @@
       "source": "JORF",
       "categorie": "Énergie",
       "titre": "Arrêté du 6 juillet 2026 portant agrément d'un système individuel de la filière à responsabilité élargie du producteur d'emballages servant à commercialiser des produits consommés ou utilisés par des professionnels",
-      "resume": "Extension des obligations de tri et traçabilité des emballages professionnels pour les clients d'ABC, impactant la gestion des déchets de prestation.",
-      "pourquoi": "L'arrêté impose aux clients d'ABC (notamment dans les secteurs agroalimentaire, santé ou industrie) une extension des obligations de tri et traçabilité des emballages professionnels d'ici 2026, avec un risque de non-conformité contractuelle ou réglementaire pour ABC si ses prestations ne s'adaptent pas à ces nouvelles exigences, mais aussi une opportunité de différenciation via des solutions intégrées de gestion des déchets alignées sur ces normes.",
+      "resume": "Extension des obligations de tri et de traçabilité des emballages professionnels pour les clients d'ABC, impactant la gestion des déchets de ses prestations.",
+      "pourquoi": "ABC intervient chez des clients non-ICPE (nucléaire, santé, industrie) qui pourraient être concernés par cette filière REP élargie. Bien que l'arrêté cible les emballages professionnels, les prestations de propreté/FM d'ABC génèrent des déchets d'emballages (produits ménagers, consommables) qui pourraient être inclus dans le périmètre de cette filière. Risque indirect de devoir adapter la gestion des déchets pour ses clients ou ses propres opérations.",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054541098",
       "date": "2026-07-29"
@@ -1774,5 +1796,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale, énergétique et de santé (N° 2518), qui pourrait impacter les normes de reporting RSE et les obligations de décarbonation, et le projet de loi-cadre relatif au développement des transports (N° 2740), susceptible d’influencer les stratégies de mobilité durable des entreprises. Aucun texte adopté ne semble directement lié à ces enjeux."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N° 2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à l'énergie, à l'environnement et à la transition écologique. Aucun autre texte ne semble aborder des enjeux climatiques ou RSE de manière significative."
 }
