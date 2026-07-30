@@ -1,7 +1,7 @@
 {
   "date": "2026-07-30",
-  "generated_at": "08:06",
-  "elapsed_seconds": 157,
+  "generated_at": "13:09",
+  "elapsed_seconds": 404,
   "errors": [],
   "stats": {
     "jo_analyses": 18,
@@ -9,29 +9,84 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-07-30T08:06:44",
+    "run_at": "2026-07-30T13:09:54",
     "sources": {
       "JORF": 0,
-      "RSS": 8,
+      "RSS": 7,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 44,
-    "llm_seconds": 51.2
+    "llm_calls": 40,
+    "llm_seconds": 51.5
   },
   "items": [
+    {
+      "id": "25419ea84c2c",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "Neutralité carbone : l'ISO veut imposer aux entreprises la logique du \"budget carbone\"",
+      "resume": "La future norme ISO 14060 pourrait imposer une approche par 'budget carbone' pour les plans de transition climatique des entreprises, impactant potentiellement les méthodologies de reporting et de décarbonation d'ABC, notamment pour ses scopes 1, 2 et 3.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/environnement/climat/norme-iso-14060-budget-carbone-neutralite-climat",
+      "date": "2026-07-30"
+    },
     {
       "id": "38cc4db228e8",
       "source": "Novethic",
       "categorie": "Eau",
       "titre": "Jour du dépassement : la crise de l'eau, l'un des visages de notre dette écologique",
-      "resume": "L'article souligne l'urgence de la crise de l'eau et son impact sur les ressources disponibles, ce qui peut influencer les stratégies de gestion des déchets et de consommation d'eau chez ABC, notamment dans le cadre de ses prestations de propreté et de gestion des sites clients.",
+      "resume": "L'article met en lumière la crise de l'eau et le Jour du dépassement, un indicateur clé de la pression écologique mondiale. Cela peut influencer les attentes des clients d'ABC en matière de gestion durable des ressources dans les prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/biodiversite/jour-du-depassement-la-crise-de-leau-lun-des-visages-de-notre-dette-ecologique",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "f05d52235183",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Canicule : le gouvernement affirme avoir tenu sa promesse de livraison de 33 000 climatiseurs dans les hôpitaux et les Ehpad",
+      "resume": "L'article met en lumière les risques climatiques opérationnels (canicules) affectant les sites clients d'ABC (secteurs santé, Ehpad), avec des enjeux de robustesse des équipements livrés en urgence, pouvant impacter la qualité des prestations de propreté/FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/societe/article/2026/07/30/canicule-le-gouvernement-affirme-avoir-tenu-sa-promesse-de-livraison-de-33-000-climatiseurs-dans-les-hopitaux-et-les-ehpad_6737018_3224.html",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "9f4381e584d4",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "L’industrie en Europe n’est pas adaptée aux nouvelles crises climatiques",
+      "resume": "L'article souligne le déséquilibre entre réduction des émissions et adaptation climatique dans les plans industriels, ce qui pourrait impacter les exigences des clients d'ABC (nucléaire, santé, industrie) en matière de résilience climatique des prestataires.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/economie/article/2026/07/30/l-industrie-en-europe-n-est-pas-adaptee-aux-nouvelles-crises-climatiques_6736909_3234.html",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "be249000242f",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "Deepki Acquires Real Estate Electrification AI Startup Camion",
+      "resume": "L'acquisition par Deepki d'une startup spécialisée dans l'électrification des bâtiments pourrait influencer les attentes des clients d'ABC en matière de décarbonation des sites tertiaires, notamment via des solutions technologiques pour la transition énergétique.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/deepki-acquires-real-estate-electrification-ai-startup-camion/?utm_source=rss&utm_medium=rss&utm_campaign=deepki-acquires-real-estate-electrification-ai-startup-camion",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "75ee1546e525",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "Sustainability’s Next Challenge Isn’t Reporting – It’s Building Better Data",
+      "resume": "L'article souligne l'importance de la qualité des données pour la transition climatique des entreprises, un enjeu clé pour ABC dans le cadre de la CSRD et du reporting extra-financier.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/sustainabilitys-next-challenge-isnt-reporting-its-building-better-data/?utm_source=rss&utm_medium=rss&utm_campaign=sustainabilitys-next-challenge-isnt-reporting-its-building-better-data",
       "date": "2026-07-30"
     },
     {
@@ -39,76 +94,10 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "ISO, GHG Protocol to Launch a Single Unified Carbon Accounting Standard",
-      "resume": "L'ISO et le GHG Protocol lancent un standard unifié de comptabilité carbone, simplifiant le reporting des émissions pour les entreprises comme ABC, notamment pour le scope 1/2/3 et la CSRD.",
-      "pourquoi": "Cet article impacte directement le reporting ESG de ABC (CSRD, ESRS) et la méthodologie de calcul des émissions (BGES, bilan GES). Un standard unifié réduit les risques de non-conformité et améliore la comparabilité des données pour les clients exigeants en carbone.",
+      "resume": "L'ISO et le GHG Protocol lancent un standard unifié de comptabilité carbone, simplifiant le reporting ESG pour les entreprises comme ABC, notamment pour les scopes 1, 2 et 3.",
+      "pourquoi": "L'article impacte directement le reporting ESG de ABC, notamment pour la CSRD et l'ISO 14001, en harmonisant les méthodes de calcul des émissions. Bien que non une obligation immédiate, cela influence les exigences clients et les pratiques internes.",
       "criticite": 2,
       "url": "https://www.esgtoday.com/iso-ghg-protocol-to-launch-a-single-unified-carbon-accounting-standard/?utm_source=rss&utm_medium=rss&utm_campaign=iso-ghg-protocol-to-launch-a-single-unified-carbon-accounting-standard",
-      "date": "2026-07-29"
-    },
-    {
-      "id": "1067e18d29d6",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Sécheresse : « Je veux être sûre qu'on ait de l'eau potable en septembre », s'inquiète Monique Barbut",
-      "resume": "L'article souligne l'aggravation des restrictions d'eau en France (91 départements concernés), ce qui pourrait impacter les activités de nettoyage et de gestion des déchets des clients d'ABC, notamment en termes de disponibilité de l'eau pour les prestations et de gestion des ressources.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/secheresse-eau-potable-restrictions-departements-48371.php4#xtor=RSS-6",
-      "date": "2026-07-29"
-    },
-    {
-      "id": "d8c1436ca198",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "PFAS : le contrôle des rejets des installations de traitement de déchets liquides entre en vigueur",
-      "resume": "L'article impose un contrôle renforcé des rejets de PFAS pour les installations de traitement de déchets liquides, ce qui pourrait impacter les prestataires de propreté/FM comme ABC en cas de sous-traitance ou de gestion de déchets contenant ces substances.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/controle-pfas-installation-traitement-dechets-liquides-48373.php4#xtor=RSS-6",
-      "date": "2026-07-29"
-    },
-    {
-      "id": "95176f320db0",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "REP huiles : Cyclevia peut gérer les emballages et contenants d'huiles",
-      "resume": "La REP huiles élargit désormais la gestion des emballages et contenants d'huiles lubrifiantes, ce qui peut impacter les obligations de traçabilité et de recyclage pour ABC dans le cadre de ses prestations de propreté/FM chez ses clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/cahier-charges-huiles-gestion-contenants-48377.php4#xtor=RSS-6",
-      "date": "2026-07-29"
-    },
-    {
-      "id": "b3714021e539",
-      "source": "Le Monde Planète",
-      "categorie": "Eau",
-      "titre": "« Il n’y a rien qui pousse, c’est devenu un désert » : la Creuse confrontée à une sécheresse exceptionnelle",
-      "resume": "La sécheresse exceptionnelle en Creuse illustre l'augmentation des risques climatiques opérationnels pour ABC, pouvant impacter la disponibilité en eau des sites clients et perturber les prestations de propreté/FM.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/07/29/il-n-y-a-rien-qui-pousse-c-est-devenu-un-desert-la-creuse-confrontee-a-une-secheresse-exceptionnelle_6736399_3244.html",
-      "date": "2026-07-29"
-    },
-    {
-      "id": "2f4855aeeca6",
-      "source": "ESG Today",
-      "categorie": "Énergie",
-      "titre": "“Waste Intelligence” Startup Greyparrot Raises $27 Million",
-      "resume": "L'article met en lumière une solution technologique (IA pour l'intelligence des déchets) qui pourrait optimiser la gestion des déchets pour ABC et ses clients, notamment dans le cadre des obligations REP et de la CSRD.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/waste-intelligence-startup-grayparrot-raises-27-million/?utm_source=rss&utm_medium=rss&utm_campaign=waste-intelligence-startup-grayparrot-raises-27-million",
-      "date": "2026-07-29"
-    },
-    {
-      "id": "60008f2a47ea",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "Northern Trust Loses $160 Million Mandate to Amundi Over Exit from Climate Groups",
-      "resume": "L'article illustre l'impact financier et réputationnel de l'exclusion des groupes climatiques sur les décisions d'investissement, un signal à surveiller pour ABC dans le cadre de ses engagements RSE et de ses relations avec des clients sensibles aux critères carbone.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/northern-trust-loses-160-million-mandate-to-amundi-over-exit-from-climate-groups/?utm_source=rss&utm_medium=rss&utm_campaign=northern-trust-loses-160-million-mandate-to-amundi-over-exit-from-climate-groups",
       "date": "2026-07-29"
     }
   ],
@@ -1403,7 +1392,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des textes publiés ne présente de mesure directement pertinente pour un Responsable Environnement/Climat d'une grande entreprise de services, bien que l'arrêté modifiant le dispositif des certificats d'économies d'énergie (point 4) puisse indirectement influencer les stratégies d'efficacité énergétique industrielles.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1715,5 +1704,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l'économie circulaire et à la réglementation environnementale européenne. Aucun autre texte ne semble aborder directement des enjeux climatiques, de déchets ou de reporting RSE."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N° 2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l'économie circulaire et à la réglementation environnementale européenne. Aucun autre texte ne mentionne explicitement des enjeux climatiques, de gestion des déchets ou de reporting RSE."
 }
