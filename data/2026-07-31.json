@@ -1,7 +1,7 @@
 {
   "date": "2026-07-31",
-  "generated_at": "08:34",
-  "elapsed_seconds": 243,
+  "generated_at": "13:16",
+  "elapsed_seconds": 250,
   "errors": [],
   "stats": {
     "jo_analyses": 21,
@@ -9,40 +9,73 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-07-31T08:34:21",
+    "run_at": "2026-07-31T13:16:44",
     "sources": {
       "JORF": 0,
-      "RSS": 16,
+      "RSS": 17,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 60,
-    "llm_seconds": 82.9
+    "llm_calls": 61,
+    "llm_seconds": 99.2
   },
   "items": [
+    {
+      "id": "21b689d47b89",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Pnacc 3 : des groupes de travail interministériels pour accélérer l'adaptation climatique",
+      "resume": "Pnacc 3 : des groupes de travail interministériels pour accélérer l'adaptation climatique",
+      "pourquoi": "Mention de PNACC.",
+      "criticite": 3,
+      "url": "https://www.actu-environnement.com/ae/news/pnacc3-adaptation-climatique-france-acceleration-48387.php4#xtor=RSS-6",
+      "date": "2026-07-31"
+    },
     {
       "id": "07cccaeff8dc",
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Faux départ pour la filière REP des emballages professionnels",
-      "resume": "Le report de la filière REP des emballages professionnels impacte les obligations de traçabilité et de gestion des déchets pour ABC, prestataire de services intervenant sur des sites clients soumis à cette réglementation.",
-      "pourquoi": "La filière REP (Responsabilité Élargie du Producteur) des emballages professionnels concerne directement les entreprises de propreté/FM comme ABC, qui doivent gérer les déchets issus de leurs prestations. Le report de son lancement (initialement prévu au 1er juillet 2026) peut entraîner des incertitudes sur les échéances réglementaires et les modalités de reporting pour ABC, notamment dans le cadre de la CSRD et du BGES.",
+      "resume": "Le report de la filière REP des emballages professionnels impacte indirectement ABC via ses obligations de traçabilité et gestion des déchets pour ses clients (scope 3), notamment dans le cadre de la CSRD et des exigences carbone des secteurs clients (nucléaire, santé, industrie).",
+      "pourquoi": "L'article traite de la réglementation déchets (REP) qui concerne directement ABC dans le cadre de ses prestations de propreté/FM et de la gestion des déchets de ses clients. Bien que le report ne soit pas une obligation immédiate, il influence les échéances et la planification des actions pour se conformer aux exigences réglementaires futures (CSRD, reporting extra-financier).",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/faux-depart-pour-la-filiere-rep-des-emballages-professionnels",
       "date": "2026-07-31"
     },
     {
-      "id": "8606813c5262",
-      "source": "Actuel HSE",
+      "id": "1b74c0200893",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Lire notre dossier d'actu \"Canicule : la France face au défi du confort d'été\"",
+      "resume": "L'article souligne l'augmentation des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter les activités de propreté/FM d'ABC sur ses 3 000+ sites clients (ex : besoins accrus en climatisation, maintenance adaptée, gestion des déchets liés aux équipements).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/dossier-actu/dossier-canicule-chaleur-adaptation-climat-batiment-ville-128#xtor=RSS-6",
+      "date": "2026-07-31"
+    },
+    {
+      "id": "e8aa6cbd5c7a",
+      "source": "Actu-Environnement",
+      "categorie": "Climat",
+      "titre": "Canicule : un outil cartographique permet d'identifier les espaces de fraîcheur",
+      "resume": "L'outil cartographique identifie les espaces de fraîcheur en période de canicule, utile pour anticiper les risques climatiques opérationnels sur les sites clients d'ABC et adapter les prestations de propreté/FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/refuges-climatiques-cartographie-fraicheur-canicule-48386.php4#xtor=RSS-6",
+      "date": "2026-07-31"
+    },
+    {
+      "id": "ae4f4de90e03",
+      "source": "Actu-Environnement",
       "categorie": "Énergie",
-      "titre": "Fortes chaleurs au travail : que prévoit le PST 2026-2030 ?",
-      "resume": "Le PST 2026-2030 impose aux entreprises d'adapter leurs locaux et d'intégrer les risques climatiques (fortes chaleurs) dans leur DUERP, ce qui impacte directement les prestations de propreté/FM d'ABC chez ses clients.",
-      "pourquoi": "L'article aborde un enjeu réglementaire (PST 2026-2030) lié aux risques climatiques opérationnels en France, avec des implications pour la santé et sécurité des travailleurs, et donc pour les prestations de propreté/FM réalisées par ABC chez ses clients. Bien que non directement lié aux enjeux carbone ou CSRD, il concerne la gestion des risques physiques et l'adaptation des locaux, ce qui peut impacter les contrats et les processus internes d'ABC.",
-      "criticite": 2,
-      "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-au-travail-que-prevoit-le-pst-2026-2030",
+      "titre": "REP emballages professionnels : un troisième système individuel agréé",
+      "resume": "L'agrément d'un troisième système individuel REP pour les emballages professionnels élargit les options de gestion des déchets pour ABC, potentiellement impactant ses obligations de traçabilité et de reporting déchets dans le cadre de la CSRD.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/emballages-professionnels-agrement-systeme-individuel-48385.php4#xtor=RSS-6",
       "date": "2026-07-31"
     },
     {
@@ -50,10 +83,21 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Enedis et RTE expérimentent la flexibilité locale en duo",
-      "resume": "L'article illustre une tendance de collaboration entre acteurs énergétiques pour optimiser la flexibilité du réseau, un enjeu indirect pour ABC via la maîtrise de sa consommation énergétique et l'adaptation aux évolutions du mix électrique (impact potentiel sur les scopes 2 et 3).",
+      "resume": "L'article aborde l'expérimentation de flexibilité énergétique locale par Enedis et RTE, un sujet indirectement lié aux enjeux de décarbonation et d'efficacité énergétique des entreprises de services comme ABC, notamment via la gestion de l'énergie de leurs sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/enedis-rte-portail-flexibilite-locale-48384.php4#xtor=RSS-6",
+      "date": "2026-07-31"
+    },
+    {
+      "id": "0cce311ef9d4",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Canicule : « Le réchauffement climatique a pris corps, beaucoup de personnes ont vécu cette bascule dans leur chair »",
+      "resume": "L'article souligne l'impact concret du réchauffement climatique sur les populations, renforçant la pression sociétale pour des actions systémiques, ce qui pourrait influencer les exigences clients d'ABC en matière de résilience climatique et de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Canicule-Le-rechauffement-climatique-a-pris-corps-beaucoup-de-personnes-ont-vecu-cette",
       "date": "2026-07-31"
     },
     {
@@ -61,43 +105,54 @@
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Le dérèglement climatique a coûté 100 millions d'euros à la SNCF au premier semestre",
-      "resume": "L'article illustre l'impact financier direct des aléas climatiques (canicules) sur une entreprise de services, signalant un risque opérationnel et stratégique pour ABC, prestataire FM/propreté, dont les activités dépendent de la continuité des sites clients.",
+      "resume": "L'article illustre l'impact financier direct des aléas climatiques (canicules) sur une entreprise de services, signalant un risque opérationnel similaire pour ABC sur ses 3 000+ sites clients, notamment en termes de continuité de service et de coûts.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/climat/canicules-inondations-100-millions-euros-manque-gagner-premier-semestre-sncf",
       "date": "2026-07-31"
     },
     {
-      "id": "25419ea84c2c",
-      "source": "Novethic",
+      "id": "da19b5eeb805",
+      "source": "Contexte Environnement",
       "categorie": "Climat",
-      "titre": "Neutralité carbone : l'ISO veut imposer aux entreprises la logique du \"budget carbone\"",
-      "resume": "La future norme ISO 14060 introduit la logique de 'budget carbone' pour aligner les plans de transition climatique des entreprises, ce qui pourrait impacter la méthodologie de calcul des émissions (scope 1/2/3) et la stratégie de décarbonation d'ABC.",
-      "pourquoi": "La norme ISO 14060 concerne directement la méthodologie de gestion des émissions de GES (scope 1/2/3) et la planification climatique, deux enjeux centraux pour ABC (BGES, plan climat, reporting CSRD/ESRS). Bien que non encore finalisée, cette évolution réglementaire pourrait influencer les pratiques de reporting et de décarbonation d'ABC dans les 12-24 mois.",
-      "criticite": 2,
-      "url": "https://www.novethic.fr/environnement/climat/norme-iso-14060-budget-carbone-neutralite-climat",
-      "date": "2026-07-30"
+      "titre": "Âpre bataille à venir sur la protection des points de captage d’eau potable",
+      "resume": "L'article aborde la protection des points de captage d'eau potable, un enjeu indirect pour ABC via les risques climatiques et réglementaires sur ses 3 000+ sites clients (ex : restrictions d'usage, coûts opérationnels).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.contexte.com/fr/article/environnement/apre-bataille-a-venir-sur-la-protection-des-points-de-captage-deau-potable_273292?source=rss",
+      "date": "2026-07-31"
+    },
+    {
+      "id": "2538c757cce5",
+      "source": "The Guardian Environment",
+      "categorie": "Biodiversité",
+      "titre": "‘Extremely scary findings’ show climate crisis is supercharging Europe’s wildfire weather",
+      "resume": "L'article souligne l'aggravation des risques climatiques (vagues de chaleur, sécheresses) en Europe, pouvant impacter la continuité des services de propreté/FM d'ABC sur ses 3 000+ sites clients, notamment dans les secteurs sensibles (nucléaire, santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/world/2026/jul/31/wildfires-extreme-weather-europe-spain-france-climate-crisis-analysis",
+      "date": "2026-07-31"
+    },
+    {
+      "id": "923f0e29cf80",
+      "source": "Actuel HSE",
+      "categorie": "Eau",
+      "titre": "Les 12 articles environnement à (re)lire pendant l'été",
+      "resume": "L'article aborde des sujets réglementaires et stratégiques liés à l'audit énergétique, aux réglementations européennes (REACH, Industrial Accelerator Act) et à l'application des lois Climat et Résilience ainsi que de la LOM, pertinents pour le reporting ESG et la décarbonation de la flotte de véhicules d'ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
+      "date": "2026-07-31"
     },
     {
       "id": "e29832afe2a1",
       "source": "Actu-Environnement",
       "categorie": "Environnement",
       "titre": "Éolien flottant : 260 millions d'euros débloqués pour l'adaptation de cinq ports",
-      "resume": "L'article traite d'un investissement public dans l'éolien flottant, sans lien direct avec les activités de propreté/FM ou les enjeux réglementaires immédiats d'ABC (BGES, CSRD, flotte véhicules, déchets).",
+      "resume": "L'article n'a pas d'impact direct sur les activités d'ABC, mais il signale une dynamique d'investissement public dans les énergies renouvelables qui pourrait influencer indirectement les exigences carbone de ses clients industriels ou énergétiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/eolien-flottant-260-millions-ports-france2030-48383.php4#xtor=RSS-6",
-      "date": "2026-07-30"
-    },
-    {
-      "id": "f273395ea8d8",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "Véhicules électriques : un diagnostic à l'échelle micro pour allonger la durée de vie des batteries",
-      "resume": "L'article aborde l'optimisation de la durée de vie des batteries de véhicules électriques via des diagnostics avancés, un enjeu clé pour la décarbonation de la flotte de ABC et la gestion de son scope 1.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/diagnostic-a-echelle-micro-pour-allonger-duree-de-vie-des-batteries-de-vehicules-electriques-48381.php4#xtor=RSS-6",
       "date": "2026-07-30"
     },
     {
@@ -105,32 +160,21 @@
       "source": "Reporterre",
       "categorie": "Biodiversité",
       "titre": "Le risque d'incendie a doublé en 40 ans en Europe",
-      "resume": "L'augmentation des risques d'incendie en Europe, notamment dans le sud, pourrait impacter la continuité des prestations de propreté/FM d'ABC sur 3 000+ sites clients, avec des risques opérationnels et logistiques accrus.",
+      "resume": "L'augmentation des risques d'incendie en Europe, notamment dans le sud, pourrait impacter la continuité des prestations de propreté/FM d'ABC sur 3 000+ sites clients, avec des risques opérationnels accrus (sécurité, accès aux sites, perturbations logistiques).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Le-risque-d-incendie-a-double-en-40-ans-en-Europe",
       "date": "2026-07-30"
     },
     {
-      "id": "bade77c9b998",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Un record d’installations solaires au premier semestre avec de possibles conséquences",
-      "resume": "L'augmentation significative des installations solaires en France pourrait influencer les attentes clients d'ABC en matière de décarbonation et de transition énergétique, notamment pour les sites tertiaires ou industriels.",
+      "id": "ac4516ca1126",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Pannes, aliments gâchés : quand les canicules mettent nos frigos hors service",
+      "resume": "L'article illustre l'impact des aléas climatiques (canicules) sur les équipements critiques (réfrigérateurs), un risque indirect pour ABC via ses 3 000+ sites clients, notamment dans les secteurs santé, agroalimentaire ou distribution où la chaîne du froid est essentielle.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/un-record-dinstallations-solaires-au-premier-semestre-avec-de-possibles-consequences-431056/",
-      "date": "2026-07-30"
-    },
-    {
-      "id": "12ca31f14881",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "E-carburants : où en est H4 Marseille Fos dans son approvisionnement électrique ?",
-      "resume": "L'article aborde l'approvisionnement électrique pour la production d'e-carburants, un sujet indirectement lié à la décarbonation des flottes de véhicules d'ABC et à la transition énergétique des clients industriels.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/07/e-carburants-ou-en-est-h4-marseille-fos-dans-son-approvisionnement-electrique-431024/",
+      "url": "https://reporterre.net/Pannes-aliments-gaches-quand-les-canicules-mettent-nos-frigos-hors-service",
       "date": "2026-07-30"
     },
     {
@@ -138,7 +182,7 @@
       "source": "Le Monde Planète",
       "categorie": "Environnement",
       "titre": "« La France brûle » : la presse européenne s’inquiète des incendies en Gironde et pointe l’absence de débat sur les « causes profondes » des feux",
-      "resume": "L'article souligne l'impact croissant des risques climatiques (incendies) sur les activités en France, pouvant affecter la continuité des services de propreté/FM d'ABC sur ses 3 000+ sites clients, notamment via des aléas opérationnels ou des exigences accrues des clients en matière de résilience.",
+      "resume": "L'article souligne l'impact croissant des risques climatiques (incendies) sur les sites clients d'ABC en France, sans lien direct avec une obligation réglementaire immédiate mais comme signal d'alerte pour intégrer ces risques dans la stratégie RSE et la résilience opérationnelle.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/07/30/la-france-brule-la-presse-europeenne-s-inquiete-des-incendies-en-gironde-et-pointe-l-absence-de-debat-sur-les-causes-profondes-des-feux_6737061_3244.html",
@@ -149,7 +193,7 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "EcoVadis, Novata Partner to Help Companies, Investors Measure Scope 3 Emissions",
-      "resume": "L'article annonce un partenariat entre EcoVadis et Novata pour aider les entreprises à mesurer leurs émissions de scope 3, ce qui est pertinent pour ABC dans le cadre de son reporting CSRD/ESRS et de la gestion de sa chaîne de valeur.",
+      "resume": "L'article annonce un partenariat entre EcoVadis et Novata pour aider les entreprises à mesurer leurs émissions de scope 3, ce qui est pertinent pour ABC dans le cadre de sa préparation au reporting CSRD et à la gestion de ses émissions indirectes (scope 3) liées à ses prestations.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/ecovadis-novata-partner-to-help-companies-investors-measure-scope-3-emissions/?utm_source=rss&utm_medium=rss&utm_campaign=ecovadis-novata-partner-to-help-companies-investors-measure-scope-3-emissions",
@@ -160,43 +204,10 @@
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "Vast Majority of Companies Oppose Tougher GHG Protocol Scope 2 Reporting Proposals",
-      "resume": "L'article aborde les propositions de renforcement du reporting des émissions de scope 2 (énergie indirecte) dans le cadre du GHG Protocol, un cadre de référence pour les bilans GES des entreprises, y compris ABC.",
+      "resume": "L'article aborde les propositions de renforcement du reporting des émissions de scope 2 (énergie achetée) par le GHG Protocol, cadre de référence pour les bilans GES des entreprises comme ABC. Ces évolutions pourraient impacter la méthodologie de calcul et la transparence des données énergétiques dans les rapports ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/vast-majority-of-companies-oppose-tougher-ghg-protocol-scope-2-reporting-proposals/?utm_source=rss&utm_medium=rss&utm_campaign=vast-majority-of-companies-oppose-tougher-ghg-protocol-scope-2-reporting-proposals",
-      "date": "2026-07-30"
-    },
-    {
-      "id": "be249000242f",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "Deepki Acquires Real Estate Electrification AI Startup Camion",
-      "resume": "L'acquisition par Deepki d'une startup spécialisée dans l'électrification des flottes de véhicules pourrait influencer les attentes des clients d'ABC en matière de mobilité durable et de décarbonation des services de propreté/FM.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/deepki-acquires-real-estate-electrification-ai-startup-camion/?utm_source=rss&utm_medium=rss&utm_campaign=deepki-acquires-real-estate-electrification-ai-startup-camion",
-      "date": "2026-07-30"
-    },
-    {
-      "id": "75ee1546e525",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "Sustainability’s Next Challenge Isn’t Reporting – It’s Building Better Data",
-      "resume": "L'article souligne l'importance de la qualité des données pour la durabilité, un enjeu clé pour ABC dans le cadre du reporting CSRD/ESRS et de la gestion des scopes 1/2/3.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/sustainabilitys-next-challenge-isnt-reporting-its-building-better-data/?utm_source=rss&utm_medium=rss&utm_campaign=sustainabilitys-next-challenge-isnt-reporting-its-building-better-data",
-      "date": "2026-07-30"
-    },
-    {
-      "id": "8acde9b1029e",
-      "source": "The Guardian Environment",
-      "categorie": "Environnement",
-      "titre": "Europe burns: a visual guide to the wildfires",
-      "resume": "L'article souligne l'intensification des risques climatiques (feux de forêt) en France et en Europe, pouvant impacter la continuité des activités de ABC sur 3 000+ sites clients et exacerber les exigences carbone des clients (nucléaire, santé, industrie).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/world/2026/jul/30/europe-burns-france-spain-visual-guide-wildfires",
       "date": "2026-07-30"
     }
   ],
@@ -1569,7 +1580,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement la rénovation énergétique (obligation d'information sur le service public de performance énergétique), la gestion des déchets d'activités de soins (expérimentation de réemploi et recyclage), et la modification de tarifs réglementés de l'électricité (impact sur les coûts énergétiques et la transition bas-carbone).",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1881,5 +1892,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux environnementaux et énergétiques dans sa transposition du droit européen. Aucun autre texte ne traite explicitement de climat, énergie, déchets ou reporting RSE."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le *Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique* (N°2518) qui pourrait renforcer les obligations de reporting et de transition énergétique, et le *Projet de loi de financement de la sécurité sociale pour 2026* (N°2242) susceptible d’impacter les financements liés à la transition écologique. Aucun texte adopté ne semble directement lié à l’environnement ou au climat."
 }
