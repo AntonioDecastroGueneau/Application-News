@@ -1,7 +1,7 @@
 {
   "date": "2026-08-01",
-  "generated_at": "08:06",
-  "elapsed_seconds": 408,
+  "generated_at": "12:35",
+  "elapsed_seconds": 177,
   "errors": [],
   "stats": {
     "jo_analyses": 19,
@@ -9,7 +9,7 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-01T08:06:31",
+    "run_at": "2026-08-01T12:35:13",
     "sources": {
       "JORF": 0,
       "RSS": 6,
@@ -20,29 +20,29 @@
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 48,
-    "llm_seconds": 51.7
+    "llm_seconds": 52.3
   },
   "items": [
-    {
-      "id": "07cccaeff8dc",
-      "source": "Actuel HSE",
-      "categorie": "Eau",
-      "titre": "Faux départ pour la filière REP des emballages professionnels",
-      "resume": "Le report de la filière REP (Responsabilité Élargie du Producteur) pour les emballages professionnels impacte les obligations de traçabilité et de gestion des déchets pour ABC, prestataire de services de propreté/FM, notamment en termes de reporting et de conformité réglementaire.",
-      "pourquoi": "La REP est un enjeu direct pour ABC dans le cadre de ses prestations de gestion des déchets pour ses clients (scope 3). Le report de cette filière, bien que temporaire, nécessite une veille active pour anticiper les futures obligations légales et adapter les processus internes (traçabilité, partenariats avec éco-organismes, etc.).",
-      "criticite": 2,
-      "url": "https://www.actuel-hse.fr/content/faux-depart-pour-la-filiere-rep-des-emballages-professionnels",
-      "date": "2026-08-01"
-    },
     {
       "id": "af2a12e8c81a",
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Une saison de feux historique, en France comme en Europe, sur fond de sécheresse et de réchauffement climatique",
-      "resume": "L'article souligne l'augmentation des risques climatiques (sécheresse, feux de forêt) qui pourraient impacter la continuité des prestations de propreté/FM d'ABC sur ses 3 000+ sites clients, notamment en perturbant les accès ou les conditions de travail.",
+      "resume": "L'article souligne l'augmentation des risques climatiques (sécheresse, feux de forêt) en France et en Europe, pouvant impacter la continuité des prestations de propreté/FM d'ABC sur 3 000+ sites clients, notamment en termes de sécurité des équipes et de résilience opérationnelle.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/08/01/une-saison-de-feux-historique-en-france-comme-en-europe-sur-fond-de-secheresse-et-de-rechauffement-climatique_6737205_3244.html",
+      "date": "2026-08-01"
+    },
+    {
+      "id": "07cccaeff8dc",
+      "source": "Actuel HSE",
+      "categorie": "Eau",
+      "titre": "Faux départ pour la filière REP des emballages professionnels",
+      "resume": "Le report de la filière REP des emballages professionnels impacte potentiellement la gestion des déchets des prestations de propreté/FM d'ABC, notamment en termes de traçabilité et de coûts, mais sans obligation immédiate d'action identifiable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/faux-depart-pour-la-filiere-rep-des-emballages-professionnels",
       "date": "2026-08-01"
     },
     {
@@ -50,43 +50,43 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Les 12 articles environnement à (re)lire pendant l'été",
-      "resume": "L'article aborde des sujets réglementaires et opérationnels pertinents pour ABC, notamment les audits énergétiques, les réglementations européennes (dont REACH et Industrial Accelerator Act), et les bilans des lois Climat et Résilience et LOM, qui impactent directement les enjeux énergie, déchets et mobilité durable de l'entreprise.",
+      "resume": "L'article propose une revue de sujets réglementaires et stratégiques en environnement (audit énergétique, REACH, lois Climat et Résilience, LOM) qui impactent indirectement les entreprises de services comme ABC via leurs clients et leurs obligations de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
       "date": "2026-08-01"
     },
     {
+      "id": "c66e4a6894f1",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Recharge des véhicules : Advenir publie son baromètre trimestriel du printemps 2026",
+      "resume": "Le baromètre trimestriel d'Advenir fournit des données sur l'évolution de la recharge des véhicules électriques en France, utile pour anticiper les besoins de la flotte d'ABC et répondre aux exigences clients en matière de mobilité durable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/barometre-advenir-recharge-vehicules-printemps-2026-48391.php4#xtor=RSS-6",
+      "date": "2026-07-31"
+    },
+    {
+      "id": "e261dfeffa6b",
+      "source": "Actu-Environnement",
+      "categorie": "Environnement",
+      "titre": "Rénovation énergétique : les publicités devront mentionner France Rénov' dès octobre 2026",
+      "resume": "L'article impose une nouvelle obligation d'information sur les publicités liées à la rénovation énergétique à partir d'octobre 2026, ce qui pourrait impacter les clients d'ABC (ex : tertiaire, santé) dans leurs communications. ABC pourrait être sollicité pour accompagner ses clients dans la mise en conformité.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/renovation-energetique-publicite-france-renov-arrete-anah-loi-fraudes-aides-publiques-48390.php4#xtor=RSS-6",
+      "date": "2026-07-31"
+    },
+    {
       "id": "0cce311ef9d4",
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Canicule : « Le réchauffement climatique a pris corps, beaucoup de personnes ont vécu cette bascule dans leur chair »",
-      "resume": "L'article illustre l'impact concret du réchauffement climatique sur les populations, renforçant la pression sociétale et réglementaire pour des actions systémiques, ce qui pourrait influencer les exigences carbone des clients d'ABC et les risques opérationnels sur ses sites.",
+      "resume": "Cet article souligne l'impact concret du réchauffement climatique sur les populations, renforçant la pression sociétale et réglementaire pour des actions systémiques, ce qui pourrait influencer les exigences clients d'ABC en matière de résilience climatique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Canicule-Le-rechauffement-climatique-a-pris-corps-beaucoup-de-personnes-ont-vecu-cette",
-      "date": "2026-07-31"
-    },
-    {
-      "id": "9ebf56a75ac2",
-      "source": "Reporterre",
-      "categorie": "Eau",
-      "titre": "Le changement climatique a bien favorisé les feux de forêt",
-      "resume": "L'article confirme l'impact du changement climatique sur l'augmentation des risques d'incendies en France et en Europe, ce qui peut affecter la sécurité des sites clients d'ABC et nécessiter une adaptation des plans de prévention des risques opérationnels.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Le-changement-climatique-a-bien-favorise-les-feux-de-foret",
-      "date": "2026-07-31"
-    },
-    {
-      "id": "09b625c5a20d",
-      "source": "ESG Today",
-      "categorie": "Énergie",
-      "titre": "Thermal Battery Provider Antora Raises $550 Million to Power Industry, Data Centers",
-      "resume": "L'article illustre une innovation technologique (batteries thermiques) dans le stockage d'énergie, pertinente pour anticiper les évolutions du marché de l'énergie et des solutions bas-carbone, sans impact direct immédiat sur les activités d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/thermal-battery-provider-antora-raises-550-million-to-power-industry-data-centers/?utm_source=rss&utm_medium=rss&utm_campaign=thermal-battery-provider-antora-raises-550-million-to-power-industry-data-centers",
       "date": "2026-07-31"
     }
   ],
@@ -1063,7 +1063,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des textes publiés au Journal Officiel du 2026-08-01 ne présente de mesure directement pertinente pour un Responsable Environnement/Climat d'une grande entreprise de services, hormis l'arrêté du 29 juillet 2026 relatif à la transposition de la directive (UE) 2024/1619 qui intègre des risques environnementaux, sociaux et de gouvernance (ESG) dans le secteur financier.",
+  "briefing_jorf": "Aucun des textes publiés au Journal Officiel du 2026-08-01 ne présente de mesure directement pertinente pour un Responsable Environnement/Climat d'une grande entreprise de services, hormis l'arrêté du 29 juillet 2026 relatif à la transposition de la directive (UE) 2024/1619 qui intègre des risques environnementaux, sociaux et de gouvernance (ESG) dans les obligations de surveillance et sanctions pour les acteurs financiers et non financiers.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1375,5 +1375,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l’économie circulaire et à la réglementation environnementale européenne. Aucun autre texte ne semble aborder spécifiquement des enjeux climatiques, de gestion des déchets ou de reporting RSE dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N° 2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux environnementaux et énergétiques dans le cadre du droit européen. Aucun autre texte ne semble aborder spécifiquement les thématiques climatiques, de déchets ou de reporting RSE de manière significative."
 }
