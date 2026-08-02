@@ -1,7 +1,7 @@
 {
   "date": "2026-08-02",
-  "generated_at": "08:04",
-  "elapsed_seconds": 157,
+  "generated_at": "12:37",
+  "elapsed_seconds": 195,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,29 +9,29 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-02T08:04:02",
+    "run_at": "2026-08-02T12:37:47",
     "sources": {
       "JORF": 0,
-      "RSS": 3,
+      "RSS": 4,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 34,
-    "llm_seconds": 37.6
+    "llm_calls": 38,
+    "llm_seconds": 45.5
   },
   "items": [
     {
-      "id": "e6a019ce5bb3",
-      "source": "Le Monde Planète",
+      "id": "f671436cb09b",
+      "source": "ESG Today",
       "categorie": "Climat",
-      "titre": "Canicule : « 82 % des Européens se disent prêts à changer d’horaires en fonction de la chaleur. Pourtant, ce débat est peu présent en France »",
-      "resume": "L'article souligne l'adaptation des horaires de travail en période de canicule, un enjeu opérationnel pour ABC qui intervient sur 3 000+ sites clients en France. Cela pourrait impacter la planification des prestations et la gestion des risques climatiques pour ses clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/08/02/canicule-82-des-europeens-se-disent-prets-a-changer-d-horaires-en-fonction-de-la-chaleur-pourtant-ce-debat-est-peu-present-en-france_6737261_3244.html",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article couvre des évolutions réglementaires et normatives en matière de reporting ESG (CSRD, ISSB) et de comptabilité carbone (GHG Protocol, ISO), ainsi que des ajustements financiers liés aux risques climatiques, pertinents pour le reporting extra-financier et la stratégie RSE d'ABC.",
+      "pourquoi": "L'article aborde des sujets directement liés aux enjeux de reporting ESG (CSRD, ESRS, ISSB) et à la comptabilité carbone (GHG Protocol, ISO), qui impactent directement les obligations de reporting extra-financier d'ABC. Les évolutions sur les normes de reporting et les risques climatiques pour les entreprises sont pertinentes pour le Responsable Environnement/Climat.",
+      "criticite": 2,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-272/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-272",
       "date": "2026-08-02"
     },
     {
@@ -39,9 +39,9 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Faux départ pour la filière REP des emballages professionnels",
-      "resume": "Le report de la filière REP des emballages professionnels impacte potentiellement la gestion des déchets de prestations de propreté/FM d'ABC, notamment en termes de traçabilité et de coûts, sans obligation immédiate mais nécessitant une veille active.",
-      "pourquoi": "",
-      "criticite": 1,
+      "resume": "Le report de la filière REP des emballages professionnels impacte la gestion des déchets de prestations pour ABC, nécessitant une adaptation des processus de tri et traçabilité des déchets générés chez les clients.",
+      "pourquoi": "La REP (Responsabilité Élargie du Producteur) pour les emballages professionnels est un sujet réglementaire direct pour ABC, car elle concerne la gestion des déchets de prestations (scope 3) et impose des obligations de tri et traçabilité. Le report de son lancement (initialement prévu au 1er juillet 2026) peut impacter les échéances de conformité et les processus internes d'ABC.",
+      "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/faux-depart-pour-la-filiere-rep-des-emballages-professionnels",
       "date": "2026-08-02"
     },
@@ -50,10 +50,21 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Les 12 articles environnement à (re)lire pendant l'été",
-      "resume": "L'article mentionne des sujets réglementaires et stratégiques pertinents pour ABC, notamment les audits énergétiques, les réglementations européennes (REACH, Industrial Accelerator Act) et les bilans des lois Climat et Résilience/LOM, qui impactent directement les enjeux énergie, déchets et reporting de l'entreprise.",
+      "resume": "L'article aborde des sujets réglementaires et stratégiques clés pour ABC, notamment les audits énergétiques, les réglementations européennes (Industrial Accelerator Act) et les bilans des lois Climat et Résilience/LOM, pertinents pour son reporting ESG et sa conformité.",
+      "pourquoi": "L'article souligne l'accélération des obligations réglementaires (audits énergétiques, Industrial Accelerator Act, lois Climat et Résilience/LOM) qui impactent directement la conformité ESG d'ABC, notamment via la CSRD et le BGES, imposant une trajectoire de décarbonation de sa flotte et de ses prestations sous 2 à 5 ans, avec un risque de perte de contrats clients si non aligné.",
+      "criticite": 2,
+      "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
+      "date": "2026-08-02"
+    },
+    {
+      "id": "6875aa35cd13",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Avec les canicules, « des dégradations importantes des fonctions physiologiques et cognitives apparaissent »",
+      "resume": "L'article souligne les impacts physiologiques et cognitifs des canicules sur les travailleurs, ce qui peut affecter la productivité et la sécurité des équipes de nettoyage en extérieur ou dans des environnements non climatisés chez les clients d'ABC.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
+      "url": "https://www.lemonde.fr/planete/article/2026/08/02/canicule-82-des-europeens-se-disent-prets-a-changer-d-horaires-en-fonction-de-la-chaleur-pourtant-ce-debat-est-peu-present-en-france_6737261_3244.html",
       "date": "2026-08-02"
     }
   ],
@@ -922,7 +933,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Deux arrêtés (n°1 et 2) favorisent la valorisation matière des déchets de pneus (particules de caoutchouc et huile de thermolyse) en clarifiant leur sortie du statut de déchet, ce qui peut réduire l'impact environnemental et améliorer la circularité des matériaux pour les entreprises du secteur. Les autres textes ne concernent pas directement les enjeux RSE ou environnementaux.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1234,5 +1245,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et climatique) et le n°2609 (habilitation de l’assemblée de Martinique pour des règles locales en énergie, eau et assainissement) présentent un intérêt direct pour un Responsable Environnement/Climat, en lien avec la transposition de directives européennes et la gestion territoriale des ressources. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l’économie circulaire et à la réglementation environnementale européenne. Aucun autre texte ne semble aborder directement des enjeux climatiques ou RSE majeurs pour une entreprise de services."
 }
