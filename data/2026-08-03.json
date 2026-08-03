@@ -1,7 +1,7 @@
 {
   "date": "2026-08-03",
-  "generated_at": "09:01",
-  "elapsed_seconds": 181,
+  "generated_at": "14:01",
+  "elapsed_seconds": 242,
   "errors": [],
   "stats": {
     "jo_analyses": 13,
@@ -9,29 +9,40 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-03T09:01:57",
+    "run_at": "2026-08-03T14:01:11",
     "sources": {
       "JORF": 0,
-      "RSS": 5,
+      "RSS": 7,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 42,
-    "llm_seconds": 57.3
+    "llm_calls": 46,
+    "llm_seconds": 98.0
   },
   "items": [
     {
-      "id": "07cccaeff8dc",
-      "source": "Actuel HSE",
-      "categorie": "Eau",
-      "titre": "Faux départ pour la filière REP des emballages professionnels",
-      "resume": "Le report de la filière REP des emballages professionnels impacte potentiellement la gestion des déchets des prestations de propreté/FM d'ABC, notamment en termes de traçabilité et de coûts liés à la responsabilité élargie du producteur (REP).",
-      "pourquoi": "La REP des emballages professionnels concerne directement les entreprises de services comme ABC, qui doivent gérer les déchets générés par leurs prestations (emballages de produits d'entretien, etc.). Un report de cette filière peut entraîner des incertitudes réglementaires et des ajustements dans les processus de tri, traçabilité et reporting des déchets pour ABC, notamment dans le cadre de sa conformité CSRD/ESRS et de son ISO 14001.",
+      "id": "847e7adb2edf",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "Walmart Sets New SBTi-Approved Emissions Reduction Target",
+      "resume": "Walmart Sets New SBTi-Approved Emissions Reduction Target",
+      "pourquoi": "Mention de SBTi.",
+      "criticite": 3,
+      "url": "https://www.esgtoday.com/walmart-sets-new-sbti-approved-emissions-reduction-target/?utm_source=rss&utm_medium=rss&utm_campaign=walmart-sets-new-sbti-approved-emissions-reduction-target",
+      "date": "2026-08-03"
+    },
+    {
+      "id": "bd5f2a95243b",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "What CDP’s 2026 Changes Signal About the Future of Corporate Disclosure",
+      "resume": "L'article annonce des évolutions majeures du CDP en 2026 avec un alignement renforcé sur l'ISSB (IFRS S2), la CSRD et la TNFD, ce qui impactera directement le reporting extra-financier d'ABC pour répondre aux exigences clients et réglementaires.",
+      "pourquoi": "Le CDP est un standard clé pour le reporting ESG des entreprises, et son alignement avec la CSRD (obligatoire pour ABC via les clients) et l'ISSB (IFRS S2) rend cette évolution directement pertinente pour le Responsable Environnement/Climat. ABC devra adapter ses processus de reporting pour intégrer ces nouvelles exigences d'ici 2026.",
       "criticite": 2,
-      "url": "https://www.actuel-hse.fr/content/faux-depart-pour-la-filiere-rep-des-emballages-professionnels",
+      "url": "https://www.esgtoday.com/what-cdps-2026-changes-signal-about-the-future-of-corporate-disclosure/?utm_source=rss&utm_medium=rss&utm_campaign=what-cdps-2026-changes-signal-about-the-future-of-corporate-disclosure",
       "date": "2026-08-03"
     },
     {
@@ -39,43 +50,54 @@
       "source": "Novethic",
       "categorie": "Environnement",
       "titre": "Annulation de festivals : quand le changement climatique menace la culture",
-      "resume": "L'article illustre les risques climatiques opérationnels (vagues de chaleur, annulations de sites) qui pourraient impacter les prestations de propreté/FM d'ABC chez ses 3 000+ clients, notamment dans les secteurs sensibles (santé, événementiel).",
+      "resume": "L'article illustre les risques climatiques opérationnels (vagues de chaleur) pouvant impacter la continuité des activités des clients d'ABC, notamment dans les secteurs culturels et événementiels, renforçant l'importance de l'adaptation des prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/environnement/climat/annulation-de-festivals-quand-le-changement-climatique-menace-la-culture",
       "date": "2026-08-03"
     },
     {
-      "id": "923f0e29cf80",
-      "source": "Actuel HSE",
-      "categorie": "Eau",
-      "titre": "Les 12 articles environnement à (re)lire pendant l'été",
-      "resume": "L'article aborde des sujets réglementaires et stratégiques liés à l'audit énergétique, aux réglementations européennes (REACH, Industrial Accelerator Act) et aux bilans des lois Climat et Résilience/LOM, pertinents pour le suivi des évolutions légales et des bonnes pratiques en matière de décarbonation et d'efficacité énergétique.",
+      "id": "62af5c73a777",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG Update: July Edition Now Available",
+      "resume": "L'article mentionne les actes délégués sur la taxonomie verte révisée (ESRS) et les évolutions des normes IFRS (IAS 28), directement liées aux obligations de reporting ESG (CSRD/ESRS) pour ABC.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-update-july-edition-now-available-0",
       "date": "2026-08-03"
     },
     {
-      "id": "6875aa35cd13",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Avec les canicules, « des dégradations importantes des fonctions physiologiques et cognitives apparaissent »",
-      "resume": "L'article souligne l'impact des canicules sur les fonctions physiologiques et cognitives, ce qui peut affecter la performance et la sécurité des équipes de terrain d'ABC lors des interventions chez les clients.",
+      "id": "2303460230bd",
+      "source": "Les Echos Environnement",
+      "categorie": "Énergie",
+      "titre": "TotalEnergies se renforce dans les renouvelables en Europe - Les Echos",
+      "resume": "TotalEnergies se renforce dans les renouvelables, ce qui pourrait influencer les choix énergétiques de ses clients et ainsi l'activité de ABC.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/08/02/canicule-82-des-europeens-se-disent-prets-a-changer-d-horaires-en-fonction-de-la-chaleur-pourtant-ce-debat-est-peu-present-en-france_6737261_3244.html",
-      "date": "2026-08-02"
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPSXBpdHFLMk1lVjVWTUJyUEFFSmxHeFZwMHdGc0RFRFA1em9STVE2MVlHaklCci1Bdm04SE5RZXQ2UVFvRFpwRTUtX1I0a0lDd1BsbTctZ2ZPdXNfakRmXzZWeDVKbjFGZ0FKN0RxQVJRTzZLa1dzbFdaLUNxOW1zX3FId1ZGSTJXUDdaT25aYU56ZGYyZlVqblJOTXNrZG9pM0dOVzllVVFTb1NHMFZfeW9tLTZocXVycmdVUkxORFBYS3pZWk53UFlaUQ?oc=5",
+      "date": "2026-08-03"
     },
     {
       "id": "f671436cb09b",
       "source": "ESG Today",
       "categorie": "Climat",
       "titre": "ESG Today: Week in Review",
-      "resume": "L'article couvre des évolutions réglementaires et marché en ESG (GHG Protocol, CSRD, finance durable) qui impactent indirectement les entreprises comme ABC via les exigences clients et les normes de reporting.",
+      "resume": "L'article couvre des évolutions réglementaires et normatives en matière de reporting ESG (CSRD, ISSB) et de comptabilité carbone (GHG Protocol, ISO), ainsi que des ajustements financiers liés aux risques climatiques (ECB), pertinents pour le reporting extra-financier et la stratégie climat d'ABC.",
+      "pourquoi": "L'article signale une accélération des exigences réglementaires (CSRD, ISSB) et normatives (GHG Protocol, ISO) qui impose à ABC de structurer son reporting extra-financier et sa stratégie climat (trajectoire carbone, BGES) d'ici 2024-2026 pour répondre aux attentes clients (nucléaire, santé, etc.) et éviter des risques contractuels ou de perte de marché, tout en saisissant l'opportunité de différenciation par une offre bas-carbone alignée sur les nouvelles normes.",
+      "criticite": 2,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-272/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-272",
+      "date": "2026-08-02"
+    },
+    {
+      "id": "6875aa35cd13",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Avec les canicules, « des dégradations importantes des fonctions physiologiques et cognitives apparaissent »",
+      "resume": "L'article souligne les impacts physiologiques et cognitifs des canicules sur les travailleurs, ce qui pourrait affecter la productivité et la sécurité des équipes de nettoyage de ABC lors d'épisodes de chaleur extrême.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.esgtoday.com/esg-today-week-in-review-272/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-272",
+      "url": "https://www.lemonde.fr/planete/article/2026/08/02/canicule-82-des-europeens-se-disent-prets-a-changer-d-horaires-en-fonction-de-la-chaleur-pourtant-ce-debat-est-peu-present-en-france_6737261_3244.html",
       "date": "2026-08-02"
     }
   ],
@@ -890,7 +912,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Deux arrêtés (n°1 et 2) facilitent la valorisation matière des pneus hors d'usage en définissant des critères de sortie du statut de déchet, ce qui est pertinent pour une politique RSE axée sur l'économie circulaire. Aucun autre texte ne traite directement d'enjeux environnementaux ou climatiques.",
+  "briefing_jorf": "L'arrêté du 21 juillet 2026 fixe les critères de sortie du statut de déchet pour les particules de caoutchouc issues de pneus hors d'usage, ce qui pourrait avoir un impact sur les stratégies de gestion des déchets pour les entreprises de services. De plus, l'arrêté du 27 juillet 2026 classe les régies auprès des missions diplomatiques, des postes consulaires et des représentations permanentes de la France, ce qui n'a pas d'impact direct sur les entreprises de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1202,5 +1224,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** – qui pourrait inclure des mesures liées à la transition énergétique, aux déchets ou au reporting RSE – et le **Projet de loi-cadre relatif au développement des transports (N° 2740)**, susceptible d’impacter les politiques de mobilité durable et d’émissions. Aucun texte adopté ne semble directement lié à ces enjeux."
+  "pjl_briefing": "Aucune information pertinente n'est disponible dans le texte fourni. Il est possible que les projets de loi ne contiennent pas d'éléments liés à l'environnement, à l'énergie ou à la RSE. Il est recommandé de consulter les détails complets des projets de loi pour obtenir des informations plus précises."
 }
