@@ -1,37 +1,59 @@
 {
   "date": "2026-08-04",
-  "generated_at": "08:17",
-  "elapsed_seconds": 200,
+  "generated_at": "13:18",
+  "elapsed_seconds": 212,
   "errors": [],
   "stats": {
     "jo_analyses": 25,
     "jo_retenus": 0,
-    "depts_restriction": 94
+    "depts_restriction": 93
   },
   "pipeline_meta": {
-    "run_at": "2026-08-04T08:17:55",
+    "run_at": "2026-08-04T13:18:09",
     "sources": {
       "JORF": 0,
-      "RSS": 9,
-      "VigiEau": 94,
+      "RSS": 11,
+      "VigiEau": 93,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 62,
-    "llm_seconds": 76.2
+    "llm_calls": 61,
+    "llm_seconds": 75.6
   },
   "items": [
     {
-      "id": "923f0e29cf80",
-      "source": "Actuel HSE",
+      "id": "00256899eecf",
+      "source": "Reporterre",
       "categorie": "Eau",
-      "titre": "Les 12 articles environnement à (re)lire pendant l'été",
-      "resume": "L'article aborde des sujets réglementaires et stratégiques clés pour ABC, notamment l'audit énergétique, les réglementations européennes (Industrial Accelerator Act) et les bilans des lois Climat et Résilience/LOM, pertinents pour son reporting ESG et sa conformité.",
-      "pourquoi": "L'article couvre des thèmes directement liés aux enjeux de ABC : audit énergétique (efficacité énergétique), réglementations européennes (Industrial Accelerator Act potentiellement impactant pour les clients industriels), et bilans des lois Climat et Résilience/LOM (BGES, reporting ESG, mobilité durable). Ces sujets sont critiques pour le Responsable Environnement/Climat de ABC dans le cadre de sa stratégie RSE et de ses obligations réglementaires.",
-      "criticite": 2,
-      "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
+      "titre": "La sécheresse des petits cours d'eau en juillet est « la plus critique jamais observée »",
+      "resume": "La sécheresse des petits cours d'eau en juillet 2024 pourrait impacter la disponibilité en eau pour les activités de nettoyage chez les clients d'ABC, notamment dans les secteurs sensibles (santé, industrie), et générer des risques opérationnels indirects liés aux restrictions d'usage.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/La-secheresse-des-petits-cours-d-eau-en-juillet-est-la-plus-critique-jamais-observee",
+      "date": "2026-08-04"
+    },
+    {
+      "id": "9abfb3d61b82",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Juillet 2026 : le mois le plus chaud jamais enregistré en France",
+      "resume": "L'article souligne l'intensification des vagues de chaleur en France, un risque climatique opérationnel pour ABC qui intervient sur 3 000+ sites clients, pouvant impacter la continuité des prestations de propreté/FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Juillet-2026-le-mois-le-plus-chaud-jamais-enregistre-en-France",
+      "date": "2026-08-04"
+    },
+    {
+      "id": "5b4c72245f27",
+      "source": "Novethic",
+      "categorie": "Énergie",
+      "titre": "\"Le vrai défi n'est pas de décarboner, mais d'imaginer la société qui va avec\", Magali Reghezza-Zitt",
+      "resume": "L'article souligne la nécessité de repenser les modèles économiques et sociaux pour une société décarbonée, ce qui impacte indirectement la stratégie RSE et climatique d'ABC en intégrant des scénarios de résilience et d'adaptation dans ses plans long terme.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/environnement/climat/le-vrai-defi-nest-pas-de-decarboner-mais-dimaginer-la-societe-qui-va-avec-magali-reghezza-zitt",
       "date": "2026-08-04"
     },
     {
@@ -39,10 +61,54 @@
       "source": "Novethic",
       "categorie": "Énergie",
       "titre": "TotalEnergies rachète les activités renouvelables européennes de Shell",
-      "resume": "L'acquisition par TotalEnergies des actifs renouvelables de Shell en Europe pourrait renforcer la disponibilité et la compétitivité des énergies vertes pour les clients d'ABC, notamment dans le cadre de leurs stratégies de décarbonation et de reporting ESG.",
+      "resume": "L'acquisition par TotalEnergies des actifs renouvelables de Shell en Europe pourrait influencer les attentes des clients d'ABC (notamment industriels ou nucléaires) en matière de décarbonation et de reporting ESG, renforçant la pression sur les prestataires de services comme ABC pour aligner leurs pratiques sur des trajectoires bas-carbone.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/economie-et-social/business-model-en-transition/totalenergies-rachete-activites-renouvelables-europeennes-shell",
+      "date": "2026-08-04"
+    },
+    {
+      "id": "b8c2b53ded6a",
+      "source": "Le Monde Planète",
+      "categorie": "Eau",
+      "titre": "Juillet 2026 a été le mois le plus chaud jamais enregistré en France depuis le début des mesures, en 1900",
+      "resume": "L'article souligne une sécheresse inédite en France en juillet 2026, pouvant impacter les sites clients d'ABC (ex. : risques opérationnels liés à la disponibilité de l'eau ou à la dégradation des infrastructures).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/08/04/juillet-2026-a-ete-le-mois-le-plus-chaud-jamais-enregistre-en-france-depuis-le-debut-des-mesures-en-1900_6738385_3244.html",
+      "date": "2026-08-04"
+    },
+    {
+      "id": "5dd39585e3e9",
+      "source": "Le Monde Planète",
+      "categorie": "Eau",
+      "titre": "Le Rhin à sec met l’économie allemande sous pression et menace de peser sur le PIB",
+      "resume": "L'article met en lumière les risques climatiques opérationnels liés aux aléas hydriques en Europe, qui pourraient impacter la logistique et les coûts des clients d'ABC (notamment dans l'industrie et la santé) via des perturbations des chaînes d'approvisionnement.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/economie/article/2026/08/04/le-rhin-a-sec-met-l-economie-allemande-sous-pression-et-menace-de-peser-sur-le-pib_6738284_3234.html",
+      "date": "2026-08-04"
+    },
+    {
+      "id": "010cf1c518d1",
+      "source": "EFRAG",
+      "categorie": "Déchets",
+      "titre": "EFRAG Update Podcast of July: New Episodes Available",
+      "resume": "L'article mentionne les évolutions des normes ESRS (European Sustainability Reporting Standards) liées à la CSRD, pertinentes pour le reporting extra-financier d'ABC, mais sans obligation immédiate ou action opérationnelle directe.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.efrag.org/en/news-and-calendar/news/efrag-update-podcast-of-july-new-episodes-available",
+      "date": "2026-08-04"
+    },
+    {
+      "id": "923f0e29cf80",
+      "source": "Actuel HSE",
+      "categorie": "Eau",
+      "titre": "Les 12 articles environnement à (re)lire pendant l'été",
+      "resume": "L'article mentionne des sujets réglementaires et stratégiques pertinents pour ABC, notamment l'audit énergétique, les réglementations UE (dont REACH, bien que non applicable directement), et les bilans des lois Climat et Résilience et LOM, qui impactent les enjeux énergie, mobilité et reporting de l'entreprise.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
       "date": "2026-08-04"
     },
     {
@@ -50,76 +116,32 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Faux départ pour la filière REP des emballages professionnels",
-      "resume": "Le report de la filière REP des emballages professionnels impacte la gestion des déchets de prestations d'ABC, nécessitant une veille sur les nouvelles échéances et adaptations réglementaires pour ses clients.",
+      "resume": "Le report de la filière REP emballages professionnels impacte les obligations de traçabilité et de gestion des déchets pour ABC, prestataire de services intervenant sur des sites clients (non exploitants ICPE).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/faux-depart-pour-la-filiere-rep-des-emballages-professionnels",
       "date": "2026-08-04"
     },
     {
-      "id": "847e7adb2edf",
-      "source": "ESG Today",
-      "categorie": "Climat",
-      "titre": "Walmart Sets New SBTi-Approved Emissions Reduction Target",
-      "resume": "Walmart Sets New SBTi-Approved Emissions Reduction Target",
-      "pourquoi": "Mention de SBTi.",
-      "criticite": 3,
-      "url": "https://www.esgtoday.com/walmart-sets-new-sbti-approved-emissions-reduction-target/?utm_source=rss&utm_medium=rss&utm_campaign=walmart-sets-new-sbti-approved-emissions-reduction-target",
-      "date": "2026-08-03"
-    },
-    {
-      "id": "bd5f2a95243b",
-      "source": "ESG Today",
-      "categorie": "Climat",
-      "titre": "What CDP’s 2026 Changes Signal About the Future of Corporate Disclosure",
-      "resume": "Les évolutions du CDP 2026 renforcent l'alignement avec les cadres CSRD et ISSB, ce qui impacte directement le reporting extra-financier d'ABC, notamment pour la collecte de données ESG et la préparation aux exigences de transparence accrues.",
-      "pourquoi": "Le CDP est un acteur clé dans la collecte de données ESG pour les entreprises, et ses évolutions 2026 (alignement avec CSRD, ISSB, TNFD) concernent directement le reporting ESG d'ABC, notamment pour le scope 3 (déchets, énergie, mobilité) et la préparation aux obligations CSRD. Bien que non une obligation légale directe, cela impacte la stratégie de reporting et la collecte de données pour le Responsable Environnement/Climat.",
-      "criticite": 2,
-      "url": "https://www.esgtoday.com/what-cdps-2026-changes-signal-about-the-future-of-corporate-disclosure/?utm_source=rss&utm_medium=rss&utm_campaign=what-cdps-2026-changes-signal-about-the-future-of-corporate-disclosure",
-      "date": "2026-08-03"
-    },
-    {
-      "id": "5c7a30e9bda7",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "TotalEnergies fait affaire avec Shell et KKR dans les renouvelables",
-      "resume": "L'article illustre une dynamique de marché dans les énergies renouvelables en Europe, sans impact direct immédiat pour ABC, mais reflète une tendance sectorielle à surveiller pour les stratégies clients et la décarbonation des activités.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/08/totalenergies-fait-affaire-avec-shell-et-kkr-dans-les-renouvelables-431218/",
-      "date": "2026-08-03"
-    },
-    {
       "id": "59d4fd5cffca",
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "L’assèchement du Danube met les pays d’Europe centrale au bord d’une crise énergétique",
-      "resume": "L'article illustre un risque climatique opérationnel indirect pour ABC : la baisse du niveau du Danube pourrait impacter les chaînes logistiques et approvisionnements de clients industriels ou énergétiques en Europe centrale, affectant potentiellement leurs activités et leurs exigences en matière de services de propreté/FM.",
+      "resume": "L'article illustre un risque climatique opérationnel indirect pour ABC : la baisse du niveau du Danube pourrait impacter les chaînes d'approvisionnement ou les clients industriels en Europe centrale, affectant potentiellement leurs activités et leurs exigences en matière de décarbonation ou de résilience.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/08/03/l-assechement-du-danube-met-les-pays-d-europe-centrale-au-bord-d-une-crise-energetique_6737474_3244.html",
       "date": "2026-08-03"
     },
     {
-      "id": "04bb8ff4cbc9",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "TotalEnergies Acquires Shell’s European Onshore Renewables Business",
-      "resume": "L'acquisition par TotalEnergies d'actifs renouvelables en Europe pourrait influencer les choix énergétiques des clients d'ABC (industrie, santé, nucléaire) et renforcer leurs exigences en matière de décarbonation, impactant indirectement les stratégies RSE et reporting de l'entreprise.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/totalenergies-acquires-shells-european-onshore-renewables-business/?utm_source=rss&utm_medium=rss&utm_campaign=totalenergies-acquires-shells-european-onshore-renewables-business",
-      "date": "2026-08-03"
-    },
-    {
-      "id": "2303460230bd",
+      "id": "34d4daa58a2f",
       "source": "Les Echos Environnement",
       "categorie": "Énergie",
-      "titre": "TotalEnergies se renforce dans les renouvelables en Europe - Les Echos",
-      "resume": "L'article souligne l'engagement de TotalEnergies dans les énergies renouvelables en Europe, ce qui pourrait influencer les attentes des clients d'ABC en matière de décarbonation et de transition énergétique, notamment pour les sites tertiaires ou industriels.",
+      "titre": "« Le carbone chinois entre en Europe par la grande porte, et c'est légal » - Les Echos",
+      "resume": "L'article aborde l'importation de produits chinois à forte empreinte carbone en Europe, ce qui pourrait impacter indirectement les exigences carbone des clients d'ABC (notamment dans l'industrie ou le nucléaire) et renforcer les attentes en matière de reporting scope 3.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPSXBpdHFLMk1lVjVWTUJyUEFFSmxHeFZwMHdGc0RFRFA1em9STVE2MVlHaklCci1Bdm04SE5RZXQ2UVFvRFpwRTUtX1I0a0lDd1BsbTctZ2ZPdXNfakRmXzZWeDVKbjFGZ0FKN0RxQVJRTzZLa1dzbFdaLUNxOW1zX3FId1ZGSTJXUDdaT25aYU56ZGYyZlVqblJOTXNrZG9pM0dOVzllVVFTb1NHMFZfeW9tLTZocXVycmdVUkxORFBYS3pZWk53UFlaUQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOeU9lVkdiWU1JSGxBSzhkVm8tT1ZvQVd6RzNCQzNZTnlURFQ0UE5EYlphbGRYNkFTaWtHOVN2emw3dDZvYXBwNUQ4dXcwWkpETTliQnRFNTBiTmxXdVdPTGpPdkcxZEdwOGZoQzFJaWhETUh6bnVvd2o3MUpoREFyaDY5cHE0bE1xcmtPOTNudUtzdTdkajZXSGIzazFuNExfejJ5Wm9XejF2Q1BuSDEyRWJDcFlzSms0SzVRMg?oc=5",
       "date": "2026-08-03"
     }
   ],
@@ -152,11 +174,6 @@
     {
       "dept_code": "44",
       "dept_nom": "Loire-Atlantique",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "53",
-      "dept_nom": "Mayenne",
       "niveau": "crise"
     },
     {
@@ -1432,7 +1449,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Aucune des publications du Journal Officiel du 2026-08-04 ne traite directement de sujets environnementaux ou climatiques pertinents pour un Responsable Environnement/Climat d'une grande entreprise de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1744,5 +1761,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (adaptation au droit de l'UE en matière environnementale, énergétique et de pêche) et le n°2609 (habilitation de l'Assemblée de Martinique pour fixer des règles en matière d'énergie, d'eau et d'assainissement) présentent un intérêt direct pour un Responsable Environnement/Climat. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l'économie circulaire et à la réglementation environnementale européenne. Aucun autre texte ne semble aborder spécifiquement les enjeux climatiques, énergétiques ou de reporting RSE de manière significative."
 }
