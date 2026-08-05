@@ -1,7 +1,7 @@
 {
   "date": "2026-08-05",
-  "generated_at": "08:16",
-  "elapsed_seconds": 200,
+  "generated_at": "13:12",
+  "elapsed_seconds": 195,
   "errors": [],
   "stats": {
     "jo_analyses": 10,
@@ -9,26 +9,48 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-05T08:16:32",
+    "run_at": "2026-08-05T13:12:42",
     "sources": {
       "JORF": 0,
-      "RSS": 9,
+      "RSS": 5,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 42,
-    "llm_seconds": 58.8
+    "llm_calls": 41,
+    "llm_seconds": 47.5
   },
   "items": [
+    {
+      "id": "923f0e29cf80",
+      "source": "Actuel HSE",
+      "categorie": "Eau",
+      "titre": "Les 12 articles environnement à (re)lire pendant l'été",
+      "resume": "L'article aborde des sujets réglementaires et stratégiques pertinents pour ABC, notamment les audits énergétiques, les réglementations européennes (Industrial Accelerator Act) et les bilans des lois Climat et Résilience/LOM, qui impactent directement les enjeux énergie, BGES et reporting ESG de l'entreprise.",
+      "pourquoi": "L'article couvre des thèmes directement liés aux enjeux d'ABC : audit énergétique (efficacité énergétique), réglementations UE (Industrial Accelerator Act potentiellement lié aux obligations de décarbonation des entreprises), et bilans des lois Climat et Résilience/LOM (mobilité durable, énergie). Ces sujets sont critiques pour le Responsable Environnement/Climat, notamment en vue des obligations CSRD et des trajectoires de décarbonation.",
+      "criticite": 2,
+      "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
+      "date": "2026-08-05"
+    },
+    {
+      "id": "a7f3c9e7b589",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Sécheresse : l'arrêt d'une centrale nucléaire force la Hongrie à la sobriété électrique",
+      "resume": "La sécheresse en Hongrie impacte la production nucléaire, illustrant un risque climatique opérationnel indirect pour ABC via ses clients industriels ou énergétiques, notamment ceux dépendant de l'électricité nucléaire.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Secheresse-l-arret-d-une-centrale-nucleaire-force-la-Hongrie-a-la-sobriete-electrique",
+      "date": "2026-08-05"
+    },
     {
       "id": "4d14a73ee0bd",
       "source": "Novethic",
       "categorie": "Climat",
       "titre": "Fin de la pub pour les énergies fossiles, déforestation, IA... 5 bonnes nouvelles à retenir sur la transition écologique cet été",
-      "resume": "L'article mentionne des avancées réglementaires ou sociétales (comme la fin de la publicité pour les énergies fossiles) qui pourraient influencer les attentes clients d'ABC en matière de décarbonation ou de reporting ESG, sans impact opérationnel direct immédiat.",
+      "resume": "L'article mentionne des avancées réglementaires et sociétales en transition écologique (ex: fin de la pub pour les énergies fossiles) qui pourraient influencer les attentes clients d'ABC en matière de décarbonation et de reporting ESG, sans obligation directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/bonnes-nouvelles-transition-ecologique-sociale-ete-2026",
@@ -39,87 +61,21 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "Sécheresse et températures inédites en juillet : « La question de l’eau devient absolument critique »",
-      "resume": "L'article souligne l'aggravation des risques climatiques (sécheresse, canicules) en France, ce qui pourrait impacter la disponibilité de l'eau et les conditions d'intervention des prestataires de propreté/FM sur les 3 000+ sites clients d'ABC.",
+      "resume": "L'article souligne l'aggravation des risques climatiques (sécheresse, canicules) en France, ce qui pourrait impacter la disponibilité de l'eau pour les activités de nettoyage et la gestion des déchets chez les clients d'ABC, ainsi que la résilience des sites tertiaires.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/08/05/records-de-secheresse-et-de-chaleur-en-juillet-la-question-de-l-eau-devient-absolument-critique_6739248_3244.html",
       "date": "2026-08-05"
     },
     {
-      "id": "923f0e29cf80",
-      "source": "Actuel HSE",
-      "categorie": "Eau",
-      "titre": "Les 12 articles environnement à (re)lire pendant l'été",
-      "resume": "L'article aborde des sujets réglementaires et stratégiques liés à l'audit énergétique, aux réglementations européennes (Industrial Accelerator Act, REACH) et aux bilans des lois Climat et Résilience/LOM, pertinents pour le contexte ESG et énergétique d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
-      "date": "2026-08-05"
-    },
-    {
-      "id": "00256899eecf",
-      "source": "Reporterre",
-      "categorie": "Eau",
-      "titre": "La sécheresse des petits cours d'eau en juillet est « la plus critique jamais observée »",
-      "resume": "La sécheresse exceptionnelle des petits cours d'eau en France en juillet 2024 pourrait impacter indirectement ABC via des risques opérationnels sur ses sites clients (ex. : restrictions d'accès à l'eau pour les prestations de nettoyage) ou des perturbations logistiques (livraisons, déplacements).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/La-secheresse-des-petits-cours-d-eau-en-juillet-est-la-plus-critique-jamais-observee",
-      "date": "2026-08-04"
-    },
-    {
-      "id": "9abfb3d61b82",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Juillet 2026 : le mois le plus chaud jamais enregistré en France",
-      "resume": "L'article souligne l'intensification des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter la prestation de services (ex : conditions de travail, adaptation des plannings) et la résilience des sites clients de ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Juillet-2026-le-mois-le-plus-chaud-jamais-enregistre-en-France",
-      "date": "2026-08-04"
-    },
-    {
-      "id": "5b4c72245f27",
-      "source": "Novethic",
-      "categorie": "Énergie",
-      "titre": "\"Le vrai défi n'est pas de décarboner, mais d'imaginer la société qui va avec\", Magali Reghezza-Zitt",
-      "resume": "L'article souligne l'importance de repenser les modèles économiques et sociaux pour une société décarbonée, ce qui peut influencer les stratégies long terme d'ABC en matière de résilience climatique et d'innovation RSE.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/environnement/climat/le-vrai-defi-nest-pas-de-decarboner-mais-dimaginer-la-societe-qui-va-avec-magali-reghezza-zitt",
-      "date": "2026-08-04"
-    },
-    {
       "id": "3bbf09bf66f7",
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "La CRE se penche sur la révision du tarif d’achat du biométhane",
-      "resume": "La révision du tarif d'achat du biométhane par la CRE pourrait impacter les coûts énergétiques des sites clients d'ABC, notamment ceux utilisant des énergies renouvelables, mais sans obligation directe pour l'entreprise.",
+      "resume": "La CRE restreint le tarif d'achat du biométhane aux installations de moins de 13 GWh/an, ce qui pourrait impacter les choix énergétiques d'ABC pour ses sites clients ou sa propre consommation, notamment dans le cadre de la décarbonation de sa flotte ou de ses bâtiments.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/08/le-cre-se-penche-sur-la-revision-du-tarif-dachat-du-biomethane-431279/",
-      "date": "2026-08-04"
-    },
-    {
-      "id": "b8c2b53ded6a",
-      "source": "Le Monde Planète",
-      "categorie": "Eau",
-      "titre": "Juillet 2026 a été le mois le plus chaud jamais enregistré en France depuis le début des mesures, en 1900",
-      "resume": "L'article souligne l'intensification des aléas climatiques (sécheresse, canicules) en France, augmentant les risques opérationnels pour ABC (perturbations logistiques, sécurité des équipes, demande accrue en services de nettoyage liés aux incendies ou à la propreté des sites).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/08/04/juillet-2026-a-ete-le-mois-le-plus-chaud-jamais-enregistre-en-france-depuis-le-debut-des-mesures-en-1900_6738385_3244.html",
-      "date": "2026-08-04"
-    },
-    {
-      "id": "5dd39585e3e9",
-      "source": "Le Monde Planète",
-      "categorie": "Eau",
-      "titre": "Le Rhin à sec met l’économie allemande sous pression et menace de peser sur le PIB",
-      "resume": "L'article souligne les risques climatiques opérationnels indirects pour ABC via ses clients (3 000+ sites) dépendants du transport fluvial en Allemagne, pouvant impacter leur chaîne logistique et leurs exigences carbone.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/economie/article/2026/08/04/le-rhin-a-sec-met-l-economie-allemande-sous-pression-et-menace-de-peser-sur-le-pib_6738284_3234.html",
       "date": "2026-08-04"
     }
   ],
@@ -1318,5 +1274,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de pêche) et le projet n°2609 (habilitation de l’assemblée de Martinique pour des règles locales en énergie, eau et assainissement) présentent un intérêt direct pour un Responsable Environnement/Climat, notamment via des adaptations réglementaires ou des leviers de décentralisation écologique. Aucun texte ne traite spécifiquement de reporting RSE ou de déchets."
+  "pjl_briefing": "Parmi les projets de loi présentés, seul le projet n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de pêche) et le projet n°2609 (habilitation de l’assemblée de Martinique pour des règles locales en énergie, eau et assainissement) présentent un intérêt direct pour un Responsable Environnement/Climat, en lien avec la transition écologique et la décentralisation des politiques environnementales."
 }
