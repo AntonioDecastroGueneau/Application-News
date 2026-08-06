@@ -1,7 +1,7 @@
 {
   "date": "2026-08-06",
-  "generated_at": "08:15",
-  "elapsed_seconds": 200,
+  "generated_at": "13:11",
+  "elapsed_seconds": 159,
   "errors": [],
   "stats": {
     "jo_analyses": 6,
@@ -9,18 +9,18 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-06T08:15:37",
+    "run_at": "2026-08-06T13:11:24",
     "sources": {
       "JORF": 0,
-      "RSS": 5,
+      "RSS": 4,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 39,
-    "llm_seconds": 48.8
+    "llm_calls": 32,
+    "llm_seconds": 41.9
   },
   "items": [
     {
@@ -28,8 +28,8 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Fortes chaleurs au travail : que prévoit le PST 2026-2030 ?",
-      "resume": "Le PST 2026-2030 impose aux entreprises d'intégrer les risques climatiques (fortes chaleurs) dans les DUERP et d'adapter les locaux, ce qui impacte les prestations de propreté/FM d'ABC chez ses clients.",
-      "pourquoi": "Le sujet concerne directement les risques opérationnels d'ABC (exposition des travailleurs aux fortes chaleurs sur 3 000+ sites clients) et les exigences réglementaires à anticiper (intégration dans les DUERP, adaptation des locaux). Bien que non une obligation immédiate, cela relève des enjeux climatiques et RSE d'ABC.",
+      "resume": "Le PST 2026-2030 intègre des mesures pour adapter les locaux et intégrer les risques climatiques dans les DUERP, ce qui impacte directement les 3 000+ sites clients d'ABC en termes de gestion des risques opérationnels et de conformité réglementaire.",
+      "pourquoi": "L'article aborde les risques climatiques (fortes chaleurs) et leur intégration dans les plans de prévention (DUERP), ce qui est directement lié aux enjeux de gestion des risques opérationnels pour ABC sur ses sites clients. Bien que non une obligation légale immédiate, cela renforce la pertinence des actions de prévention et d'adaptation climatique pour l'entreprise.",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-au-travail-que-prevoit-le-pst-2026-2030",
       "date": "2026-08-06"
@@ -39,21 +39,10 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "40 °C, bâti inadapté : la Bretagne n'est pas le refuge climatique qu'on croit",
-      "resume": "L'article souligne l'exposition accrue de la Bretagne aux canicules, un risque climatique opérationnel pouvant impacter la continuité des services de propreté/FM d'ABC chez ses clients locaux (ex. : perturbations énergétiques, saturation des infrastructures).",
+      "resume": "L'article met en lumière l'exposition accrue de la Bretagne aux aléas climatiques (canicules, stress hydrique) qui pourraient impacter la continuité des services de propreté/FM pour les 3 000+ sites clients d'ABC dans la région, notamment via des risques électriques ou des perturbations des réseaux.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://reporterre.net/40-oC-sol-granitique-bati-inadapte-la-Bretagne-n-est-pas-le-refuge-climatique-qu-on-croit",
-      "date": "2026-08-06"
-    },
-    {
-      "id": "37cd9109337d",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "Pour adapter ses centrales au changement climatique, EDF prévoit d’investir près de 9 milliards d’euros sur quinze ans",
-      "resume": "L'article illustre l'impact des aléas climatiques sur la production énergétique (nucléaire/hydro), un risque indirect pour ABC dont les clients (nucléaire, santé, industrie) pourraient voir leurs exigences carbone et résilience énergétique renforcées.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/economie/article/2026/08/06/pour-adapter-ses-centrales-au-changement-climatique-edf-prevoit-d-investir-pres-de-9-milliards-d-euros-sur-quinze-ans_6739675_3234.html",
+      "url": "https://reporterre.net/40-oC-bati-inadapte-la-Bretagne-n-est-pas-le-refuge-climatique-qu-on-croit",
       "date": "2026-08-06"
     },
     {
@@ -61,7 +50,7 @@
       "source": "ESG Today",
       "categorie": "Biodiversité",
       "titre": "Ore Energy Raises $43 Million for Multi-Day Storage Solution Made from Iron, Water and Air",
-      "resume": "L'article présente une innovation technologique dans le stockage d'énergie (batteries fer-air) qui pourrait influencer les stratégies clients d'ABC en matière de décarbonation et de transition énergétique, notamment pour les sites tertiaires ou industriels.",
+      "resume": "L'article présente une innovation technologique en stockage d'énergie (batteries fer-air) qui pourrait influencer les stratégies clients d'ABC dans leur transition énergétique, notamment pour les sites tertiaires ou industriels.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/ore-energy-raises-43-million-for-multi-day-storage-solution-made-from-iron-water-and-air/?utm_source=rss&utm_medium=rss&utm_campaign=ore-energy-raises-43-million-for-multi-day-storage-solution-made-from-iron-water-and-air",
@@ -72,7 +61,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Les 12 articles environnement à (re)lire pendant l'été",
-      "resume": "L'article aborde des sujets réglementaires et stratégiques (audit énergétique, REACH, lois Climat et Résilience, LOM) qui impactent indirectement les entreprises de services comme ABC, notamment en matière de reporting, décarbonation et conformité.",
+      "resume": "L'article mentionne des sujets réglementaires ou stratégiques indirectement liés aux enjeux de décarbonation, audit énergétique et mobilité durable, pertinents pour le suivi des évolutions réglementaires que doit anticiper ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
@@ -226,11 +215,6 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "36",
-      "dept_nom": "Indre",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "91",
       "dept_nom": "Essonne",
       "niveau": "crise"
@@ -238,6 +222,11 @@
     {
       "dept_code": "45",
       "dept_nom": "Loiret",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "36",
+      "dept_nom": "Indre",
       "niveau": "crise"
     },
     {
@@ -926,7 +915,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des arrêtés publiés ne traite directement de sujets environnementaux, climatiques ou de responsabilité sociétale des entreprises (RSE), limitant leur pertinence pour un Responsable Environnement/Climat d'une grande entreprise de services.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1238,5 +1227,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** présente un intérêt direct pour un Responsable Environnement/Climat, en raison de son volet environnemental et énergétique. Les autres textes concernent principalement des sujets sociaux, fiscaux, institutionnels ou de sécurité, sans lien direct avec les enjeux climatiques ou RSE."
+  "pjl_briefing": "Aucun projet de loi ou texte adopté parmi ceux listés ne traite directement de sujets environnementaux, climatiques, énergétiques ou de RSE majeurs pour une grande entreprise de services. Les textes concernent principalement des accords internationaux, des réformes institutionnelles, des questions sociales ou sécuritaires, ou des adaptations réglementaires sans lien avec les enjeux climatiques ou la transition écologique."
 }
