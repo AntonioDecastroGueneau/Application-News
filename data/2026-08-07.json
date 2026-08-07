@@ -1,7 +1,7 @@
 {
   "date": "2026-08-07",
-  "generated_at": "07:00",
-  "elapsed_seconds": 181,
+  "generated_at": "12:09",
+  "elapsed_seconds": 180,
   "errors": [],
   "stats": {
     "jo_analyses": 17,
@@ -9,18 +9,18 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-07T07:00:39",
+    "run_at": "2026-08-07T12:09:38",
     "sources": {
       "JORF": 0,
-      "RSS": 5,
+      "RSS": 6,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 45,
-    "llm_seconds": 53.9
+    "llm_calls": 49,
+    "llm_seconds": 61.6
   },
   "items": [
     {
@@ -28,10 +28,43 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Fortes chaleurs au travail : que prévoit le PST 2026-2030 ?",
-      "resume": "Le PST 2026-2030 impose des adaptations des locaux et une intégration des risques climatiques dans les DUERP, ce qui impacte directement les 3 000+ sites clients d'ABC en termes de sécurité et de conformité réglementaire.",
-      "pourquoi": "L'article traite des risques climatiques opérationnels (fortes chaleurs) et de leur intégration dans les documents de prévention (DUERP), ce qui concerne directement ABC en tant que prestataire de services intervenant sur des sites clients. Bien que non une obligation légale directe pour ABC, cela influence les exigences clients et les pratiques de sécurité à adopter.",
+      "resume": "Le PST 2026-2030 impose des adaptations des locaux et une intégration des risques climatiques dans les DUERP, ce qui impacte directement les 3 000+ sites clients d'ABC en termes de gestion des risques opérationnels et de conformité réglementaire.",
+      "pourquoi": "L'article traite des risques climatiques (fortes chaleurs) et de leur gestion dans les plans santé au travail (PST), ce qui est directement lié aux enjeux de risques opérationnels pour ABC sur ses sites clients. Bien que non centré sur la décarbonation ou le reporting, il impacte la gestion des risques physiques et la conformité réglementaire, pertinents pour le Responsable Environnement/Climat.",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-au-travail-que-prevoit-le-pst-2026-2030",
+      "date": "2026-08-07"
+    },
+    {
+      "id": "a279b7ee6982",
+      "source": "Novethic",
+      "categorie": "Climat",
+      "titre": "\"L'économie ne peut plus se construire sur des actifs qui fondent\", Diego Landivar, économiste et anthropologue",
+      "resume": "L'article aborde les impacts systémiques du changement climatique et de l'érosion de la biodiversité sur les actifs économiques, soulignant la nécessité pour les entreprises de repenser leur modèle face à des risques physiques croissants, notamment pour les prestataires de services comme ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/economie-anthropocene-actifs-fondent-sentinelle-diego-landivar",
+      "date": "2026-08-07"
+    },
+    {
+      "id": "12405b10ac64",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "L’agenda de la transition énergétique",
+      "resume": "L'article propose un agenda d'événements professionnels sur la transition énergétique (énergies renouvelables, mobilité électrique, etc.), utile pour identifier des opportunités de veille ou de participation à des réseaux influents pour ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/08/lagenda-de-la-transition-energetique-280-424554/",
+      "date": "2026-08-07"
+    },
+    {
+      "id": "05c7b2557080",
+      "source": "GreenUnivers",
+      "categorie": "Climat",
+      "titre": "Les documents de la semaine",
+      "resume": "Cet article hebdomadaire recense des documents clés sur la transition énergétique, incluant textes réglementaires, études et analyses pertinentes pour les acteurs du secteur. Il permet à ABC de rester informé des évolutions réglementaires et des bonnes pratiques en matière de décarbonation, reporting ESG et mobilité durable.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/08/les-documents-de-la-semaine-381215/",
       "date": "2026-08-07"
     },
     {
@@ -39,7 +72,7 @@
       "source": "The Guardian Environment",
       "categorie": "Déchets",
       "titre": "Extreme heat breaks temperature records in central and eastern Europe",
-      "resume": "L'article souligne l'impact des aléas climatiques extrêmes (canicules, sécheresses) sur les infrastructures énergétiques en Europe centrale, ce qui peut perturber les activités des clients d'ABC (ex. : coupures d'électricité, perturbations logistiques) et générer des risques opérationnels indirects pour le prestataire de services.",
+      "resume": "L'article souligne l'impact des aléas climatiques extrêmes (canicules) sur les infrastructures énergétiques en Europe, ce qui peut affecter la continuité des services de propreté/FM pour les clients d'ABC, notamment dans les secteurs sensibles (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.theguardian.com/world/2026/aug/07/extreme-heat-breaks-temperature-records-central-eastern-europe",
@@ -50,33 +83,11 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Les 12 articles environnement à (re)lire pendant l'été",
-      "resume": "L'article aborde des sujets réglementaires et stratégiques (audit énergétique, REACH, lois Climat et Résilience, LOM) qui impactent indirectement ABC via ses obligations en matière de reporting ESG (CSRD), décarbonation (scope 1/2/3) et conformité énergétique.",
+      "resume": "L'article mentionne des sujets réglementaires et stratégiques pertinents pour ABC, notamment les bilans des lois Climat et Résilience et LOM, ainsi que des évolutions réglementaires européennes (REACH, Industrial Accelerator Act) qui pourraient impacter indirectement les obligations de reporting ou les exigences clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
       "date": "2026-08-07"
-    },
-    {
-      "id": "ba14416686ea",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Eren persiste et signe dans le biométhane en Italie",
-      "resume": "L'article illustre une tendance sectorielle (biométhane) qui pourrait influencer les attentes clients d'ABC en matière de décarbonation des prestations de propreté/FM, notamment dans les secteurs industriels ou énergétiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/08/eren-persiste-et-signe-dans-le-biomethane-en-italie-431323/",
-      "date": "2026-08-06"
-    },
-    {
-      "id": "54bab2055c70",
-      "source": "ESG Today",
-      "categorie": "Biodiversité",
-      "titre": "Ore Energy Raises $43 Million for Multi-Day Storage Solution Made from Iron, Water and Air",
-      "resume": "L'article présente une innovation technologique dans le stockage d'énergie longue durée (batteries fer-air), pertinente pour les enjeux de décarbonation des clients d'ABC (industrie, santé, nucléaire) et leur transition vers des énergies renouvelables, impactant indirectement les prestations de propreté/FM.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/ore-energy-raises-43-million-for-multi-day-storage-solution-made-from-iron-water-and-air/?utm_source=rss&utm_medium=rss&utm_campaign=ore-energy-raises-43-million-for-multi-day-storage-solution-made-from-iron-water-and-air",
-      "date": "2026-08-06"
     }
   ],
   "restrictions_eau": [
@@ -161,18 +172,8 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "40",
-      "dept_nom": "Landes",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "64",
       "dept_nom": "Pyrénées-Atlantiques",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "47",
-      "dept_nom": "Lot-et-Garonne",
       "niveau": "crise"
     },
     {
@@ -188,6 +189,11 @@
     {
       "dept_code": "37",
       "dept_nom": "Indre-et-Loire",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "47",
+      "dept_nom": "Lot-et-Garonne",
       "niveau": "crise"
     },
     {
@@ -226,6 +232,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "36",
+      "dept_nom": "Indre",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "91",
       "dept_nom": "Essonne",
       "niveau": "crise"
@@ -233,11 +244,6 @@
     {
       "dept_code": "45",
       "dept_nom": "Loiret",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "36",
-      "dept_nom": "Indre",
       "niveau": "crise"
     },
     {
@@ -421,6 +427,11 @@
       "niveau": "alerte renforcée"
     },
     {
+      "dept_code": "40",
+      "dept_nom": "Landes",
+      "niveau": "alerte renforcée"
+    },
+    {
       "dept_code": "62",
       "dept_nom": "Pas-de-Calais",
       "niveau": "alerte renforcée"
@@ -486,13 +497,18 @@
       "niveau": "alerte renforcée"
     },
     {
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
+      "niveau": "alerte renforcée"
+    },
+    {
       "dept_code": "04",
       "dept_nom": "Alpes-de-Haute-Provence",
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
+      "dept_code": "83",
+      "dept_nom": "Var",
       "niveau": "alerte renforcée"
     },
     {
@@ -518,11 +534,6 @@
     {
       "dept_code": "05",
       "dept_nom": "Hautes-Alpes",
-      "niveau": "alerte"
-    },
-    {
-      "dept_code": "83",
-      "dept_nom": "Var",
       "niveau": "alerte"
     },
     {
@@ -1160,7 +1171,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés 3 et 8 sont significatifs : le premier concerne un projet d'infrastructure électrique majeure (triple liaison sous-marine et souterraine) impactant les parcs éoliens en mer de Bretagne Sud, tandis que le second abroge un dispositif de complément de rémunération pour l'éolien terrestre, pouvant influencer les stratégies énergétiques des entreprises. Aucun autre texte ne semble directement pertinent pour un Responsable Environnement/Climat.",
+  "briefing_jorf": "Les arrêtés 3 et 8 sont significatifs : le premier concerne un projet d'infrastructure électrique majeur (triple liaison sous-marine et souterraine) impactant les parcs éoliens en mer de Bretagne Sud, tandis que le second abroge un dispositif de complément de rémunération pour l'éolien terrestre, pouvant influencer les stratégies énergétiques des entreprises. Aucun autre texte ne semble directement lié aux enjeux environnementaux ou climatiques pour une grande entreprise de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1472,5 +1483,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l'économie circulaire et à la réglementation environnementale européenne. Aucun texte adopté ne semble aborder des enjeux climatiques ou RSE majeurs."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de pêche) et le n°2609 (habilitation de l’assemblée de Martinique pour des règles locales en énergie, eau et assainissement) présentent un intérêt direct pour un Responsable Environnement/Climat. Aucun texte adopté ne semble directement lié à ces enjeux."
 }
