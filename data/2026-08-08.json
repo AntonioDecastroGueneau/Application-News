@@ -1,7 +1,7 @@
 {
   "date": "2026-08-08",
-  "generated_at": "06:34",
-  "elapsed_seconds": 198,
+  "generated_at": "11:55",
+  "elapsed_seconds": 186,
   "errors": [],
   "stats": {
     "jo_analyses": 10,
@@ -9,7 +9,7 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-08T06:34:29",
+    "run_at": "2026-08-08T11:55:13",
     "sources": {
       "JORF": 0,
       "RSS": 7,
@@ -19,8 +19,8 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 35,
-    "llm_seconds": 44.1
+    "llm_calls": 36,
+    "llm_seconds": 55.3
   },
   "items": [
     {
@@ -28,10 +28,32 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Fortes chaleurs au travail : que prévoit le PST 2026-2030 ?",
-      "resume": "Le PST 2026-2030 impose aux entreprises d'intégrer les risques climatiques (fortes chaleurs) dans les DUERP et d'adapter les locaux de travail, ce qui impacte directement les prestations de propreté/FM d'ABC sur ses 3 000+ sites clients.",
-      "pourquoi": "L'article aborde un enjeu réglementaire (PST 2026-2030) lié aux risques climatiques opérationnels en France, directement applicable aux activités d'ABC (adaptation des locaux, intégration dans les DUERP). Bien que non lié à la décarbonation ou au reporting, il concerne la gestion des risques physiques pour les travailleurs, un sujet critique pour un prestataire de services intervenant sur des sites clients.",
+      "resume": "Le PST 2026-2030 impose une adaptation des locaux et une intégration des risques climatiques dans les DUERP, ce qui impacte directement les 3 000+ sites clients d'ABC en termes de sécurité et de conformité réglementaire.",
+      "pourquoi": "L'article traite des risques climatiques opérationnels (fortes chaleurs) et de leur intégration dans les documents de prévention (DUERP), ce qui concerne directement les activités de propreté/FM d'ABC sur ses sites clients. Bien que non une obligation légale directe pour ABC, cela impose une veille et une adaptation des pratiques pour répondre aux exigences des clients (nucléaire, santé, industrie) et aux réglementations environnementales.",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-au-travail-que-prevoit-le-pst-2026-2030",
+      "date": "2026-08-08"
+    },
+    {
+      "id": "ece39caf06a0",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Incendies : la Gironde repasse en vigilance rouge pour risque « très élevé » de feux de forêt",
+      "resume": "Les risques accrus d'incendies et de canicules en France pourraient impacter l'activité opérationnelle d'ABC (ex. : perturbations logistiques, sécurité des équipes, contraintes sur les chantiers clients).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/08/08/incendies-la-gironde-repasse-en-vigilance-rouge-pour-risque-tres-eleve-de-feux-de-foret_6740857_3245.html",
+      "date": "2026-08-08"
+    },
+    {
+      "id": "c4381e7001f1",
+      "source": "Le Monde Planète",
+      "categorie": "Eau",
+      "titre": "Sécheresse : « Notre société s’est construite sur le mythe d’une eau abondante »",
+      "resume": "La sécheresse croissante en France pourrait impacter les activités de nettoyage et de gestion des déchets d'ABC, notamment via des restrictions d'eau ou des coûts accrus pour les clients (secteurs sensibles comme l'industrie ou la santé).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/08/08/secheresse-notre-societe-s-est-construite-sur-le-mythe-d-une-eau-abondante_6741260_3244.html",
       "date": "2026-08-08"
     },
     {
@@ -39,7 +61,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Les 12 articles environnement à (re)lire pendant l'été",
-      "resume": "L'article mentionne des sujets réglementaires et stratégiques comme les audits énergétiques, les réglementations REACH et Industrial Accelerator Act (UE), ainsi que le bilan des lois Climat et Résilience et LOM, qui impactent indirectement les obligations ESG et énergétiques d'ABC.",
+      "resume": "L'article mentionne des sujets réglementaires et stratégiques pertinents pour ABC, notamment les bilans des lois Climat et Résilience et LOM, ainsi que des évolutions réglementaires européennes (Industrial Accelerator Act) qui pourraient impacter les obligations de reporting et de décarbonation des entreprises de services.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
@@ -50,43 +72,21 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "La France à sec : les premiers ravages d'une sécheresse hors norme",
-      "resume": "Cet article met en lumière les risques climatiques opérationnels croissants (sécheresses extrêmes) qui pourraient impacter la continuité des services de propreté/FM d'ABC chez ses 3 000+ sites clients, notamment dans les secteurs sensibles (nucléaire, santé, industrie).",
+      "resume": "L'article souligne les risques climatiques opérationnels croissants en France (sécheresses extrêmes, restrictions d'eau) qui pourraient impacter la disponibilité des ressources (eau, énergie) pour les activités de nettoyage et FM d'ABC chez ses clients, notamment dans les secteurs sensibles (industrie, santé).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/La-grande-soif-les-chiffres-d-une-secheresse-historique",
       "date": "2026-08-07"
     },
     {
-      "id": "a279b7ee6982",
+      "id": "ddbfe64fec97",
       "source": "Novethic",
       "categorie": "Climat",
-      "titre": "\"L'économie ne peut plus se construire sur des actifs qui fondent\", Diego Landivar, économiste et anthropologue",
-      "resume": "L'article aborde les impacts systémiques du changement climatique et de l'érosion de la biodiversité sur les actifs économiques, soulignant la nécessité pour les entreprises de repenser leur modèle face à des risques physiques croissants, notamment pour des prestataires comme ABC intervenant sur des milliers de sites clients.",
+      "titre": "Une semaine de pause pour mieux repartir",
+      "resume": "L'article souligne l'importance de prendre du recul face aux crises climatiques récurrentes (canicules, incendies, sécheresses), un contexte qui influence indirectement les attentes des clients d'ABC en matière de résilience et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/economie-anthropocene-actifs-fondent-sentinelle-diego-landivar",
-      "date": "2026-08-07"
-    },
-    {
-      "id": "12405b10ac64",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "L’agenda de la transition énergétique",
-      "resume": "L'article présente un agenda d'événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.), utile pour identifier des opportunités de veille ou de participation à des réseaux pertinents pour ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/08/lagenda-de-la-transition-energetique-280-424554/",
-      "date": "2026-08-07"
-    },
-    {
-      "id": "05c7b2557080",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "Les documents de la semaine",
-      "resume": "Cette newsletter hebdomadaire recense les documents clés (réglementations, études, analyses) liés à la transition énergétique, permettant à ABC de suivre les évolutions pertinentes pour ses enjeux climatiques, énergétiques et de reporting (CSRD, BGES, mobilité, etc.).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/08/les-documents-de-la-semaine-381215/",
+      "url": "https://www.novethic.fr/environnement/climat/une-semaine-de-pause-pour-mieux-repartir",
       "date": "2026-08-07"
     },
     {
@@ -94,7 +94,7 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "En images : la sécheresse record du Danube crée une crise énergétique en Europe",
-      "resume": "La sécheresse record du Danube impacte la production nucléaire en Europe, ce qui pourrait influencer les exigences carbone et énergétiques des clients d'ABC (secteurs nucléaire, santé, industrie) en matière de résilience climatique et de décarbonation.",
+      "resume": "La sécheresse record du Danube impacte la production nucléaire en Europe, ce qui pourrait influencer les exigences carbone des clients d'ABC (secteurs nucléaire, santé, industrie) et renforcer les risques climatiques sur les sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/video/2026/08/07/en-images-la-secheresse-extreme-du-danube-cree-une-crise-energetique-en-europe_6740532_3244.html",
@@ -1488,5 +1488,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux environnementaux et énergétiques liés à la transposition de directives européennes. Aucun autre texte ne traite explicitement de sujets climatiques, de gestion des déchets ou de reporting RSE."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations réglementaires européennes dans ces domaines, incluant potentiellement des normes environnementales et énergétiques. Aucun autre texte ne mentionne explicitement des enjeux climatiques, de transition énergétique ou de RSE."
 }
