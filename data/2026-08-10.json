@@ -1,46 +1,68 @@
 {
   "date": "2026-08-10",
-  "generated_at": "07:08",
-  "elapsed_seconds": 173,
+  "generated_at": "12:09",
+  "elapsed_seconds": 165,
   "errors": [],
   "stats": {
     "jo_analyses": 4,
-    "jo_retenus": 1,
+    "jo_retenus": 2,
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-10T07:08:51",
+    "run_at": "2026-08-10T12:09:31",
     "sources": {
-      "JORF": 1,
-      "RSS": 5,
+      "JORF": 2,
+      "RSS": 8,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 32,
-    "llm_seconds": 39.5
+    "llm_calls": 38,
+    "llm_seconds": 49.9
   },
   "items": [
-    {
-      "id": "923f0e29cf80",
-      "source": "Actuel HSE",
-      "categorie": "Eau",
-      "titre": "Les 12 articles environnement à (re)lire pendant l'été",
-      "resume": "L'article mentionne des sujets réglementaires et stratégiques clés pour ABC, notamment les audits énergétiques, les réglementations UE (Industrial Accelerator Act) et les bilans des lois Climat et Résilience/LOM, qui impactent directement les enjeux énergie, reporting ESG et mobilité durable de l'entreprise.",
-      "pourquoi": "L'article aborde des thèmes directement liés aux enjeux de ABC : audit énergétique (efficacité énergétique), Industrial Accelerator Act (réglementation UE influençant les entreprises industrielles et services), lois Climat et Résilience (BGES, plan climat) et LOM (mobilité durable). Ces sujets sont pertinents pour le Responsable Environnement/Climat d'ABC, même si certains aspects (REACH) sont exclus.",
-      "criticite": 2,
-      "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
-      "date": "2026-08-10"
-    },
     {
       "id": "8606813c5262",
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Fortes chaleurs au travail : que prévoit le PST 2026-2030 ?",
-      "resume": "Le PST 2026-2030 impose des adaptations des locaux et une intégration des risques climatiques dans les DUERP, ce qui impacte les 3 000+ sites clients d'ABC en termes de sécurité et de conformité réglementaire.",
-      "pourquoi": "L'article traite des risques climatiques (fortes chaleurs) dans un cadre réglementaire français (PST 2026-2030) lié à la santé au travail et à l'adaptation des locaux, ce qui concerne directement ABC en tant que prestataire intervenant sur des sites clients. Bien que non directement lié à la décarbonation ou au reporting ESG, il impacte les obligations de sécurité et de gestion des risques opérationnels pour ABC.",
+      "resume": "Le PST 2026-2030 impose aux entreprises d'intégrer les risques climatiques (fortes chaleurs) dans les DUERP et d'adapter les locaux/équipements, ce qui impacte directement les prestations de propreté/FM d'ABC chez ses clients.",
+      "pourquoi": "Le sujet concerne directement les risques opérationnels d'ABC (exposition des travailleurs aux fortes chaleurs sur 3 000+ sites clients) et les obligations réglementaires à venir (intégration dans les DUERP, adaptation des locaux/équipements). Bien que non une obligation légale immédiate, cela impose une veille et une adaptation des pratiques pour rester conforme aux attentes clients (nucléaire, santé, industrie) et aux normes environnementales.",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/fortes-chaleurs-au-travail-que-prevoit-le-pst-2026-2030",
+      "date": "2026-08-10"
+    },
+    {
+      "id": "dbd56e83048e",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "« On se dit que rien ne sera comme avant » : cet été sera-t-il celui de la bascule ?",
+      "resume": "L'article souligne l'intensification des aléas climatiques en France, ce qui impacte directement les risques opérationnels de ABC sur ses 3 000+ sites clients et renforce l'urgence de renforcer la résilience climatique et la gestion des risques dans les contrats de prestation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/L-ete-2026-sera-t-il-celui-de-la-bascule",
+      "date": "2026-08-10"
+    },
+    {
+      "id": "d118f5e2eb8e",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "L'Europe occidentale a connu sa période juin-juillet la plus chaude jamais enregistrée",
+      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe, ce qui pourrait impacter la demande en services de nettoyage (ex. désinfection accrue) et les risques opérationnels (ex. maintenance des équipements sous forte chaleur).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/L-Europe-occidentale-a-connu-sa-periode-juin-juillet-la-plus-chaude-jamais-enregistree",
+      "date": "2026-08-10"
+    },
+    {
+      "id": "45de5b69d76b",
+      "source": "Le Monde Planète",
+      "categorie": "Biodiversité",
+      "titre": "Camille Dormoy, sociologue : « L’économie circulaire demande de reprendre le temps qu’on nous a appris à ne plus perdre »",
+      "resume": "L'article souligne les défis opérationnels liés à l'économie circulaire (tri, réparation, valorisation) dans un contexte de manque de temps, ce qui peut impacter les stratégies de gestion des déchets et de décarbonation des prestations de propreté/FM d'ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/idees/article/2026/08/10/camille-dormoy-sociologue-l-economie-circulaire-demande-de-reprendre-le-temps-qu-on-nous-a-appris-a-ne-plus-perdre_6743267_3232.html",
       "date": "2026-08-10"
     },
     {
@@ -48,10 +70,32 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "En Europe occidentale, une sécheresse exceptionnelle qui pèse sur les activités humaines et les écosystèmes",
-      "resume": "L'article souligne l'impact croissant des sécheresses exceptionnelles en Europe occidentale sur les activités humaines et les écosystèmes, ce qui pourrait affecter la continuité des services de propreté/FM d'ABC chez ses clients (ex. : perturbations logistiques, besoins accrus en nettoyage des sites exposés à la poussière ou aux particules).",
+      "resume": "Risque climatique opérationnel indirect : une sécheresse exceptionnelle en Europe occidentale pourrait impacter les activités des clients d'ABC (ex : perturbation des chaînes logistiques, restrictions d'eau affectant les sites tertiaires ou industriels).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/08/10/en-europe-occidentale-une-secheresse-exceptionnelle-qui-pese-sur-les-activites-humaines-et-les-ecosystemes_6743010_3244.html",
+      "date": "2026-08-10"
+    },
+    {
+      "id": "35845184d29a",
+      "source": "Les Echos Environnement",
+      "categorie": "Énergie",
+      "titre": "Renault, le bon élève de l'automobile en Europe en matière d'impact carbone - Les Echos",
+      "resume": "L'article met en avant Renault comme acteur automobile décarboné en Europe, ce qui peut influencer les exigences carbone des clients d'ABC (industrie, nucléaire, santé) dans leur choix de fournisseurs de services, notamment pour la flotte de véhicules.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNLW9sQjF0cXhPeEhubjRaNG1FNUNMNHRBdFlxajltcWJ1aDZQbTVDYVo1ZEdiMzc5TkdybFctYzFLcldjTi03QXdBcXB4VnlpYTZyemlTV1dweVpBbFZmbklWcWxtQTdJSERtOHdKZWVXa1NBUmdWdkZIeGZzMDlybllqMXUzQkh2UlVPaGR1ZVZBR2xkZ2lFVmZKZnlxQkJMRUhzNENnRFFKV3lNcTRpaWhwaTVSSk1Gbk1KemRUTHZYRWtsRWRtMXAzdklPUXZmVDVTRzJzVjJyaWU1TlE?oc=5",
+      "date": "2026-08-10"
+    },
+    {
+      "id": "923f0e29cf80",
+      "source": "Actuel HSE",
+      "categorie": "Eau",
+      "titre": "Les 12 articles environnement à (re)lire pendant l'été",
+      "resume": "L'article mentionne des sujets réglementaires clés pour ABC comme les audits énergétiques, les lois Climat et Résilience, et la LOM, qui impactent directement la gestion de l'énergie et la mobilité durable de l'entreprise.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
       "date": "2026-08-10"
     },
     {
@@ -59,21 +103,10 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "La centrale de Golfech de nouveau à l’arrêt en raison des conditions climatiques, annonce EDF",
-      "resume": "L'arrêt de la centrale nucléaire de Golfech en raison des fortes chaleurs illustre les risques climatiques opérationnels pour les clients d'ABC (nucléaire, santé, industrie), pouvant impacter la continuité des services et les exigences carbone des donneurs d'ordre.",
+      "resume": "Cet arrêt de la centrale nucléaire de Golfech en raison des fortes chaleurs illustre les risques climatiques opérationnels (disponibilité des sites clients) qui pourraient impacter la continuité des prestations d'ABC chez ses clients industriels ou énergétiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/climat/article/2026/08/09/la-centrale-de-golfech-de-nouveau-a-l-arret-en-raison-des-conditions-climatiques-annonce-edf_6742267_1652612.html",
-      "date": "2026-08-09"
-    },
-    {
-      "id": "d5358783412d",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "« Il coûtera toujours moins cher d’agir aujourd’hui contre le réchauffement climatique que de réparer les conséquences »",
-      "resume": "L'article souligne l'importance d'agir dès aujourd'hui contre le réchauffement climatique, mettant en avant les bénéfices pour la santé publique. Pour ABC, cela renforce l'argumentaire en faveur de politiques environnementales proactives, notamment dans le cadre de la CSRD et de la décarbonation de la flotte.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/08/09/il-coutera-toujours-moins-cher-d-agir-aujourd-hui-contre-le-rechauffement-climatique-que-de-reparer-les-consequences_6741923_3244.html",
       "date": "2026-08-09"
     }
   ],
@@ -827,12 +860,6 @@
       "date": "2026-08-09"
     },
     {
-      "titre": "Arrêté du 3 août 2026 modifiant l'arrêté du 6 juillet 2026 portant agrément d'un système individuel de la filière à responsabilité élargie du producteur d'emballages servant à commercialiser des produits consommés ou utilisés par des professionnels",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054646385",
-      "date": "2026-08-09"
-    },
-    {
       "titre": "Décret du 7 août 2026 portant nomination d'une inspectrice générale (groupe I) au Conseil général de l'alimentation, de l'agriculture et des espaces ruraux",
       "nature": "DECRET",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054646795",
@@ -845,14 +872,28 @@
       "source": "JORF",
       "categorie": "Énergie",
       "titre": "Arrêté du 3 août 2026 modifiant l'arrêté du 6 juillet 2026 portant agrément d'un système individuel de la filière à responsabilité élargie du producteur d'emballages servant à commercialiser des produits consommés ou utilisés par des professionnels",
-      "resume": "Extension potentielle des obligations de tri et traçabilité des emballages pour les prestataires de services comme ABC si les clients industriels ou tertiaires sont concernés par la filière REP.",
-      "pourquoi": "",
-      "criticite": 1,
+      "resume": "Extension possible des obligations de traçabilité et de gestion des emballages professionnels utilisés dans les prestations de propreté de ABC, avec impact sur les déchets générés chez les clients.",
+      "pourquoi": "L'arrêté impose une traçabilité renforcée des emballages professionnels utilisés dans les prestations de propreté, avec un délai d'application probable dès 2027, ce qui expose ABC à un risque de non-conformité réglementaire et à des coûts supplémentaires de gestion des déchets, mais offre aussi une opportunité de différenciation RSE en optimisant la chaîne d'approvisionnement et en valorisant une démarche d'économie circulaire auprès de ses clients.",
+      "criticite": 2,
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054646385",
+      "date": "2026-08-10"
+    },
+    {
+      "id": "eb401c79c5aa",
+      "source": "JORF",
+      "categorie": "Énergie",
+      "titre": "Arrêté du 3 août 2026 modifiant l'arrêté du 6 juillet 2026 portant agrément d'un système individuel de la filière à responsabilité élargie du producteur d'emballages servant à commercialiser des produits consommés ou utilisés par des professionnels",
+      "resume": "Extension possible des obligations de tri et traçabilité des emballages pour ABC si ses clients (non exploitants ICPE) sont concernés par la filière REP des emballages professionnels.",
+      "pourquoi": {
+        "obligation_concrète": "Extension des obligations de tri et traçabilité des emballages professionnels pour les clients d'ABC (non exploitants ICPE) si concernés par la filière REP, avec un délai d'application lié à l'arrêté du 6 juillet 2026 modifié en août 2026.",
+        "risque_opportunité": "Risque de non-conformité pour ABC si ses clients sont soumis à cette REP, mais aussi opportunité de renforcer son offre de services (tri, traçabilité, reporting) et de se différencier auprès de clients exigeants en RSE."
+      },
+      "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054646398",
       "date": "2026-08-10"
     }
   ],
-  "briefing_jorf": "Ces arrêtés modifient les agréments des systèmes individuels de la filière REP (Responsabilité Élargie du Producteur) pour les emballages professionnels, ce qui impacte directement les obligations de tri et de recyclage des entreprises concernées par cette filière.",
+  "briefing_jorf": "Ces trois arrêtés identiques du 3 août 2026 modifient l'agrément d'un système individuel de la filière REP (Responsabilité Élargie du Producteur) pour les emballages professionnels, ce qui impacte directement les obligations de tri et de recyclage des entreprises concernées par cette filière.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1164,5 +1205,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et climatique) et le projet de loi de financement de la sécurité sociale pour 2026 (n°2242) pourraient impacter indirectement les enjeux RSE des entreprises, notamment via des mesures fiscales ou réglementaires liées à la transition écologique. Aucun texte ne traite directement des déchets, du reporting extra-financier ou des obligations climatiques renforcées pour les grandes entreprises."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l'économie circulaire et à la réglementation environnementale européenne. Aucun autre texte ne semble aborder spécifiquement des enjeux climatiques, de reporting RSE ou de gestion des déchets."
 }
