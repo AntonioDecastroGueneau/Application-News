@@ -1,92 +1,79 @@
 {
   "date": "2026-08-11",
-  "generated_at": "06:47",
-  "elapsed_seconds": 194,
+  "generated_at": "12:09",
+  "elapsed_seconds": 168,
   "errors": [],
   "stats": {
     "jo_analyses": 6,
-    "jo_retenus": 0,
+    "jo_retenus": 1,
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-11T06:47:05",
+    "run_at": "2026-08-11T12:09:36",
     "sources": {
-      "JORF": 0,
-      "RSS": 8,
+      "JORF": 1,
+      "RSS": 6,
       "VigiEau": 94,
       "Parlement": 1
     },
-    "errors": [
-      "SOURCE VIDE — JORF : 0 textes retenus"
-    ],
-    "llm_calls": 37,
-    "llm_seconds": 47.2
+    "errors": [],
+    "llm_calls": 35,
+    "llm_seconds": 46.0
   },
   "items": [
+    {
+      "id": "1a9140017c3e",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Des méduses contraignent EDF à arrêter trois réacteurs de la centrale nucléaire de Gravelines",
+      "resume": "L'article illustre un risque climatique opérationnel (présence de méduses) pouvant impacter la disponibilité des sites clients d'ABC (ex. centrale nucléaire de Gravelines), soulignant la vulnérabilité des infrastructures critiques aux aléas climatiques en France.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/08/11/des-meduses-contraignent-edf-a-arreter-trois-reacteurs-de-la-centrale-nucleaire-de-gravelines_6743796_3244.html",
+      "date": "2026-08-11"
+    },
+    {
+      "id": "0abb927caba5",
+      "source": "The Guardian Environment",
+      "categorie": "Émissions",
+      "titre": "AI’s potential climate benefits outweighed by role in boosting fossil fuels, study finds",
+      "resume": "L'article souligne l'impact négatif de l'IA sur les émissions de GES via l'optimisation des énergies fossiles, un enjeu indirect pour ABC dans le cadre de sa stratégie de décarbonation et de reporting ESG (scope 3).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/technology/2026/aug/11/ai-will-do-more-to-boost-fossil-fuel-production-than-green-energy",
+      "date": "2026-08-11"
+    },
+    {
+      "id": "657ce4d8ee92",
+      "source": "Les Echos Environnement",
+      "categorie": "Biodiversité",
+      "titre": "Déchets : Paprec fait une percée majeure en Europe centrale et orientale - Les Echos",
+      "resume": "L'article souligne l'expansion de Paprec en Europe centrale et orientale, un acteur majeur du recyclage et de la gestion des déchets en France. Cela pourrait impacter la traçabilité et la gestion des flux de déchets pour les clients d'ABC, notamment via des partenariats ou des exigences réglementaires renforcées.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNaVRSWFRmOGppRTMzSWpZaXFpWmdPYXBTM05JZTVaWUJrN3RaTE5reHRUdEhHUzJxRjBueUxXb1AtR1pxQ3ZQOFlqdkdMcDNuejQ0cFlTd05BR1VORFNtVXd4dGIyVDZBTW9SdGNVX1NCeWJzOV80WHYzNDBuU1pnS0dLWE9WYjdmYVVpYzQ4OTRLSUNncWNreGpRMmRYOUNuMDg3eVVmUkE1b2hyMFplNzU2UllvWVFEQWtYYm9wakRTZ3Q0MW5oTzBsV3V5UDdlR0R0YUVVeFdSUUE?oc=5",
+      "date": "2026-08-11"
+    },
     {
       "id": "923f0e29cf80",
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Les 12 articles environnement à (re)lire pendant l'été",
-      "resume": "L'article aborde des sujets réglementaires et stratégiques liés à l'audit énergétique, aux réglementations européennes (REACH, Industrial Accelerator Act) et aux bilans des lois Climat et Résilience et LOM, pertinents pour le contexte énergétique et climatique d'ABC.",
+      "resume": "L'article aborde des sujets réglementaires et stratégiques (audit énergétique, REACH, lois Climat et Résilience, LOM) qui impactent indirectement ABC via ses obligations en matière de reporting ESG (CSRD), décarbonation (flotte, énergie) et conformité réglementaire.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
       "date": "2026-08-11"
     },
     {
-      "id": "3d0ccf192e6f",
-      "source": "Actuel HSE",
-      "categorie": "Déchets",
-      "titre": "Intelligence artificielle : Schneider Electric encadre son déploiement par un accord de dialogue social",
-      "resume": "L'article illustre une approche proactive de gestion des impacts sociaux et environnementaux liés à l'IA, un sujet émergent pour les entreprises engagées dans une démarche RSE. Bien qu'indirect, cela peut inspirer ABC pour anticiper les enjeux de transformation numérique et sociale dans son propre déploiement technologique.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/intelligence-artificielle-schneider-electric-encadre-son-deploiement-par-un-accord-de-1",
-      "date": "2026-08-11"
-    },
-    {
-      "id": "44c1dfbda505",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Chaos climatique : le choc de l'été 2026 nous mène-t-il vers un « monde d'après » ?",
-      "resume": "L'article souligne l'intensification des risques climatiques en France (canicules, incendies, sécheresses) qui pourraient impacter la continuité des prestations de propreté/FM d'ABC sur ses 3 000+ sites clients, notamment dans les secteurs sensibles (nucléaire, santé, industrie).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/L-ete-2026-sera-t-il-celui-de-la-bascule",
-      "date": "2026-08-10"
-    },
-    {
-      "id": "d118f5e2eb8e",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "L'Europe occidentale a connu sa période juin-juillet la plus chaude jamais enregistrée",
-      "resume": "L'article souligne l'intensification des aléas climatiques en Europe, avec des vagues de chaleur record en 2024, ce qui expose ABC à des risques opérationnels accrus (perturbations de services, coûts énergétiques, exigences clients en résilience).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/L-Europe-occidentale-a-connu-sa-periode-juin-juillet-la-plus-chaude-jamais-enregistree",
-      "date": "2026-08-10"
-    },
-    {
       "id": "6999ee6409ff",
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "La pression s’accroit sur les prix de l’électricité [Marchés]",
-      "resume": "L'article souligne une hausse des prix de l'électricité en France, impactant potentiellement les coûts énergétiques des prestations de nettoyage et FM d'ABC, notamment via l'augmentation des factures clients ou des charges opérationnelles.",
+      "resume": "L'article souligne une hausse des prix de l'électricité, un poste de coût majeur pour ABC, impactant la compétitivité des prestations de propreté/FM et la gestion énergétique des sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/08/la-pression-saccroit-sur-les-prix-de-lelectricite-marches-431374/",
-      "date": "2026-08-10"
-    },
-    {
-      "id": "068d24944ca6",
-      "source": "Le Monde Planète",
-      "categorie": "Eau",
-      "titre": "Sécheresse : un record absolu en France et en Suisse en juillet ; près des trois quarts de l’Angleterre concernés",
-      "resume": "L'article souligne l'aggravation des risques climatiques (sécheresse) en Europe, pouvant impacter la continuité des services de propreté/FM d'ABC sur 3 000+ sites clients, notamment en perturbant les conditions d'intervention et la gestion des ressources (eau, déchets).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/08/10/secheresse-un-record-absolu-en-france-et-en-suisse-en-juillet-pres-des-trois-quarts-de-l-angleterre-concernes_6743433_3244.html",
       "date": "2026-08-10"
     },
     {
@@ -94,21 +81,10 @@
       "source": "Les Echos Environnement",
       "categorie": "Énergie",
       "titre": "Les manufacturiers au coeur de la responsabilité carbone - Les Echos",
-      "resume": "L'article souligne l'importance de la responsabilité carbone pour les industriels, ce qui peut impacter les exigences des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) en matière de reporting et de décarbonation des prestations.",
+      "resume": "L'article souligne l'importance de la responsabilité carbone pour les industriels, ce qui peut impacter indirectement ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et les risques de reporting ESG (CSRD) pour les prestataires de services.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNWXpUaXQ5RTlxalRGWVlHNjNFVHZQVUdxdndqNmZUTk5kb3BycHZMamFaRFBXTmd5NVd0SFpyRXVfWm5wSnVPMnN4TEE5WjgyNXhpNUZrZzZwWlQ2aFJlQTV2b2EtNV84SldlUTcxb2JoSHItOTJER0NNWHVSQzlxM1VPMWlKS0V4eUtFWFZEcWFKM1IzSXE2d1hIZHhsMDNZdnNDX3BUNms1N09mRm83TGM5eXU4eG5wd29pOU1tUUtoR1REdEdj?oc=5",
-      "date": "2026-08-10"
-    },
-    {
-      "id": "35845184d29a",
-      "source": "Les Echos Environnement",
-      "categorie": "Énergie",
-      "titre": "Renault, le bon élève de l'automobile en Europe en matière d'impact carbone - Les Echos",
-      "resume": "L'article souligne la performance carbone de Renault dans l'automobile, un secteur clé pour ABC en tant que prestataire FM avec une flotte de véhicules. Cela peut influencer les exigences clients en matière de décarbonation et de reporting ESG.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNLW9sQjF0cXhPeEhubjRaNG1FNUNMNHRBdFlxajltcWJ1aDZQbTVDYVo1ZEdiMzc5TkdybFctYzFLcldjTi03QXdBcXB4VnlpYTZyemlTV1dweVpBbFZmbklWcWxtQTdJSERtOHdKZWVXa1NBUmdWdkZIeGZzMDlybllqMXUzQkh2UlVPaGR1ZVZBR2xkZ2lFVmZKZnlxQkJMRUhzNENnRFFKV3lNcTRpaWhwaTVSSk1Gbk1KemRUTHZYRWtsRWRtMXAzdklPUXZmVDVTRzJzVjJyaWU1TlE?oc=5",
       "date": "2026-08-10"
     }
   ],
@@ -204,6 +180,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "47",
+      "dept_nom": "Lot-et-Garonne",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "32",
       "dept_nom": "Gers",
       "niveau": "crise"
@@ -219,18 +200,8 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "47",
-      "dept_nom": "Lot-et-Garonne",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "27",
       "dept_nom": "Eure",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "28",
-      "dept_nom": "Eure-et-Loir",
       "niveau": "crise"
     },
     {
@@ -239,8 +210,18 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "95",
+      "dept_nom": "Val-d'Oise",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "77",
       "dept_nom": "Seine-et-Marne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "28",
+      "dept_nom": "Eure-et-Loir",
       "niveau": "crise"
     },
     {
@@ -346,6 +327,11 @@
     {
       "dept_code": "39",
       "dept_nom": "Jura",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "69",
+      "dept_nom": "Rhône",
       "niveau": "crise"
     },
     {
@@ -464,11 +450,6 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "95",
-      "dept_nom": "Val-d'Oise",
-      "niveau": "alerte renforcée"
-    },
-    {
       "dept_code": "51",
       "dept_nom": "Marne",
       "niveau": "alerte renforcée"
@@ -491,11 +472,6 @@
     {
       "dept_code": "52",
       "dept_nom": "Haute-Marne",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "69",
-      "dept_nom": "Rhône",
       "niveau": "alerte renforcée"
     },
     {
@@ -544,6 +520,11 @@
       "niveau": "alerte"
     },
     {
+      "dept_code": "80",
+      "dept_nom": "Somme",
+      "niveau": "alerte"
+    },
+    {
       "dept_code": "60",
       "dept_nom": "Oise",
       "niveau": "alerte"
@@ -562,11 +543,6 @@
       "dept_code": "2B",
       "dept_nom": "Haute-Corse",
       "niveau": "alerte"
-    },
-    {
-      "dept_code": "80",
-      "dept_nom": "Somme",
-      "niveau": "vigilance"
     },
     {
       "dept_code": "92",
@@ -928,20 +904,26 @@
       "date": "2026-08-11"
     },
     {
-      "titre": "Décret n° 2026-764 du 5 août 2026 portant suppression de l'accès par reconnaissance de l'expérience professionnelle aux professions de conducteur de voiture de transport avec chauffeur et de conducteur de véhicules motorisés à deux ou trois roues",
-      "nature": "DECRET",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054658967",
-      "date": "2026-08-11"
-    },
-    {
       "titre": "Avis relatif à la tarification du système de boucle semi-fermée dédié à la gestion automatisée du diabète de type I MYLIFE CAMAPS FX visé à l'article L. 165-1 du code de la sécurité sociale",
       "nature": "AVIS",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054659223",
       "date": "2026-08-11"
     }
   ],
-  "jo_retenus": [],
-  "briefing_jorf": "Aucun des textes publiés ne traite directement de sujets environnementaux ou climatiques pertinents pour un Responsable Environnement/Climat d'une grande entreprise de services.",
+  "jo_retenus": [
+    {
+      "id": "4acc5357d727",
+      "source": "JORF",
+      "categorie": "Environnement",
+      "titre": "Décret n° 2026-764 du 5 août 2026 portant suppression de l'accès par reconnaissance de l'expérience professionnelle aux professions de conducteur de voiture de transport avec chauffeur et de conducteur de véhicules motorisés à deux ou trois roues",
+      "resume": "Ce décret pourrait impacter la gestion des conducteurs de véhicules de la flotte d'ABC en supprimant une voie d'accès à la profession, nécessitant une adaptation des recrutements ou formations.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054658967",
+      "date": "2026-08-11"
+    }
+  ],
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1253,5 +1235,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N° 2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des normes européennes en matière d'énergie, d'eau, d'assainissement et de transition écologique. Aucun autre texte ne traite explicitement de sujets climatiques ou environnementaux majeurs."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de pêche) et le n°2609 (habilitation de l’assemblée de Martinique à fixer des règles locales en énergie, eau et assainissement) présentent un intérêt direct pour un Responsable Environnement/Climat, en lien avec la transition écologique et la décentralisation des politiques climatiques."
 }
