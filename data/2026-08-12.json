@@ -1,7 +1,7 @@
 {
   "date": "2026-08-12",
-  "generated_at": "07:07",
-  "elapsed_seconds": 181,
+  "generated_at": "12:09",
+  "elapsed_seconds": 204,
   "errors": [],
   "stats": {
     "jo_analyses": 24,
@@ -9,27 +9,93 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-12T07:07:42",
+    "run_at": "2026-08-12T12:09:55",
     "sources": {
       "JORF": 1,
-      "RSS": 3,
+      "RSS": 8,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 53,
-    "llm_seconds": 57.5
+    "llm_calls": 59,
+    "llm_seconds": 78.5
   },
   "items": [
+    {
+      "id": "0083b48742a1",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Nouvelle vague de chaleur : 92 millions d'Européens exposés à plus de 35 °C mercredi",
+      "resume": "L'article souligne l'augmentation des vagues de chaleur en Europe, exposant potentiellement les 3 000+ sites clients d'ABC à des risques opérationnels (perturbations, surcoûts énergétiques, exigences clients renforcées).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Nouvelle-vague-de-chaleur-92-millions-d-Europeens-exposes-a-plus-de-35-oC-mercredi",
+      "date": "2026-08-12"
+    },
+    {
+      "id": "13274ec8162c",
+      "source": "Le Monde Planète",
+      "categorie": "Eau",
+      "titre": "Nucléaire : la sécheresse et la présence de méduses réduisent les capacités de production de treize réacteurs français",
+      "resume": "L'article met en lumière les risques climatiques (sécheresse, méduses) impactant la production nucléaire française, ce qui pourrait affecter la disponibilité énergétique pour les clients d'ABC et leurs exigences en matière de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/08/12/nucleaire-la-secheresse-et-la-presence-de-meduses-reduisent-les-capacites-de-production-de-treize-reacteurs-francais_6745055_3244.html",
+      "date": "2026-08-12"
+    },
+    {
+      "id": "a4a78e1be2ff",
+      "source": "Le Monde Planète",
+      "categorie": "Énergie",
+      "titre": "Les objectifs européens de réduction des emballages entrent en vigueur, amoindris par une intense campagne de lobbying de l’industrie",
+      "resume": "Le règlement européen sur les emballages et déchets impose des objectifs de réduction des emballages, impactant potentiellement la gestion des déchets des prestations de propreté de ABC chez ses clients (scope 3 lié aux déchets générés par les activités de nettoyage).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/08/12/les-objectifs-europeens-de-reduction-des-emballages-entrent-en-vigueur-amoindris-par-une-intense-campagne-de-lobbying-de-l-industrie_6744981_3244.html",
+      "date": "2026-08-12"
+    },
+    {
+      "id": "6265566ad9aa",
+      "source": "Le Monde Planète",
+      "categorie": "Eau",
+      "titre": "VIDEO La sécheresse en France visible depuis des images par satellite",
+      "resume": "L'article met en lumière l'intensification des épisodes de sécheresse en France, un risque climatique opérationnel pouvant impacter les activités de propreté/FM d'ABC (ex. : perturbations logistiques, contraintes d'accès aux sites clients, gestion de l'eau).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/video/2026/08/12/la-secheresse-en-france-visible-a-partir-d-images-par-satellite_6744876_3244.html",
+      "date": "2026-08-12"
+    },
+    {
+      "id": "df1e872fb104",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "EN DIRECT, canicule : la quasi-totalité du pays en vigilance orange ;  le parc de réacteurs nucléaires d’EDF connaît un pic d’indisponibilité en raison de « contraintes environnementales »",
+      "resume": "L'épisode de canicule en France pourrait impacter indirectement ABC via des contraintes environnementales sur le parc nucléaire d'EDF, affectant potentiellement la disponibilité énergétique pour ses clients industriels ou tertiaires.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/climat/live/2026/08/12/en-direct-canicule-la-quasi-totalite-du-pays-en-vigilance-orange-des-temperatures-maximales-de-l-ordre-de-36-c-a-39-c-selon-meteo-france_6744636_1652612.html",
+      "date": "2026-08-12"
+    },
     {
       "id": "f4e7df86840b",
       "source": "Le Monde Planète",
       "categorie": "Déchets",
       "titre": "TotalEnergies fait le pari contesté du recyclage chimique du plastique sur son ancienne raffinerie de Grandpuits",
-      "resume": "L'article illustre une technologie émergente (recyclage chimique) dans le secteur de la gestion des déchets, un enjeu indirect pour ABC via la CSRD/reporting ESG et les attentes clients en matière de circularité. Peut impacter la stratégie déchets de l'entreprise si les clients industriels ou nucléaires intègrent cette solution dans leurs exigences.",
+      "resume": "L'article illustre une innovation dans le recyclage chimique des plastiques, un sujet lié aux enjeux de déchets et économie circulaire pour les prestataires de services comme ABC, notamment dans le cadre des REP et de la CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/08/12/totalenergies-fait-le-pari-conteste-du-recyclage-chimique-du-plastique-sur-son-ancienne-raffinerie-de-grandpuits_6744496_3234.html",
+      "date": "2026-08-12"
+    },
+    {
+      "id": "e6191f838ce5",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "Novisto Launches Double Materiality Assessment Solution",
+      "resume": "La solution Novisto Materiality permet d'évaluer la double matérialité pour le reporting ESG, utile pour préparer les exigences CSRD/ESRS d'ABC dans le cadre de son reporting extra-financier.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/novisto-launches-double-materiality-assessment-solution/?utm_source=rss&utm_medium=rss&utm_campaign=novisto-launches-double-materiality-assessment-solution",
       "date": "2026-08-12"
     },
     {
@@ -37,21 +103,10 @@
       "source": "Le Monde Planète",
       "categorie": "Déchets",
       "titre": "Les entreprises françaises encore peu affectées par les vagues de chaleur et les incendies",
-      "resume": "L'article souligne une légère perturbation de l'activité économique en juillet due aux vagues de chaleur et incendies, mais sans impact direct identifié sur les prestations de propreté/FM d'ABC. Les risques climatiques indirects (perturbation des sites clients) restent à surveiller.",
+      "resume": "L'article souligne une légère perturbation de l'activité économique en France due aux vagues de chaleur et incendies en juillet, sans impact direct identifié sur les activités de propreté/FM d'ABC. Cependant, il rappelle l'importance de l'adaptation aux risques climatiques pour les entreprises de services.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/08/11/les-entreprises-francaises-encore-peu-affectees-par-les-vagues-de-chaleur-et-les-incendies_6744159_3234.html",
-      "date": "2026-08-11"
-    },
-    {
-      "id": "657ce4d8ee92",
-      "source": "Les Echos Environnement",
-      "categorie": "Biodiversité",
-      "titre": "Déchets : Paprec fait une percée majeure en Europe centrale et orientale - Les Echos",
-      "resume": "L'expansion de Paprec en Europe centrale et orientale pourrait influencer les dynamiques du marché des déchets en France/UE, mais n'a pas d'impact réglementaire ou opérationnel direct identifiable pour ABC dans l'immédiat.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNaVRSWFRmOGppRTMzSWpZaXFpWmdPYXBTM05JZTVaWUJrN3RaTE5reHRUdEhHUzJxRjBueUxXb1AtR1pxQ3ZQOFlqdkdMcDNuejQ0cFlTd05BR1VORFNtVXd4dGIyVDZBTW9SdGNVX1NCeWJzOV80WHYzNDBuU1pnS0dLWE9WYjdmYVVpYzQ4OTRLSUNncWNreGpRMmRYOUNuMDg3eVVmUkE1b2hyMFplNzU2UllvWVFEQWtYYm9wakRTZ3Q0MW5oTzBsV3V5UDdlR0R0YUVVeFdSUUE?oc=5",
       "date": "2026-08-11"
     }
   ],
@@ -92,6 +147,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "85",
+      "dept_nom": "Vendée",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "53",
       "dept_nom": "Mayenne",
       "niveau": "crise"
@@ -109,11 +169,6 @@
     {
       "dept_code": "79",
       "dept_nom": "Deux-Sèvres",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "85",
-      "dept_nom": "Vendée",
       "niveau": "crise"
     },
     {
@@ -152,11 +207,6 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "47",
-      "dept_nom": "Lot-et-Garonne",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "32",
       "dept_nom": "Gers",
       "niveau": "crise"
@@ -169,6 +219,11 @@
     {
       "dept_code": "37",
       "dept_nom": "Indre-et-Loire",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "47",
+      "dept_nom": "Lot-et-Garonne",
       "niveau": "crise"
     },
     {
@@ -297,13 +352,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "39",
-      "dept_nom": "Jura",
+      "dept_code": "69",
+      "dept_nom": "Rhône",
       "niveau": "crise"
     },
     {
-      "dept_code": "69",
-      "dept_nom": "Rhône",
+      "dept_code": "39",
+      "dept_nom": "Jura",
       "niveau": "crise"
     },
     {
@@ -332,13 +387,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "12",
-      "dept_nom": "Aveyron",
+      "dept_code": "81",
+      "dept_nom": "Tarn",
       "niveau": "crise"
     },
     {
-      "dept_code": "81",
-      "dept_nom": "Tarn",
+      "dept_code": "12",
+      "dept_nom": "Aveyron",
       "niveau": "crise"
     },
     {
@@ -377,13 +432,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "68",
-      "dept_nom": "Haut-Rhin",
+      "dept_code": "90",
+      "dept_nom": "Territoire de Belfort",
       "niveau": "crise"
     },
     {
-      "dept_code": "90",
-      "dept_nom": "Territoire de Belfort",
+      "dept_code": "68",
+      "dept_nom": "Haut-Rhin",
       "niveau": "crise"
     },
     {
@@ -467,13 +522,13 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "04",
-      "dept_nom": "Alpes-de-Haute-Provence",
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
+      "dept_code": "04",
+      "dept_nom": "Alpes-de-Haute-Provence",
       "niveau": "alerte renforcée"
     },
     {
@@ -1291,14 +1346,14 @@
       "source": "JORF",
       "categorie": "Déchets",
       "titre": "Arrêté du 10 août 2026 créant la fiche d'opération standardisée TRA-EQ-133 « Achat ou location d'une voiture particulière électrique d'occasion », le référentiel de contrôle et la bonification associés",
-      "resume": "ABC doit anticiper l'impact de la bonification des véhicules électriques d'occasion sur ses choix de flotte (scope 1) et son reporting GES.",
-      "pourquoi": "L'arrêté crée une bonification pour l'achat/location de véhicules électriques d'occasion, incitant ABC à accélérer l'électrification de sa flotte (scope 1) pour réduire ses émissions et améliorer son reporting GES, avec un impact financier direct sur les coûts opérationnels et la conformité réglementaire d'ici 2026.",
+      "resume": "ABC pourrait bénéficier d'une bonification pour l'achat ou location de véhicules électriques d'occasion via une fiche d'opération standardisée, utile pour son reporting CSRD et la réduction de son scope 1.",
+      "pourquoi": "Le texte crée une fiche d'opération standardisée (TRA-EQ-133) pour l'achat ou location de véhicules électriques d'occasion, avec un référentiel de contrôle et une bonification associée. Bien qu'ABC ne soit pas directement concerné par la création de la fiche, cette bonification peut impacter ses stratégies d'acquisition de flotte (scope 1) et son reporting extra-financier (CSRD), notamment pour justifier des investissements dans des véhicules électriques d'occasion.",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666103",
       "date": "2026-08-12"
     }
   ],
-  "briefing_jorf": "Les arrêtés TRA-EQ-133, TRA-EQ-114 et TRA-EQ-117 renforcent les incitations fiscales pour l'achat ou la location de véhicules électriques d'occasion et ajustent les bonifications liées aux transports durables. L'arrêté fixant la liste des équipements pour la production de batteries, panneaux solaires, éoliennes et pompes à chaleur cadre les critères d'éligibilité au crédit d'impôt pour l'industrie verte, impactant les stratégies d'approvisionnement durable.",
+  "briefing_jorf": "Les arrêtés TRA-EQ-133, TRA-EQ-114 et TRA-EQ-117 renforcent les incitations fiscales pour l'achat ou la location de véhicules électriques d'occasion et ajustent les bonifications liées aux transports durables, tandis que l'arrêté fixant la liste des équipements pour les batteries, panneaux solaires, éoliennes et pompes à chaleur cadre le crédit d'impôt pour l'industrie verte, tous deux alignés sur les objectifs climatiques. Les autres textes concernent principalement des compensations financières locales ou des mesures sectorielles sans impact direct sur la RSE des grandes entreprises de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1610,5 +1665,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°3017)** pourrait impacter les pratiques agricoles et les politiques de durabilité, tandis que le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** inclut des enjeux clés comme l’énergie, l’eau et l’assainissement. Le **Projet de loi-cadre relatif au développement des transports (N°2740)** et le **Projet de loi de financement de la sécurité sociale pour 2026 (N°2242)** pourraient aussi influencer les stratégies RSE et de reporting des entreprises."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le *Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche* (N°2518) qui pourrait inclure des mesures liées à la transition énergétique et à l'économie circulaire, et le *Projet de loi-cadre relatif au développement des transports* (N°2740) qui pourrait impacter les politiques de mobilité durable et les émissions du secteur."
 }
