@@ -1,0 +1,1614 @@
+{
+  "date": "2026-08-12",
+  "generated_at": "07:07",
+  "elapsed_seconds": 181,
+  "errors": [],
+  "stats": {
+    "jo_analyses": 24,
+    "jo_retenus": 1,
+    "depts_restriction": 94
+  },
+  "pipeline_meta": {
+    "run_at": "2026-08-12T07:07:42",
+    "sources": {
+      "JORF": 1,
+      "RSS": 3,
+      "VigiEau": 94,
+      "Parlement": 1
+    },
+    "errors": [],
+    "llm_calls": 53,
+    "llm_seconds": 57.5
+  },
+  "items": [
+    {
+      "id": "f4e7df86840b",
+      "source": "Le Monde Planète",
+      "categorie": "Déchets",
+      "titre": "TotalEnergies fait le pari contesté du recyclage chimique du plastique sur son ancienne raffinerie de Grandpuits",
+      "resume": "L'article illustre une technologie émergente (recyclage chimique) dans le secteur de la gestion des déchets, un enjeu indirect pour ABC via la CSRD/reporting ESG et les attentes clients en matière de circularité. Peut impacter la stratégie déchets de l'entreprise si les clients industriels ou nucléaires intègrent cette solution dans leurs exigences.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/economie/article/2026/08/12/totalenergies-fait-le-pari-conteste-du-recyclage-chimique-du-plastique-sur-son-ancienne-raffinerie-de-grandpuits_6744496_3234.html",
+      "date": "2026-08-12"
+    },
+    {
+      "id": "075d9ebd6b29",
+      "source": "Le Monde Planète",
+      "categorie": "Déchets",
+      "titre": "Les entreprises françaises encore peu affectées par les vagues de chaleur et les incendies",
+      "resume": "L'article souligne une légère perturbation de l'activité économique en juillet due aux vagues de chaleur et incendies, mais sans impact direct identifié sur les prestations de propreté/FM d'ABC. Les risques climatiques indirects (perturbation des sites clients) restent à surveiller.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/economie/article/2026/08/11/les-entreprises-francaises-encore-peu-affectees-par-les-vagues-de-chaleur-et-les-incendies_6744159_3234.html",
+      "date": "2026-08-11"
+    },
+    {
+      "id": "657ce4d8ee92",
+      "source": "Les Echos Environnement",
+      "categorie": "Biodiversité",
+      "titre": "Déchets : Paprec fait une percée majeure en Europe centrale et orientale - Les Echos",
+      "resume": "L'expansion de Paprec en Europe centrale et orientale pourrait influencer les dynamiques du marché des déchets en France/UE, mais n'a pas d'impact réglementaire ou opérationnel direct identifiable pour ABC dans l'immédiat.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNaVRSWFRmOGppRTMzSWpZaXFpWmdPYXBTM05JZTVaWUJrN3RaTE5reHRUdEhHUzJxRjBueUxXb1AtR1pxQ3ZQOFlqdkdMcDNuejQ0cFlTd05BR1VORFNtVXd4dGIyVDZBTW9SdGNVX1NCeWJzOV80WHYzNDBuU1pnS0dLWE9WYjdmYVVpYzQ4OTRLSUNncWNreGpRMmRYOUNuMDg3eVVmUkE1b2hyMFplNzU2UllvWVFEQWtYYm9wakRTZ3Q0MW5oTzBsV3V5UDdlR0R0YUVVeFdSUUE?oc=5",
+      "date": "2026-08-11"
+    }
+  ],
+  "restrictions_eau": [
+    {
+      "dept_code": "50",
+      "dept_nom": "Manche",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "22",
+      "dept_nom": "Côtes-d'Armor",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "61",
+      "dept_nom": "Orne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "29",
+      "dept_nom": "Finistère",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "56",
+      "dept_nom": "Morbihan",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "35",
+      "dept_nom": "Ille-et-Vilaine",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "44",
+      "dept_nom": "Loire-Atlantique",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "53",
+      "dept_nom": "Mayenne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "72",
+      "dept_nom": "Sarthe",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "49",
+      "dept_nom": "Maine-et-Loire",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "79",
+      "dept_nom": "Deux-Sèvres",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "85",
+      "dept_nom": "Vendée",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "17",
+      "dept_nom": "Charente-Maritime",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "86",
+      "dept_nom": "Vienne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "33",
+      "dept_nom": "Gironde",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "16",
+      "dept_nom": "Charente",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "24",
+      "dept_nom": "Dordogne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "40",
+      "dept_nom": "Landes",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "64",
+      "dept_nom": "Pyrénées-Atlantiques",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "47",
+      "dept_nom": "Lot-et-Garonne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "32",
+      "dept_nom": "Gers",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "65",
+      "dept_nom": "Hautes-Pyrénées",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "37",
+      "dept_nom": "Indre-et-Loire",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "27",
+      "dept_nom": "Eure",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "78",
+      "dept_nom": "Yvelines",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "95",
+      "dept_nom": "Val-d'Oise",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "77",
+      "dept_nom": "Seine-et-Marne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "28",
+      "dept_nom": "Eure-et-Loir",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "94",
+      "dept_nom": "Val-de-Marne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "67",
+      "dept_nom": "Bas-Rhin",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "41",
+      "dept_nom": "Loir-et-Cher",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "36",
+      "dept_nom": "Indre",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "91",
+      "dept_nom": "Essonne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "45",
+      "dept_nom": "Loiret",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "18",
+      "dept_nom": "Cher",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "87",
+      "dept_nom": "Haute-Vienne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "19",
+      "dept_nom": "Corrèze",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "23",
+      "dept_nom": "Creuse",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "03",
+      "dept_nom": "Allier",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "63",
+      "dept_nom": "Puy-de-Dôme",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "15",
+      "dept_nom": "Cantal",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "89",
+      "dept_nom": "Yonne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "58",
+      "dept_nom": "Nièvre",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "21",
+      "dept_nom": "Côte-d'Or",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "70",
+      "dept_nom": "Haute-Saône",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "71",
+      "dept_nom": "Saône-et-Loire",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "42",
+      "dept_nom": "Loire",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "43",
+      "dept_nom": "Haute-Loire",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "39",
+      "dept_nom": "Jura",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "69",
+      "dept_nom": "Rhône",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "07",
+      "dept_nom": "Ardèche",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "46",
+      "dept_nom": "Lot",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "82",
+      "dept_nom": "Tarn-et-Garonne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "31",
+      "dept_nom": "Haute-Garonne",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "09",
+      "dept_nom": "Ariège",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "12",
+      "dept_nom": "Aveyron",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "81",
+      "dept_nom": "Tarn",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "11",
+      "dept_nom": "Aude",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "34",
+      "dept_nom": "Hérault",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "66",
+      "dept_nom": "Pyrénées-Orientales",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "48",
+      "dept_nom": "Lozère",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "30",
+      "dept_nom": "Gard",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "88",
+      "dept_nom": "Vosges",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "25",
+      "dept_nom": "Doubs",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "68",
+      "dept_nom": "Haut-Rhin",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "90",
+      "dept_nom": "Territoire de Belfort",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "74",
+      "dept_nom": "Haute-Savoie",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "73",
+      "dept_nom": "Savoie",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "06",
+      "dept_nom": "Alpes-Maritimes",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "14",
+      "dept_nom": "Calvados",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "62",
+      "dept_nom": "Pas-de-Calais",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "59",
+      "dept_nom": "Nord",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "02",
+      "dept_nom": "Aisne",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "51",
+      "dept_nom": "Marne",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "55",
+      "dept_nom": "Meuse",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "57",
+      "dept_nom": "Moselle",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "10",
+      "dept_nom": "Aube",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "52",
+      "dept_nom": "Haute-Marne",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "01",
+      "dept_nom": "Ain",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "38",
+      "dept_nom": "Isère",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "26",
+      "dept_nom": "Drôme",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "84",
+      "dept_nom": "Vaucluse",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "04",
+      "dept_nom": "Alpes-de-Haute-Provence",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "83",
+      "dept_nom": "Var",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "2A",
+      "dept_nom": "Corse-du-Sud",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "76",
+      "dept_nom": "Seine-Maritime",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "80",
+      "dept_nom": "Somme",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "60",
+      "dept_nom": "Oise",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "05",
+      "dept_nom": "Hautes-Alpes",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "2B",
+      "dept_nom": "Haute-Corse",
+      "niveau": "alerte"
+    },
+    {
+      "dept_code": "92",
+      "dept_nom": "Hauts-de-Seine",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "75",
+      "dept_nom": "Paris",
+      "niveau": "vigilance"
+    },
+    {
+      "dept_code": "93",
+      "dept_nom": "Seine-Saint-Denis",
+      "niveau": "vigilance"
+    }
+  ],
+  "jo_autres": [
+    {
+      "titre": "Décret n° 2026-767 du 10 août 2026 portant publication de l'avenant à la convention entre le Gouvernement de la République française et le Gouvernement du Royaume de Suède en vue d'éviter les doubles impositions et de prévenir l'évasion fiscale en matière d'impôts sur le revenu et sur la fortune, signé à Stockholm le 22 mai 2023 (1)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666224",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 relatif à l'organisation des élections et au mandat des membres élus à la commission d'évaluation instituée par le décret n° 2014-1324 du 4 novembre 2014 portant statuts particuliers du corps des chargés de recherche du développement durable et du corps des directeurs de recherche du développement durable",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054665972",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 30 juillet 2026 fixant l'organisation de la période de stage des ingénieurs stagiaires de la statistique, de l'économie et de la donnée",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666018",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 5 août 2026 portant application des articles L. 562-2 et suivants du code monétaire et financier",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666041",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 5 août 2026 portant application des articles L. 562-2 et suivants du code monétaire et financier",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666044",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 7 août 2026 modifiant l'arrêté du 1er mars 2012 relatif aux seuils prévus à l'article R. 519-2 du code monétaire et financier concernant les intermédiaires en opérations de banque et en service de paiement",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666047",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant application des articles L. 562-2-1 et suivants du code monétaire et financier",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666100",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 6 août 2026 modifiant l'arrêté du 5 août 2022 fixant le montant et certaines modalités de mise en œuvre des aides pour les exploitations agricoles en difficulté",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666203",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 15 juillet 2026 relatif à la réception dématérialisée des volets administratifs des certificats de décès par les mairies",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666233",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 7 août 2026 portant délégation de signature (direction générale de la recherche, de l'innovation et du numérique en santé)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666249",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 11 août 2026 modifiant l'arrêté du 19 février 2025 relatif aux caractéristiques de la formation obligatoire pour la réalisation des actes d'épilation à la lumière pulsée intense ou au laser à visée non thérapeutique",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666284",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 constatant le montant du droit à compensation résultant pour les régions, les collectivités de Corse et de Saint-Martin, les collectivités territoriales de Martinique et de Guyane et le département-région de Mayotte de l'application des décrets n° 2021-521 et n° 2021-522 du 29 avril 2021 relatifs à la rémunération des stagiaires de la formation professionnelle",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666312",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 constatant le montant du droit à compensation résultant pour les régions, les collectivités de Corse et de Saint-Martin, les collectivités territoriales de Martinique et de Guyane et le département-région de Mayotte de l'application du décret n° 2022-477 du 4 avril 2022 relatif à la revalorisation de la rémunération des stagiaires de la formation professionnelle",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666332",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 constatant le montant du droit à compensation résultant pour les régions, la collectivité de Corse, les collectivités territoriales de Martinique et de Guyane et le département-région de Mayotte de l'application du décret n° 2016-1901 du 28 décembre 2016 relatif aux bourses accordées aux étudiants inscrits dans les instituts et écoles de formation de certaines professions de santé",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666354",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 constatant le montant du droit à compensation définitif résultant pour les régions d'outre-mer, les collectivités territoriales de Martinique et de Guyane et le département-région de Mayotte de l'application de l'arrêté du 23 août 2023 modifiant l'arrêté du 13 avril 2023 fixant les taux des bourses d'enseignement supérieur du ministère de l'enseignement supérieur et de la recherche pour l'année universitaire 2023-2024",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666409",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 23 juillet 2026 modifiant l'arrêté du 16 juin 2020 désignant les opérations de restructuration de certains services centraux ou déconcentrés de la direction générale des douanes et droits indirects ouvrant droit à des mesures d'accompagnement",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666585",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination (chambres régionales des comptes) - Mme HAAS-DIOLOT (Emmanuelle)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666605",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant délégation dans les fonctions de procureure financière (chambres régionales des comptes)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666613",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination (chambres régionales des comptes) - M. MAKOUDI (Yannis)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666618",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 11 août 2026 chargeant une députée d'une mission temporaire",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666629",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 11 août 2026 chargeant une députée d'une mission temporaire",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666635",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 11 août 2026 chargeant un député d'une mission temporaire",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666648",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 11 août 2026 chargeant un député d'une mission temporaire",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666654",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 11 août 2026 chargeant un sénateur d'une mission temporaire",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666660",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 11 août 2026 chargeant un sénateur d'une mission temporaire",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666667",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666674",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination de la sous-préfète de Charolles - Mme PICCOZ (Armelle)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666680",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination de la sous-préfète de Saumur - Mme BRUN (Louise)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666696",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination de la sous-préfète chargée de mission auprès du préfet de l'Oise - Mme BEAUVINON (Yasmine)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666704",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du sous-préfet d'Albertville - M. BLONDEL (Yohan)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666712",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination de la sous-préfète de Libourne - Mme QUEBRE (Corinne)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666720",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant cessation de fonctions du sous-préfet de Beaune - M. BYRSKI (Benoît)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666728",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du sous-préfet de Beaune - M. ROCHE (David)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666736",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant cessation de fonctions du sous-préfet chargé de mission auprès du préfet de la région Guadeloupe, préfet de la Guadeloupe - M. GAL (Théo)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666744",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant cessation de fonctions du sous-préfet chargé de mission auprès du préfet de l'Oise - M. QUINIOU (Arnaud)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666752",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant cessation de fonctions du secrétaire général de la préfecture de la Charente, sous-préfet d'Angoulême - M. JOBART (Jean-Charles)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666760",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du sous-préfet chargé de mission, adjoint au préfet délégué pour la sécurité et la sûreté des plates-formes aéroportuaires de Paris-Charles-de-Gaulle, du Bourget et de Paris-Orly auprès du préfet de police - M. DENJEAN (Mathias)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666768",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant cessation de fonctions du sous-préfet de Libourne - M. DOLIGEZ (Matthieu)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666776",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination de la sous-préfète de Saint-Gaudens - Mme LEBON (Laure)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666784",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du secrétaire général de la préfecture de l'Orne, sous-préfet d'Alençon - M. SPERRY (Adrien)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666792",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du directeur de cabinet du préfet de la Loire - M. JAYET-LARAFFE (Alexandre)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666800",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du secrétaire général de la préfecture de la Charente, sous préfet d'Angoulême - M. DEMAI (Hervé)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666808",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du sous-préfet d'Ussel - M. CARON (Julien)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666816",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du sous-préfet chargé de mission auprès du préfet de la région Provence-Alpes-Côte d'Azur, préfet de la zone de défense et de sécurité Sud, préfet des Bouches-du-Rhône - M. CHAMOULAUD (Nicolas)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666823",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du directeur de cabinet du préfet de la région Réunion, préfet de La Réunion - M. FOLLET (Tom)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666831",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant cessation de fonctions de la sous-préfète chargée de mission auprès du préfet du Val-de-Marne - Mme MEJANI (Naaïma)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666847",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du secrétaire général de la préfecture du Cantal, sous-préfet d'Aurillac - M. PELLEGRIN (Gilles)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666855",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du sous-préfet chargé de mission auprès du préfet du Val-de-Marne - M. BERTHEAS (Florentin)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666863",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant cessation de fonctions du sous-préfet d'Yssingeaux - M. BENAMRAN (Alban-Barry)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666870",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination de la sous-préfète chargée de mission auprès du préfet de la Haute-Loire - Mme BARDET (Aurore)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666878",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du secrétaire général de la préfecture de la Lozère, sous-préfet de Mende - M. MORINAUD (Jean-Baptiste)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666886",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du secrétaire général de la préfecture de la Loire, sous-préfet de Saint-Etienne (groupe II) - M. MILLET (Jérôme)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666894",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du directeur de cabinet, directeur général de la sécurité, de la réglementation et des contrôles auprès du préfet de la région Guyane, préfet de la Guyane (groupe III) - M. TARREGA (Jean-Luc)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666902",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du sous-préfet chargé de mission auprès du préfet de la région Auvergne-Rhône-Alpes, préfet de la zone de défense et de sécurité Sud-Est, préfet du Rhône - M. ZAÏR (Ottman)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666910",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du sous-préfet de Villefranche-sur-Saône (groupe II) - M. VICAT (Jean-Paul)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666918",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du secrétaire général de la préfecture des Yvelines, sous-préfet de Versailles (groupe II) - M. CELLARD (Augustin)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666926",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination du secrétaire général de la préfecture du Haut-Rhin, sous-préfet de Colmar (groupe II) - M. TANGUY (Morgan)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666934",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant cessation de fonctions du secrétaire général de la préfecture de la Loire, sous-préfet de Saint-Etienne (groupe II) - M. SCHUFFENECKER (Dominique)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666950",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (directions départementales interministérielles)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666958",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (directions départementales interministérielles)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666966",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666973",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (directions départementales interministérielles)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666978",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration territoriale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666985",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration territoriale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666990",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666995",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration territoriale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667000",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (commissaires à la lutte contre la pauvreté)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667005",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (directions départementales interministérielles)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667013",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 29 juillet 2026 portant admission à la retraite (ingénieurs civils de la défense)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667020",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 6 août 2026 portant admission à la retraite (ingénieurs civils de la défense)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667022",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 6 août 2026 portant admission à la retraite (ingénieurs civils de la défense)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667024",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 7 août 2026 portant nomination (mandataires suppléants de recettes et d'avances)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667026",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667029",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 portant promotion de grade (inspection du travail)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667035",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 portant promotion de grade (inspection du travail)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667037",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 portant promotion de grade (inspection du travail)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667039",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination (magistrature)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667045",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 4 août 2026 modifiant l'arrêté du 19 janvier 2026 portant admission à la retraite (magistrature)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667055",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 5 août 2026 modifiant l'arrêté du 22 juillet 2026 portant admission à la retraite (magistrature)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667057",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 5 août 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667060",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667065",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667070",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 4 août 2026 portant admission à la retraite (inspecteurs de santé publique vétérinaire)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667077",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination d'un inspecteur (groupe II) au Conseil général de l'alimentation, de l'agriculture et des espaces ruraux",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667079",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667087",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667092",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 11 août 2026 portant nomination du directeur général par intérim de Campus France",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667097",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667110",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 portant nomination au comité de sélection pour la nomination dans les emplois de l'inspection générale des affaires culturelles",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667116",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667119",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination (direction départementale des finances publiques)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667125",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 23 juillet 2026 portant nomination au Conseil supérieur de la fonction publique de l'Etat",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667135",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 7 août 2026 portant nomination d'un régisseur d'avances et de recettes auprès du service à compétence nationale « Musée national des douanes »",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667137",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 portant nomination (administration centrale)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667146",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 6 août 2026 portant extension d'un avenant à un accord collectif étendu relatif aux productions agricoles et aux coopératives d'utilisation de matériel agricole de l'Isère",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667166",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décision n° 504695 du 17 juillet 2026 du Conseil d'Etat statuant au contentieux",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667189",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décision n° 510819 du 28 juillet 2026 du Conseil d'Etat statuant au contentieux",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667191",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décision n° 498593 du 30 juillet 2026 du Conseil d'Etat statuant au contentieux",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667193",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Avis relatif à un transfert de portefeuille de bulletins d'adhésion à des règlements et de contrats d'une mutuelle par voie de fusion absorption",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667196",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Documents et publications",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667205",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Documents déposés",
+      "nature": "INFORMATIONS_PARLEMENTAIRES",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667208",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Avis de vacance d'un emploi de directeur des finances publiques des îles Wallis et Futuna",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667213",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Demandes de changement de nom (Accès protégé textes 127 à 131)",
+      "nature": "ANNONCES",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667224",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 modifiant les niveaux de bonification des fiches d'opérations standardisées TRA-EQ-114 et TRA-EQ-117",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666159",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 constatant le montant du droit à compensation des charges d'investissement et de fonctionnement résultant pour les départements et métropoles du transfert d'autoroutes, de routes ou de portions de voies non concédées en application de l'article 38 de la loi n° 2022-217 du 21 février 2022 relative à la différenciation, la décentralisation, la déconcentration et portant diverses mesures de simplification de l'action publique locale",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666498",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 10 août 2026 fixant la liste des équipements, composants essentiels et matières premières utilisés dans le cadre des activités contribuant à la production de batteries, de panneaux solaires, d'éoliennes ou de pompes à chaleur entrant dans le champ du crédit d'impôt au titre des investissements dans l'industrie verte",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666067",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 7 août 2026 relatif aux conditions et limites régissant le cadre fiscal des achats de vendanges, de moûts et de vins destinés à l'élaboration des vins susceptibles de bénéficier de l'appellation d'origine contrôlée « Champagne » pour la campagne 2026-2027",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666213",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 20 juillet 2026 fixant pour 2026 le montant de la dotation des régimes obligatoires de l'assurance maladie versée au comité de gestion des œuvres sociales au titre de la convention souscrite au profit de ses adhérents en application de l'article L. 141-1 du code des assurances",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666239",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 constatant le montant du droit à compensation des charges nouvelles nettes résultant pour les régions, la collectivité de Corse, les collectivités territoriales de Martinique et de Guyane et le département-région de Mayotte de l'application du décret n° 2021-138 du 10 février 2021 portant majoration exceptionnelle du montant de l'aide accordée sous forme de bourse d'études par le conseil régional aux élèves et étudiants des formations sanitaires et sociales",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666431",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 constatant le montant du droit à compensation des charges nouvelles nettes résultant pour les régions, la collectivité de Corse, les collectivités territoriales de Martinique et de Guyane et le département-région de Mayotte de l'application du décret n° 2021-1623 du 11 décembre 2021 relatif aux modalités de versement de l'aide exceptionnelle prévue à l'article 13 de la loi n° 2021-1549 du 1er décembre 2021 de finances rectificative pour 2021",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666452",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 constatant le montant du droit à compensation résultant pour les régions et la collectivité de Corse du transfert au 1er janvier 2023 des services ou parties de services de l'Etat chargés des compétences d'autorité administrative en matière de gestion des sites « Natura 2000 » exclusivement terrestres en application de l'article 61 de la loi n° 2022-217 du 21 février 2022 relative à la différenciation, la décentralisation, la déconcentration et portant diverses mesures de simplification de l'action publique locale",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666481",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 modifiant l'arrêté du 12 septembre 2022 constatant le montant du droit à compensation des charges nouvelles résultant pour la Collectivité européenne d'Alsace et l'eurométropole de Strasbourg du transfert des routes et autoroutes non concédées en application de la loi n° 2019-816 du 2 août 2019 relative aux compétences de la Collectivité européenne d'Alsace",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666519",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 3 août 2026 constatant le montant du droit à compensation résultant pour les communes du transfert des compétences en matière de police de la publicité prévu par l'article 17 de la loi n° 2021-1104 du 22 août 2021 portant lutte contre le dérèglement climatique et renforcement de la résilience face à ses effets",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666540",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret n° 2026-768 du 11 août 2026 relatif à l'information du fonctionnaire sur les modalités de report de jours de congé annuel non pris",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666555",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 23 juillet 2026 fixant le montant d'une subvention exceptionnelle versée aux organisations syndicales représentatives de fonctionnaires de l'Etat",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666578",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 11 août 2026 confiant la direction d'une mission interministérielle pour la reconstruction et l'adaptation des territoires touchés par les feux de forêts durant l'été 2026",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666626",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 11 août 2026 chargeant une sénatrice d'une mission temporaire",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666641",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination de la sous-préfète de La Trinité - Mme AVEROUS (Virginie)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666688",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant nomination de la directrice de cabinet du préfet du Tarn - Mme de LEVEZOU de VEZINS (Anne)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666839",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant cessation de fonctions de la directrice de cabinet du préfet délégué auprès du représentant de l'Etat dans les collectivités de Saint-Barthélemy et de Saint-Martin - Mme CHAUVEAU (Marie-Hildegarde)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666942",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 30 juillet 2026 portant nomination d'une directrice régionale adjointe de l'environnement, de l'aménagement et du logement (région Normandie)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667042",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 24 juillet 2026 fixant la liste des personnes autorisées à exercer en France la profession de médecin dans la spécialité « endocrinologie, diabète, nutrition » en application des dispositions de l'article L. 4111-2 (I) du code de la santé publique et du IV de l'article 83 de la loi n° 2006-1640 du 21 décembre 2006 de financement de la sécurité sociale pour 2007",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667100",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Décret du 10 août 2026 portant approbation d'élections à l'Académie nationale de médecine (enseignement supérieur)",
+      "nature": "DECRET",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667142",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 6 août 2026 portant extension d'un accord régional applicable dans les exploitations et entreprises de la production agricole et des coopératives d'utilisation de matériel agricole de Normandie",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667153",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Arrêté du 6 août 2026 portant extension d'un avenant à un accord régional concernant les entreprises de travaux agricoles et ruraux de la région Hauts-de-France",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667177",
+      "date": "2026-08-12"
+    },
+    {
+      "titre": "Avis relatif à un transfert partiel de portefeuille de contrats d'une entreprise d'assurance",
+      "nature": "AVIS",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054667200",
+      "date": "2026-08-12"
+    }
+  ],
+  "jo_retenus": [
+    {
+      "id": "cbeefd4efaf3",
+      "source": "JORF",
+      "categorie": "Déchets",
+      "titre": "Arrêté du 10 août 2026 créant la fiche d'opération standardisée TRA-EQ-133 « Achat ou location d'une voiture particulière électrique d'occasion », le référentiel de contrôle et la bonification associés",
+      "resume": "ABC doit anticiper l'impact de la bonification des véhicules électriques d'occasion sur ses choix de flotte (scope 1) et son reporting GES.",
+      "pourquoi": "L'arrêté crée une bonification pour l'achat/location de véhicules électriques d'occasion, incitant ABC à accélérer l'électrification de sa flotte (scope 1) pour réduire ses émissions et améliorer son reporting GES, avec un impact financier direct sur les coûts opérationnels et la conformité réglementaire d'ici 2026.",
+      "criticite": 2,
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054666103",
+      "date": "2026-08-12"
+    }
+  ],
+  "briefing_jorf": "Les arrêtés TRA-EQ-133, TRA-EQ-114 et TRA-EQ-117 renforcent les incitations fiscales pour l'achat ou la location de véhicules électriques d'occasion et ajustent les bonifications liées aux transports durables. L'arrêté fixant la liste des équipements pour la production de batteries, panneaux solaires, éoliennes et pompes à chaleur cadre les critères d'éligibilité au crédit d'impôt pour l'industrie verte, impactant les stratégies d'approvisionnement durable.",
+  "pjl_fiches": [
+    {
+      "id": "pjl-14aebd68935a",
+      "titre": "Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche",
+      "date_depot": "2026-03-24",
+      "stade": "Première lecture à l'Assemblée nationale",
+      "stade_index": 2,
+      "url_an": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
+      "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
+      "source_rss": "manuel",
+      "resume_abc": "Économie / finances : compléments aux règles issues de directives financières et de transparence (par exemple sur l’information extra‑financière type CSRD, la régulation de certains acteurs financiers ou de marchés), ajustements de dispositions de droit des sociétés et de droit financier pour se mettre en conformité avec le droit européen.\n\nEnvironnement / énergie : mesures pour transposer ou adapter des directives récentes en matière d’efficacité énergétique et d’énergies renouvelables, ainsi que des ajustements sur la protection de la biodiversité (dérogations « espèces protégées ») et certains dispositifs liés aux emballages et déchets",
+      "pourquoi": "Impact CSRD et efficacité énergétique",
+      "score": 2,
+      "horizon": null,
+      "nouveau_stade": false,
+      "manuel": true,
+      "historique": [
+        {
+          "date": "2026-08-12",
+          "stade": "Première lecture à l'Assemblée nationale",
+          "event": "Importé depuis UI"
+        }
+      ],
+      "created_at": "2026-08-12",
+      "updated_at": "2026-08-12",
+      "supabase_id": "2f4948e1-de90-40ba-b759-b1b8ba2b0b1f",
+      "statut": "a_surveiller"
+    }
+  ],
+  "pjl_autres": [
+    {
+      "source": "AN Projets de loi",
+      "items": [
+        {
+          "titre": "La relance et la décentralisation du logement - N° 3058",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PJL_relance_decentralisation_logement_2",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PJL_relance_decentralisation_logement_2",
+          "date": "2026-06-25"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord multilatéral entre autorités compétentes portant sur l’échange des informations GloBE - N° 3060",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54379",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54379",
+          "date": "2026-05-27"
+        },
+        {
+          "titre": "Projet de loi d’urgence pour la protection et la souveraineté agricoles - N° 3017",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_urgence_pour_protection_et_souverainete_agricoles",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_urgence_pour_protection_et_souverainete_agricoles",
+          "date": "2026-04-08"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement de la République unie de Tanzanie relatif aux services aériens - N° 2985",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54168",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54168",
+          "date": "2026-04-15"
+        },
+        {
+          "titre": "Projet de loi portant simplification des normes applicables aux collectivités territoriales - N° 2987",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54164",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54164",
+          "date": "2026-04-15"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement d’Antigua-et-Barbuda relatif aux services aériens - N° 2986",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54169",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54169",
+          "date": "2026-04-15"
+        },
+        {
+          "titre": "La relance et la décentralisation du logement - N° 2981",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PJL_relance_decentralisation_logement",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PJL_relance_decentralisation_logement",
+          "date": "2026-06-24"
+        },
+        {
+          "titre": "Projet de loi relatif à la régulation de l'enseignement supérieur privé - N° 2860",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/regulation_enseignement_superieur_prive_2026",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/regulation_enseignement_superieur_prive_2026",
+          "date": "2026-01-28"
+        },
+        {
+          "titre": "Projet de loi actualisant la programmation militaire pour les années 2024 à 2030 et portant diverses dispositions intéressant la défense - N° 2920",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PJL_actualisation_loi_programmation_militaire_annees_2024_2030_diverses_dispositions_defense",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PJL_actualisation_loi_programmation_militaire_annees_2024_2030_diverses_dispositions_defense",
+          "date": "2026-04-08"
+        },
+        {
+          "titre": "Projet de loi de sécurisation du travail le 1er mai des salariés volontaires des boulangers-pâtissiers artisanaux et des artisans fleuristes grâce au dialogue social de branche - N° 2936",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54259",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54259",
+          "date": "2026-04-29"
+        },
+        {
+          "titre": "Projet de loi relatif à la protection des enfants - N° 2841",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_relatif_a_la_protection_des_enfants",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_relatif_a_la_protection_des_enfants",
+          "date": "2026-05-27"
+        },
+        {
+          "titre": "Projet de loi visant à offrir des réponses immédiates aux phénomènes troublant l’ordre public, la sécurité et la tranquillité de nos concitoyens - N° 2850",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53980",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53980",
+          "date": "2026-03-25"
+        },
+        {
+          "titre": "Projet de loi portant approbation des comptes de la sécurité sociale de l’année 2025 - N° 2843",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_portant_approbation_des_comptes_de_la_securite_sociale_de_annee_2025",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_de_loi_portant_approbation_des_comptes_de_la_securite_sociale_de_annee_2025",
+          "date": "2026-05-27"
+        },
+        {
+          "titre": "Projet de loi habilitant le Gouvernement à prendre, par ordonnances, les adaptations rendues nécessaires par l’entrée en application des règlements (UE) n°s 2024/1347, 2024/1348, 2024/1349, 2024/1350, 2024/1351, 2024/1352, 2024/1356, 2024/1358, 2024/1359 du Parlement européen et du Conseil du 14 mai 2024, et les dispositions nécessaires à la transposition de la directive (UE) 2024/1346 du Parlement européen et &#13;du Conseil du 14 mai 2024 - N° 2820",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54094",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54094",
+          "date": "2026-04-08"
+        },
+        {
+          "titre": "Projet de loi portant transposition de l’avenant n°3 du 25 février 2026 au protocole d’accord du 10 novembre 2023 relatif à l’assurance chômage - N° 2805",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53981",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53981",
+          "date": "2026-03-25"
+        },
+        {
+          "titre": "Projet de loi Projet de loi-cadre relatif au développement des transports - N° 2740",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53785",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53785",
+          "date": "2026-02-11"
+        },
+        {
+          "titre": "Projet de loi constitutionnelle pour une Corse autonome au sein de la République - N° 2697",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_constitutionnelle_pour_Corse_autonome_au_sein_Republique",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/projet_loi_constitutionnelle_pour_Corse_autonome_au_sein_Republique",
+          "date": "2026-04-27"
+        },
+        {
+          "titre": "Projet de loi relative aux résultats de la gestion et portant approbation des comptes de l'année 2025 - N° 2694",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/resultats_gestion_approbation_comptes_2025",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/resultats_gestion_approbation_comptes_2025",
+          "date": "2026-04-22"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord entre le Gouvernement de la République française et le Gouvernement du Royaume des Pays-Bas portant délimitation de la frontière entre la République française (Saint-Martin) et le Royaume des Pays-Bas (Sint Maarten) - N° 2688",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53848",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53848",
+          "date": "2026-02-25"
+        },
+        {
+          "titre": "Projet de loi sur la justice criminelle et le respect des victimes - N° 2681",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53940",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53940",
+          "date": "2026-03-18"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de l’accord de partenariat et de coopération renforcé&#13;entre l'Union européenne et ses Etats membres, d'une part, et la République kirghize, d'autre part - N° 2691",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53844",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53844",
+          "date": "2026-02-25"
+        },
+        {
+          "titre": "Projet de loi organique relatif au renforcement des juridictions criminelles - N° 2682",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53942",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53942",
+          "date": "2026-03-18"
+        },
+        {
+          "titre": "Projet de loi portant habilitation de l’assemblée de Martinique à fixer elle-même des règles applicables sur son territoire en application de l’article 73 de la Constitution en matière d’énergie, d’eau et d’assainissement - N° 2609",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53600",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53600",
+          "date": "2026-01-19"
+        },
+        {
+          "titre": "Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche - N° 2518",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53140",
+          "date": "2025-11-10"
+        },
+        {
+          "titre": "Projet de loi constitutionnelle relatif à la Nouvelle-Calédonie - N° 2529",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52984",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52984",
+          "date": "2025-10-14"
+        },
+        {
+          "titre": "Projet de loi de financement de la sécurité sociale pour 2026 - N° 2242",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2026",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/PLFSS_2026",
+          "date": "2025-10-14"
+        },
+        {
+          "titre": "Projet de loi autorisant l’approbation de la convention entre le Gouvernement de la République française et le Gouvernement de la République de Chypre pour l’élimination de la double imposition en matière d’impôts sur le revenu et la prévention de l’évasion et de la fraude fiscales - N° 2516",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53706",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53706",
+          "date": "2026-01-28"
+        }
+      ]
+    },
+    {
+      "source": "AN Textes adoptés",
+      "items": [
+        {
+          "titre": "Texte adopté N° 335",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_prevention_cardio_neuro_vasculaire_et_anticiper_risque_sanitaire_et_social_majeur_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_prevention_cardio_neuro_vasculaire_et_anticiper_risque_sanitaire_et_social_majeur_17e",
+          "date": "2025-12-23"
+        },
+        {
+          "titre": "Texte adopté N° 328",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/presomption_legitime_defense_forces_ordre",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/presomption_legitime_defense_forces_ordre",
+          "date": "2024-12-03"
+        },
+        {
+          "titre": "Texte adopté N° 324",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_droit_avocat_mesure_assistance_educative_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_droit_avocat_mesure_assistance_educative_17e",
+          "date": "2025-09-16"
+        },
+        {
+          "titre": "Texte adopté N° 316",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/acces_logement_travailleurs_services_publics_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/acces_logement_travailleurs_services_publics_17e",
+          "date": "2025-04-17"
+        },
+        {
+          "titre": "Texte adopté N° 317",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/relancer_investissements_secteur_hydroelectricite_contribuer_transition_energetique_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/relancer_investissements_secteur_hydroelectricite_contribuer_transition_energetique_17e",
+          "date": "2026-01-13"
+        },
+        {
+          "titre": "Texte adopté N° 323",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fin_de_vie_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fin_de_vie_17e",
+          "date": "2025-03-11"
+        },
+        {
+          "titre": "Texte adopté N° 322",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51732",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N51732",
+          "date": "2025-03-18"
+        },
+        {
+          "titre": "Texte adopté N° 321",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/impact_environnemental_industrie_textile",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/impact_environnemental_industrie_textile",
+          "date": "2024-01-30"
+        },
+        {
+          "titre": "Texte adopté N° 319",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52000",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52000",
+          "date": "2025-04-28"
+        },
+        {
+          "titre": "Texte adopté N° 310",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53304",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N53304",
+          "date": "2025-12-03"
+        },
+        {
+          "titre": "Texte adopté N° 315",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/retention_admin_prevention_attentats_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/retention_admin_prevention_attentats_17e",
+          "date": "2025-12-02"
+        },
+        {
+          "titre": "Texte adopté N° 313",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N50548",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N50548",
+          "date": "2024-10-03"
+        },
+        {
+          "titre": "Texte adopté N° 312",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/pour_egalite_acces_soins_ressortissants_ultramarins_hexagone_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/pour_egalite_acces_soins_ressortissants_ultramarins_hexagone_17e",
+          "date": "2025-12-23"
+        },
+        {
+          "titre": "Texte adopté N° 311",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reforme_bourses_criteres_sociaux_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/reforme_bourses_criteres_sociaux_17e",
+          "date": "2026-04-28"
+        },
+        {
+          "titre": "Texte adopté N° 309",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/nationalisation_arcelormittal_2025",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/nationalisation_arcelormittal_2025",
+          "date": "2025-10-14"
+        },
+        {
+          "titre": "Texte adopté N° 308",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/renforcer_solidarite_envers_retraites_pauvres_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/renforcer_solidarite_envers_retraites_pauvres_17e",
+          "date": "2025-04-22"
+        },
+        {
+          "titre": "Texte adopté N° 305",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52549",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52549",
+          "date": "2025-07-11"
+        },
+        {
+          "titre": "Texte adopté N° 304",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_evaluer_precisement_cout_reel_et_societal_de_insecurite_routiere_et_son_impact_sur_finances_publiques_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_evaluer_precisement_cout_reel_et_societal_de_insecurite_routiere_et_son_impact_sur_finances_publiques_17e",
+          "date": "2025-09-03"
+        }
+      ]
+    }
+  ],
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°3017)** pourrait impacter les pratiques agricoles et les politiques de durabilité, tandis que le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** inclut des enjeux clés comme l’énergie, l’eau et l’assainissement. Le **Projet de loi-cadre relatif au développement des transports (N°2740)** et le **Projet de loi de financement de la sécurité sociale pour 2026 (N°2242)** pourraient aussi influencer les stratégies RSE et de reporting des entreprises."
+}
