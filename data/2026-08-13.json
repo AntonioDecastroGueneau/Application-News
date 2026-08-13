@@ -1,7 +1,7 @@
 {
   "date": "2026-08-13",
-  "generated_at": "07:11",
-  "elapsed_seconds": 179,
+  "generated_at": "12:10",
+  "elapsed_seconds": 213,
   "errors": [],
   "stats": {
     "jo_analyses": 12,
@@ -9,18 +9,18 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-13T07:11:30",
+    "run_at": "2026-08-13T12:10:23",
     "sources": {
       "JORF": 0,
-      "RSS": 8,
+      "RSS": 6,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 52,
-    "llm_seconds": 59.4
+    "llm_calls": 50,
+    "llm_seconds": 97.7
   },
   "items": [
     {
@@ -28,10 +28,32 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Avec la sécheresse en France, des tensions de plus en plus vives sur l’approvisionnement en eau potable : « Nous sommes dans l’inconnu »",
-      "resume": "L'article souligne l'aggravation des tensions sur l'approvisionnement en eau potable en France, avec des restrictions déjà en place pour 40 000 personnes, ce qui pourrait impacter les activités de nettoyage (consommation d'eau, qualité des prestations) et les risques opérationnels sur les 3 000+ sites clients d'ABC.",
+      "resume": "L'article souligne les tensions croissantes sur l'approvisionnement en eau potable en France, avec des restrictions déjà en place pour 40 000 personnes, ce qui pourrait impacter les activités de nettoyage et de gestion des déchets d'ABC chez ses clients (ex. : accès limité à l'eau pour les prestations).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/08/13/avec-la-secheresse-des-tensions-de-plus-en-plus-vives-sur-l-approvisionnement-en-eau-potable-nous-sommes-dans-l-inconnu_6745401_3244.html",
+      "date": "2026-08-13"
+    },
+    {
+      "id": "f35206469b63",
+      "source": "The Guardian Environment",
+      "categorie": "Déchets",
+      "titre": "Europe heatwave live: Temperatures of 40C expected in Spain; rare warning for ‘extreme heat’ expanded across England",
+      "resume": "L'article souligne l'intensification des vagues de chaleur en Europe, un risque climatique opérationnel pouvant impacter les activités de propreté/FM d'ABC sur ses 3 000+ sites clients (ex. : perturbations logistiques, adaptation des prestations).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/environment/live/2026/aug/13/europe-heatwave-france-spain-italy-uk-degrees-temperature-record-summer-drought-latest-news-updates",
+      "date": "2026-08-13"
+    },
+    {
+      "id": "30fa31c80ce9",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "PST 2026-2030 : faire du DUERP un véritable outil de prévention",
+      "resume": "Le PST 2026-2030 renforce le DUERP (Document Unique d'Évaluation des Risques Professionnels) avec un accompagnement accru des employeurs, incluant une meilleure prise en compte des risques environnementaux et climatiques pour les salariés.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/pst-2026-2030-faire-du-duerp-un-veritable-outil-de-prevention-2",
       "date": "2026-08-13"
     },
     {
@@ -39,21 +61,10 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Sécheresse : des coupures d'eau chez 40 000 personnes en France",
-      "resume": "La sécheresse et les coupures d'eau chez 40 000 personnes en France illustrent les risques climatiques opérationnels croissants pour ABC, dont les activités de propreté/FM dépendent de l'accès à l'eau sur ses 3 000+ sites clients.",
+      "resume": "La sécheresse et les coupures d'eau potentielles pourraient impacter les activités de nettoyage (besoins en eau) et la continuité des prestations chez les clients d'ABC, notamment dans les territoires concernés.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Secheresse-des-coupures-d-eau-chez-40-000-personnes",
-      "date": "2026-08-12"
-    },
-    {
-      "id": "0083b48742a1",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Nouvelle vague de chaleur : 92 millions d'Européens exposés à plus de 35 °C mercredi",
-      "resume": "L'article souligne l'augmentation des vagues de chaleur en Europe, exposant 92 millions d'Européens à des températures >35°C, ce qui pourrait impacter la performance opérationnelle de ABC sur ses 3 000+ sites clients (risques de perturbation des prestations, sécurité des équipes, etc.).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Nouvelle-vague-de-chaleur-92-millions-d-Europeens-exposes-a-plus-de-35-oC-mercredi",
       "date": "2026-08-12"
     },
     {
@@ -61,7 +72,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "La facture des canicules risque d’être salée pour l’économie française : jusqu’à 15 milliards d’euros, selon la ministre de la transition écologique",
-      "resume": "L'article souligne l'impact économique des canicules sur la croissance française, ce qui pourrait influencer les exigences des clients d'ABC (notamment industriels et tertiaires) en matière de résilience climatique et de gestion des risques opérationnels.",
+      "resume": "L'article souligne l'impact économique des canicules sur la croissance française, ce qui pourrait influencer les exigences des clients d'ABC (notamment industriels ou tertiaires) en matière de résilience climatique et de services adaptés, sans impact direct immédiat sur les obligations réglementaires d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/08/12/la-facture-des-canicules-risque-d-etre-salee-pour-l-economie-francaise-jusqu-a-15-milliards-d-euros-selon-la-ministre-de-la-transition-ecologique_6745102_3234.html",
@@ -72,43 +83,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "L’alimentation en eau potable « est déjà sous tension » dans cinquante départements français, affirme Monique Barbut",
-      "resume": "L'article souligne une tension accrue sur l'alimentation en eau potable dans 50 départements français, ce qui pourrait impacter les activités de nettoyage et de gestion des déchets d'ABC, notamment en cas de restrictions d'accès à l'eau ou de perturbations logistiques.",
+      "resume": "L'article souligne une tension accrue sur la ressource en eau potable dans 50 départements français, ce qui pourrait impacter les activités de nettoyage et de gestion des déchets de ABC (ex. : restrictions d'usage de l'eau, coûts logistiques).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/08/12/l-alimentation-en-eau-potable-est-deja-sous-tension-dans-cinquante-departements-francais-affirme-monique-barbut_6745065_3244.html",
-      "date": "2026-08-12"
-    },
-    {
-      "id": "a4a78e1be2ff",
-      "source": "Le Monde Planète",
-      "categorie": "Énergie",
-      "titre": "Les objectifs européens de réduction des emballages entrent en vigueur, amoindris par une intense campagne de lobbying de l’industrie",
-      "resume": "Le nouveau règlement européen sur les emballages et leurs déchets introduit des objectifs de réduction qui pourraient impacter les pratiques de gestion des déchets des prestataires de propreté comme ABC, notamment en termes de traçabilité et de recyclage des emballages utilisés dans les prestations de nettoyage.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/08/12/les-objectifs-europeens-de-reduction-des-emballages-entrent-en-vigueur-amoindris-par-une-intense-campagne-de-lobbying-de-l-industrie_6744981_3244.html",
-      "date": "2026-08-12"
-    },
-    {
-      "id": "5b8d351e7c6e",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "Microsoft Signs Deal to Remove Carbon Using Wastewater Technology",
-      "resume": "Cet article illustre une solution innovante de décarbonation via la technologie wastewater (eaux usées), potentiellement applicable aux activités de services de propreté/FM pour réduire les émissions scope 3 liées aux déchets ou aux procédés clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/microsoft-signs-wastewater-based-carbon-removal-deal/?utm_source=rss&utm_medium=rss&utm_campaign=microsoft-signs-wastewater-based-carbon-removal-deal",
-      "date": "2026-08-12"
-    },
-    {
-      "id": "e6191f838ce5",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "Novisto Launches Double Materiality Assessment Solution",
-      "resume": "La solution de Novisto permet d'évaluer la double matérialité, un enjeu clé pour le reporting CSRD/ESRS d'ABC, notamment pour identifier les impacts et risques climatiques pertinents dans son périmètre (scope 3, déchets, énergie).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/novisto-launches-double-materiality-assessment-solution/?utm_source=rss&utm_medium=rss&utm_campaign=novisto-launches-double-materiality-assessment-solution",
       "date": "2026-08-12"
     }
   ],
@@ -149,11 +127,6 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "85",
-      "dept_nom": "Vendée",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "53",
       "dept_nom": "Mayenne",
       "niveau": "crise"
@@ -171,6 +144,11 @@
     {
       "dept_code": "79",
       "dept_nom": "Deux-Sèvres",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "85",
+      "dept_nom": "Vendée",
       "niveau": "crise"
     },
     {
@@ -524,13 +502,13 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
+      "dept_code": "04",
+      "dept_nom": "Alpes-de-Haute-Provence",
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "04",
-      "dept_nom": "Alpes-de-Haute-Provence",
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
       "niveau": "alerte renforcée"
     },
     {
@@ -1013,7 +991,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "L'arrêté du 11 juin 2026 sur le diagnostic de performance énergétique (DPE) est le seul texte directement pertinent pour un Responsable Environnement/Climat, car il impacte les obligations réglementaires en matière d'efficacité énergétique des bâtiments, un enjeu clé pour les entreprises de services.",
+  "briefing_jorf": "L'arrêté du 11 juin 2026 sur le diagnostic de performance énergétique (DPE) est le seul texte directement pertinent pour un Responsable Environnement/Climat, car il impacte les obligations de mesure et de reporting énergétique des entreprises.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1325,5 +1303,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N° 2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à la protection de l’environnement et à la transposition de directives européennes dans ces domaines."
+  "pjl_briefing": "Parmi les projets de loi identifiés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique et de santé (N° 2518), qui pourrait inclure des mesures liées à la transition énergétique ou au reporting extra-financier, et le projet de loi-cadre relatif au développement des transports (N° 2740), susceptible d’impacter les politiques de mobilité durable et les émissions des entreprises. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou RSE."
 }
