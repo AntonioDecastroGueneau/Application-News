@@ -1,7 +1,7 @@
 {
   "date": "2026-08-14",
-  "generated_at": "07:08",
-  "elapsed_seconds": 176,
+  "generated_at": "12:08",
+  "elapsed_seconds": 168,
   "errors": [],
   "stats": {
     "jo_analyses": 12,
@@ -9,26 +9,37 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-14T07:08:06",
+    "run_at": "2026-08-14T12:08:17",
     "sources": {
       "JORF": 0,
-      "RSS": 7,
+      "RSS": 5,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 42,
-    "llm_seconds": 49.4
+    "llm_calls": 38,
+    "llm_seconds": 45.4
   },
   "items": [
     {
-      "id": "f7787eadc876",
+      "id": "245dddefcbaa",
       "source": "Reporterre",
       "categorie": "Climat",
-      "titre": "Des records de chaleur dans 136 communes cet été : la vôtre en fait-elle partie ?",
-      "resume": "L'article souligne l'intensification des vagues de chaleur en France, un risque climatique opérationnel pour ABC qui intervient sur 3 000+ sites clients, pouvant impacter les prestations de propreté/FM et les exigences de continuité d'activité.",
+      "titre": "Canicule : les orages prévus ce weekend vont-ils être violents ?",
+      "resume": "L'article souligne l'intensification des aléas climatiques (canicules et orages violents) en France, ce qui représente un risque opérationnel indirect pour ABC via ses 3 000+ sites clients (perturbations logistiques, sécurité des équipes, etc.).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Canicule-les-orages-prevus-ce-weekend-vont-ils-etre-violents",
+      "date": "2026-08-14"
+    },
+    {
+      "id": "a0820d6e7e38",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Votre commune a-t-elle battu son record de chaleur cet été ?",
+      "resume": "L'article souligne l'intensification des vagues de chaleur en France, un risque climatique opérationnel pour ABC qui intervient sur 3 000+ sites clients, pouvant impacter les prestations de propreté/FM et les exigences carbone des clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Des-records-de-chaleur-dans-136-communes-cet-ete-la-votre-en-fait-elle-partie",
@@ -39,7 +50,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Pourquoi les canicules se répètent-elles en France ? Les questions suscitées par une succession inédite de vagues de chaleur",
-      "resume": "L'article souligne l'augmentation des vagues de chaleur en France, un risque climatique opérationnel pour les 3 000+ sites clients d'ABC, pouvant impacter la continuité des prestations de propreté/FM et les exigences de résilience des clients (nucléaire, santé, industrie).",
+      "resume": "L'article souligne l'augmentation des vagues de chaleur en France, un risque climatique opérationnel pour ABC qui intervient sur 3 000+ sites clients. Cela peut impacter les conditions de travail, la demande en prestations de nettoyage et les exigences clients en matière de résilience.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/08/14/pourquoi-les-canicules-se-repetent-elles-en-france-les-questions-posees-par-une-succession-inedite-de-vagues-de-chaleur_6746106_3244.html",
@@ -50,21 +61,10 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Énergie solaire : une production en forte hausse durant les canicules",
-      "resume": "L'article met en lumière l'augmentation de la production solaire lors des canicules, un phénomène qui pourrait influencer les stratégies énergétiques des clients d'ABC (notamment tertiaire) et leurs exigences en matière de décarbonation, sans impact direct immédiat sur les activités d'ABC.",
+      "resume": "L'article illustre l'impact des aléas climatiques (canicules) sur la demande énergétique et la production renouvelable, un enjeu indirect pour ABC via les risques opérationnels sur ses 3 000+ sites clients et les exigences carbone de ses clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Energie-solaire-une-production-en-forte-hausse-durant-les-canicules",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "09b815575269",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "« Les réponses d’adaptation au changement climatique identifiées par la recherche scientifique ne sont pas miraculeuses, mais elles fonctionnent »",
-      "resume": "L'article souligne l'insuffisance des transformations urbaines face au changement climatique, ce qui peut impacter les sites clients d'ABC (risques opérationnels accrus) et renforcer les exigences de résilience des clients (nucléaire, santé, industrie).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/08/13/les-reponses-d-adaptation-au-changement-climatique-identifiees-par-la-recherche-scientifique-ne-sont-pas-miraculeuses-mais-elles-fonctionnent_6745812_3232.html",
       "date": "2026-08-13"
     },
     {
@@ -72,32 +72,10 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "Updapt Launches Solution Enabling Companies to Assess Climate-Related Risks",
-      "resume": "L'article présente un outil logiciel (Updapt) dédié à l'évaluation des risques climatiques pour les entreprises, utile pour ABC afin d'anticiper les aléas climatiques sur ses 3 000+ sites clients et répondre aux exigences carbone de ses clients (nucléaire, santé, industrie).",
+      "resume": "Lancement d'un module de gestion des risques climatiques par Updapt, permettant aux entreprises d'évaluer leurs vulnérabilités face aux aléas climatiques, utile pour ABC dans le cadre de la gestion des risques opérationnels sur ses 3 000+ sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/updapt-launches-solution-enabling-companies-to-assess-climate-related-risks/?utm_source=rss&utm_medium=rss&utm_campaign=updapt-launches-solution-enabling-companies-to-assess-climate-related-risks",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "b7057134cd3a",
-      "source": "ESG Today",
-      "categorie": "Environnement",
-      "titre": "What Mandatory Emissions Disclosure Looks Like in Practice: Lessons from Japan",
-      "resume": "L'article illustre les obligations de reporting carbone en pratique (ex. Japon), un signal fort pour anticiper les exigences similaires en UE/CSRD et renforcer la préparation de ABC aux futurs cadres réglementaires.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/what-mandatory-emissions-disclosure-looks-like-in-practice-lessons-from-japan/?utm_source=rss&utm_medium=rss&utm_campaign=what-mandatory-emissions-disclosure-looks-like-in-practice-lessons-from-japan",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "5a3e9315ae1f",
-      "source": "Les Echos Environnement",
-      "categorie": "Climat",
-      "titre": "« Elle nous sauve en journée » : pendant la canicule, l'énergie solaire à la rescousse des réseaux électriques pour éviter le black-out - Les Echos",
-      "resume": "L'article illustre l'importance croissante des énergies renouvelables (solaire) pour sécuriser les réseaux électriques face aux aléas climatiques (canicules), un enjeu indirect pour ABC via ses clients exposés aux risques opérationnels liés aux coupures ou instabilités énergétiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxNejRYak9GN3M2RFRBNGN1YThEYjhNdHNtb3ROVHFib3NWSWtMNWEyY3Bod1FHWjBGekVkeE8yQWxqdXNmQTlnMlhQUU02THlzNUZNWGFHbjVFZTVMZ05fYU1CblQzbjdGOTROY0ZBMWlfTkxnMVRYOWJYNFBJWlJIVjFrVjVSMURMNm1RS2hUTGNmNjBTNVJ6WUVlVGRuc0dJRlI4OXZPb282QnZlVUt0ZWhib3FGbmFvQU5XMFBmem9rdzhYdTJaMXJNQldReF8xZHBfNWl5cUFxTHRBcTkxRjVqdWtfZ1llVUg0MWV2RjRHQVVyZ2h4XzFvRXJJdGlLamFSR0pfdHYzVTI4bXl3dkh4UThZVnFRRzRKcDhGRmE1MXBtaUtj?oc=5",
       "date": "2026-08-13"
     }
   ],
@@ -323,13 +301,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "70",
-      "dept_nom": "Haute-Saône",
+      "dept_code": "71",
+      "dept_nom": "Saône-et-Loire",
       "niveau": "crise"
     },
     {
-      "dept_code": "71",
-      "dept_nom": "Saône-et-Loire",
+      "dept_code": "70",
+      "dept_nom": "Haute-Saône",
       "niveau": "crise"
     },
     {
@@ -423,13 +401,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "90",
-      "dept_nom": "Territoire de Belfort",
+      "dept_code": "68",
+      "dept_nom": "Haut-Rhin",
       "niveau": "crise"
     },
     {
-      "dept_code": "68",
-      "dept_nom": "Haut-Rhin",
+      "dept_code": "90",
+      "dept_nom": "Territoire de Belfort",
       "niveau": "crise"
     },
     {
@@ -513,13 +491,13 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "04",
-      "dept_nom": "Alpes-de-Haute-Provence",
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
+      "dept_code": "04",
+      "dept_nom": "Alpes-de-Haute-Provence",
       "niveau": "alerte renforcée"
     },
     {
@@ -888,7 +866,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés et décrets du 14 août 2026 pertinents pour un Responsable Environnement/Climat concernent principalement la sécurité de l'approvisionnement en électricité (Décret n° 2026-771) et l'expérimentation d'utilisation d'eaux impropres à la consommation pour des usages domestiques (Arrêté du 29 juillet 2026), pouvant impacter les stratégies de gestion des ressources et d'efficacité énergétique.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1200,5 +1178,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de santé) et le projet de loi de financement de la sécurité sociale pour 2026 (n°2242) pourraient présenter un intérêt indirect pour un Responsable Environnement/Climat, notamment via des mesures liées à la transition énergétique ou à la santé environnementale. Aucun texte ne traite directement de reporting RSE ou de déchets."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet de loi n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de transport) et le projet de loi n°2740 (développement des transports) pourraient impacter directement les enjeux climatiques, énergétiques et de mobilité durable pour une grande entreprise de services. Aucun texte ne traite spécifiquement des déchets ou du reporting RSE dans cette liste."
 }
