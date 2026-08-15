@@ -1,7 +1,7 @@
 {
   "date": "2026-08-15",
-  "generated_at": "06:20",
-  "elapsed_seconds": 177,
+  "generated_at": "11:45",
+  "elapsed_seconds": 164,
   "errors": [],
   "stats": {
     "jo_analyses": 16,
@@ -9,18 +9,18 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-15T06:20:45",
+    "run_at": "2026-08-15T11:45:13",
     "sources": {
       "JORF": 0,
-      "RSS": 5,
+      "RSS": 4,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 50,
-    "llm_seconds": 54.0
+    "llm_calls": 44,
+    "llm_seconds": 47.5
   },
   "items": [
     {
@@ -28,7 +28,7 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "Des étés toujours plus chauds : visualisez l'explosion des températures depuis 40 ans",
-      "resume": "L'article souligne l'accélération des vagues de chaleur en France, un risque climatique opérationnel pour ABC (3 000+ sites clients) pouvant impacter les prestations de propreté/FM (ex : adaptation des horaires, gestion de l'énergie).",
+      "resume": "L'article souligne l'accélération des vagues de chaleur en France, ce qui pourrait impacter les besoins en prestations de propreté (nettoyage renforcé, désinfection) et les risques opérationnels sur les sites clients d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Des-etes-toujours-plus-chauds-visualisez-l-explosion-des-temperatures-depuis-40-ans",
@@ -39,21 +39,10 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "18 jours : la vague de chaleur actuelle est plus longue que celle de 2003",
-      "resume": "L'article souligne l'intensification des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter les activités de propreté/FM d'ABC (ex. : conditions de travail, adaptation des prestations, gestion des sites clients).",
+      "resume": "L'article souligne l'intensification des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter les prestations de propreté/FM d'ABC sur 3 000+ sites clients (ex : adaptation des horaires, besoins en climatisation, santé des employés).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/18-jours-la-vague-de-chaleur-actuelle-est-plus-longue-que-celle-de-2003",
-      "date": "2026-08-14"
-    },
-    {
-      "id": "245dddefcbaa",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Canicule : les orages prévus ce weekend vont-ils être violents ?",
-      "resume": "L'article aborde les risques climatiques opérationnels (orages violents liés à la canicule) qui pourraient impacter les sites clients d'ABC (3 000+ sites) et perturber les prestations de propreté/FM, notamment en termes de sécurité des équipes et de continuité de service.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Canicule-les-orages-prevus-ce-weekend-vont-ils-etre-violents",
       "date": "2026-08-14"
     },
     {
@@ -61,7 +50,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "L’agenda de la transition énergétique",
-      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, hydrogène, rénovation) qui pourraient être utiles pour identifier des opportunités de décarbonation ou des partenariats pour ABC.",
+      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.) en France, offrant une veille sur les tendances et acteurs du secteur pour ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/08/lagenda-de-la-transition-energetique-281-431464/",
@@ -72,7 +61,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Les documents de la semaine",
-      "resume": "Cette newsletter hebdomadaire recense les documents clés de la transition énergétique (réglementations, études, analyses) qui pourraient impacter les enjeux RSE et climat d'ABC, notamment en matière de BGES, CSRD, énergie, déchets ou mobilité.",
+      "resume": "Cette newsletter hebdomadaire compile des documents clés sur la transition énergétique (réglementations, études, analyses) qui pourraient inclure des évolutions pertinentes pour le reporting ESG (CSRD/ESRS), la décarbonation des flottes ou les risques climatiques opérationnels de ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/08/les-documents-de-la-semaine-381215/",
@@ -181,6 +170,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "47",
+      "dept_nom": "Lot-et-Garonne",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "32",
       "dept_nom": "Gers",
       "niveau": "crise"
@@ -193,11 +187,6 @@
     {
       "dept_code": "37",
       "dept_nom": "Indre-et-Loire",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "47",
-      "dept_nom": "Lot-et-Garonne",
       "niveau": "crise"
     },
     {
@@ -366,13 +355,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "81",
-      "dept_nom": "Tarn",
+      "dept_code": "12",
+      "dept_nom": "Aveyron",
       "niveau": "crise"
     },
     {
-      "dept_code": "12",
-      "dept_nom": "Aveyron",
+      "dept_code": "81",
+      "dept_nom": "Tarn",
       "niveau": "crise"
     },
     {
@@ -1040,7 +1029,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Le décret n°2026-790 relatif à la mise en compatibilité du schéma de cohérence territoriale de Flandre-Dunkerque avec le projet EPR2 à Gravelines est le seul texte directement pertinent pour un Responsable Environnement/Climat, car il impacte la planification territoriale et les enjeux énergétiques et climatiques locaux.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1352,5 +1341,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le projet n°2518 ('Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière [...] environnementale, énergétique [...]') semble directement pertinent pour un Responsable Environnement/Climat, car il pourrait inclure des mesures liées à la transposition de directives européennes sur l'énergie et l'environnement. Aucun autre texte ne mentionne explicitement des enjeux climatiques, énergétiques ou de RSE."
+  "pjl_briefing": "Parmi les projets de loi identifiés, trois présentent un intérêt direct pour un Responsable Environnement/Climat : le projet de loi portant diverses dispositions d'adaptation au droit de l’UE en matière environnementale, énergétique et de pêche (N°2518), le projet de loi-cadre relatif au développement des transports (N°2740) et le projet de loi habilitant la Martinique à fixer des règles locales en matière d’énergie, d’eau et d’assainissement (N°2609). Ces textes pourraient impacter les stratégies RSE, le reporting extra-financier et les obligations de décarbonation des entreprises."
 }
