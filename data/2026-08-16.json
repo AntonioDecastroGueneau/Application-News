@@ -1,7 +1,7 @@
 {
   "date": "2026-08-16",
-  "generated_at": "06:26",
-  "elapsed_seconds": 406,
+  "generated_at": "11:46",
+  "elapsed_seconds": 179,
   "errors": [],
   "stats": {
     "jo_analyses": 15,
@@ -9,7 +9,7 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-16T06:26:55",
+    "run_at": "2026-08-16T11:46:34",
     "sources": {
       "JORF": 0,
       "RSS": 1,
@@ -19,8 +19,8 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 31,
-    "llm_seconds": 35.2
+    "llm_calls": 33,
+    "llm_seconds": 37.3
   },
   "items": [
     {
@@ -28,9 +28,9 @@
       "source": "Actuel HSE",
       "categorie": "Énergie",
       "titre": "Absence de Duerp : vers une amende administrative de 4 000 € par travailleur",
-      "resume": "L'article annonce une amende administrative de 4 000 € par travailleur pour absence de DUERP (Document Unique d'Évaluation des Risques Professionnels), ce qui impacte directement la conformité réglementaire de ABC en matière de sécurité et de gestion des risques environnementaux pour ses 3 000+ sites clients.",
-      "pourquoi": "Le DUERP est une obligation légale pour tous les employeurs en France, incluant les prestataires de services comme ABC. Son absence expose l'entreprise à des sanctions financières significatives, ce qui en fait un enjeu direct pour le Responsable Environnement/Climat en termes de conformité réglementaire et de gestion des risques opérationnels. Bien que le DUERP soit principalement un document de sécurité au travail, son absence peut aussi impacter la crédibilité ESG de ABC auprès de ses clients (nucléaire, santé, industrie) exigeant des standards élevés en matière de gestion des risques.",
-      "criticite": 2,
+      "resume": "L'article aborde une potentielle amende administrative pour absence de DUERP (Document Unique d'Évaluation des Risques Professionnels), qui pourrait impacter la gestion des risques environnementaux et sociaux d'ABC, notamment en lien avec la prévention des risques professionnels et la conformité réglementaire.",
+      "pourquoi": "",
+      "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/absence-de-duerp-vers-une-amende-administrative-de-4-000-eu-par-travailleur",
       "date": "2026-08-16"
     }
@@ -1242,5 +1242,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) qui pourrait inclure des mesures liées à la transition énergétique et à la réglementation environnementale, et le **Projet de loi-cadre relatif au développement des transports** (N°2740) qui pourrait impacter les stratégies de mobilité durable des entreprises. Aucun texte adopté ne semble directement lié à l'environnement ou au climat."
+  "pjl_briefing": "Parmi les projets de loi, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l’économie circulaire et à la réglementation environnementale européenne. Aucun autre texte ne semble aborder spécifiquement des enjeux climatiques, de gestion des déchets ou de reporting RSE."
 }
