@@ -1,7 +1,7 @@
 {
   "date": "2026-08-18",
-  "generated_at": "06:24",
-  "elapsed_seconds": 159,
+  "generated_at": "11:52",
+  "elapsed_seconds": 180,
   "errors": [],
   "stats": {
     "jo_analyses": 2,
@@ -9,29 +9,29 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-18T06:24:57",
+    "run_at": "2026-08-18T11:52:18",
     "sources": {
       "JORF": 0,
-      "RSS": 6,
+      "RSS": 5,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 34,
-    "llm_seconds": 42.9
+    "llm_calls": 37,
+    "llm_seconds": 53.3
   },
   "items": [
     {
-      "id": "608a685bdcd6",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "Méduses, sécheresse et canicules : l’été 2026 met à mal le parc nucléaire d'EDF",
-      "resume": "L'article illustre les risques climatiques opérationnels (canicules, méduses) affectant les infrastructures critiques en France, pouvant impacter indirectement les clients d'ABC (ex : perturbations d'approvisionnement en énergie) et leurs exigences carbone.",
+      "id": "a06ef11a83d4",
+      "source": "ESG Today",
+      "categorie": "Énergie",
+      "titre": "Why Investor Transition Plans Are No Longer Optional: They’re a Competitive Advantage",
+      "resume": "L'article souligne l'importance croissante des plans de transition pour les investisseurs, ce qui peut impacter les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaire, santé et industrie) et renforcer la pression sur le reporting ESG et la décarbonation de la flotte de véhicules.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.novethic.fr/environnement/transition-energetique/meduses-secheresse-et-canicules-lete-2026-met-a-mal-le-parc-nucleaire-dedf",
+      "url": "https://www.esgtoday.com/why-investor-transition-plans-are-no-longer-optional-theyre-a-competitive-advantage/?utm_source=rss&utm_medium=rss&utm_campaign=why-investor-transition-plans-are-no-longer-optional-theyre-a-competitive-advantage",
       "date": "2026-08-18"
     },
     {
@@ -39,7 +39,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Les 12 articles environnement à (re)lire pendant l'été",
-      "resume": "L'article recense des sujets réglementaires et stratégiques liés à l'audit énergétique, aux réglementations européennes (REACH, Industrial Accelerator Act) et aux bilans des lois Climat et Résilience/LOM, pertinents pour le suivi des enjeux énergie, reporting ESG et mobilité durable de ABC.",
+      "resume": "L'article mentionne des sujets réglementaires clés comme les audits énergétiques, la loi Climat et Résilience, et la LOM, qui impactent directement les obligations énergétiques et climatiques d'ABC, notamment pour ses clients et sa flotte de véhicules.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
@@ -57,25 +57,14 @@
       "date": "2026-08-17"
     },
     {
-      "id": "dc1bcfea2f57",
-      "source": "Actu-Environnement",
+      "id": "1efddffb66c4",
+      "source": "Reporterre",
       "categorie": "Climat",
-      "titre": "Biocarburant B100, Solution française disponible \"sur-le-champ\" pour décarboner le transport lourd",
-      "resume": "Le biocarburant B100 (Oleo100) est une solution immédiate pour décarboner partiellement la flotte de véhicules d'ABC, sans nécessiter de renouvellement massif. Cela peut contribuer à réduire les émissions du scope 1 et répondre aux exigences carbone des clients.",
-      "pourquoi": "Le sujet touche directement à la décarbonation des flottes (scope 1), un enjeu clé pour ABC. Bien que le B100 ne soit pas une solution 100% décarbonée, il représente une option opérationnelle pour réduire l'empreinte carbone de la flotte dans l'attente d'une électrification complète.",
-      "criticite": 2,
-      "url": "https://www.actu-environnement.com/ae/pdt/oleo-100-biocarburant-b100-decarbonation-transport-lourd-flotte-retrofit-1484.php4#xtor=RSS-6",
-      "date": "2026-08-17"
-    },
-    {
-      "id": "18899a34558e",
-      "source": "Actu-Environnement",
-      "categorie": "Environnement",
-      "titre": "Incendies de forêts : les annonces du Gouvernement en matière de reconstruction et d'adaptation",
-      "resume": "Les incendies de forêts en Gironde soulèvent des enjeux de résilience climatique et d'adaptation des territoires, pouvant impacter les sites clients d'ABC (ex : risques opérationnels accrus, exigences de continuité d'activité).",
+      "titre": "Désertification : la COP17 s'ouvre sur fond de canicules à répétition",
+      "resume": "La désertification et les sécheresses accrues en France (liées au changement climatique) pourraient impacter les sites clients d'ABC (ex : besoins en nettoyage accru, risques opérationnels sur la qualité des prestations).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/incendies-foret-gouvernement-reconstruction-sylviculture-48395.php4#xtor=RSS-6",
+      "url": "https://reporterre.net/Desertification-la-COP17-s-ouvre-sur-fond-de-canicules-a-repetition",
       "date": "2026-08-17"
     },
     {
@@ -83,7 +72,7 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Les prix de l’électricité poursuivent leur progression au-dessus des prévisions [Marchés]",
-      "resume": "La hausse des prix de l'électricité impacte directement les coûts énergétiques des prestations de propreté/FM d'ABC, influençant la compétitivité et la marge des contrats clients.",
+      "resume": "L'augmentation des prix de l'électricité impacte les coûts opérationnels d'ABC, notamment pour ses sites clients tertiaires et ses activités de nettoyage/facility management, pouvant affecter la rentabilité et les engagements carbone des clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/08/les-prix-de-lelectricite-poursuivent-leur-progression-au-dessus-des-previsions-marches-431488/",
@@ -781,7 +770,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "L'arrêté du 20 juillet 2026 modifie les modalités de facturation et de paiement des fournitures d'électricité ou de gaz naturel, ce qui peut impacter la traçabilité des consommations énergétiques et les mécanismes de report des trop-perçus, influençant ainsi la gestion des coûts et des données environnementales pour les grandes entreprises.",
+  "briefing_jorf": "L'arrêté du 20 juillet 2026 modifie les modalités de facturation et de paiement des fournitures d'électricité ou de gaz naturel, ce qui peut impacter la gestion des coûts énergétiques et la stratégie de consommation des entreprises, notamment en matière de report ou remboursement des trop-perçus.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1093,5 +1082,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le *Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique* (N°2518) qui pourrait intégrer des normes environnementales renforcées, et le *Projet de loi-cadre relatif au développement des transports* (N°2740) susceptible d’impacter les stratégies bas-carbone et la mobilité durable des entreprises. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou RSE."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux environnementaux et énergétiques clés dans le cadre du droit européen. Aucun autre texte ne traite explicitement de sujets RSE, climat, déchets ou reporting extra-financier."
 }
