@@ -1,7 +1,7 @@
 {
   "date": "2026-08-19",
-  "generated_at": "06:32",
-  "elapsed_seconds": 244,
+  "generated_at": "11:52",
+  "elapsed_seconds": 232,
   "errors": [],
   "stats": {
     "jo_analyses": 17,
@@ -9,24 +9,68 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-19T06:32:08",
+    "run_at": "2026-08-19T11:52:41",
     "sources": {
       "JORF": 2,
-      "RSS": 5,
+      "RSS": 8,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [],
-    "llm_calls": 59,
-    "llm_seconds": 67.5
+    "llm_calls": 63,
+    "llm_seconds": 80.8
   },
   "items": [
+    {
+      "id": "fe9dcf710f8b",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Le réchauffement climatique, premier responsable de la surchauffe des mers européennes",
+      "resume": "L'article souligne l'accélération du réchauffement des mers européennes, un phénomène qui pourrait impacter indirectement ABC via des risques opérationnels (ex. : perturbations logistiques, exigences clients en résilience climatique) ou des opportunités (ex. : adaptation des prestations de nettoyage en milieu marin).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Le-rechauffement-climatique-premier-responsable-de-la-surchauffe-des-mers-europeennes",
+      "date": "2026-08-19"
+    },
+    {
+      "id": "8546ec9033cf",
+      "source": "Reporterre",
+      "categorie": "Environnement",
+      "titre": "Déjà 52 jours de vagues de chaleur cet été, un record en France",
+      "resume": "L'article souligne l'augmentation des vagues de chaleur en France, un risque climatique opérationnel pouvant impacter les activités de propreté/FM d'ABC sur 3 000+ sites clients (ex : conditions de travail, demande en services de refroidissement, perturbations logistiques).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Deja-52-jours-de-vagues-de-chaleur-cet-ete-un-record-en-France",
+      "date": "2026-08-19"
+    },
+    {
+      "id": "e4da96e9c03c",
+      "source": "Novethic",
+      "categorie": "Déchets",
+      "titre": "Comment l'IA pourrait amplifier les risques de greenwashing dans les entreprises",
+      "resume": "L'article souligne un risque indirect lié à l'utilisation de l'IA dans la communication RSE, pouvant impacter la crédibilité des engagements climatiques d'ABC et de ses clients, notamment dans le cadre du reporting CSRD/ESRS.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/intelligence-artificielle-grreenwashing-communication-entreprise",
+      "date": "2026-08-19"
+    },
+    {
+      "id": "62fd4d4eb276",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Le changement climatique est le principal moteur de la surchauffe des mers européennes",
+      "resume": "L'article souligne l'accélération du réchauffement des mers européennes, un phénomène qui pourrait impacter indirectement ABC via des risques climatiques accrus sur ses 3 000+ sites clients (ex : perturbations logistiques, contraintes énergétiques ou réglementaires renforcées).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/08/19/le-changement-climatique-est-le-principal-moteur-de-la-surchauffe-des-mers-europeennes_6749704_3244.html",
+      "date": "2026-08-19"
+    },
     {
       "id": "923f0e29cf80",
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Les 12 articles environnement à (re)lire pendant l'été",
-      "resume": "L'article mentionne des sujets réglementaires et stratégiques pertinents pour ABC, notamment les audits énergétiques, les réglementations climatiques (lois Climat et Résilience, LOM) et les évolutions européennes (Industrial Accelerator Act), qui impactent directement les enjeux énergie, BGES et mobilité durable de l'entreprise.",
+      "resume": "L'article aborde des sujets réglementaires et stratégiques clés pour ABC (audit énergétique, réglementations UE comme REACH ou Industrial Accelerator Act, bilan des lois Climat et Résilience/Loi d'Orientation des Mobilités) qui impactent directement ses enjeux de décarbonation, reporting ESG et mobilité durable.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/les-12-articles-environnement-relire-pendant-lete-1",
@@ -37,7 +81,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Le chiffre du jour : + 0,3 %",
-      "resume": "Cet article signale une hausse des émissions de GES en Europe (+0,3%) malgré un PIB stable, ce qui peut impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et renforcer les attentes en matière de décarbonation des prestataires.",
+      "resume": "L'article signale une hausse des émissions de GES en Europe (+0,3%) malgré un PIB stable, ce qui peut impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et renforcer les attentes en matière de décarbonation des prestataires.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/dit-aujourdhui/1822.html#xtor=RSS-6",
@@ -48,21 +92,10 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Les PME françaises s’adaptent mal au dérèglement climatique, qu’elles ne considèrent pas encore comme une priorité stratégique",
-      "resume": "L'article souligne que le dérèglement climatique n'est pas une priorité stratégique pour les PME françaises, ce qui pourrait impacter les exigences clients d'ABC en matière de résilience climatique et de reporting ESG (CSRD/ESRS).",
+      "resume": "L'article souligne que les PME françaises, dont ABC, sous-estiment l'enjeu du dérèglement climatique au profit de priorités opérationnelles immédiates, ce qui pourrait retarder leur adaptation aux risques climatiques futurs affectant leurs 3 000+ sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/08/18/les-pme-francaises-mal-adaptees-au-rechauffement-climatique-qu-elles-ne-considerent-pas-encore-comme-une-priorite-strategique_6749079_3234.html",
-      "date": "2026-08-18"
-    },
-    {
-      "id": "a06ef11a83d4",
-      "source": "ESG Today",
-      "categorie": "Énergie",
-      "titre": "Why Investor Transition Plans Are No Longer Optional: They’re a Competitive Advantage",
-      "resume": "L'article souligne l'importance croissante des plans de transition pour les investisseurs, ce qui peut influencer les exigences carbone des clients d'ABC (secteurs nucléaire, santé, industrie) et renforcer la pression sur la décarbonation de la flotte et des activités.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/why-investor-transition-plans-are-no-longer-optional-theyre-a-competitive-advantage/?utm_source=rss&utm_medium=rss&utm_campaign=why-investor-transition-plans-are-no-longer-optional-theyre-a-competitive-advantage",
       "date": "2026-08-18"
     },
     {
@@ -70,7 +103,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Déchets",
       "titre": "Déchets : le groupe Baudelet investit dans sa filière de combustibles solides de récupération - Les Echos",
-      "resume": "L'article illustre une tendance sectorielle vers la valorisation énergétique des déchets via les combustibles solides de récupération (CSR), ce qui pourrait impacter les obligations de tri et de traçabilité des déchets pour ABC dans le cadre des REP ou de la réglementation déchets.",
+      "resume": "L'article illustre une tendance sectorielle vers la valorisation énergétique des déchets via les combustibles solides de récupération (CSR), ce qui pourrait impacter les obligations de tri et de traçabilité des déchets pour ABC dans le cadre de la REP ou des attentes clients en matière d'économie circulaire.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPc3dKQWs3a0hpckNDZGliV1BFcTIwZlJucHdGcDJ0WEhiYkVObVM3c0hQN042YVdYYkVQN1A0SnBmWlc1Vk1nUkxPdlBJcDF0M1Z2WjBKbUVfcFZtdWt2Qi1fcTQxR3lHUWYtNl9WMS1ZZFdCY1hTSWluY25pVzhSanR4Y2daMFNSbGNNenFsV3JiYXNDOWx5d3ZMdllIQndTMlVfTGZlMHVGV2gzUjhicFYySGFNZmFYcmtoQkdpVHBJYkxrV2RmRG1GUFQ4Ny1pQ09ZX3M1ekE5cm5kZHJfb0VtUHZXUQ?oc=5",
@@ -1043,8 +1076,8 @@
       "source": "JORF",
       "categorie": "Déchets",
       "titre": "Arrêté du 17 août 2026 modifiant l'arrêté du 14 décembre 2023 fixant la liste des versions de voitures particulières électriques ayant atteint le score environnemental minimal conditionnant l'éligibilité à certaines aides à l'achat ou à la location de véhicules peu polluants",
-      "resume": "Mise à jour des critères d'éligibilité aux aides pour l'achat/location de véhicules électriques, impactant potentiellement la flotte de véhicules d'ABC.",
-      "pourquoi": "Cet arrêté impose une mise à jour des critères d'éligibilité aux aides pour les véhicules électriques, avec un impact direct sur la stratégie d'électrification de la flotte d'ABC (obligation de renouvellement des véhicules éligibles d'ici 2026) et un risque de perte de subventions ou de conformité réglementaire si la flotte n'est pas adaptée, tout en offrant une opportunité de modernisation accélérée pour réduire le scope 1 et répondre aux exigences clients en matière de décarbonation.",
+      "resume": "Mise à jour des critères d'éligibilité aux aides pour l'achat/location de véhicules électriques, impactant la stratégie de renouvellement de la flotte de véhicules d'ABC.",
+      "pourquoi": "L'arrêté impose un score environnemental minimal mis à jour pour les véhicules électriques éligibles aux aides à l'achat/location, ce qui oblige ABC à adapter sa stratégie de renouvellement de flotte d'ici 2026 pour maintenir l'accès aux subventions et éviter des coûts supplémentaires, tout en accélérant sa transition bas-carbone pour répondre aux exigences clients et réglementaires.",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054708447",
       "date": "2026-08-19"
@@ -1054,14 +1087,14 @@
       "source": "JORF",
       "categorie": "Énergie",
       "titre": "Arrêté du 11 août 2026 modifiant l'arrêté du 10 avril 2020 relatif aux obligations d'actions de réduction des consommations d'énergie finale dans des bâtiments à usage tertiaire",
-      "resume": "Renforcement des obligations de réduction des consommations d'énergie finale dans les bâtiments tertiaires où ABC intervient, impactant potentiellement ses prestations de propreté/FM.",
-      "pourquoi": "ABC intervient dans des bâtiments tertiaires (non ICPE) où ses clients sont soumis à des obligations de réduction d'énergie (DPE tertiaire). Une modification de l'arrêté peut impacter les exigences des clients (nucléaire, santé, industrie) et les pratiques de nettoyage/énergie liées aux prestations.",
+      "resume": "Renforcement des obligations de réduction des consommations d'énergie dans les bâtiments tertiaires où ABC intervient, impactant potentiellement les sites clients et les prestations énergétiques.",
+      "pourquoi": "Cet arrêté impose une réduction progressive des consommations d'énergie finale dans les bâtiments tertiaires (jusqu'à -40% d'ici 2030 et -50% d'ici 2040), ce qui expose ABC à des risques contractuels et opérationnels (perte de contrats, pénalités) si ses clients ne respectent pas ces obligations, mais aussi à une opportunité de positionnement en tant que partenaire clé pour les aider à atteindre ces cibles via des prestations énergétiques optimisées (audits, maintenance préventive, solutions bas-carbone).",
       "criticite": 2,
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054708735",
       "date": "2026-08-19"
     }
   ],
-  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement la modernisation du patrimoine immobilier de l'État (LOI n°2026-795), les obligations de réduction des consommations d'énergie dans les bâtiments tertiaires (modification de l'arrêté du 10 avril 2020), et les critères environnementaux pour les véhicules électriques éligibles aux aides (modification de l'arrêté du 14 décembre 2023).",
+  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat concernent principalement la modernisation du patrimoine immobilier de l'État (LOI n°2026-795), les obligations de réduction des consommations d'énergie dans les bâtiments tertiaires (Arrêté du 11 août 2026), et l'élargissement des modèles de pompes à chaleur agréées (Arrêté du 29 juillet 2026), ainsi que la liste des véhicules électriques éligibles aux aides (Arrêté du 17 août 2026).",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1263,6 +1296,18 @@
       "source": "AN Textes adoptés",
       "items": [
         {
+          "titre": "Texte adopté N° 343",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/maitrise_usages_et_impacts_produits_phytopharmaceutiques",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/maitrise_usages_et_impacts_produits_phytopharmaceutiques",
+          "date": "2026-05-29"
+        },
+        {
+          "titre": "Texte adopté N° 342",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/abandonner_conditionnement_renouvellement_permis_conduire_visite_medicale_obligatoire",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/abandonner_conditionnement_renouvellement_permis_conduire_visite_medicale_obligatoire",
+          "date": "2026-04-09"
+        },
+        {
           "titre": "Texte adopté N° 335",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_prevention_cardio_neuro_vasculaire_et_anticiper_risque_sanitaire_et_social_majeur_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_prevention_cardio_neuro_vasculaire_et_anticiper_risque_sanitaire_et_social_majeur_17e",
@@ -1363,15 +1408,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52549",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N52549",
           "date": "2025-07-11"
-        },
-        {
-          "titre": "Texte adopté N° 304",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_evaluer_precisement_cout_reel_et_societal_de_insecurite_routiere_et_son_impact_sur_finances_publiques_17e",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/_evaluer_precisement_cout_reel_et_societal_de_insecurite_routiere_et_son_impact_sur_finances_publiques_17e",
-          "date": "2025-09-03"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables, le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) et le **Projet de loi-cadre relatif au développement des transports** (N°2740) pourraient impacter directement les enjeux climatiques et énergétiques des entreprises. Aucun texte adopté ne semble directement lié à la RSE ou au reporting environnemental dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi d’urgence pour la protection et la souveraineté agricoles (N°3017)** et le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale (N°2518)** pourraient impacter les politiques RSE, notamment via des normes renforcées en agriculture durable et en transposition de directives européennes environnementales. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou énergétiques majeurs pour une entreprise de services."
 }
