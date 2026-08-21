@@ -1,7 +1,7 @@
 {
   "date": "2026-08-21",
-  "generated_at": "06:27",
-  "elapsed_seconds": 180,
+  "generated_at": "11:53",
+  "elapsed_seconds": 188,
   "errors": [],
   "stats": {
     "jo_analyses": 7,
@@ -9,18 +9,18 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-21T06:27:19",
+    "run_at": "2026-08-21T11:53:21",
     "sources": {
       "JORF": 0,
-      "RSS": 7,
+      "RSS": 6,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 43,
-    "llm_seconds": 51.1
+    "llm_calls": 40,
+    "llm_seconds": 46.3
   },
   "items": [
     {
@@ -28,10 +28,21 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Malgré un été marqué par les canicules, les incendies et la sécheresse, les responsables politiques incapables de répondre à l’urgence climatique",
-      "resume": "L'article souligne l'absence de réponse politique à l'urgence climatique en France, ce qui pourrait renforcer les exigences réglementaires et les attentes des clients d'ABC en matière de résilience climatique et de décarbonation.",
+      "resume": "L'article souligne l'absence de réponse politique à l'urgence climatique en France, ce qui pourrait renforcer les exigences réglementaires et clients (notamment dans les secteurs nucléaire, santé et industrie) pour les entreprises comme ABC, impactant leurs plans climat et reporting CSRD.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/politique/article/2026/08/21/malgre-un-ete-de-tous-les-records-le-refus-d-obstacle-de-la-classe-politique-face-a-l-urgence-climatique_6751533_823448.html",
+      "date": "2026-08-21"
+    },
+    {
+      "id": "6979356e9f59",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "Jean Jouzel, climatologue : « Il n’y a pas, chez les candidats à la présidentielle, une véritable prise de conscience de la réalité du réchauffement climatique »",
+      "resume": "L'article souligne le manque de priorité accordée au climat par les candidats à la présidentielle française, ce qui pourrait impacter les futures politiques climatiques (SNBC, PNACC) et donc les obligations réglementaires des entreprises comme ABC en matière de décarbonation et de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/08/21/jean-jouzel-climatologue-il-n-y-a-pas-chez-les-candidats-a-la-presidentielle-une-veritable-prise-de-conscience-de-la-realite-du-rechauffement-climatique_6751428_3244.html",
       "date": "2026-08-21"
     },
     {
@@ -39,7 +50,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "L’adaptation du travail au changement climatique commence à apparaître dans des accords de branche",
-      "resume": "L'article souligne l'intégration croissante de l'adaptation au changement climatique dans les accords de branche, ce qui pourrait impacter les conditions de travail des employés d'ABC intervenant sur 3 000+ sites clients, notamment en termes de sécurité et d'horaires.",
+      "resume": "L'article souligne l'émergence de l'adaptation du travail aux risques climatiques dans les accords de branche, ce qui pourrait impacter les conditions d'intervention des équipes de propreté/FM d'ABC sur les sites clients exposés aux aléas climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/ladaptation-du-travail-au-changement-climatique-commence-apparaitre-dans-des-accords-de",
@@ -50,43 +61,10 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Réseau de distribution : Enedis publie un bilan des raccordements et une cartographie des zones saturées",
-      "resume": "L'article aborde la saturation des réseaux électriques en France, un enjeu pouvant impacter la continuité des services de propreté/FM d'ABC chez ses clients, notamment en cas de restrictions de puissance ou de coupures.",
+      "resume": "L'article met en lumière les contraintes d'accès au réseau électrique en France via la cartographie des zones saturées d'Enedis, ce qui peut impacter la planification des interventions de maintenance ou de nettoyage chez les clients d'ABC, notamment en termes de disponibilité énergétique pour les sites tertiaires ou industriels.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/enedis-bilan-raccordements-2025-reseau-sature-48410.php4#xtor=RSS-6",
-      "date": "2026-08-20"
-    },
-    {
-      "id": "4dd5437317ce",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "Le chiffre du jour : 7 007 décès en excès",
-      "resume": "L'article souligne l'impact des vagues de chaleur sur la mortalité en France, un risque climatique opérationnel pouvant affecter la disponibilité des sites clients et les prestations de propreté/FM d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/dit-aujourdhui/1823.html#xtor=RSS-6",
-      "date": "2026-08-20"
-    },
-    {
-      "id": "a07b2e745396",
-      "source": "Actu-Environnement",
-      "categorie": "Climat",
-      "titre": "Canicules : le système électrique européen sous tension",
-      "resume": "L'article met en lumière les risques climatiques (canicules) sur la résilience du système électrique européen, ce qui pourrait impacter la continuité des prestations de propreté/FM d'ABC chez ses clients (ex. : coupures, perturbations logistiques).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/canicule-systeme-electrique-europeen-nucleaire-48408.php4#xtor=RSS-6",
-      "date": "2026-08-20"
-    },
-    {
-      "id": "bbd87e8a797b",
-      "source": "Novethic",
-      "categorie": "Climat",
-      "titre": "ResilienceArc propose un outil pour accélérer la résilience climatique des entreprises",
-      "resume": "L'article met en avant un outil open source (ResilienceArc) pour évaluer la résilience climatique des entreprises face aux aléas physiques (canicules, sécheresses), un enjeu critique pour ABC compte tenu de ses 3 000+ sites clients exposés aux risques climatiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/resilience-arc-plateforme-donnees-resilience-climatique-entreprises",
       "date": "2026-08-20"
     },
     {
@@ -94,10 +72,21 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Nucléaire : visualisez l’impact des canicules sur la production des centrales françaises",
-      "resume": "L'article met en lumière un risque climatique opérationnel indirect pour ABC : les canicules perturbent la production nucléaire française, ce qui peut impacter la disponibilité et le coût de l'électricité pour les clients (notamment dans les secteurs nucléaire, santé et industrie), et donc les prestations de propreté/FM.",
+      "resume": "L'article met en lumière les risques climatiques (canicules) sur la production électrique française, ce qui pourrait impacter la disponibilité énergétique pour les sites clients d'ABC et influencer leurs exigences en matière de résilience climatique et de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/les-decodeurs/article/2026/08/20/nucleaire-visualisez-l-impact-des-canicules-sur-la-production-des-centrales-francaises_6751125_4355770.html",
+      "date": "2026-08-20"
+    },
+    {
+      "id": "ef37ba5b5223",
+      "source": "ESG Today",
+      "categorie": "Climat",
+      "titre": "CPP Investments Launches Reporting on Portfolio Carbon Intensity, Transition Governance",
+      "resume": "L'article illustre une tendance croissante des investisseurs à exiger des rapports détaillés sur l'intensité carbone des portefeuilles, ce qui pourrait influencer les exigences des clients d'ABC (secteurs nucléaire, santé, industrie) en matière de reporting ESG et de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/cpp-investments-launches-reporting-on-portfolio-carbon-intensity-transition-governance/?utm_source=rss&utm_medium=rss&utm_campaign=cpp-investments-launches-reporting-on-portfolio-carbon-intensity-transition-governance",
       "date": "2026-08-20"
     }
   ],
@@ -143,11 +132,6 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "85",
-      "dept_nom": "Vendée",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "53",
       "dept_nom": "Mayenne",
       "niveau": "crise"
@@ -165,6 +149,11 @@
     {
       "dept_code": "79",
       "dept_nom": "Deux-Sèvres",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "85",
+      "dept_nom": "Vendée",
       "niveau": "crise"
     },
     {
@@ -203,11 +192,6 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "47",
-      "dept_nom": "Lot-et-Garonne",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "32",
       "dept_nom": "Gers",
       "niveau": "crise"
@@ -220,6 +204,11 @@
     {
       "dept_code": "37",
       "dept_nom": "Indre-et-Loire",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "47",
+      "dept_nom": "Lot-et-Garonne",
       "niveau": "crise"
     },
     {
@@ -298,13 +287,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "19",
-      "dept_nom": "Corrèze",
+      "dept_code": "23",
+      "dept_nom": "Creuse",
       "niveau": "crise"
     },
     {
-      "dept_code": "23",
-      "dept_nom": "Creuse",
+      "dept_code": "19",
+      "dept_nom": "Corrèze",
       "niveau": "crise"
     },
     {
@@ -363,13 +352,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "39",
-      "dept_nom": "Jura",
+      "dept_code": "69",
+      "dept_nom": "Rhône",
       "niveau": "crise"
     },
     {
-      "dept_code": "69",
-      "dept_nom": "Rhône",
+      "dept_code": "39",
+      "dept_nom": "Jura",
       "niveau": "crise"
     },
     {
@@ -448,13 +437,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "90",
-      "dept_nom": "Territoire de Belfort",
+      "dept_code": "68",
+      "dept_nom": "Haut-Rhin",
       "niveau": "crise"
     },
     {
-      "dept_code": "68",
-      "dept_nom": "Haut-Rhin",
+      "dept_code": "90",
+      "dept_nom": "Territoire de Belfort",
       "niveau": "crise"
     },
     {
@@ -518,13 +507,13 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
+      "dept_code": "04",
+      "dept_nom": "Alpes-de-Haute-Provence",
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "04",
-      "dept_nom": "Alpes-de-Haute-Provence",
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
       "niveau": "alerte renforcée"
     },
     {
@@ -1284,5 +1273,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux environnementaux et énergétiques clés pour les entreprises, notamment en matière de reporting et de conformité réglementaire."
+  "pjl_briefing": "Parmi les projets de loi adoptés ou en cours, aucun ne traite directement des enjeux climatiques, énergétiques ou de RSE de manière prioritaire pour une grande entreprise de services. Le projet de loi portant diverses dispositions d'adaptation au droit de l'UE en matière environnementale (N°2518) pourrait inclure des mesures indirectement pertinentes, mais son contenu exact n'est pas précisé ici."
 }
