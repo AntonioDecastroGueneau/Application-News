@@ -1,7 +1,7 @@
 {
   "date": "2026-08-22",
-  "generated_at": "06:21",
-  "elapsed_seconds": 172,
+  "generated_at": "11:46",
+  "elapsed_seconds": 186,
   "errors": [],
   "stats": {
     "jo_analyses": 10,
@@ -9,29 +9,40 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-22T06:21:57",
+    "run_at": "2026-08-22T11:46:34",
     "sources": {
       "JORF": 0,
-      "RSS": 5,
+      "RSS": 4,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 47,
-    "llm_seconds": 47.4
+    "llm_calls": 45,
+    "llm_seconds": 51.7
   },
   "items": [
     {
-      "id": "a1df946ebb28",
+      "id": "5912b3325609",
       "source": "Le Monde Planète",
       "categorie": "Climat",
-      "titre": "Cinq ans après, l’amer anniversaire de la loi Climat et résilience, inspirée par des propositions citoyennes : « Presque toutes les mesures ont été détricotées »",
-      "resume": "Cinq ans après, l’amer anniversaire de la loi Climat et résilience, inspirée par des propositions citoyennes : « Presque toutes les mesures ont été détricotées »",
+      "titre": "Pour la loi Climat et résilience, issue de propositions citoyennes, un cinquième et amer anniversaire : « Presque toutes les mesures ont été détricotées »",
+      "resume": "Pour la loi Climat et résilience, issue de propositions citoyennes, un cinquième et amer anniversaire : « Presque toutes les mesures ont été détricotées »",
       "pourquoi": "Mention de Loi Climat et Résilience.",
       "criticite": 3,
       "url": "https://www.lemonde.fr/planete/article/2026/08/22/cinq-ans-apres-l-amer-anniversaire-de-la-loi-climat-et-resilience-inspiree-par-des-propositions-citoyennes-presque-toutes-les-mesures-ont-ete-detricotees_6752625_3244.html",
+      "date": "2026-08-22"
+    },
+    {
+      "id": "200da695b934",
+      "source": "Le Monde Planète",
+      "categorie": "Émissions",
+      "titre": "Climat : la nécessité d’une parole politique",
+      "resume": "L'article souligne l'importance de l'engagement politique sur les enjeux climatiques, ce qui peut influencer les réglementations futures en France/UE et impacter les obligations de reporting ESG (CSRD) et les trajectoires de décarbonation des entreprises comme ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/idees/article/2026/08/22/climat-la-necessite-d-une-parole-politique_6753094_3232.html",
       "date": "2026-08-22"
     },
     {
@@ -39,7 +50,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "L’adaptation du travail au changement climatique commence à apparaître dans des accords de branche",
-      "resume": "L'article souligne l'émergence de l'adaptation au changement climatique dans les accords de branche, ce qui pourrait influencer les pratiques de travail chez ABC, notamment en matière de sécurité et de conditions de travail sur les sites clients.",
+      "resume": "L'article souligne l'émergence d'accords de branche intégrant l'adaptation du travail aux impacts climatiques, ce qui pourrait influencer les pratiques de sécurité et d'organisation chez ABC, notamment pour ses 3 000+ sites clients exposés aux aléas climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/ladaptation-du-travail-au-changement-climatique-commence-apparaitre-dans-des-accords-de",
@@ -50,32 +61,10 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "El Niño : un épisode d'une ampleur « sans précédent » prévu pour 2026",
-      "resume": "Risque accru d'aléas climatiques (canicules, inondations) pour les 3 000+ sites clients d'ABC en 2026-2027, impactant la continuité des prestations et les exigences carbone des clients (nucléaire, santé, industrie).",
+      "resume": "L'épisode El Niño 2026 pourrait aggraver les aléas climatiques (canicules, inondations) affectant les 3 000+ sites clients d'ABC, augmentant les risques opérationnels et perturbant les prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/El-Nino-un-episode-d-une-ampleur-sans-precedent-prevu-pour-2026",
-      "date": "2026-08-21"
-    },
-    {
-      "id": "12405b10ac64",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "L’agenda de la transition énergétique",
-      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, hydrogène) qui pourraient être utiles pour identifier des opportunités de décarbonation ou des partenariats pour ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/08/lagenda-de-la-transition-energetique-281-431464/",
-      "date": "2026-08-21"
-    },
-    {
-      "id": "2aaca7db22d4",
-      "source": "GreenUnivers",
-      "categorie": "Eau",
-      "titre": "Réseaux : le Danemark propose de reléguer les data centers en bout de file d’attente",
-      "resume": "Le Danemark priorise l'accès au réseau électrique pour les projets à forte valeur ajoutée énergétique, reléguant les data centers en fin de file, ce qui pourrait impacter les clients industriels ou tertiaires d'ABC (ex : sites clients consommateurs d'énergie) en cas de pénurie ou de coûts accrus.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/08/reseaux-le-danemark-propose-de-releguer-les-data-centers-en-bout-de-file-dattente-431608/",
       "date": "2026-08-21"
     }
   ],
@@ -884,7 +873,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Deux décrets et un arrêté sont significatifs : le décret n°2026-807 autorise la construction de deux EPR2 à Gravelines (impact climatique et transition énergétique), tandis que le décret n°2026-808 impose le démantèlement de l'installation nucléaire Pégase à Cadarache (gestion des déchets radioactifs).",
+  "briefing_jorf": "Deux décrets et un arrêté sont significatifs : le décret n°2026-807 autorise la construction de deux réacteurs EPR2 à Gravelines (impact carbone et transition énergétique), tandis que le décret n°2026-808 impose le démantèlement de l'installation nucléaire Pégase à Cadarache (gestion des déchets radioactifs).",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1184,5 +1173,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) et le **Projet de loi-cadre relatif au développement des transports** (N°2740) pourraient impacter directement les stratégies climat et énergie des entreprises. Aucun texte adopté ne semble directement lié aux enjeux environnementaux ou RSE."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale et énergétique (N° 2518)** et le **Projet de loi-cadre relatif au développement des transports (N° 2740)** pourraient impacter les stratégies RSE, notamment via des normes renforcées en matière de décarbonation, d’efficacité énergétique ou de mobilité durable. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou environnementaux dans cette liste."
 }
