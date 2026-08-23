@@ -1,7 +1,7 @@
 {
   "date": "2026-08-23",
-  "generated_at": "06:22",
-  "elapsed_seconds": 148,
+  "generated_at": "11:46",
+  "elapsed_seconds": 173,
   "errors": [],
   "stats": {
     "jo_analyses": 8,
@@ -9,26 +9,37 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-23T06:22:54",
+    "run_at": "2026-08-23T11:46:44",
     "sources": {
       "JORF": 0,
-      "RSS": 2,
+      "RSS": 3,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 27,
-    "llm_seconds": 27.7
+    "llm_calls": 28,
+    "llm_seconds": 43.7
   },
   "items": [
+    {
+      "id": "f671436cb09b",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article couvre des actualités ESG (reporting extra-financier, plateformes de reporting) qui peuvent influencer les exigences clients d'ABC en matière de CSRD/ESRS, mais sans obligation directe immédiate.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-273/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-273",
+      "date": "2026-08-23"
+    },
     {
       "id": "61cad6b53694",
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "L’adaptation du travail au changement climatique commence à apparaître dans des accords de branche",
-      "resume": "L'article souligne l'émergence de l'adaptation du travail aux risques climatiques dans les accords de branche, ce qui pourrait impacter les conditions d'intervention des équipes de propreté/FM d'ABC sur les sites clients.",
+      "resume": "L'article souligne l'émergence de l'adaptation du travail aux enjeux climatiques dans les accords de branche, un signal à surveiller pour ABC afin d'anticiper les évolutions réglementaires ou contractuelles liées à la santé-sécurité et au climat.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/ladaptation-du-travail-au-changement-climatique-commence-apparaitre-dans-des-accords-de",
@@ -39,7 +50,7 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "Changement climatique : « Nous sommes entrés dans un monde fini et incertain, dans lequel les données du passé ne suffisent plus à penser le futur »",
-      "resume": "L'article souligne l'importance de repenser la gouvernance et les usages de l'eau face à la sécheresse, un enjeu qui pourrait impacter les sites clients d'ABC (non exploitant ICPE) et leurs exigences en matière de résilience climatique.",
+      "resume": "L'article souligne l'importance de repenser les usages de l'eau face à la sécheresse, un enjeu qui pourrait impacter les activités de nettoyage et de gestion des sites clients d'ABC, notamment en termes de disponibilité des ressources et de contraintes réglementaires locales.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/08/22/changement-climatique-nous-sommes-entres-dans-un-monde-fini-et-incertain-dans-lequel-les-donnees-du-passe-ne-suffisent-plus-a-penser-le-futur_6753508_3232.html",
@@ -893,7 +904,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés BAR-TH-174, BAR-TH-175, BAR-TH-101, BAR-TH-148, BAR-TH-162 et BAR-TH-168 modifient les bonifications CEE pour la rénovation énergétique, ce qui impacte directement les dispositifs d'incitation à la transition écologique pour les entreprises. Les autres textes ne concernent pas directement la RSE ou le climat.",
+  "briefing_jorf": "Les arrêtés BAR-TH-174, BAR-TH-175, BAR-TH-101, BAR-TH-148, BAR-TH-162, BAR-TH-168 et BAR-TH-143 modifient les bonifications CEE pour la rénovation énergétique, ce qui impacte directement les stratégies de décarbonation des entreprises via les Certificats d'Économies d'Énergie. Aucun autre texte ne concerne directement la RSE ou le climat.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1193,5 +1204,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi adoptés ou en cours, aucun texte ne semble directement lié aux enjeux climatiques, énergétiques, de déchets ou de reporting RSE pour une grande entreprise de services. Les textes adoptés (N°316 à 343) ne mentionnent pas de mesures environnementales significatives, et les projets en discussion (logement, agriculture, transports, etc.) ne ciblent pas spécifiquement la transition écologique ou la RSE."
+  "pjl_briefing": "Parmi les projets de loi, seul le n°2518 (adaptation au droit de l'UE en matière environnementale, énergétique et de santé) et le n°2920 (programmation militaire incluant des dispositions pour la défense et potentiellement l'énergie) pourraient présenter un intérêt indirect pour un Responsable Environnement/Climat. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou RSE."
 }
