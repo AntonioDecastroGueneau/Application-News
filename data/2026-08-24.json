@@ -1,7 +1,7 @@
 {
   "date": "2026-08-24",
-  "generated_at": "06:36",
-  "elapsed_seconds": 200,
+  "generated_at": "11:54",
+  "elapsed_seconds": 179,
   "errors": [],
   "stats": {
     "jo_analyses": 8,
@@ -9,18 +9,18 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-24T06:36:25",
+    "run_at": "2026-08-24T11:54:46",
     "sources": {
       "JORF": 0,
-      "RSS": 6,
+      "RSS": 7,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 38,
-    "llm_seconds": 43.2
+    "llm_calls": 41,
+    "llm_seconds": 48.8
   },
   "items": [
     {
@@ -39,10 +39,21 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "REP emballages professionnels : le démarrage est repoussé au 1er janvier 2027",
-      "resume": "Le report de la REP emballages professionnels au 1er janvier 2027 donne un délai supplémentaire à ABC pour adapter sa gestion des déchets d'emballages liés à ses prestations de propreté/FM, notamment en vue du reporting CSRD et de la conformité réglementaire.",
-      "pourquoi": "La REP (Responsabilité Élargie du Producteur) pour les emballages professionnels impacte directement les entreprises de services comme ABC, qui génèrent des déchets d'emballages dans le cadre de leurs prestations. Bien que le report soit une bonne nouvelle pour l'organisation, cela nécessite une anticipation pour structurer la traçabilité, le tri et le reporting des déchets, en lien avec les exigences CSRD et les attentes clients (nucléaire, santé, industrie).",
+      "resume": "Le report de la REP emballages professionnels au 1er janvier 2027 donne un délai supplémentaire à ABC pour adapter sa gestion des déchets d'emballages liés à ses prestations de propreté/FM, notamment en termes de traçabilité et de contribution aux éco-organismes.",
+      "pourquoi": "La REP (Responsabilité Élargie du Producteur) pour les emballages professionnels impacte directement les entreprises de services comme ABC, qui doivent gérer les déchets d'emballages générés par leurs activités (ex : produits de nettoyage, emballages de consommables). Bien que le report repousse l'obligation, cela reste un sujet clé pour la conformité réglementaire et la stratégie déchets de l'entreprise, aligné sur ses enjeux de reporting CSRD et de gestion des déchets en prestation.",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/rep-emballages-professionnels-le-demarrage-est-repousse-au-1er-janvier-2027",
+      "date": "2026-08-24"
+    },
+    {
+      "id": "95ad790c2625",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Énergies fossiles : un projet de décret pour interdire leur publicité est en consultation",
+      "resume": "Le projet de décret pourrait impacter la communication externe d'ABC si ses clients ou partenaires utilisent des énergies fossiles dans leurs activités, nécessitant une adaptation des supports marketing ou des engagements clients.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/decret-interdiction-publicite-energies-fossiles-48417.php4#xtor=RSS-6",
       "date": "2026-08-24"
     },
     {
@@ -50,44 +61,44 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Alcome et MerTerre au service d’une mission : la réduction des mégots mal jetés",
-      "resume": "L'article aborde la gestion des déchets (mégots) via une filière REP, un sujet indirectement lié aux enjeux de déchets des prestations de propreté de ABC et à la réglementation REP en expansion.",
+      "resume": "L'article aborde la gestion des déchets (mégots) via une filière REP, un sujet indirectement lié aux enjeux de déchets des prestations de propreté de ABC et à la réglementation REP en France.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/pdt/alcome-merterre-reduction-megots-jetes-sol-pollution-macrodechets-sensibiliser-calanques-1486.php4#xtor=RSS-6",
       "date": "2026-08-24"
     },
     {
-      "id": "bc804bd7ea23",
-      "source": "The Guardian Environment",
+      "id": "5635308405e9",
+      "source": "Novethic",
       "categorie": "Déchets",
-      "titre": "Air conditioning push favoured over emissions cuts in six European nations, survey finds",
-      "resume": "L'article souligne une préférence croissante pour la climatisation en Europe face aux vagues de chaleur, ce qui pourrait impacter les besoins énergétiques des sites clients d'ABC et leurs exigences en matière de décarbonation.",
+      "titre": "Le CDP tord le cou aux idées reçues sur la rentabilité des investissements durables",
+      "resume": "L'article souligne que les investissements durables génèrent un retour sur investissement moyen en 3 ans selon le CDP, ce qui peut influencer les décisions stratégiques d'ABC en matière de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.theguardian.com/environment/2026/aug/24/air-conditioning-higher-priority-than-lowering-emissions-europeans-poll",
+      "url": "https://www.novethic.fr/economie-et-social/business-model-en-transition/cdp-veut-tordre-cout-idees-recues-rentabilite-investissements-durables",
       "date": "2026-08-24"
     },
     {
-      "id": "c025af4a1c7d",
-      "source": "Actuel HSE",
-      "categorie": "Climat",
-      "titre": "PFAS : une mission d’inspections veut élargir la redevance sur les rejets industriels",
-      "resume": "L'élargissement potentiel de la redevance sur les rejets industriels de PFAS pourrait impacter les clients d'ABC (notamment industriels) et indirectement ses prestations de propreté/FM, avec des risques de coûts supplémentaires ou de contraintes réglementaires accrues.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/pfas-une-mission-dinspections-veut-elargir-la-redevance-sur-les-rejets-industriels",
-      "date": "2026-08-24"
-    },
-    {
-      "id": "69b165623bf7",
+      "id": "ef21e08f729a",
       "source": "Le Monde Planète",
-      "categorie": "Eau",
-      "titre": "Changement climatique : « Nous sommes entrés dans un monde fini et incertain, dans lequel les données du passé ne suffisent plus à penser le futur »",
-      "resume": "L'article souligne l'impact croissant des aléas climatiques (sécheresse) sur les secteurs économiques, ce qui expose ABC à des risques opérationnels indirects via ses 3 000+ sites clients, notamment en termes de continuité de service et de résilience des prestations.",
+      "categorie": "Énergie",
+      "titre": "Carburant : le gouvernement « travaille à une reconduction » des aides et du chèque énergie",
+      "resume": "Le gouvernement envisage de reconduire des aides aux carburants (chèque énergie, exonérations) pour les secteurs exposés, ce qui pourrait impacter indirectement les coûts de la flotte de véhicules d'ABC et ses clients, notamment dans les secteurs BTP ou transport.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/08/22/changement-climatique-nous-sommes-entres-dans-un-monde-fini-et-incertain-dans-lequel-les-donnees-du-passe-ne-suffisent-plus-a-penser-le-futur_6753508_3232.html",
-      "date": "2026-08-22"
+      "url": "https://www.lemonde.fr/politique/article/2026/08/24/le-gouvernement-travaille-a-une-reconduction-des-aides-au-carburant-et-du-cheque-energie_6755228_823448.html",
+      "date": "2026-08-24"
+    },
+    {
+      "id": "f671436cb09b",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "ESG Today: Week in Review",
+      "resume": "L'article aborde des évolutions dans les outils de reporting ESG (ex: acquisition d'une plateforme de reporting par Osapiens), utile pour suivre les tendances en matière de CSRD/ESRS et d'outils de reporting extra-financier pour ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/esg-today-week-in-review-273/?utm_source=rss&utm_medium=rss&utm_campaign=esg-today-week-in-review-273",
+      "date": "2026-08-23"
     }
   ],
   "restrictions_eau": [
@@ -352,6 +363,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "69",
+      "dept_nom": "Rhône",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "01",
       "dept_nom": "Ain",
       "niveau": "crise"
@@ -359,11 +375,6 @@
     {
       "dept_code": "39",
       "dept_nom": "Jura",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "69",
-      "dept_nom": "Rhône",
       "niveau": "crise"
     },
     {
@@ -507,13 +518,13 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
+      "dept_code": "04",
+      "dept_nom": "Alpes-de-Haute-Provence",
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "04",
-      "dept_nom": "Alpes-de-Haute-Provence",
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
       "niveau": "alerte renforcée"
     },
     {
@@ -907,7 +918,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les arrêtés BAR-TH-174, BAR-TH-175 et les nouvelles bonifications CEE (BAR-TH-101, 148, 162, 168) renforcent les incitations financières pour la rénovation énergétique des bâtiments, un levier clé pour la transition bas-carbone des entreprises. L'arrêté modifiant la liste des oiseaux protégés en Outre-mer souligne l'importance de la biodiversité dans les stratégies RSE, tandis que les autres textes sont sectoriels et peu impactants pour une entreprise de services.",
+  "briefing_jorf": "Les arrêtés BAR-TH-174, BAR-TH-175, BAR-TH-101, BAR-TH-148, BAR-TH-162, BAR-TH-168 et BAR-TH-143 concernent des bonifications CEE pour la rénovation énergétique, ce qui impacte directement les stratégies de décarbonation des entreprises. Aucun autre texte n'est directement lié à la RSE ou au climat.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1207,5 +1218,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le *Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique* (N°2518) qui pourrait inclure des mesures liées à la transition énergétique ou au reporting extra-financier, et le *Projet de loi de financement de la sécurité sociale pour 2026* (N°2242) susceptible d’impacter les contributions des entreprises aux politiques environnementales. Aucun texte adopté ne semble directement lié à ces enjeux."
+  "pjl_briefing": "Parmi les projets de loi identifiés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le *Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique...* (N°2518) qui pourrait inclure des mesures clés pour la transition écologique, et le *Projet de loi-cadre relatif au développement des transports* (N°2740) susceptible d’impacter les stratégies de mobilité durable des entreprises. Aucun texte adopté ne semble directement lié aux enjeux climatiques ou RSE."
 }
