@@ -1,7 +1,7 @@
 {
   "date": "2026-08-25",
-  "generated_at": "06:28",
-  "elapsed_seconds": 232,
+  "generated_at": "11:58",
+  "elapsed_seconds": 314,
   "errors": [],
   "stats": {
     "jo_analyses": 6,
@@ -9,18 +9,18 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-25T06:28:08",
+    "run_at": "2026-08-25T11:58:12",
     "sources": {
       "JORF": 0,
-      "RSS": 14,
+      "RSS": 15,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 45,
-    "llm_seconds": 53.3
+    "llm_calls": 52,
+    "llm_seconds": 109.8
   },
   "items": [
     {
@@ -35,36 +35,80 @@
       "date": "2026-08-25"
     },
     {
+      "id": "5618974cef75",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Rénovation énergétique : l'entreprise qui facture les travaux devra être RGE",
+      "resume": "L'article impose une obligation de qualification RGE pour les entreprises facturant des travaux de rénovation énergétique éligibles aux aides à partir de 2027, ce qui pourrait impacter les prestations de services énergétiques d'ABC si ces activités sont développées.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/rge-entreprise-principale-renovation-energetique-sous-traitance-48428.php4#xtor=RSS-6",
+      "date": "2026-08-25"
+    },
+    {
+      "id": "38d339d2b13a",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "La température moyenne à la surface des océans atteint un niveau record",
+      "resume": "L'article souligne l'accélération du réchauffement des océans, un phénomène qui pourrait impacter les sites clients d'ABC (ex. : risques d'inondations, perturbations logistiques) et renforcer les exigences réglementaires ou contractuelles en matière de résilience climatique.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/record-temperature-surface-oceans-copernicus-48427.php4#xtor=RSS-6",
+      "date": "2026-08-25"
+    },
+    {
+      "id": "a6726104ef6e",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Déchets de pneus : l'huile de pyrolyse et les granulés peuvent perdre leur statut de déchet",
+      "resume": "Les nouveaux arrêtés facilitent la valorisation des déchets de pneus (huile de pyrolyse et granulés) en leur retirant le statut de déchet, ce qui pourrait impacter la gestion des déchets de la flotte de véhicules d'ABC et ses obligations de traçabilité.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/dechets-pneus-huile-pyrolyse-granules-sortie-statu-dechets-48425.php4#xtor=RSS-6",
+      "date": "2026-08-25"
+    },
+    {
+      "id": "ab3997cbd1df",
+      "source": "The Guardian Environment",
+      "categorie": "Déchets",
+      "titre": "At least 35,000 excess deaths recorded in Europe’s back-to-back heatwaves",
+      "resume": "L'article souligne l'impact croissant des vagues de chaleur en Europe, un risque climatique opérationnel pouvant affecter la santé des employés et la continuité des services de propreté/FM sur les 3 000+ sites clients d'ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.theguardian.com/environment/2026/aug/25/at-least-35000-excess-deaths-europe-back-to-back-heatwaves",
+      "date": "2026-08-25"
+    },
+    {
       "id": "2787daf0613e",
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Hydrogène renouvelable ou bas-carbone : les règles de qualification évoluent",
-      "resume": "L'article aborde l'évolution des règles de qualification de l'hydrogène renouvelable ou bas-carbone, un sujet pertinent pour ABC dans le cadre de sa stratégie de décarbonation de sa flotte de véhicules (scope 1) et de ses engagements climatiques.",
+      "resume": "L'article aborde l'évolution des règles de qualification de l'hydrogène renouvelable ou bas-carbone, ce qui pourrait impacter la stratégie énergétique et la décarbonation de la flotte de véhicules d'ABC, notamment dans le cadre de la mobilité durable et des objectifs scope 1.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/hydrogene-renouvelable-ou-bas-carbone-les-regles-de-qualification-evoluent",
       "date": "2026-08-25"
     },
     {
-      "id": "f6e74bf57a08",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "PFAS dans les boues : le Haut Conseil de la santé publique propose un cadre de gestion",
-      "resume": "Les PFAS sont des polluants persistants pouvant impacter les sols et les boues utilisées en agriculture, mais leur gestion réglementaire pourrait influencer indirectement les pratiques de gestion des déchets et des effluents des clients d'ABC (ex : sites tertiaires ou industriels).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/pfas-matieres-fertilisantes-boues-cadre-gestion-haut-comite-sante-publique-48423.php4#xtor=RSS-6",
-      "date": "2026-08-24"
-    },
-    {
       "id": "2c6435f81fc3",
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "CEE et véhicules électriques : un ciblage renforcé pour les taxis et le marché de l'occasion",
-      "resume": "L'article souligne l'évolution des aides à l'acquisition de véhicules électriques vers les CEE, ce qui pourrait impacter la stratégie de décarbonation de la flotte de véhicules d'ABC (scope 1) et ses coûts opérationnels.",
+      "resume": "L'article souligne l'évolution des aides à l'acquisition de véhicules électriques vers les CEE, avec un ciblage renforcé pour les taxis et le marché de l'occasion, ce qui pourrait impacter la stratégie de flotte d'ABC dans le cadre de sa décarbonation (scope 1).",
+      "pourquoi": "Le sujet touche directement à la mobilité durable et à la décarbonation des flottes, un enjeu clé pour ABC (scope 1). Bien que l'article se concentre sur les taxis et le marché de l'occasion, il signale une tendance réglementaire et financière (CEE) qui pourrait influencer les aides disponibles pour les entreprises comme ABC dans leur transition vers des véhicules électriques.",
+      "criticite": 2,
+      "url": "https://www.actu-environnement.com/ae/news/aides-achat-vehicule-electrique-cee-taxis-occasion-48421.php4#xtor=RSS-6",
+      "date": "2026-08-24"
+    },
+    {
+      "id": "f6e74bf57a08",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "PFAS dans les boues : le Haut Conseil de la santé publique propose un cadre de gestion",
+      "resume": "L'article aborde la gestion des PFAS dans les boues, un sujet indirectement lié aux déchets des prestations de propreté de ABC (boues issues de stations d'épuration ou déchets organiques). Bien que non central pour les enjeux climatiques ou réglementaires directs d'ABC, il signale une évolution réglementaire future sur les substances chimiques persistantes qui pourrait impacter les clients (notamment industriels ou santé) et donc les exigences en matière de traçabilité des déchets.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/aides-achat-vehicule-electrique-cee-taxis-occasion-48421.php4#xtor=RSS-6",
+      "url": "https://www.actu-environnement.com/ae/news/pfas-matieres-fertilisantes-boues-cadre-gestion-haut-comite-sante-publique-48423.php4#xtor=RSS-6",
       "date": "2026-08-24"
     },
     {
@@ -72,7 +116,7 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Exportation de déchets : une proposition de règlement délégué fait des ajouts sur la liste verte",
-      "resume": "Le projet de règlement délégué pourrait impacter la traçabilité et les conditions d'exportation des déchets générés par les prestations de propreté de ABC, notamment via des restrictions supplémentaires sur la liste verte des déchets exportables.",
+      "resume": "Le projet de règlement délégué impacte la traçabilité et les conditions d'exportation des déchets pour les prestataires de services comme ABC, avec des implications potentielles sur les flux de déchets générés par ses activités de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/exportation-dechets-reglement-delegue-liste-verte-48422.php4#xtor=RSS-6",
@@ -83,21 +127,10 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Recyclage chimique : vers un nouveau report du projet d'usine de Carbios à Longlaville",
-      "resume": "Le report du projet d'usine de recyclage chimique de Carbios pourrait impacter la disponibilité future de solutions de recyclage avancé pour les déchets plastiques (PET), influençant potentiellement les stratégies de gestion des déchets d'ABC et ses clients dans le cadre des obligations REP et de la CSRD.",
+      "resume": "Le report du projet d'usine de recyclage chimique de Carbios pourrait impacter la disponibilité et le coût des solutions de recyclage des plastiques pour ABC, notamment dans le cadre de la gestion des déchets de ses prestations de propreté/FM.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/report-lancement-usine-carbios-bouclage-financement-48419.php4#xtor=RSS-6",
-      "date": "2026-08-24"
-    },
-    {
-      "id": "8d8027fca3a5",
-      "source": "Actu-Environnement",
-      "categorie": "Déchets",
-      "titre": "Alcome et MerTerre au service d’une mission : la réduction des mégots mal jetés",
-      "resume": "L'article aborde la gestion des déchets (mégots) via une filière REP, un sujet indirectement lié aux enjeux de déchets des prestations de propreté de ABC et à la réglementation REP en France.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/pdt/alcome-merterre-reduction-megots-jetes-sol-pollution-macrodechets-sensibiliser-calanques-1486.php4#xtor=RSS-6",
       "date": "2026-08-24"
     },
     {
@@ -105,7 +138,7 @@
       "source": "Reporterre",
       "categorie": "Déchets",
       "titre": "Seulement 16 % des mesures de la Convention citoyenne pour le climat sont vraiment appliquées",
-      "resume": "L'article souligne l'écart entre les ambitions climatiques françaises (via la Convention citoyenne et la loi Climat et résilience) et leur application réelle, ce qui peut impacter les attentes réglementaires et clients d'ABC en matière de décarbonation et de reporting ESG.",
+      "resume": "L'article souligne le faible taux d'application des mesures de la Convention citoyenne pour le climat, reflétant un contexte réglementaire français moins ambitieux que prévu, ce qui peut impacter les attentes des clients d'ABC en matière de décarbonation et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/Seulement-16-des-mesures-de-la-Convention-citoyenne-pour-le-climat-sont-vraiment",
@@ -116,21 +149,10 @@
       "source": "Reporterre",
       "categorie": "Eau",
       "titre": "La température moyenne à la surface des océans vient de battre un nouveau record",
-      "resume": "L'article souligne l'accélération du réchauffement climatique, avec des records de température des océans impactant les risques opérationnels (aléas climatiques) et les exigences carbone des clients d'ABC (nucléaire, santé, industrie).",
+      "resume": "L'article souligne une hausse exceptionnelle des températures océaniques, renforçant les risques climatiques opérationnels pour ABC (aléas météo sur 3 000+ sites clients) et l'urgence d'adapter ses stratégies de résilience et de reporting ESG.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/La-temperature-moyenne-a-la-surface-des-oceans-vient-de-battre-un-nouveau-record",
-      "date": "2026-08-24"
-    },
-    {
-      "id": "5635308405e9",
-      "source": "Novethic",
-      "categorie": "Déchets",
-      "titre": "Le CDP tord le cou aux idées reçues sur la rentabilité des investissements durables",
-      "resume": "L'article souligne la rentabilité des investissements durables (ROI en 3 ans selon CDP), ce qui peut influencer les décisions clients d'ABC en matière de transition écologique et leurs exigences carbone pour les prestataires.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.novethic.fr/economie-et-social/business-model-en-transition/cdp-veut-tordre-cout-idees-recues-rentabilite-investissements-durables",
       "date": "2026-08-24"
     },
     {
@@ -138,7 +160,7 @@
       "source": "GreenUnivers",
       "categorie": "Énergie",
       "titre": "Rénovation : le gouvernement acte sa nouvelle politique",
-      "resume": "La nouvelle politique de rénovation énergétique du gouvernement pourrait influencer les exigences clients d'ABC (ex : tertiaire) en matière d'efficacité énergétique des bâtiments, sans impact direct immédiat sur ses activités.",
+      "resume": "La réforme des aides à la rénovation énergétique via les CEE pourrait influencer les exigences des clients d'ABC (ex : tertiaire) en matière d'efficacité énergétique des bâtiments, sans impact direct immédiat sur ses activités.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/08/renovation-le-gouvernement-acte-sa-nouvelle-politique-431658/",
@@ -149,7 +171,7 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "L’été est devenu la période la plus chère de l’année [Marchés]",
-      "resume": "L'article souligne la volatilité des prix de l'électricité en période estivale, un enjeu clé pour ABC dans la gestion de ses coûts énergétiques et la planification de ses contrats d'approvisionnement.",
+      "resume": "L'article souligne la volatilité des prix de l'électricité en période estivale, un enjeu énergétique à surveiller pour ABC dans le cadre de la gestion de ses coûts opérationnels et de son reporting extra-financier (scope 2).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/08/lete-est-devenu-la-periode-la-plus-chere-de-lannee-marches-431651/",
@@ -160,21 +182,10 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "Le mégafeu en Gironde, énième révélateur de la vulnérabilité des réseaux télécoms",
-      "resume": "L'article souligne la vulnérabilité des infrastructures critiques (réseaux télécoms) face aux aléas climatiques, un risque indirect pour ABC qui pourrait impacter la continuité de ses services chez 3 000+ clients.",
+      "resume": "L'article souligne la vulnérabilité des infrastructures critiques (télécoms) face aux aléas climatiques, un risque indirect pour ABC dont les activités dépendent de la continuité des services chez ses clients (3 000+ sites).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/08/24/le-megafeu-en-gironde-enieme-revelateur-de-la-vulnerabilite-des-reseaux-telecoms_6755475_3234.html",
-      "date": "2026-08-24"
-    },
-    {
-      "id": "ef21e08f729a",
-      "source": "Le Monde Planète",
-      "categorie": "Énergie",
-      "titre": "Carburant : le gouvernement « travaille à une reconduction » des aides et du chèque énergie",
-      "resume": "L'article mentionne des aides gouvernementales pour les secteurs exposés aux fluctuations des prix de l'énergie, mais ABC n'est pas directement concerné par ces dispositifs ciblant l'agriculture, la pêche ou le BTP.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/politique/article/2026/08/24/le-gouvernement-travaille-a-une-reconduction-des-aides-au-carburant-et-du-cheque-energie_6755228_823448.html",
       "date": "2026-08-24"
     }
   ],
@@ -280,11 +291,6 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "47",
-      "dept_nom": "Lot-et-Garonne",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "32",
       "dept_nom": "Gers",
       "niveau": "crise"
@@ -297,6 +303,11 @@
     {
       "dept_code": "37",
       "dept_nom": "Indre-et-Loire",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "47",
+      "dept_nom": "Lot-et-Garonne",
       "niveau": "crise"
     },
     {
@@ -475,6 +486,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "82",
+      "dept_nom": "Tarn-et-Garonne",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "31",
       "dept_nom": "Haute-Garonne",
       "niveau": "crise"
@@ -485,13 +501,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "12",
-      "dept_nom": "Aveyron",
+      "dept_code": "81",
+      "dept_nom": "Tarn",
       "niveau": "crise"
     },
     {
-      "dept_code": "81",
-      "dept_nom": "Tarn",
+      "dept_code": "12",
+      "dept_nom": "Aveyron",
       "niveau": "crise"
     },
     {
@@ -618,11 +634,6 @@
       "dept_code": "2A",
       "dept_nom": "Corse-du-Sud",
       "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "82",
-      "dept_nom": "Tarn-et-Garonne",
-      "niveau": "alerte"
     },
     {
       "dept_code": "05",
@@ -953,7 +964,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des textes publiés ne traite directement de sujets environnementaux, climatiques ou de RSE pertinents pour un Responsable Environnement/Climat d'une grande entreprise de services.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1185,10 +1196,16 @@
           "date": "2026-04-09"
         },
         {
+          "titre": "Texte adopté N° 339",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/proteger_mineurs_reseaux_sociaux_17e",
+          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/proteger_mineurs_reseaux_sociaux_17e",
+          "date": "2025-11-18"
+        },
+        {
           "titre": "Texte adopté N° 335",
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_prevention_cardio_neuro_vasculaire_et_anticiper_risque_sanitaire_et_social_majeur_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/accelerer_prevention_cardio_neuro_vasculaire_et_anticiper_risque_sanitaire_et_social_majeur_17e",
-          "date": "2026-08-25"
+          "date": "2025-12-23"
         },
         {
           "titre": "Texte adopté N° 328",
@@ -1243,15 +1260,9 @@
           "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/retention_admin_prevention_attentats_17e",
           "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/retention_admin_prevention_attentats_17e",
           "date": "2025-12-02"
-        },
-        {
-          "titre": "Texte adopté N° 313",
-          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N50548",
-          "url_dossier": "https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N50548",
-          "date": "2024-10-03"
         }
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) qui pourrait renforcer les obligations de reporting et de transition énergétique, et le **Projet de loi de financement de la sécurité sociale pour 2026** (N°2242) susceptible d’impacter les financements liés à la santé environnementale ou aux taxes carbone. Aucun texte ne traite directement des déchets ou de la RSE de manière exhaustive."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l’environnement et au reporting RSE. Aucun autre texte ne mentionne explicitement des enjeux climatiques ou environnementaux majeurs."
 }
