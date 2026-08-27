@@ -1,15 +1,15 @@
 {
   "date": "2026-08-27",
-  "generated_at": "17:03",
-  "elapsed_seconds": 207,
+  "generated_at": "21:07",
+  "elapsed_seconds": 180,
   "errors": [],
   "stats": {
-    "jo_analyses": 12,
+    "jo_analyses": 10,
     "jo_retenus": 0,
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-27T17:03:10",
+    "run_at": "2026-08-27T21:07:55",
     "sources": {
       "JORF": 0,
       "RSS": 7,
@@ -19,8 +19,8 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 46,
-    "llm_seconds": 63.3
+    "llm_calls": 49,
+    "llm_seconds": 61.9
   },
   "items": [
     {
@@ -39,8 +39,8 @@
       "source": "Actu-Environnement",
       "categorie": "Eau",
       "titre": "Réemploi : déploiement national de la consigne et hausse des soutiens financiers au menu de la REP emballages",
-      "resume": "La REP emballages pourrait imposer des obligations de réemploi (consigne) aux prestataires de propreté comme ABC, avec des soutiens financiers pour les acteurs engagés dans cette démarche.",
-      "pourquoi": "L'article aborde la REP emballages, une réglementation impactant directement les déchets générés par les prestations de propreté (scope 3). Bien que le déploiement de la consigne ne soit pas encore finalisé, ABC doit anticiper les évolutions réglementaires sur le réemploi et les soutiens financiers associés pour adapter sa stratégie déchets et reporting CSRD.",
+      "resume": "La REP emballages pourrait imposer des obligations de réemploi (consigne) aux prestataires de propreté/FM comme ABC, avec des soutiens financiers pour les acteurs engagés dans cette démarche.",
+      "pourquoi": "L'article concerne directement la réglementation déchets (REP emballages) et le réemploi, un enjeu clé pour ABC dans le cadre de son reporting CSRD/ESRS et de sa stratégie de décarbonation (scope 3 lié aux déchets des clients). La consigne et les soutiens financiers pourraient impacter les pratiques de gestion des déchets des prestations de propreté.",
       "criticite": 2,
       "url": "https://www.actu-environnement.com/ae/news/reemploi-emballages-deploiment-consigne-soutien-financier-rep-48438.php4#xtor=RSS-6",
       "date": "2026-08-27"
@@ -50,8 +50,8 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Marchés publics : des fiches pratiques pour anticiper les nouvelles exigences environnementales et sociales",
-      "resume": "L'article aborde les nouvelles exigences environnementales et sociales dans les marchés publics, ce qui impacte directement les critères d'achat des clients d'ABC (nucléaire, santé, industrie) et leurs attentes en matière de reporting ESG (CSRD, ESRS).",
-      "pourquoi": "Les marchés publics évoluent vers des critères plus stricts en environnement et social, influençant les appels d'offres et les exigences des clients d'ABC. Cela peut impacter la stratégie commerciale, la conformité des prestations et les attentes en matière de reporting extra-financier.",
+      "resume": "L'article aborde les nouvelles exigences environnementales et sociales dans les marchés publics, ce qui impacte directement les prestataires comme ABC en tant que fournisseur de services. Ces évolutions réglementaires pourraient influencer les appels d'offres et les critères de sélection des clients.",
+      "pourquoi": "Les marchés publics sont un canal clé pour ABC pour répondre aux besoins de ses clients (nucléaire, santé, industrie). Les nouvelles exigences environnementales et sociales (liées à la CSRD, taxonomie verte, ou BGES) pourraient imposer des critères stricts en matière de reporting ESG, décarbonation ou gestion des déchets, directement alignés sur les enjeux de ABC (scope 1/2/3, ISO 14001, REP).",
       "criticite": 2,
       "url": "https://www.actuel-hse.fr/content/marches-publics-des-fiches-pratiques-pour-anticiper-les-nouvelles-exigences",
       "date": "2026-08-27"
@@ -61,7 +61,7 @@
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "MaPrimeRénov' : plusieurs travaux monogestes ne seront plus éligibles dès septembre",
-      "resume": "La réforme de MaPrimeRénov' supprime l'éligibilité de certains monogestes de rénovation à partir de septembre 2026, ce qui pourrait impacter indirectement les clients d'ABC (ex : tertiaire) dans leurs projets de rénovation énergétique, sans obligation directe pour ABC.",
+      "resume": "L'article impacte indirectement ABC via les attentes clients en rénovation énergétique (secteurs santé, industrie, nucléaire) qui pourraient être influencés par les évolutions de MaPrimeRénov'.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/maprimerenov-monogestes-suppression-septembre-2026-48439.php4#xtor=RSS-6",
@@ -72,7 +72,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Canicule : une entreprise solidaire instaure un «congé climatique» de quatre jours par an",
-      "resume": "L'article illustre une initiative sociale et climatique (congés climatiques) qui pourrait inspirer ABC pour adapter ses politiques RH et RSE face aux risques caniculaires, bien que sans obligation réglementaire directe pour l'entreprise.",
+      "resume": "L'initiative d'un 'congé climatique' pour protéger les salariés vulnérables face aux canicules pourrait inspirer ABC à intégrer des mesures de prévention des risques climatiques dans sa politique RSE, notamment pour les équipes intervenant sur des sites clients exposés.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/canicule-une-entreprise-solidaire-instaure-un-conge-climatique-de-quatre-jours-par-1",
@@ -83,7 +83,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "«Méga-décret» de simplification : les mesures à retenir en urbanisme et environnement",
-      "resume": "Le décret de simplification du 27 juillet 2026 pourrait impacter les règles d'urbanisme et d'installation de photovoltaïque, influençant potentiellement les sites clients d'ABC (bâtiments tertiaires, industriels) et leurs obligations en matière d'efficacité énergétique ou de production renouvelable.",
+      "resume": "Le décret de simplification du 27 juillet 2026 pourrait impacter les obligations réglementaires locales en matière d'urbanisme et d'environnement, notamment pour les installations photovoltaïques ou les autorisations, mais sans lien direct avec les enjeux spécifiques d'ABC (BGES, CSRD, flotte véhicules, etc.).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/mega-decret-de-simplification-les-mesures-retenir-en-urbanisme-et-environnement",
@@ -94,7 +94,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "En 2026, le jour du dépassement mondial est tombé le 30 juillet",
-      "resume": "L'article souligne l'avancement du jour du dépassement mondial en 2026, un indicateur clé de la pression environnementale qui peut influencer les exigences clients en matière de durabilité et de reporting ESG pour ABC.",
+      "resume": "L'article souligne l'avancement du jour du dépassement mondial en 2026, un indicateur clé de la pression environnementale qui peut influencer les attentes clients et les politiques RSE, notamment pour les entreprises de services comme ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/en-2026-le-jour-du-depassement-mondial-est-tombe-le-30-juillet",
@@ -143,6 +143,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "85",
+      "dept_nom": "Vendée",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "53",
       "dept_nom": "Mayenne",
       "niveau": "crise"
@@ -160,11 +165,6 @@
     {
       "dept_code": "79",
       "dept_nom": "Deux-Sèvres",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "85",
-      "dept_nom": "Vendée",
       "niveau": "crise"
     },
     {
@@ -358,13 +358,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "39",
-      "dept_nom": "Jura",
+      "dept_code": "69",
+      "dept_nom": "Rhône",
       "niveau": "crise"
     },
     {
-      "dept_code": "69",
-      "dept_nom": "Rhône",
+      "dept_code": "39",
+      "dept_nom": "Jura",
       "niveau": "crise"
     },
     {
@@ -528,13 +528,13 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
+      "dept_code": "04",
+      "dept_nom": "Alpes-de-Haute-Provence",
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "04",
-      "dept_nom": "Alpes-de-Haute-Provence",
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
       "niveau": "alerte renforcée"
     },
     {
@@ -602,12 +602,6 @@
       "titre": "Décision n° 2026-PF-04 du 1er juillet 2026 portant reconduction de l'autorisation délivrée à l'association Te Reo O Tefana pour l'exploitation d'un service de radio de catégorie B par voie hertzienne terrestre en modulation de fréquence dénommé « Radio Te Reo O Tefana »",
       "nature": "DECISION",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750837",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Décision n° 2026-PF-05 du 1er juillet 2026 portant reconduction de l'autorisation délivrée à la SARL Tahiti Web Radio.PF pour l'exploitation d'un service de radio de catégorie B par voie hertzienne terrestre en modulation de fréquence dénommé « Tahiti Web Radio »",
-      "nature": "DECISION",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750873",
       "date": "2026-08-27"
     },
     {
@@ -743,24 +737,6 @@
       "date": "2026-08-27"
     },
     {
-      "titre": "Arrêté du 25 août 2026 pris en application de l'article L. 162-22-7 du code de la sécurité sociale et modifiant l'arrêté du 2 mars 2005 modifié fixant la liste des produits et prestations mentionnés à l'article L. 165-1 du code de la sécurité sociale pris en charge en sus des prestations d'hospitalisation",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750298",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Arrêté du 25 août 2026 portant radiation de produits au titre III de la liste des produits et prestations remboursables prévue à l'article L. 165-1 du code de la sécurité sociale",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750313",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Arrêté du 25 août 2026 pris en application de l'article L. 162-22-7 du code de la sécurité sociale et modifiant l'arrêté du 2 mars 2005 modifié fixant la liste des produits et prestations mentionnés à l'article L. 165-1 du code de la sécurité sociale pris en charge en sus des prestations d'hospitalisation",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750323",
-      "date": "2026-08-27"
-    },
-    {
       "titre": "Arrêté du 25 août 2026 modifiant l'arrêté du 9 novembre 2009 portant création d'un service à compétence nationale dénommé « Mission nationale de contrôle et d'audit des organismes de sécurité sociale »",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750339",
@@ -776,6 +752,24 @@
       "titre": "Arrêté du 25 août 2026 relatif à l'insaisissabilité d'un bien culturel",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750356",
+      "date": "2026-08-27"
+    },
+    {
+      "titre": "Arrêté du 25 août 2026 pris en application de l'article L. 162-22-7 du code de la sécurité sociale et modifiant l'arrêté du 2 mars 2005 modifié fixant la liste des produits et prestations mentionnés à l'article L. 165-1 du code de la sécurité sociale pris en charge en sus des prestations d'hospitalisation",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750298",
+      "date": "2026-08-27"
+    },
+    {
+      "titre": "Arrêté du 25 août 2026 portant radiation de produits au titre III de la liste des produits et prestations remboursables prévue à l'article L. 165-1 du code de la sécurité sociale",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750313",
+      "date": "2026-08-27"
+    },
+    {
+      "titre": "Arrêté du 25 août 2026 pris en application de l'article L. 162-22-7 du code de la sécurité sociale et modifiant l'arrêté du 2 mars 2005 modifié fixant la liste des produits et prestations mentionnés à l'article L. 165-1 du code de la sécurité sociale pris en charge en sus des prestations d'hospitalisation",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750323",
       "date": "2026-08-27"
     },
     {
@@ -869,42 +863,6 @@
       "date": "2026-08-27"
     },
     {
-      "titre": "Arrêté du 17 août 2026 portant admission à la retraite (ingénieurs civils de la défense)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750585",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Arrêté du 6 août 2026 portant admission à la retraite (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750588",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Arrêté du 14 août 2026 portant admission à la retraite (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750590",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Arrêté du 17 août 2026 portant admission à la retraite (inspection du travail)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750592",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Arrêté du 20 août 2026 portant fin de fonctions (direction régionale et interdépartementale de l'économie, de l'emploi, du travail et des solidarités d'Ile-de-France)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750594",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Arrêté du 20 août 2026 confiant l'intérim de l'emploi de directeur de l'unité départementale des Hauts-de-Seine à la direction régionale et interdépartementale de l'économie, de l'emploi, du travail et des solidarités d'Ile-de-France",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750596",
-      "date": "2026-08-27"
-    },
-    {
       "titre": "Arrêté du 26 août 2026 portant nomination (administration centrale)",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750598",
@@ -938,24 +896,6 @@
       "titre": "Arrêté du 26 août 2026 portant nomination (administration centrale)",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750629",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Décret du 26 août 2026 portant nomination d'un ambassadeur extraordinaire et plénipotentiaire de la République française auprès du Royaume de Thaïlande - M. VANDEVILLE (François)",
-      "nature": "DECRET",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750635",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Décret du 26 août 2026 portant nomination d'un ambassadeur extraordinaire et plénipotentiaire de la République française auprès de la République islamique du Pakistan - M. POIRIER (Jean-Noël)",
-      "nature": "DECRET",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750638",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Arrêté du 21 août 2026 portant nomination au Conseil national du développement et de la solidarité internationale",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750641",
       "date": "2026-08-27"
     },
     {
@@ -1019,12 +959,6 @@
       "date": "2026-08-27"
     },
     {
-      "titre": "Arrêté du 17 août 2026 portant nomination dans un emploi de directeur du centre de ressources, d'expertise et de performance sportive de Toulouse",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750703",
-      "date": "2026-08-27"
-    },
-    {
       "titre": "Arrêté du 20 août 2026 portant nomination par intérim de la présidente du directoire du grand port maritime de la Guadeloupe",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750706",
@@ -1040,36 +974,6 @@
       "titre": "Décision n° 2026-BO-09 du 16 juillet 2026 modifiant la décision n° 2021-BO-09 du 1er décembre 2021 portant reconduction de l'autorisation délivrée à l'association Contact 33 pour l'exploitation du service de radio de catégorie A par voie hertzienne terrestre en modulation de fréquence dénommé Aqui FM",
       "nature": "DECISION",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750944",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Documents et publications",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054751099",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Commissions / organes temporaires",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054751102",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Documents déposés",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054751104",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Documents publiés",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054751106",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Groupes politiques",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054751108",
       "date": "2026-08-27"
     },
     {
@@ -1100,12 +1004,6 @@
       "titre": "Avis relatif à l'établissement au titre de l'année 2027 de la liste d'aptitude prévue par le décret n° 2025-1144 du 27 novembre 2025 portant statut particulier du corps des directeurs d'hôpital",
       "nature": "AVIS",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054751187",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Demandes de changement de nom (Accès protégé textes 101 à 118)",
-      "nature": "ANNONCES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054751192",
       "date": "2026-08-27"
     },
     {
@@ -1167,22 +1065,10 @@
       "nature": "DECRET",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750523",
       "date": "2026-08-27"
-    },
-    {
-      "titre": "Décret du 26 août 2026 portant affectation d'un officier général (corps des officiers de la marine nationale administrés par le ministère de la transition écologique, de la biodiversité et des négociations internationales sur le climat et la nature)",
-      "nature": "DECRET",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054750582",
-      "date": "2026-08-27"
-    },
-    {
-      "titre": "Liste relative au vocabulaire des énergies (termes, expressions et définitions adoptés)",
-      "nature": "LISTE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054751095",
-      "date": "2026-08-27"
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Les textes significatifs pour un Responsable Environnement/Climat incluent : (1) l'arrêté accordant un permis exclusif de recherches de mines de lithium dans le Puy-de-Dôme, crucial pour la transition énergétique et les chaînes d'approvisionnement des batteries ; (2) les modifications de la prime de transition énergétique (décrets et arrêtés du 25 août 2026) qui impactent les aides financières pour la rénovation énergétique des bâtiments ; (3) les ajustements des cahiers des charges des AOP « Bleu du Vercors-Sassenage » et « Rocamadour », potentiellement liés à des enjeux de durabilité des filières agricoles.",
+  "briefing_jorf": "Les textes significatifs incluent l'octroi d'un permis exclusif de recherches de mines de lithium dans le Puy-de-Dôme (2), ainsi que plusieurs modifications liées à la prime de transition énergétique (3, 8, 9), impactant potentiellement les stratégies de décarbonation et d'approvisionnement en matières premières critiques pour les entreprises.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1476,5 +1362,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des enjeux climatiques et énergétiques liés à la transposition de directives européennes. Aucun autre texte ne semble aborder spécifiquement les thématiques RSE, reporting extra-financier ou gestion des déchets."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** présente un intérêt direct pour un Responsable Environnement/Climat, en raison de son volet environnemental et énergétique. Aucun autre texte ne semble aborder spécifiquement des enjeux climatiques, de reporting RSE ou de gestion des déchets."
 }
