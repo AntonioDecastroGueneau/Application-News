@@ -1,15 +1,15 @@
 {
   "date": "2026-08-28",
-  "generated_at": "17:52",
-  "elapsed_seconds": 206,
+  "generated_at": "21:32",
+  "elapsed_seconds": 215,
   "errors": [],
   "stats": {
-    "jo_analyses": 8,
+    "jo_analyses": 7,
     "jo_retenus": 0,
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-28T17:52:33",
+    "run_at": "2026-08-28T21:32:11",
     "sources": {
       "JORF": 0,
       "RSS": 9,
@@ -19,8 +19,8 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 46,
-    "llm_seconds": 60.6
+    "llm_calls": 45,
+    "llm_seconds": 54.3
   },
   "items": [
     {
@@ -35,11 +35,22 @@
       "date": "2026-08-28"
     },
     {
+      "id": "e4dbc3fefd02",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "Bilan de la loi LOM : l’OPECST appelle à ne pas miser sur la seule électrification des transports",
+      "resume": "L'article souligne les limites de la loi LOM sur l'électrification des transports et appelle à une approche plus diversifiée pour la décarbonation, ce qui pourrait impacter les stratégies de mobilité durable d'ABC (flotte de véhicules, ZFE).",
+      "pourquoi": "L'article aborde la mobilité durable (électrification des flottes, ZFE) et les objectifs de décarbonation, directement liés aux enjeux de flotte véhicules (scope 1) et aux réglementations comme la loi LOM. Bien que l'OPECST ne soit pas une source réglementaire directe, ses recommandations influencent les politiques publiques et les attentes des clients d'ABC (nucléaire, santé, industrie) en matière de transition écologique.",
+      "criticite": 2,
+      "url": "https://www.actuel-hse.fr/content/bilan-de-la-loi-lom-lopecst-appelle-ne-pas-miser-sur-la-seule-electrification-des-transports",
+      "date": "2026-08-28"
+    },
+    {
       "id": "24203a65fad7",
       "source": "Actu-Environnement",
       "categorie": "Énergie",
       "titre": "REP emballages : retour des contrats de performance entre collectivités et éco-organismes",
-      "resume": "La REP emballages pourrait impacter indirectement ABC via les exigences clients (nucléaire, santé, industrie) en matière de traçabilité et performance des déchets, mais sans obligation directe pour le prestataire de propreté.",
+      "resume": "La REP emballages pourrait impacter les obligations de tri et de traçabilité des déchets des prestataires de propreté comme ABC, notamment via des contrats de performance avec les collectivités et éco-organismes.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/rep-emballages-contrat-performance-collectivite-eco-organisme-48446.php4#xtor=RSS-6",
@@ -50,7 +61,7 @@
       "source": "GreenUnivers",
       "categorie": "Déchets",
       "titre": "Effacements : la Cour des comptes suggère vivement d’arrêter les appels d’offres",
-      "resume": "L'article critique les appels d'offres pour les mécanismes d'effacement de consommation, qui pourraient évoluer vers des flexibilités énergétiques. Cela pourrait impacter la gestion énergétique des sites clients d'ABC, notamment en termes de coûts et d'opportunités de réduction de la consommation.",
+      "resume": "L'article souligne une critique institutionnelle des appels d'offres pour les mécanismes d'effacement énergétique, ce qui pourrait impacter les stratégies d'efficacité énergétique et de flexibilité des entreprises comme ABC dans le cadre de leur reporting ESG et de leur gestion énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/08/effacements-la-cour-des-comptes-suggr-vivement-darreter-les-appels-doffres-431777/",
@@ -61,7 +72,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "Les documents de la semaine",
-      "resume": "Cet article hebdomadaire compile des documents clés sur la transition énergétique (réglementations, études, analyses) qui pourraient inclure des évolutions pertinentes pour le reporting ESG (CSRD/ESRS), la décarbonation ou les risques climatiques opérationnels de ABC.",
+      "resume": "Cet article hebdomadaire compile des documents clés pour la transition énergétique, incluant réglementations, études et analyses pertinentes pour les entreprises engagées dans la décarbonation et le reporting ESG. Il permet à ABC de rester informé des évolutions réglementaires et des bonnes pratiques en matière de BGES, CSRD, mobilité durable et efficacité énergétique.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/08/les-documents-de-la-semaine-381215/",
@@ -72,7 +83,7 @@
       "source": "GreenUnivers",
       "categorie": "Climat",
       "titre": "L’agenda de la transition énergétique",
-      "resume": "L'article recense des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, etc.), offrant une veille sur les tendances et innovations sectorielles pertinentes pour ABC, notamment en matière de décarbonation et de mobilité durable.",
+      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, rénovation) qui pourraient offrir des opportunités de veille ou de réseautage pour ABC, notamment sur la décarbonation de sa flotte ou l'efficacité énergétique des sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.greenunivers.com/2026/08/lagenda-de-la-transition-energetique-281-431464/",
@@ -83,21 +94,10 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Canicule : « Nos voisins méditerranéens n’ont pas attendu le réchauffement climatique pour penser la chaleur »",
-      "resume": "L'article souligne l'importance de l'adaptation aux canicules pour les entreprises de services comme ABC, notamment via la garantie d'un confort thermique mesurable, ce qui pourrait impacter les exigences clients en matière de résilience climatique et de performance énergétique des sites.",
+      "resume": "L'article souligne l'importance de l'adaptation aux canicules pour les entreprises de services comme ABC, notamment via la garantie d'un 'droit à la fraîcheur' pour les employés et clients, impactant potentiellement les conditions de travail et la qualité des prestations sur les 3 000+ sites clients.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/08/28/canicule-nos-voisins-mediterraneens-n-ont-pas-attendu-le-rechauffement-climatique-pour-penser-la-chaleur_6759054_3232.html",
-      "date": "2026-08-28"
-    },
-    {
-      "id": "e4dbc3fefd02",
-      "source": "Actuel HSE",
-      "categorie": "Climat",
-      "titre": "Bilan de la loi LOM : l’OPECST appelle à ne pas miser sur la seule électrification des transports",
-      "resume": "L'article souligne l'insuffisance de la décarbonation des transports terrestres en France, ce qui pourrait impacter les exigences carbone des clients d'ABC (notamment industriels ou nucléaires) et renforcer les pressions réglementaires sur la flotte de véhicules d'ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/bilan-de-la-loi-lom-lopecst-appelle-ne-pas-miser-sur-la-seule-electrification-des-transports",
       "date": "2026-08-28"
     },
     {
@@ -105,7 +105,7 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "Passeport numérique de produit : les règles du registre européen sont fixées",
-      "resume": "Le passeport numérique de produit pourrait impacter la traçabilité des déchets et matériaux utilisés par ABC dans ses prestations de propreté/FM, notamment pour le reporting CSRD et la gestion des flux de déchets (scope 3).",
+      "resume": "Le passeport numérique de produit pourrait impacter la traçabilité des équipements et matériaux utilisés par ABC dans ses prestations de propreté/FM, notamment pour les déchets et la gestion des flux, mais sans obligation directe immédiate.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/passeport-numerique-de-produit-les-regles-du-registre-europeen-sont-fixees",
@@ -116,7 +116,7 @@
       "source": "Actuel HSE",
       "categorie": "Déchets",
       "titre": "PST 2026-2030 : vers une meilleure prise en compte de la prévention dans la conception des lieux et équipements de travail",
-      "resume": "Le PST 2026-2030 pourrait influencer les exigences clients d'ABC en matière de conception des lieux de travail (sécurité, ergonomie, environnement), impactant indirectement ses prestations de propreté/FM et ses processus internes.",
+      "resume": "Le PST 2026-2030 pourrait influencer les exigences clients d'ABC en matière de conception des lieux de travail (sécurité, environnement), impactant indirectement ses pratiques de propreté/FM et la gestion des risques climatiques sur ses sites.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/pst-2026-2030-vers-une-meilleure-prise-en-compte-de-la-prevention-dans-la-conception-des",
@@ -609,9 +609,9 @@
       "date": "2026-08-28"
     },
     {
-      "titre": "Décision du 24 août 2026 portant délégation de signature (direction générale de l'administration pénitentiaire)",
-      "nature": "DECISION",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054754734",
+      "titre": "Arrêté du 25 août 2026 portant délégation de signature (direction générale de l'aviation civile)",
+      "nature": "ARRETE",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054754981",
       "date": "2026-08-28"
     },
     {
@@ -633,9 +633,9 @@
       "date": "2026-08-28"
     },
     {
-      "titre": "Arrêté du 25 août 2026 portant délégation de signature (direction générale de l'aviation civile)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054754981",
+      "titre": "Décision du 24 août 2026 portant délégation de signature (direction générale de l'administration pénitentiaire)",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054754734",
       "date": "2026-08-28"
     },
     {
@@ -648,12 +648,6 @@
       "titre": "Arrêté du 26 août 2026 modifiant l'arrêté du 12 janvier 2018 portant application de l'article R. 873-2 du code de la sécurité intérieure fixant la tarification applicable aux demandes ayant pour objet la mise en œuvre des techniques de renseignement",
       "nature": "ARRETE",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054754392",
-      "date": "2026-08-28"
-    },
-    {
-      "titre": "Décision du 26 août 2026 portant délégation de signature (service d'information du Gouvernement)",
-      "nature": "DECISION",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054754411",
       "date": "2026-08-28"
     },
     {
@@ -672,6 +666,12 @@
       "titre": "Décision du 27 août 2026 portant délégation de signature (direction de l'évaluation de la performance, de l'achat, des finances et de l'immobilier - direction de projet du site unique)",
       "nature": "DECISION",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054754480",
+      "date": "2026-08-28"
+    },
+    {
+      "titre": "Décision du 26 août 2026 portant délégation de signature (service d'information du Gouvernement)",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054754411",
       "date": "2026-08-28"
     },
     {
@@ -729,12 +729,6 @@
       "date": "2026-08-28"
     },
     {
-      "titre": "Arrêté du 6 août 2026 portant admission à la retraite (ingénieurs civils de la défense)",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755096",
-      "date": "2026-08-28"
-    },
-    {
       "titre": "Décret du 26 août 2026 portant nomination et titularisation (ingénieurs des ponts, des eaux et des forêts)",
       "nature": "DECRET",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755099",
@@ -750,12 +744,6 @@
       "titre": "Décret du 26 août 2026 portant nomination (magistrature)",
       "nature": "DECRET",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755112",
-      "date": "2026-08-28"
-    },
-    {
-      "titre": "Arrêté du 13 août 2026 portant désignation de membres du comité d'évaluation de l'expérimentation du premier concours spécial pour le recrutement d'auditeurs de justice",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755118",
       "date": "2026-08-28"
     },
     {
@@ -831,30 +819,6 @@
       "date": "2026-08-28"
     },
     {
-      "titre": "Documents et publications",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755247",
-      "date": "2026-08-28"
-    },
-    {
-      "titre": "Commissions / organes temporaires",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755250",
-      "date": "2026-08-28"
-    },
-    {
-      "titre": "Documents déposés",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755252",
-      "date": "2026-08-28"
-    },
-    {
-      "titre": "Documents publiés",
-      "nature": "INFORMATIONS_PARLEMENTAIRES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755254",
-      "date": "2026-08-28"
-    },
-    {
       "titre": "Avis de vacance d'un emploi de sous-directeur",
       "nature": "AVIS",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755259",
@@ -879,22 +843,22 @@
       "date": "2026-08-28"
     },
     {
-      "titre": "Avis relatif aux décisions de l'Union nationale des caisses d'assurance maladie portant fixation des taux de participation de l'assuré applicables à des spécialités pharmaceutiques",
-      "nature": "AVIS",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755335",
-      "date": "2026-08-28"
-    },
-    {
       "titre": "Avis relatif aux prix de spécialités pharmaceutiques publiés en application des articles L. 162-16-5 et L. 162-16-6 code de la sécurité sociale",
       "nature": "AVIS",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755337",
       "date": "2026-08-28"
     },
     {
-      "titre": "Demandes de changement de nom (Accès protégé textes 58 à 77)",
-      "nature": "ANNONCES",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755342",
-      "date": "2026-08-28"
+      "titre": "LOI n° 2026-813 du 24 août 2026 visant à protéger les mineurs des risques auxquels les expose l'utilisation des réseaux sociaux (1)",
+      "nature": "LOI",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054743001",
+      "date": "2026-08-25"
+    },
+    {
+      "titre": "Décision n° 2026-911 DC du 14 août 2026",
+      "nature": "DECISION",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054743009",
+      "date": "2026-08-25"
     },
     {
       "titre": "Arrêté du 24 août 2026 modifiant l'arrêté du 23 novembre 2022 portant cahiers des charges des éco-organismes et des systèmes individuels de la filière à responsabilité élargie du producteur des textiles, chaussures et linge de maison (TLC)",
@@ -933,12 +897,6 @@
       "date": "2026-08-28"
     },
     {
-      "titre": "Arrêté du 30 juillet 2026 modifiant l'arrêté du 23 janvier 2023 fixant la liste des membres titulaires et suppléants représentant les organisations syndicales de fonctionnaires territoriaux au Conseil supérieur de la fonction publique territoriale",
-      "nature": "ARRETE",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755191",
-      "date": "2026-08-28"
-    },
-    {
       "titre": "Avis de vacance d'un emploi de responsable du pôle gestion publique et de la stratégie de la direction départementale des finances publiques de la Vendée",
       "nature": "AVIS",
       "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054755325",
@@ -946,7 +904,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Les arrêtés n°5 et 6 introduisent une expérimentation en Bretagne sur la gestion de l'azote agricole, avec suppression du plan prévisionnel de fumure et introduction de mesures de reliquats de drainage, ce qui pourrait impacter les pratiques agricoles et les politiques RSE des entreprises du secteur agroalimentaire ou en lien avec les territoires.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1240,5 +1198,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seuls deux sont directement pertinents pour un Responsable Environnement/Climat : le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) et le **Projet de loi de financement de la sécurité sociale pour 2026** (N°2242), qui pourraient inclure des mesures liées à la transition énergétique ou à la fiscalité environnementale. Aucun texte adopté ne semble aborder spécifiquement des enjeux climatiques ou RSE."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l'économie circulaire et à la réglementation environnementale européenne. Aucun autre texte ne semble aborder spécifiquement les enjeux climatiques, énergétiques ou de reporting RSE de manière significative."
 }
