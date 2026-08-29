@@ -1,7 +1,7 @@
 {
   "date": "2026-08-29",
-  "generated_at": "11:56",
-  "elapsed_seconds": 178,
+  "generated_at": "15:46",
+  "elapsed_seconds": 176,
   "errors": [],
   "stats": {
     "jo_analyses": 9,
@@ -9,18 +9,18 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-29T11:56:37",
+    "run_at": "2026-08-29T15:46:38",
     "sources": {
       "JORF": 0,
-      "RSS": 6,
+      "RSS": 3,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 46,
-    "llm_seconds": 51.2
+    "llm_calls": 35,
+    "llm_seconds": 42.1
   },
   "items": [
     {
@@ -28,7 +28,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Du Royaume-Uni à la Hongrie, les conséquences politiques variables des canicules en Europe",
-      "resume": "L'article met en lumière les disparités politiques européennes face aux canicules, un risque climatique indirect pouvant impacter les sites clients d'ABC (ex : perturbations logistiques, maintenance accrue).",
+      "resume": "L'article illustre la variabilité des réponses politiques européennes face aux risques climatiques, ce qui peut impacter indirectement les exigences carbone des clients d'ABC (ex : secteurs nucléaires, santé ou industrie) et leurs attentes en matière de résilience des prestataires.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/08/29/du-royaume-uni-a-la-hongrie-les-consequences-politiques-variables-des-canicules-en-europe_6759853_3244.html",
@@ -39,55 +39,22 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Les catastrophes climatiques de l’été 2026 feront-elles évoluer les comportements et les politiques en France ?",
-      "resume": "L'article souligne l'importance de l'adaptation aux risques climatiques pour les entreprises de services comme ABC, notamment en raison de l'exposition de ses 3 000+ sites clients à des aléas climatiques accrus (vagues de chaleur, incendies, sécheresse).",
+      "resume": "L'article souligne l'importance des risques climatiques opérationnels en France, qui pourraient influencer les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et impacter indirectement ses 3 000+ sites clients. Cela renforce la nécessité de renforcer la résilience climatique et la décarbonation de ses services.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/08/29/les-catastrophes-climatiques-de-l-ete-2026-feront-elles-evoluer-les-comportements-et-les-politiques-en-france_6759545_3244.html",
       "date": "2026-08-29"
     },
     {
-      "id": "24203a65fad7",
-      "source": "Actu-Environnement",
-      "categorie": "Énergie",
-      "titre": "REP emballages : retour des contrats de performance entre collectivités et éco-organismes",
-      "resume": "La REP emballages pourrait impacter les obligations de traçabilité et de performance des déchets pour ABC, notamment dans le cadre des prestations de propreté/FM chez ses clients. Une contractualisation renforcée entre collectivités et éco-organismes pourrait influencer les exigences clients en matière de gestion des déchets.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/rep-emballages-contrat-performance-collectivite-eco-organisme-48446.php4#xtor=RSS-6",
-      "date": "2026-08-28"
-    },
-    {
-      "id": "a51d97e2edf7",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "Effacements : la Cour des comptes suggère vivement d’arrêter les appels d’offres",
-      "resume": "L'article aborde les mécanismes d'effacement de consommation et les appels d'offres associés, qui pourraient impacter indirectement les stratégies énergétiques des entreprises comme ABC, notamment dans le cadre de la gestion de leur consommation énergétique et des flexibilités énergétiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/08/effacements-la-cour-des-comptes-suggr-vivement-darreter-les-appels-doffres-431777/",
-      "date": "2026-08-28"
-    },
-    {
-      "id": "05c7b2557080",
-      "source": "GreenUnivers",
+      "id": "837b116e30fb",
+      "source": "Actuel HSE",
       "categorie": "Climat",
-      "titre": "Les documents de la semaine",
-      "resume": "Cette newsletter hebdomadaire recense les documents clés (réglementations, études, analyses) liés à la transition énergétique, utile pour suivre les évolutions impactant les enjeux climatiques, énergétiques et de reporting d'ABC (BGES, CSRD, mobilité, déchets).",
+      "titre": "Le port des EPI en période de canicule, nouveau défi des préventeurs",
+      "resume": "L'article aborde un enjeu opérationnel lié aux conditions de travail en période de canicule, pouvant impacter la productivité et la sécurité des équipes de nettoyage d'ABC, mais sans lien direct avec les enjeux climatiques, réglementaires ou RSE prioritaires pour l'entreprise.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/08/les-documents-de-la-semaine-381215/",
-      "date": "2026-08-28"
-    },
-    {
-      "id": "12405b10ac64",
-      "source": "GreenUnivers",
-      "categorie": "Climat",
-      "titre": "L’agenda de la transition énergétique",
-      "resume": "L'article liste des événements professionnels liés à la transition énergétique (énergies renouvelables, mobilité électrique, rénovation) qui pourraient être utiles pour identifier des opportunités ou des partenaires pour ABC, notamment sur la décarbonation de sa flotte ou l'efficacité énergétique de ses sites.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/08/lagenda-de-la-transition-energetique-281-431464/",
-      "date": "2026-08-28"
+      "url": "https://www.actuel-hse.fr/content/le-port-des-epi-en-periode-de-canicule-nouveau-defi-des-preventeurs",
+      "date": "2026-08-29"
     }
   ],
   "restrictions_eau": [
@@ -877,7 +844,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "La décision sur les méthodes d'essai des gazoles (B10, B30, XTL) est pertinente pour évaluer l'impact environnemental des carburants et leur conformité aux normes RSE. Les modifications des cahiers des charges des AOP (Beurre Charentes-Poitou, Bleu d'Auvergne, Fourme de Montbrison) peuvent influencer les pratiques agricoles durables et la traçabilité des produits.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1171,5 +1138,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) et le **Projet de loi-cadre relatif au développement des transports** (N°2740) pourraient impacter directement les politiques climat, énergie et mobilité durable. Aucun texte adopté ne semble directement lié aux enjeux RSE ou reporting environnemental."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à l’énergie, l’environnement et la transposition de directives européennes dans ces domaines. Aucun autre texte adopté ou projet de loi ne semble directement impactant pour les enjeux climatiques ou RSE de l’entreprise."
 }
