@@ -1,7 +1,7 @@
 {
   "date": "2026-08-30",
-  "generated_at": "10:53",
-  "elapsed_seconds": 171,
+  "generated_at": "15:26",
+  "elapsed_seconds": 145,
   "errors": [],
   "stats": {
     "jo_analyses": 9,
@@ -9,7 +9,7 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-30T10:53:43",
+    "run_at": "2026-08-30T15:26:51",
     "sources": {
       "JORF": 0,
       "RSS": 3,
@@ -19,8 +19,8 @@
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 27,
-    "llm_seconds": 29.2
+    "llm_calls": 25,
+    "llm_seconds": 27.1
   },
   "items": [
     {
@@ -28,7 +28,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Canicules, incendies, sécheresse : comprendre l’été exceptionnel de la France en graphiques",
-      "resume": "L'article illustre l'intensification des aléas climatiques en France, un risque opérationnel majeur pour ABC qui intervient sur 3 000+ sites clients. Cela renforce l'urgence de renforcer la résilience des prestations et d'intégrer ces risques dans les stratégies BGES et ISO 14001.",
+      "resume": "L'article met en lumière l'intensification des aléas climatiques en France, ce qui expose ABC à des risques opérationnels accrus sur ses 3 000+ sites clients (perturbations de services, dégradation des infrastructures, etc.).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/les-decodeurs/article/2026/08/30/canicules-incendies-secheresse-l-ete-exceptionnel-de-la-france-en-graphiques_6760743_4355770.html",
@@ -39,7 +39,7 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Le port des EPI en période de canicule, nouveau défi des préventeurs",
-      "resume": "L'article aborde un enjeu opérationnel lié aux risques climatiques (canicules) impactant les conditions de travail des équipes de propreté/FM d'ABC, notamment en termes de sécurité et de confort des EPI.",
+      "resume": "L'article aborde un enjeu opérationnel lié aux risques climatiques (canicule) impactant directement les équipes terrain d'ABC, notamment en termes de sécurité et de gestion des EPI, avec des implications sur la productivité et la conformité HSE.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/le-port-des-epi-en-periode-de-canicule-nouveau-defi-des-preventeurs",
@@ -50,7 +50,7 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Philippe Rahm, architecte : « Face aux sécheresses et aux canicules, il faut aujourd’hui construire des “villes cactus” »",
-      "resume": "L'article aborde les stratégies d'adaptation des villes aux canicules et sécheresses, ce qui pourrait impacter les sites clients d'ABC (ex : tertiaire, santé) en termes de gestion des espaces verts et de confort thermique, avec des risques opérationnels liés aux aléas climatiques.",
+      "resume": "L'article aborde l'adaptation des villes aux canicules et sécheresses, un enjeu indirect pour ABC via les risques climatiques sur ses 3 000+ sites clients et les exigences carbone de ses clients (nucléaire, santé, industrie).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/idees/article/2026/08/29/philippe-rahm-architecte-face-aux-secheresses-et-aux-canicules-il-faut-aujourd-hui-construire-des-villes-cactus_6760301_3232.html",
@@ -802,7 +802,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des textes publiés dans le Journal Officiel du 30 août 2026 ne présente de mesure directement pertinente pour un Responsable Environnement/Climat d'une grande entreprise de services, ces textes relevant principalement de domaines administratifs, sociaux, sanitaires ou réglementaires sectoriels.",
+  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1096,5 +1096,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique** (N°2518) et le **Projet de loi-cadre relatif au développement des transports** (N°2740) pourraient impacter directement les stratégies climat, énergie et mobilité durable. Aucun texte adopté ne semble directement lié aux enjeux environnementaux ou RSE dans cette liste."
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** pourrait présenter un intérêt pour un Responsable Environnement/Climat, en raison de son volet environnemental et énergétique. Aucun autre texte ne semble directement lié aux enjeux climatiques, RSE ou reporting extra-financier."
 }
