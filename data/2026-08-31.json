@@ -1,7 +1,7 @@
 {
   "date": "2026-08-31",
-  "generated_at": "12:04",
-  "elapsed_seconds": 222,
+  "generated_at": "18:07",
+  "elapsed_seconds": 195,
   "errors": [],
   "stats": {
     "jo_analyses": 7,
@@ -9,29 +9,62 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-08-31T12:04:22",
+    "run_at": "2026-08-31T18:07:01",
     "sources": {
       "JORF": 0,
-      "RSS": 3,
+      "RSS": 7,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 45,
-    "llm_seconds": 67.9
+    "llm_calls": 57,
+    "llm_seconds": 69.3
   },
   "items": [
     {
-      "id": "8e76b137ae68",
-      "source": "Reporterre",
+      "id": "a7fd64dc04b0",
+      "source": "I4CE",
       "categorie": "Climat",
-      "titre": "Après l'électrochoc de l'été 2026, ils et elles ont décidé de « passer à l'action »",
-      "resume": "Cet article illustre l'urgence climatique post-été 2026, renforçant la pression sur les entreprises pour accélérer leurs engagements carbone et s'adapter aux risques opérationnels liés aux aléas climatiques.",
+      "titre": "Réchauffement : « Sans changement d’échelle immédiat des politiques d’adaptation, nous allons vers la climatastrophe »",
+      "resume": "L'article souligne l'urgence d'une accélération des politiques d'adaptation climatique en France, ce qui pourrait impacter les risques opérationnels de ABC sur ses 3 000+ sites clients (ex. : aléas climatiques, perturbations des prestations).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://reporterre.net/Apres-l-electrochoc-de-l-ete-2026-ils-et-elles-ont-decide-de-passer-a-l-action",
+      "url": "https://www.i4ce.org/rechauffement-sans-changement-politiques-adaptation-climat/",
+      "date": "2026-08-31"
+    },
+    {
+      "id": "c3db0299790c",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "La DGEC promet un nouvel appel d’offres hydrogène rapidement",
+      "resume": "L'article annonce un nouvel appel d'offres hydrogène par la DGEC, ce qui pourrait impacter les stratégies de décarbonation des flottes de véhicules d'ABC, notamment en lien avec l'électrification et les véhicules à hydrogène.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/08/la-dgec-promet-un-nouvel-appel-doffres-hydrogene-rapidement-431833/",
+      "date": "2026-08-31"
+    },
+    {
+      "id": "d48ac5943b31",
+      "source": "GreenUnivers",
+      "categorie": "Déchets",
+      "titre": "La baisse du prix spot de l’électricité cache la hausse pour 2027 [Marchés]",
+      "resume": "L'article souligne une volatilité des prix de l'électricité avec une tendance haussière à moyen terme (2027), ce qui impacte les coûts énergétiques des prestations de propreté/FM d'ABC et influence les budgets clients dans un contexte de reporting ESG (CSRD) et de décarbonation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/08/la-baisse-du-prix-spot-de-lelectricite-cache-la-hausse-pour-2027-marches-431812/",
+      "date": "2026-08-31"
+    },
+    {
+      "id": "5d6c3f5f9e5c",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "« Pour financer la transition énergétique, la France a un droit économique parmi les plus sophistiqués du monde qu’elle n’exploite pas assez »",
+      "resume": "L'article souligne l'importance de la réglementation comme levier de transition énergétique, un contexte à suivre pour anticiper les évolutions légales impactant les obligations ESG et la décarbonation des entreprises en France.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/idees/article/2026/08/31/pour-financer-la-transition-energetique-la-france-a-un-droit-economique-parmi-les-plus-sophistiques-du-monde-qu-elle-n-exploite-pas-assez_6762610_3232.html",
       "date": "2026-08-31"
     },
     {
@@ -39,7 +72,7 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Mobilité durable : les entreprises invitées à participer à la Semaine européenne de la mobilité",
-      "resume": "L'article invite les entreprises à participer à la Semaine européenne de la mobilité, un événement qui promeut les solutions de mobilité durable, en lien avec les enjeux de décarbonation des flottes de véhicules (scope 1) et les attentes clients en matière de durabilité.",
+      "resume": "L'article invite les entreprises à participer à la Semaine européenne de la mobilité, un événement qui peut servir de levier pour promouvoir des actions de mobilité durable (ex : électrification de flotte) auprès des clients d'ABC, en alignement avec leurs exigences carbone et réglementations ZFE.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/mobilite-durable-les-entreprises-invitees-participer-la-semaine-europeenne-de-la-mobilite",
@@ -50,10 +83,21 @@
       "source": "Actuel HSE",
       "categorie": "Eau",
       "titre": "Le Medef appelle les entreprises à anticiper les tensions sur l’eau",
-      "resume": "L'article souligne l'importance pour les entreprises de se préparer aux tensions croissantes sur la ressource en eau, un enjeu pouvant impacter les activités de propreté/FM d'ABC, notamment via la gestion des sites clients et des ressources utilisées (eau pour le nettoyage).",
+      "resume": "L'article souligne l'importance pour les entreprises de préparer les tensions sur la ressource en eau, un risque opérationnel indirect pour ABC via ses 3 000+ sites clients exposés aux aléas climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/le-medef-appelle-les-entreprises-anticiper-les-tensions-sur-leau",
+      "date": "2026-08-31"
+    },
+    {
+      "id": "837b116e30fb",
+      "source": "Actuel HSE",
+      "categorie": "Climat",
+      "titre": "Le port des EPI en période de canicule, nouveau défi des préventeurs",
+      "resume": "L'article aborde les enjeux de sécurité et de confort des employés en période de canicule, notamment liés au port des EPI, ce qui impacte directement les prestataires de propreté comme ABC dans la gestion des risques opérationnels et la qualité de service.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/le-port-des-epi-en-periode-de-canicule-nouveau-defi-des-preventeurs",
       "date": "2026-08-31"
     }
   ],
@@ -309,13 +353,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "69",
-      "dept_nom": "Rhône",
+      "dept_code": "01",
+      "dept_nom": "Ain",
       "niveau": "crise"
     },
     {
-      "dept_code": "01",
-      "dept_nom": "Ain",
+      "dept_code": "69",
+      "dept_nom": "Rhône",
       "niveau": "crise"
     },
     {
@@ -760,7 +804,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun texte réglementaire significatif pour ABC dans ce JO.",
+  "briefing_jorf": "Aucun des textes publiés ne contient d'éléments directement pertinents pour un Responsable Environnement/Climat d'une grande entreprise de services, car ils concernent principalement l'apprentissage, la fiscalité, la justice, l'éducation, ou la santé publique.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1054,5 +1098,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l'économie circulaire et à la réglementation environnementale européenne. Aucun autre texte ne mentionne explicitement des enjeux climatiques ou RSE majeurs."
+  "pjl_briefing": "Parmi les projets de loi notables pour un Responsable Environnement/Climat, le **projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique et de santé (N° 2518)** pourrait inclure des mesures clés pour la transition écologique et le reporting RSE. Le **projet de loi-cadre relatif au développement des transports (N° 2740)** pourrait également impacter les stratégies de mobilité durable des entreprises. Aucun texte adopté ne semble directement lié à l'environnement ou au climat."
 }
