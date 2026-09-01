@@ -1,34 +1,56 @@
 {
   "date": "2026-09-01",
-  "generated_at": "10:43",
-  "elapsed_seconds": 208,
+  "generated_at": "15:33",
+  "elapsed_seconds": 201,
   "errors": [],
   "stats": {
     "jo_analyses": 9,
     "jo_retenus": 0,
-    "depts_restriction": 93
+    "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-09-01T10:43:11",
+    "run_at": "2026-09-01T15:33:39",
     "sources": {
       "JORF": 0,
-      "RSS": 10,
-      "VigiEau": 93,
+      "RSS": 13,
+      "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 50,
-    "llm_seconds": 68.2
+    "llm_calls": 56,
+    "llm_seconds": 73.1
   },
   "items": [
+    {
+      "id": "9feb61eb5a0a",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Photovoltaïque : Soren double le montant des écocontributions pour préparer l'avenir",
+      "resume": "L'augmentation des écocontributions pour les panneaux photovoltaïques pourrait impacter les coûts des prestations de nettoyage des installations solaires chez les clients d'ABC, notamment dans le cadre de la gestion des déchets et de la responsabilité élargie des producteurs (REP).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/photovoltaique-soren-double-ecocontributions-48457.php4#xtor=RSS-6",
+      "date": "2026-09-01"
+    },
+    {
+      "id": "0355b568701f",
+      "source": "Actu-Environnement",
+      "categorie": "Déchets",
+      "titre": "Effacement électrique : un soutien coûteux qui a profité aux industriels, selon la Cour des comptes",
+      "resume": "L'article aborde les mécanismes d'effacement électrique, un sujet indirectement lié à la transition énergétique et aux enjeux de décarbonation des entreprises (scope 2), mais sans impact opérationnel direct pour ABC dans ses activités de propreté/FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/effacement-electrique-cour-comptes-industriels-48456.php4#xtor=RSS-6",
+      "date": "2026-09-01"
+    },
     {
       "id": "84e17fb185b0",
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "L'été 2026 est le plus chaud jamais enregistré en France",
-      "resume": "L'article souligne l'intensification des aléas climatiques en France, ce qui expose ABC à des risques opérationnels accrus (perturbations des prestations, adaptation des services) et renforce l'importance de la résilience climatique dans sa stratégie.",
+      "resume": "L'article souligne l'intensification des aléas climatiques en France, ce qui augmente les risques opérationnels pour ABC (perturbations des prestations chez les clients, impacts sur la mobilité des équipes et la gestion des déchets).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/L-ete-2026-est-le-plus-chaud-jamais-enregistre-en-France",
@@ -39,10 +61,43 @@
       "source": "Reporterre",
       "categorie": "Climat",
       "titre": "« 36 °C dehors, 26 °C dans les classes » : ces écoles s'adaptent aux canicules grâce aux low-tech",
-      "resume": "L'article illustre l'enjeu des risques climatiques opérationnels (vagues de chaleur) sur les bâtiments tertiaires, pouvant impacter les sites clients d'ABC et leurs exigences en matière de confort thermique et d'adaptation climatique.",
+      "resume": "L'article illustre l'adaptation des bâtiments aux canicules via des solutions low-tech, un enjeu potentiel pour les sites clients d'ABC (ex : écoles, bureaux) dans un contexte de risques climatiques accrus.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/36-oC-dehors-26-oC-dans-les-classes-ces-ecoles-s-adaptent-aux-canicules-grace-aux-low-tech",
+      "date": "2026-09-01"
+    },
+    {
+      "id": "e0eb90f17e40",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "TVA réduite sur le solaire, redevance sur l’eau,  financement des réseaux de gaz et CEE au prochain CSE",
+      "resume": "L'article mentionne une évolution potentielle du taux réduit de TVA pour les installations photovoltaïques (≤9 kWc), ce qui pourrait impacter les projets d'autoconsommation solaire d'ABC pour ses sites ou flottes (scope 2).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/09/tva-reduite-sur-le-solaire-redevance-sur-leau-financement-des-reseaux-de-gaz-et-cee-au-prochain-cse-431935/",
+      "date": "2026-09-01"
+    },
+    {
+      "id": "30c6443c05ce",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "Stop Fraudes demande la suspension des CEE « gros rouleurs »",
+      "resume": "L'article met en lumière des risques de fraude sur les CEE liés à la mobilité électrique, ce qui pourrait impacter les stratégies de décarbonation de la flotte de véhicules d'ABC et ses clients, notamment dans le cadre de la réglementation CSRD et des objectifs net zéro.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/09/stop-fraudes-demande-la-suspension-des-cee-gros-rouleurs-431902/",
+      "date": "2026-09-01"
+    },
+    {
+      "id": "f1988c3f4d32",
+      "source": "Le Monde Planète",
+      "categorie": "Énergie",
+      "titre": "Les incendies de l’été 2026 en France sont responsables d’émissions de carbone d’une ampleur inédite",
+      "resume": "L'article souligne l'impact des incendies sur les émissions de GES en France, ce qui pourrait influencer les exigences carbone des clients d'ABC (notamment dans les secteurs nucléaires, santé et industrie) et renforcer les attentes en matière de reporting extra-financier (CSRD/ESRS).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/09/01/les-incendies-de-l-ete-2026-en-france-sont-responsables-d-emissions-de-carbone-d-une-ampleur-inedite_6763477_3244.html",
       "date": "2026-09-01"
     },
     {
@@ -50,10 +105,32 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Météo-France va affiner ses cartes de vigilance à l’intérieur des départements",
-      "resume": "L'affinage des cartes de vigilance de Météo-France permet à ABC d'identifier plus précisément les risques climatiques sur ses 3 000+ sites clients, facilitant l'adaptation des prestations de propreté/FM et la gestion des aléas opérationnels.",
+      "resume": "L'affinage des cartes de vigilance de Météo-France permet à ABC d'identifier plus précisément les risques climatiques sur ses 3 000+ sites clients, facilitant l'adaptation des plans d'intervention et la gestion des aléas opérationnels.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/09/01/meteo-france-va-affiner-ses-cartes-de-vigilance-a-l-interieur-des-departements_6763398_3244.html",
+      "date": "2026-09-01"
+    },
+    {
+      "id": "c16fddccf0da",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "16 States Warn Big 4 Accounting Firms Over “Pushing Climate-Related Disclosures”",
+      "resume": "L'article souligne une opposition politique aux exigences de reporting climatique dans les états américains, ce qui pourrait influencer indirectement les normes ESG en Europe et affecter les obligations de reporting extra-financier (CSRD/ESRS) pour ABC.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/16-states-warn-big-4-accounting-firms-over-pushing-climate-related-disclosures/?utm_source=rss&utm_medium=rss&utm_campaign=16-states-warn-big-4-accounting-firms-over-pushing-climate-related-disclosures",
+      "date": "2026-09-01"
+    },
+    {
+      "id": "59bbd73dc794",
+      "source": "Les Echos Environnement",
+      "categorie": "Énergie",
+      "titre": "Immobilier : « Le bas carbone est aujourd'hui synonyme de valeur » - Les Echos",
+      "resume": "L'article souligne l'importance croissante de la performance carbone dans l'immobilier tertiaire, ce qui pourrait influencer les exigences des clients d'ABC (nucléaire, santé, industrie) en matière de décarbonation des sites et de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSVVXV2ZYX1A5R01uYktWb0d6cFJkbVROUjBQTVluaFg0N0JnT3FGcm5OdDBnZDBuY2o4N2N6TnBfUHRmQzBGMWVRVVpnUGkzVGZnZjI5YmkydkNKTGJETF9hLTJMRHlqWmp5Nkg5dVhoaUZmNy1DVmVmM21ubThoanUzdG1HUGF0R1FPQmlxQjl6OFZNMFpWQmY4a3ZOWFNDY29RbkNWSVVEdw?oc=5",
       "date": "2026-09-01"
     },
     {
@@ -61,7 +138,7 @@
       "source": "Les Echos Environnement",
       "categorie": "Énergie",
       "titre": "Immobilier : ces solutions bas carbone qui ouvrent de nouvelles perspectives - Les Echos",
-      "resume": "L'article aborde des solutions bas carbone dans l'immobilier tertiaire, un enjeu indirect pour ABC via les exigences carbone de ses clients (nucléaire, santé, industrie) et la CSRD/reporting ESG.",
+      "resume": "L'article aborde les solutions bas carbone dans l'immobilier tertiaire, un secteur où ABC intervient via ses prestations de propreté/FM. Cela peut influencer les attentes clients en matière d'efficacité énergétique et de décarbonation des bâtiments, impactant indirectement les pratiques de reporting ESG et les stratégies de réduction des émissions scope 2.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQeEdyWlFjbEI4Q3l5V01yY0Q5cm9rbDdtdDZCYUhUUUJENFpybFZlbVhMZVpQSmFXTGRPdjNXR05rdmlpOXBTeXVIVHM5WWdQc1hpZW05c1BNcFI0OGhZZ2RlLUluc1FJMHA5OG5iQVQzUTlxb3lCdndodWZOaURnMG9DNUpWRXFpWUdURDdkMnZWcjR3dzY4Rnc2eDBCWG1HMzlKTF9nSUVwaU5ndEFVUktMTk9xR2ZkdDNrUzNR?oc=5",
@@ -72,7 +149,7 @@
       "source": "Actuel HSE",
       "categorie": "Émissions",
       "titre": "Incendies de végétation : les particules fines des fumées seraient plus nocives que celles de la pollution habituelle",
-      "resume": "L'article met en lumière la toxicité accrue des particules fines issues des incendies de végétation, ce qui pourrait impacter la santé des employés d'ABC intervenant sur des sites clients exposés à ces risques, notamment en période estivale.",
+      "resume": "L'article met en lumière la toxicité accrue des particules fines issues des incendies de végétation par rapport à la pollution habituelle, ce qui pourrait impacter les risques sanitaires et opérationnels pour les équipes de propreté/FM d'ABC intervenant sur des sites clients exposés.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/incendies-de-vegetation-les-particules-fines-des-fumees-seraient-plus-nocives-que-celles-de",
@@ -83,55 +160,11 @@
       "source": "Actuel HSE",
       "categorie": "Climat",
       "titre": "Le port des EPI en période de canicule, nouveau défi des préventeurs",
-      "resume": "L'article aborde un enjeu opérationnel lié aux conditions de travail en période de canicule pour les équipes de propreté/FM, avec des implications sur la santé et la sécurité des employés, mais sans lien direct avec les enjeux climatiques ou réglementaires majeurs d'ABC.",
+      "resume": "L'article aborde un enjeu opérationnel lié aux risques climatiques (canicules) impactant les conditions de travail des équipes de propreté/FM, notamment en termes de sécurité et d'EPI, sans lien direct avec les obligations réglementaires ou stratégiques immédiates d'ABC.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actuel-hse.fr/content/le-port-des-epi-en-periode-de-canicule-nouveau-defi-des-preventeurs",
       "date": "2026-09-01"
-    },
-    {
-      "id": "a7fd64dc04b0",
-      "source": "I4CE",
-      "categorie": "Climat",
-      "titre": "Réchauffement : « Sans changement d’échelle immédiat des politiques d’adaptation, nous allons vers la climatastrophe »",
-      "resume": "L'article souligne l'urgence d'accélérer les politiques d'adaptation climatique en France, ce qui pourrait impacter les risques opérationnels d'ABC sur ses 3 000+ sites clients (ex. : perturbations logistiques, dégradation des infrastructures).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.i4ce.org/rechauffement-sans-changement-politiques-adaptation-climat/",
-      "date": "2026-08-31"
-    },
-    {
-      "id": "c3db0299790c",
-      "source": "GreenUnivers",
-      "categorie": "Énergie",
-      "titre": "La DGEC promet un nouvel appel d’offres hydrogène rapidement",
-      "resume": "L'article annonce un nouvel appel d'offres hydrogène par la DGEC, ce qui pourrait influencer les stratégies de décarbonation des flottes de véhicules d'ABC (scope 1) et les attentes clients en matière de mobilité durable.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/08/la-dgec-promet-un-nouvel-appel-doffres-hydrogene-rapidement-431833/",
-      "date": "2026-08-31"
-    },
-    {
-      "id": "d48ac5943b31",
-      "source": "GreenUnivers",
-      "categorie": "Déchets",
-      "titre": "La baisse du prix spot de l’électricité cache la hausse pour 2027 [Marchés]",
-      "resume": "L'article souligne une volatilité des prix de l'électricité avec une tendance haussière à moyen terme (2027), ce qui impacte les coûts énergétiques des prestations de propreté/FM et la planification budgétaire pour ABC.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/08/la-baisse-du-prix-spot-de-lelectricite-cache-la-hausse-pour-2027-marches-431812/",
-      "date": "2026-08-31"
-    },
-    {
-      "id": "5d6c3f5f9e5c",
-      "source": "Le Monde Planète",
-      "categorie": "Climat",
-      "titre": "« Pour financer la transition énergétique, la France a un droit économique parmi les plus sophistiqués du monde qu’elle n’exploite pas assez »",
-      "resume": "L'article souligne l'importance des leviers législatifs pour accélérer la transition énergétique, ce qui pourrait impacter les obligations réglementaires futures d'ABC en matière de décarbonation et de reporting ESG, notamment via des évolutions potentielles des cadres nationaux alignés sur les objectifs climatiques européens.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.lemonde.fr/idees/article/2026/08/31/pour-financer-la-transition-energetique-la-france-a-un-droit-economique-parmi-les-plus-sophistiques-du-monde-qu-elle-n-exploite-pas-assez_6762610_3232.html",
-      "date": "2026-08-31"
     }
   ],
   "restrictions_eau": [
@@ -281,11 +314,6 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "28",
-      "dept_nom": "Eure-et-Loir",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "94",
       "dept_nom": "Val-de-Marne",
       "niveau": "crise"
@@ -338,11 +366,6 @@
     {
       "dept_code": "63",
       "dept_nom": "Puy-de-Dôme",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "15",
-      "dept_nom": "Cantal",
       "niveau": "crise"
     },
     {
@@ -436,13 +459,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "12",
-      "dept_nom": "Aveyron",
+      "dept_code": "81",
+      "dept_nom": "Tarn",
       "niveau": "crise"
     },
     {
-      "dept_code": "81",
-      "dept_nom": "Tarn",
+      "dept_code": "12",
+      "dept_nom": "Aveyron",
       "niveau": "crise"
     },
     {
@@ -541,8 +564,23 @@
       "niveau": "alerte renforcée"
     },
     {
+      "dept_code": "57",
+      "dept_nom": "Moselle",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "28",
+      "dept_nom": "Eure-et-Loir",
+      "niveau": "alerte renforcée"
+    },
+    {
       "dept_code": "91",
       "dept_nom": "Essonne",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "15",
+      "dept_nom": "Cantal",
       "niveau": "alerte renforcée"
     },
     {
@@ -556,13 +594,13 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
+      "dept_code": "04",
+      "dept_nom": "Alpes-de-Haute-Provence",
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "04",
-      "dept_nom": "Alpes-de-Haute-Provence",
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
       "niveau": "alerte renforcée"
     },
     {
@@ -892,7 +930,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des textes publiés ne traite directement de sujets environnementaux ou climatiques pertinents pour un Responsable Environnement/Climat d'une grande entreprise de services. Les arrêtés concernent principalement des modifications administratives ou des cahiers des charges agricoles (AOP).",
+  "briefing_jorf": "Aucun des textes publiés ne traite directement de sujets environnementaux ou climatiques pertinents pour un Responsable Environnement/Climat d'une grande entreprise de services.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1186,5 +1224,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi en cours, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière environnementale** (N° 2518) est directement pertinent pour un Responsable Environnement/Climat, car il intègre des normes européennes en énergie, eau, assainissement et déchets. Aucun texte adopté ne semble aborder spécifiquement des enjeux climatiques ou environnementaux majeurs."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, deux sont particulièrement pertinents pour un Responsable Environnement/Climat : le *Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche* (N°2518) qui intègre des enjeux climatiques et énergétiques majeurs, et le *Projet de loi-cadre relatif au développement des transports* (N°2740) qui pourrait impacter la stratégie bas-carbone de l’entreprise. Aucun texte adopté ne semble directement lié à ces enjeux."
 }
