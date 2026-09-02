@@ -1,7 +1,7 @@
 {
   "date": "2026-09-02",
-  "generated_at": "10:09",
-  "elapsed_seconds": 198,
+  "generated_at": "15:14",
+  "elapsed_seconds": 201,
   "errors": [],
   "stats": {
     "jo_analyses": 14,
@@ -9,29 +9,95 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-09-02T10:09:20",
+    "run_at": "2026-09-02T15:14:30",
     "sources": {
       "JORF": 0,
-      "RSS": 11,
+      "RSS": 14,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 49,
-    "llm_seconds": 62.8
+    "llm_calls": 52,
+    "llm_seconds": 64.8
   },
   "items": [
     {
-      "id": "f629209a495f",
+      "id": "652abd6c82e8",
+      "source": "Actu-Environnement",
+      "categorie": "Énergie",
+      "titre": "Plastique recyclé : Bruxelles consulte sur les technologies de recyclage et la mesure du contenu recyclé",
+      "resume": "La Commission européenne prépare des actes réglementaires sur le calcul du contenu en plastique recyclé dans les emballages, ce qui pourrait impacter les obligations de traçabilité et de reporting des déchets pour ABC dans le cadre de ses prestations de propreté/FM.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/plastique-recycle-consultation-ue-technologies-recyclage-mesure-contenu-48461.php4#xtor=RSS-6",
+      "date": "2026-09-02"
+    },
+    {
+      "id": "640325332aed",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "Des vagues de chaleur en septembre : l'avenir étouffant qui attend la France",
+      "resume": "L'article souligne l'augmentation des vagues de chaleur en septembre en France, ce qui pourrait impacter les opérations de nettoyage et de maintenance des sites clients d'ABC, notamment en termes de conditions de travail et de contraintes réglementaires liées à la santé des employés.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Et-maintenant-des-canicules-en-septembre-l-ete-de-fournaise-qui-n-en-finit-plus",
+      "date": "2026-09-02"
+    },
+    {
+      "id": "ac12e96beeb5",
+      "source": "Reporterre",
+      "categorie": "Climat",
+      "titre": "L'ONU acte pour la première fois du dépassement à venir de la barre symbolique de +1,5 °C",
+      "resume": "L'article confirme l'échec à limiter le réchauffement à +1,5°C, ce qui renforce les risques climatiques opérationnels pour ABC (aléas sur 3 000+ sites clients) et accélère les exigences carbone des clients (nucléaire, santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/L-ONU-acte-pour-la-premiere-fois-du-depassement-a-venir-de-la-barre-symbolique-de-1-5-oC",
+      "date": "2026-09-02"
+    },
+    {
+      "id": "43af7efe23e8",
       "source": "Reporterre",
       "categorie": "Déchets",
-      "titre": "637 400 hectares brûlés en Europe : la carte inédite des incendies de cet été",
-      "resume": "L'article souligne l'augmentation des risques climatiques (incendies) en Europe, pouvant impacter la continuité des services de propreté/FM d'ABC sur ses 3 000+ sites clients, notamment en termes de sécurité des équipes et de résilience opérationnelle.",
+      "titre": "Incendies : la carte d'un été hors normes en Europe",
+      "resume": "Les incendies massifs en Europe, y compris en France, pourraient impacter les opérations de nettoyage et de maintenance des sites clients d'ABC, notamment en cas de dégradation des infrastructures ou de risques accrus pour les équipes.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://reporterre.net/637-400-hectares-brules-en-Europe-la-carte-inedite-des-incendies-de-cet-ete",
+      "date": "2026-09-02"
+    },
+    {
+      "id": "ee280d200024",
+      "source": "GreenUnivers",
+      "categorie": "Biodiversité",
+      "titre": "Comment Girasole Energies « passe des bailleurs aux clients »",
+      "resume": "L'article illustre une tendance de diversification du marché solaire BtoB vers les clients tertiaires, ce qui pourrait impacter les stratégies énergétiques des clients d'ABC (ex : autoconsommation, renouvelables) et leurs exigences en matière de reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/09/comment-girasole-energies-passe-des-bailleurs-aux-clients-431976/",
+      "date": "2026-09-02"
+    },
+    {
+      "id": "8e9a16c13492",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "E-Lutetia veut déployer ses hubs de recharge en sous-sol à Paris",
+      "resume": "L'article aborde le déploiement de hubs de recharge électrique en sous-sol à Paris, un sujet lié à la mobilité durable et à l'électrification des flottes, enjeux stratégiques pour ABC dans le cadre de sa flotte de véhicules (scope 1).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/09/e-lutetia-veut-deployer-ses-hubs-de-recharge-en-sous-sol-a-paris-431923/",
+      "date": "2026-09-02"
+    },
+    {
+      "id": "bfe52fa07f24",
+      "source": "Le Monde Planète",
+      "categorie": "Déchets",
+      "titre": "« Réduire la vulnérabilité ou l’exposition, telle est la question de l’adaptation au changement climatique »",
+      "resume": "L'article aborde les enjeux stratégiques de l'adaptation climatique, un sujet indirectement pertinent pour ABC dans le cadre de la gestion des risques opérationnels sur ses 3 000+ sites clients et de l'anticipation des exigences clients (nucléaire, santé, industrie) en matière de résilience climatique.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/idees/article/2026/09/02/reduire-la-vulnerabilite-ou-l-exposition-telle-est-la-question-de-l-adaptation-au-changement-climatique_6764368_3232.html",
       "date": "2026-09-02"
     },
     {
@@ -50,10 +116,21 @@
       "source": "Le Monde Planète",
       "categorie": "Climat",
       "titre": "Le monde devra tout faire pour revenir sous le seuil de 1,5 °C de réchauffement après l’avoir dépassé, avertit l’ONU",
-      "resume": "L'article souligne l'urgence climatique mondiale et les transformations radicales nécessaires pour limiter le réchauffement à 1,5°C, ce qui impacte indirectement les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et renforce les enjeux de décarbonation de sa flotte et de ses prestations.",
+      "resume": "L'article souligne la nécessité de transformations radicales pour limiter le réchauffement à 1,5°C, ce qui pourrait impacter les exigences carbone des clients d'ABC (nucléaire, santé, industrie) et renforcer les politiques climatiques européennes (SNBC, PNACC).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/09/02/le-monde-devra-tout-faire-pour-revenir-sous-le-seuil-de-1-5-c-de-rechauffement-apres-l-avoir-depasse-avertit-l-onu_6763865_3244.html",
+      "date": "2026-09-02"
+    },
+    {
+      "id": "1948488a9254",
+      "source": "ESG Today",
+      "categorie": "Déchets",
+      "titre": "Goal to Limit Climate Change to 1.5°C Out of Reach: UN Report",
+      "resume": "L'article souligne l'échec des efforts actuels pour limiter le réchauffement à 1,5°C, ce qui renforce l'urgence climatique et pourrait accélérer les exigences réglementaires et contractuelles des clients d'ABC en matière de décarbonation et d'adaptation.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.esgtoday.com/goal-to-limit-climate-change-to-1-5c-out-of-reach-un-report/?utm_source=rss&utm_medium=rss&utm_campaign=goal-to-limit-climate-change-to-1-5c-out-of-reach-un-report",
       "date": "2026-09-02"
     },
     {
@@ -61,54 +138,21 @@
       "source": "ESG Today",
       "categorie": "Environnement",
       "titre": "Europe’s Sustainability Reset: Simplification is Not a Reason to Slow Down",
-      "resume": "L'article aborde la simplification des cadres réglementaires européens en matière de durabilité, un signal à suivre pour anticiper les évolutions du reporting ESG (CSRD/ESRS) et les exigences carbone des clients d'ABC.",
+      "resume": "L'article aborde la simplification des réglementations ESG en Europe, mais souligne l'importance de ne pas ralentir les efforts de durabilité, ce qui peut impacter les exigences carbone des clients d'ABC et les obligations de reporting (CSRD/ESRS).",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.esgtoday.com/europes-sustainability-reset-simplification-is-not-a-reason-to-slow-down/?utm_source=rss&utm_medium=rss&utm_campaign=europes-sustainability-reset-simplification-is-not-a-reason-to-slow-down",
       "date": "2026-09-02"
     },
     {
-      "id": "144eebec860b",
-      "source": "The Guardian Environment",
-      "categorie": "Climat",
-      "titre": "Global heating will hit at least 1.8C, UN warns, and there are ‘no good outcomes’",
-      "resume": "L'article souligne l'inévitabilité d'un dépassement temporaire de +1,8°C par rapport à l'ère préindustrielle, renforçant les risques climatiques pour les sites clients d'ABC (extrêmes météo, submersion côtière) et accélérant les exigences carbone des secteurs clients (nucléaire, santé, industrie).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.theguardian.com/environment/2026/sep/02/global-heating-warming-1-8c-best-case-scenario-un-united-nations-environment-programme-report",
-      "date": "2026-09-02"
-    },
-    {
-      "id": "dfc5fe31cad1",
+      "id": "049e64fda6bf",
       "source": "Les Echos Environnement",
       "categorie": "Environnement",
-      "titre": "Veolia Environnement développe des technologies pour s'adapter au dérèglement climatique - Investir Les Echos",
-      "resume": "Veolia développe des solutions technologiques pour l'adaptation au changement climatique, ce qui pourrait inspirer des partenariats ou des innovations pour ABC dans la gestion des risques climatiques sur ses sites clients.",
+      "titre": "Veolia Environnement développe des technologies pour s'adapter au dérèglement climatique - investir.lesechos.fr",
+      "resume": "Veolia investit dans des technologies d'adaptation climatique, ce qui pourrait influencer les attentes des clients d'ABC en matière de résilience des prestataires de services et de solutions durables, notamment pour les sites exposés aux aléas climatiques.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNV0hLcVRyUWQtLWVHbmdrcGVNNmVnZFRIMWhKdG51Q3lDcTFfcW15RG5UZnpnaWdJdDVvc19DOHYzaXhBY013NDVXbnktRE9BWmhOUWxHOWFyYWhfbmUwZENiaHA4YW01WFVUTUJReVk0Q09aRWt4Tkg0bWZYSHE0RXZGenczR3JRNDN5WkdBZ0VsakxJQXBkb3BncHluZktfbVRfa1FnWWpCR3htVmxFOXhMaGNLNE9MNTI1ZzB2YmV3WVFwMERLd3BGWG9HS0VuUjV5UnlCWVZ6eGUtNWtFaGJLNTdKOG9PXzBYcEJRMmJTdw?oc=5",
-      "date": "2026-09-02"
-    },
-    {
-      "id": "47a055258553",
-      "source": "Actuel HSE",
-      "categorie": "ICPE",
-      "titre": "Dasri : les modalités pratiques des expérimentations sont fixées",
-      "resume": "L'article aborde les modalités pratiques des expérimentations liées aux Dasri (Déchets d'Activités de Soins à Risques Infectieux), qui pourraient impacter la gestion des déchets des clients d'ABC dans les secteurs santé ou médico-social, notamment en termes de traçabilité et de traitement.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/dasri-les-modalites-pratiques-des-experimentations-sont-fixees",
-      "date": "2026-09-02"
-    },
-    {
-      "id": "837b116e30fb",
-      "source": "Actuel HSE",
-      "categorie": "Climat",
-      "titre": "Le port des EPI en période de canicule, nouveau défi des préventeurs",
-      "resume": "L'article aborde un enjeu opérationnel lié aux risques climatiques (canicule) et à la sécurité des employés, impactant directement les prestations de propreté/FM d'ABC sur ses sites clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actuel-hse.fr/content/le-port-des-epi-en-periode-de-canicule-nouveau-defi-des-preventeurs",
       "date": "2026-09-02"
     },
     {
@@ -116,32 +160,21 @@
       "source": "Actu-Environnement",
       "categorie": "Déchets",
       "titre": "Effacement électrique : un soutien coûteux qui a profité aux industriels, selon la Cour des comptes",
-      "resume": "L'article aborde les mécanismes de soutien aux effacements électriques, sans impact direct immédiat pour ABC, mais il peut influencer les politiques énergétiques futures et les coûts pour les entreprises clientes (notamment industrielles).",
+      "resume": "L'article aborde les mécanismes de soutien aux effacements électriques, un sujet indirectement lié à la transition énergétique des entreprises clientes d'ABC (notamment dans les secteurs industriel, nucléaire ou santé) et à leur stratégie de décarbonation.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.actu-environnement.com/ae/news/effacement-electrique-cour-comptes-industriels-48456.php4#xtor=RSS-6",
       "date": "2026-09-01"
     },
     {
-      "id": "f1988c3f4d32",
-      "source": "Le Monde Planète",
-      "categorie": "Énergie",
-      "titre": "Les incendies de l’été 2026 en France sont responsables d’émissions de carbone d’une ampleur inédite",
-      "resume": "L'article souligne l'impact des incendies sur les émissions de carbone en France, ce qui pourrait influencer les exigences réglementaires et clients en matière de reporting ESG et de gestion des risques climatiques pour ABC, notamment dans le cadre de sa flotte de véhicules et de ses prestations de propreté.",
+      "id": "e0eb90f17e40",
+      "source": "GreenUnivers",
+      "categorie": "Eau",
+      "titre": "TVA réduite sur le solaire, redevance sur l’eau,  financement des réseaux de gaz et CEE au prochain CSE",
+      "resume": "L'article mentionne une possible évolution des conditions d'accès au taux réduit de TVA pour les installations photovoltaïques de 9 kWc et moins, ce qui pourrait impacter les projets d'autoconsommation solaire d'ABC dans le cadre de sa stratégie énergie et décarbonation.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/09/01/les-incendies-de-l-ete-2026-en-france-sont-responsables-d-emissions-de-carbone-d-une-ampleur-inedite_6763477_3244.html",
-      "date": "2026-09-01"
-    },
-    {
-      "id": "c16fddccf0da",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "16 States Warn Big 4 Accounting Firms Over “Pushing Climate-Related Disclosures”",
-      "resume": "L'article souligne une opposition politique aux exigences de reporting climatique dans les états américains, un sujet à surveiller pour anticiper d'éventuelles tensions réglementaires en Europe sur la CSRD/ESRS.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/16-states-warn-big-4-accounting-firms-over-pushing-climate-related-disclosures/?utm_source=rss&utm_medium=rss&utm_campaign=16-states-warn-big-4-accounting-firms-over-pushing-climate-related-disclosures",
+      "url": "https://www.greenunivers.com/2026/09/tva-reduite-sur-le-solaire-redevance-sur-leau-financement-des-reseaux-de-gaz-et-cee-au-prochain-cse-431935/",
       "date": "2026-09-01"
     }
   ],
@@ -247,6 +280,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "47",
+      "dept_nom": "Lot-et-Garonne",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "32",
       "dept_nom": "Gers",
       "niveau": "crise"
@@ -259,11 +297,6 @@
     {
       "dept_code": "37",
       "dept_nom": "Indre-et-Loire",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "47",
-      "dept_nom": "Lot-et-Garonne",
       "niveau": "crise"
     },
     {
@@ -532,11 +565,6 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "28",
-      "dept_nom": "Eure-et-Loir",
-      "niveau": "alerte renforcée"
-    },
-    {
       "dept_code": "02",
       "dept_nom": "Aisne",
       "niveau": "alerte renforcée"
@@ -549,6 +577,11 @@
     {
       "dept_code": "57",
       "dept_nom": "Moselle",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "28",
+      "dept_nom": "Eure-et-Loir",
       "niveau": "alerte renforcée"
     },
     {
@@ -1034,7 +1067,7 @@
     }
   ],
   "jo_retenus": [],
-  "briefing_jorf": "Aucun des textes publiés au Journal Officiel du 2026-09-02 ne présente de mesure directement pertinente pour un Responsable Environnement/Climat d'une grande entreprise de services, ces arrêtés et avis relevant principalement du domaine social, juridique ou administratif.",
+  "briefing_jorf": "Aucun des arrêtés ou avis publiés ne semble directement pertinent pour un Responsable Environnement/Climat d'une grande entreprise de services, car ils concernent principalement des aides financières pour les entreprises adaptées, des licences ferroviaires, des réorganisations judiciaires ou des postes sanitaires et sociaux.",
   "pjl_fiches": [
     {
       "id": "pjl-14aebd68935a",
@@ -1328,5 +1361,5 @@
       ]
     }
   ],
-  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** est directement pertinent pour un Responsable Environnement/Climat, car il intègre des adaptations réglementaires européennes dans ces domaines clés. Aucun autre texte ne traite explicitement de sujets climatiques, énergétiques ou de RSE."
+  "pjl_briefing": "Parmi les projets de loi et textes adoptés, seul le projet n°2518 (adaptation au droit de l’UE en matière environnementale, énergétique et de pêche) et le projet n°2609 (autonomie de la Martinique en énergie, eau et assainissement) présentent un intérêt direct pour un Responsable Environnement/Climat, en lien avec la transition écologique et la décentralisation des politiques environnementales."
 }
