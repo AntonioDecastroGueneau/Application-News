@@ -1,7 +1,7 @@
 {
   "date": "2026-09-03",
-  "generated_at": "10:21",
-  "elapsed_seconds": 320,
+  "generated_at": "15:09",
+  "elapsed_seconds": 275,
   "errors": [],
   "stats": {
     "jo_analyses": 6,
@@ -9,40 +9,73 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-09-03T10:21:35",
+    "run_at": "2026-09-03T15:09:58",
     "sources": {
       "JORF": 0,
-      "RSS": 13,
+      "RSS": 12,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
       "SOURCE VIDE — JORF : 0 textes retenus"
     ],
-    "llm_calls": 49,
-    "llm_seconds": 62.2
+    "llm_calls": 41,
+    "llm_seconds": 51.6
   },
   "items": [
     {
-      "id": "a3c3c6e2f1a9",
-      "source": "Actuel HSE",
-      "categorie": "Énergie",
-      "titre": "Déchets de pneus : les critères de sortie du statut de déchet sont fixés",
-      "resume": "L'article fixe les critères de sortie du statut de déchet pour les pneus, ce qui impacte la gestion des déchets de la flotte de véhicules d'ABC et potentiellement ses obligations de traçabilité et de valorisation.",
-      "pourquoi": "L'article impacte directement la gestion des pneus usagés d'ABC, avec une opportunité de réduire les coûts de traitement et d'améliorer la traçabilité via la valorisation matière (ex : granulats pour sols sportifs), sous réserve de respecter les critères de sortie de statut de déchet (délai d'action : 12-24 mois pour adapter les processus de collecte et partenariats avec éco-organismes). Le risque réside dans une non-conformité aux nouvelles règles, pouvant entraîner des sanctions ou une perte de compétitivité face à des concurrents mieux alignés sur les exigences clients en matière d'économie circulaire.",
-      "criticite": 2,
-      "url": "https://www.actuel-hse.fr/content/dechets-de-pneus-les-criteres-de-sortie-du-statut-de-dechet-sont-fixes",
+      "id": "8a32181a23a5",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Climat : la trajectoire qu'envisage le PNUE pour revenir en dessous de 1,5 °C",
+      "resume": "L'article confirme la trajectoire de +1,5°C dès 2030, renforçant l'urgence climatique pour ABC et ses clients (notamment via leurs exigences carbone et risques opérationnels).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/pnue-rapport-depassement-rechauffement-1-5-48468.php4#xtor=RSS-6",
       "date": "2026-09-03"
     },
     {
-      "id": "61e55d359ea4",
-      "source": "Novethic",
-      "categorie": "Déchets",
-      "titre": "Les événements RSE à suivre cette rentrée pour les professionnels du secteur",
-      "resume": "L'article souligne l'importance de la mobilisation RSE et climatique pour les entreprises, notamment face aux crises écologiques, ce qui peut influencer les attentes des clients d'ABC en matière de reporting et de décarbonation.",
+      "id": "c708c040f670",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Réseau électrique : le bac à sable permet de faire évoluer les pratiques",
+      "resume": "L'article aborde des expérimentations sur la flexibilité du réseau électrique, un sujet indirectement lié à la transition énergétique et à la décarbonation des activités de services comme celles d'ABC, notamment via la gestion de l'énergie et des sites clients.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.novethic.fr/economie-et-social/transformation-de-leconomie/evenements-rse-rentree-2026-professionnels",
+      "url": "https://www.actu-environnement.com/ae/news/bac-sable-reglementaire-flexibilite-reseau-electrique-48467.php4#xtor=RSS-6",
+      "date": "2026-09-03"
+    },
+    {
+      "id": "cc139ac651ff",
+      "source": "Reporterre",
+      "categorie": "Eau",
+      "titre": "Une intensité « très forte » jusqu'en 2027 : El Niño est plus puissant que jamais, alerte l'ONU",
+      "resume": "L'article signale un El Niño intense jusqu'en 2027, pouvant impacter les sites clients d'ABC (sécheresses ou précipitations accrues) et générer des risques opérationnels indirects (perturbations logistiques, maintenance des équipements).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://reporterre.net/Une-intensite-tres-forte-jusqu-en-2027-El-Nino-est-plus-puissant-que-jamais-alerte-l-ONU",
+      "date": "2026-09-03"
+    },
+    {
+      "id": "bae6c1cbcdf3",
+      "source": "GreenUnivers",
+      "categorie": "Énergie",
+      "titre": "Dans l’énergie, la géothermie est « un grand oublié » [Eurazeo]",
+      "resume": "La géothermie pourrait devenir une solution énergétique clé pour la décarbonation des bâtiments tertiaires, un enjeu direct pour ABC dans le cadre de ses prestations de propreté/FM et de la CSRD.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.greenunivers.com/2026/09/dans-lenergie-la-geothermie-est-un-grand-oublie-eurazeo-432166/",
+      "date": "2026-09-03"
+    },
+    {
+      "id": "2a84c2bbb5df",
+      "source": "Le Monde Planète",
+      "categorie": "Climat",
+      "titre": "L’été 2026 a été le plus chaud jamais enregistré en France, selon la ministre de la transition écologique",
+      "resume": "L'été 2026, marqué par des vagues de chaleur record en France, accentue les risques climatiques opérationnels pour ABC (3 000+ sites clients), pouvant impacter les prestations de propreté/FM et les exigences carbone des clients (nucléaire, santé, industrie).",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.lemonde.fr/planete/article/2026/09/03/l-ete-2026-a-ete-le-plus-chaud-jamais-enregistre-en-france-selon-le-bilan-climatique-de-meteo-france_6765147_3244.html",
       "date": "2026-09-03"
     },
     {
@@ -50,7 +83,7 @@
       "source": "Le Monde Planète",
       "categorie": "Énergie",
       "titre": "Carburant : les aides seront reconduites pour septembre et octobre pour les secteurs les plus exposés",
-      "resume": "L'article confirme le maintien des aides aux carburants pour les secteurs exposés jusqu'en octobre, ce qui pourrait impacter les coûts opérationnels de la flotte de véhicules d'ABC (scope 1) en atténuant partiellement la pression sur les budgets liés à la mobilité.",
+      "resume": "L'article confirme le maintien des aides aux carburants pour les secteurs exposés jusqu'en octobre, ce qui peut impacter les coûts opérationnels de la flotte de véhicules d'ABC (scope 1) et ses marges sur les prestations.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/economie/article/2026/09/03/carburant-les-aides-seront-reconduites-pour-septembre-et-octobre-pour-les-secteurs-les-plus-exposes_6765135_3234.html",
@@ -61,109 +94,65 @@
       "source": "Le Monde Planète",
       "categorie": "Eau",
       "titre": "El Niño : l’ONU prévoit un phénomène « de très forte intensité » jusqu’en février 2027",
-      "resume": "L'article souligne l'intensification des aléas climatiques (sécheresses, incendies, pluies diluviennes) liés à El Niño jusqu'en 2027, ce qui pourrait impacter la continuité des prestations de propreté/FM d'ABC chez ses 3 000+ sites clients en France et en Europe.",
+      "resume": "L'article signale un risque climatique accru (sécheresses, incendies, perturbations météo) pouvant impacter les sites clients d'ABC (3 000+ sites) et perturber les prestations de propreté/FM, notamment en termes de continuité d'activité et de sécurité des équipes.",
       "pourquoi": "",
       "criticite": 1,
       "url": "https://www.lemonde.fr/planete/article/2026/09/03/el-nino-l-onu-prevoit-un-phenomene-de-tres-forte-intensite-jusqu-en-fevrier-2027_6765025_3244.html",
       "date": "2026-09-03"
     },
     {
-      "id": "8a950a9e4374",
-      "source": "The Guardian Environment",
+      "id": "b1015dcd04f7",
+      "source": "Le Monde Planète",
       "categorie": "Énergie",
-      "titre": "‘Supersizing before our eyes’: UN warns of record El Niño approaching",
-      "resume": "L'article souligne l'intensification du phénomène El Niño, qui pourrait aggraver les risques climatiques opérationnels pour les 3 000+ sites clients d'ABC (perturbations logistiques, aléas climatiques accrus).",
+      "titre": "L’essor de l’IA freine les ambitions des acteurs du numérique en faveur du climat",
+      "resume": "L'article souligne l'impact environnemental croissant des infrastructures numériques (notamment l'IA) sur les émissions des entreprises, un enjeu indirect pour ABC via ses obligations de reporting ESG (CSRD) et la gestion de son empreinte carbone numérique (scope 2/3).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.theguardian.com/environment/2026/sep/03/el-nino-supersizing-before-our-eyes-united-nations",
+      "url": "https://www.lemonde.fr/planete/article/2026/09/03/l-essor-de-l-ia-freine-les-ambitions-des-acteurs-du-numerique-en-faveur-du-climat_6764639_3244.html",
       "date": "2026-09-03"
     },
     {
-      "id": "2719ba2427f5",
-      "source": "Actu-Environnement",
-      "categorie": "Environnement",
-      "titre": "Restauration de la nature : seule une minorité d'États membres de l'UE sont dans les temps",
-      "resume": "L'article aborde la restauration de la nature et les plans nationaux des États membres de l'UE, dont la France, qui pourraient influencer les politiques environnementales et climatiques futures en France, impactant indirectement les exigences réglementaires et les attentes clients d'ABC en matière de services durables.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.actu-environnement.com/ae/news/restauration-nature-plans-nationaux-etats-membres-48462.php4#xtor=RSS-6",
-      "date": "2026-09-02"
-    },
-    {
-      "id": "e9f0773aa007",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Le prix des assurances habitation explose à cause des catastrophes climatiques",
-      "resume": "L'article illustre l'impact croissant des risques climatiques sur les coûts d'assurance, ce qui pourrait influencer les exigences des clients d'ABC en matière de résilience et de couverture des aléas climatiques sur leurs sites.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Le-prix-des-assurances-habitation-explose-a-cause-des-catastrophes-climatiques",
-      "date": "2026-09-02"
-    },
-    {
-      "id": "640325332aed",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "Des vagues de chaleur en septembre : l'avenir étouffant qui attend la France",
-      "resume": "L'article souligne l'augmentation des vagues de chaleur en septembre en France, un risque climatique opérationnel pouvant impacter les activités de propreté/FM d'ABC sur ses 3 000+ sites clients (ex. : conditions de travail dégradées, perturbations logistiques).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/Et-maintenant-des-canicules-en-septembre-l-ete-de-fournaise-qui-n-en-finit-plus",
-      "date": "2026-09-02"
-    },
-    {
-      "id": "ac12e96beeb5",
-      "source": "Reporterre",
-      "categorie": "Climat",
-      "titre": "L'ONU acte pour la première fois du dépassement à venir de la barre symbolique de +1,5 °C",
-      "resume": "L'ONU officialise le dépassement probable de +1,5°C, ce qui renforce les attentes en matière de gestion des risques climatiques et de décarbonation pour les entreprises comme ABC, notamment dans le cadre de la CSRD et des exigences clients.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://reporterre.net/L-ONU-acte-pour-la-premiere-fois-du-depassement-a-venir-de-la-barre-symbolique-de-1-5-oC",
-      "date": "2026-09-02"
-    },
-    {
-      "id": "b4cfde7bb148",
-      "source": "I4CE",
-      "categorie": "Climat",
-      "titre": "Un « mur d’investissements » pour l’adaptation au changement climatique, vraiment ?",
-      "resume": "L'article aborde l'enjeu des investissements nécessaires pour l'adaptation au changement climatique en France, ce qui peut impacter indirectement les risques opérationnels de ABC via ses 3 000+ sites clients exposés aux aléas climatiques.",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.i4ce.org/mur-investissements-adaptation-changement-climatique/",
-      "date": "2026-09-02"
-    },
-    {
-      "id": "8e9a16c13492",
-      "source": "GreenUnivers",
+      "id": "b0d1d616071c",
+      "source": "Actuel HSE",
       "categorie": "Eau",
-      "titre": "E-Lutetia veut déployer ses hubs de recharge en sous-sol à Paris",
-      "resume": "L'article aborde le déploiement de hubs de recharge électrique en sous-sol à Paris, un sujet lié à la mobilité durable et à l'électrification des flottes, enjeux stratégiques pour ABC dans le cadre de sa décarbonation et de ses obligations réglementaires (scope 1).",
+      "titre": "Michael Müller, chercheur : «Même dans les médicaments, les PFAS ne sont pas essentiels»",
+      "resume": "L'article souligne l'urgence de réduire l'usage des PFAS dans les médicaments, un sujet qui pourrait impacter les prestataires de propreté/FM via les exigences clients en matière de substances dangereuses et de reporting ESG (CSRD/ESRS).",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.greenunivers.com/2026/09/e-lutetia-veut-deployer-ses-hubs-de-recharge-en-sous-sol-a-paris-431923/",
+      "url": "https://www.actuel-hse.fr/content/michael-muller-chercheur-meme-dans-les-medicaments-les-pfas-ne-sont-pas-essentiels",
+      "date": "2026-09-03"
+    },
+    {
+      "id": "a3c3c6e2f1a9",
+      "source": "Actuel HSE",
+      "categorie": "Énergie",
+      "titre": "Déchets de pneus : les critères de sortie du statut de déchet sont fixés",
+      "resume": "L'article fixe les critères de sortie du statut de déchet pour les pneus, ce qui peut impacter la gestion des déchets de la flotte de véhicules d'ABC et ses obligations de traçabilité.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actuel-hse.fr/content/dechets-de-pneus-les-criteres-de-sortie-du-statut-de-dechet-sont-fixes",
+      "date": "2026-09-03"
+    },
+    {
+      "id": "0ad3b7ef0e4e",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Quotas d'émissions de gaz à effet de serre : le Tribunal de l'Union européenne rejette le recours de deux ONG",
+      "resume": "L'arrêt du Tribunal de l'UE confirme la rigueur des quotas d'émissions de GES dans l'UE, renforçant l'alignement avec les trajectoires climatiques (SNBC/PNACC) et impactant indirectement les exigences carbone des clients d'ABC via la CSRD et les reporting ESG.",
+      "pourquoi": "",
+      "criticite": 1,
+      "url": "https://www.actu-environnement.com/ae/news/quotas-emissions-ges-tribunal-ue-ong-48463.php4#xtor=RSS-6",
       "date": "2026-09-02"
     },
     {
-      "id": "99c3915dee02",
-      "source": "Le Monde Planète",
+      "id": "64f810b6131b",
+      "source": "GreenUnivers",
       "categorie": "Climat",
-      "titre": "Transition écologique : le Haut-Commissariat au plan appelle à un « changement de paradigme »",
-      "resume": "Le rapport du Haut-Commissariat au plan souligne l'importance d'accélérer la transition écologique pour renforcer la souveraineté et la cohésion nationale, ce qui pourrait influencer les politiques publiques et les attentes des clients d'ABC en matière de décarbonation et de reporting ESG.",
+      "titre": "Les grands sujets de la rentrée dans la transition énergétique",
+      "resume": "L'article aborde les enjeux de la transition énergétique en France, notamment les politiques climatiques et énergétiques qui pourraient influencer les réglementations et attentes clients pour les prestataires de services comme ABC.",
       "pourquoi": "",
       "criticite": 1,
-      "url": "https://www.lemonde.fr/planete/article/2026/09/02/transition-ecologique-le-haut-commissariat-au-plan-appelle-a-un-changement-de-paradigme_6764475_3244.html",
-      "date": "2026-09-02"
-    },
-    {
-      "id": "1948488a9254",
-      "source": "ESG Today",
-      "categorie": "Déchets",
-      "titre": "Goal to Limit Climate Change to 1.5°C Out of Reach: UN Report",
-      "resume": "L'article confirme l'écart entre les engagements climatiques actuels et l'objectif 1.5°C, renforçant la pression sur les entreprises pour accélérer leur décarbonation et aligner leurs stratégies sur les trajectoires nationales (SNBC, PNACC).",
-      "pourquoi": "",
-      "criticite": 1,
-      "url": "https://www.esgtoday.com/goal-to-limit-climate-change-to-1-5c-out-of-reach-un-report/?utm_source=rss&utm_medium=rss&utm_campaign=goal-to-limit-climate-change-to-1-5c-out-of-reach-un-report",
+      "url": "https://www.greenunivers.com/2026/09/les-grands-sujets-de-la-rentree-dans-la-transition-energetique-431982/",
       "date": "2026-09-02"
     }
   ],
@@ -459,13 +448,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "12",
-      "dept_nom": "Aveyron",
+      "dept_code": "81",
+      "dept_nom": "Tarn",
       "niveau": "crise"
     },
     {
-      "dept_code": "81",
-      "dept_nom": "Tarn",
+      "dept_code": "12",
+      "dept_nom": "Aveyron",
       "niveau": "crise"
     },
     {
@@ -549,11 +538,6 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "28",
-      "dept_nom": "Eure-et-Loir",
-      "niveau": "alerte renforcée"
-    },
-    {
       "dept_code": "78",
       "dept_nom": "Yvelines",
       "niveau": "alerte renforcée"
@@ -571,6 +555,11 @@
     {
       "dept_code": "57",
       "dept_nom": "Moselle",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "28",
+      "dept_nom": "Eure-et-Loir",
       "niveau": "alerte renforcée"
     },
     {
@@ -1362,5 +1351,5 @@
       ]
     }
   ],
-  "pjl_briefing": ""
+  "pjl_briefing": "Parmi les projets de loi identifiés, seul le **Projet de loi portant diverses dispositions d'adaptation au droit de l’Union européenne en matière économique, financière, environnementale, énergétique, d’information, de transport, de santé, d’agriculture et de pêche (N° 2518)** présente un intérêt direct pour un Responsable Environnement/Climat, car il intègre des mesures liées à la transition énergétique, à l’économie circulaire et aux objectifs climatiques européens. Aucun autre texte ne semble aborder spécifiquement les enjeux environnementaux ou RSE de manière significative."
 }
