@@ -1,7 +1,7 @@
 {
   "date": "2026-09-07",
-  "generated_at": "11:02",
-  "elapsed_seconds": 422,
+  "generated_at": "16:44",
+  "elapsed_seconds": 592,
   "errors": [],
   "stats": {
     "jo_analyses": 8,
@@ -9,7 +9,7 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-09-07T11:02:06",
+    "run_at": "2026-09-07T16:44:46",
     "sources": {
       "JORF": 0,
       "RSS": 0,
@@ -126,6 +126,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "47",
+      "dept_nom": "Lot-et-Garonne",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "32",
       "dept_nom": "Gers",
       "niveau": "crise"
@@ -138,11 +143,6 @@
     {
       "dept_code": "37",
       "dept_nom": "Indre-et-Loire",
-      "niveau": "crise"
-    },
-    {
-      "dept_code": "47",
-      "dept_nom": "Lot-et-Garonne",
       "niveau": "crise"
     },
     {
@@ -241,13 +241,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "71",
-      "dept_nom": "Saône-et-Loire",
+      "dept_code": "70",
+      "dept_nom": "Haute-Saône",
       "niveau": "crise"
     },
     {
-      "dept_code": "70",
-      "dept_nom": "Haute-Saône",
+      "dept_code": "71",
+      "dept_nom": "Saône-et-Loire",
       "niveau": "crise"
     },
     {
@@ -261,11 +261,6 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "69",
-      "dept_nom": "Rhône",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "01",
       "dept_nom": "Ain",
       "niveau": "crise"
@@ -273,6 +268,11 @@
     {
       "dept_code": "39",
       "dept_nom": "Jura",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "69",
+      "dept_nom": "Rhône",
       "niveau": "crise"
     },
     {
@@ -356,13 +356,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "90",
-      "dept_nom": "Territoire de Belfort",
+      "dept_code": "68",
+      "dept_nom": "Haut-Rhin",
       "niveau": "crise"
     },
     {
-      "dept_code": "68",
-      "dept_nom": "Haut-Rhin",
+      "dept_code": "90",
+      "dept_nom": "Territoire de Belfort",
       "niveau": "crise"
     },
     {
