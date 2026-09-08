@@ -1,7 +1,7 @@
 {
   "date": "2026-09-08",
-  "generated_at": "10:21",
-  "elapsed_seconds": 511,
+  "generated_at": "15:21",
+  "elapsed_seconds": 477,
   "errors": [],
   "stats": {
     "jo_analyses": 12,
@@ -9,7 +9,7 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-09-08T10:21:19",
+    "run_at": "2026-09-08T15:21:03",
     "sources": {
       "JORF": 0,
       "RSS": 0,
@@ -261,11 +261,6 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "69",
-      "dept_nom": "Rhône",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "01",
       "dept_nom": "Ain",
       "niveau": "crise"
@@ -273,6 +268,11 @@
     {
       "dept_code": "39",
       "dept_nom": "Jura",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "69",
+      "dept_nom": "Rhône",
       "niveau": "crise"
     },
     {
@@ -356,13 +356,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "90",
-      "dept_nom": "Territoire de Belfort",
+      "dept_code": "68",
+      "dept_nom": "Haut-Rhin",
       "niveau": "crise"
     },
     {
-      "dept_code": "68",
-      "dept_nom": "Haut-Rhin",
+      "dept_code": "90",
+      "dept_nom": "Territoire de Belfort",
       "niveau": "crise"
     },
     {
