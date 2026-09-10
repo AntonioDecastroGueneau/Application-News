@@ -1,7 +1,7 @@
 {
   "date": "2026-09-10",
-  "generated_at": "10:24",
-  "elapsed_seconds": 816,
+  "generated_at": "15:19",
+  "elapsed_seconds": 881,
   "errors": [],
   "stats": {
     "jo_analyses": 21,
@@ -9,7 +9,7 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-09-10T10:24:07",
+    "run_at": "2026-09-10T15:19:39",
     "sources": {
       "JORF": 0,
       "RSS": 0,
@@ -216,6 +216,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "15",
+      "dept_nom": "Cantal",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "10",
       "dept_nom": "Aube",
       "niveau": "crise"
@@ -256,11 +261,6 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "69",
-      "dept_nom": "Rhône",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "01",
       "dept_nom": "Ain",
       "niveau": "crise"
@@ -268,6 +268,11 @@
     {
       "dept_code": "39",
       "dept_nom": "Jura",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "69",
+      "dept_nom": "Rhône",
       "niveau": "crise"
     },
     {
@@ -436,11 +441,6 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "15",
-      "dept_nom": "Cantal",
-      "niveau": "alerte renforcée"
-    },
-    {
       "dept_code": "52",
       "dept_nom": "Haute-Marne",
       "niveau": "alerte renforcée"
@@ -451,13 +451,13 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "04",
-      "dept_nom": "Alpes-de-Haute-Provence",
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
+      "dept_code": "04",
+      "dept_nom": "Alpes-de-Haute-Provence",
       "niveau": "alerte renforcée"
     },
     {
