@@ -1,7 +1,7 @@
 {
   "date": "2026-09-14",
-  "generated_at": "11:15",
-  "elapsed_seconds": 433,
+  "generated_at": "17:11",
+  "elapsed_seconds": 680,
   "errors": [],
   "stats": {
     "jo_analyses": 7,
@@ -9,7 +9,7 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-09-14T11:15:00",
+    "run_at": "2026-09-14T17:11:41",
     "sources": {
       "JORF": 0,
       "RSS": 0,
@@ -151,6 +151,11 @@
       "niveau": "crise"
     },
     {
+      "dept_code": "27",
+      "dept_nom": "Eure",
+      "niveau": "crise"
+    },
+    {
       "dept_code": "77",
       "dept_nom": "Seine-et-Marne",
       "niveau": "crise"
@@ -261,11 +266,6 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "69",
-      "dept_nom": "Rhône",
-      "niveau": "crise"
-    },
-    {
       "dept_code": "01",
       "dept_nom": "Ain",
       "niveau": "crise"
@@ -273,6 +273,11 @@
     {
       "dept_code": "39",
       "dept_nom": "Jura",
+      "niveau": "crise"
+    },
+    {
+      "dept_code": "69",
+      "dept_nom": "Rhône",
       "niveau": "crise"
     },
     {
@@ -351,13 +356,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "68",
-      "dept_nom": "Haut-Rhin",
+      "dept_code": "90",
+      "dept_nom": "Territoire de Belfort",
       "niveau": "crise"
     },
     {
-      "dept_code": "90",
-      "dept_nom": "Territoire de Belfort",
+      "dept_code": "68",
+      "dept_nom": "Haut-Rhin",
       "niveau": "crise"
     },
     {
@@ -386,11 +391,6 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "27",
-      "dept_nom": "Eure",
-      "niveau": "alerte renforcée"
-    },
-    {
       "dept_code": "80",
       "dept_nom": "Somme",
       "niveau": "alerte renforcée"
@@ -403,11 +403,6 @@
     {
       "dept_code": "78",
       "dept_nom": "Yvelines",
-      "niveau": "alerte renforcée"
-    },
-    {
-      "dept_code": "28",
-      "dept_nom": "Eure-et-Loir",
       "niveau": "alerte renforcée"
     },
     {
@@ -428,6 +423,11 @@
     {
       "dept_code": "57",
       "dept_nom": "Moselle",
+      "niveau": "alerte renforcée"
+    },
+    {
+      "dept_code": "28",
+      "dept_nom": "Eure-et-Loir",
       "niveau": "alerte renforcée"
     },
     {
