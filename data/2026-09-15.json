@@ -1,7 +1,7 @@
 {
   "date": "2026-09-15",
-  "generated_at": "10:47",
-  "elapsed_seconds": 659,
+  "generated_at": "15:48",
+  "elapsed_seconds": 625,
   "errors": [],
   "stats": {
     "jo_analyses": 11,
@@ -9,21 +9,32 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-09-15T10:47:14",
+    "run_at": "2026-09-15T15:48:28",
     "sources": {
       "JORF": 0,
-      "RSS": 0,
+      "RSS": 1,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
-      "SOURCE VIDE — JORF : 0 textes retenus",
-      "SOURCE VIDE — RSS : 0 articles retenus"
+      "SOURCE VIDE — JORF : 0 textes retenus"
     ],
     "llm_calls": 0,
     "llm_seconds": 0.0
   },
-  "items": [],
+  "items": [
+    {
+      "id": "c8eb475b144f",
+      "source": "ESG Today",
+      "categorie": "Énergie",
+      "titre": "EU Parliament Votes to Expand Product List, Close Loopholes in CBAM Carbon Import Tax",
+      "resume": "EU Parliament Votes to Expand Product List, Close Loopholes in CBAM Carbon Import Tax",
+      "pourquoi": "Mention de CBAM.",
+      "criticite": 3,
+      "url": "https://www.esgtoday.com/eu-parliament-votes-to-expand-product-list-close-loopholes-in-cbam-carbon-import-tax/?utm_source=rss&utm_medium=rss&utm_campaign=eu-parliament-votes-to-expand-product-list-close-loopholes-in-cbam-carbon-import-tax",
+      "date": "2026-09-15"
+    }
+  ],
   "restrictions_eau": [
     {
       "dept_code": "50",
@@ -246,13 +257,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "70",
-      "dept_nom": "Haute-Saône",
+      "dept_code": "71",
+      "dept_nom": "Saône-et-Loire",
       "niveau": "crise"
     },
     {
-      "dept_code": "71",
-      "dept_nom": "Saône-et-Loire",
+      "dept_code": "70",
+      "dept_nom": "Haute-Saône",
       "niveau": "crise"
     },
     {
@@ -356,13 +367,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "90",
-      "dept_nom": "Territoire de Belfort",
+      "dept_code": "68",
+      "dept_nom": "Haut-Rhin",
       "niveau": "crise"
     },
     {
-      "dept_code": "68",
-      "dept_nom": "Haut-Rhin",
+      "dept_code": "90",
+      "dept_nom": "Territoire de Belfort",
       "niveau": "crise"
     },
     {
