@@ -1,7 +1,7 @@
 {
   "date": "2026-09-16",
-  "generated_at": "10:34",
-  "elapsed_seconds": 567,
+  "generated_at": "15:38",
+  "elapsed_seconds": 638,
   "errors": [],
   "stats": {
     "jo_analyses": 17,
@@ -9,32 +9,21 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-09-16T10:34:28",
+    "run_at": "2026-09-16T15:38:57",
     "sources": {
       "JORF": 0,
-      "RSS": 1,
+      "RSS": 0,
       "VigiEau": 94,
       "Parlement": 1
     },
     "errors": [
-      "SOURCE VIDE — JORF : 0 textes retenus"
+      "SOURCE VIDE — JORF : 0 textes retenus",
+      "SOURCE VIDE — RSS : 0 articles retenus"
     ],
     "llm_calls": 0,
     "llm_seconds": 0.0
   },
-  "items": [
-    {
-      "id": "c8eb475b144f",
-      "source": "ESG Today",
-      "categorie": "Énergie",
-      "titre": "EU Parliament Votes to Expand Product List, Close Loopholes in CBAM Carbon Import Tax",
-      "resume": "EU Parliament Votes to Expand Product List, Close Loopholes in CBAM Carbon Import Tax",
-      "pourquoi": "Mention de CBAM.",
-      "criticite": 3,
-      "url": "https://www.esgtoday.com/eu-parliament-votes-to-expand-product-list-close-loopholes-in-cbam-carbon-import-tax/?utm_source=rss&utm_medium=rss&utm_campaign=eu-parliament-votes-to-expand-product-list-close-loopholes-in-cbam-carbon-import-tax",
-      "date": "2026-09-15"
-    }
-  ],
+  "items": [],
   "restrictions_eau": [
     {
       "dept_code": "50",
@@ -277,13 +266,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "01",
-      "dept_nom": "Ain",
+      "dept_code": "69",
+      "dept_nom": "Rhône",
       "niveau": "crise"
     },
     {
-      "dept_code": "69",
-      "dept_nom": "Rhône",
+      "dept_code": "01",
+      "dept_nom": "Ain",
       "niveau": "crise"
     },
     {
@@ -462,13 +451,13 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
+      "dept_code": "04",
+      "dept_nom": "Alpes-de-Haute-Provence",
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "04",
-      "dept_nom": "Alpes-de-Haute-Provence",
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
       "niveau": "alerte renforcée"
     },
     {
