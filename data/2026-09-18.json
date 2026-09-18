@@ -1,7 +1,7 @@
 {
   "date": "2026-09-18",
-  "generated_at": "10:20",
-  "elapsed_seconds": 595,
+  "generated_at": "15:13",
+  "elapsed_seconds": 552,
   "errors": [],
   "stats": {
     "jo_analyses": 18,
@@ -9,10 +9,10 @@
     "depts_restriction": 94
   },
   "pipeline_meta": {
-    "run_at": "2026-09-18T10:20:29",
+    "run_at": "2026-09-18T15:13:12",
     "sources": {
       "JORF": 0,
-      "RSS": 1,
+      "RSS": 3,
       "VigiEau": 94,
       "Parlement": 1
     },
@@ -23,6 +23,28 @@
     "llm_seconds": 0.0
   },
   "items": [
+    {
+      "id": "0d9c33016cb3",
+      "source": "Actu-Environnement",
+      "categorie": "Eau",
+      "titre": "Le Parlement européen soutient l'extension du MACF à de nouveaux produits",
+      "resume": "Le Parlement européen soutient l'extension du MACF à de nouveaux produits",
+      "pourquoi": "Mention de MACF.",
+      "criticite": 3,
+      "url": "https://www.actu-environnement.com/ae/news/macf-parlement-europeen-extension-produits-48535.php4#xtor=RSS-6",
+      "date": "2026-09-18"
+    },
+    {
+      "id": "790646f4b339",
+      "source": "Novethic",
+      "categorie": "Eau",
+      "titre": "SFDR 2.0 : transition, fossiles, PAI… les dossiers chauds du trilogue",
+      "resume": "SFDR 2.0 : transition, fossiles, PAI… les dossiers chauds du trilogue",
+      "pourquoi": "Mention de SFDR.",
+      "criticite": 3,
+      "url": "https://www.novethic.fr/finance-durable/reglementation/sfdr-2-0-transition-fossiles-pai-les-dossiers-chauds-du-trilogue",
+      "date": "2026-09-18"
+    },
     {
       "id": "fb3e20087d87",
       "source": "Actuel HSE",
@@ -277,13 +299,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "01",
-      "dept_nom": "Ain",
+      "dept_code": "69",
+      "dept_nom": "Rhône",
       "niveau": "crise"
     },
     {
-      "dept_code": "69",
-      "dept_nom": "Rhône",
+      "dept_code": "01",
+      "dept_nom": "Ain",
       "niveau": "crise"
     },
     {
@@ -327,13 +349,13 @@
       "niveau": "crise"
     },
     {
-      "dept_code": "12",
-      "dept_nom": "Aveyron",
+      "dept_code": "81",
+      "dept_nom": "Tarn",
       "niveau": "crise"
     },
     {
-      "dept_code": "81",
-      "dept_nom": "Tarn",
+      "dept_code": "12",
+      "dept_nom": "Aveyron",
       "niveau": "crise"
     },
     {
@@ -467,13 +489,13 @@
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "04",
-      "dept_nom": "Alpes-de-Haute-Provence",
+      "dept_code": "13",
+      "dept_nom": "Bouches-du-Rhône",
       "niveau": "alerte renforcée"
     },
     {
-      "dept_code": "13",
-      "dept_nom": "Bouches-du-Rhône",
+      "dept_code": "04",
+      "dept_nom": "Alpes-de-Haute-Provence",
       "niveau": "alerte renforcée"
     },
     {
