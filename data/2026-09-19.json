@@ -1,7 +1,7 @@
 {
   "date": "2026-09-19",
-  "generated_at": "10:01",
-  "elapsed_seconds": 567,
+  "generated_at": "14:42",
+  "elapsed_seconds": 376,
   "errors": [],
   "stats": {
     "jo_analyses": 12,
@@ -9,43 +9,21 @@
     "depts_restriction": 93
   },
   "pipeline_meta": {
-    "run_at": "2026-09-19T10:01:17",
+    "run_at": "2026-09-19T14:42:01",
     "sources": {
       "JORF": 0,
-      "RSS": 2,
+      "RSS": 0,
       "VigiEau": 93,
       "Parlement": 1
     },
     "errors": [
-      "SOURCE VIDE — JORF : 0 textes retenus"
+      "SOURCE VIDE — JORF : 0 textes retenus",
+      "SOURCE VIDE — RSS : 0 articles retenus"
     ],
     "llm_calls": 0,
     "llm_seconds": 0.0
   },
-  "items": [
-    {
-      "id": "0d9c33016cb3",
-      "source": "Actu-Environnement",
-      "categorie": "Eau",
-      "titre": "Le Parlement européen soutient l'extension du MACF à de nouveaux produits",
-      "resume": "Le Parlement européen soutient l'extension du MACF à de nouveaux produits",
-      "pourquoi": "Mention de MACF.",
-      "criticite": 3,
-      "url": "https://www.actu-environnement.com/ae/news/macf-parlement-europeen-extension-produits-48535.php4#xtor=RSS-6",
-      "date": "2026-09-18"
-    },
-    {
-      "id": "790646f4b339",
-      "source": "Novethic",
-      "categorie": "Eau",
-      "titre": "SFDR 2.0 : transition, fossiles, PAI… les dossiers chauds du trilogue",
-      "resume": "SFDR 2.0 : transition, fossiles, PAI… les dossiers chauds du trilogue",
-      "pourquoi": "Mention de SFDR.",
-      "criticite": 3,
-      "url": "https://www.novethic.fr/finance-durable/reglementation/sfdr-2-0-transition-fossiles-pai-les-dossiers-chauds-du-trilogue",
-      "date": "2026-09-18"
-    }
-  ],
+  "items": [],
   "restrictions_eau": [
     {
       "dept_code": "50",
